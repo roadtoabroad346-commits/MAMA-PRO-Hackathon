@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { BrowserRouter, Link, Route, Routes, useLocation } from 'react-router-dom';
 import type { Catalog as CatalogData } from '../domain/catalog';
 import { loadCatalog } from '../data/catalogRepository';
@@ -6,7 +6,9 @@ import { Home } from '../features/Home';
 import { Intake } from '../features/intake/Intake';
 import { Review } from '../features/intake/Review';
 import { Catalog } from '../features/search/Catalog';
-import { Comparison, OfferProfile } from '../features/search/SelectionViews';
+import { Comparison } from '../features/search/SelectionViews';
+import { OfferProfile } from '../features/profile/OfferProfile';
+import { DemoRequestEntry } from '../features/profile/DemoRequestEntry';
 import { PageTitle } from '../ui/controls';
 import { translate } from '../i18n/messages';
 import { AppStateProvider, useApp } from './AppState';
@@ -15,7 +17,12 @@ import { LOCALE_KEY } from './session';
 function FocusOnNavigation() {
   const location = useLocation();
   const { catalogView } = useApp();
+  const previousPath = useRef<string | null>(null);
   useLayoutEffect(() => {
+    const sameProfile = previousPath.current === location.pathname && location.pathname.startsWith('/specialists/');
+    previousPath.current = location.pathname;
+    // A radio selection updates the URL without stealing focus or jumping up.
+    if (sameProfile) return;
     if (location.pathname === '/specialists' && catalogView.focusId) {
       document.getElementById(catalogView.focusId)?.focus({ preventScroll: true });
       window.scrollTo({ top: catalogView.scrollY, behavior: 'instant' });
@@ -54,6 +61,7 @@ function Layout() {
         <Route path="/specialists" element={<Catalog />} />
         <Route path="/specialists/:specialistId" element={<OfferProfile />} />
         <Route path="/compare" element={<Comparison />} />
+        <Route path="/request/:offerId" element={<DemoRequestEntry />} />
         <Route path="/about-demo" element={<Info />} />
         <Route path="/privacy" element={<Info privacy />} />
         <Route path="*" element={<><PageTitle intro={t('notFoundHelp')}>{t('notFound')}</PageTitle><Link className="button primary" to="/">{t('home')}</Link></>} />
@@ -80,5 +88,7 @@ export function App() {
       {failed ? <button className="button primary" onClick={() => { setFailed(false); setAttempt(n => n + 1); }}>{translate(locale, 'retry')}</button>
         : <div className="catalog-grid loading-grid" aria-hidden="true">{[0, 1, 2].map(id => <div className="loading-card" key={id} />)}</div>}</main>;
   }
-  return <AppStateProvider catalog={catalog}><BrowserRouter><Layout /></BrowserRouter></AppStateProvider>;
+  // All routes use the already-loaded local catalog. Keep URL-backed controlled
+  // radios synchronous, so selection and all offer-derived content commit together.
+  return <AppStateProvider catalog={catalog}><BrowserRouter useTransitions={false}><Layout /></BrowserRouter></AppStateProvider>;
 }

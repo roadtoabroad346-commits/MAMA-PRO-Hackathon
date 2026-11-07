@@ -2,33 +2,41 @@ import { Link } from 'react-router-dom';
 import { useApp } from '../../app/AppState';
 import type { Offer } from '../../domain/catalog';
 import { isFresh, type RatedOffer } from '../../domain/SearchService';
+import { verificationStatus } from '../../domain/profile';
 import { categoryKeys, districtKeys, type MessageKey } from '../../i18n/messages';
 
 const matchKeys: Record<string, MessageKey> = { need: 'reasonNeed', age: 'reasonAge', language: 'reasonLanguage', format: 'reasonFormat', budget: 'reasonBudget', district: 'reasonDistrict', availability: 'reasonAvailability' };
 const unknownKeys: Record<string, MessageKey> = { need: 'unknownNeed', age: 'unknownAge', language: 'unknownLanguage', format: 'unknownFormat', budget: 'unknownBudget', district: 'unknownDistrict', availability: 'unknownAvailability' };
-const scopeKeys = { identity: 'scopeIdentity', education: 'scopeEducation', qualification: 'scopeQualification', contact: 'scopeContact' } as const;
+export const scopeKeys = { identity: 'scopeIdentity', education: 'scopeEducation', qualification: 'scopeQualification', contact: 'scopeContact', offer_data: 'scopeOfferData' } as const;
 
 export function OfferFacts({ offer }: { offer: Offer }) {
   const { catalog, locale, t } = useApp();
   const price = offer.priceKind === 'unknown' ? t('priceUnknown') : offer.priceKind === 'free' ? `${t('priceFree')} · ${t('demo')}`
     : t(offer.priceKind === 'from' ? 'priceFrom' : 'priceExact', { amount: new Intl.NumberFormat(locale).format(offer.priceAmountKzt!) });
   const date = (value: string) => new Intl.DateTimeFormat(locale, { dateStyle: 'medium', timeZone: 'Asia/Almaty' }).format(new Date(value));
+  const { ageMinMonths: min, ageMaxMonths: max } = offer;
+  const age = min === null && max === null ? t('unknown') : min === null || max === null
+    ? t('partialAge', { min: min ?? '?', max: max ?? '?' })
+    : min % 12 === 0 && max % 12 === 11 ? t('ageYears', { min: min / 12, max: Math.floor(max / 12) }) : t('ageMonths', { min, max });
   return <>
     <dl className="offer-facts">
+      <div><dt>{t('ageRange')}</dt><dd>{age}</dd></div>
       <div><dt>{t('serviceLanguage')}</dt><dd>{offer.languages?.map(lang => t(lang === 'ru' ? 'russian' : 'kazakh')).join(', ') || t('unknown')}</dd></div>
       <div><dt>{t('format')}</dt><dd>{t(offer.format === 'unknown' ? 'unknown' : offer.format)}</dd></div>
       <div><dt>{t('district')}</dt><dd>{offer.format === 'online' ? t('onlineDistrictNA') : offer.districtId ? t(districtKeys[offer.districtId]) : t('unknown')}</dd></div>
     </dl>
     <p className="price">{price} · {offer.durationMinutes === null ? t('durationUnknown') : t('duration', { minutes: offer.durationMinutes })}</p>
     <p>{t(offer.unit)}</p>
-    {offer.priceConfirmedAt && <p className="help">{t('priceDate', { date: date(offer.priceConfirmedAt) })}</p>}
+    <p className="help">{offer.priceConfirmedAt ? t('priceDate', { date: date(offer.priceConfirmedAt) }) : t('priceDateUnknown')}</p>
     {offer.priceKind !== 'unknown' && !isFresh(offer.priceConfirmedAt, new Date(catalog.demoClock), 30) && <p className="help warning-text">{t('stalePrice')}</p>}
   </>;
 }
 
-export function Explanations({ item }: { item: RatedOffer | null }) {
+export function Explanations({ item, fallbackUnknowns }: { item: RatedOffer | null; fallbackUnknowns?: RatedOffer['unknowns'] }) {
   const { t } = useApp();
-  if (!item) return <p className="notice">{t('incompatible')}</p>;
+  if (!item) return <><p className="notice">{t('incompatible')}</p>{fallbackUnknowns && <section className="explanations"><h3>{t('clarify')}</h3>
+    {fallbackUnknowns.length ? <ul>{fallbackUnknowns.map(reason => <li key={reason.code} data-unknown={reason.code}>{t(unknownKeys[reason.field])}</li>)}</ul> : <p>{t('noUnknowns')}</p>}
+  </section>}</>;
   return <>
     {item.status === 'incomplete' && <p className="notice">{t('incompleteTitle')}</p>}
     <section className="explanations"><h3>{t(item.score === null ? 'serviceInfo' : 'matched')}</h3>
@@ -41,11 +49,12 @@ export function Explanations({ item }: { item: RatedOffer | null }) {
 
 export function Verification({ specialistId }: { specialistId: string }) {
   const { catalog, locale, t } = useApp();
-  const facts = catalog.specialists.find(s => s.id === specialistId)!.verificationFacts;
+  const facts = catalog.specialists.find(s => s.id === specialistId)!.verificationFacts.filter(fact => fact.scope !== 'offer_data');
   return <section className="verification"><h3>{t('verification')}</h3>
     {!facts.length && <p>{t('noVerification')}</p>}
     {facts.map((fact, index) => <div key={`${fact.scope}-${index}`}>
-      <p><strong>{t(scopeKeys[fact.scope])}: {t(fact.status)}</strong> · {t('demo')}</p>
+      <p><strong>{t(scopeKeys[fact.scope])}: {t(verificationStatus(fact, catalog.demoClock))}</strong> · {t('demo')}</p>
+      <p>{t('factSource')}: {fact.sourceLabel?.[locale] ?? t('sourceUnknown')}</p>
       <p>{fact.evidenceSummary[locale]}</p>
       {fact.checkedAt && <p>{t('checkedOn', { date: new Intl.DateTimeFormat(locale, { dateStyle: 'medium', timeZone: 'Asia/Almaty' }).format(new Date(fact.checkedAt)) })}</p>}
       {fact.checkedAt && Date.parse(fact.checkedAt) > Date.parse(catalog.demoClock) && <p className="warning-text">{t('verificationFuture')}</p>}

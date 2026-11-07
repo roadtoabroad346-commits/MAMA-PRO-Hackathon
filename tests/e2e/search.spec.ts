@@ -297,6 +297,7 @@ test('compare offer replacement is explicit and a fourth addition also reports t
   await page.locator('#query').fill('');
   for (const offerId of ['O06', 'O16']) await page.getByTestId('specialist-card').filter({ has: page.locator(`#profile-${offerId}`) }).getByRole('button', { name: 'Сравнить', exact: true }).click();
   await page.locator('#profile-O01').click();
+  await expect(page.getByTestId('selected-offer')).toHaveAttribute('data-offer-id', 'O01');
   await page.getByRole('button', { name: 'Сравнить', exact: true }).click();
   await expect(page.getByRole('status')).toContainText('Можно сравнить до трёх специалистов');
   await page.getByRole('button', { name: 'Вернуться к выдаче', exact: true }).click();

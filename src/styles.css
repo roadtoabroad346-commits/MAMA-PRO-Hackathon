@@ -185,3 +185,43 @@ html { scroll-padding-bottom: calc(var(--compare-tray-height, 0px) + 24px); }
   .compare-tray { padding-inline: 16px; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; } }
+
+/* S06 uses the established palette and native, keyboard-operable radios. */
+.profile-page { display: grid; gap: 24px; overflow-wrap: anywhere; }
+.profile-page > .button { justify-self: start; }
+.profile-header { display: flex; align-items: center; gap: 24px; min-width: 0; }
+.profile-header > div { min-width: 0; }
+.profile-header .badge { white-space: normal; }
+.avatar-placeholder { flex: 0 0 120px; display: grid; justify-items: center; gap: 8px; padding: 16px 8px; border-radius: 20px; background: var(--soft); color: var(--secondary); text-align: center; font-size: .875rem; }
+.profile-offer-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 24px; align-items: start; }
+.profile-panel, .trust-fact { min-width: 0; padding: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; }
+.profile-panel > :last-child { margin-bottom: 0; }
+.profile-panel .price { font-weight: 650; font-size: 1.125rem; }
+.profile-panel .offer-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.profile-panel .offer-facts dd { font-size: 1rem; }
+.offer-selector { margin-bottom: 16px; }
+.offer-option { display: flex; align-items: flex-start; gap: 12px; min-height: 48px; padding: 12px; margin-block: 8px; border: 1px solid var(--border); border-radius: 12px; cursor: pointer; }
+.offer-option:has(input:checked) { background: var(--soft); border-color: var(--primary); }
+.offer-option:has(input:focus-visible) { outline: 3px solid var(--focus); outline-offset: 3px; }
+.offer-option input { flex-shrink: 0; margin-top: 5px; accent-color: var(--primary); }
+.offer-option small { display: block; font-size: .875rem; margin-top: 4px; color: var(--secondary); }
+.selected-offer > .button, .request-action > .button { width: 100%; margin-top: 12px; }
+.passport-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-block: 24px 16px; }
+.trust-fact h3 { margin: 0 0 16px; font-size: 1.125rem; }
+.trust-details { margin: 0; }
+.trust-details > div { margin-bottom: 12px; }
+.trust-details > div:last-child { margin-bottom: 0; }
+.trust-details dd { display: block; margin-top: 2px; }
+.offer-trust-field { padding-block: 20px; border-top: 1px solid var(--border); }
+.offer-trust-field h4 { margin: 0 0 12px; font-size: 1rem; }
+.offer-trust-field .trust-details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px; }
+.offer-trust-field .trust-details > div { margin-bottom: 0; }
+.review-page > .profile-panel { margin-block: 24px; overflow-wrap: anywhere; }
+@media (max-width: 767px) {
+  .profile-header { align-items: flex-start; gap: 16px; }
+  .avatar-placeholder { flex-basis: 72px; padding: 12px 4px; font-size: .75rem; }
+  .avatar-placeholder svg { width: 48px; height: 48px; }
+  .profile-offer-layout, .passport-grid { grid-template-columns: 1fr; gap: 16px; }
+  .profile-panel, .trust-fact { padding: 16px; }
+  .profile-panel .offer-facts, .offer-trust-field .trust-details { grid-template-columns: 1fr; }
+}
