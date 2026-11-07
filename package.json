@@ -9,7 +9,11 @@
     "preview": "vite preview --host 0.0.0.0",
     "typecheck": "tsc -b",
     "test": "vitest run",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "start": "node scripts/serve-release.mjs",
+    "demo": "node scripts/serve-release.mjs",
+    "check": "npm run typecheck && npm test",
+    "check:release": "playwright test --config playwright.release.config.ts"
   },
   "dependencies": {
     "react": "^19.2.0",

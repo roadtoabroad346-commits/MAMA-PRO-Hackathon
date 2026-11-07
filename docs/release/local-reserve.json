@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "server": "Node built-ins; copy contains only dist and scripts, no src/package/node_modules",
+  "baseURL": "http://127.0.0.1:5175",
+  "checks": [
+    "home",
+    "direct S01/O01",
+    "profile reload",
+    "real IndexedDB save S01/O01",
+    "status reload same generated ID",
+    "all build hashes match"
+  ],
+  "generatedRequestId": "8d730ac9-c253-4a37-9de4-cf164e22cd43",
+  "violations": []
+}

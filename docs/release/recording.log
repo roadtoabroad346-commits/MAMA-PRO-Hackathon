@@ -1,0 +1,16 @@
+
+> qoldau-zhol@0.6.0 check:release
+> playwright test --config playwright.release.config.ts p0.spec.ts --grep P0 A --workers=1 --reporter=line --output=work/phase13/recording
+
+[WebServer] (node:2228) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 2 tests using 1 worker
+
+(node:2240) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[1/2] tests/e2e/p0.spec.ts:20:3 › ru P0 A: guided route → review → profile → compare → request → durable status
+[2/2] tests/e2e/p0.spec.ts:20:3 › kk P0 A: guided route → review → profile → compare → request → durable status
+  2 passed (25.4s)

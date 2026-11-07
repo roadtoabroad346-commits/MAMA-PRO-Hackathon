@@ -1,0 +1,118 @@
+{
+  "A": {
+    "exact": [
+      {
+        "specialistId": "S01",
+        "offerId": "O01",
+        "score": 100
+      },
+      {
+        "specialistId": "S03",
+        "offerId": "O03",
+        "score": 85
+      },
+      {
+        "specialistId": "S02",
+        "offerId": "O02",
+        "score": 82.5
+      },
+      {
+        "specialistId": "S11",
+        "offerId": "O11",
+        "score": 80
+      },
+      {
+        "specialistId": "S10",
+        "offerId": "O10",
+        "score": 75
+      }
+    ],
+    "incomplete": [
+      {
+        "specialistId": "S07",
+        "offerId": "O07"
+      },
+      {
+        "specialistId": "S08",
+        "offerId": "O08"
+      }
+    ]
+  },
+  "B": {
+    "exact": [
+      {
+        "specialistId": "S01",
+        "offerId": "O01",
+        "score": 100
+      },
+      {
+        "specialistId": "S03",
+        "offerId": "O03",
+        "score": 100
+      },
+      {
+        "specialistId": "S06",
+        "offerId": "O06",
+        "score": 100
+      },
+      {
+        "specialistId": "S07",
+        "offerId": "O07",
+        "score": 100
+      }
+    ],
+    "incomplete": [
+      {
+        "specialistId": "S08",
+        "offerId": "O08"
+      },
+      {
+        "specialistId": "S10",
+        "offerId": "O10"
+      },
+      {
+        "specialistId": "S11",
+        "offerId": "O11"
+      }
+    ]
+  },
+  "C": {
+    "exact": [],
+    "incomplete": [
+      {
+        "specialistId": "S11",
+        "offerId": "O11"
+      }
+    ],
+    "afterBudgetReset": [
+      {
+        "specialistId": "S01",
+        "offerId": "O01"
+      },
+      {
+        "specialistId": "S02",
+        "offerId": "O02"
+      },
+      {
+        "specialistId": "S03",
+        "offerId": "O03"
+      },
+      {
+        "specialistId": "S06",
+        "offerId": "O06"
+      },
+      {
+        "specialistId": "S07",
+        "offerId": "O07"
+      },
+      {
+        "specialistId": "S10",
+        "offerId": "O10"
+      },
+      {
+        "specialistId": "S11",
+        "offerId": "O11"
+      }
+    ]
+  }
+}

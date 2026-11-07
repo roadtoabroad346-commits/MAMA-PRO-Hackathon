@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "releaseId": "phase13-968e7ea9c5d3",
+  "archive": "qoldau-zhol-phase13.zip",
+  "archiveSha256": "a9bdcaf9bde4c79dfbc51cc8ef00119f629e3f6ccf289912f7098b8220dceb54",
+  "archiveBytes": 6801146,
+  "files": 145,
+  "handoffLinksChecked": 47,
+  "secretSignatureFindings": [],
+  "extractedHashChecks": "PASS: package/source/build",
+  "nodeModulesShipped": false,
+  "outputLocationNote": "Configured /codex/browser/projectless/.../output is absent and not writable on this executor; saved in /workspace/output",
+  "extractedBrowserCheck": {
+    "status": "PASS",
+    "serverCommand": "node scripts/serve-release.mjs",
+    "serverOutput": "Production dist: http://127.0.0.1:5176",
+    "routesWithReload": [
+      "/",
+      "/specialists/S01?offer=O01",
+      "/compare",
+      "/request-status/absent",
+      "/unknown-demo-route"
+    ],
+    "save": "S03/O03 → recorded_demo; same generated UUID after reload",
+    "errors": []
+  }
+}
