@@ -9,10 +9,13 @@ import { Catalog } from '../features/search/Catalog';
 import { Comparison } from '../features/search/SelectionViews';
 import { OfferProfile } from '../features/profile/OfferProfile';
 import { DemoRequestEntry } from '../features/profile/DemoRequestEntry';
+import { DemoRequestStatus } from '../features/request/DemoRequestStatus';
+import { ClearDemoRequests } from '../features/request/ClearDemoRequests';
 import { PageTitle } from '../ui/controls';
 import { translate } from '../i18n/messages';
 import { AppStateProvider, useApp } from './AppState';
 import { LOCALE_KEY } from './session';
+import { DemoRequestsProvider } from './DemoRequests';
 
 function FocusOnNavigation() {
   const location = useLocation();
@@ -36,7 +39,7 @@ function FocusOnNavigation() {
 
 function Info({ privacy = false }: { privacy?: boolean }) {
   const { t } = useApp();
-  return <div className="form-page"><PageTitle>{t(privacy ? 'privacyTitle' : 'aboutTitle')}</PageTitle><p>{t(privacy ? 'privacyBody' : 'aboutBody')}</p><Link className="button secondary" to="/">{t('home')}</Link></div>;
+  return <div className="form-page"><PageTitle>{t(privacy ? 'privacyTitle' : 'aboutTitle')}</PageTitle><p>{t(privacy ? 'privacyBody' : 'aboutBody')}</p>{privacy && <ClearDemoRequests />}<Link className="button secondary" to="/">{t('home')}</Link></div>;
 }
 
 function Layout() {
@@ -62,6 +65,7 @@ function Layout() {
         <Route path="/specialists/:specialistId" element={<OfferProfile />} />
         <Route path="/compare" element={<Comparison />} />
         <Route path="/request/:offerId" element={<DemoRequestEntry />} />
+        <Route path="/request-status/:requestId" element={<DemoRequestStatus />} />
         <Route path="/about-demo" element={<Info />} />
         <Route path="/privacy" element={<Info privacy />} />
         <Route path="*" element={<><PageTitle intro={t('notFoundHelp')}>{t('notFound')}</PageTitle><Link className="button primary" to="/">{t('home')}</Link></>} />
@@ -90,5 +94,5 @@ export function App() {
   }
   // All routes use the already-loaded local catalog. Keep URL-backed controlled
   // radios synchronous, so selection and all offer-derived content commit together.
-  return <AppStateProvider catalog={catalog}><BrowserRouter useTransitions={false}><Layout /></BrowserRouter></AppStateProvider>;
+  return <AppStateProvider catalog={catalog}><DemoRequestsProvider><BrowserRouter useTransitions={false}><Layout /></BrowserRouter></DemoRequestsProvider></AppStateProvider>;
 }

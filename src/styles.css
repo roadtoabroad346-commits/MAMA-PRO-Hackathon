@@ -1,6 +1,18 @@
 /* ТЗ §13.2: локальные токены, без внешних шрифтов и ресурсов. */
 :root { font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; color: var(--text); background: var(--background); font-synthesis: none; line-height: 1.5; font-weight: 400; --background: #faf8f3; --surface: #fff; --soft: #eef5f1; --primary: #176b62; --primary-hover: #11554e; --accent: #b64a35; --text: #203431; --secondary: #53645f; --border: #7a8984; --focus: #145ea8; --error: #b42318; --error-bg: #fff0ed; --warning-bg: #fff3cd; --warning-text: #805500; }
 * { box-sizing: border-box; }
+.request-error { margin-block: 20px; padding: 16px; border: 1px solid var(--error); border-radius: 12px; }
+.request-error .button { margin: 4px; }
+.request-cleanup { margin-block: 32px; padding-top: 20px; border-top: 1px solid var(--border); }
+.request-metadata dd { overflow-wrap: anywhere; }
+.request-metadata > div { padding: 16px 20px; border-bottom: 1px solid var(--border); }
+.request-metadata > div:last-child { border-bottom: 0; }
+.request-metadata dt { color: var(--secondary); }
+.request-metadata dd { margin: 4px 0 0; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.request-status .actions { margin-block: 24px; }
+.danger { color: var(--error); border-color: var(--error); background: var(--surface); }
+.danger:hover { background: var(--error-bg); }
 body { margin: 0; font-size: 16px; }
 button, input, select { font: inherit; }
 button, select, input[type='checkbox'], input[type='radio'] { cursor: pointer; }
