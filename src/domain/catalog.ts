@@ -35,6 +35,12 @@ export const catalogSchema = z.object({
   specialists: z.array(z.object({
     id: z.string().min(1), displayName: localized, categoryIds: z.array(z.enum(CATEGORIES)),
     bio: localized, publicationStatus, isSynthetic: z.literal(true), updatedAt: timestamp,
+    verificationFacts: z.array(z.object({
+      scope: z.enum(['identity', 'education', 'qualification', 'contact']),
+      status: z.enum(['UNVERIFIED', 'SELF_DECLARED', 'DOCUMENT_SEEN', 'SOURCE_CONFIRMED', 'STALE', 'REVOKED']),
+      evidenceSummary: localized, checkedAt: timestamp.nullable(), reviewDueAt: timestamp.nullable(),
+      checkedByRole: z.string().nullable(), limitations: localized, isSynthetic: z.literal(true),
+    })).default([]),
   })),
   offers: z.array(offerSchema),
 }).superRefine((catalog, ctx) => {

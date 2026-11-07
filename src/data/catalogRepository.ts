@@ -1,7 +1,10 @@
 import { catalogSchema, type Catalog } from '../domain/catalog';
+import catalogUrl from './catalog.json?url';
 
 export async function loadCatalog(): Promise<Catalog> {
-  // Локальная зависимость: нет сетевой передачи параметров семьи.
-  const { default: raw } = await import('./catalog.json');
-  return catalogSchema.parse(raw);
+  // Fetch only the public local fixture. Search parameters never leave memory.
+  // Unlike a rejected module import, a failed fetch can be retried successfully.
+  const response = await fetch(catalogUrl);
+  if (!response.ok) throw new Error('CATALOG_LOAD_FAILED');
+  return catalogSchema.parse(await response.json());
 }

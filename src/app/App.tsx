@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 import { BrowserRouter, Link, Route, Routes, useLocation } from 'react-router-dom';
 import type { Catalog as CatalogData } from '../domain/catalog';
 import { loadCatalog } from '../data/catalogRepository';
@@ -6,6 +6,7 @@ import { Home } from '../features/Home';
 import { Intake } from '../features/intake/Intake';
 import { Review } from '../features/intake/Review';
 import { Catalog } from '../features/search/Catalog';
+import { Comparison, OfferProfile } from '../features/search/SelectionViews';
 import { PageTitle } from '../ui/controls';
 import { translate } from '../i18n/messages';
 import { AppStateProvider, useApp } from './AppState';
@@ -13,7 +14,13 @@ import { LOCALE_KEY } from './session';
 
 function FocusOnNavigation() {
   const location = useLocation();
-  useEffect(() => {
+  const { catalogView } = useApp();
+  useLayoutEffect(() => {
+    if (location.pathname === '/specialists' && catalogView.focusId) {
+      document.getElementById(catalogView.focusId)?.focus({ preventScroll: true });
+      window.scrollTo({ top: catalogView.scrollY, behavior: 'instant' });
+      return;
+    }
     document.querySelector<HTMLElement>('[data-page-title]')?.focus();
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, [location.key]);
@@ -45,6 +52,8 @@ function Layout() {
         <Route path="/route" element={<Intake />} />
         <Route path="/route/review" element={<Review />} />
         <Route path="/specialists" element={<Catalog />} />
+        <Route path="/specialists/:specialistId" element={<OfferProfile />} />
+        <Route path="/compare" element={<Comparison />} />
         <Route path="/about-demo" element={<Info />} />
         <Route path="/privacy" element={<Info privacy />} />
         <Route path="*" element={<><PageTitle intro={t('notFoundHelp')}>{t('notFound')}</PageTitle><Link className="button primary" to="/">{t('home')}</Link></>} />
@@ -68,7 +77,8 @@ export function App() {
     let locale: 'ru' | 'kk' = 'ru';
     try { locale = localStorage.getItem(LOCALE_KEY) === 'kk' ? 'kk' : 'ru'; } catch { /* defaults to RU */ }
     return <main><h1>Қолдау.Жол</h1><p role={failed ? 'alert' : 'status'}>{translate(locale, failed ? 'loadError' : 'loading')}</p>
-      {failed && <button className="button primary" onClick={() => { setFailed(false); setAttempt(n => n + 1); }}>{translate(locale, 'retry')}</button>}</main>;
+      {failed ? <button className="button primary" onClick={() => { setFailed(false); setAttempt(n => n + 1); }}>{translate(locale, 'retry')}</button>
+        : <div className="catalog-grid loading-grid" aria-hidden="true">{[0, 1, 2].map(id => <div className="loading-card" key={id} />)}</div>}</main>;
   }
   return <AppStateProvider catalog={catalog}><BrowserRouter><Layout /></BrowserRouter></AppStateProvider>;
 }

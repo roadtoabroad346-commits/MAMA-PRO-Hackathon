@@ -1,5 +1,5 @@
 import type { Catalog, Offer } from './catalog';
-import { AGE_RANGES, districtApplies, normalizeSearchInput, type SearchInput } from './contracts';
+import { AGE_RANGES, districtApplies, normalizeSearchInput, normalizeSearchText, type Category, type SearchInput } from './contracts';
 
 type Status = 'pass' | 'fail' | 'unknown';
 type Factor = 'need' | 'age' | 'language' | 'format' | 'budget' | 'district' | 'availability';
@@ -7,18 +7,25 @@ export interface Reason {
   code: string; field: Factor; expected: unknown; actual: unknown;
   evidenceKind: string; checkedAt: string | null; rulesVersion: string; localeKey: string;
 }
-interface RatedOffer {
+export interface RatedOffer {
   specialistId: string; selectedOfferId: string; score: number | null; coverage: number | null;
   reasons: Reason[]; unknowns: Reason[];
+  status: 'exact' | 'incomplete';
 }
 export interface SearchResult {
   items: (RatedOffer & { matchingOfferIds: string[] })[];
   specialistCount: number; eligibleOfferCount: number; incompleteSpecialistCount: number;
+  incompleteItems: (RatedOffer & { matchingOfferIds: string[] })[];
+  incompleteOfferCount: number;
   appliedInputSummary: SearchInput; rulesVersion: string; catalogVersion: string;
 }
 const WEIGHTS: Record<Factor, number> = { need: 30, age: 15, language: 15, format: 10, budget: 15, district: 10, availability: 5 };
 const sourceKeys: Record<Factor, string> = { need: 'focusTags', age: 'ageRange', language: 'languages', format: 'format', budget: 'price', district: 'districtId', availability: 'availability' };
-const indexText = (s: string) => s.normalize('NFKC').trim().replace(/\s+/gu, ' ').toLocaleLowerCase().replace(/ё/gu, 'е');
+const aliases: Record<Category, readonly string[]> = {
+  LOGOPED: ['логопедия', 'сөйлеу терапевті', 'сөйлеу маманы'],
+  DEFECTOLOG: ['дефектология', 'арнайы педагог'],
+  PSYCHOLOG: ['психология'],
+};
 export function isFresh(date: string | null, clock: Date, days: number): boolean {
   const age = clock.getTime() - Date.parse(date ?? '');
   return Number.isFinite(age) && age >= 0 && age <= days * 86_400_000;
@@ -26,6 +33,13 @@ export function isFresh(date: string | null, clock: Date, days: number): boolean
 
 export class SearchService {
   constructor(readonly catalog: Catalog) {}
+
+  // Reuse the classifier for a fixed selection, including an offer that is no
+  // longer the best offer for its specialist under the current conditions.
+  inspectOffer(input: SearchInput, offerId: string): RatedOffer | null {
+    const result = new SearchService({ ...this.catalog, offers: this.catalog.offers.filter(o => o.id === offerId) }).search(input);
+    return result.items[0] ?? result.incompleteItems[0] ?? null;
+  }
 
   search(raw: SearchInput, clock = new Date(this.catalog.demoClock)): SearchResult {
     const input = normalizeSearchInput(raw);
@@ -40,14 +54,15 @@ export class SearchService {
     if (input.availabilityPreferred) active.push('availability');
     const denominator = active.reduce((sum, factor) => sum + WEIGHTS[factor], 0);
     const eligible: RatedOffer[] = [];
-    const incomplete = new Set<string>();
+    const incomplete: RatedOffer[] = [];
     const byId = new Map(this.catalog.offers.map(o => [o.id, o]));
 
     for (const offer of this.catalog.offers) {
       const specialist = this.catalog.specialists.find(s => s.id === offer.specialistId);
       if (!specialist || specialist.publicationStatus !== 'published' || offer.publicationStatus !== 'published') continue;
       const category = this.catalog.categories.find(c => c.id === offer.categoryId);
-      if (input.query && !indexText([specialist.displayName.ru, specialist.displayName.kk, category?.label.ru, category?.label.kk].join(' ')).includes(indexText(input.query))) continue;
+      if (input.query && ![specialist.displayName.ru, specialist.displayName.kk, category?.label.ru ?? '', category?.label.kk ?? '', ...aliases[offer.categoryId]]
+        .some(text => normalizeSearchText(text).includes(normalizeSearchText(input.query)))) continue;
       if (input.categoryIds.length && !input.categoryIds.includes(offer.categoryId)) continue;
       const sourced = (factor: Factor) => {
         const source = offer.fieldSources[sourceKeys[factor]];
@@ -55,8 +70,8 @@ export class SearchService {
       };
       const ageRange = input.ageGroup === null ? null : AGE_RANGES[input.ageGroup];
       let age: Status = 'unknown';
-      if (ageRange && sourced('age') && offer.ageMinMonths !== null && offer.ageMaxMonths !== null) {
-        age = offer.ageMinMonths <= ageRange[0] && offer.ageMaxMonths >= ageRange[1] ? 'pass'
+      if (sourced('age') && offer.ageMinMonths !== null && offer.ageMaxMonths !== null) {
+        age = !ageRange || offer.ageMinMonths <= ageRange[0] && offer.ageMaxMonths >= ageRange[1] ? 'pass'
           : offer.ageMaxMonths < ageRange[0] || offer.ageMinMonths > ageRange[1] ? 'fail' : 'unknown';
       }
       const language: Status = !sourced('language') || !offer.languages?.length ? 'unknown'
@@ -79,7 +94,7 @@ export class SearchService {
       if (input.budgetKzt !== null && input.budgetHard) hard.push(budget);
       if (districtActive && input.districtHard) hard.push(district);
       if (hard.includes('fail')) continue;
-      if (hard.includes('unknown')) { incomplete.add(specialist.id); continue; }
+      const status = hard.includes('unknown') ? 'incomplete' : 'exact';
 
       const availabilityKnown = sourced('availability') && offer.acceptingEnquiries !== null && isFresh(offer.availabilityConfirmedAt, clock, 7);
       const needKnown = input.needTag !== null ? !!offer.focusTags?.length : true;
@@ -98,15 +113,18 @@ export class SearchService {
       const unknowns: Reason[] = [];
       const expected: Record<Factor, unknown> = { need: input.needTag ?? input.categoryIds, age: input.ageGroup, language: input.serviceLanguage, format: input.format, budget: input.budgetKzt, district: input.districtId, availability: true };
       const actual: Record<Factor, unknown> = { need: input.needTag ? offer.focusTags : offer.categoryId, age: [offer.ageMinMonths, offer.ageMaxMonths], language: offer.languages, format: offer.format, budget: offer.priceAmountKzt, district: offer.districtId, availability: offer.acceptingEnquiries };
-      for (const factor of active) {
+      const displayedFactors = [...new Set<Factor>([...active, 'age', 'language', 'format', 'budget', 'availability', ...(offer.format === 'offline' ? ['district' as const] : [])])];
+      for (const factor of displayedFactors) {
+        if (known[factor] && !active.includes(factor)) continue;
         if (known[factor] && matches[factor] !== 1) continue;
         const code = `${factor.toUpperCase()}_${known[factor] ? 'MATCH' : 'UNKNOWN'}`;
         const fact = offer.fieldSources[sourceKeys[factor]];
-        const reason: Reason = { code, field: factor, expected: expected[factor], actual: actual[factor], evidenceKind: fact?.sourceKind ?? 'synthetic_catalog', checkedAt: fact?.checkedAt ?? null, rulesVersion: this.catalog.rulesVersion, localeKey: `reason.${code}` };
+        const reason: Reason = { code, field: factor, expected: active.includes(factor) ? expected[factor] : null, actual: actual[factor], evidenceKind: fact?.sourceKind ?? 'synthetic_catalog', checkedAt: fact?.checkedAt ?? null, rulesVersion: this.catalog.rulesVersion, localeKey: `reason.${code}` };
         (known[factor] ? reasons : unknowns).push(reason);
       }
-      eligible.push({
+      (status === 'exact' ? eligible : incomplete).push({
         specialistId: specialist.id, selectedOfferId: offer.id,
+        status,
         score: denominator ? 100 * active.reduce((sum, f) => sum + WEIGHTS[f] * matches[f], 0) / denominator : null,
         coverage: denominator ? active.reduce((sum, f) => sum + WEIGHTS[f] * Number(known[f]), 0) / denominator : null,
         reasons, unknowns,
@@ -122,23 +140,32 @@ export class SearchService {
         const [ag, ap] = priceKey(ao); const [bg, bp] = priceKey(bo);
         const diff = ag - bg || ap - bp;
         if (diff) return diff;
+        return a.specialistId.localeCompare(b.specialistId) || a.selectedOfferId.localeCompare(b.selectedOfferId);
       } else if (input.sort === 'district' && districtActive) {
-        const diff = Number(bo.districtId === input.districtId) - Number(ao.districtId === input.districtId);
+        const districtKey = (o: Offer) => !o.districtId || !o.fieldSources.districtId?.checkedAt || Date.parse(o.fieldSources.districtId.checkedAt) > clock.getTime()
+          ? 2 : o.districtId === input.districtId ? 0 : 1;
+        const diff = districtKey(ao) - districtKey(bo);
         if (diff) return diff;
       }
       return (b.score ?? 0) - (a.score ?? 0) || (b.coverage ?? 0) - (a.coverage ?? 0)
         || a.specialistId.localeCompare(b.specialistId) || a.selectedOfferId.localeCompare(b.selectedOfferId);
     };
-    eligible.sort(compare);
-    const groups = new Map<string, SearchResult['items'][number]>();
-    for (const offer of eligible) {
-      const existing = groups.get(offer.specialistId);
-      if (existing) existing.matchingOfferIds.push(offer.selectedOfferId);
-      else groups.set(offer.specialistId, { ...offer, matchingOfferIds: [offer.selectedOfferId] });
-    }
+    const group = (offers: RatedOffer[]) => {
+      const groups = new Map<string, SearchResult['items'][number]>();
+      for (const offer of offers.sort(compare)) {
+        const existing = groups.get(offer.specialistId);
+        if (existing) existing.matchingOfferIds.push(offer.selectedOfferId);
+        else groups.set(offer.specialistId, { ...offer, matchingOfferIds: [offer.selectedOfferId] });
+      }
+      return [...groups.values()];
+    };
+    const items = group(eligible);
+    const exactIds = new Set(items.map(item => item.specialistId));
+    const incompleteOnly = incomplete.filter(item => !exactIds.has(item.specialistId));
+    const incompleteItems = group(incompleteOnly);
     return {
-      items: [...groups.values()], specialistCount: groups.size, eligibleOfferCount: eligible.length,
-      incompleteSpecialistCount: [...incomplete].filter(id => !groups.has(id)).length,
+      items, specialistCount: items.length, eligibleOfferCount: eligible.length,
+      incompleteItems, incompleteSpecialistCount: incompleteItems.length, incompleteOfferCount: incompleteOnly.length,
       appliedInputSummary: input, rulesVersion: this.catalog.rulesVersion, catalogVersion: this.catalog.catalogVersion,
     };
   }

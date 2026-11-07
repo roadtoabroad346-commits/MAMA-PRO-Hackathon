@@ -21,6 +21,13 @@ interface AppState {
   locale: Locale; setLocale: (locale: Locale) => void;
   t: (key: MessageKey, values?: Record<string, string | number>) => string;
   notice: Session['notice']; localeFailed: boolean;
+  comparison: { specialistId: string; offerId: string }[];
+  comparisonInput: SearchInput | null;
+  toggleCompare: (specialistId: string, offerId: string) => void;
+  comparisonNotice: 'compareLimit' | null;
+  clearComparison: () => void;
+  catalogView: { showIncomplete: boolean; scrollY: number; focusId: string | null };
+  setCatalogView: React.Dispatch<React.SetStateAction<AppState['catalogView']>>;
 }
 const Context = createContext<AppState | null>(null);
 
@@ -30,6 +37,8 @@ export function AppStateProvider({ catalog, children }: { catalog: Catalog; chil
   // Invalid numeric draft stays in memory across Back/locale, never in persistent storage.
   const [budgetDraft, setBudgetDraft] = useState(() => session.input.budgetKzt?.toString() ?? '');
   const service = useMemo(() => new SearchService(catalog), [catalog]);
+  const [comparisonState, setComparison] = useState<{ items: AppState['comparison']; input: SearchInput | null; notice: AppState['comparisonNotice'] }>({ items: [], input: null, notice: null });
+  const [catalogView, setCatalogView] = useState<AppState['catalogView']>({ showIncomplete: false, scrollY: 0, focusId: null });
   const setStep = useCallback((step: Step) => setSession(old => old.step === step ? old : { ...old, step }), []);
   useEffect(() => {
     let saved = false;
@@ -51,6 +60,19 @@ export function AppStateProvider({ catalog, children }: { catalog: Catalog; chil
     },
     t: (key, values) => translate(language.locale, key, values),
     notice: session.notice, localeFailed: language.failed,
+    comparison: comparisonState.items, comparisonInput: comparisonState.input, comparisonNotice: comparisonState.notice,
+    clearComparison: () => setComparison({ items: [], input: null, notice: null }),
+    toggleCompare: (specialistId, offerId) => setComparison(old => {
+      const offer = catalog.offers.find(o => o.id === offerId && o.specialistId === specialistId && o.publicationStatus === 'published');
+      if (!offer || !catalog.specialists.some(s => s.id === specialistId && s.publicationStatus === 'published')) return old;
+      const existing = old.items.find(item => item.specialistId === specialistId);
+      if (!existing && old.items.length === 3) return { ...old, notice: 'compareLimit' };
+      const items = existing?.offerId === offerId ? old.items.filter(item => item.specialistId !== specialistId)
+        : existing ? old.items.map(item => item.specialistId === specialistId ? { specialistId, offerId } : item)
+          : [...old.items, { specialistId, offerId }];
+      return { items, input: items.length ? old.input ?? structuredClone(session.input) : null, notice: null };
+    }),
+    catalogView, setCatalogView,
   };
   return <Context.Provider value={value}>{children}</Context.Provider>;
 }

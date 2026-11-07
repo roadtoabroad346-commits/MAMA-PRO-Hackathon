@@ -12,6 +12,7 @@ export const AGE_RANGES = {
   AGE_10_14: [120, 179], AGE_15_17: [180, 215],
 } as const;
 export const BUDGET_MAX = 100_000;
+export const QUERY_MAX = 80;
 export type Locale = typeof LANGUAGES[number];
 export type NeedTag = typeof NEED_TAGS[number];
 export type AgeGroup = typeof AGE_GROUPS[number];
@@ -31,7 +32,7 @@ export const searchInputSchema = z.strictObject({
   districtId: z.enum(DISTRICTS).nullable(),
   districtHard: z.boolean(),
   availabilityPreferred: z.boolean(),
-  query: z.string().max(80),
+  query: z.string().max(QUERY_MAX),
   sort: z.enum(['relevant', 'price', 'district']),
 });
 export type SearchInput = z.infer<typeof searchInputSchema>;
@@ -47,8 +48,13 @@ export function emptySearchInput(): SearchInput {
 
 export function normalizeSearchInput(value: SearchInput): SearchInput {
   const input = searchInputSchema.parse(value);
-  return { ...input, query: input.query.normalize('NFKC').trim().replace(/\s+/gu, ' ') };
+  return { ...input, query: input.query.normalize('NFKC').trim().replace(/\s+/gu, ' ').slice(0, QUERY_MAX) };
 }
+
+// The same index normalization applies to queries, names and the finite alias list.
+// Kazakh letters retain their identity; this is not transliteration or fuzzy search.
+export const normalizeSearchText = (text: string): string => text.normalize('NFKC').trim()
+  .replace(/\s+/gu, ' ').toLocaleLowerCase('ru-KZ').replace(/ё/gu, 'е');
 
 export function districtApplies(input: SearchInput): boolean {
   return input.format === 'offline' && input.formatHard;

@@ -101,7 +101,7 @@ test('review matches complete SearchInput; count equals catalog; locale, Back an
   await expect(page.locator('[data-field="budgetKzt"]')).toContainText('Обязательное условие');
   expect((await snapshot(page)).input).toEqual({ ...input, budgetKzt: 1000, budgetHard: true });
   await page.getByRole('link', { name: 'Показать варианты', exact: true }).click();
-  await expect(page.getByRole('heading', { name: 'При выбранных условиях вариантов нет' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Точных вариантов по этому поиску нет' })).toBeVisible();
   expect(urls.every(url => !new URL(url).search)).toBe(true);
   expect(await page.evaluate(() => JSON.stringify(history.state))).not.toContain('1000');
 });
