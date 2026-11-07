@@ -1,0 +1,47 @@
+
+> qoldau-zhol@0.6.0 test:e2e
+> playwright test tests/e2e/p0-errors.spec.ts --workers=2
+
+
+Running 4 tests using 2 workers
+
+(node:8916) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:8915) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 tests/e2e/p0-errors.spec.ts:5:3 › ru: catalog error and Retry keep document language and saved hard conditions (4.0s)
+  ✓  1 tests/e2e/p0-errors.spec.ts:23:3 › ru: hidden offer IDs are never selectable in profile or request (5.0s)
+  ✓  4 tests/e2e/p0-errors.spec.ts:23:3 › kk: hidden offer IDs are never selectable in profile or request (4.1s)
+  ✘  3 tests/e2e/p0-errors.spec.ts:5:3 › kk: catalog error and Retry keep document language and saved hard conditions (8.0s)
+
+
+  1) tests/e2e/p0-errors.spec.ts:5:3 › kk: catalog error and Retry keep document language and saved hard conditions 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('html')
+    Expected: "kk"
+    Received: "ru"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('html') with timeout 5000ms
+      - waiting for locator('html')
+        13 × locator resolved to <html lang="ru">…</html>
+           - unexpected value "ru"
+
+
+      13 |     await page.goto('/specialists');
+      14 |     await expect(page.getByRole('alert')).toContainText(locale === 'ru' ? 'Не удалось загрузить' : 'жүктеу мүмкін болмады');
+    > 15 |     await expect(page.locator('html')).toHaveAttribute('lang', locale);
+         |                                        ^
+      16 |     await expect(page.getByTestId('specialist-card')).toHaveCount(0);
+      17 |     broken = false;
+      18 |     await page.getByRole('button').click();
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/p0-errors.spec.ts:15:40
+
+    Error Context: test-results/p0-errors-kk-catalog-error-f8aa0-e-and-saved-hard-conditions/error-context.md
+
+  1 failed
+    tests/e2e/p0-errors.spec.ts:5:3 › kk: catalog error and Retry keep document language and saved hard conditions 
+  3 passed (16.2s)

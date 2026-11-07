@@ -1,0 +1,388 @@
+[
+  {
+    "locale": "ru",
+    "screen": "home",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ]
+  },
+  {
+    "locale": "ru",
+    "screen": "_route",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "ru",
+    "screen": "_route_review",
+    "violations": [
+      {
+        "id": "definition-list",
+        "impact": "serious",
+        "description": "Ensure <dl> elements are structured correctly",
+        "nodes": [
+          {
+            "target": [
+              "dl"
+            ],
+            "summary": "Fix all of the following:\n  dl element has direct children that are not allowed: div > div, div > a"
+          }
+        ]
+      },
+      {
+        "id": "dlitem",
+        "impact": "serious",
+        "description": "Ensure <dt> and <dd> elements are contained by a <dl>",
+        "nodes": [
+          {
+            "target": [
+              "div[data-field=\"needTag\"] > div > dt"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"needTag\"] > div > dd"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"ageGroup\"] > div > dt"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"ageGroup\"] > div > dd"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"serviceLanguage\"] > div > dt"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"serviceLanguage\"] > div > dd"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"format\"] > div > dt"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"format\"] > div > dd"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"districtId\"] > div > dt"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"districtId\"] > div > dd"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"budgetKzt\"] > div > dt"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"budgetKzt\"] > div > dd"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"availabilityPreferred\"] > div > dt"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"availabilityPreferred\"] > div > dd"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          }
+        ]
+      }
+    ],
+    "incomplete": []
+  },
+  {
+    "locale": "ru",
+    "screen": "_specialists_S01",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "ru",
+    "screen": "_about-demo",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "ru",
+    "screen": "_privacy",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "ru",
+    "screen": "_unknown",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "ru",
+    "screen": "catalog",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "ru",
+    "screen": "filters",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "ru",
+    "screen": "compare",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "ru",
+    "screen": "request",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "ru",
+    "screen": "status",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "ru",
+    "screen": "cancel-dialog",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ]
+  },
+  {
+    "locale": "kk",
+    "screen": "home",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ]
+  },
+  {
+    "locale": "kk",
+    "screen": "_route",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "kk",
+    "screen": "_route_review",
+    "violations": [
+      {
+        "id": "definition-list",
+        "impact": "serious",
+        "description": "Ensure <dl> elements are structured correctly",
+        "nodes": [
+          {
+            "target": [
+              "dl"
+            ],
+            "summary": "Fix all of the following:\n  dl element has direct children that are not allowed: div > div, div > a"
+          }
+        ]
+      },
+      {
+        "id": "dlitem",
+        "impact": "serious",
+        "description": "Ensure <dt> and <dd> elements are contained by a <dl>",
+        "nodes": [
+          {
+            "target": [
+              "div[data-field=\"needTag\"] > div > dt"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"needTag\"] > div > dd"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"ageGroup\"] > div > dt"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"ageGroup\"] > div > dd"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"serviceLanguage\"] > div > dt"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"serviceLanguage\"] > div > dd"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"format\"] > div > dt"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"format\"] > div > dd"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"districtId\"] > div > dt"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"districtId\"] > div > dd"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"budgetKzt\"] > div > dt"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"budgetKzt\"] > div > dd"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"availabilityPreferred\"] > div > dt"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          },
+          {
+            "target": [
+              "div[data-field=\"availabilityPreferred\"] > div > dd"
+            ],
+            "summary": "Fix any of the following:\n  Description list item does not have a <dl> parent element"
+          }
+        ]
+      }
+    ],
+    "incomplete": []
+  },
+  {
+    "locale": "kk",
+    "screen": "_specialists_S01",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "kk",
+    "screen": "_about-demo",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "kk",
+    "screen": "_privacy",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "kk",
+    "screen": "_unknown",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "kk",
+    "screen": "catalog",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "kk",
+    "screen": "filters",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "kk",
+    "screen": "compare",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "kk",
+    "screen": "request",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "kk",
+    "screen": "status",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "kk",
+    "screen": "cancel-dialog",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ]
+  }
+]

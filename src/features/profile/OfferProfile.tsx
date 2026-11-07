@@ -1,25 +1,13 @@
-import { useState } from 'react';
 import { Link, useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { useApp } from '../../app/AppState';
-import type { Offer } from '../../domain/catalog';
 import { emptySearchInput } from '../../domain/contracts';
 import { resolveProfile } from '../../domain/profile';
 import { isFresh } from '../../domain/SearchService';
 import { categoryKeys } from '../../i18n/messages';
-import { Check, DemoNotice, PageTitle } from '../../ui/controls';
+import { DemoNotice, PageTitle } from '../../ui/controls';
 import { CompareButton, Explanations, OfferFacts } from '../search/OfferCard';
 import { TrustPassport } from './TrustPassport';
-
-function RequestAction({ offer, incompatible, hasContext }: { offer: Offer; incompatible: boolean; hasContext: boolean }) {
-  const { t } = useApp();
-  const [reviewed, setReviewed] = useState(false);
-  return <div className="request-action">
-    {incompatible && <Check label={t('reviewMismatch')} help={t('mismatchHelp')} checked={reviewed} onChange={setReviewed} />}
-    {incompatible && !reviewed ? <button className="button primary" type="button" disabled>{t('createDemoRequest')}</button>
-      : <Link id="create-demo-request" className="button primary" to={`/request/${encodeURIComponent(offer.id)}`}
-        state={{ fromProfile: true, hasSearchContext: hasContext }}>{t('createDemoRequest')}</Link>}
-  </div>;
-}
+import { RequestAction } from './RequestAction';
 
 export function OfferProfile() {
   const { specialistId } = useParams();

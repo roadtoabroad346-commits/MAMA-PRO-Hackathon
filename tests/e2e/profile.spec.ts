@@ -237,7 +237,7 @@ for (const locale of ['ru', 'kk'] as const) {
     for (const width of [320, 844]) {
       await page.setViewportSize({ width, height: width === 320 ? 740 : 390 });
       await page.evaluate(() => { document.documentElement.style.fontSize = '200%'; });
-      expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+      expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth)).toBe(true);
     }
     await page.evaluate(() => { document.documentElement.style.fontSize = ''; });
     await page.locator('#create-demo-request').focus();

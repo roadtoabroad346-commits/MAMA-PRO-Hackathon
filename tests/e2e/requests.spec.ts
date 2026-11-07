@@ -192,7 +192,7 @@ test('KK, keyboard, 320px and 200% text: service, status, cancellation and clean
   for (const width of [320, 844]) {
     await page.setViewportSize({ width, height: width === 320 ? 740 : 390 });
     await page.evaluate(() => { document.documentElement.style.fontSize = '200%'; });
-    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth)).toBe(true);
   }
   await page.evaluate(() => { document.documentElement.style.fontSize = ''; });
   await page.getByRole('button', { name: 'Демосұраудан бас тарту', exact: true }).click();

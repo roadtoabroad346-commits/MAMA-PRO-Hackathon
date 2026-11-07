@@ -1,0 +1,766 @@
+[
+  {
+    "locale": "ru",
+    "width": 320,
+    "path": "/",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "ru",
+    "width": 320,
+    "path": "/route",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "ru",
+    "width": 320,
+    "path": "/route/review",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "ru",
+    "width": 320,
+    "path": "/specialists",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "ru",
+    "width": 320,
+    "path": "/specialists/S01?offer=O01",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "ru",
+    "width": 320,
+    "path": "/compare",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "ru",
+    "width": 320,
+    "path": "/request/O01",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "ru",
+    "width": 320,
+    "path": "/about-demo",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "ru",
+    "width": 320,
+    "path": "/privacy",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "ru",
+    "width": 320,
+    "path": "/unknown",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "ru",
+    "width": 360,
+    "path": "/",
+    "scrollWidth": 360,
+    "clientWidth": 360
+  },
+  {
+    "locale": "ru",
+    "width": 360,
+    "path": "/route",
+    "scrollWidth": 360,
+    "clientWidth": 360
+  },
+  {
+    "locale": "ru",
+    "width": 360,
+    "path": "/route/review",
+    "scrollWidth": 360,
+    "clientWidth": 360
+  },
+  {
+    "locale": "ru",
+    "width": 360,
+    "path": "/specialists",
+    "scrollWidth": 360,
+    "clientWidth": 360
+  },
+  {
+    "locale": "ru",
+    "width": 360,
+    "path": "/specialists/S01?offer=O01",
+    "scrollWidth": 360,
+    "clientWidth": 360
+  },
+  {
+    "locale": "ru",
+    "width": 360,
+    "path": "/compare",
+    "scrollWidth": 360,
+    "clientWidth": 360
+  },
+  {
+    "locale": "ru",
+    "width": 360,
+    "path": "/request/O01",
+    "scrollWidth": 360,
+    "clientWidth": 360
+  },
+  {
+    "locale": "ru",
+    "width": 360,
+    "path": "/about-demo",
+    "scrollWidth": 360,
+    "clientWidth": 360
+  },
+  {
+    "locale": "ru",
+    "width": 360,
+    "path": "/privacy",
+    "scrollWidth": 360,
+    "clientWidth": 360
+  },
+  {
+    "locale": "ru",
+    "width": 360,
+    "path": "/unknown",
+    "scrollWidth": 360,
+    "clientWidth": 360
+  },
+  {
+    "locale": "ru",
+    "width": 390,
+    "path": "/",
+    "scrollWidth": 390,
+    "clientWidth": 390
+  },
+  {
+    "locale": "ru",
+    "width": 390,
+    "path": "/route",
+    "scrollWidth": 390,
+    "clientWidth": 390
+  },
+  {
+    "locale": "ru",
+    "width": 390,
+    "path": "/route/review",
+    "scrollWidth": 390,
+    "clientWidth": 390
+  },
+  {
+    "locale": "ru",
+    "width": 390,
+    "path": "/specialists",
+    "scrollWidth": 390,
+    "clientWidth": 390
+  },
+  {
+    "locale": "ru",
+    "width": 390,
+    "path": "/specialists/S01?offer=O01",
+    "scrollWidth": 390,
+    "clientWidth": 390
+  },
+  {
+    "locale": "ru",
+    "width": 390,
+    "path": "/compare",
+    "scrollWidth": 390,
+    "clientWidth": 390
+  },
+  {
+    "locale": "ru",
+    "width": 390,
+    "path": "/request/O01",
+    "scrollWidth": 390,
+    "clientWidth": 390
+  },
+  {
+    "locale": "ru",
+    "width": 390,
+    "path": "/about-demo",
+    "scrollWidth": 390,
+    "clientWidth": 390
+  },
+  {
+    "locale": "ru",
+    "width": 390,
+    "path": "/privacy",
+    "scrollWidth": 390,
+    "clientWidth": 390
+  },
+  {
+    "locale": "ru",
+    "width": 390,
+    "path": "/unknown",
+    "scrollWidth": 390,
+    "clientWidth": 390
+  },
+  {
+    "locale": "ru",
+    "width": 430,
+    "path": "/",
+    "scrollWidth": 430,
+    "clientWidth": 430
+  },
+  {
+    "locale": "ru",
+    "width": 430,
+    "path": "/route",
+    "scrollWidth": 430,
+    "clientWidth": 430
+  },
+  {
+    "locale": "ru",
+    "width": 430,
+    "path": "/route/review",
+    "scrollWidth": 430,
+    "clientWidth": 430
+  },
+  {
+    "locale": "ru",
+    "width": 430,
+    "path": "/specialists",
+    "scrollWidth": 430,
+    "clientWidth": 430
+  },
+  {
+    "locale": "ru",
+    "width": 430,
+    "path": "/specialists/S01?offer=O01",
+    "scrollWidth": 430,
+    "clientWidth": 430
+  },
+  {
+    "locale": "ru",
+    "width": 430,
+    "path": "/compare",
+    "scrollWidth": 430,
+    "clientWidth": 430
+  },
+  {
+    "locale": "ru",
+    "width": 430,
+    "path": "/request/O01",
+    "scrollWidth": 430,
+    "clientWidth": 430
+  },
+  {
+    "locale": "ru",
+    "width": 430,
+    "path": "/about-demo",
+    "scrollWidth": 430,
+    "clientWidth": 430
+  },
+  {
+    "locale": "ru",
+    "width": 430,
+    "path": "/privacy",
+    "scrollWidth": 430,
+    "clientWidth": 430
+  },
+  {
+    "locale": "ru",
+    "width": 430,
+    "path": "/unknown",
+    "scrollWidth": 430,
+    "clientWidth": 430
+  },
+  {
+    "locale": "ru",
+    "width": 844,
+    "path": "/",
+    "scrollWidth": 844,
+    "clientWidth": 844
+  },
+  {
+    "locale": "ru",
+    "width": 844,
+    "path": "/route",
+    "scrollWidth": 844,
+    "clientWidth": 844
+  },
+  {
+    "locale": "ru",
+    "width": 844,
+    "path": "/route/review",
+    "scrollWidth": 844,
+    "clientWidth": 844
+  },
+  {
+    "locale": "ru",
+    "width": 844,
+    "path": "/specialists",
+    "scrollWidth": 844,
+    "clientWidth": 844
+  },
+  {
+    "locale": "ru",
+    "width": 844,
+    "path": "/specialists/S01?offer=O01",
+    "scrollWidth": 844,
+    "clientWidth": 844
+  },
+  {
+    "locale": "ru",
+    "width": 844,
+    "path": "/compare",
+    "scrollWidth": 844,
+    "clientWidth": 844
+  },
+  {
+    "locale": "ru",
+    "width": 844,
+    "path": "/request/O01",
+    "scrollWidth": 844,
+    "clientWidth": 844
+  },
+  {
+    "locale": "ru",
+    "width": 844,
+    "path": "/about-demo",
+    "scrollWidth": 844,
+    "clientWidth": 844
+  },
+  {
+    "locale": "ru",
+    "width": 844,
+    "path": "/privacy",
+    "scrollWidth": 844,
+    "clientWidth": 844
+  },
+  {
+    "locale": "ru",
+    "width": 844,
+    "path": "/unknown",
+    "scrollWidth": 844,
+    "clientWidth": 844
+  },
+  {
+    "locale": "ru",
+    "width": 320,
+    "path": "/",
+    "textScale": "200%",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "ru",
+    "width": 320,
+    "path": "/route/review",
+    "textScale": "200%",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "ru",
+    "width": 320,
+    "path": "/specialists/S01?offer=O01",
+    "textScale": "200%",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "ru",
+    "width": 320,
+    "path": "/request/O01",
+    "textScale": "200%",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "kk",
+    "width": 320,
+    "path": "/",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "kk",
+    "width": 320,
+    "path": "/route",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "kk",
+    "width": 320,
+    "path": "/route/review",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "kk",
+    "width": 320,
+    "path": "/specialists",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "kk",
+    "width": 320,
+    "path": "/specialists/S01?offer=O01",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "kk",
+    "width": 320,
+    "path": "/compare",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "kk",
+    "width": 320,
+    "path": "/request/O01",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "kk",
+    "width": 320,
+    "path": "/about-demo",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "kk",
+    "width": 320,
+    "path": "/privacy",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "kk",
+    "width": 320,
+    "path": "/unknown",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "kk",
+    "width": 360,
+    "path": "/",
+    "scrollWidth": 360,
+    "clientWidth": 360
+  },
+  {
+    "locale": "kk",
+    "width": 360,
+    "path": "/route",
+    "scrollWidth": 360,
+    "clientWidth": 360
+  },
+  {
+    "locale": "kk",
+    "width": 360,
+    "path": "/route/review",
+    "scrollWidth": 360,
+    "clientWidth": 360
+  },
+  {
+    "locale": "kk",
+    "width": 360,
+    "path": "/specialists",
+    "scrollWidth": 360,
+    "clientWidth": 360
+  },
+  {
+    "locale": "kk",
+    "width": 360,
+    "path": "/specialists/S01?offer=O01",
+    "scrollWidth": 360,
+    "clientWidth": 360
+  },
+  {
+    "locale": "kk",
+    "width": 360,
+    "path": "/compare",
+    "scrollWidth": 360,
+    "clientWidth": 360
+  },
+  {
+    "locale": "kk",
+    "width": 360,
+    "path": "/request/O01",
+    "scrollWidth": 360,
+    "clientWidth": 360
+  },
+  {
+    "locale": "kk",
+    "width": 360,
+    "path": "/about-demo",
+    "scrollWidth": 360,
+    "clientWidth": 360
+  },
+  {
+    "locale": "kk",
+    "width": 360,
+    "path": "/privacy",
+    "scrollWidth": 360,
+    "clientWidth": 360
+  },
+  {
+    "locale": "kk",
+    "width": 360,
+    "path": "/unknown",
+    "scrollWidth": 360,
+    "clientWidth": 360
+  },
+  {
+    "locale": "kk",
+    "width": 390,
+    "path": "/",
+    "scrollWidth": 390,
+    "clientWidth": 390
+  },
+  {
+    "locale": "kk",
+    "width": 390,
+    "path": "/route",
+    "scrollWidth": 390,
+    "clientWidth": 390
+  },
+  {
+    "locale": "kk",
+    "width": 390,
+    "path": "/route/review",
+    "scrollWidth": 390,
+    "clientWidth": 390
+  },
+  {
+    "locale": "kk",
+    "width": 390,
+    "path": "/specialists",
+    "scrollWidth": 390,
+    "clientWidth": 390
+  },
+  {
+    "locale": "kk",
+    "width": 390,
+    "path": "/specialists/S01?offer=O01",
+    "scrollWidth": 390,
+    "clientWidth": 390
+  },
+  {
+    "locale": "kk",
+    "width": 390,
+    "path": "/compare",
+    "scrollWidth": 390,
+    "clientWidth": 390
+  },
+  {
+    "locale": "kk",
+    "width": 390,
+    "path": "/request/O01",
+    "scrollWidth": 390,
+    "clientWidth": 390
+  },
+  {
+    "locale": "kk",
+    "width": 390,
+    "path": "/about-demo",
+    "scrollWidth": 390,
+    "clientWidth": 390
+  },
+  {
+    "locale": "kk",
+    "width": 390,
+    "path": "/privacy",
+    "scrollWidth": 390,
+    "clientWidth": 390
+  },
+  {
+    "locale": "kk",
+    "width": 390,
+    "path": "/unknown",
+    "scrollWidth": 390,
+    "clientWidth": 390
+  },
+  {
+    "locale": "kk",
+    "width": 430,
+    "path": "/",
+    "scrollWidth": 430,
+    "clientWidth": 430
+  },
+  {
+    "locale": "kk",
+    "width": 430,
+    "path": "/route",
+    "scrollWidth": 430,
+    "clientWidth": 430
+  },
+  {
+    "locale": "kk",
+    "width": 430,
+    "path": "/route/review",
+    "scrollWidth": 430,
+    "clientWidth": 430
+  },
+  {
+    "locale": "kk",
+    "width": 430,
+    "path": "/specialists",
+    "scrollWidth": 430,
+    "clientWidth": 430
+  },
+  {
+    "locale": "kk",
+    "width": 430,
+    "path": "/specialists/S01?offer=O01",
+    "scrollWidth": 430,
+    "clientWidth": 430
+  },
+  {
+    "locale": "kk",
+    "width": 430,
+    "path": "/compare",
+    "scrollWidth": 430,
+    "clientWidth": 430
+  },
+  {
+    "locale": "kk",
+    "width": 430,
+    "path": "/request/O01",
+    "scrollWidth": 430,
+    "clientWidth": 430
+  },
+  {
+    "locale": "kk",
+    "width": 430,
+    "path": "/about-demo",
+    "scrollWidth": 430,
+    "clientWidth": 430
+  },
+  {
+    "locale": "kk",
+    "width": 430,
+    "path": "/privacy",
+    "scrollWidth": 430,
+    "clientWidth": 430
+  },
+  {
+    "locale": "kk",
+    "width": 430,
+    "path": "/unknown",
+    "scrollWidth": 430,
+    "clientWidth": 430
+  },
+  {
+    "locale": "kk",
+    "width": 844,
+    "path": "/",
+    "scrollWidth": 844,
+    "clientWidth": 844
+  },
+  {
+    "locale": "kk",
+    "width": 844,
+    "path": "/route",
+    "scrollWidth": 844,
+    "clientWidth": 844
+  },
+  {
+    "locale": "kk",
+    "width": 844,
+    "path": "/route/review",
+    "scrollWidth": 844,
+    "clientWidth": 844
+  },
+  {
+    "locale": "kk",
+    "width": 844,
+    "path": "/specialists",
+    "scrollWidth": 844,
+    "clientWidth": 844
+  },
+  {
+    "locale": "kk",
+    "width": 844,
+    "path": "/specialists/S01?offer=O01",
+    "scrollWidth": 844,
+    "clientWidth": 844
+  },
+  {
+    "locale": "kk",
+    "width": 844,
+    "path": "/compare",
+    "scrollWidth": 844,
+    "clientWidth": 844
+  },
+  {
+    "locale": "kk",
+    "width": 844,
+    "path": "/request/O01",
+    "scrollWidth": 844,
+    "clientWidth": 844
+  },
+  {
+    "locale": "kk",
+    "width": 844,
+    "path": "/about-demo",
+    "scrollWidth": 844,
+    "clientWidth": 844
+  },
+  {
+    "locale": "kk",
+    "width": 844,
+    "path": "/privacy",
+    "scrollWidth": 844,
+    "clientWidth": 844
+  },
+  {
+    "locale": "kk",
+    "width": 844,
+    "path": "/unknown",
+    "scrollWidth": 844,
+    "clientWidth": 844
+  },
+  {
+    "locale": "kk",
+    "width": 320,
+    "path": "/",
+    "textScale": "200%",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "kk",
+    "width": 320,
+    "path": "/route/review",
+    "textScale": "200%",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "kk",
+    "width": 320,
+    "path": "/specialists/S01?offer=O01",
+    "textScale": "200%",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  },
+  {
+    "locale": "kk",
+    "width": 320,
+    "path": "/request/O01",
+    "textScale": "200%",
+    "scrollWidth": 320,
+    "clientWidth": 320
+  }
+]

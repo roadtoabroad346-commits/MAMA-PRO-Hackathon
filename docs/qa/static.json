@@ -1,0 +1,87 @@
+{
+  "catalogVersion": "catalog-v1",
+  "rulesVersion": "rules-v1",
+  "demoClock": "2026-11-14T12:00:00+05:00",
+  "sourceSetSha256": "81baaaadad5aa2db81f50dc94bd55cab24236b3e0c9b7373073bc20d513d328f",
+  "contrast": [
+    {
+      "role": "text",
+      "fg": "#203431",
+      "bg": "#faf8f3",
+      "ratio": 12.39
+    },
+    {
+      "role": "secondary",
+      "fg": "#53645f",
+      "bg": "#eef5f1",
+      "ratio": 5.65
+    },
+    {
+      "role": "primary",
+      "fg": "#176b62",
+      "bg": "#eef5f1",
+      "ratio": 5.72
+    },
+    {
+      "role": "primary button",
+      "fg": "#ffffff",
+      "bg": "#176b62",
+      "ratio": 6.33
+    },
+    {
+      "role": "error",
+      "fg": "#b42318",
+      "bg": "#fff0ed",
+      "ratio": 5.93
+    },
+    {
+      "role": "warning",
+      "fg": "#805500",
+      "bg": "#fff3cd",
+      "ratio": 5.89
+    },
+    {
+      "role": "focus",
+      "fg": "#145ea8",
+      "bg": "#ffffff",
+      "ratio": 6.57
+    },
+    {
+      "role": "border",
+      "fg": "#7a8984",
+      "bg": "#faf8f3",
+      "ratio": 3.45
+    }
+  ],
+  "secretPatternFiles": [],
+  "bundle": [
+    {
+      "file": "dist/assets/catalog-DLBOUpd3.json",
+      "bytes": 49197,
+      "gzip": 3054,
+      "sha256": "2dd526680d3d769da8bdf0758c5f0922d3527fac215dca1305d1d0a29a476837"
+    },
+    {
+      "file": "dist/assets/index-DBPRRhfS.css",
+      "bytes": 17176,
+      "gzip": 4126,
+      "sha256": "f7faf879e996d86b96eded0bf0b0138e829f91da23e438385bbc25f85fc77243"
+    },
+    {
+      "file": "dist/assets/index-oSdPcSuz.js",
+      "bytes": 496542,
+      "gzip": 147484,
+      "sha256": "9253f9b4fce76d298ad0ed23c2303e3d0d8082ac18de17a5a447cd14546fe4b8"
+    },
+    {
+      "file": "dist/index.html",
+      "bytes": 617,
+      "gzip": 399,
+      "sha256": "e71c4f22454932f7ed3f4788674d7b8a77e67ff6eabdd48c292061f6030864d9"
+    }
+  ],
+  "safeArea": {
+    "footer": true,
+    "viewport": "<!doctype html>\n<html lang=\"ru\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <meta name=\"referrer\" content=\"no-referrer\" />\n    <meta name=\"description\" content=\"Қолдау.Жол — демонстрационный навигатор для выбора специалиста.\" />\n    <title>Қолдау.Жол</title>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n    <script type=\"module\" src=\"/src/main.tsx\"></script>\n  </body>\n</html>\n"
+  }
+}

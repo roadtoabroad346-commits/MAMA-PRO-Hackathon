@@ -222,7 +222,7 @@ for (const locale of ['ru', 'kk'] as const) {
     await dialog.locator('#filter-budget').fill('7000');
     for (const viewport of [{ width: 320, height: 740 }, { width: 844, height: 390 }]) {
       await page.setViewportSize(viewport);
-      expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+      expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth)).toBe(true);
       expect(await dialog.evaluate(node => node.scrollWidth <= node.clientWidth)).toBe(true);
       await expect(dialog.getByRole('button', { name: locale === 'ru' ? 'Применить' : 'Қолдану', exact: true })).toBeInViewport();
     }

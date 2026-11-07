@@ -64,11 +64,14 @@ export function Verification({ specialistId }: { specialistId: string }) {
   </section>;
 }
 
-export function CompareButton({ offer }: { offer: Offer }) {
+export function CompareButton({ offer, onRemoved }: { offer: Offer; onRemoved?: () => void }) {
   const { comparison, toggleCompare, t } = useApp();
   const selected = comparison.find(item => item.specialistId === offer.specialistId);
   return <button className="button secondary" type="button" aria-pressed={selected?.offerId === offer.id}
-    onClick={() => toggleCompare(offer.specialistId, offer.id)}>{t(selected?.offerId === offer.id ? 'removeCompare' : selected ? 'replaceCompare' : 'compare')}</button>;
+    onClick={() => {
+      toggleCompare(offer.specialistId, offer.id);
+      if (selected?.offerId === offer.id) onRemoved?.();
+    }}>{t(selected?.offerId === offer.id ? 'removeCompare' : selected ? 'replaceCompare' : 'compare')}</button>;
 }
 
 export function OfferCard({ item }: { item: RatedOffer }) {

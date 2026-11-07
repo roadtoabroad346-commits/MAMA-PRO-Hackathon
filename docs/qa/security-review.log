@@ -1,0 +1,1 @@
+src/data/catalogRepository.ts:7:  const response = await fetch(catalogUrl);

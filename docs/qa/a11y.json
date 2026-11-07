@@ -1,0 +1,178 @@
+[
+  {
+    "locale": "ru",
+    "screen": "home",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ]
+  },
+  {
+    "locale": "ru",
+    "screen": "_route",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "ru",
+    "screen": "_route_review",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "ru",
+    "screen": "_specialists_S01",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "ru",
+    "screen": "_about-demo",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "ru",
+    "screen": "_privacy",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "ru",
+    "screen": "_unknown",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "ru",
+    "screen": "catalog",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "ru",
+    "screen": "filters",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "ru",
+    "screen": "compare",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "ru",
+    "screen": "request",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "ru",
+    "screen": "status",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "ru",
+    "screen": "cancel-dialog",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ]
+  },
+  {
+    "locale": "kk",
+    "screen": "home",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ]
+  },
+  {
+    "locale": "kk",
+    "screen": "_route",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "kk",
+    "screen": "_route_review",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "kk",
+    "screen": "_specialists_S01",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "kk",
+    "screen": "_about-demo",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "kk",
+    "screen": "_privacy",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "kk",
+    "screen": "_unknown",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "kk",
+    "screen": "catalog",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "kk",
+    "screen": "filters",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "kk",
+    "screen": "compare",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "kk",
+    "screen": "request",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "kk",
+    "screen": "status",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "locale": "kk",
+    "screen": "cancel-dialog",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ]
+  }
+]

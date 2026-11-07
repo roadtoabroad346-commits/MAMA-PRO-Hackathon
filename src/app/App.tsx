@@ -77,19 +77,23 @@ function Layout() {
 }
 
 export function App() {
+  const [startupLocale] = useState<'ru' | 'kk'>(() => {
+    try { return localStorage.getItem(LOCALE_KEY) === 'kk' ? 'kk' : 'ru'; }
+    catch { return 'ru'; }
+  });
   const [catalog, setCatalog] = useState<CatalogData | null>(null);
   const [failed, setFailed] = useState(false);
   const [attempt, setAttempt] = useState(0);
+  // Loading/error screens precede AppStateProvider and need their own lang.
+  useEffect(() => { document.documentElement.lang = startupLocale; }, [startupLocale]);
   useEffect(() => {
     let active = true;
     loadCatalog().then(data => { if (active) setCatalog(data); }, () => { if (active) setFailed(true); });
     return () => { active = false; };
   }, [attempt]);
   if (!catalog) {
-    let locale: 'ru' | 'kk' = 'ru';
-    try { locale = localStorage.getItem(LOCALE_KEY) === 'kk' ? 'kk' : 'ru'; } catch { /* defaults to RU */ }
-    return <main><h1>Қолдау.Жол</h1><p role={failed ? 'alert' : 'status'}>{translate(locale, failed ? 'loadError' : 'loading')}</p>
-      {failed ? <button className="button primary" onClick={() => { setFailed(false); setAttempt(n => n + 1); }}>{translate(locale, 'retry')}</button>
+    return <main><h1>Қолдау.Жол</h1><p role={failed ? 'alert' : 'status'}>{translate(startupLocale, failed ? 'loadError' : 'loading')}</p>
+      {failed ? <button className="button primary" onClick={() => { setFailed(false); setAttempt(n => n + 1); }}>{translate(startupLocale, 'retry')}</button>
         : <div className="catalog-grid loading-grid" aria-hidden="true">{[0, 1, 2].map(id => <div className="loading-card" key={id} />)}</div>}</main>;
   }
   // All routes use the already-loaded local catalog. Keep URL-backed controlled

@@ -63,7 +63,7 @@ export function DemoRequestEntry() {
       <OfferFacts offer={offer} /><Explanations item={location.state?.hasSearchContext ? service.inspectOffer(input, offer.id) : neutral} fallbackUnknowns={neutral?.unknowns} />
     </article>
     <RequestForm key={offer.id} offer={offer} />
-    {location.state?.fromProfile ? <button className="button secondary" type="button" onClick={() => navigate(-1)}>{t('backToProfile')}</button>
+    {location.state?.fromProfile || location.state?.fromComparison ? <button className="button secondary" type="button" onClick={() => navigate(-1)}>{t(location.state?.fromComparison ? 'backToComparison' : 'backToProfile')}</button>
       : <Link className="button secondary" to={`/specialists/${encodeURIComponent(specialist.id)}?offer=${encodeURIComponent(offer.id)}`}>{t('backToProfile')}</Link>}
   </div>;
 }

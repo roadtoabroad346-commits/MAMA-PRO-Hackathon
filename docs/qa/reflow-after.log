@@ -1,0 +1,38 @@
+
+> qoldau-zhol@0.6.0 test:e2e
+> playwright test tests/e2e/p0-reflow.spec.ts tests/e2e/profile.spec.ts tests/e2e/requests.spec.ts --workers=2
+
+
+Running 25 tests using 2 workers
+
+(node:15431) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:15432) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/p0-reflow.spec.ts:4:3 › ru: 320px with 200% text uses the layout viewport, including header and notices (5.9s)
+  ✓   2 tests/e2e/p0-reflow.spec.ts:4:3 › kk: 320px with 200% text uses the layout viewport, including header and notices (6.4s)
+  ✓   3 tests/e2e/profile.spec.ts:16:1 › profile without offer selects a stable public service; changing it updates all facts and URL (2.4s)
+  ✓   5 tests/e2e/profile.spec.ts:80:1 › unknown age disappears only when another offer supplies it (1.7s)
+  ✓   4 tests/e2e/profile.spec.ts:38:1 › switching to an incompatible offer removes old reasons and preserves the exact request/compare selection (4.0s)
+  ✓   6 tests/e2e/profile.spec.ts:94:1 › deep link stays neutral even if this tab has search conditions (1.9s)
+  ✓   8 tests/e2e/profile.spec.ts:119:1 › passport keeps identity, education, contact and offer data separate with explicit evidence limits (1.5s)
+  ✓   9 tests/e2e/profile.spec.ts:139:1 › partial profile and missing verification remain unknown; unknown and stale prices are explicit (2.4s)
+  ✓  10 tests/e2e/profile.spec.ts:154:1 › expired/future/revoked evidence cannot appear as current source confirmation; private data is never rendered (1.7s)
+  ✓   7 tests/e2e/profile.spec.ts:103:1 › unknown and mismatched IDs show clear not found; hidden offers and profiles cannot be opened (7.3s)
+  ✓  11 tests/e2e/profile.spec.ts:174:1 › source confirmation remains scoped to its exact offer when switching (2.1s)
+  ✓  12 tests/e2e/profile.spec.ts:189:1 › missing approach and partial service facts remain explicit; free consultation keeps its own unit (2.0s)
+  ✓  13 tests/e2e/profile.spec.ts:207:1 › changing RU/KK inside a profile preserves offer, comparison and request target (2.2s)
+  ✓  14 tests/e2e/profile.spec.ts:222:3 › ru: long name, reflow320, text200, landscape and keyboard service/request/Back (2.1s)
+  ✓  15 tests/e2e/profile.spec.ts:222:3 › kk: long name, reflow320, text200, landscape and keyboard service/request/Back (2.8s)
+  ✓  16 tests/e2e/requests.spec.ts:39:1 › S08 ack defaults false, has no personal inputs; double click commits once; S09 reload/back/cancel (7.2s)
+  ✓  17 tests/e2e/requests.spec.ts:73:1 › add success then commit abort shows error, no success route or row; reload retries the same key (5.8s)
+  ✓  19 tests/e2e/requests.spec.ts:106:1 › reload during a lost outcome recovers the existing result, never auto inserts (3.2s)
+  ✓  20 tests/e2e/requests.spec.ts:124:1 › failed cancellation keeps confirmed status and offers retry; reload proves rollback (2.6s)
+  ✓  21 tests/e2e/requests.spec.ts:135:1 › missing and expired request never create records; expired row is removed at startup (3.1s)
+  ✓  18 tests/e2e/requests.spec.ts:86:1 › uncertain commit checks the same key and resolves to the actual committed record (11.7s)
+  ✓  22 tests/e2e/requests.spec.ts:154:1 › read failure is not missing or success; denied IndexedDB never saves in memory (3.2s)
+  ✓  23 tests/e2e/requests.spec.ts:166:1 › cleanup needs confirmation, handles abort and preserves other applications and settings (4.8s)
+  ✓  24 tests/e2e/requests.spec.ts:185:1 › KK, keyboard, 320px and 200% text: service, status, cancellation and cleanup stay operable (3.1s)
+  ✓  25 tests/e2e/requests.spec.ts:204:1 › uncertain cleanup refreshes S09 instead of leaving a stale saved claim (11.3s)
+
+  25 passed (59.5s)

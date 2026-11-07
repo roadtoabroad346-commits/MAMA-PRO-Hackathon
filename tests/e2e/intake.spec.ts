@@ -273,12 +273,12 @@ for (const locale of ['ru', 'kk'] as const) {
       : ['Нені нақтылағыңыз келеді?', 'Баланың жас тобы қандай?', 'Қалай қатысқан ыңғайлы?', 'Қандай шарттар маңызды?'];
     for (let step = 1; step <= 4; step++) {
       await expect(page.locator('h1')).toHaveText(titles[step - 1]);
-      expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+      expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth)).toBe(true);
       await expect(page.locator('input:not([type="radio"]):not([type="checkbox"]), textarea')).toHaveCount(step === 4 ? 1 : 0);
       await page.getByRole('button', { name: locale === 'ru' ? 'Пропустить шаг' : 'Қадамды өткізіп жіберу', exact: true }).click();
     }
     await expect(page.locator('h1')).toHaveText(locale === 'ru' ? 'Ваши условия поиска' : 'Сіздің іздеу шарттарыңыз');
-    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth)).toBe(true);
     await expect(page.locator('html')).toHaveAttribute('lang', locale);
     await page.getByRole('link', { name: locale === 'ru' ? 'Показать варианты' : 'Нұсқаларды көрсету', exact: true }).click();
     await expect(page.getByTestId('specialist-card')).toHaveCount(12);

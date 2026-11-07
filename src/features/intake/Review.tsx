@@ -25,8 +25,10 @@ export function Review() {
     <p className="notice">{t('reviewNotice')}</p>
     <dl className="summary">
       {rows.map(row => <div className="summary-row" key={row.key} data-field={row.key}>
-        <div><dt>{t(row.label)}</dt><dd><strong>{row.value}</strong><span className={`condition ${row.mode === 'strict' ? 'strict' : ''}`}>{t(row.mode)}</span></dd></div>
-        <Link className="edit-link" to="/route" state={{ step: row.step, review: true }} aria-label={t('editField', { field: t(row.label) })}>{t('edit')}</Link>
+        <dt>{t(row.label)}</dt>
+        <dd><div className="summary-value"><strong>{row.value}</strong><span className={`condition ${row.mode === 'strict' ? 'strict' : ''}`}>{t(row.mode)}</span></div>
+          <Link className="edit-link" to="/route" state={{ step: row.step, review: true }} aria-label={t('editField', { field: t(row.label) })}>{t('edit')}</Link>
+        </dd>
       </div>)}
     </dl>
     {summary.query !== '' && <section className="notice" data-field="query">

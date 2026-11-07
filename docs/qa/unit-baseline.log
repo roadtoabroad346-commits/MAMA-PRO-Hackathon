@@ -1,0 +1,13 @@
+
+> qoldau-zhol@0.6.0 test
+> vitest run
+
+
+ RUN  v4.1.12 /workspace/MAMA-PRO-Hackathon
+
+
+ Test Files  5 passed (5)
+      Tests  59 passed (59)
+   Start at  13:53:29
+   Duration  2.62s (transform 566ms, setup 0ms, import 1.23s, tests 295ms, environment 0ms)
+

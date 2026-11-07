@@ -1,0 +1,113 @@
+
+> qoldau-zhol@0.6.0 test:e2e
+> playwright test tests/e2e/p0.spec.ts --workers=2 --timeout=15000
+
+[WebServer] (node:3482) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 6 tests using 2 workers
+
+(node:3505) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3506) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/p0.spec.ts:20:3 › ru P0 A: guided route → review → profile → compare → request → durable status (15.1s)
+  ✘  2 tests/e2e/p0.spec.ts:70:3 › ru P0 B: direct catalog → hard filters → compare → exact selection (15.1s)
+(node:3807) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3808) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 tests/e2e/p0.spec.ts:91:3 › ru P0 C: no exact results → explicit budget reset → retry (2.8s)
+  ✘  4 tests/e2e/p0.spec.ts:20:3 › kk P0 A: guided route → review → profile → compare → request → durable status (15.0s)
+(node:4149) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  6 tests/e2e/p0.spec.ts:91:3 › kk P0 C: no exact results → explicit budget reset → retry (1.8s)
+  ✘  5 tests/e2e/p0.spec.ts:70:3 › kk P0 B: direct catalog → hard filters → compare → exact selection (15.0s)
+
+
+  1) tests/e2e/p0.spec.ts:20:3 › ru P0 A: guided route → review → profile → compare → request → durable status 
+
+    Test timeout of 15000ms exceeded.
+
+    Error: locator.click: Test timeout of 15000ms exceeded.
+    Call log:
+      - waiting for getByTestId('comparison-card').filter({ has: locator('[href="/specialists/S03?offer=O03"]') }).getByRole('link', { name: 'Выбрать эту услугу', exact: true })
+
+
+      51 |     await expect(page.getByTestId('comparison-card')).toHaveCount(2);
+      52 |     const chosen = page.getByTestId('comparison-card').filter({ has: page.locator('[href="/specialists/S03?offer=O03"]') });
+    > 53 |     await chosen.getByRole('link', { name: locale === 'ru' ? 'Выбрать эту услугу' : 'Осы қызметті таңдау', exact: true }).click();
+         |                                                                                                                           ^
+      54 |     await expect(page).toHaveURL('/request/O03');
+      55 |     await expect(page.getByTestId('request-offer')).toHaveAttribute('data-specialist-id', 'S03');
+      56 |     await expect(page.getByRole('checkbox')).not.toBeChecked();
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/p0.spec.ts:53:123
+
+    Error Context: test-results/p0-ru-P0-A-guided-route-→--cb1ab--→-request-→-durable-status/error-context.md
+
+  2) tests/e2e/p0.spec.ts:70:3 › ru P0 B: direct catalog → hard filters → compare → exact selection 
+
+    Test timeout of 15000ms exceeded.
+
+    Error: locator.click: Test timeout of 15000ms exceeded.
+    Call log:
+      - waiting for getByTestId('comparison-card').first().getByRole('link', { name: 'Выбрать эту услугу', exact: true })
+
+
+      82 |     await compare(page, ['O01', 'O03']);
+      83 |     await info.attach('B-compare-mobile', { body: await page.screenshot({ fullPage: true }), contentType: 'image/png' });
+    > 84 |     await page.getByTestId('comparison-card').first().getByRole('link', { name: locale === 'ru' ? 'Выбрать эту услугу' : 'Осы қызметті таңдау', exact: true }).click();
+         |                                                                                                                                                                ^
+      85 |     await expect(page).toHaveURL('/request/O01');
+      86 |     await expect(page.getByTestId('request-offer')).toHaveAttribute('data-offer-id', 'O01');
+      87 |     await page.goBack();
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/p0.spec.ts:84:160
+
+    Error Context: test-results/p0-ru-P0-B-direct-catalog--33119-→-compare-→-exact-selection/error-context.md
+
+  3) tests/e2e/p0.spec.ts:20:3 › kk P0 A: guided route → review → profile → compare → request → durable status 
+
+    Test timeout of 15000ms exceeded.
+
+    Error: locator.click: Test timeout of 15000ms exceeded.
+    Call log:
+      - waiting for getByTestId('comparison-card').filter({ has: locator('[href="/specialists/S03?offer=O03"]') }).getByRole('link', { name: 'Осы қызметті таңдау', exact: true })
+
+
+      51 |     await expect(page.getByTestId('comparison-card')).toHaveCount(2);
+      52 |     const chosen = page.getByTestId('comparison-card').filter({ has: page.locator('[href="/specialists/S03?offer=O03"]') });
+    > 53 |     await chosen.getByRole('link', { name: locale === 'ru' ? 'Выбрать эту услугу' : 'Осы қызметті таңдау', exact: true }).click();
+         |                                                                                                                           ^
+      54 |     await expect(page).toHaveURL('/request/O03');
+      55 |     await expect(page.getByTestId('request-offer')).toHaveAttribute('data-specialist-id', 'S03');
+      56 |     await expect(page.getByRole('checkbox')).not.toBeChecked();
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/p0.spec.ts:53:123
+
+    Error Context: test-results/p0-kk-P0-A-guided-route-→--7a27e--→-request-→-durable-status/error-context.md
+
+  4) tests/e2e/p0.spec.ts:70:3 › kk P0 B: direct catalog → hard filters → compare → exact selection 
+
+    Test timeout of 15000ms exceeded.
+
+    Error: locator.click: Test timeout of 15000ms exceeded.
+    Call log:
+      - waiting for getByTestId('comparison-card').first().getByRole('link', { name: 'Осы қызметті таңдау', exact: true })
+
+
+      82 |     await compare(page, ['O01', 'O03']);
+      83 |     await info.attach('B-compare-mobile', { body: await page.screenshot({ fullPage: true }), contentType: 'image/png' });
+    > 84 |     await page.getByTestId('comparison-card').first().getByRole('link', { name: locale === 'ru' ? 'Выбрать эту услугу' : 'Осы қызметті таңдау', exact: true }).click();
+         |                                                                                                                                                                ^
+      85 |     await expect(page).toHaveURL('/request/O01');
+      86 |     await expect(page.getByTestId('request-offer')).toHaveAttribute('data-offer-id', 'O01');
+      87 |     await page.goBack();
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/p0.spec.ts:84:160
+
+    Error Context: test-results/p0-kk-P0-B-direct-catalog--21437-→-compare-→-exact-selection/error-context.md
+
+  4 failed
+    tests/e2e/p0.spec.ts:20:3 › ru P0 A: guided route → review → profile → compare → request → durable status 
+    tests/e2e/p0.spec.ts:70:3 › ru P0 B: direct catalog → hard filters → compare → exact selection ─
+    tests/e2e/p0.spec.ts:20:3 › kk P0 A: guided route → review → profile → compare → request → durable status 
+    tests/e2e/p0.spec.ts:70:3 › kk P0 B: direct catalog → hard filters → compare → exact selection ─
+  2 passed (37.0s)
