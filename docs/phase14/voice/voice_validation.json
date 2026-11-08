@@ -1,0 +1,35 @@
+{
+  "format": "Synthetic eSpeak Russian speech with slides and previously recorded real production demo",
+  "humanRehearsal": "NOT RUN",
+  "parentResearch": "NOT RUN",
+  "all12SpeechClipsFitWithoutTruncation": true,
+  "lastSpeechEnd": 297.504,
+  "hardLimit": 300,
+  "media": {
+    "FULL_VOICE_REHEARSAL_RU.mp4": {
+      "duration": 298.0,
+      "sha256": "a033a6d985d1e1fd0cdd46a78dbc5d9d3aed6b3f65174949e20063dcb1c4de1c",
+      "decode": "PASS",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "codec_name": "aac"
+        }
+      ]
+    },
+    "FULL_VOICE_REHEARSAL_RU.mp3": {
+      "duration": 298.057143,
+      "sha256": "bd42501901116cac52f60ccd81a084bc6754c8ae676b82146a3e0f60c6a97af2",
+      "decode": "PASS",
+      "streams": [
+        {
+          "codec_name": "mp3"
+        }
+      ]
+    }
+  }
+}
