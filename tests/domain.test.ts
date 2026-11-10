@@ -57,11 +57,11 @@ describe('same SearchService for review and catalog; phase-0 oracle', () => {
     expect(service.search({ ...base, budgetKzt: 0, budgetHard: true }).specialistCount).toBe(0);
     expect(service.search({ ...base, budgetKzt: null, budgetHard: true }).specialistCount).toBe(12);
   });
-  it('keeps inactive district in summary without applying it to online/mixed formats', () => {
+  it('keeps online-only district inactive but applies it to mixed requests (ADR-0012)', () => {
     const online = { ...base, format: 'online' as const };
     expect(service.search(online).items).toEqual(service.search({ ...online, districtId: 'BOSTANDYK', districtHard: true }).items);
     expect(service.search({ ...online, districtId: 'BOSTANDYK' }).appliedInputSummary.districtId).toBe('BOSTANDYK');
-    expect(service.search({ ...base, districtId: 'MEDEU', districtHard: true }).items).toEqual(service.search(base).items);
+    expect(service.search({ ...base, districtId: 'MEDEU', districtHard: true }).items.map(i => i.selectedOfferId)).toEqual(['O17', 'O10']);
   });
   it('language and format preferences retain alternatives', () => {
     const hard = service.search({ ...base, serviceLanguage: 'kk', format: 'offline' });

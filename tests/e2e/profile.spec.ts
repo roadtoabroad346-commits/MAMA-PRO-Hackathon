@@ -4,7 +4,7 @@ import { emptySearchInput, type SearchInput } from '../../src/domain/contracts';
 
 async function seed(page: Page, input: SearchInput = emptySearchInput(), locale: 'ru' | 'kk' = 'ru') {
   await page.addInitScript(({ input, locale }) => {
-    sessionStorage.setItem('qoldau.demo-search', JSON.stringify({ schemaVersion: 1, catalogVersion: 'catalog-v1', expiresAt: Date.now() + 7200000, input, step: 1 }));
+    sessionStorage.setItem('qoldau.demo-search', JSON.stringify({ schemaVersion: 1, catalogVersion: 'catalog-v2', expiresAt: Date.now() + 7200000, input, step: 1 }));
     localStorage.setItem('qoldau.locale', locale);
   }, { input, locale });
 }
@@ -148,7 +148,7 @@ test('partial profile and missing verification remain unknown; unknown and stale
   await page.goto('/specialists/S11?offer=O11');
   await expect(selected(page)).toContainText('Цена требует уточнения');
   await expect(page.locator('[data-trust-field="price"]')).toContainText('Сведения устарели');
-  await expect(page.locator('[data-unknown="BUDGET_UNKNOWN"]')).toBeVisible();
+  await expect(page.locator('[data-unknown="BUDGET_STALE"]')).toBeVisible();
 });
 
 test('expired/future/revoked evidence cannot appear as current source confirmation; private data is never rendered', async ({ page }) => {

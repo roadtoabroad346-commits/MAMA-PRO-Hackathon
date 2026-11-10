@@ -3,14 +3,16 @@ import raw from '../src/data/catalog.json';
 import { catalogSchema, type Offer } from '../src/domain/catalog';
 import { AGE_RANGES, emptySearchInput, type SearchInput } from '../src/domain/contracts';
 import { SearchService } from '../src/domain/SearchService';
+import { evaluateOffer } from '../src/domain/matching';
+import { fixedClock } from '../src/domain/freshness';
+import { catalogWithOffers } from './support/catalog';
 
 const catalog = catalogSchema.parse(raw);
 const base = emptySearchInput();
 function classify(patch: Partial<Offer>, input: Partial<SearchInput>) {
   const offer = { ...structuredClone(catalog.offers[0]), ...patch };
-  const service = new SearchService({ ...catalog, offers: [offer] });
-  const result = service.search({ ...base, ...input });
-  return { status: result.items.length ? 'exact' : result.incompleteItems.length ? 'incomplete' : 'excluded', result };
+  const evaluation = evaluateOffer({ ...base, ...input }, offer, { clock: fixedClock(catalog.demoClock), rulesVersion: catalog.rulesVersion, catalogVersion: catalog.catalogVersion });
+  return { status: evaluation.eligibility === 'eligible' ? 'exact' : evaluation.eligibility, evaluation };
 }
 
 describe('P0 boundary proof independent of production classifier', () => {
@@ -38,7 +40,7 @@ describe('P0 boundary proof independent of production classifier', () => {
     expect(classify({ priceKind: 'exact', priceAmountKzt: 1 }, { budgetKzt: 0, budgetHard: true }).status).toBe('excluded');
     expect(classify({ priceKind: 'unknown', priceAmountKzt: null }, { budgetKzt: null, budgetHard: true }).status).toBe('exact');
   });
-  it.each([[30 * 86400000, 'exact'], [30 * 86400000 + 1, 'incomplete'], [-1, 'incomplete']] as const)
+  it.each([[30 * 86400000 - 1, 'exact'], [30 * 86400000, 'incomplete'], [30 * 86400000 + 1, 'incomplete'], [-1, 'incomplete']] as const)
   ('price freshness age %s ms → %s, source metadata is required', (age, status) => {
     const date = new Date(Date.parse(catalog.demoClock) - age).toISOString();
     const fieldSources = { ...catalog.offers[0].fieldSources, price: { sourceKind: 'synthetic_self_reported', checkedAt: date } };
@@ -47,12 +49,12 @@ describe('P0 boundary proof independent of production classifier', () => {
   });
   it('hard fail never enters incomplete even when another hard field is unknown', () => {
     expect(classify({ languages: ['ru'], priceKind: 'unknown', priceAmountKzt: null }, { serviceLanguage: 'kk', budgetKzt: 6000, budgetHard: true }).status).toBe('excluded');
-    const { result } = classify({ languages: null }, { serviceLanguage: 'kk' });
-    expect(result.incompleteItems[0].unknowns.map(r => r.code)).toContain('LANGUAGE_UNKNOWN');
-    expect(result.incompleteItems[0].reasons.map(r => r.code)).not.toContain('LANGUAGE_MATCH');
+    const { evaluation } = classify({ languages: null }, { serviceLanguage: 'kk' });
+    expect(evaluation.unknowns.map(r => r.code)).toContain('LANGUAGE_UNKNOWN');
+    expect(evaluation.reasons.map(r => r.code)).not.toContain('LANGUAGE_MATCH');
   });
   it('isolated reference score/coverage is 100/1, 85/.85, 82.5/1', () => {
-    const service = new SearchService({ ...catalog, offers: catalog.offers.filter(o => ['O01', 'O02', 'O03'].includes(o.id)) });
+    const service = new SearchService(catalogWithOffers(catalog, catalog.offers.filter(o => ['O01', 'O02', 'O03'].includes(o.id))));
     const result = service.search({ ...base, needTag: 'speech', ageGroup: 'AGE_3_5', serviceLanguage: 'kk', format: 'offline', budgetKzt: 6000, districtId: 'BOSTANDYK', availabilityPreferred: true });
     expect(result.items.map(i => [i.selectedOfferId, i.score, i.coverage])).toEqual([['O01', 100, 1], ['O03', 85, .85], ['O02', 82.5, 1]]);
   });

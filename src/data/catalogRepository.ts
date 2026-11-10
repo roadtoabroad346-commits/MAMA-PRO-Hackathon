@@ -8,3 +8,6 @@ export async function loadCatalog(): Promise<Catalog> {
   if (!response.ok) throw new Error('CATALOG_LOAD_FAILED');
   return catalogSchema.parse(await response.json());
 }
+
+export interface CatalogRepository { load(): Promise<Catalog> }
+export const catalogRepository: CatalogRepository = { load: loadCatalog };

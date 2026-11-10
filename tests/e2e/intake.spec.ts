@@ -7,7 +7,7 @@ import { emptySearchInput, type SearchInput } from '../../src/domain/contracts';
 const service = new SearchService(catalogSchema.parse(rawCatalog));
 const base = emptySearchInput();
 async function snapshot(page: Page): Promise<{ input: SearchInput; step: number }> {
-  return page.evaluate(() => JSON.parse(sessionStorage.getItem('qoldau.demo-search')!));
+  return page.evaluate(() => { const snapshot = JSON.parse(sessionStorage.getItem('qoldau.demo-search')!); return { ...snapshot, input: snapshot.intakeDraft ?? snapshot.input }; });
 }
 async function goToConditions(page: Page) {
   await page.goto('/route');

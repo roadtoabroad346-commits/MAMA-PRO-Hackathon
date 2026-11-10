@@ -1,3 +1,49 @@
+# Фазы 28–35: актуальная матрица
+
+Источник: docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt. Статусы ниже относятся к проверяемому срезу, не к полному MVP. Runtime-доказательства отдельно от документального review; журналы и ограничения — QA_RESULTS.md.
+
+| AC-28-35 | Условие | Реализация | Проверка | Статус |
+|---|---|---|---|---|
+|AC-28-35-001|Hard pass/fail/unknown|matching.ts / ConstraintCheck|matching.test.ts: mandatory language/format; p0.test.ts: age/budget|PASS|
+|AC-28-35-002|Fail не exact/incomplete|evaluateOffer eligibility|p0.test.ts hard fail + unknown; matching.test.ts same-offer|PASS|
+|AC-28-35-003|Unknown hard не exact|hardChecks → eligibility|p0.test.ts partial/null; search.test.ts incomplete|PASS|
+|AC-28-35-004|Same-offer|matching.ts + SearchService|matching.test.ts A/B synthetic regression; search.test.ts O23/O24|PASS|
+|AC-28-35-005|Возрастные границы|AGE_RANGES; matching.ts age|p0.test.ts все пять групп, endpoints/partial/disjoint|PASS|
+|AC-28-35-006|Budget null≠0|contracts.ts parseBudget|domain.test.ts; p0.test.ts zero/free; intake.spec.ts|PASS|
+|AC-28-35-007|From не конечная цена|matching.ts budget|matching.test.ts from4500/7000; p0.test.ts|PASS|
+|AC-28-35-008|Stale не hard pass|freshness.ts + budget|matching.test.ts recent copy; p0.test.ts TTL|PASS|
+|AC-28-35-009|Общий A|applicableFactors|matching.test.ts mixed format/district denominator|PASS|
+|AC-28-35-010|Unknown не снижает знаменатель|ranking.denominator|matching.test.ts removing positive facts; p0.test.ts reference85|PASS|
+|AC-28-35-011|Known false≠unknown|ranking.known|matching.test.ts availability false/null; empty tags|PASS|
+|AC-28-35-012|Пустой A null/null|SearchService mode/ranking|domain.test.ts neutral12/20|PASS|
+|AC-28-35-013|100/85/82.5|matching + manifest A|p0.test.ts isolated reference; domain.test.ts A|PASS|
+|AC-28-35-014|Best eligible offer|SearchService group/compare|matching.test.ts ties/budget better offer; search.test.ts price|PASS|
+|AC-28-35-015|Stable permutation|SearchService compare|matching.test.ts reversal and invariants|PASS|
+|AC-28-35-016|Hidden/withdrawn|publicCatalog|matching.test.ts hidden/withdrawn; p0-errors/profile e2e|PASS|
+|AC-28-35-017|Fact reasons same offer|MatchReason + templates|matching.test.ts evidence/kind/no fact; profile.spec.ts switching offer|PASS|
+|AC-28-35-018|Clock/policy|freshness.ts/profile.ts|matching.test.ts per-TTL/invalid/future/injected Clock|PASS|
+|AC-28-35-019|Locale invariant|locale вне SearchInput|intake/profile/p0 e2e RU/KK preserve conditions/IDs|PASS|
+|AC-28-35-020|S01 два входа|Home.tsx|intake.spec.ts direct path/guide; p0-keyboard.spec.ts|PASS|
+|AC-28-35-021|Без регистрации|Home/App routes|intake.spec.ts complete flow without account|PASS|
+|AC-28-35-022|S02 четыре шага/skip/Back/errors|Intake.tsx|intake.spec.ts; phases28-35.spec.ts|PASS|
+|AC-28-35-023|Не уверен → null|intakeDraft.needTag|phases28-35.spec.ts unsure; intake.spec.ts skip|PASS|
+|AC-28-35-024|Не URL/логи|AppState/session + local repository|intake.spec.ts URL/history/requests; phases28-35.spec.ts logs/URLs|PASS|
+|AC-28-35-025|UI language отдельно|AppState.locale / serviceLanguage|intake.spec.ts mid-step locale/back; profile.spec.ts|PASS|
+|AC-28-35-026|S03 canonical summary|Review.tsx appliedInputSummary|intake.spec.ts complete SearchInput and seven dl pairs|PASS|
+|AC-28-35-027|Preview тот же SearchService|Review.tsx/service.search|intake.spec.ts count equals catalog; phases28-35 draft apply|PASS|
+|AC-28-35-028|Ошибка≠0|App repository states|p0-errors.spec.ts; phases28-35.spec.ts load failure/retry|PASS|
+|AC-28-35-029|Edit сохраняет остальное|updateDraft + step state|intake.spec.ts edit budget/locale/back; phases28-35 invalid Back|PASS|
+|AC-28-35-030|CTA atomic applied input|applyIntake|phases28-35.spec.ts draft/applied/reload; intake.spec.ts catalog count|PASS|
+|AC-28-35-031|RU/KK templates/errors|messages/searchMessages|domain.test.ts key/placeholder parity; matching.test.ts reason templates; intake e2e KK|PASS|
+|AC-28-35-032|Keyboard/mobile|controls/styles/route focus|intake/p0-keyboard/p0-reflow/phases28-35 e2e:360/390/430,200%,reduce|PASS|
+|AC-28-35-033|Existing modules preserved|SearchService compatible DTO|profile/search/requests/p0 e2e + check:release|PASS|
+|AC-28-35-034|Фактические статусы|QA_RESULTS + logs|docs/phases28-35/check.log, build.log, e2e.log, release.log|PASS|
+|AC-28-35-035|Фаза36+ не объявлена|PHASES_28_35_HANDOFF|Документальный self-audit границ; не runtime-test|PASS|
+
+---
+
+Историческая матрица предыдущих фаз сохранена ниже.
+
 # Қолдау.Жол — прослеживаемость требований
 
 > Фаза 12 (07.11.2026): фактическое сопоставление реализации, P0-пути ru/kk, отрицательные случаи, исправления и версия проверки приведены в [QA_RESULTS.md](QA_RESULTS.md). Исторические D/A/G ниже не являются текущим вердиктом. A/B/C подтверждены в мобильном Chromium; полное закрытие P0 — NO-GO до обязательных ручных AT/zoom/device-проверок. NOT RUN не считается успешным результатом.

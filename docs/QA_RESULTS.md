@@ -1,3 +1,39 @@
+# Фазы 28–35 — фактические проверки 10.11.2026
+
+**READY WITH LIMITATIONS.** Рабочая ветка phases-28-35, основа b1f79f3 / phase-14-defense. Проверяются текущие исходники, catalog-v2/rules-v2/freshness-v2. Исторические отчёты ниже не считаются повторным выполнением нынешних проверок.
+
+Среда: Cloud Linux x64, Node24.22.1, npm11.9.0, Chromium156.0.8078.79 `/usr/bin/chromium`; lockfile не изменён, новые зависимости не добавлены. npm ci восстановил106 пакетов. Clock синтетических фактов14.11.2026 12:00+05, независимо от runtime/session/request clocks.
+
+| Проверка | Факт | Доказательство |
+|---|---|---|
+|npm ci|PASS|Установка из существующего lockfile, exit0|
+|npm run check|PASS: TypeScript strict +117/117 тестов,7 файлов|[check.log](phases28-35/check.log)|
+|npm run build|PASS|[build.log](phases28-35/build.log)|
+|PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e -- --workers=2|PASS:79/79|[e2e.log](phases28-35/e2e.log)|
+|PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run check:release -- --workers=2|PASS:18/18|[release.log](phases28-35/release.log)|
+|PORT=5180 node scripts/serve-release.mjs; node docs/phases28-35/production-smoke.mjs|PASS:RU/KK S01→S02→S03→catalog/reload|[production-smoke.json](phases28-35/production-smoke.json); errors0, только local requests, overflow=false|
+|Existing docs/qa/benchmark.ts через локальный esbuild|PASS,20 offers p95=1.27ms;30 offers p95=2.04ms|[benchmark.json](phases28-35/benchmark.json);100 замеров+1000 warmup, cloud Node, не реальный телефон|
+|git diff --check|PASS|Exit0 перед commit|
+|Визуальный просмотр|PASS в проверенном срезе|production-home-ru.png, production-review-kk.png; просмотрены также reflow200% снимки|
+
+117 тестов включают каждый TTL и точную границу, invalid/future/missing даты, age endpoints всех пяти групп/partial/disjoint, category OR, source-backed need, mandatory language/format, budget null/0/free/exact/from/stale, known false vs unknown, одинаковый A, online/mixed district, same-offer, hidden/withdrawn, stable ties/best offer/unique counts, immutable fixtures, manifest A/B/C и запрет ложных reasons. Пустой language list нормализован в null по ТЗ§17.2.
+
+79 dev browser tests: оба входа, полная/частичная/пустая анкета, unsure→null, ошибки budget, hard budget0/1000, locale mid-step, Back/Forward/edit, direct review, отдельные draft/applied и reload/TTL/corruption/storage denial, loading/error/Retry≠zero, keyboard/focus,360/390/430 и reflow320/200%/reduced motion. Регрессии каталога, профиля, compare, минимальных requests, uncertain commit/cancellation/cleanup также проходят. Новый тест посимвольного ввода подтверждает, что пробел запроса не удаляется до service normalization.
+
+18 production tests выполняются на существующем сервере dist, проверяют RU/KK A/B/C, SPA direct routes/reload, HTTP404 assets/405 mutation, local assets и durable request/cancel/recovery/cleanup. Отдельный production smoke фиксирует S03 count5/5 и IDs O01/O03/O02/O11/O10 в обоих языках, сохранность applied после reload, отсутствие JS ошибок и горизонтального overflow на390px. Мобильные screenshots сохраняются в phases28-35; тесты200% и обычный production проход подписаны раздельно.
+
+В первом прогоне были исправлены: dev/release смешение HTTP expectations (release.spec теперь запускается существующей production-конфигурацией); единичный keyboard timeout не воспроизвёлся на финальном полном прогоне; новый тест уточнён по фактическому dataset (6 online offers принадлежат4 специалистам), неверный selector заменён на field-associated edit link. Ручные A/B/C expectations не подгонялись. Найденная регрессия удаления пробела исправлена в applied update; отдельный тест доказывает пользовательское поведение. Источник focusTags добавлен явно как synthetic_curated_fixture, не выдан за реальную проверку.
+
+Build warnings: Rollup удаляет некорректно расположенные PURE-комментарии зависимости zod; JS chunk505.09kB немного превышает default500kB advisory. Build успешен, gzip JS149.54kB, CSS4.13kB, JSON3.11kB. Предупреждения не отключались. Field p75/LCP/INP не выводятся из этого benchmark.
+
+NOT RUN: редактура KK носителем; реальный usability-тест с родителем; отдельный аудит screen reader; полевые показатели на физическом телефоне. Новое публичное hosting/deploy не входит в этот результат. Отсутствующих исследований не заявляем. Критических дефектов в проверенном участке не обнаружено; это не гарантия отсутствия ошибок вне проверенных условий.
+
+35 AC с реализацией и именами проверок: [REQUIREMENTS_TRACEABILITY](REQUIREMENTS_TRACEABILITY.md). Результат каждой из8 фаз и API для36: [PHASES_28_35_HANDOFF](PHASES_28_35_HANDOFF.md). Решения/отличия: ADR-0012…0016 в [DECISIONS](DECISIONS.md). Изменённые файлы: [changed-files.txt](phases28-35/changed-files.txt). Фаза36 не начата.
+
+---
+
+Исторический отчёт предыдущих фаз:
+
 # Фаза 12 — проверка P0 и исправление дефектов
 
 Дата: 07.11.2026, Asia/Qyzylorda (UTC+05:00).

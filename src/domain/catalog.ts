@@ -10,7 +10,7 @@ const offerSchema = z.object({
   title: localized, focusTags: z.array(z.enum(NEED_TAGS)).nullable(),
   ageMinMonths: z.number().int().min(0).max(215).nullable(),
   ageMaxMonths: z.number().int().min(0).max(215).nullable(),
-  languages: z.array(z.enum(LANGUAGES)).nullable(),
+  languages: z.array(z.enum(LANGUAGES)).nullable().transform(value => value?.length ? value : null),
   format: z.enum(['offline', 'online', 'unknown']), districtId: z.enum(DISTRICTS).nullable(),
   priceKind: z.enum(['exact', 'from', 'free', 'unknown']), priceAmountKzt: z.number().int().min(0).nullable(),
   durationMinutes: z.number().int().positive().nullable(),

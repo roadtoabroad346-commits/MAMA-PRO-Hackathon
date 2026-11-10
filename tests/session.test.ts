@@ -10,6 +10,15 @@ function storage() {
     removeItem: (key: string) => { values.delete(key); } };
 }
 describe('synthetic session reload policy', () => {
+  it('keeps the synthetic intake draft separate from applied input on reload', () => {
+    const store = storage();
+    const session = { input: emptySearchInput(), intakeDraft: { ...emptySearchInput(), budgetKzt: 0, budgetHard: true },
+      step: 4 as const, expiresAt: now + SESSION_TTL, notice: null };
+    expect(saveSession(store, session, 'catalog-v2')).toBe(true);
+    const restored = restoreSession(store, 'catalog-v2', now + 1);
+    expect(restored.input.budgetKzt).toBeNull();
+    expect(restored.intakeDraft?.budgetKzt).toBe(0);
+  });
   it('round-trips null and zero distinctly, plus hard flags and step', () => {
     const store = storage();
     const session = { input: { ...emptySearchInput(), budgetKzt: 0, budgetHard: true, serviceLanguage: 'kk' as const }, step: 4 as const, expiresAt: now + SESSION_TTL, notice: null };

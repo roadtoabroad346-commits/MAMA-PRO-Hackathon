@@ -2,11 +2,10 @@ import { Link } from 'react-router-dom';
 import { useApp } from '../../app/AppState';
 import type { Offer } from '../../domain/catalog';
 import { isFresh, type RatedOffer } from '../../domain/SearchService';
+import { FRESHNESS_POLICY } from '../../domain/freshness';
 import { verificationStatus } from '../../domain/profile';
-import { categoryKeys, districtKeys, type MessageKey } from '../../i18n/messages';
+import { categoryKeys, districtKeys } from '../../i18n/messages';
 
-const matchKeys: Record<string, MessageKey> = { need: 'reasonNeed', age: 'reasonAge', language: 'reasonLanguage', format: 'reasonFormat', budget: 'reasonBudget', district: 'reasonDistrict', availability: 'reasonAvailability' };
-const unknownKeys: Record<string, MessageKey> = { need: 'unknownNeed', age: 'unknownAge', language: 'unknownLanguage', format: 'unknownFormat', budget: 'unknownBudget', district: 'unknownDistrict', availability: 'unknownAvailability' };
 export const scopeKeys = { identity: 'scopeIdentity', education: 'scopeEducation', qualification: 'scopeQualification', contact: 'scopeContact', offer_data: 'scopeOfferData' } as const;
 
 export function OfferFacts({ offer }: { offer: Offer }) {
@@ -28,23 +27,26 @@ export function OfferFacts({ offer }: { offer: Offer }) {
     <p className="price">{price} · {offer.durationMinutes === null ? t('durationUnknown') : t('duration', { minutes: offer.durationMinutes })}</p>
     <p>{t(offer.unit)}</p>
     <p className="help">{offer.priceConfirmedAt ? t('priceDate', { date: date(offer.priceConfirmedAt) }) : t('priceDateUnknown')}</p>
-    {offer.priceKind !== 'unknown' && !isFresh(offer.priceConfirmedAt, new Date(catalog.demoClock), 30) && <p className="help warning-text">{t('stalePrice')}</p>}
+    {offer.priceKind !== 'unknown' && !isFresh(offer.priceConfirmedAt, new Date(catalog.demoClock), FRESHNESS_POLICY.days.price) && <p className="help warning-text">{t('stalePrice')}</p>}
   </>;
 }
 
 export function Explanations({ item, fallbackUnknowns }: { item: RatedOffer | null; fallbackUnknowns?: RatedOffer['unknowns'] }) {
   const { t } = useApp();
-  if (!item) return <><p className="notice">{t('incompatible')}</p>{fallbackUnknowns && <section className="explanations"><h3>{t('clarify')}</h3>
-    {fallbackUnknowns.length ? <ul>{fallbackUnknowns.map(reason => <li key={reason.code} data-unknown={reason.code}>{t(unknownKeys[reason.field])}</li>)}</ul> : <p>{t('noUnknowns')}</p>}
-  </section>}</>;
-  return <>
-    {item.status === 'incomplete' && <p className="notice">{t('incompleteTitle')}</p>}
-    <section className="explanations"><h3>{t(item.score === null ? 'serviceInfo' : 'matched')}</h3>
-      {item.score === null ? <p>{t('neutralOffer')}</p> : item.reasons.length ? <ul>{item.reasons.slice(0, 3).map(reason => <li key={reason.code} data-reason={reason.code}>{t(reason.field === 'need' && Array.isArray(reason.expected) ? 'reasonCategory' : matchKeys[reason.field])}</li>)}</ul> : <p>{t('noReasons')}</p>}
-      <h3>{t('clarify')}</h3>
-      {item.unknowns.length ? <ul>{item.unknowns.map(reason => <li key={reason.code} data-unknown={reason.code}>{t(unknownKeys[reason.field])}</li>)}</ul> : <p>{t('noUnknowns')}</p>}
-    </section>
-  </>;
+  const unknowns = item?.unknowns ?? fallbackUnknowns ?? [];
+  const reasons = item?.reasons.slice(0, 3) ?? [];
+  return <section className="explanations">
+    {!item && <p className="notice">{t('incompatible')}</p>}
+    {item?.status === 'incomplete' && <p className="notice">{t('incompleteTitle')}</p>}
+    {item?.score === null ? <><h3>{t('serviceInfo')}</h3><p>{t('neutralOffer')}</p></> : item && <>
+      <h3>{t('matched')}</h3>
+      {reasons.some(r => r.kind === 'match') ? <ul>{reasons.filter(r => r.kind === 'match').map(reason => <li key={reason.code} data-reason={reason.code}>{t(reason.localeKey, reason.placeholders)}</li>)}</ul> : <p>{t('noReasons')}</p>}
+      {reasons.some(r => r.kind === 'preference') && <><h3>{t('preferencesMatched')}</h3><ul>{reasons.filter(r => r.kind === 'preference').map(reason => <li key={reason.code} data-reason={reason.code}>{t(reason.localeKey, reason.placeholders)}</li>)}</ul></>}
+      {item.mismatches.length > 0 && <><h3>{t('notMatched')}</h3><ul>{item.mismatches.map(reason => <li key={reason.code} data-mismatch={reason.code}>{t(reason.localeKey, reason.placeholders)}</li>)}</ul></>}
+    </>}
+    <h3>{t('clarify')}</h3>
+    {unknowns.length ? <ul>{unknowns.map(reason => <li key={reason.code} data-unknown={reason.code}>{t(reason.localeKey, reason.placeholders)}</li>)}</ul> : <p>{t('noUnknowns')}</p>}
+  </section>;
 }
 
 export function Verification({ specialistId }: { specialistId: string }) {
@@ -58,7 +60,7 @@ export function Verification({ specialistId }: { specialistId: string }) {
       <p>{fact.evidenceSummary[locale]}</p>
       {fact.checkedAt && <p>{t('checkedOn', { date: new Intl.DateTimeFormat(locale, { dateStyle: 'medium', timeZone: 'Asia/Almaty' }).format(new Date(fact.checkedAt)) })}</p>}
       {fact.checkedAt && Date.parse(fact.checkedAt) > Date.parse(catalog.demoClock) && <p className="warning-text">{t('verificationFuture')}</p>}
-      {fact.reviewDueAt && Date.parse(fact.reviewDueAt) < Date.parse(catalog.demoClock) && <p className="warning-text">{t('verificationExpired')}</p>}
+      {fact.reviewDueAt && Date.parse(fact.reviewDueAt) <= Date.parse(catalog.demoClock) && <p className="warning-text">{t('verificationExpired')}</p>}
       <p>{fact.limitations[locale]}</p>
     </div>)}
   </section>;

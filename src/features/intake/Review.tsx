@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
 import { useApp } from '../../app/AppState';
-import { CATEGORIES, districtApplies } from '../../domain/contracts';
+import { CATEGORIES, districtApplies, parseBudget } from '../../domain/contracts';
 import { ageKeys, categoryKeys, districtKeys, needKeys, type MessageKey } from '../../i18n/messages';
 import { Check, DemoNotice, PageTitle } from '../../ui/controls';
 
 export function Review() {
-  const { input, update, service, locale, t } = useApp();
+  const { intakeDraft: input, updateDraft: update, applyIntake, budgetDraft, service, locale, t } = useApp();
+  const budgetError = parseBudget(budgetDraft).error;
   const result = service.search(input);
   // Render exactly the normalized input used by the service; no parallel review DTO.
   const summary = result.appliedInputSummary;
@@ -48,14 +49,16 @@ export function Review() {
           checked={summary.categoryIds.includes(category)} onChange={checked => update({ categoryIds: checked ? [...summary.categoryIds, category] : summary.categoryIds.filter(id => id !== category) })} />)}
       </fieldset>
     </details>
-    <section className="count-panel" aria-labelledby="count-title">
+    {budgetError && <p role="alert" className="field-error">{t(budgetError)} <Link to="/route" state={{ step: 4, review: true }}>{t('editAnswers')}</Link></p>}
+    {!budgetError && <section className="count-panel" aria-labelledby="count-title">
       <h2 id="count-title">{t('countTitle')}</h2>
       <p role="status" aria-atomic="true" data-testid="search-count">{t('count', { specialists: result.specialistCount, offers: result.eligibleOfferCount })}</p>
       {result.specialistCount === 0 && <><p><strong>{t('empty')}</strong></p><p>{t('emptyHelp')}</p></>}
       {result.incompleteSpecialistCount > 0 && <p className="help">{t('incomplete', { count: result.incompleteSpecialistCount })}</p>}
-    </section>
+    </section>}
     <div className="review-actions">
-      <Link className="button primary" to="/specialists">{t('show')}</Link>
+      {budgetError ? <button className="button primary" disabled>{t('show')}</button>
+        : <Link className="button primary" to="/specialists" onClick={applyIntake}>{t('show')}</Link>}
       <Link className="button secondary" to="/route" state={{ step: 1 }}>{t('editAnswers')}</Link>
     </div>
     <p className="help storage-policy">{t('sessionPolicy')}</p>

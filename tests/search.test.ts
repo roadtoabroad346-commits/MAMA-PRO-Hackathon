@@ -81,6 +81,6 @@ describe('phase 7 search contract', () => {
     expect(catalog.specialists[0].verificationFacts[0].scope).toBe('education');
     expect(catalog.specialists[0].verificationFacts[0].status).toBe('DOCUMENT_SEEN');
     expect(service.inspectOffer(base, 'O08')?.unknowns.map(r => r.code)).toContain('LANGUAGE_UNKNOWN');
-    expect(service.inspectOffer(base, 'O10')?.unknowns.map(r => r.code)).toContain('BUDGET_UNKNOWN');
+    expect(service.inspectOffer(base, 'O10')?.unknowns.map(r => r.code)).toContain('BUDGET_FROM_REQUIRES_CONFIRMATION');
   });
 });

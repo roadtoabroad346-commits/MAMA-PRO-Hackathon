@@ -1,3 +1,15 @@
+# Қолдау.Жол — фазы 28–35
+
+Актуальная ветка разработки: **phases-28-35**. Выполнены единый проверяемый поиск по услугам и S01–S03 поверх сохранённой реализации фаз6–14. Это синтетическое локальное демо; сайт этой задачей не публиковался.
+
+[Передача фазе36](docs/PHASES_28_35_HANDOFF.md) · [Контракты](docs/DOMAIN_CONTRACTS.md) · [Matching](docs/MATCHING_ENGINE_SPEC.md) · [QA](docs/QA_RESULTS.md) · [AC](docs/REQUIREMENTS_TRACEABILITY.md).
+
+Команды: `npm ci`, `npm run check`, `npm run build`, `npm run dev`. Dev browser: `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e -- --workers=2`. Release browser (после build, порт5173 свободен): `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run check:release -- --workers=2`.
+
+Исторические материалы и ZIP фаз13–14 сохранены ниже; они не заменяют текущую сборку. Фазы36+ готовыми не объявляются.
+
+---
+
 # Қолдау.Жол — приложение фазы 13 и материалы защиты фазы 14
 
 > **Для следующей фазы:** [восстановить реализацию из GitHub](START_NEXT_PHASE.md). Пустой checkout не означает отсутствия приложения. Актуальная ветка — `phase-14-defense`, зафиксированный результат — `ce529dbcfa4e25ea6e21e9e4d6246094ef8d6aac`. Исторические записи о пустом репозитории не описывают текущую реализацию.

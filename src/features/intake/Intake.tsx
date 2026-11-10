@@ -19,7 +19,7 @@ const skipPatch: Record<Step, Partial<SearchInput>> = {
 };
 
 export function Intake() {
-  const { input, update, step: savedStep, setStep, budgetDraft, setBudgetDraft, t } = useApp();
+  const { intakeDraft: input, updateDraft: update, step: savedStep, setStep, budgetDraft, setBudgetDraft, t } = useApp();
   const location = useLocation();
   const navigate = useNavigate();
   const routeState = location.state as { step?: unknown; review?: boolean } | null;
@@ -105,6 +105,8 @@ export function Intake() {
           {!districtApplies(input) && <p className="help info" id="district-inactive">{t(input.format === 'online' && input.formatHard ? 'onlineDistrict' : 'districtInactive')}</p>}
           {errors.districtId && <p id="district-error" className="field-error" role="alert">{fieldError('districtId')}</p>}
         </div>
+        {districtApplies(input) && input.districtId !== null && <Check label={t('districtRequired')} help={t('districtRequiredHelp')}
+          checked={input.districtHard} onChange={districtHard => update({ districtHard })} />}
         <div className="field">
           <label htmlFor="budget">{t('budget')}</label>
           <p id="budget-help" className="help">{t('budgetHelp')}</p>

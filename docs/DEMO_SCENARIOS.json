@@ -1,6 +1,6 @@
 {
-  "catalogVersion": "catalog-v1",
-  "rulesVersion": "rules-v1",
+  "catalogVersion": "catalog-v2",
+  "rulesVersion": "rules-v2",
   "demoClock": "2026-11-14T12:00:00+05:00",
   "scenarios": {
     "A": {

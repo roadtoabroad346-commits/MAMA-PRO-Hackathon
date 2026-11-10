@@ -1,7 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
 import type { Catalog } from '../domain/catalog';
 import { SearchService } from '../domain/SearchService';
-import { emptySearchInput, type Locale, type SearchInput } from '../domain/contracts';
+import { emptySearchInput, normalizeSearchInput, searchInputSchema, type Locale, type SearchInput } from '../domain/contracts';
 import { translate, type MessageKey } from '../i18n/messages';
 import { LOCALE_KEY, SESSION_TTL, restoreSession, saveSession, type Session, type Step } from './session';
 
@@ -16,6 +16,7 @@ function initialSession(catalogVersion: string): Session {
 
 interface AppState {
   catalog: Catalog; service: SearchService; input: SearchInput; step: Step;
+  intakeDraft: SearchInput; updateDraft: (patch: Partial<SearchInput>) => void; applyIntake: () => void;
   update: (patch: Partial<SearchInput>) => void; setStep: (step: Step) => void;
   budgetDraft: string; setBudgetDraft: (raw: string) => void;
   locale: Locale; setLocale: (locale: Locale) => void;
@@ -35,7 +36,7 @@ export function AppStateProvider({ catalog, children }: { catalog: Catalog; chil
   const [session, setSession] = useState(() => initialSession(catalog.catalogVersion));
   const [language, setLanguage] = useState(initialLocale);
   // Invalid numeric draft stays in memory across Back/locale, never in persistent storage.
-  const [budgetDraft, setBudgetDraft] = useState(() => session.input.budgetKzt?.toString() ?? '');
+  const [budgetDraft, setBudgetDraft] = useState(() => (session.intakeDraft ?? session.input).budgetKzt?.toString() ?? '');
   const service = useMemo(() => new SearchService(catalog), [catalog]);
   const [comparisonState, setComparison] = useState<{ items: AppState['comparison']; input: SearchInput | null; notice: AppState['comparisonNotice'] }>({ items: [], input: null, notice: null });
   const [catalogView, setCatalogView] = useState<AppState['catalogView']>({ showIncomplete: false, scrollY: 0, focusId: null });
@@ -50,7 +51,16 @@ export function AppStateProvider({ catalog, children }: { catalog: Catalog; chil
   useEffect(() => { document.documentElement.lang = language.locale; }, [language.locale]);
   const value: AppState = {
     catalog, service, input: session.input, step: session.step,
-    update: patch => setSession(old => ({ ...old, input: { ...old.input, ...patch } })),
+    update: patch => {
+      setBudgetDraft(('budgetKzt' in patch ? patch.budgetKzt : session.input.budgetKzt)?.toString() ?? '');
+      setSession(old => {
+        const input = searchInputSchema.parse({ ...old.input, ...patch });
+        return { ...old, input, intakeDraft: structuredClone(input) };
+      });
+    },
+    intakeDraft: session.intakeDraft ?? session.input,
+    updateDraft: patch => setSession(old => ({ ...old, intakeDraft: { ...(old.intakeDraft ?? old.input), ...patch } })),
+    applyIntake: () => setSession(old => ({ ...old, input: normalizeSearchInput(old.intakeDraft ?? old.input) })),
     setStep,
     budgetDraft, setBudgetDraft,
     locale: language.locale,

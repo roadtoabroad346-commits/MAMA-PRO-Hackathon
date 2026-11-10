@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "observations": [
+    {
+      "locale": "ru",
+      "status": "PASS",
+      "count": "Специалистов: 5. Услуг: 5.",
+      "ids": [
+        "O01",
+        "O03",
+        "O02",
+        "O11",
+        "O10"
+      ],
+      "runtimeErrors": [],
+      "overflow": false,
+      "localRequestsOnly": true
+    },
+    {
+      "locale": "kk",
+      "status": "PASS",
+      "count": "Мамандар: 5. Қызметтер: 5.",
+      "ids": [
+        "O01",
+        "O03",
+        "O02",
+        "O11",
+        "O10"
+      ],
+      "runtimeErrors": [],
+      "overflow": false,
+      "localRequestsOnly": true
+    }
+  ]
+}
