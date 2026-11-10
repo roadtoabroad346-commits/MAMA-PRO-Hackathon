@@ -1,5 +1,6 @@
 import { useApp } from '../../app/AppState';
 import type { Offer, Specialist, VerificationFact } from '../../domain/catalog';
+import { FRESHNESS_POLICY } from '../../domain/freshness';
 import { isFresh } from '../../domain/SearchService';
 import { verificationStatus } from '../../domain/profile';
 import type { MessageKey } from '../../i18n/messages';
@@ -28,7 +29,7 @@ function EvidenceFact({ fact }: { fact: VerificationFact }) {
       date={fact.checkedAt} scope={fact.evidenceSummary[locale]} limit={fact.limitations[locale]} reviewDue={fact.reviewDueAt} />
     {fact.status === 'DOCUMENT_SEEN' && <p className="help">{t('noDocumentAuthenticity')}</p>}
     {fact.checkedAt && Date.parse(fact.checkedAt) > Date.parse(catalog.demoClock) && <p className="warning-text">{t('verificationFuture')}</p>}
-    {fact.reviewDueAt && Date.parse(fact.reviewDueAt) < Date.parse(catalog.demoClock) && <p className="warning-text">{t('verificationExpired')}</p>}
+    {fact.reviewDueAt && Date.parse(fact.reviewDueAt) <= Date.parse(catalog.demoClock) && <p className="warning-text">{t('verificationExpired')}</p>}
   </>;
 }
 
@@ -39,8 +40,8 @@ export function TrustPassport({ specialist, offer }: { specialist: Specialist; o
     { key: 'languages', label: 'serviceLanguage', known: !!offer.languages?.length },
     { key: 'format', label: 'format', known: offer.format !== 'unknown' },
     ...(offer.format === 'online' ? [] : [{ key: 'districtId', label: 'district' as const, known: offer.districtId !== null }]),
-    { key: 'price', label: 'priceLabel', known: offer.priceKind !== 'unknown', freshDays: 30 },
-    { key: 'availability', label: 'availabilityLabel', known: offer.acceptingEnquiries !== null, freshDays: 7 },
+    { key: 'price', label: 'priceLabel', known: offer.priceKind !== 'unknown', freshDays: FRESHNESS_POLICY.days.price },
+    { key: 'availability', label: 'availabilityLabel', known: offer.acceptingEnquiries !== null, freshDays: FRESHNESS_POLICY.days.availability },
   ];
   return <section className="trust-passport" aria-labelledby="passport-title">
     <h2 id="passport-title">{t('passport')}</h2><p>{t('passportHelp')}</p>

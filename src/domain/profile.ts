@@ -1,4 +1,5 @@
 import type { Catalog, VerificationFact } from './catalog';
+import { fieldFreshness, fixedClock, FRESHNESS_POLICY } from './freshness';
 
 // Explicit invalid/hidden selections never fall back to a different offer.
 export function resolveProfile(catalog: Catalog, specialistId: string | undefined, offerId: string | null) {
@@ -15,7 +16,9 @@ export function resolveProfile(catalog: Catalog, specialistId: string | undefine
 export function verificationStatus(fact: VerificationFact, demoClock: string): VerificationFact['status'] {
   if (fact.status === 'REVOKED' || fact.status === 'UNVERIFIED') return fact.status;
   if (fact.status === 'STALE') return 'STALE';
-  if (!fact.sourceLabel || !fact.checkedAt || Date.parse(fact.checkedAt) > Date.parse(demoClock)) return 'UNVERIFIED';
-  if (fact.reviewDueAt && Date.parse(fact.reviewDueAt) < Date.parse(demoClock)) return 'STALE';
+  if (!fact.sourceLabel) return 'UNVERIFIED';
+  const freshness = fieldFreshness(fact.checkedAt, fixedClock(demoClock), fact.scope === 'contact' ? FRESHNESS_POLICY.days.contact : FRESHNESS_POLICY.days.verification);
+  if (freshness.status === 'unknown') return 'UNVERIFIED';
+  if (freshness.status === 'stale' || fact.reviewDueAt && Date.parse(fact.reviewDueAt) <= Date.parse(demoClock)) return 'STALE';
   return fact.status;
 }

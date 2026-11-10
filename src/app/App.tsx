@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { BrowserRouter, Link, Route, Routes, useLocation } from 'react-router-dom';
 import type { Catalog as CatalogData } from '../domain/catalog';
-import { loadCatalog } from '../data/catalogRepository';
+import { catalogRepository } from '../data/catalogRepository';
 import { Home } from '../features/Home';
 import { Intake } from '../features/intake/Intake';
 import { Review } from '../features/intake/Review';
@@ -88,7 +88,7 @@ export function App() {
   useEffect(() => { document.documentElement.lang = startupLocale; }, [startupLocale]);
   useEffect(() => {
     let active = true;
-    loadCatalog().then(data => { if (active) setCatalog(data); }, () => { if (active) setFailed(true); });
+    catalogRepository.load().then(data => { if (active) setCatalog(data); }, () => { if (active) setFailed(true); });
     return () => { active = false; };
   }, [attempt]);
   if (!catalog) {

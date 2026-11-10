@@ -1,5 +1,21 @@
 # Қолдау.Жол — решения и расхождения фазы 0
 
+## Действующие уточнения фаз 28–35 (10.11.2026)
+
+Ниже этого раздела сохранён исторический аудит. Новый прямой запрос разрешает реализацию и GitHub push; старые ограничения фаз 0/проектирования не блокируют эту работу. Основой выбрана самая поздняя доступная ветка `phase-14-defense`, поскольку origin/HEAD до сих пор указывает на историческую `phase-0-audit`.
+
+| ID | Решение | Источник / эффект |
+|---|---|---|
+| ADR-0012 | Заменить ADR-0005: район неактивен только при online+formatHard; mixed/any сохраняет общий вес, online m=0/known=0 | Объединённый промпт §7.7 явно требует общего request-level A для mixed. Hard district + подтверждённая online-услуга fail; неизвестные сведения unknown. A/B/C, где формат offline hard, не меняются |
+| ADR-0013 | freshness-v2: equality TTL означает stale, current при 0≤age<TTL; price30d/availability7d/contact30d/documents365d остаются PROPOSAL | Уточнение прежней включённой границы MATCH; соответствует обязательному примеру второго промпта. Profile/TrustPassport используют одну политику. updatedAt/savedAt не подтверждают факты |
+| ADR-0014 | Separate intakeDraft и applied, без новой SearchInput-модели; optional intakeDraft в existing synthetic session v1 | §16 промпта. Старый v1 читается, TTL2h сохраняется; новый catalog-v2 сбрасывает несовместимые старые snapshots. Невалидный raw budget остаётся в памяти, блокирует review CTA |
+| ADR-0015 | Добавить synthetic_curated_fixture источник существующих focusTags; catalog-v2/rules-v2 | В предыдущих данных tags были без fieldSources. Положительная причина требует факта и источника; это синтетическая аннотация, не реальная проверка. Значения/IDs/ручные ожидания не изменены |
+| ADR-0016 | Разделить dev и release browser suites по существующим конфигурациям | release.spec проверяет HTTP404/405 production-сервера, Vite dev даёт200 fallback. Он выполняется через check:release, не отключён. Полный dev suite сохраняет остальные регрессии |
+
+ТЗ §17.2 нормализует languages=[] в null; validator/evaluator сохраняют этот контракт (unknown). Известный непустой список без выбранного языка — fail. Это не новая несовместимая семантика пустого списка.
+
+Отдельных AGENTS.md, DOMAIN_CONTRACTS/APPLICATION_STATE/STATE_AND_STORAGE/ERROR_HANDLING/DESIGN_SYSTEM/SEARCH_NORMALIZATION и результатов фаз22–27 в исходной ветке не было. Эквиваленты прочитаны в исходниках, PHASE_6/7/8/10, DECISIONS, полном ТЗ и существующих тестах; новые DOMAIN_CONTRACTS/MATCHING_ENGINE_SPEC/UX_SPEC фиксируют актуальные границы. Отсутствующие фазы завершёнными не объявляются.
+
 Дата: 06.11.2026. Источники SRC-A/B/D и их статусы — в [PROJECT_STATE.md](PROJECT_STATE.md). Это локальные уточнения плана; исходные вложения не изменены. ADR-0001… не переименовывают ADR-01…ADR-10 внутри полного ТЗ. «Принято для плана» означает рабочее решение в разрешённом аудите, а не согласование с организатором или фондом.
 
 ## Решения

@@ -57,7 +57,7 @@ export const normalizeSearchText = (text: string): string => text.normalize('NFK
   .replace(/\s+/gu, ' ').toLocaleLowerCase('ru-KZ').replace(/ё/gu, 'е');
 
 export function districtApplies(input: SearchInput): boolean {
-  return input.format === 'offline' && input.formatHard;
+  return !(input.format === 'online' && input.formatHard);
 }
 
 export type BudgetError = 'budgetInteger' | 'budgetNegative' | 'budgetLimit';

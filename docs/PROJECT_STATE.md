@@ -1,3 +1,19 @@
+# Текущее состояние: фазы 28–35
+
+10.11.2026. Ветка `phases-28-35`, основа `phase-14-defense` (`b1f79f3`). Реализация и GitHub push прямо поручены пользователем. Предыдущие ограничения «только фаза0» — исторические.
+
+Готово: единый чистый offer evaluator, hard pass/fail/unknown, score/coverage по общему A, source-backed RU/KK reasons, versioned freshness/Clock, public pipeline/grouping/exact+incomplete counts. S01 переиспользован и проверяется; S02 имеет отдельный canonical intakeDraft, четыре шага и hard/preference; S03 считает тем же SearchService, редактирует без потерь, валидирует и атомарно применяет. Существующие каталог/профиль/сравнение/локальные requests сохранены.
+
+Правила: catalog-v2/rules-v2/freshness-v2, demoClock 14.11.2026 12:00+05. Район mixed активен, online-only неактивен; TTL equality stale; источник focusTags явно синтетический. Решения ADR-0012…0016 в DECISIONS. Контракты зафиксированы до кода в DOMAIN_CONTRACTS.
+
+Проверено: npm run check — TypeScript strict +117 тестов PASS; npm run build PASS; dev browser79 PASS; production release18 PASS; отдельный S01–S03 production smoke RU/KK PASS. Статус READY WITH LIMITATIONS. Полные команды/логи — QA_RESULTS. Не заявляются интервью/успешный тест родителя, экспертная KK-редактура, аудит screen reader и полевые performance-показатели. Нет новых реальных данных, внешних отправлений, аккаунтов, AI, PWA/карт/календаря. Фазы22–27 в репозитории отсутствовали: восстановлены минимальные необходимые контракты на основе имеющейся реализации6–14, без заявления о завершении отсутствующих фаз.
+
+Передача фазе36: [PHASES_28_35_HANDOFF.md](PHASES_28_35_HANDOFF.md). Полноценная новая выдача36+ этой задачей не начинается. Старый ZIP фазы13 остаётся историческим, актуальный dist создаётся npm run build.
+
+---
+
+Ниже — исторический журнал фазы0, он не описывает нынешнее наличие исходников.
+
 # Қолдау.Жол — состояние проекта
 
 > **Для следующей фазы:** [восстановить реализацию из GitHub](../START_NEXT_PHASE.md). Пустой checkout не означает отсутствия приложения. Актуальная ветка — `phase-14-defense`, зафиксированный результат — `ce529dbcfa4e25ea6e21e9e4d6246094ef8d6aac`. Исторические записи о пустом репозитории не описывают текущую реализацию.

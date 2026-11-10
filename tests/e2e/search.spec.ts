@@ -8,9 +8,18 @@ const base = emptySearchInput();
 const service = new SearchService(catalogSchema.parse(raw));
 const example: SearchInput = { ...base, needTag: 'speech', ageGroup: 'AGE_3_5', serviceLanguage: 'kk', format: 'offline', budgetKzt: 6000, districtId: 'BOSTANDYK', availabilityPreferred: true };
 
+test('typing a multiword query retains the space until service normalization', async ({ page }) => {
+  await open(page);
+  const query = page.getByLabel('Имя или категория', { exact: true });
+  await query.pressSequentially('Демо-специалист 01');
+  await expect(query).toHaveValue('Демо-специалист 01');
+  await expect(page.getByTestId('specialist-card')).toHaveCount(1);
+  await expect(page.getByTestId('specialist-card')).toHaveAttribute('data-offer-id', 'O01');
+});
+
 async function open(page: Page, input: SearchInput = base, locale: 'ru' | 'kk' = 'ru') {
   await page.addInitScript(({ input, locale }) => {
-    sessionStorage.setItem('qoldau.demo-search', JSON.stringify({ schemaVersion: 1, catalogVersion: 'catalog-v1', expiresAt: Date.now() + 7200000, input, step: 1 }));
+    sessionStorage.setItem('qoldau.demo-search', JSON.stringify({ schemaVersion: 1, catalogVersion: 'catalog-v2', expiresAt: Date.now() + 7200000, input, step: 1 }));
     localStorage.setItem('qoldau.locale', locale);
   }, { input, locale });
   await page.goto('/specialists');
@@ -26,7 +35,7 @@ async function expectResult(page: Page, input: SearchInput, locale: 'ru' | 'kk' 
   expect(await page.getByTestId('specialist-card').evaluateAll(cards => cards.map(card => card.getAttribute('data-offer-id')))).toEqual(result.items.map(item => item.selectedOfferId));
   for (const item of result.items) {
     const card = page.getByTestId('specialist-card').filter({ has: page.locator(`#profile-${item.selectedOfferId}`) });
-    expect(await card.locator('[data-reason]').evaluateAll(reasons => reasons.map(reason => reason.getAttribute('data-reason')))).toEqual(item.reasons.slice(0, 3).map(reason => reason.code));
+    expect(await card.locator('[data-reason]').evaluateAll(reasons => reasons.map(reason => reason.getAttribute('data-reason')))).toEqual([...item.reasons.slice(0, 3).filter(r => r.kind === 'match'), ...item.reasons.slice(0, 3).filter(r => r.kind === 'preference')].map(reason => reason.code));
     expect(await card.locator('[data-unknown]').evaluateAll(reasons => reasons.map(reason => reason.getAttribute('data-unknown')))).toEqual(item.unknowns.map(reason => reason.code));
   }
 }
@@ -154,7 +163,7 @@ test('empty keeps hard conditions; incomplete is an explicit separate action', a
   await expect(page.getByTestId('incomplete-card')).toHaveCount(0);
   await page.getByRole('button', { name: 'Показать варианты, которые нужно уточнить (1)', exact: true }).click();
   await expect(page.getByTestId('incomplete-card')).toHaveCount(1);
-  await expect(page.getByTestId('incomplete-card').locator('[data-unknown="BUDGET_UNKNOWN"]')).toBeVisible();
+  await expect(page.getByTestId('incomplete-card').locator('[data-unknown="BUDGET_STALE"]')).toBeVisible();
   expect(await applied(page)).toEqual(input);
   await expect(page.getByTestId('search-count')).toHaveText('Специалистов: 0. Услуг: 0.');
   await page.getByRole('button', { name: 'Изменить предпочтения и условия', exact: true }).click();

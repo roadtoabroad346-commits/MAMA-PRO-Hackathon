@@ -1,6 +1,6 @@
 {
-  "catalogVersion": "catalog-v1",
-  "rulesVersion": "rules-v1",
+  "catalogVersion": "catalog-v2",
+  "rulesVersion": "rules-v2",
   "isSynthetic": true,
   "demoClock": "2026-11-14T12:00:00+05:00",
   "categories": [
@@ -370,6 +370,10 @@
         "availability": {
           "sourceKind": "synthetic_self_reported",
           "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
         }
       },
       "publicationStatus": "published",
@@ -424,6 +428,10 @@
         },
         "availability": {
           "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
           "checkedAt": "2026-11-13T12:00:00+05:00"
         }
       },
@@ -480,6 +488,10 @@
         "availability": {
           "sourceKind": "synthetic_self_reported",
           "checkedAt": null
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
         }
       },
       "publicationStatus": "published",
@@ -534,6 +546,10 @@
         },
         "availability": {
           "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
           "checkedAt": "2026-11-13T12:00:00+05:00"
         }
       },
@@ -591,6 +607,10 @@
         "availability": {
           "sourceKind": "synthetic_self_reported",
           "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
         }
       },
       "publicationStatus": "published",
@@ -645,6 +665,10 @@
         },
         "availability": {
           "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
           "checkedAt": "2026-11-13T12:00:00+05:00"
         }
       },
@@ -701,6 +725,10 @@
         "availability": {
           "sourceKind": "synthetic_self_reported",
           "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
         }
       },
       "publicationStatus": "published",
@@ -753,6 +781,10 @@
         },
         "availability": {
           "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
           "checkedAt": "2026-11-13T12:00:00+05:00"
         }
       },
@@ -808,6 +840,10 @@
         },
         "availability": {
           "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
           "checkedAt": "2026-11-13T12:00:00+05:00"
         }
       },
@@ -865,6 +901,10 @@
         "availability": {
           "sourceKind": "synthetic_self_reported",
           "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
         }
       },
       "publicationStatus": "published",
@@ -919,6 +959,10 @@
         },
         "availability": {
           "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
           "checkedAt": "2026-11-13T12:00:00+05:00"
         }
       },
@@ -975,6 +1019,10 @@
         "availability": {
           "sourceKind": "synthetic_self_reported",
           "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
         }
       },
       "publicationStatus": "published",
@@ -1029,6 +1077,10 @@
         },
         "availability": {
           "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
           "checkedAt": "2026-11-13T12:00:00+05:00"
         }
       },
@@ -1085,6 +1137,10 @@
         "availability": {
           "sourceKind": "synthetic_self_reported",
           "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
         }
       },
       "publicationStatus": "published",
@@ -1139,6 +1195,10 @@
         },
         "availability": {
           "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
           "checkedAt": "2026-11-13T12:00:00+05:00"
         }
       },
@@ -1195,6 +1255,10 @@
         "availability": {
           "sourceKind": "synthetic_self_reported",
           "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
         }
       },
       "publicationStatus": "published",
@@ -1249,6 +1313,10 @@
         },
         "availability": {
           "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
           "checkedAt": "2026-11-13T12:00:00+05:00"
         }
       },
@@ -1305,6 +1373,10 @@
         "availability": {
           "sourceKind": "synthetic_self_reported",
           "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
         }
       },
       "publicationStatus": "published",
@@ -1360,6 +1432,10 @@
         "availability": {
           "sourceKind": "synthetic_self_reported",
           "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
         }
       },
       "publicationStatus": "published",
@@ -1414,6 +1490,10 @@
         },
         "availability": {
           "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
           "checkedAt": "2026-11-13T12:00:00+05:00"
         }
       },
