@@ -1,0 +1,586 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-11",
+  "verified_source_branch": "phases-0-67",
+  "baseline_commit": "94fb45fcd46bee32d3b223d30771e4eb1cadccfa",
+  "note": "Evidence_status RECORDED means related code/docs and historical QA reports exist; NOT human-approved complete and NOT live ready. These fields cannot prove uncommitted Codex work.",
+  "phases": [
+    {
+      "number": 0,
+      "evidence_status": "RECORDED",
+      "scope": "PLANNING",
+      "summary": "Audit and initial implementation plan; planning only.",
+      "evidence": [
+        "docs/IMPLEMENTATION_PLAN.md",
+        "docs/PROJECT_STATE.md"
+      ]
+    },
+    {
+      "number": 1,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 2,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 3,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 4,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 5,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 6,
+      "evidence_status": "RECORDED",
+      "scope": "DEMO",
+      "summary": "Intake and early demo path",
+      "evidence": [
+        "docs/PHASE_6.md"
+      ]
+    },
+    {
+      "number": 7,
+      "evidence_status": "RECORDED",
+      "scope": "DEMO",
+      "summary": "Search and filters",
+      "evidence": [
+        "docs/PHASE_7.md"
+      ]
+    },
+    {
+      "number": 8,
+      "evidence_status": "RECORDED",
+      "scope": "DEMO",
+      "summary": "Offer profile and trust passport",
+      "evidence": [
+        "docs/PHASE_8.md"
+      ]
+    },
+    {
+      "number": 9,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 10,
+      "evidence_status": "RECORDED",
+      "scope": "DEMO",
+      "summary": "Persistent local demo requests",
+      "evidence": [
+        "docs/PHASE_10.md"
+      ]
+    },
+    {
+      "number": 11,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 12,
+      "evidence_status": "RECORDED",
+      "scope": "DEMO",
+      "summary": "Partial P0 QA and browser evidence",
+      "evidence": [
+        "docs/README_PHASE12.md",
+        "docs/QA_RESULTS.md"
+      ]
+    },
+    {
+      "number": 13,
+      "evidence_status": "RECORDED",
+      "scope": "DEMO",
+      "summary": "Synthetic local release",
+      "evidence": [
+        "docs/RELEASE_CHECKLIST.md"
+      ]
+    },
+    {
+      "number": 14,
+      "evidence_status": "RECORDED",
+      "scope": "DEMO",
+      "summary": "Defense materials and synthetic presentation",
+      "evidence": [
+        "docs/phase14/README.md"
+      ]
+    },
+    {
+      "number": 15,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 16,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 17,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 18,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 19,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 20,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 21,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 22,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 23,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 24,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 25,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 26,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 27,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 28,
+      "evidence_status": "RECORDED",
+      "scope": "DEMO",
+      "summary": "Offer-level matching and S01-S03; grouped delivery evidence",
+      "evidence": [
+        "docs/PHASES_28_35_HANDOFF.md",
+        "docs/phases28-35/check.log"
+      ]
+    },
+    {
+      "number": 29,
+      "evidence_status": "RECORDED",
+      "scope": "DEMO",
+      "summary": "Offer-level matching and S01-S03; grouped delivery evidence",
+      "evidence": [
+        "docs/PHASES_28_35_HANDOFF.md",
+        "docs/phases28-35/check.log"
+      ]
+    },
+    {
+      "number": 30,
+      "evidence_status": "RECORDED",
+      "scope": "DEMO",
+      "summary": "Offer-level matching and S01-S03; grouped delivery evidence",
+      "evidence": [
+        "docs/PHASES_28_35_HANDOFF.md",
+        "docs/phases28-35/check.log"
+      ]
+    },
+    {
+      "number": 31,
+      "evidence_status": "RECORDED",
+      "scope": "DEMO",
+      "summary": "Offer-level matching and S01-S03; grouped delivery evidence",
+      "evidence": [
+        "docs/PHASES_28_35_HANDOFF.md",
+        "docs/phases28-35/check.log"
+      ]
+    },
+    {
+      "number": 32,
+      "evidence_status": "RECORDED",
+      "scope": "DEMO",
+      "summary": "Offer-level matching and S01-S03; grouped delivery evidence",
+      "evidence": [
+        "docs/PHASES_28_35_HANDOFF.md",
+        "docs/phases28-35/check.log"
+      ]
+    },
+    {
+      "number": 33,
+      "evidence_status": "RECORDED",
+      "scope": "DEMO",
+      "summary": "Offer-level matching and S01-S03; grouped delivery evidence",
+      "evidence": [
+        "docs/PHASES_28_35_HANDOFF.md",
+        "docs/phases28-35/check.log"
+      ]
+    },
+    {
+      "number": 34,
+      "evidence_status": "RECORDED",
+      "scope": "DEMO",
+      "summary": "Offer-level matching and S01-S03; grouped delivery evidence",
+      "evidence": [
+        "docs/PHASES_28_35_HANDOFF.md",
+        "docs/phases28-35/check.log"
+      ]
+    },
+    {
+      "number": 35,
+      "evidence_status": "RECORDED",
+      "scope": "DEMO",
+      "summary": "Offer-level matching and S01-S03; grouped delivery evidence",
+      "evidence": [
+        "docs/PHASES_28_35_HANDOFF.md",
+        "docs/phases28-35/check.log"
+      ]
+    },
+    {
+      "number": 36,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 37,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 38,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 39,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 40,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 41,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 42,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 43,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 44,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 45,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 46,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 47,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 48,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 49,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 50,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 51,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 52,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 53,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 54,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "UNSPECIFIED",
+      "summary": "No separate validated phase-delivery record found",
+      "evidence": []
+    },
+    {
+      "number": 55,
+      "evidence_status": "RECORDED",
+      "scope": "SYNTHETIC_PILOT",
+      "summary": "Single-results map and accessibility facts",
+      "evidence": [
+        "docs/HANDOVER_55_67.md",
+        "docs/phases55-67/check.log",
+        "docs/LIVE_READINESS.md"
+      ]
+    },
+    {
+      "number": 56,
+      "evidence_status": "RECORDED",
+      "scope": "SYNTHETIC_PILOT",
+      "summary": "Live readiness boundaries and risk register",
+      "evidence": [
+        "docs/HANDOVER_55_67.md",
+        "docs/phases55-67/check.log",
+        "docs/LIVE_READINESS.md"
+      ]
+    },
+    {
+      "number": 57,
+      "evidence_status": "RECORDED",
+      "scope": "SYNTHETIC_PILOT",
+      "summary": "Synthetic specialist onboarding",
+      "evidence": [
+        "docs/HANDOVER_55_67.md",
+        "docs/phases55-67/check.log",
+        "docs/LIVE_READINESS.md"
+      ]
+    },
+    {
+      "number": 58,
+      "evidence_status": "RECORDED",
+      "scope": "SYNTHETIC_PILOT",
+      "summary": "Synthetic assigned moderation and trust",
+      "evidence": [
+        "docs/HANDOVER_55_67.md",
+        "docs/phases55-67/check.log",
+        "docs/LIVE_READINESS.md"
+      ]
+    },
+    {
+      "number": 59,
+      "evidence_status": "RECORDED",
+      "scope": "SYNTHETIC_PILOT",
+      "summary": "Server-backed sandbox contact and idempotency",
+      "evidence": [
+        "docs/HANDOVER_55_67.md",
+        "docs/phases55-67/check.log",
+        "docs/LIVE_READINESS.md"
+      ]
+    },
+    {
+      "number": 60,
+      "evidence_status": "RECORDED",
+      "scope": "SYNTHETIC_PILOT",
+      "summary": "Server-side request lifecycle and tracker",
+      "evidence": [
+        "docs/HANDOVER_55_67.md",
+        "docs/phases55-67/check.log",
+        "docs/LIVE_READINESS.md"
+      ]
+    },
+    {
+      "number": 61,
+      "evidence_status": "RECORDED",
+      "scope": "SYNTHETIC_PILOT",
+      "summary": "Manual/confirmed test calendar",
+      "evidence": [
+        "docs/HANDOVER_55_67.md",
+        "docs/phases55-67/check.log",
+        "docs/LIVE_READINESS.md"
+      ]
+    },
+    {
+      "number": 62,
+      "evidence_status": "RECORDED",
+      "scope": "SYNTHETIC_PILOT",
+      "summary": "In-app test reminder jobs",
+      "evidence": [
+        "docs/HANDOVER_55_67.md",
+        "docs/phases55-67/check.log",
+        "docs/LIVE_READINESS.md"
+      ]
+    },
+    {
+      "number": 63,
+      "evidence_status": "RECORDED",
+      "scope": "SYNTHETIC_PILOT",
+      "summary": "Offer-change subscriptions",
+      "evidence": [
+        "docs/HANDOVER_55_67.md",
+        "docs/phases55-67/check.log",
+        "docs/LIVE_READINESS.md"
+      ]
+    },
+    {
+      "number": 64,
+      "evidence_status": "RECORDED",
+      "scope": "SYNTHETIC_PILOT",
+      "summary": "Next organizational action",
+      "evidence": [
+        "docs/HANDOVER_55_67.md",
+        "docs/phases55-67/check.log",
+        "docs/LIVE_READINESS.md"
+      ]
+    },
+    {
+      "number": 65,
+      "evidence_status": "RECORDED",
+      "scope": "SYNTHETIC_PILOT",
+      "summary": "Private synthetic goals and diary",
+      "evidence": [
+        "docs/HANDOVER_55_67.md",
+        "docs/phases55-67/check.log",
+        "docs/LIVE_READINESS.md"
+      ]
+    },
+    {
+      "number": 66,
+      "evidence_status": "RECORDED",
+      "scope": "SYNTHETIC_PILOT",
+      "summary": "Scoped synthetic assignments",
+      "evidence": [
+        "docs/HANDOVER_55_67.md",
+        "docs/phases55-67/check.log",
+        "docs/LIVE_READINESS.md"
+      ]
+    },
+    {
+      "number": 67,
+      "evidence_status": "RECORDED",
+      "scope": "SYNTHETIC_PILOT",
+      "summary": "Selective summary and local export",
+      "evidence": [
+        "docs/HANDOVER_55_67.md",
+        "docs/phases55-67/check.log",
+        "docs/LIVE_READINESS.md"
+      ]
+    },
+    {
+      "number": 68,
+      "evidence_status": "NO_VERIFIED_DELIVERY",
+      "scope": "FUTURE_PROPOSAL",
+      "summary": "Next stage not started; requires separate trust/consent model",
+      "evidence": []
+    }
+  ]
+}
