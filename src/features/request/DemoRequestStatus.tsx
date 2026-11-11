@@ -5,6 +5,7 @@ import { useDemoRequests } from '../../app/DemoRequests';
 import type { DemoRequest } from '../../domain/demoRequest';
 import { PageTitle } from '../../ui/controls';
 import { Modal } from '../../ui/Modal';
+import { priceText } from '../../i18n/price';
 import { ClearDemoRequests } from './ClearDemoRequests';
 
 export function DemoRequestStatus() {
@@ -78,8 +79,7 @@ function StatusContent({ requestId }: { requestId: string }) {
 }
 function SnapshotFacts({ snapshot }: { snapshot: DemoRequest['nonPersonalOfferSnapshot'] }) {
   const { locale, t } = useApp();
-  const price = snapshot.priceKind === 'unknown' ? t('priceUnknown') : snapshot.priceKind === 'free' ? t('priceFree')
-    : t(snapshot.priceKind === 'from' ? 'priceFrom' : 'priceExact', { amount: new Intl.NumberFormat(locale).format(snapshot.priceAmountKzt!) });
+  const price = priceText(snapshot.priceKind, snapshot.priceAmountKzt, locale, t);
   return <>
     <p>{price} · {snapshot.durationMinutes === null ? t('durationUnknown') : t('duration', { minutes: snapshot.durationMinutes })} · {t(snapshot.unit)}</p>
     <dl className="offer-facts"><div><dt>{t('serviceLanguage')}</dt><dd>{snapshot.languages?.map(lang => t(lang === 'ru' ? 'russian' : 'kazakh')).join(', ') || t('unknown')}</dd></div>

@@ -2,6 +2,9 @@ import { describe, expect, it } from 'vitest';
 import raw from '../src/data/catalog.json';
 import { catalogSchema } from '../src/domain/catalog';
 import { emptySearchInput, normalizeSearchText, searchInputSchema } from '../src/domain/contracts';
+import type { SearchInput } from '../src/domain/contracts';
+import type { Offer } from '../src/domain/catalog';
+import { evaluateOffer } from '../src/domain/matching';
 import { SearchService } from '../src/domain/SearchService';
 
 const catalog = catalogSchema.parse(raw);
@@ -68,6 +71,26 @@ describe('phase 7 search contract', () => {
     expect(result.items.at(-1)!.selectedOfferId).toBe('O03');
     const inactive = service.search({ ...base, format: 'online', districtId: 'BOSTANDYK', sort: 'district' });
     expect(inactive.items).toEqual(service.search({ ...base, format: 'online' }).items);
+  });
+  it('district sort keys are precomputed without changing the previous order (F-02)', () => {
+    const input = { ...base, format: 'offline', districtId: 'BOSTANDYK', sort: 'district' } satisfies SearchInput;
+    const result = service.search(input);
+    // Reference: the pre-F-02 comparator, re-evaluating offers inside every
+    // comparison. The precomputed-key path must produce the same order.
+    const clock = { now: () => new Date(catalog.demoClock) };
+    const key = (offer: Offer) => {
+      const evaluation = evaluateOffer(input, offer, { clock, rulesVersion: catalog.rulesVersion, catalogVersion: catalog.catalogVersion });
+      return !evaluation.ranking.known.district ? 2 : offer.districtId === input.districtId ? 0 : 1;
+    };
+    const reference = [...result.items].sort((a, b) => {
+      const ao = catalog.offers.find(o => o.id === a.selectedOfferId)!;
+      const bo = catalog.offers.find(o => o.id === b.selectedOfferId)!;
+      const diff = key(ao) - key(bo);
+      if (diff) return diff;
+      return (b.score ?? 0) - (a.score ?? 0) || (b.coverage ?? 0) - (a.coverage ?? 0)
+        || a.specialistId.localeCompare(b.specialistId) || a.selectedOfferId.localeCompare(b.selectedOfferId);
+    });
+    expect(result.items.map(i => i.selectedOfferId)).toEqual(reference.map(i => i.selectedOfferId));
   });
   it('fixed compare/profile selections are re-evaluated by the same classifier', () => {
     const exact = service.inspectOffer({ ...base, serviceLanguage: 'kk', format: 'offline' }, 'O01');

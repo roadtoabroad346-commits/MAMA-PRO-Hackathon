@@ -5,13 +5,13 @@ import { isFresh, type RatedOffer } from '../../domain/SearchService';
 import { FRESHNESS_POLICY } from '../../domain/freshness';
 import { verificationStatus } from '../../domain/profile';
 import { categoryKeys, districtKeys } from '../../i18n/messages';
+import { priceText } from '../../i18n/price';
 
 export const scopeKeys = { identity: 'scopeIdentity', education: 'scopeEducation', qualification: 'scopeQualification', contact: 'scopeContact', offer_data: 'scopeOfferData' } as const;
 
 export function OfferFacts({ offer }: { offer: Offer }) {
   const { catalog, locale, t } = useApp();
-  const price = offer.priceKind === 'unknown' ? t('priceUnknown') : offer.priceKind === 'free' ? `${t('priceFree')} · ${t('demo')}`
-    : t(offer.priceKind === 'from' ? 'priceFrom' : 'priceExact', { amount: new Intl.NumberFormat(locale).format(offer.priceAmountKzt!) });
+  const price = priceText(offer.priceKind, offer.priceAmountKzt, locale, t, t('demo'));
   const date = (value: string) => new Intl.DateTimeFormat(locale, { dateStyle: 'medium', timeZone: 'Asia/Almaty' }).format(new Date(value));
   const { ageMinMonths: min, ageMaxMonths: max } = offer;
   const age = min === null && max === null ? t('unknown') : min === null || max === null

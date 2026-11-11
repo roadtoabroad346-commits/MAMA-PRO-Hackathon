@@ -182,6 +182,14 @@ describe('HTTP boundary, sessions and real transport',()=>{
    const logout=await fetch(url+'/api/pilot/logout',{method:'POST',headers:{'content-type':'application/json',cookie,'x-pilot-csrf':session.csrf},body:'{}'});expect(logout.status).toBe(200);expect((await fetch(url+'/api/pilot/state',{headers:{cookie}})).status).toBe(401);
   }finally{await new Promise<void>((resolve,reject)=>server.close(e=>e?reject(e):resolve()));}
  });
+ it('login is rate limited per address (audit F-05): 30/min, 429 afterwards',async()=>{
+  const server=createPilotServer(service,'PILOT_TEST','test');await new Promise<void>(resolve=>server.listen(0,'127.0.0.1',resolve));const address=server.address();if(!address||typeof address==='string')throw Error();const url=`http://127.0.0.1:${address.port}`;
+  try{
+   let last=0;for(let i=0;i<35;i++){last=(await fetch(url+'/api/pilot/test-login',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({actor:A})})).status;}
+   expect(last).toBe(429);
+   expect((await fetch(url+'/api/pilot/public')).status).toBe(200);
+  }finally{await new Promise<void>((resolve,reject)=>server.close(e=>e?reject(e):resolve()));}
+ });
 });
 describe('same SearchResult map contract',()=>{
  it('plots only eligible matching offer IDs; unknown/excluded never becomes map pass',async()=>{

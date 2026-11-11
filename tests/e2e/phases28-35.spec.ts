@@ -109,7 +109,7 @@ for (const locale of ['ru', 'kk'] as const) {
       const t = messages[locale];
       await page.getByRole('button', { name: locale === 'ru' ? 'Рус' : 'Қаз', exact: true }).click();
       await page.evaluate(() => { document.documentElement.style.fontSize = '200%'; });
-      if (locale === 'ru' && width === 390) await page.screenshot({ path: 'docs/phases28-35/home-ru-390.png', fullPage: true });
+      if (locale === 'ru' && width === 390) await page.screenshot({ path: 'work/phases28-35/home-ru-390.png', fullPage: true });
       await page.getByRole('link', { name: t.guide, exact: true }).click();
       for (let step = 1; step <= 4; step++) {
         expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth)).toBe(true);
@@ -118,7 +118,7 @@ for (const locale of ['ru', 'kk'] as const) {
       await expect(page.locator('dl.summary > .summary-row')).toHaveCount(7);
       await expect(page.getByTestId('search-count')).toHaveText(t.count.replace('{specialists}', '12').replace('{offers}', '20'));
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth)).toBe(true);
-      if (width === 390) await page.screenshot({ path: `docs/phases28-35/review-${locale}-390.png`, fullPage: true });
+      if (width === 390) await page.screenshot({ path: `work/phases28-35/review-${locale}-390.png`, fullPage: true });
       await page.getByRole('link', { name: t.show, exact: true }).focus();
       await page.keyboard.press('Enter');
       await expect(page.getByTestId('specialist-card')).toHaveCount(12);

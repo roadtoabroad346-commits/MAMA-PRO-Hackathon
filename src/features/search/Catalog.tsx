@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useApp } from '../../app/AppState';
 import { CATEGORIES, QUERY_MAX, districtApplies, emptySearchInput } from '../../domain/contracts';
@@ -14,11 +14,13 @@ export function Catalog() {
   const { input, update, setBudgetDraft, service, locale, catalogView, setCatalogView, t } = useApp();
   const [mapVisible, setMapVisible] = useState(false);
   const [filtersOpen, setFiltersOpen] = useState(false);
-  const [, retry] = useState(0);
+  const [retryCount, retry] = useState(0);
   // Local synchronous filtering has no request race or artificial loading delay.
   // Counts, cards and explanations all come from this single result snapshot.
-  let result = null;
-  try { result = service.search(input); } catch { /* Never fall back to unfiltered cards. */ }
+  // Memoized per input (audit performance note): Retry still recomputes.
+  const result = useMemo(() => {
+    try { return service.search(input); } catch { return null; /* Never fall back to unfiltered cards. */ }
+  }, [service, input, retryCount]);
   const chips = result ? conditions(result.appliedInputSummary, t, locale) : [];
   function reset() {
     update(emptySearchInput());

@@ -61,6 +61,13 @@ export class SearchService {
     return evaluateOffer(input, offer, { clock, rulesVersion: this.catalog.rulesVersion, catalogVersion: this.catalog.catalogVersion });
   }
 
+  // Same three-bucket key the comparator used inline before F-02; known
+  // matching district ranks first, known mismatch second, unknown last.
+  private districtSortKey(input: SearchInput, offer: Offer, clock: Clock): number {
+    const evaluation = this.evaluate(input, offer, clock);
+    return !evaluation.ranking.known.district ? 2 : offer.districtId === input.districtId ? 0 : 1;
+  }
+
   private toRated(e: OfferEvaluation): RatedOffer {
     return { specialistId: e.specialistId, selectedOfferId: e.offerId, score: e.score, coverage: e.coverage,
       reasons: e.reasons, unknowns: e.unknowns, mismatches: e.mismatches, status: e.eligibility === 'eligible' ? 'exact' : 'incomplete' };
@@ -78,6 +85,11 @@ export class SearchService {
       (evaluation.eligibility === 'eligible' ? eligible : incomplete).push(this.toRated(evaluation));
     }
     const byId = new Map(this.catalog.offers.map(o => [o.id, o]));
+    // District keys are evaluated once per offer, not inside the comparator
+    // (audit finding F-02): O(n) evaluations instead of O(n log n).
+    const districtKeys = input.sort === 'district' && districtApplies(input) && input.districtId !== null
+      ? new Map(this.catalog.offers.map(o => [o.id, this.districtSortKey(input, o, clock)]))
+      : null;
     const compare = (a: RatedOffer, b: RatedOffer): number => {
       const ao = byId.get(a.selectedOfferId), bo = byId.get(b.selectedOfferId);
       if (!ao || !bo) throw new Error('INVALID_SEARCH_SELECTION');
@@ -89,12 +101,8 @@ export class SearchService {
         if (diff) return diff;
         return a.specialistId.localeCompare(b.specialistId) || a.selectedOfferId.localeCompare(b.selectedOfferId);
       }
-      if (input.sort === 'district' && districtApplies(input) && input.districtId !== null) {
-        const districtKey = (o: Offer) => {
-          const e = this.evaluate(input, o, clock);
-          return !e.ranking.known.district ? 2 : o.districtId === input.districtId ? 0 : 1;
-        };
-        const diff = districtKey(ao) - districtKey(bo);
+      if (districtKeys) {
+        const diff = districtKeys.get(ao.id)! - districtKeys.get(bo.id)!;
         if (diff) return diff;
       }
       return (b.score ?? 0) - (a.score ?? 0) || (b.coverage ?? 0) - (a.coverage ?? 0)

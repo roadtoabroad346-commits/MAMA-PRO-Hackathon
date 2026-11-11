@@ -12,5 +12,5 @@ test('map reuses current result, geolocation denied keeps manual search and list
  await page.goto('/specialists');await page.getByRole('button',{name:'Показать схему карты',exact:true}).click();await page.getByRole('button',{name:'Проверить доступ к геолокации',exact:true}).click();await expect(page.getByRole('status').filter({hasText:'Геолокация недоступна'})).toBeVisible();await expect(page.getByRole('heading',{name:'Список точек',exact:true})).toBeVisible();
  const before=await page.getByTestId('search-count').innerText();await page.getByRole('button',{name:'Фильтры',exact:true}).click();await page.getByRole('button',{name:'Отмена',exact:true}).click();await expect(page.getByTestId('search-count')).toHaveText(before);
  for(const width of [320,360,390,430]){await page.setViewportSize({width,height:900});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);}
- await page.screenshot({path:'docs/phases55-67/map-mobile.png',fullPage:true});
+ await page.screenshot({path:'work/phases55-67/map-mobile.png',fullPage:true});
 });

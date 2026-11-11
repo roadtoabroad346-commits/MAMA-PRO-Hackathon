@@ -75,7 +75,7 @@ function Layout() {
         <Route path="*" element={<><PageTitle intro={t('notFoundHelp')}>{t('notFound')}</PageTitle><Link className="button primary" to="/">{t('home')}</Link></>} />
       </Routes>
     </main>
-    <footer className="site-footer"><span>Қолдау.Жол · {t('demo')}</span><nav aria-label={t('about')}><Link to="/about-demo">{t('about')}</Link><Link to="/privacy">{t('privacy')}</Link><Link to="/pilot">{locale === 'ru' ? 'Тестовый пилот' : 'Сынақ пилоты'}</Link></nav></footer>
+    <footer className="site-footer"><span>Қолдау.Жол · {t('demo')}</span><nav aria-label={t('about')}><Link to="/about-demo">{t('about')}</Link><Link to="/privacy">{t('privacy')}</Link><Link to="/pilot">{t('pilotNav')}</Link></nav></footer>
     <FocusOnNavigation />
   </>;
 }
