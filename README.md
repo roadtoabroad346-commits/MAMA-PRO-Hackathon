@@ -1,5 +1,7 @@
 # Текущая версия: ограниченный пилот 55–67
 
+> **GitHub checkpoint (11.11.2026):** код и документы реализованных этапов до 67-й фазы сохранены в удалённой ветке [`phases-0-67`](https://github.com/roadtoabroad346-commits/MAMA-PRO-Hackathon/tree/phases-0-67), начиная с коммита `a52ff18085f45caa0e2cdaa1743438a133449be5`. Ветка по умолчанию `phase-0-audit` историческая и не содержит актуальную реализацию. Возможные незакоммиченные изменения другой сессии Codex этим checkpoint не подтверждаются.
+
 Существующий CORE сохранён, добавлены schema-backed synthetic server workflows и public PWA. **DEMO/PILOT_TEST only; LIVE_BLOCKED.** Подробная передача каждой фазы: [HANDOVER_55_67](docs/HANDOVER_55_67.md), проверки: [QA_RESULTS](docs/QA_RESULTS.md), реальные условия: [LIVE_READINESS](docs/LIVE_READINESS.md).
 
 Node 24.22+ (node:sqlite). `npm ci`, затем в двух терминалах:
