@@ -1,0 +1,28 @@
+name: Integrity and build checks
+
+on:
+  push:
+    branches:
+      - phases-0-67
+      - completion-audit-2026-11-11
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.22.1'
+          cache: 'npm'
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+      - name: TypeScript, unit tests, and phase evidence audit
+        run: npm run check
+      - name: Production static build (DEMO only)
+        run: npm run build
