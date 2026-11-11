@@ -1,3 +1,24 @@
+# Текущая версия: ограниченный пилот 55–67
+
+Существующий CORE сохранён, добавлены schema-backed synthetic server workflows и public PWA. **DEMO/PILOT_TEST only; LIVE_BLOCKED.** Подробная передача каждой фазы: [HANDOVER_55_67](docs/HANDOVER_55_67.md), проверки: [QA_RESULTS](docs/QA_RESULTS.md), реальные условия: [LIVE_READINESS](docs/LIVE_READINESS.md).
+
+Node 24.22+ (node:sqlite). `npm ci`, затем в двух терминалах:
+
+```bash
+PILOT_MODE=PILOT_TEST npm run pilot
+npm run dev
+```
+
+Открыть `http://localhost:5173/pilot` для тестовых аккаунтов. CORE `/specialists`, explicitly saved synthetic snapshots `/saved`. Данные пилота — только вымышленные; реальные отправки/реальные аккаунты/production hosting отсутствуют. `NODE_ENV=production` блокирует test backend. Не включать реальный пилот изменением fixtures или флага.
+
+Проверки: `npm run check`; `npm run build`; `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e -- --workers=2`; `npx playwright test --config playwright.pilot.config.ts`; `npx playwright test --config playwright.offline.config.ts`; `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run check:release -- --workers=2`.
+
+Последние два pilot/offline конфига используют локальный `/usr/bin/chromium`; если браузер в другом месте, обновите конфиг окружения. Private API не кэшируется, private offline edits не поддерживаются. Напоминания — только in-app inbox при работающем test server, не push/email. Production static CORE: `npm run build && npm start`; /api/ на статическом сервере недоступен, ложного сохранения нет.
+
+---
+
+Ниже историческая документация исходного демо:
+
 # Қолдау.Жол — фазы 28–35
 
 Актуальная ветка разработки: **phases-28-35**. Выполнены единый проверяемый поиск по услугам и S01–S03 поверх сохранённой реализации фаз6–14. Это синтетическое локальное демо; сайт этой задачей не публиковался.

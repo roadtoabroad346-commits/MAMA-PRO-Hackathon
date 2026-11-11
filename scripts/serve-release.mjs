@@ -10,7 +10,7 @@ if (!Number.isInteger(port) || port < 1 || port > 65535) throw new Error('Invali
 await stat(resolve(root, 'index.html')); // Fail instead of serving an unbuilt project.
 const types = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8',
   '.css': 'text/css; charset=utf-8', '.json': 'application/json; charset=utf-8',
-  '.svg': 'image/svg+xml', '.png': 'image/png', '.woff2': 'font/woff2', '.ico': 'image/x-icon' };
+  '.webmanifest': 'application/manifest+json', '.svg': 'image/svg+xml', '.png': 'image/png', '.woff2': 'font/woff2', '.ico': 'image/x-icon' };
 const server = createServer(async (req, res) => {
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.setHeader('Cache-Control', 'no-store');
@@ -19,6 +19,7 @@ const server = createServer(async (req, res) => {
   }
   try {
     const path = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+    if (path.startsWith('/api/')) { res.writeHead(503, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({error:'LIVE_BLOCKED'})); return; }
     const file = resolve(root, `.${path === '/' ? '/index.html' : path}`);
     if (!file.startsWith(root.endsWith(sep) ? root : root + sep)) { res.writeHead(403); res.end(); return; }
     let target = file;

@@ -1,0 +1,299 @@
+
+> qoldau-zhol@0.6.0 test:e2e
+> playwright test --workers=4
+
+[WebServer] (node:1598) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 79 tests using 4 workers
+
+(node:1622) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1618) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1620) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1619) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/intake.spec.ts:52:1 › direct path works without intake and supports category/name search (5.2s)
+  ✓   4 tests/e2e/intake.spec.ts:109:1 › Back and browser history preserve answers including invalid numeric draft; language does not change domain (5.7s)
+  ✓   3 tests/e2e/intake.spec.ts:32:1 › all steps can be skipped; null is preserved through review, reload and catalog (6.5s)
+  ✓   2 tests/e2e/intake.spec.ts:65:1 › review matches complete SearchInput; count equals catalog; locale, Back and editing preserve state (10.0s)
+  ✓   5 tests/e2e/intake.spec.ts:130:1 › budget validates all boundaries, preserves invalid input, accepts zero, supports skip (6.7s)
+  ✓   7 tests/e2e/intake.spec.ts:176:1 › unavailable sessionStorage uses memory with an honest warning; flow remains usable (4.5s)
+  ✓   6 tests/e2e/intake.spec.ts:156:1 › reload restores step and answers; expired/corrupt state resets visibly (6.4s)
+  ✓   9 tests/e2e/intake.spec.ts:223:1 › write failure and locale storage denial do not crash or silently promise persistence (4.0s)
+  ✓   8 tests/e2e/intake.spec.ts:191:1 › KK filled route validates budget; category editing updates the same service count (7.1s)
+  ✓  11 tests/e2e/intake.spec.ts:265:3 › ru: no personal fields, mobile reflow and reduced motion (5.6s)
+  ✓  10 tests/e2e/intake.spec.ts:235:1 › keyboard reaches both entry paths and completes wizard; native radio arrows work (7.1s)
+  ✓  13 tests/e2e/p0-errors.spec.ts:5:3 › ru: catalog error and Retry keep document language (4.0s)
+  ✓  12 tests/e2e/intake.spec.ts:265:3 › kk: no personal fields, mobile reflow and reduced motion (6.2s)
+  ✓  14 tests/e2e/p0-errors.spec.ts:23:3 › ru: hidden offer IDs are never selectable in profile or request (5.4s)
+  ✓  15 tests/e2e/p0-errors.spec.ts:5:3 › kk: catalog error and Retry keep document language (5.1s)
+  ✓  16 tests/e2e/p0-errors.spec.ts:23:3 › kk: hidden offer IDs are never selectable in profile or request (6.7s)
+  ✓  17 tests/e2e/p0-keyboard.spec.ts:13:1 › compare removal and clear keep a stable keyboard focus at 2/1/0 (9.9s)
+  ✓  21 tests/e2e/p0-keyboard.spec.ts:89:1 › review exposes seven valid term/definition pairs with associated edit controls (2.7s)
+  ✓  20 tests/e2e/p0-keyboard.spec.ts:65:1 › unknown route, compare reload and changed hard conditions stay explicit (8.4s)
+  ✘  18 tests/e2e/p0-keyboard.spec.ts:31:3 › ru: keyboard-only entry → skipped input → compare → save → cancel dialog (13.7s)
+  ✘  22 tests/e2e/p0-reflow.spec.ts:4:3 › ru: 320px with 200% text uses the layout viewport, including header and notices (4.8s)
+(node:3205) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3214) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  23 tests/e2e/p0-reflow.spec.ts:4:3 › kk: 320px with 200% text uses the layout viewport, including header and notices (11.7s)
+  ✓  25 tests/e2e/p0.spec.ts:70:3 › ru P0 B: direct catalog → hard filters → compare → exact selection (7.9s)
+  ✓  24 tests/e2e/p0.spec.ts:20:3 › ru P0 A: guided route → review → profile → compare → request → durable status (9.9s)
+  ✓  26 tests/e2e/p0.spec.ts:91:3 › ru P0 C: no exact results → explicit budget reset → retry (5.7s)
+  ✘  19 tests/e2e/p0-keyboard.spec.ts:31:3 › kk: keyboard-only entry → skipped input → compare → save → cancel dialog (30.7s)
+(node:3690) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  29 tests/e2e/p0.spec.ts:91:3 › kk P0 C: no exact results → explicit budget reset → retry (5.3s)
+  ✓  28 tests/e2e/p0.spec.ts:70:3 › kk P0 B: direct catalog → hard filters → compare → exact selection (8.6s)
+  ✓  27 tests/e2e/p0.spec.ts:20:3 › kk P0 A: guided route → review → profile → compare → request → durable status (10.8s)
+  ✓  31 tests/e2e/phases28-35.spec.ts:41:1 › invalid budget survives Back to review and blocks count/application until repaired (5.7s)
+  ✓  30 tests/e2e/phases28-35.spec.ts:14:1 › draft preview never replaces applied catalog until review CTA; reload keeps both (8.8s)
+  ✓  32 tests/e2e/phases28-35.spec.ts:61:1 › unsure topic stays null; mixed district is explicit hard and online-only disables its effect (6.1s)
+  ✓  33 tests/e2e/phases28-35.spec.ts:85:1 › catalog load failure on review is distinct from zero and Retry restores the synthetic draft (6.8s)
+  ✓  34 tests/e2e/phases28-35.spec.ts:103:5 › ru S01–S03 at 360px, 200% text, reduced motion and no runtime errors (5.9s)
+  ✓  36 tests/e2e/phases28-35.spec.ts:103:5 › ru S01–S03 at 430px, 200% text, reduced motion and no runtime errors (6.1s)
+  ✓  37 tests/e2e/phases28-35.spec.ts:103:5 › kk S01–S03 at 360px, 200% text, reduced motion and no runtime errors (6.5s)
+  ✓  38 tests/e2e/phases28-35.spec.ts:103:5 › kk S01–S03 at 390px, 200% text, reduced motion and no runtime errors (6.6s)
+  ✓  35 tests/e2e/phases28-35.spec.ts:103:5 › ru S01–S03 at 390px, 200% text, reduced motion and no runtime errors (10.5s)
+  ✓  39 tests/e2e/phases28-35.spec.ts:103:5 › kk S01–S03 at 430px, 200% text, reduced motion and no runtime errors (5.1s)
+  ✓  40 tests/e2e/profile.spec.ts:16:1 › profile without offer selects a stable public service; changing it updates all facts and URL (5.4s)
+  ✓  43 tests/e2e/profile.spec.ts:94:1 › deep link stays neutral even if this tab has search conditions (4.8s)
+  ✓  42 tests/e2e/profile.spec.ts:80:1 › unknown age disappears only when another offer supplies it (6.8s)
+  ✓  45 tests/e2e/profile.spec.ts:119:1 › passport keeps identity, education, contact and offer data separate with explicit evidence limits (4.7s)
+  ✘  41 tests/e2e/profile.spec.ts:38:1 › switching to an incompatible offer removes old reasons and preserves the exact request/compare selection (10.2s)
+  ✓  46 tests/e2e/profile.spec.ts:139:1 › partial profile and missing verification remain unknown; unknown and stale prices are explicit (6.3s)
+(node:4785) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  47 tests/e2e/profile.spec.ts:154:1 › expired/future/revoked evidence cannot appear as current source confirmation; private data is never rendered (3.6s)
+  ✓  48 tests/e2e/profile.spec.ts:189:1 › missing approach and partial service facts remain explicit; free consultation keeps its own unit (3.8s)
+  ✘  50 tests/e2e/profile.spec.ts:207:1 › changing RU/KK inside a profile preserves offer, comparison and request target (4.3s)
+  ✓  49 tests/e2e/profile.spec.ts:174:1 › source confirmation remains scoped to its exact offer when switching (4.6s)
+  ✓  44 tests/e2e/profile.spec.ts:103:1 › unknown and mismatched IDs show clear not found; hidden offers and profiles cannot be opened (17.1s)
+(node:5134) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  51 tests/e2e/profile.spec.ts:222:3 › ru: long name, reflow320, text200, landscape and keyboard service/request/Back (5.0s)
+(node:5380) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  53 tests/e2e/requests.spec.ts:73:1 › add success then commit abort shows error, no success route or row; reload retries the same key (7.1s)
+  ✓  52 tests/e2e/requests.spec.ts:39:1 › S08 ack defaults false, has no personal inputs; double click commits once; S09 reload/back/cancel (11.1s)
+  ✘  54 tests/e2e/profile.spec.ts:222:3 › kk: long name, reflow320, text200, landscape and keyboard service/request/Back (6.9s)
+(node:5764) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  56 tests/e2e/requests.spec.ts:106:1 › reload during a lost outcome recovers the existing result, never auto inserts (7.0s)
+  ✓  57 tests/e2e/requests.spec.ts:124:1 › failed cancellation keeps confirmed status and offers retry; reload proves rollback (7.1s)
+  ✓  59 tests/e2e/requests.spec.ts:154:1 › read failure is not missing or success; denied IndexedDB never saves in memory (6.2s)
+  ✓  55 tests/e2e/requests.spec.ts:86:1 › uncertain commit checks the same key and resolves to the actual committed record (13.3s)
+  ✓  58 tests/e2e/requests.spec.ts:135:1 › missing and expired request never create records; expired row is removed at startup (7.9s)
+  ✓  61 tests/e2e/requests.spec.ts:185:1 › KK, keyboard, 320px and 200% text: service, status, cancellation and cleanup stay operable (4.8s)
+  ✓  60 tests/e2e/requests.spec.ts:166:1 › cleanup needs confirmation, handles abort and preserves other applications and settings (7.3s)
+  ✓  63 tests/e2e/search.spec.ts:11:1 › typing a multiword query retains the space until service normalization (4.7s)
+  ✓  64 tests/e2e/search.spec.ts:43:1 › search + category OR and cross-group AND use one applied input (4.9s)
+  ✓  65 tests/e2e/search.spec.ts:64:1 › Cancel, Escape, Close and backdrop discard draft and restore initiating focus (5.2s)
+  ✓  66 tests/e2e/search.spec.ts:84:1 › draft Reset does not apply; Apply publishes all fields atomically (4.2s)
+  ✓  67 tests/e2e/search.spec.ts:112:1 › invalid budget disables Apply and never shows a fabricated preview (2.6s)
+  ✓  62 tests/e2e/requests.spec.ts:204:1 › uncertain cleanup refreshes S09 instead of leaving a stale saved claim (13.3s)
+  ✓  68 tests/e2e/search.spec.ts:129:1 › removes just one category chip; full reset retains interface locale (4.8s)
+  ✓  70 tests/e2e/search.spec.ts:157:1 › empty keeps hard conditions; incomplete is an explicit separate action (4.1s)
+  ✓  69 tests/e2e/search.spec.ts:144:1 › price/district sorting changes selected offer and keeps counts and explanations aligned (6.3s)
+  ✓  72 tests/e2e/search.spec.ts:200:1 › profile return preserves input, sort, compare, scroll and focus on the same offer (5.3s)
+  ✓  71 tests/e2e/search.spec.ts:174:1 › compare 1/2/3, fourth rejection, fixed offers, removal and changed conditions (6.6s)
+  ✓  73 tests/e2e/search.spec.ts:217:3 › ru: keyboard focus trap, mobile/landscape reflow, no numeric ratings (5.2s)
+  ✓  74 tests/e2e/search.spec.ts:217:3 › kk: keyboard focus trap, mobile/landscape reflow, no numeric ratings (6.4s)
+  ✓  75 tests/e2e/search.spec.ts:246:1 › rapid text edits end with the newest input; 80-character limit is enforced (4.9s)
+  ✓  76 tests/e2e/search.spec.ts:255:1 › loading reserves cards; corrupted fixtures show error and Retry reloads validated data (5.4s)
+  ✓  77 tests/e2e/search.spec.ts:275:1 › empty opener can disappear after Apply and focus still returns to filters (5.9s)
+  ✓  78 tests/e2e/search.spec.ts:284:1 › direct profile has neutral explanations; mismatched public IDs never substitute another offer (2.9s)
+  ✘  79 tests/e2e/search.spec.ts:295:1 › compare offer replacement is explicit and a fourth addition also reports the limit inside a profile (3.1s)
+
+
+  1) tests/e2e/p0-keyboard.spec.ts:31:3 › ru: keyboard-only entry → skipped input → compare → save → cancel dialog 
+
+    Error: page.evaluate: Execution context was destroyed, most likely because of a navigation
+
+      50 |     for (let i = 0; i < 8; i++) {
+      51 |       await page.keyboard.press(i % 2 ? 'Shift+Tab' : 'Tab');
+    > 52 |       expect(await page.evaluate(() => !!document.activeElement?.closest('dialog'))).toBe(true);
+         |                         ^
+      53 |     }
+      54 |     await page.keyboard.press('Escape');
+      55 |     await expect(page.getByRole('button', { name: t.requestCancel, exact: true })).toBeFocused();
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/p0-keyboard.spec.ts:52:25
+
+    Error Context: test-results/p0-keyboard-ru-keyboard-on-0cf67-pare-→-save-→-cancel-dialog/error-context.md
+
+  2) tests/e2e/p0-keyboard.spec.ts:31:3 › kk: keyboard-only entry → skipped input → compare → save → cancel dialog 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.evaluate: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('#comparison-open')
+
+
+      4 | async function keyboardActivate(page: Page, target: Locator) {
+      5 |   for (let i = 0; i < 180; i++) {
+    > 6 |     if (await target.evaluate(el => el === document.activeElement)) break;
+        |                      ^
+      7 |     await page.keyboard.press('Tab');
+      8 |   }
+      9 |   await expect(target).toBeFocused();
+        at keyboardActivate (/workspace/MAMA-PRO-Hackathon/tests/e2e/p0-keyboard.spec.ts:6:22)
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/p0-keyboard.spec.ts:40:5
+
+    Error Context: test-results/p0-keyboard-kk-keyboard-on-eed94-pare-→-save-→-cancel-dialog/error-context.md
+
+  3) tests/e2e/p0-reflow.spec.ts:4:3 › ru: 320px with 200% text uses the layout viewport, including header and notices 
+
+    Error: page.goto: net::ERR_ABORTED at http://127.0.0.1:5173/route/review
+    Call log:
+      - navigating to "http://127.0.0.1:5173/route/review", waiting until "load"
+
+
+       6 |     await page.addInitScript(locale => localStorage.setItem('qoldau.locale', locale), locale);
+       7 |     for (const path of ['/', '/route', '/route/review', '/specialists', '/specialists/S01?offer=O01', '/compare', '/request/O01', '/privacy', '/about-demo']) {
+    >  8 |       await page.goto(path);
+         |                  ^
+       9 |       await expect(page.locator('.site-header')).toBeVisible();
+      10 |       await page.evaluate(() => { document.documentElement.style.fontSize = '200%'; });
+      11 |       const geometry = await page.evaluate(() => ({ scroll: document.documentElement.scrollWidth, client: document.documentElement.clientWidth }));
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/p0-reflow.spec.ts:8:18
+
+    Error Context: test-results/p0-reflow-ru-320px-with-20-8b657-ncluding-header-and-notices/error-context.md
+
+  4) tests/e2e/profile.spec.ts:38:1 › switching to an incompatible offer removes old reasons and preserves the exact request/compare selection 
+
+    Error: expect(locator).not.toBeChecked() failed
+
+    Locator: getByRole('checkbox')
+    Expected: not checked
+    Error: strict mode violation: getByRole('checkbox') resolved to 2 elements:
+        1) <input type="checkbox" aria-describedby="_r_5_"/> aka getByRole('checkbox', { name: 'Я ознакомился с тем, что услуга не соответствует текущим условиям поиска' }).first()
+        2) <input type="checkbox" aria-describedby="_r_6_"/> aka getByRole('checkbox', { name: 'Я ознакомился с тем, что услуга не соответствует текущим условиям поиска' }).nth(1)
+
+    Call log:
+      - Expect "not toBeChecked" getByRole('checkbox') with timeout 5000ms
+      - waiting for getByRole('checkbox')
+
+
+      68 |   await expect(page.locator('[data-reason="LANGUAGE_MATCH"]')).toBeVisible();
+      69 |   await page.locator('input[value="O15"]').check();
+    > 70 |   await expect(page.getByRole('checkbox')).not.toBeChecked();
+         |                                                ^
+      71 |   await page.getByRole('button', { name: 'Вернуться к выдаче', exact: true }).click();
+      72 |   await expect(page).toHaveURL('/specialists');
+      73 |   await expect(page.locator('#profile-O06')).toBeFocused();
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/profile.spec.ts:70:48
+
+    Error Context: test-results/profile-switching-to-an-in-ab02c-t-request-compare-selection/error-context.md
+
+  5) tests/e2e/profile.spec.ts:207:1 › changing RU/KK inside a profile preserves offer, comparison and request target 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: locator('#create-demo-request')
+    Expected: "/request/O15"
+    Error: strict mode violation: locator('#create-demo-request') resolved to 3 elements:
+        1) <a href="/request/O15" data-discover="true" class="button primary" id="create-demo-request">Создать демозапрос</a> aka getByRole('link', { name: 'Создать демозапрос' }).first()
+        2) <a href="/request/O15" data-discover="true" class="button primary" id="create-demo-request">Создать демозапрос</a> aka getByRole('link', { name: 'Создать демозапрос' }).nth(1)
+        3) <a href="/request/O15" data-discover="true" class="button primary" id="create-demo-request">Демоөтініш жасау</a> aka getByRole('link', { name: 'Демоөтініш жасау' })
+
+    Call log:
+      - Expect "toHaveAttribute" locator('#create-demo-request') with timeout 5000ms
+      - waiting for locator('#create-demo-request')
+
+
+      213 |   await expect(page.locator('[data-trust-field="languages"]')).toContainText('Маманның синтетикалық сауалнамасы');
+      214 |   await expect(selected(page).getByRole('button', { name: 'Салыстырудан алып тастау', exact: true })).toBeVisible();
+    > 215 |   await expect(page.locator('#create-demo-request')).toHaveAttribute('href', '/request/O15');
+          |                                                      ^
+      216 |   await page.getByRole('button', { name: 'Рус', exact: true }).click();
+      217 |   await expect(selected(page).getByRole('button', { name: 'Убрать из сравнения', exact: true })).toBeVisible();
+      218 |   await expect(page.locator('input[value="O15"]')).toBeChecked();
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/profile.spec.ts:215:54
+
+    Error Context: test-results/profile-changing-RU-KK-ins-bcfcd-mparison-and-request-target/error-context.md
+
+  6) tests/e2e/profile.spec.ts:222:3 › ru: long name, reflow320, text200, landscape and keyboard service/request/Back 
+
+    Error: locator.focus: Error: strict mode violation: locator('#create-demo-request') resolved to 3 elements:
+        1) <a href="/request/O12" data-discover="true" class="button primary" id="create-demo-request">Создать демозапрос</a> aka getByRole('link', { name: 'Создать демозапрос' }).first()
+        2) <a href="/request/O23" data-discover="true" class="button primary" id="create-demo-request">Создать демозапрос</a> aka getByRole('link', { name: 'Создать демозапрос' }).nth(1)
+        3) <a href="/request/O24" data-discover="true" class="button primary" id="create-demo-request">Создать демозапрос</a> aka getByRole('link', { name: 'Создать демозапрос' }).nth(2)
+
+    Call log:
+      - waiting for locator('#create-demo-request')
+
+
+      241 |     }
+      242 |     await page.evaluate(() => { document.documentElement.style.fontSize = ''; });
+    > 243 |     await page.locator('#create-demo-request').focus();
+          |                                                ^
+      244 |     await page.keyboard.press('Enter');
+      245 |     await expect(page).toHaveURL('/request/O24');
+      246 |     await expect(page.getByTestId('request-offer')).toContainText('O24');
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/profile.spec.ts:243:48
+
+    Error Context: test-results/profile-ru-long-name-reflo-e63ae-yboard-service-request-Back/error-context.md
+
+  7) tests/e2e/profile.spec.ts:222:3 › kk: long name, reflow320, text200, landscape and keyboard service/request/Back 
+
+    Error: locator.focus: Error: strict mode violation: locator('#create-demo-request') resolved to 3 elements:
+        1) <a href="/request/O12" data-discover="true" class="button primary" id="create-demo-request">Демоөтініш жасау</a> aka getByRole('link', { name: 'Демоөтініш жасау' }).first()
+        2) <a href="/request/O23" data-discover="true" class="button primary" id="create-demo-request">Демоөтініш жасау</a> aka getByRole('link', { name: 'Демоөтініш жасау' }).nth(1)
+        3) <a href="/request/O24" data-discover="true" class="button primary" id="create-demo-request">Демоөтініш жасау</a> aka getByRole('link', { name: 'Демоөтініш жасау' }).nth(2)
+
+    Call log:
+      - waiting for locator('#create-demo-request')
+
+
+      241 |     }
+      242 |     await page.evaluate(() => { document.documentElement.style.fontSize = ''; });
+    > 243 |     await page.locator('#create-demo-request').focus();
+          |                                                ^
+      244 |     await page.keyboard.press('Enter');
+      245 |     await expect(page).toHaveURL('/request/O24');
+      246 |     await expect(page.getByTestId('request-offer')).toContainText('O24');
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/profile.spec.ts:243:48
+
+    Error Context: test-results/profile-kk-long-name-reflo-8eac5-yboard-service-request-Back/error-context.md
+
+  8) tests/e2e/search.spec.ts:295:1 › compare offer replacement is explicit and a fourth addition also reports the limit inside a profile 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('status')
+    Expected substring: "Можно сравнить до трёх специалистов"
+    Error: strict mode violation: getByRole('status') resolved to 2 elements:
+        1) <p role="status"></p> aka getByRole('status').filter({ hasText: /^$/ })
+        2) <p role="status">Можно сравнить до трёх специалистов. Сначала убер…</p> aka getByText('Можно сравнить до трёх специалистов. Сначала уберите одного из выбранных')
+
+    Call log:
+      - Expect "toContainText" getByRole('status') with timeout 5000ms
+      - waiting for getByRole('status')
+
+
+      309 |   await expect(page.getByTestId('selected-offer')).toHaveAttribute('data-offer-id', 'O01');
+      310 |   await page.getByRole('button', { name: 'Сравнить', exact: true }).click();
+    > 311 |   await expect(page.getByRole('status')).toContainText('Можно сравнить до трёх специалистов');
+          |                                          ^
+      312 |   await page.getByRole('button', { name: 'Вернуться к выдаче', exact: true }).click();
+      313 |   await expect(page.locator('.compare-tray')).toContainText('3/3');
+      314 | });
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/search.spec.ts:311:42
+
+    Error Context: test-results/search-compare-offer-repla-bdaa6--the-limit-inside-a-profile/error-context.md
+
+  8 failed
+    tests/e2e/p0-keyboard.spec.ts:31:3 › ru: keyboard-only entry → skipped input → compare → save → cancel dialog 
+    tests/e2e/p0-keyboard.spec.ts:31:3 › kk: keyboard-only entry → skipped input → compare → save → cancel dialog 
+    tests/e2e/p0-reflow.spec.ts:4:3 › ru: 320px with 200% text uses the layout viewport, including header and notices 
+    tests/e2e/profile.spec.ts:38:1 › switching to an incompatible offer removes old reasons and preserves the exact request/compare selection 
+    tests/e2e/profile.spec.ts:207:1 › changing RU/KK inside a profile preserves offer, comparison and request target 
+    tests/e2e/profile.spec.ts:222:3 › ru: long name, reflow320, text200, landscape and keyboard service/request/Back 
+    tests/e2e/profile.spec.ts:222:3 › kk: long name, reflow320, text200, landscape and keyboard service/request/Back 
+    tests/e2e/search.spec.ts:295:1 › compare offer replacement is explicit and a fourth addition also reports the limit inside a profile 
+  71 passed (2.6m)

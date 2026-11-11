@@ -141,3 +141,13 @@ UI: `draft → submitting → recorded_demo`; определённый abort →
 | Q-07 | Организатор/команда: актуальное положение и уточнения, форма передачи прав, формат/срок загрузки, календарь передачи результатов? | Подтверждённую готовность к сдаче/передаче; P0-дизайн не блокирует | До финальной сдачи; правила подготовки — до разработки |
 
 Вопросы подготовлены для команды. Сообщения внешним адресатам не отправлялись. Не требуется выбор пользователя по несущественным UI-деталям, чтобы завершить фазу 0.
+
+
+## ADR-0017…0022 — объединённая 55–67, 10.11.2026
+
+17. VERIFIED baseline: восстановлен origin/phases-28-35@6f9619f; локальная unborn work была пустой. origin HEAD указывает на историческую phase-0-audit. Нет результатов 36–55, поэтому их готовность не утверждается.
+18. Выбран локальный Node24 + SQLite, один durable transaction path. Managed service не нужен для synthetic test и не считается разрешённым размещением реальных данных. Test identity только через явный loopback PILOT_TEST, production configuration fail-closed.
+19. Ограниченный onboarding: одна анкета/одна offer, несколько анкет у специалиста. Public edit скрывает версию до повторного review. Private previousPublic нужен для существенного diff, request snapshots immutable.
+20. Единственный канал — in-app inbox. Не выдаём scheduled/строку inbox за push/внешнюю доставку/прочтение. Callback и внешние providers не подключены. Стабильные SQLite jobs переживают restart.
+21. Summary — выборочный server preview и memory draft, clipboard/download с честными статусами. Share/send отсутствуют. Нет universal treatment/clinical auto-score. Live diary fields остаются неподтверждённой гипотезой.
+22. Минимальная схема карты CORE без сторонних tiles, только synthetic sourced coordinates и unknown accessibility. PWA впервые добавлена как public shell + explicitly saved demo snapshots; private API всегда network-only. CORE и PILOT_TEST namespaces разделены; live catalog adapter не заявлен.

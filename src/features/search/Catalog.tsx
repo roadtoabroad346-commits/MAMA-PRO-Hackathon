@@ -7,10 +7,12 @@ import { DemoNotice, PageTitle } from '../../ui/controls';
 import { CompareTray } from './CompareTray';
 import { conditions } from './conditions';
 import { Filters } from './Filters';
+import { ResultMap } from './ResultMap';
 import { OfferCard } from './OfferCard';
 
 export function Catalog() {
   const { input, update, setBudgetDraft, service, locale, catalogView, setCatalogView, t } = useApp();
+  const [mapVisible, setMapVisible] = useState(false);
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [, retry] = useState(0);
   // Local synchronous filtering has no request race or artificial loading delay.
@@ -71,6 +73,8 @@ export function Catalog() {
         <button type="button" className="button primary" onClick={() => setFiltersOpen(true)}>{t('editPreferences')}</button>
         <button type="button" className="button text-button" onClick={reset}>{t('resetAll')}</button>
       </section>}
+      <button type="button" className="button secondary" aria-expanded={mapVisible} onClick={() => setMapVisible(!mapVisible)}>{locale === 'ru' ? (mapVisible ? 'Скрыть схему карты' : 'Показать схему карты') : (mapVisible ? 'Карта сызбасын жасыру' : 'Карта сызбасын көрсету')}</button>
+      {mapVisible && <ResultMap result={result} />}
       <div className="catalog-grid">{result.items.map(item => <OfferCard key={item.specialistId} item={item} />)}</div>
       {result.incompleteSpecialistCount > 0 && <section className="incomplete-section" aria-labelledby="incomplete-title">
         <h2 id="incomplete-title">{t('incompleteTitle')}</h2><p>{t('incomplete', { count: result.incompleteSpecialistCount })}</p>

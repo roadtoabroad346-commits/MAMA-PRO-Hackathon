@@ -1,0 +1,74 @@
+[WebServer] (node:1348) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1369) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:1390) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/pilot-e2e/pilot.spec.ts:7:1 › synthetic specialist → assigned moderation → contact → confirmed calendar → private summary and task (45.1s)
+(node:2772) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/pilot-e2e/pilot.spec.ts:25:1 › server failure keeps fields, no false local success, locale and 320px reflow (45.1s)
+
+
+  1) tests/pilot-e2e/pilot.spec.ts:7:1 › synthetic specialist → assigned moderation → contact → confirmed calendar → private summary and task 
+
+    Test timeout of 45000ms exceeded.
+
+    Error: apiRequestContext._wrapApiCall: ENOENT: no such file or directory, copyfile '/workspace/MAMA-PRO-Hackathon/test-results/.playwright-artifacts-0/traces/d00b723c21676cbb8e3f-00889eceb4fd49d45281-recording1.network' -> '/workspace/MAMA-PRO-Hackathon/test-results/.playwright-artifacts-0/traces/d00b723c21676cbb8e3f-00889eceb4fd49d45281-recording1-pwnetcopy-1.network'
+
+    Error: browserContext._wrapApiCall: ENOENT: no such file or directory, open '/workspace/MAMA-PRO-Hackathon/test-results/.playwright-artifacts-0/traces/d00b723c21676cbb8e3f-00889eceb4fd49d45281.network'
+
+    Error: locator.selectOption: Test ended.
+    Call log:
+      - waiting for getByLabel('Синтетический участник', { exact: true })
+
+
+      2 | async function login(page:Page,actor:string){
+      3 |  if(await page.getByRole('button',{name:'Выйти и убрать данные с экрана',exact:true}).isVisible())await page.getByRole('button',{name:'Выйти и убрать данные с экрана',exact:true}).click();
+    > 4 |  await page.getByLabel('Синтетический участник',{exact:true}).selectOption(actor);await page.getByRole('button',{name:'Войти тестовым участником',exact:true}).click();await expect(page.getByRole('button',{name:'Обновить с сервера',exact:true})).toBeVisible();
+        |                                                               ^
+      5 | }
+      6 | const tab=(page:Page,name:string)=>page.getByRole('navigation',{name:'Тестовый пилот',exact:true}).getByRole('button',{name,exact:true}).click();
+      7 | test('synthetic specialist → assigned moderation → contact → confirmed calendar → private summary and task',async({page})=>{
+        at login (/workspace/MAMA-PRO-Hackathon/tests/pilot-e2e/pilot.spec.ts:4:63)
+        at /workspace/MAMA-PRO-Hackathon/tests/pilot-e2e/pilot.spec.ts:8:100
+
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/pilot-synthetic-specialist-5e843--→-private-summary-and-task/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/pilot-synthetic-specialist-5e843--→-private-summary-and-task/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/pilot-e2e/pilot.spec.ts:25:1 › server failure keeps fields, no false local success, locale and 320px reflow 
+
+    Test timeout of 45000ms exceeded.
+
+    Error: apiRequestContext._wrapApiCall: ENOENT: no such file or directory, copyfile '/workspace/MAMA-PRO-Hackathon/test-results/.playwright-artifacts-1/traces/d00b723c21676cbb8e3f-e71579b5da3f9b8536b8-recording1.network' -> '/workspace/MAMA-PRO-Hackathon/test-results/.playwright-artifacts-1/traces/d00b723c21676cbb8e3f-e71579b5da3f9b8536b8-recording1-pwnetcopy-1.network'
+
+    Error: browserContext._wrapApiCall: ENOENT: no such file or directory, open '/workspace/MAMA-PRO-Hackathon/test-results/.playwright-artifacts-1/traces/d00b723c21676cbb8e3f-e71579b5da3f9b8536b8.network'
+
+    Error: locator.selectOption: Test ended.
+    Call log:
+      - waiting for getByLabel('Синтетический участник', { exact: true })
+
+
+      2 | async function login(page:Page,actor:string){
+      3 |  if(await page.getByRole('button',{name:'Выйти и убрать данные с экрана',exact:true}).isVisible())await page.getByRole('button',{name:'Выйти и убрать данные с экрана',exact:true}).click();
+    > 4 |  await page.getByLabel('Синтетический участник',{exact:true}).selectOption(actor);await page.getByRole('button',{name:'Войти тестовым участником',exact:true}).click();await expect(page.getByRole('button',{name:'Обновить с сервера',exact:true})).toBeVisible();
+        |                                                               ^
+      5 | }
+      6 | const tab=(page:Page,name:string)=>page.getByRole('navigation',{name:'Тестовый пилот',exact:true}).getByRole('button',{name,exact:true}).click();
+      7 | test('synthetic specialist → assigned moderation → contact → confirmed calendar → private summary and task',async({page})=>{
+        at login (/workspace/MAMA-PRO-Hackathon/tests/pilot-e2e/pilot.spec.ts:4:63)
+        at /workspace/MAMA-PRO-Hackathon/tests/pilot-e2e/pilot.spec.ts:26:28
+
+    Error: ENOENT: no such file or directory, open '/workspace/MAMA-PRO-Hackathon/test-results/.playwright-artifacts-1/ca89691663c7f2ceeb16373b73de9ea3.zip'
+
+  2 failed
+    tests/pilot-e2e/pilot.spec.ts:7:1 › synthetic specialist → assigned moderation → contact → confirmed calendar → private summary and task 
+    tests/pilot-e2e/pilot.spec.ts:25:1 › server failure keeps fields, no false local success, locale and 320px reflow 

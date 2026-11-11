@@ -1,3 +1,37 @@
+# QA: объединённая 55–67 — 10–11 ноября 2026 UTC
+
+Сборка `pilot55-67-b6be202efcb0`, база 6f9619f, локальная work. Все перечисленные ниже результаты получены фактическим запуском в этом окружении. Предыдущие отчёты ниже — история, а не доказательство новой версии. Режимы: DEMO/PILOT_TEST synthetic; **PILOT_LIVE NO-GO / LIVE_BLOCKED**.
+
+Среда: Node 24.22.1, npm 11.9.0, React 19.3.1, Router 7.18.5, Zod 4.6.7, Vite 7.3.7, Vitest 4.1.12, Playwright 1.65.0, системный Chromium 156.0.8078.79. `npm ci --no-audit --no-fund` выполнен; новые npm-зависимости не добавлялись. Для server runtime используется node:sqlite.
+
+| Команда / метод | Actor / resource / условия | Результат | Доказательство |
+|---|---|---|---|
+| `npm run check` | Existing CORE + PARENT_A/B, SPECIALIST_A/B, MODERATOR, ADMIN; temp SQLite DB, fixed Clock; schema/FK/restart/real HTTP | PASS: strict TS, 147 tests в 8 файлах (117 прежних + 30 pilot) | phases55-67/check.log; tests/pilot.test.ts |
+| `npm run build` | Production static DEMO, no external credentials | PASS; main JS ~515.5 kB / gzip153.2 kB, отдельный pilot ~55 kB; Vite advisory >500 kB остаётся | phases55-67/build.log; release-manifest.json SHA256 |
+| `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e -- --workers=2` | DEMO A/B/C RU/KK, search/matching/profile/compare/IndexedDB/recovery/errors/keyboard/reflow | PASS: 79/79 | phases55-67/core-browser.log |
+| `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run check:release -- --workers=2` | Production dist, local assets/direct URLs, durable create/cancel/reload/reset, RU/KK | PASS: 18/18 | phases55-67/release-browser.log/.json |
+| `npx playwright test --config playwright.pilot.config.ts` | Реальный loopback HTTP backend, отдельная e2e-UUID SQLite на запуск; synthetic role workflow | PASS: 5/5 | phases55-67/pilot-browser.log/.json; tests/pilot-e2e/pilot.spec.ts |
+| `npx playwright test --config playwright.offline.config.ts` | Production dist; explicit save + SW ready + offline reload; /pilot offline; caches; geolocation denial; 320/360/390/430 | PASS: 2/2 | phases55-67/offline-browser.log/.json; offline.spec.ts |
+| Static review / `git diff --check` | Source/server/public/dist; pattern scan без печати значений; 72 AC rows | PASS: no matching credential patterns, private runtime ignored, 72 rows | phases55-67/static-review.json |
+
+Серверная проверка не заменена mock UI. SQLite tests реально создают БД, повторно открывают процессный adapter, повторяют migration и проверяют сохранность/FK. HTTP test запускает настоящий server на свободном loopback-порту и проверяет guest public projection, auth, cookie, CSRF, origin, writes и logout. Browser работает через Vite same-origin proxy; trusted Host сохраняется, проверки не отключены.
+
+Покрыто: owner A/B отрицательные случаи и чужой export; parent role/owner spoofing; specialist self verification; moderator без diary; stale session active/revoked scope; exact key/payload/conflict/restart; invalid transitions, parent report отдельно от specialist confirmation; поздний job после cancel; immutable request snapshot; manual vs confirmed event/source dedup/version conflict/year/leap/DST; reminder opt-in/disable/revision/retry/expired; subscription timestamp no-op/dedup/withdraw; next markers не меняют request; private edit/delete/scrub/no audit text; HTML literal/size; assignment revision/author/scopes/unable/question; default-empty/exact selection summary.
+
+Пять browser pilot сценариев: (1) specialist application → assigned moderation → contact → sandbox inbox → specialist response/confirmation → parent agenda → private diary/selection → actual clipboard, clipboard denial, browser download → RU/KK → B isolation → task unable; (2) server503 сохраняет ввод и не показывает local success, same-key retry, 320…1280 reflow; (3) реальный server commit с потерянным ответом, retry создаёт ровно одну запись; (4) keyboard-only personal event, semantic agenda, reduced motion + KK 320px text200; (5) logout failure убирает private экран с явным unconfirmed предупреждением, успешный retry инвалидирует session.
+
+Выбранный reminder/contact sandbox — durable in-app inbox без внешнего провайдера. Строка inbox не называется delivered/read; test accounts не считаются реальной identity. Для OS push/mail/SMS/подписанных внешних callbacks нет работающего адаптера — эти runtime-проверки **NOT RUN / не подключены**, а не PASS.
+
+Начальные неуспешные проверки сохранены в *-initial.log / pilot-browser-labels.log / pilot-browser-origin-denied.log. Исправлены: одинаковые sibling React keys SaveDemo/RequestAction, пустой дополнительный live region, точные label-control связи, proxy Host/Origin конфликт, независимые output dirs и test DB. Начальная offline проверка смешивала innerText/textContent; теперь сравнивает одинаковый observable text. В production release тесте устранена гонка: click не доказывает commit; теперь ожидается committed cancelled_demo **до** reload и проверяется тот же status **после** reload. Продуктовый IndexedDB transaction-oncomplete контракт не ослаблен и не переписан. Изолированный начальный navigation abort не повторился в итоговых 79/79. Исторические screenshots 28–35, перезаписанные прежним e2e скриптом, восстановлены из исходной базы; нынешние screenshots только phases55-67.
+
+NOT RUN: интервью родителя и профильного специалиста/необходимость diary полей; редактура KK носителем; настоящий screen-reader и physical-device accessibility audit; real Android/iOS install, Firefox/Safari, multi-version worker upgrade/eviction, реальные фоновые каналы; production IdP, legal review Казахстана по актуальным первичным источникам, hosting/security/restore/incident rehearsal, реальные согласия/профили/сообщения. Реальные production миграции, sharing и sends не выполнялись. Задания не создают medical score.
+
+Визуальные доказательства: pilot-kk-mobile.png, pilot-ru-desktop.png, map-mobile.png; synthetic summary download — summary-synthetic.txt. Это реальные screenshots/browser artifacts, не макеты. Старые phase13/14 slides/video/ZIP не доказывают эту сборку. Полный go/no-go — HANDOVER_55_67 и LIVE_READINESS. AC050 (human field validation) и AC062 (невыбранные protected links) NOT RUN в traceability.
+
+---
+
+## Исторические QA-результаты исходной версии
+
 # Фазы 28–35 — фактические проверки 10.11.2026
 
 **READY WITH LIMITATIONS.** Рабочая ветка phases-28-35, основа b1f79f3 / phase-14-defense. Проверяются текущие исходники, catalog-v2/rules-v2/freshness-v2. Исторические отчёты ниже не считаются повторным выполнением нынешних проверок.

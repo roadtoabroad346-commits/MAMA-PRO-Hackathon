@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-11-11T00:02:15.527041+00:00",
+  "credential_pattern_files": [],
+  "private_runtime_gitignored": true,
+  "new_AC_rows": 72,
+  "dist_matches_manifest": true,
+  "final_test_evidence": {
+    "unit_integration": 147,
+    "core_browser": 79,
+    "production_browser": 18,
+    "pilot_browser": 5,
+    "offline_browser": 2
+  }
+}

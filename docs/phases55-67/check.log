@@ -1,0 +1,21 @@
+
+> qoldau-zhol@0.6.0 check
+> npm run typecheck && npm test
+
+
+> qoldau-zhol@0.6.0 typecheck
+> tsc -b
+
+
+> qoldau-zhol@0.6.0 test
+> vitest run
+
+
+ RUN  v4.1.12 /workspace/MAMA-PRO-Hackathon
+
+
+ Test Files  8 passed (8)
+      Tests  147 passed (147)
+   Start at  00:00:01
+   Duration  2.92s (transform 334ms, setup 0ms, import 1.05s, tests 922ms, environment 1ms)
+

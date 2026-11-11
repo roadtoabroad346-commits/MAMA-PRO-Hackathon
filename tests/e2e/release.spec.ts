@@ -49,6 +49,8 @@ for (const locale of ['ru', 'kk'] as const) {
     await expect(page.getByTestId('request-id')).toHaveText(id);
     await page.getByRole('button', { name: t.requestCancel, exact: true }).click();
     await page.getByRole('dialog').getByRole('button', { name: t.requestCancel, exact: true }).click();
+    // A click starts async IndexedDB work; only the committed UI status proves cancellation.
+    await expect(metadata).toHaveAttribute('data-status', 'cancelled_demo');
     await page.reload();
     await expect(metadata).toHaveAttribute('data-status', 'cancelled_demo');
 

@@ -1,0 +1,11 @@
+# Обращение и трекер
+
+DEMO /request/O* остаётся локальным IndexedDB типом. /pilot contact.create принимает только published synthetic offer ID и purpose conditions|availability, consent=true и test-contact-v1. Payload не включает intake/diary/calendar. UI перед передачей показывает получателя, условия, цель, точный состав. Contact ownership выводится из session, recipient из offer. Данные не отправляются реальным людям.
+
+State machine: server_received → sandbox_available → responded → parent_reported → appointment_confirmed; responded можно подтвердить специалистом сразу. Cancel доступен родителю из активных состояний; closed из responded/parent_reported/appointment_confirmed. Нельзя вернуться из terminal. History хранит status, actor, source, timestamp. Server commit не является чтением, доставкой или записью; sandbox_available означает строку inbox тестового специалиста. Responded — действие специалиста, parent_reported — только отметка родителя. Appointment_confirmed требует отдельного специалиста-получателя и валидного timing.
+
+Создание атомарно создаёт request и durable SQLite job. Идемпотентность actor/op/key, SHA256 канонического payload, receipt id/version. Same payload возвращает прежний receipt, different→409. UI при неопределённом сетевом результате повторяет тот же command/key; нет local fallback. Restart не теряет scheduled jobs. Sandbox pump атомарно проверяет request version/status и создаёт уникальный inbox. После отмены старый job ничего не меняет.
+
+External click/provider accepted/delivered/read receipt не реализованы и не показываются. Webhook/callback endpoint отсутствует, попытка client delivered rejected schema. Exactly-once внешняя доставка не заявляется. Нет API для настоящей отправки. Отмена меняет lifecycle; consent revoke дополнительно записывает revoked и source=consent_revoked; terminal delete очищает JSON, сохраняя tombstone. Отмена обращения отменяет связанные source-calendar events и pending reminders. Удаление уже прочитанной внешней копии не обещается.
+
+Тесты: SQLite restart/idempotency, A/B, impossibility, snapshot preservation, cancel/revoke, real HTTP CSRF/origin, browser workflow. Production identity/provider/consent/support остаются LIVE_BLOCKED.

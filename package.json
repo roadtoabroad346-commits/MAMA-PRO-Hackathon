@@ -13,7 +13,9 @@
     "start": "node scripts/serve-release.mjs",
     "demo": "node scripts/serve-release.mjs",
     "check": "npm run typecheck && npm test",
-    "check:release": "playwright test --config playwright.release.config.ts"
+    "check:release": "playwright test --config playwright.release.config.ts",
+    "pilot": "node server/start.ts",
+    "test:pilot": "vitest run tests/pilot.test.ts"
   },
   "dependencies": {
     "react": "^19.2.0",

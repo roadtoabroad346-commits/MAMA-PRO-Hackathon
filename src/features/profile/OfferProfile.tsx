@@ -6,6 +6,7 @@ import { isFresh } from '../../domain/SearchService';
 import { categoryKeys } from '../../i18n/messages';
 import { DemoNotice, PageTitle } from '../../ui/controls';
 import { CompareButton, Explanations, OfferFacts } from '../search/OfferCard';
+import { SaveDemo } from '../pilot/SavedDemo';
 import { TrustPassport } from './TrustPassport';
 import { RequestAction } from './RequestAction';
 
@@ -58,6 +59,7 @@ export function OfferProfile() {
         <Explanations item={item} fallbackUnknowns={neutral?.unknowns} />
         <RequestAction key={offer.id} offer={offer} incompatible={item === null} hasContext={hasContext} />
         <CompareButton offer={offer} />
+        <SaveDemo key={`save-${offer.id}`} offerId={offer.id} />
         {comparison.length > 0 && <Link className="button text-button" to="/compare">{t('openComparison')} · {comparison.length}/3</Link>}
         {comparisonNotice && <p role="status">{t(comparisonNotice)}</p>}
       </article>

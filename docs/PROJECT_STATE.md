@@ -1,3 +1,21 @@
+# Текущее состояние: объединённая фаза 55–67
+
+Версия: локальный development 0.6.0 + pilot55–67, база origin/phases-28-35@6f9619f. Проверено фактическое восстановление из GitHub; в исходном локальном checkout не было коммитов. Результаты 36–55 отсутствуют, прежней карты/PWA/backend не было. Существующий CORE сохранён; фазы 68+ не выполнялись.
+
+Готово в ограниченном synthetic PILOT_TEST: Node24/SQLite schema и реальные HTTP sessions/role+owner checks; specialist application/assigned moderation/public projection/withdraw; atomic contact/idempotency/durable sandbox inbox/history; personal/confirmed calendar, version conflicts, in-app reminder jobs; offer change diff/subscriptions; next action; private goals/diary; scoped versioned assignments; exact selective summary/clipboard/download. CORE получил один SearchResult map-view с synthetic sourced coordinates и public PWA shell/explicit saved demo snapshots. Новые private API и состояние не попадают в public cache.
+
+Режимы: DEMO сохранён; PILOT_TEST — работающий локальный synthetic server, не mock local success. PILOT_LIVE **LIVE_BLOCKED / NO-GO**: нет реального оператора/правовых оснований/размещения/production identity/согласий/модератора/поддержки/backup restore/канала внешней доставки. Test-login физически отвергается production configuration. Real provider/callback/send/share links/recurrence/family invitations/AI/voice не включены.
+
+Проверено: npm run check — strict TS +147 PASS; build PASS; CORE browser79 PASS; production18 PASS; pilot5 PASS; offline/map2 PASS.
+
+Статус: READY WITH LIMITATIONS для указанного синтетического объёма. Подтверждения проверок и ограничения — [QA_RESULTS](QA_RESULTS.md), 72 AC — REQUIREMENTS_TRACEABILITY, отдельно каждая фаза — [HANDOVER_55_67](HANDOVER_55_67.md). Не заявлены: исследование родителя/специалиста, native KK review, screen-reader audit, реальные mobile install/background delivery и production security/backup проверки. Модель diary полей ASSUMPTION.
+
+Изменения локальны в work; текущие 55–67 не опубликованы и не отправлены в GitHub. Dist воспроизводится npm run build; старые slides/videos/ZIP исторические. Следующий шаг — независимый review тестового пилота и закрытие конкретных live gates назначенными людьми. Автоматически фазу 68 не начинать.
+
+---
+
+## Исторический журнал — предыдущая база
+
 # Текущее состояние: фазы 28–35
 
 10.11.2026. Ветка `phases-28-35`, основа `phase-14-defense` (`b1f79f3`). Реализация и GitHub push прямо поручены пользователем. Предыдущие ограничения «только фаза0» — исторические.

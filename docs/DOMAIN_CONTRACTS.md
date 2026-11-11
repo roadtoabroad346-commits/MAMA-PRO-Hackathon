@@ -21,3 +21,8 @@
 Публичная граница валидирует каталог и убирает непубличные offers/специалистов. Неизвестные поля схемой отбрасываются. SearchResult не содержит сырых записей специалистов, verification-инспекторов или приватных диагностических данных.
 
 Состояние: intakeDraft отдельно от applied input. Review вычисляется из draft, CTA валидирует и атомарно применяет; уход в каталог без CTA не применяет незавершённую анкету. Снимок synthetic session v1 получает optional intakeDraft, старый v1 без него восстанавливается из input. TTL2h и отдельный locale сохраняются. Невалидная строка бюджета живёт только в памяти и блокирует подтверждение.
+
+
+## Расширение 55–67
+
+Контракты согласованы по приложенному объединённому запросу; server/contracts.ts — исполняемая валидация, ACCESS_AND_DATA_MODEL — роли/ownership/схема. Существующие matching/hard/unknown/same-offer/locale правила сохранены. Map использует SearchResult.items[].matchingOfferIds, без incomplete/excluded как подходящих. DemoRequest не преобразуется в ContactRequest. Private writes только через trusted server transaction, optimistic version; create keys scoped owner/op. Canonical payload hash хранится без копии diary. Calendar timing — offset ISO + IANA, event source отличается от manual status. Assignment instructionVersion отличается от resource.version; response привязана к первой. Summary selected=[] и exact owner-checked projection. External/live pathways disabled, условие включения — LIVE_READINESS.

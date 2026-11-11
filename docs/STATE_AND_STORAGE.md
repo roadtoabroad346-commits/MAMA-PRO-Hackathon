@@ -1,0 +1,13 @@
+# State и storage — текущая версия
+
+DEMO: существующие qoldau session/locale и IndexedDB demo requests сохранены. Новые explicitly saved cards: localStorage qoldau.saved-demo.v1, Zod schema, ≤20 synthetic summaries, savedAt отдельно от price checkedAt. Только после кнопки сохранения; без контактов/diary. Ошибки read/write видимы. Копия не обновляется автоматически.
+
+PILOT_TEST: .pilot-test/pilot.sqlite (+WAL/SHM), accounts/sessions/resources/jobs/inbox/operations/audit; gitignored, directory 0700. Только synthetic data. HttpOnly cookie expires 1h; session expiry проверяется сервером. Роли/ownership серверные. UI private state только в памяти, cache:'no-store'; offline writes не поддерживаются и не называются сохранёнными. Ошибка backend не создаёт local success. Подтверждённый logout удаляет server session, cookie и текущий UI; при ошибке UI очищается с предупреждением о неподтверждённом серверном выходе и retry; не очищает посторонние origin keys. Shared cookie в другой вкладке инвалидирует прежний CSRF; повторный вход нужен.
+
+Retentions: DEMO requests — прежняя политика 7d; saved synthetic cards до ручного удаления; PILOT_TEST ресурсы — до явного удаления/остановки теста. Приватное delete очищает JSON в основной записи; resource ID/owner/version/timestamps и audit metadata остаются. Hash идемпотентности и receipt ID/version остаются без текста. Deleted goal references в старых diary history не открывают удалённую цель. Нет автоматического production retention scheduler: live policy TO-VALIDATE.
+
+SQLite delete не доказывает физического стирания страниц, WAL или backup. Тестовые backups не создаются автоматически. Перед тестовой миграцией: остановить процесс и скопировать ВСЮ .pilot-test directory; restore — при остановленном сервере из того же снимка. Это runbook, не проверенная production backup-процедура. Production requires отдельно: retention сроки, очистка WAL/копий, шифрование, ключи, доступ, restore rehearsal, end-of-pilot purge. LIVE_BLOCKED.
+
+Публичный service worker: build allowlist только shell, hashed assets, manifest/icon/offline. /api/ — network only, никакого HTML fallback. /pilot navigation offline → отдельная non-private offline.html. Никакого cache.put runtime private data и sync queue. Старые caches удаляются только по собственному prefix qoldau-public-shell-. Saved cards содержат synthetic snapshot, не live family storage. Локальное шифрование не реализовано и не обещается.
+
+Автотест pilot создаёт отдельную test DB с именем e2e-UUID через PILOT_DB_NAME. Разрешены только безопасные basename символы; файл всегда под .pilot-test. Обычный npm run pilot использует pilot.sqlite. Browser-тесты не добавляют ресурсы в ручной тестовый стенд. После остановки ненужные e2e-*.sqlite/WAL/SHM можно удалить вручную.

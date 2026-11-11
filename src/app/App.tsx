@@ -1,7 +1,9 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { lazy, Suspense, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { BrowserRouter, Link, Route, Routes, useLocation } from 'react-router-dom';
 import type { Catalog as CatalogData } from '../domain/catalog';
 import { catalogRepository } from '../data/catalogRepository';
+import { SavedDemo } from '../features/pilot/SavedDemo';
+const Pilot = lazy(() => import('../features/pilot/Pilot').then(module => ({ default: module.Pilot })));
 import { Home } from '../features/Home';
 import { Intake } from '../features/intake/Intake';
 import { Review } from '../features/intake/Review';
@@ -59,6 +61,8 @@ function Layout() {
       {localeFailed && <p className="storage-warning" role="status">{t('localeUnavailable')}</p>}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/pilot" element={<Suspense fallback={<p role="status">{t('loading')}</p>}><Pilot /></Suspense>} />
+        <Route path="/saved" element={<SavedDemo />} />
         <Route path="/route" element={<Intake />} />
         <Route path="/route/review" element={<Review />} />
         <Route path="/specialists" element={<Catalog />} />
@@ -71,7 +75,7 @@ function Layout() {
         <Route path="*" element={<><PageTitle intro={t('notFoundHelp')}>{t('notFound')}</PageTitle><Link className="button primary" to="/">{t('home')}</Link></>} />
       </Routes>
     </main>
-    <footer className="site-footer"><span>Қолдау.Жол · {t('demo')}</span><nav aria-label={t('about')}><Link to="/about-demo">{t('about')}</Link><Link to="/privacy">{t('privacy')}</Link></nav></footer>
+    <footer className="site-footer"><span>Қолдау.Жол · {t('demo')}</span><nav aria-label={t('about')}><Link to="/about-demo">{t('about')}</Link><Link to="/privacy">{t('privacy')}</Link><Link to="/pilot">{locale === 'ru' ? 'Тестовый пилот' : 'Сынақ пилоты'}</Link></nav></footer>
     <FocusOnNavigation />
   </>;
 }

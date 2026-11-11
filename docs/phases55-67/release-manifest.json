@@ -1,0 +1,30 @@
+{
+  "release_id": "pilot55-67-b6be202efcb0",
+  "generated_at": "2026-11-10T23:59:55.693199+00:00",
+  "base_commit": "6f9619f69233fb3f876fc01afc592e31ff098933",
+  "mode": "DEMO + local PILOT_TEST; LIVE_BLOCKED",
+  "versions": {
+    "node": "24.22.1",
+    "react": "19.3.1",
+    "router": "7.18.5",
+    "zod": "4.6.7",
+    "vite": "7.3.7",
+    "vitest": "4.1.12",
+    "playwright": "1.65.0"
+  },
+  "dist_sha256": {
+    "dist/app-shell.json": "f03e545c949fc43e37c9c7343d251026f71a206b032b37d8dcc6e5713cf237e7",
+    "dist/assets/Pilot-Bz2fZaj8.js": "f698168455fe0a3406e15e9672d9fe1f65fe4fe2359b4222178e41900346698c",
+    "dist/assets/catalog-t5Rp5l5D.json": "a0168e77942c175a2ae63356171a8a324e891d64a6d42697081d4d1248bfc54d",
+    "dist/assets/index-C6jI2zcH.js": "0463ffaef63c3adc219359174f19af657857db58061fa922c05ac4ef8b930b2d",
+    "dist/assets/index-CXHUxB87.css": "4732625d33acb7dd0cf71e46456809301c0a281a5c0a0193e1a6e833dedd0b2c",
+    "dist/icon.svg": "81cc25ac47b46a4ce6512d5d90d7512df58b6c7b3dff96ba4bf889d5c5d6e6be",
+    "dist/index.html": "adead9edc262ba682fdb5a03e5efd02bc7217786eb1f16bed79848e565b56954",
+    "dist/manifest.webmanifest": "93e96dad25464d6894059c433dd1c45b894235b9f4965a8fe6e270d96c11583f",
+    "dist/offline.html": "95592a7a5340b9b18b767c37c5981b79161b7c2ee25fda55466c1341fe96f1fd",
+    "dist/sw.js": "0323e65e11c441d24152debaa59161e63c6081d409c7c8da6a86197821cb4117"
+  },
+  "deployment": "not published",
+  "production_database": "not changed",
+  "real_sends": 0
+}
