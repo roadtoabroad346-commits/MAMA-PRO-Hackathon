@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-11-11",
+  "environment": { "os": "Windows 10.0.26300", "node": "24.19.0", "npm": "11.17.0", "playwright": "1.65.0", "browser": "chromium_headless_shell-1248 (local cache; CDN install timed out)" },
+  "audited_commit": "97541389f11e0afe10d0a2aeefdbe470bd3a6eff",
+  "worktree": "%TEMP%/opencode/mama-pro-work (user snapshot untouched)",
+  "runs": [
+    { "command": "npm ci --no-audit --no-fund", "total": null, "passed": null, "failed": 0, "skipped": 0, "result": "PASS exit 0" },
+    { "command": "npm run typecheck", "result": "PASS exit 0", "duration": null },
+    { "command": "npm test (vitest run)", "total": 147, "passed": 147, "failed": 0, "skipped": 0, "duration": "4.31s", "files": 8 },
+    { "command": "npm run audit:phases", "result": "PASS", "output": "69 records, 29 recorded, 40 without verified delivery, 39 team-attested" },
+    { "command": "npm run build", "result": "PASS", "bundle": { "index_js_kb": 515.49, "index_js_gzip_kb": 153.18, "pilot_js_kb": 55.49, "catalog_json_kb": 53.46, "css_kb": 19.53 } },
+    { "command": "npx playwright test --config playwright.config.ts --workers=2", "total": 79, "passed": 79, "failed": 0, "skipped": 0, "duration": "1.3m", "note": "dev server (vite) on 5173" },
+    { "command": "npx playwright test --config playwright.release.config.ts --workers=2", "total": 18, "passed": 18, "failed": 0, "skipped": 0, "duration": "27.1s", "note": "production dist via scripts/serve-release.mjs" },
+    { "command": "npx playwright test --config playwright.pilot.win.config.ts", "total": 5, "passed": 5, "failed": 0, "skipped": 0, "duration": "27.7s", "note": "AUDIT-ONLY Windows variant of playwright.pilot.config.ts (same spec/assertions); real backend PILOT_TEST on 8787" },
+    { "command": "npx playwright test --config playwright.offline.win.config.ts", "total": 2, "passed": 2, "failed": 0, "skipped": 0, "duration": "8.0s", "note": "AUDIT-ONLY Windows variant of playwright.offline.config.ts; production dist on 5176" }
+  ],
+  "totals": { "unit": 147, "e2e": 104, "all_passed": 251, "skipped": 0, "not_run_declared": ["real screen readers", "real browser zoom", "physical devices", "npm audit/SCA"] },
+  "live_security_probes": {
+    "server": "PILOT_MODE=PILOT_TEST loopback 8787",
+    "results": [
+      { "probe": "anonymous /api/pilot/public", "status": 200, "ok": true },
+      { "probe": "state without cookie", "status": 401, "ok": true },
+      { "probe": "commands without session", "status": 401, "ok": true },
+      { "probe": "forged 64-hex token", "status": 401, "ok": true },
+      { "probe": "commands without X-Pilot-CSRF", "status": 403, "ok": true },
+      { "probe": "Origin https://evil.example", "status": 403, "ok": true },
+      { "probe": "Sec-Fetch-Site cross-site", "status": 403, "ok": true },
+      { "probe": "Content-Type text/plain", "status": 400, "ok": true },
+      { "probe": "20KB payload", "status": 413, "ok": true },
+      { "probe": "IDOR: PARENT_B summary.preview over PARENT_A goal", "status": 404, "ok": true },
+      { "probe": "IDOR: PARENT_B goal.edit foreign goal", "status": 404, "ok": true },
+      { "probe": "moderator previews parent diary", "status": 404, "ok": true },
+      { "probe": "B state exposes A diary/goals", "result": "0 items", "ok": true },
+      { "probe": "version conflict (version=99)", "status": 409, "ok": true },
+      { "probe": "idempotent replay same key+payload", "status": 200, "result": "same id/version, no duplicate", "ok": true },
+      { "probe": "idempotency conflict same key different payload", "status": 409, "ok": true },
+      { "probe": "role spoof parent->application.create", "status": 400, "ok": true }
+    ],
+    "live_gates": [
+      { "config": "PILOT_MODE=PILOT_LIVE", "result": "Fault LIVE_BLOCKED, exit 1, server not started" },
+      { "config": "PILOT_MODE=PILOT_TEST + NODE_ENV=production", "result": "Fault LIVE_BLOCKED, exit 1, server not started" }
+    ]
+  },
+  "benchmarks": {
+    "device": "Windows desktop Node (AMD Ryzen 5 5600H); not a physical mobile browser",
+    "matching_p50_p95_max_ms": { "offers_20": [1.589, 2.294, 3.197], "offers_100": [7.2, 12.096, 19.993], "offers_1000": [75.443, 107.441, 116.592] }
+  },
+  "screenshots": { "count": 17, "location": "audit-output audit-shots (temp worktree ../audit-shots)", "overflow_failures": 0, "js_errors": 0 }
+}
