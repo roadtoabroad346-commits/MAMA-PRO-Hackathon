@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "method": "ffprobe metadata + complete ffmpeg decode",
+  "files": [
+    {
+      "file": "docs/release/video/demo-A-ru.webm",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 430,
+            "height": 960
+          }
+        ],
+        "format": {
+          "duration": "12.760000"
+        }
+      }
+    },
+    {
+      "file": "docs/release/video/demo-A-kk.webm",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 430,
+            "height": 960
+          }
+        ],
+        "format": {
+          "duration": "12.680000"
+        }
+      }
+    }
+  ]
+}

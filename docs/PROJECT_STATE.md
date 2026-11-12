@@ -1,4 +1,66 @@
+# Текущее состояние: объединённая фаза 55–67
+
+Версия: локальный development 0.6.0 + pilot55–67, база origin/phases-28-35@6f9619f. Проверено фактическое восстановление из GitHub; в исходном локальном checkout не было коммитов. Результаты 36–55 отсутствуют, прежней карты/PWA/backend не было. Существующий CORE сохранён; фазы 68+ не выполнялись.
+
+Готово в ограниченном synthetic PILOT_TEST: Node24/SQLite schema и реальные HTTP sessions/role+owner checks; specialist application/assigned moderation/public projection/withdraw; atomic contact/idempotency/durable sandbox inbox/history; personal/confirmed calendar, version conflicts, in-app reminder jobs; offer change diff/subscriptions; next action; private goals/diary; scoped versioned assignments; exact selective summary/clipboard/download. CORE получил один SearchResult map-view с synthetic sourced coordinates и public PWA shell/explicit saved demo snapshots. Новые private API и состояние не попадают в public cache.
+
+Режимы: DEMO сохранён; PILOT_TEST — работающий локальный synthetic server, не mock local success. PILOT_LIVE **LIVE_BLOCKED / NO-GO**: нет реального оператора/правовых оснований/размещения/production identity/согласий/модератора/поддержки/backup restore/канала внешней доставки. Test-login физически отвергается production configuration. Real provider/callback/send/share links/recurrence/family invitations/AI/voice не включены.
+
+Проверено: npm run check — strict TS +147 PASS; build PASS; CORE browser79 PASS; production18 PASS; pilot5 PASS; offline/map2 PASS.
+
+Статус: READY WITH LIMITATIONS для указанного синтетического объёма. Подтверждения проверок и ограничения — [QA_RESULTS](QA_RESULTS.md), 72 AC — REQUIREMENTS_TRACEABILITY, отдельно каждая фаза — [HANDOVER_55_67](HANDOVER_55_67.md). Не заявлены: исследование родителя/специалиста, native KK review, screen-reader audit, реальные mobile install/background delivery и production security/backup проверки. Модель diary полей ASSUMPTION.
+
+Синхронизация GitHub: текущий код и документы 55–67 отправлены в ветку `phases-0-67`, коммит `a52ff18085f45caa0e2cdaa1743438a133449be5` от 11.11.2026. Публичный deployment приложения не выполнялся. Это не свидетельствует об отсутствии незакоммиченных изменений в другом рабочем окружении Codex. Dist воспроизводится npm run build; старые slides/videos/ZIP исторические. Следующий шаг — независимый review тестового пилота и закрытие конкретных live gates назначенными людьми. Автоматически фазу 68 не начинать.
+
+---
+
+## Исторический журнал — предыдущая база
+
+# Текущее состояние: фазы 28–35
+
+10.11.2026. Ветка `phases-28-35`, основа `phase-14-defense` (`b1f79f3`). Реализация и GitHub push прямо поручены пользователем. Предыдущие ограничения «только фаза0» — исторические.
+
+Готово: единый чистый offer evaluator, hard pass/fail/unknown, score/coverage по общему A, source-backed RU/KK reasons, versioned freshness/Clock, public pipeline/grouping/exact+incomplete counts. S01 переиспользован и проверяется; S02 имеет отдельный canonical intakeDraft, четыре шага и hard/preference; S03 считает тем же SearchService, редактирует без потерь, валидирует и атомарно применяет. Существующие каталог/профиль/сравнение/локальные requests сохранены.
+
+Правила: catalog-v2/rules-v2/freshness-v2, demoClock 14.11.2026 12:00+05. Район mixed активен, online-only неактивен; TTL equality stale; источник focusTags явно синтетический. Решения ADR-0012…0016 в DECISIONS. Контракты зафиксированы до кода в DOMAIN_CONTRACTS.
+
+Проверено: npm run check — TypeScript strict +117 тестов PASS; npm run build PASS; dev browser79 PASS; production release18 PASS; отдельный S01–S03 production smoke RU/KK PASS. Статус READY WITH LIMITATIONS. Полные команды/логи — QA_RESULTS. Не заявляются интервью/успешный тест родителя, экспертная KK-редактура, аудит screen reader и полевые performance-показатели. Нет новых реальных данных, внешних отправлений, аккаунтов, AI, PWA/карт/календаря. Фазы22–27 в репозитории отсутствовали: восстановлены минимальные необходимые контракты на основе имеющейся реализации6–14, без заявления о завершении отсутствующих фаз.
+
+Передача фазе36: [PHASES_28_35_HANDOFF.md](PHASES_28_35_HANDOFF.md). Полноценная новая выдача36+ этой задачей не начинается. Старый ZIP фазы13 остаётся историческим, актуальный dist создаётся npm run build.
+
+---
+
+Ниже — исторический журнал фазы0, он не описывает нынешнее наличие исходников.
+
 # Қолдау.Жол — состояние проекта
+
+> **Для следующей фазы:** [восстановить реализацию из GitHub](../START_NEXT_PHASE.md). Пустой checkout не означает отсутствия приложения. Актуальная ветка — `phase-14-defense`, зафиксированный результат — `ce529dbcfa4e25ea6e21e9e4d6246094ef8d6aac`. Исторические записи о пустом репозитории не описывают текущую реализацию.
+
+> Обновление 08.11.2026: выполнен [полный синтетический голосовой прогон](phase14/voice/README.md): видео/аудио 298 с, последняя реплика до 297,504 с. Это синтезированная речь со слайдами и записью фактического демо. Репетиция человека и исследование с родителем по-прежнему NOT RUN. Материалы фазы 14 сохраняются в GitHub в ветку `phase-14-defense`; приложение не изменено.
+
+> Фаза 14, 07.11.2026: подготовлены [защита, сценарий, Q&A и K1–K6](PITCH_AND_DEMO.md),
+> 7 слайдов [PPTX](phase14/DEFENSE_SLIDES.pptx) / [PDF](phase14/DEFENSE_SLIDES.pdf),
+> [протокол нового технического прогона](phase14/REHEARSAL_REPORT.md) и честный видеорезерв.
+> Основа `phase-13-demo-release` / `ec3bb2baec74f5f86066d50f9d354359f62a285a`;
+> продукт и dist не изменены. Автоматический A-прогон готового dist: **127,142 с из 140**,
+> без внешних отправок и page errors, тот же UUID после reload. Полная голосовая репетиция
+> выступающего — NOT RUN; исследование с родителем — NOT RUN; полная P0/live-приёмка — NO-GO.
+> Ветка передачи материалов — `phase-14-defense`; публикация приложения не выполнялась.
+
+> Фаза 13, 07.11.2026: подготовлен демонстрационный релиз `phase13-968e7ea9c5d3`
+> от `phase-12-qa` / `b9b806f4ab34c301af6357eb414988ae5fc2079f`.
+> Актуальная точка входа — [NEXT_PHASE_HANDOFF](NEXT_PHASE_HANDOFF.md),
+> протокол — [RELEASE_CHECKLIST](RELEASE_CHECKLIST.md), показ — [DEMO_RUNBOOK](DEMO_RUNBOOK.md).
+> Build, 76 unit/integration и 18 production browser tests подтверждены; локальный резерв
+> и реальные RU/KK-видео включены. Полная ручная приёмка P0/live остаётся NO-GO.
+> Следующие записи сохранены как история; их прежние ограничения на разработку
+> и описания пустого checkout не определяют текущее состояние.
+
+> 07.11.2026: по прямому запросу выполнена фаза 10 S08–S09 и локальное хранилище. Ветка `phase-10-demo-requests`, основа `phase-8-profile` / `a04572a`. Commit IndexedDB, idempotency/recovery, устойчивые отмены, TTL 7 дней и подтверждаемая очистка проверены. Текущий отчёт — [PHASE_10.md](PHASE_10.md). Нижеследующие статусы описывают предыдущие фазы.
+
+> 07.11.2026: реализована фаза 8 S06 от `phase-7-search` / `0d3a81f`, ветка `phase-8-profile`. Текущий отчёт — [PHASE_8.md](PHASE_8.md). Переключатель услуг, паспорт доверия и переход к резюме демозапроса работают; сохранение заявок S08–S09 ещё не реализовано. Нижеследующие записи сохранены как история.
+
+> Обновление 07.11.2026: по прямому запросу реализован срез фазы 6 S01–S03 с минимальной запускаемой основой и базовым каталогом. Текущее состояние и проверки — [PHASE_6.md](PHASE_6.md), запуск — [README](../README.md). Ниже сохранён исторический аудит фазы 0; формулировки «кода нет» описывают ту исходную точку.
 
 Дата аудита: 6 ноября 2026. Фаза 0: аудит и согласованный план. Статус: документация подготовлена; разработка не начата. Порядок чтения: этот файл → [решения](DECISIONS.md) → [план](IMPLEMENTATION_PLAN.md) → [прослеживаемость](REQUIREMENTS_TRACEABILITY.md).
 

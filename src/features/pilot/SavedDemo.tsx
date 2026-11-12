@@ -1,0 +1,20 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { z } from 'zod';
+import { useApp } from '../../app/AppState';
+import { translate } from '../../i18n/messages';
+import { priceText } from '../../i18n/price';
+import { PageTitle } from '../../ui/controls';
+const KEY='qoldau.saved-demo.v1';
+const snapshot=z.object({id:z.string(),specialistId:z.string(),title:z.object({ru:z.string(),kk:z.string()}),name:z.object({ru:z.string(),kk:z.string()}),price:z.number().nullable(),priceKind:z.string(),checkedAt:z.string().nullable(),savedAt:z.string(),isSynthetic:z.literal(true)});
+const snapshots=z.array(snapshot).max(20);
+type Snapshot=z.infer<typeof snapshot>;
+function read():Snapshot[]{const raw=localStorage.getItem(KEY);return raw?snapshots.parse(JSON.parse(raw)):[];}
+export function SaveDemo({offerId}:{offerId:string}){
+ const {catalog,locale}=useApp();const [notice,setNotice]=useState<'saved'|'failed'|null>(null);const s=(ru:string,kk:string)=>locale==='ru'?ru:kk;
+ return <section><button type="button" className="button secondary" onClick={()=>{try{const offer=catalog.offers.find(o=>o.id===offerId),specialist=catalog.specialists.find(v=>v.id===offer?.specialistId);if(!offer||!specialist)throw Error();const row:Snapshot={id:offer.id,specialistId:specialist.id,title:offer.title,name:specialist.displayName,price:offer.priceAmountKzt,priceKind:offer.priceKind,checkedAt:offer.priceConfirmedAt,savedAt:new Date().toISOString(),isSynthetic:true};const all=read().filter(r=>r.id!==offerId);localStorage.setItem(KEY,JSON.stringify(snapshots.parse([...all,row])));setNotice('saved');}catch{setNotice('failed');}}}>{s('Сохранить демокарточку офлайн','Демо карточканы офлайн сақтау')}</button>{notice && <p role="status">{notice==='saved'?s('Синтетическая карточка сохранена на устройстве.','Синтетикалық карточка құрылғыда сақталды.'):s('Сохранить не удалось. Проверьте доступ к хранилищу.','Сақтау мүмкін болмады. Сақтау орнына қолжетімділікті тексеріңіз.')}</p>}<Link to="/saved">{s('Сохранённые демокарточки','Сақталған демо карточкалар')}</Link></section>;
+}
+export function SavedDemo(){
+ const {locale}=useApp();const [result,setResult]=useState(()=>{try{return {rows:read(),failed:false};}catch{return {rows:[],failed:true};}});const s=(ru:string,kk:string)=>locale==='ru'?ru:kk;
+ return <div className="form-page"><PageTitle>{s('Сохранённые демокарточки','Сақталған демо карточкалар')}</PageTitle><p>{s('Это явно сохранённые синтетические копии. Дата сохранения не подтверждает актуальность. Условия не обновляются автоматически. Приватный пилот здесь не хранится.','Бұл арнайы сақталған синтетикалық көшірмелер. Сақтау күні өзектілікті растамайды. Шарттар автоматты жаңартылмайды. Құпия пилот мұнда сақталмайды.')}</p>{result.failed&&<p role="alert">{s('Не удалось прочитать хранилище.','Сақтау орнын оқу мүмкін болмады.')}</p>}{!result.rows.length&&<p>{s('Нет сохранённых карточек.','Сақталған карточкалар жоқ.')}</p>}{result.rows.map(row=><article className="pilot-card" key={row.id}><h2>{row.name[locale]}</h2><p>{row.title[locale]}</p><p>{priceText(row.priceKind,row.price,locale,(key,values)=>translate(locale,key,values))}</p><p>{s('Подтверждение цены','Бағаны растау')}: {row.checkedAt??s('Неизвестно','Белгісіз')}</p><p>{s('Сохранено на устройстве','Құрылғыда сақталды')}: {row.savedAt}</p><button className="button secondary" onClick={()=>{try{const rows=read().filter(r=>r.id!==row.id);localStorage.setItem(KEY,JSON.stringify(rows));setResult({rows,failed:false});}catch{setResult(old=>({...old,failed:true}));}}}>{s('Удалить копию','Көшірмені жою')}</button></article>)}<Link to="/specialists">{s('В каталог','Каталогқа')}</Link></div>;
+}

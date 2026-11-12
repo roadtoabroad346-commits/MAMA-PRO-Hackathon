@@ -1,0 +1,45 @@
+{
+  "releaseId": "phase13-968e7ea9c5d3",
+  "baseCommit": "b9b806f4ab34c301af6357eb414988ae5fc2079f",
+  "sourceSetSha256": "339b64d6259c94de17b3e0ab45bf44cd497c65353fbc1ff62a8e2c8cbfc521ba",
+  "buildSetSha256": "968e7ea9c5d3ba08153e8e15081df69bc82859a358c38b46304d4bfa69ace1d5",
+  "node": "v24.22.1",
+  "catalogVersion": "catalog-v1",
+  "rulesVersion": "rules-v1",
+  "demoClock": "2026-11-14T12:00:00+05:00",
+  "specialists": 12,
+  "offers": 20,
+  "scan": {
+    "status": "PASS",
+    "findings": [],
+    "envFiles": [],
+    "scope": "src, dist, package/lock, vite config, index; known credential signatures; no env files; dist dev markers/maps"
+  },
+  "runtimeVariability": [
+    "request/idempotency crypto.randomUUID()",
+    "request timestamps and TTL Date.now()",
+    "search session expiresAt Date.now()"
+  ],
+  "artifacts": [
+    {
+      "file": "dist/assets/catalog-DLBOUpd3.json",
+      "bytes": 49197,
+      "sha256": "2dd526680d3d769da8bdf0758c5f0922d3527fac215dca1305d1d0a29a476837"
+    },
+    {
+      "file": "dist/assets/index-DBPRRhfS.css",
+      "bytes": 17176,
+      "sha256": "f7faf879e996d86b96eded0bf0b0138e829f91da23e438385bbc25f85fc77243"
+    },
+    {
+      "file": "dist/assets/index-oSdPcSuz.js",
+      "bytes": 496542,
+      "sha256": "9253f9b4fce76d298ad0ed23c2303e3d0d8082ac18de17a5a447cd14546fe4b8"
+    },
+    {
+      "file": "dist/index.html",
+      "bytes": 617,
+      "sha256": "e71c4f22454932f7ed3f4788674d7b8a77e67ff6eabdd48c292061f6030864d9"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+
+> qoldau-zhol@0.6.0 test:e2e
+> playwright test tests/e2e/p0.spec.ts --workers=2
+
+
+Running 6 tests using 2 workers
+
+(node:4632) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4633) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 tests/e2e/p0.spec.ts:70:3 › ru P0 B: direct catalog → hard filters → compare → exact selection (3.2s)
+  ✓  1 tests/e2e/p0.spec.ts:20:3 › ru P0 A: guided route → review → profile → compare → request → durable status (4.8s)
+  ✓  3 tests/e2e/p0.spec.ts:91:3 › ru P0 C: no exact results → explicit budget reset → retry (2.8s)
+  ✓  4 tests/e2e/p0.spec.ts:20:3 › kk P0 A: guided route → review → profile → compare → request → durable status (3.6s)
+  ✓  5 tests/e2e/p0.spec.ts:70:3 › kk P0 B: direct catalog → hard filters → compare → exact selection (2.3s)
+  ✓  6 tests/e2e/p0.spec.ts:91:3 › kk P0 C: no exact results → explicit budget reset → retry (1.5s)
+
+  6 passed (12.2s)

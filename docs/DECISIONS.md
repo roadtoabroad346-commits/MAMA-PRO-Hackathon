@@ -1,5 +1,21 @@
 # Қолдау.Жол — решения и расхождения фазы 0
 
+## Действующие уточнения фаз 28–35 (10.11.2026)
+
+Ниже этого раздела сохранён исторический аудит. Новый прямой запрос разрешает реализацию и GitHub push; старые ограничения фаз 0/проектирования не блокируют эту работу. Основой выбрана самая поздняя доступная ветка `phase-14-defense`, поскольку origin/HEAD до сих пор указывает на историческую `phase-0-audit`.
+
+| ID | Решение | Источник / эффект |
+|---|---|---|
+| ADR-0012 | Заменить ADR-0005: район неактивен только при online+formatHard; mixed/any сохраняет общий вес, online m=0/known=0 | Объединённый промпт §7.7 явно требует общего request-level A для mixed. Hard district + подтверждённая online-услуга fail; неизвестные сведения unknown. A/B/C, где формат offline hard, не меняются |
+| ADR-0013 | freshness-v2: equality TTL означает stale, current при 0≤age<TTL; price30d/availability7d/contact30d/documents365d остаются PROPOSAL | Уточнение прежней включённой границы MATCH; соответствует обязательному примеру второго промпта. Profile/TrustPassport используют одну политику. updatedAt/savedAt не подтверждают факты |
+| ADR-0014 | Separate intakeDraft и applied, без новой SearchInput-модели; optional intakeDraft в existing synthetic session v1 | §16 промпта. Старый v1 читается, TTL2h сохраняется; новый catalog-v2 сбрасывает несовместимые старые snapshots. Невалидный raw budget остаётся в памяти, блокирует review CTA |
+| ADR-0015 | Добавить synthetic_curated_fixture источник существующих focusTags; catalog-v2/rules-v2 | В предыдущих данных tags были без fieldSources. Положительная причина требует факта и источника; это синтетическая аннотация, не реальная проверка. Значения/IDs/ручные ожидания не изменены |
+| ADR-0016 | Разделить dev и release browser suites по существующим конфигурациям | release.spec проверяет HTTP404/405 production-сервера, Vite dev даёт200 fallback. Он выполняется через check:release, не отключён. Полный dev suite сохраняет остальные регрессии |
+
+ТЗ §17.2 нормализует languages=[] в null; validator/evaluator сохраняют этот контракт (unknown). Известный непустой список без выбранного языка — fail. Это не новая несовместимая семантика пустого списка.
+
+Отдельных AGENTS.md, DOMAIN_CONTRACTS/APPLICATION_STATE/STATE_AND_STORAGE/ERROR_HANDLING/DESIGN_SYSTEM/SEARCH_NORMALIZATION и результатов фаз22–27 в исходной ветке не было. Эквиваленты прочитаны в исходниках, PHASE_6/7/8/10, DECISIONS, полном ТЗ и существующих тестах; новые DOMAIN_CONTRACTS/MATCHING_ENGINE_SPEC/UX_SPEC фиксируют актуальные границы. Отсутствующие фазы завершёнными не объявляются.
+
 Дата: 06.11.2026. Источники SRC-A/B/D и их статусы — в [PROJECT_STATE.md](PROJECT_STATE.md). Это локальные уточнения плана; исходные вложения не изменены. ADR-0001… не переименовывают ADR-01…ADR-10 внутри полного ТЗ. «Принято для плана» означает рабочее решение в разрешённом аудите, а не согласование с организатором или фондом.
 
 ## Решения
@@ -125,3 +141,13 @@ UI: `draft → submitting → recorded_demo`; определённый abort →
 | Q-07 | Организатор/команда: актуальное положение и уточнения, форма передачи прав, формат/срок загрузки, календарь передачи результатов? | Подтверждённую готовность к сдаче/передаче; P0-дизайн не блокирует | До финальной сдачи; правила подготовки — до разработки |
 
 Вопросы подготовлены для команды. Сообщения внешним адресатам не отправлялись. Не требуется выбор пользователя по несущественным UI-деталям, чтобы завершить фазу 0.
+
+
+## ADR-0017…0022 — объединённая 55–67, 10.11.2026
+
+17. VERIFIED baseline: восстановлен origin/phases-28-35@6f9619f; локальная unborn work была пустой. origin HEAD указывает на историческую phase-0-audit. Нет результатов 36–55, поэтому их готовность не утверждается.
+18. Выбран локальный Node24 + SQLite, один durable transaction path. Managed service не нужен для synthetic test и не считается разрешённым размещением реальных данных. Test identity только через явный loopback PILOT_TEST, production configuration fail-closed.
+19. Ограниченный onboarding: одна анкета/одна offer, несколько анкет у специалиста. Public edit скрывает версию до повторного review. Private previousPublic нужен для существенного diff, request snapshots immutable.
+20. Единственный канал — in-app inbox. Не выдаём scheduled/строку inbox за push/внешнюю доставку/прочтение. Callback и внешние providers не подключены. Стабильные SQLite jobs переживают restart.
+21. Summary — выборочный server preview и memory draft, clipboard/download с честными статусами. Share/send отсутствуют. Нет universal treatment/clinical auto-score. Live diary fields остаются неподтверждённой гипотезой.
+22. Минимальная схема карты CORE без сторонних tiles, только synthetic sourced coordinates и unknown accessibility. PWA впервые добавлена как public shell + explicitly saved demo snapshots; private API всегда network-only. CORE и PILOT_TEST namespaces разделены; live catalog adapter не заявлен.

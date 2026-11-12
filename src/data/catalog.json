@@ -1,0 +1,1505 @@
+{
+  "catalogVersion": "catalog-v2",
+  "rulesVersion": "rules-v2",
+  "isSynthetic": true,
+  "demoClock": "2026-11-14T12:00:00+05:00",
+  "categories": [
+    {
+      "id": "LOGOPED",
+      "label": {
+        "ru": "Логопед",
+        "kk": "Логопед"
+      }
+    },
+    {
+      "id": "DEFECTOLOG",
+      "label": {
+        "ru": "Дефектолог",
+        "kk": "Дефектолог"
+      }
+    },
+    {
+      "id": "PSYCHOLOG",
+      "label": {
+        "ru": "Психолог",
+        "kk": "Психолог"
+      }
+    }
+  ],
+  "specialists": [
+    {
+      "id": "S01",
+      "displayName": {
+        "ru": "Демо-специалист 01",
+        "kk": "Демо-маман 01"
+      },
+      "categoryIds": [
+        "LOGOPED"
+      ],
+      "bio": {
+        "ru": "Синтетический пример: сначала обсуждаем цель встречи, затем пробуем короткие игровые задания для речи. Темп и участие родителя согласуем перед занятием.",
+        "kk": "Синтетикалық мысал: алдымен кездесу мақсатын талқылаймыз, содан кейін сөйлеуге арналған қысқа ойын тапсырмаларын қолданып көреміз. Қарқын мен ата-ананың қатысуын сабақ алдында келісеміз."
+      },
+      "avatarAsset": null,
+      "verificationFacts": [
+        {
+          "scope": "education",
+          "status": "DOCUMENT_SEEN",
+          "evidenceSummary": {
+            "ru": "Синтетический пример просмотра документа",
+            "kk": "Құжатты қараудың синтетикалық үлгісі"
+          },
+          "checkedAt": "2026-11-13T12:00:00+05:00",
+          "reviewDueAt": "2027-11-13T12:00:00+05:00",
+          "checkedByRole": "demo_moderator",
+          "limitations": {
+            "ru": "Не подтверждает подлинность у источника и не гарантирует результат",
+            "kk": "Түпнұсқалығы дереккөзде расталмаған және нәтижеге кепілдік бермейді"
+          },
+          "isSynthetic": true,
+          "sourceLabel": {
+            "ru": "Синтетический документ об образовании",
+            "kk": "Білім туралы синтетикалық құжат"
+          }
+        }
+      ],
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "S02",
+      "displayName": {
+        "ru": "Демо-специалист 02",
+        "kk": "Демо-маман 02"
+      },
+      "categoryIds": [
+        "LOGOPED"
+      ],
+      "bio": {
+        "ru": "Синтетический пример: сначала обсуждаем цель встречи, затем пробуем короткие игровые задания для речи. Темп и участие родителя согласуем перед занятием.",
+        "kk": "Синтетикалық мысал: алдымен кездесу мақсатын талқылаймыз, содан кейін сөйлеуге арналған қысқа ойын тапсырмаларын қолданып көреміз. Қарқын мен ата-ананың қатысуын сабақ алдында келісеміз."
+      },
+      "avatarAsset": null,
+      "verificationFacts": [
+        {
+          "scope": "education",
+          "status": "DOCUMENT_SEEN",
+          "evidenceSummary": {
+            "ru": "Синтетический пример просмотра документа",
+            "kk": "Құжатты қараудың синтетикалық үлгісі"
+          },
+          "checkedAt": "2026-11-13T12:00:00+05:00",
+          "reviewDueAt": "2027-11-13T12:00:00+05:00",
+          "checkedByRole": "demo_moderator",
+          "limitations": {
+            "ru": "Не подтверждает подлинность у источника и не гарантирует результат",
+            "kk": "Түпнұсқалығы дереккөзде расталмаған және нәтижеге кепілдік бермейді"
+          },
+          "isSynthetic": true,
+          "sourceLabel": {
+            "ru": "Синтетический документ об образовании",
+            "kk": "Білім туралы синтетикалық құжат"
+          }
+        }
+      ],
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "S03",
+      "displayName": {
+        "ru": "Демо-специалист 03",
+        "kk": "Демо-маман 03"
+      },
+      "categoryIds": [
+        "LOGOPED"
+      ],
+      "bio": {
+        "ru": "Синтетический пример: сначала обсуждаем цель встречи, затем пробуем короткие игровые задания для речи. Темп и участие родителя согласуем перед занятием.",
+        "kk": "Синтетикалық мысал: алдымен кездесу мақсатын талқылаймыз, содан кейін сөйлеуге арналған қысқа ойын тапсырмаларын қолданып көреміз. Қарқын мен ата-ананың қатысуын сабақ алдында келісеміз."
+      },
+      "avatarAsset": null,
+      "verificationFacts": [
+        {
+          "scope": "education",
+          "status": "UNVERIFIED",
+          "evidenceSummary": {
+            "ru": "Документ об образовании не предоставлен для просмотра",
+            "kk": "Білім туралы құжат қарау үшін ұсынылмаған"
+          },
+          "checkedAt": null,
+          "reviewDueAt": null,
+          "checkedByRole": null,
+          "limitations": {
+            "ru": "Не подтверждает подлинность у источника и не гарантирует результат",
+            "kk": "Түпнұсқалығы дереккөзде расталмаған және нәтижеге кепілдік бермейді"
+          },
+          "isSynthetic": true,
+          "sourceLabel": null
+        }
+      ],
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "S04",
+      "displayName": {
+        "ru": "Демо-специалист 04",
+        "kk": "Демо-маман 04"
+      },
+      "categoryIds": [
+        "DEFECTOLOG"
+      ],
+      "bio": {
+        "ru": "Синтетический пример: разбираем учебную задачу на небольшие шаги, чередуем задания и паузы. Условия и участие родителя уточняем перед встречей.",
+        "kk": "Синтетикалық мысал: оқу тапсырмасын шағын қадамдарға бөліп, тапсырмалар мен үзілістерді кезектестіреміз. Шарттар мен ата-ананың қатысуын кездесу алдында нақтылаймыз."
+      },
+      "avatarAsset": null,
+      "verificationFacts": [],
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "S05",
+      "displayName": {
+        "ru": "Демо-специалист 05",
+        "kk": "Демо-маман 05"
+      },
+      "categoryIds": [
+        "PSYCHOLOG"
+      ],
+      "bio": {
+        "ru": "Синтетический пример: обсуждаем ситуацию и цели обращения без постановки диагноза. Формат беседы и участие родителя согласуем заранее.",
+        "kk": "Синтетикалық мысал: жағдай мен өтініш мақсатын диагноз қоймай талқылаймыз. Әңгімелесу форматы мен ата-ананың қатысуын алдын ала келісеміз."
+      },
+      "avatarAsset": null,
+      "verificationFacts": [],
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "S06",
+      "displayName": {
+        "ru": "Демо-специалист 06",
+        "kk": "Демо-маман 06"
+      },
+      "categoryIds": [
+        "LOGOPED"
+      ],
+      "bio": {
+        "ru": "Синтетический пример: сначала обсуждаем цель встречи, затем пробуем короткие игровые задания для речи. Темп и участие родителя согласуем перед занятием.",
+        "kk": "Синтетикалық мысал: алдымен кездесу мақсатын талқылаймыз, содан кейін сөйлеуге арналған қысқа ойын тапсырмаларын қолданып көреміз. Қарқын мен ата-ананың қатысуын сабақ алдында келісеміз."
+      },
+      "avatarAsset": null,
+      "verificationFacts": [],
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "S07",
+      "displayName": {
+        "ru": "Демо-специалист 07",
+        "kk": "Демо-маман 07"
+      },
+      "categoryIds": [
+        "DEFECTOLOG",
+        "LOGOPED"
+      ],
+      "bio": {
+        "ru": "Синтетический пример: перед встречей уточняем выбранную услугу, цель и удобный темп. Содержание и участие родителя согласуем отдельно для каждой услуги.",
+        "kk": "Синтетикалық мысал: кездесу алдында таңдалған қызметті, мақсат пен ыңғайлы қарқынды нақтылаймыз. Мазмұн мен ата-ананың қатысуын әр қызмет үшін бөлек келісеміз."
+      },
+      "avatarAsset": null,
+      "verificationFacts": [],
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "S08",
+      "displayName": {
+        "ru": "Демо-специалист 08",
+        "kk": "Демо-маман 08"
+      },
+      "categoryIds": [
+        "LOGOPED",
+        "PSYCHOLOG"
+      ],
+      "bio": {
+        "ru": "Синтетический пример: перед встречей уточняем выбранную услугу, цель и удобный темп. Содержание и участие родителя согласуем отдельно для каждой услуги.",
+        "kk": "Синтетикалық мысал: кездесу алдында таңдалған қызметті, мақсат пен ыңғайлы қарқынды нақтылаймыз. Мазмұн мен ата-ананың қатысуын әр қызмет үшін бөлек келісеміз."
+      },
+      "avatarAsset": null,
+      "verificationFacts": [],
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "S09",
+      "displayName": {
+        "ru": "Демо-специалист 09",
+        "kk": "Демо-маман 09"
+      },
+      "categoryIds": [
+        "DEFECTOLOG"
+      ],
+      "bio": {
+        "ru": "Синтетический пример: разбираем учебную задачу на небольшие шаги, чередуем задания и паузы. Условия и участие родителя уточняем перед встречей.",
+        "kk": "Синтетикалық мысал: оқу тапсырмасын шағын қадамдарға бөліп, тапсырмалар мен үзілістерді кезектестіреміз. Шарттар мен ата-ананың қатысуын кездесу алдында нақтылаймыз."
+      },
+      "avatarAsset": null,
+      "verificationFacts": [],
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "S10",
+      "displayName": {
+        "ru": "Демо-специалист 10",
+        "kk": "Демо-маман 10"
+      },
+      "categoryIds": [
+        "LOGOPED"
+      ],
+      "bio": {
+        "ru": "Синтетический пример: сначала обсуждаем цель встречи, затем пробуем короткие игровые задания для речи. Темп и участие родителя согласуем перед занятием.",
+        "kk": "Синтетикалық мысал: алдымен кездесу мақсатын талқылаймыз, содан кейін сөйлеуге арналған қысқа ойын тапсырмаларын қолданып көреміз. Қарқын мен ата-ананың қатысуын сабақ алдында келісеміз."
+      },
+      "avatarAsset": null,
+      "verificationFacts": [],
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "S11",
+      "displayName": {
+        "ru": "Демо-специалист 11",
+        "kk": "Демо-маман 11"
+      },
+      "categoryIds": [
+        "LOGOPED"
+      ],
+      "bio": {
+        "ru": "Синтетический пример: сначала обсуждаем цель встречи, затем пробуем короткие игровые задания для речи. Темп и участие родителя согласуем перед занятием.",
+        "kk": "Синтетикалық мысал: алдымен кездесу мақсатын талқылаймыз, содан кейін сөйлеуге арналған қысқа ойын тапсырмаларын қолданып көреміз. Қарқын мен ата-ананың қатысуын сабақ алдында келісеміз."
+      },
+      "avatarAsset": null,
+      "verificationFacts": [],
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "S12",
+      "displayName": {
+        "ru": "Демо-специалист 12",
+        "kk": "Демо-маман 12"
+      },
+      "categoryIds": [
+        "LOGOPED",
+        "PSYCHOLOG"
+      ],
+      "bio": {
+        "ru": "Синтетический пример: перед встречей уточняем выбранную услугу, цель и удобный темп. Содержание и участие родителя согласуем отдельно для каждой услуги.",
+        "kk": "Синтетикалық мысал: кездесу алдында таңдалған қызметті, мақсат пен ыңғайлы қарқынды нақтылаймыз. Мазмұн мен ата-ананың қатысуын әр қызмет үшін бөлек келісеміз."
+      },
+      "avatarAsset": null,
+      "verificationFacts": [],
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    }
+  ],
+  "offers": [
+    {
+      "id": "O01",
+      "specialistId": "S01",
+      "categoryId": "LOGOPED",
+      "title": {
+        "ru": "Индивидуальное занятие — демо",
+        "kk": "Жеке сабақ — демо"
+      },
+      "focusTags": [
+        "speech"
+      ],
+      "ageMinMonths": 36,
+      "ageMaxMonths": 119,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "format": "offline",
+      "districtId": "BOSTANDYK",
+      "priceKind": "exact",
+      "priceAmountKzt": 6000,
+      "durationMinutes": 45,
+      "unit": "individual_session",
+      "acceptingEnquiries": true,
+      "priceConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "availabilityConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "fieldSources": {
+        "ageRange": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "languages": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "format": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "districtId": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "price": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "availability": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        }
+      },
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "O02",
+      "specialistId": "S02",
+      "categoryId": "LOGOPED",
+      "title": {
+        "ru": "Индивидуальное занятие — демо",
+        "kk": "Жеке сабақ — демо"
+      },
+      "focusTags": [
+        "speech"
+      ],
+      "ageMinMonths": 36,
+      "ageMaxMonths": 119,
+      "languages": [
+        "kk"
+      ],
+      "format": "offline",
+      "districtId": "ALMALY",
+      "priceKind": "exact",
+      "priceAmountKzt": 7500,
+      "durationMinutes": 45,
+      "unit": "individual_session",
+      "acceptingEnquiries": true,
+      "priceConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "availabilityConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "fieldSources": {
+        "ageRange": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "languages": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "format": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "districtId": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "price": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "availability": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        }
+      },
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "O03",
+      "specialistId": "S03",
+      "categoryId": "LOGOPED",
+      "title": {
+        "ru": "Индивидуальное занятие — демо",
+        "kk": "Жеке сабақ — демо"
+      },
+      "focusTags": [
+        "speech"
+      ],
+      "ageMinMonths": 36,
+      "ageMaxMonths": 119,
+      "languages": [
+        "kk"
+      ],
+      "format": "offline",
+      "districtId": null,
+      "priceKind": "exact",
+      "priceAmountKzt": 5500,
+      "durationMinutes": 45,
+      "unit": "individual_session",
+      "acceptingEnquiries": null,
+      "priceConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "availabilityConfirmedAt": null,
+      "fieldSources": {
+        "ageRange": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "languages": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "format": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "districtId": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": null
+        },
+        "price": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "availability": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": null
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        }
+      },
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "O04",
+      "specialistId": "S04",
+      "categoryId": "DEFECTOLOG",
+      "title": {
+        "ru": "Индивидуальное занятие — демо",
+        "kk": "Жеке сабақ — демо"
+      },
+      "focusTags": [
+        "learning"
+      ],
+      "ageMinMonths": 36,
+      "ageMaxMonths": 119,
+      "languages": [
+        "ru"
+      ],
+      "format": "offline",
+      "districtId": "AUEZOV",
+      "priceKind": "exact",
+      "priceAmountKzt": 5000,
+      "durationMinutes": 45,
+      "unit": "individual_session",
+      "acceptingEnquiries": true,
+      "priceConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "availabilityConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "fieldSources": {
+        "ageRange": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "languages": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "format": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "districtId": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "price": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "availability": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        }
+      },
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "O05",
+      "specialistId": "S05",
+      "categoryId": "PSYCHOLOG",
+      "title": {
+        "ru": "Индивидуальное занятие — демо",
+        "kk": "Жеке сабақ — демо"
+      },
+      "focusTags": [
+        "interaction"
+      ],
+      "ageMinMonths": 72,
+      "ageMaxMonths": 179,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "format": "online",
+      "districtId": null,
+      "priceKind": "exact",
+      "priceAmountKzt": 7000,
+      "durationMinutes": 50,
+      "unit": "individual_session",
+      "acceptingEnquiries": true,
+      "priceConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "availabilityConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "fieldSources": {
+        "ageRange": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "languages": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "format": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "districtId": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": null
+        },
+        "price": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "availability": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        }
+      },
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "O06",
+      "specialistId": "S06",
+      "categoryId": "LOGOPED",
+      "title": {
+        "ru": "Индивидуальное занятие — демо",
+        "kk": "Жеке сабақ — демо"
+      },
+      "focusTags": [
+        "speech"
+      ],
+      "ageMinMonths": 72,
+      "ageMaxMonths": 119,
+      "languages": [
+        "kk"
+      ],
+      "format": "offline",
+      "districtId": "BOSTANDYK",
+      "priceKind": "exact",
+      "priceAmountKzt": 4000,
+      "durationMinutes": 30,
+      "unit": "individual_session",
+      "acceptingEnquiries": true,
+      "priceConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "availabilityConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "fieldSources": {
+        "ageRange": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "languages": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "format": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "districtId": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "price": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "availability": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        }
+      },
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "O07",
+      "specialistId": "S07",
+      "categoryId": "LOGOPED",
+      "title": {
+        "ru": "Индивидуальное занятие — демо",
+        "kk": "Жеке сабақ — демо"
+      },
+      "focusTags": [
+        "speech"
+      ],
+      "ageMinMonths": null,
+      "ageMaxMonths": null,
+      "languages": [
+        "kk"
+      ],
+      "format": "offline",
+      "districtId": "BOSTANDYK",
+      "priceKind": "exact",
+      "priceAmountKzt": 5000,
+      "durationMinutes": 45,
+      "unit": "individual_session",
+      "acceptingEnquiries": true,
+      "priceConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "availabilityConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "fieldSources": {
+        "ageRange": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": null
+        },
+        "languages": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "format": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "districtId": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "price": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "availability": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        }
+      },
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "O08",
+      "specialistId": "S08",
+      "categoryId": "LOGOPED",
+      "title": {
+        "ru": "Индивидуальное занятие — демо",
+        "kk": "Жеке сабақ — демо"
+      },
+      "focusTags": [
+        "speech"
+      ],
+      "ageMinMonths": 36,
+      "ageMaxMonths": 119,
+      "languages": null,
+      "format": "offline",
+      "districtId": "BOSTANDYK",
+      "priceKind": "exact",
+      "priceAmountKzt": 5000,
+      "durationMinutes": 45,
+      "unit": "individual_session",
+      "acceptingEnquiries": true,
+      "priceConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "availabilityConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "fieldSources": {
+        "ageRange": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "languages": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": null
+        },
+        "format": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "districtId": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "price": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "availability": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        }
+      },
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "O09",
+      "specialistId": "S09",
+      "categoryId": "DEFECTOLOG",
+      "title": {
+        "ru": "Индивидуальное занятие — демо",
+        "kk": "Жеке сабақ — демо"
+      },
+      "focusTags": [
+        "learning"
+      ],
+      "ageMinMonths": 36,
+      "ageMaxMonths": 119,
+      "languages": [
+        "kk"
+      ],
+      "format": "online",
+      "districtId": null,
+      "priceKind": "unknown",
+      "priceAmountKzt": null,
+      "durationMinutes": 45,
+      "unit": "individual_session",
+      "acceptingEnquiries": true,
+      "priceConfirmedAt": null,
+      "availabilityConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "fieldSources": {
+        "ageRange": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "languages": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "format": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "districtId": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": null
+        },
+        "price": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": null
+        },
+        "availability": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        }
+      },
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "O10",
+      "specialistId": "S10",
+      "categoryId": "LOGOPED",
+      "title": {
+        "ru": "Индивидуальное занятие — демо",
+        "kk": "Жеке сабақ — демо"
+      },
+      "focusTags": [
+        "speech"
+      ],
+      "ageMinMonths": 36,
+      "ageMaxMonths": 119,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "format": "offline",
+      "districtId": "MEDEU",
+      "priceKind": "from",
+      "priceAmountKzt": 4500,
+      "durationMinutes": 45,
+      "unit": "individual_session",
+      "acceptingEnquiries": true,
+      "priceConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "availabilityConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "fieldSources": {
+        "ageRange": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "languages": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "format": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "districtId": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "price": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "availability": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        }
+      },
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "O11",
+      "specialistId": "S11",
+      "categoryId": "LOGOPED",
+      "title": {
+        "ru": "Индивидуальное занятие — демо",
+        "kk": "Жеке сабақ — демо"
+      },
+      "focusTags": [
+        "speech"
+      ],
+      "ageMinMonths": 36,
+      "ageMaxMonths": 119,
+      "languages": [
+        "kk"
+      ],
+      "format": "offline",
+      "districtId": "BOSTANDYK",
+      "priceKind": "exact",
+      "priceAmountKzt": 6500,
+      "durationMinutes": 45,
+      "unit": "individual_session",
+      "acceptingEnquiries": false,
+      "priceConfirmedAt": "2026-09-01T12:00:00+05:00",
+      "availabilityConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "fieldSources": {
+        "ageRange": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "languages": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "format": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "districtId": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "price": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-09-01T12:00:00+05:00"
+        },
+        "availability": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        }
+      },
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "O12",
+      "specialistId": "S12",
+      "categoryId": "PSYCHOLOG",
+      "title": {
+        "ru": "Индивидуальное занятие — демо",
+        "kk": "Жеке сабақ — демо"
+      },
+      "focusTags": [
+        "interaction"
+      ],
+      "ageMinMonths": 120,
+      "ageMaxMonths": 215,
+      "languages": [
+        "ru"
+      ],
+      "format": "offline",
+      "districtId": "ALMALY",
+      "priceKind": "exact",
+      "priceAmountKzt": 8000,
+      "durationMinutes": 50,
+      "unit": "individual_session",
+      "acceptingEnquiries": true,
+      "priceConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "availabilityConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "fieldSources": {
+        "ageRange": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "languages": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "format": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "districtId": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "price": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "availability": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        }
+      },
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "O13",
+      "specialistId": "S04",
+      "categoryId": "DEFECTOLOG",
+      "title": {
+        "ru": "Индивидуальное занятие — демо",
+        "kk": "Жеке сабақ — демо"
+      },
+      "focusTags": [
+        "learning"
+      ],
+      "ageMinMonths": 72,
+      "ageMaxMonths": 119,
+      "languages": [
+        "ru"
+      ],
+      "format": "offline",
+      "districtId": "AUEZOV",
+      "priceKind": "exact",
+      "priceAmountKzt": 5200,
+      "durationMinutes": 45,
+      "unit": "individual_session",
+      "acceptingEnquiries": true,
+      "priceConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "availabilityConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "fieldSources": {
+        "ageRange": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "languages": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "format": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "districtId": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "price": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "availability": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        }
+      },
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "O14",
+      "specialistId": "S05",
+      "categoryId": "PSYCHOLOG",
+      "title": {
+        "ru": "Индивидуальное занятие — демо",
+        "kk": "Жеке сабақ — демо"
+      },
+      "focusTags": [
+        "interaction"
+      ],
+      "ageMinMonths": 120,
+      "ageMaxMonths": 179,
+      "languages": [
+        "kk"
+      ],
+      "format": "online",
+      "districtId": null,
+      "priceKind": "exact",
+      "priceAmountKzt": 7200,
+      "durationMinutes": 50,
+      "unit": "individual_session",
+      "acceptingEnquiries": true,
+      "priceConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "availabilityConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "fieldSources": {
+        "ageRange": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "languages": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "format": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "districtId": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": null
+        },
+        "price": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "availability": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        }
+      },
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "O15",
+      "specialistId": "S06",
+      "categoryId": "LOGOPED",
+      "title": {
+        "ru": "Индивидуальное занятие — демо",
+        "kk": "Жеке сабақ — демо"
+      },
+      "focusTags": [
+        "speech"
+      ],
+      "ageMinMonths": 72,
+      "ageMaxMonths": 179,
+      "languages": [
+        "ru"
+      ],
+      "format": "online",
+      "districtId": null,
+      "priceKind": "exact",
+      "priceAmountKzt": 4300,
+      "durationMinutes": 30,
+      "unit": "individual_session",
+      "acceptingEnquiries": true,
+      "priceConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "availabilityConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "fieldSources": {
+        "ageRange": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "languages": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "format": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "districtId": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": null
+        },
+        "price": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "availability": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        }
+      },
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "O16",
+      "specialistId": "S07",
+      "categoryId": "DEFECTOLOG",
+      "title": {
+        "ru": "Индивидуальное занятие — демо",
+        "kk": "Жеке сабақ — демо"
+      },
+      "focusTags": [
+        "learning"
+      ],
+      "ageMinMonths": 36,
+      "ageMaxMonths": 119,
+      "languages": [
+        "ru"
+      ],
+      "format": "offline",
+      "districtId": "ALMALY",
+      "priceKind": "exact",
+      "priceAmountKzt": 4800,
+      "durationMinutes": 45,
+      "unit": "individual_session",
+      "acceptingEnquiries": false,
+      "priceConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "availabilityConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "fieldSources": {
+        "ageRange": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "languages": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "format": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "districtId": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "price": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "availability": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        }
+      },
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "O17",
+      "specialistId": "S08",
+      "categoryId": "PSYCHOLOG",
+      "title": {
+        "ru": "Индивидуальное занятие — демо",
+        "kk": "Жеке сабақ — демо"
+      },
+      "focusTags": [
+        "interaction"
+      ],
+      "ageMinMonths": 72,
+      "ageMaxMonths": 179,
+      "languages": [
+        "ru"
+      ],
+      "format": "offline",
+      "districtId": "MEDEU",
+      "priceKind": "exact",
+      "priceAmountKzt": 6800,
+      "durationMinutes": 50,
+      "unit": "individual_session",
+      "acceptingEnquiries": true,
+      "priceConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "availabilityConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "fieldSources": {
+        "ageRange": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "languages": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "format": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "districtId": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "price": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "availability": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        }
+      },
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "O18",
+      "specialistId": "S09",
+      "categoryId": "DEFECTOLOG",
+      "title": {
+        "ru": "Индивидуальное занятие — демо",
+        "kk": "Жеке сабақ — демо"
+      },
+      "focusTags": [
+        "learning"
+      ],
+      "ageMinMonths": 120,
+      "ageMaxMonths": 215,
+      "languages": [
+        "kk"
+      ],
+      "format": "online",
+      "districtId": null,
+      "priceKind": "exact",
+      "priceAmountKzt": 5400,
+      "durationMinutes": 45,
+      "unit": "individual_session",
+      "acceptingEnquiries": true,
+      "priceConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "availabilityConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "fieldSources": {
+        "ageRange": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "languages": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "format": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "districtId": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": null
+        },
+        "price": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "availability": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        }
+      },
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "O23",
+      "specialistId": "S12",
+      "categoryId": "LOGOPED",
+      "title": {
+        "ru": "Индивидуальное занятие — демо",
+        "kk": "Жеке сабақ — демо"
+      },
+      "focusTags": [
+        "speech"
+      ],
+      "ageMinMonths": 36,
+      "ageMaxMonths": 119,
+      "languages": [
+        "ru"
+      ],
+      "format": "offline",
+      "districtId": "BOSTANDYK",
+      "priceKind": "exact",
+      "priceAmountKzt": 4500,
+      "durationMinutes": 45,
+      "unit": "individual_session",
+      "acceptingEnquiries": true,
+      "priceConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "availabilityConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "fieldSources": {
+        "ageRange": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "languages": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "format": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "districtId": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "price": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "availability": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        }
+      },
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    },
+    {
+      "id": "O24",
+      "specialistId": "S12",
+      "categoryId": "LOGOPED",
+      "title": {
+        "ru": "Индивидуальное занятие — демо",
+        "kk": "Жеке сабақ — демо"
+      },
+      "focusTags": [
+        "speech"
+      ],
+      "ageMinMonths": 36,
+      "ageMaxMonths": 119,
+      "languages": [
+        "kk"
+      ],
+      "format": "online",
+      "districtId": null,
+      "priceKind": "exact",
+      "priceAmountKzt": 9500,
+      "durationMinutes": 45,
+      "unit": "individual_session",
+      "acceptingEnquiries": true,
+      "priceConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "availabilityConfirmedAt": "2026-11-13T12:00:00+05:00",
+      "fieldSources": {
+        "ageRange": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "languages": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "format": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "districtId": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": null
+        },
+        "price": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "availability": {
+          "sourceKind": "synthetic_self_reported",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        },
+        "focusTags": {
+          "sourceKind": "synthetic_curated_fixture",
+          "checkedAt": "2026-11-13T12:00:00+05:00"
+        }
+      },
+      "publicationStatus": "published",
+      "isSynthetic": true,
+      "updatedAt": "2026-11-13T12:00:00+05:00"
+    }
+  ]
+}

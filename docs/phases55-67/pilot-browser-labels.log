@@ -1,0 +1,108 @@
+[WebServer] (node:11547) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:11568) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:11586) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/pilot-e2e/pilot.spec.ts:7:1 › synthetic specialist → assigned moderation → contact → confirmed calendar → private summary and task (45.4s)
+(node:11753) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/pilot-e2e/pilot.spec.ts:25:1 › server failure keeps fields, no false local success, locale and 320px reflow (3.2s)
+(node:11924) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/pilot-e2e/pilot.spec.ts:31:1 › lost acknowledgement after server commit retries the original operation once (2.6s)
+
+
+  1) tests/pilot-e2e/pilot.spec.ts:7:1 › synthetic specialist → assigned moderation → contact → confirmed calendar → private summary and task 
+
+    Test timeout of 45000ms exceeded.
+
+    Error: locator.click: Test timeout of 45000ms exceeded.
+    Call log:
+      - waiting for locator('form').filter({ has: getByLabel('Наблюдение', { exact: true }) }).getByRole('button', { name: 'Сохранить на сервере', exact: true })
+
+
+      16 |  await card.locator('summary').filter({hasText:'Подтвердить встречу с этим временем'}).click();await card.getByRole('button',{name:'Подтвердить встречу с этим временем',exact:true}).click();
+      17 |  await login(page,'PARENT_A');await tab(page,'Календарь');await expect(page.getByText('Из подтверждённого обращения',{exact:false})).toBeVisible();await tab(page,'Цели и наблюдения');
+    > 18 |  await page.locator('summary').filter({hasText:'Добавить наблюдение'}).click();let diaryForm=page.locator('form').filter({has:page.getByLabel('Наблюдение',{exact:true})});await diaryForm.getByLabel('Наблюдение',{exact:true}).fill('Выбранная запись <img src=x onerror=alert(1)>');await diaryForm.getByRole('button',{name:'Сохранить на сервере',exact:true}).click();await diaryForm.getByLabel('Наблюдение',{exact:true}).fill('Скрытая запись');await diaryForm.getByRole('button',{name:'Сохранить на сервере',exact:true}).click();await expect(page.locator('article').filter({hasText:'Выбранная запись'})).toBeVisible();expect(await page.locator('img[src="x"]').count()).toBe(0);
+         |                                                                                                                                                                                                                                                                                                                                                                     ^
+      19 |  await tab(page,'Резюме');expect(await page.locator('input[type=checkbox]:checked').count()).toBe(0);await page.getByLabel('Получатель',{exact:true}).fill('Тестовый специалист A');await page.getByLabel(/Выбранная запись/).check();await page.getByRole('button',{name:'Подготовить предпросмотр',exact:true}).click();await expect(page.getByLabel('Текст резюме — можно редактировать')).toHaveValue(/Выбранная запись/);await expect(page.getByLabel('Текст резюме — можно редактировать')).not.toHaveValue(/Скрытая запись/);
+      20 |  await page.getByRole('button',{name:'Қаз',exact:true}).click();await expect(page.getByRole('heading',{name:'Түйіндеме',exact:true})).toBeVisible();await expect(page.getByLabel('Түйіндеме мәтіні — өңдеуге болады')).toHaveValue(/Выбранная запись/);await page.screenshot({path:'docs/phases55-67/pilot-kk-mobile.png',fullPage:true});await page.getByRole('button',{name:'Рус',exact:true}).click();
+      21 |  await login(page,'PARENT_B');await tab(page,'Цели и наблюдения');await expect(page.getByText('Выбранная запись',{exact:false})).toHaveCount(0);
+        at /workspace/MAMA-PRO-Hackathon/tests/pilot-e2e/pilot.spec.ts:18:357
+
+    Error Context: work/phases55-67/pilot/pilot-synthetic-specialist-5e843--→-private-summary-and-task/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    work/phases55-67/pilot/pilot-synthetic-specialist-5e843--→-private-summary-and-task/trace.zip
+    Usage:
+
+        npx playwright show-trace work/phases55-67/pilot/pilot-synthetic-specialist-5e843--→-private-summary-and-task/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/pilot-e2e/pilot.spec.ts:25:1 › server failure keeps fields, no false local success, locale and 320px reflow 
+
+    Error: locator.fill: Error: strict mode violation: locator('form').filter({ has: getByLabel('Цель для обсуждения') }).getByLabel('Цель для обсуждения') resolved to 2 elements:
+        1) <textarea rows="4" required="" maxlength="1000"></textarea> aka getByRole('textbox', { name: 'Цель для обсуждения' })
+        2) <select>…</select> aka getByLabel('Цель для обсужденияБез связи с целью')
+
+    Call log:
+      - waiting for locator('form').filter({ has: getByLabel('Цель для обсуждения') }).getByLabel('Цель для обсуждения')
+
+
+      24 | });
+      25 | test('server failure keeps fields, no false local success, locale and 320px reflow',async({page})=>{
+    > 26 |  await page.goto('/pilot');await login(page,'PARENT_A');await tab(page,'Цели и наблюдения');await page.locator('summary').filter({hasText:'Добавить цель'}).click();const form=page.locator('form').filter({has:page.getByLabel('Цель для обсуждения')});await form.getByLabel('Цель для обсуждения').fill('Не потерять текст');await page.route('**/api/pilot/commands',r=>r.fulfill({status:503,contentType:'application/json',body:'{"error":"SERVER_ERROR"}'}));await form.getByRole('button',{name:'Сохранить на сервере',exact:true}).click();await expect(page.getByRole('alert')).toContainText('Локального сохранения нет');await expect(form.getByLabel('Цель для обсуждения')).toHaveValue('Не потерять текст');await expect(page.getByText('Сохранено тестовым сервером.',{exact:false})).toHaveCount(0);await page.unroute('**/api/pilot/commands');await page.getByRole('button',{name:'Повторить с тем же ключом',exact:true}).click();await expect(page.locator('article').filter({hasText:'Не потерять текст'})).toHaveCount(1);
+         |                                                                                                                                                                                                                                                                                                       ^
+      27 |  for(const width of [320,360,390,430,1280]){await page.setViewportSize({width,height:900});await page.getByRole('button',{name:'Қаз',exact:true}).click();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);await page.getByRole('button',{name:'Рус',exact:true}).click();}
+      28 |  await page.screenshot({path:'docs/phases55-67/pilot-ru-desktop.png',fullPage:true});
+      29 | });
+        at /workspace/MAMA-PRO-Hackathon/tests/pilot-e2e/pilot.spec.ts:26:295
+
+    Error Context: work/phases55-67/pilot/pilot-server-failure-keeps-b581d-ess-locale-and-320px-reflow/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    work/phases55-67/pilot/pilot-server-failure-keeps-b581d-ess-locale-and-320px-reflow/trace.zip
+    Usage:
+
+        npx playwright show-trace work/phases55-67/pilot/pilot-server-failure-keeps-b581d-ess-locale-and-320px-reflow/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/pilot-e2e/pilot.spec.ts:31:1 › lost acknowledgement after server commit retries the original operation once 
+
+    Error: locator.fill: Error: strict mode violation: locator('form').filter({ has: getByLabel('Цель для обсуждения') }).getByLabel('Цель для обсуждения') resolved to 2 elements:
+        1) <textarea rows="4" required="" maxlength="1000"></textarea> aka getByRole('textbox', { name: 'Цель для обсуждения' })
+        2) <select>…</select> aka getByLabel('Цель для обсужденияБез связи с целью')
+
+    Call log:
+      - waiting for locator('form').filter({ has: getByLabel('Цель для обсуждения') }).getByLabel('Цель для обсуждения')
+
+
+      30 |
+      31 | test('lost acknowledgement after server commit retries the original operation once',async({page})=>{
+    > 32 |  await page.goto('/pilot');await login(page,'PARENT_A');await tab(page,'Цели и наблюдения');await page.locator('summary').filter({hasText:'Добавить цель'}).click();const form=page.locator('form').filter({has:page.getByLabel('Цель для обсуждения')});const text=`Commit then timeout ${Date.now()}`;await form.getByLabel('Цель для обсуждения').fill(text);
+         |                                                                                                                                                                                                                                                                                                                                                      ^
+      33 |  await page.route('**/api/pilot/commands',async route=>{await route.fetch();await route.abort('failed');},{times:1});await form.getByRole('button',{name:'Сохранить на сервере',exact:true}).click();await expect(page.getByRole('alert')).toContainText('Локального сохранения нет');await page.getByRole('button',{name:'Повторить с тем же ключом',exact:true}).click();await expect(page.locator('article').filter({hasText:text})).toHaveCount(1);
+      34 | });
+      35 |
+        at /workspace/MAMA-PRO-Hackathon/tests/pilot-e2e/pilot.spec.ts:32:342
+
+    Error Context: work/phases55-67/pilot/pilot-lost-acknowledgement-80f31-the-original-operation-once/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    work/phases55-67/pilot/pilot-lost-acknowledgement-80f31-the-original-operation-once/trace.zip
+    Usage:
+
+        npx playwright show-trace work/phases55-67/pilot/pilot-lost-acknowledgement-80f31-the-original-operation-once/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    tests/pilot-e2e/pilot.spec.ts:7:1 › synthetic specialist → assigned moderation → contact → confirmed calendar → private summary and task 
+    tests/pilot-e2e/pilot.spec.ts:25:1 › server failure keeps fields, no false local success, locale and 320px reflow 
+    tests/pilot-e2e/pilot.spec.ts:31:1 › lost acknowledgement after server commit retries the original operation once 

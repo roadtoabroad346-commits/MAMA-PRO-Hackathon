@@ -1,0 +1,78 @@
+[
+  {
+    "screen": "home",
+    "target": "span[aria-hidden=\"true\"]",
+    "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+    "styles": {
+      "text": " →",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "ancestors": [
+        {
+          "tag": "A",
+          "cls": "button primary",
+          "bg": "rgb(23, 107, 98)"
+        },
+        {
+          "tag": "DIV",
+          "cls": "home-actions",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "tag": "DIV",
+          "cls": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "tag": "SECTION",
+          "cls": "hero",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "tag": "MAIN",
+          "cls": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ]
+    }
+  },
+  {
+    "screen": "cancel-dialog",
+    "target": "dialog > p",
+    "summary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements",
+    "styles": {
+      "text": "Изменится только статус на этом устройстве. Специалист не получит уведомление.",
+      "color": "rgb(32, 52, 49)",
+      "background": "rgba(0, 0, 0, 0)",
+      "fontSize": "16px",
+      "ancestors": [
+        {
+          "tag": "DIALOG",
+          "cls": "modal ",
+          "bg": "rgb(255, 255, 255)"
+        },
+        {
+          "tag": "DIV",
+          "cls": "review-page request-status",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "tag": "MAIN",
+          "cls": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "tag": "DIV",
+          "cls": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "tag": "BODY",
+          "cls": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ]
+    }
+  }
+]

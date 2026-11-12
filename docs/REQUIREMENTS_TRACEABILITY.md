@@ -1,4 +1,141 @@
+# Прослеживаемость 55–67
+
+Объём: ограниченный synthetic PILOT_TEST + CORE/PWA. PASS относится только к указанному механизму/режиму, не к live launch. NOT RUN не считается завершённой внешней приёмкой. Фактические команды/результаты: QA_RESULTS.
+
+| AC | Требование | Реализация | Проверка | Статус / граница |
+|---|---|---|---|---|
+| AC-55-67-001 | Повторная фаза 55 не создаёт вторую карту/выдачу. | src/domain/map.ts; ResultMap.tsx | map unit + offline.spec map denial | PASS  |
+| AC-55-67-002 | Карта сохраняет offerId, источники и списочную альтернативу. | src/domain/map.ts; ResultMap.tsx | map unit + offline.spec map denial | PASS  |
+| AC-55-67-003 | Отказ геолокации не блокирует ручной поиск. | src/domain/map.ts; ResultMap.tsx | map unit + offline.spec map denial | PASS  |
+| AC-55-67-004 | Readiness register отделяет техническую готовность и live-основания. | LIVE_READINESS; server/http.ts:testOnly | production gate / live mode tests | PASS  |
+| AC-55-67-005 | Реальные чувствительные данные заблокированы при незакрытых соответствующих основаниях. | LIVE_READINESS; server/http.ts:testOnly | production gate / live mode tests | PASS  |
+| AC-55-67-006 | Тестовый identity bypass недоступен production-конфигурации. | LIVE_READINESS; server/http.ts:testOnly | production gate / live mode tests | PASS  |
+| AC-55-67-007 | Владелец и роли берутся из доверенного identity, не из payload. | server/http.ts; service.ts | HTTP/role/owner/diary negative tests | PASS  |
+| AC-55-67-008 | Guest видит только public projection. | server/http.ts; service.ts | HTTP/role/owner/diary negative tests | PASS  |
+| AC-55-67-009 | Parent A не читает и не изменяет resources B. | server/http.ts; service.ts | HTTP/role/owner/diary negative tests | PASS  |
+| AC-55-67-010 | Specialist не назначает себе verified. | server/http.ts; service.ts | HTTP/role/owner/diary negative tests | PASS  |
+| AC-55-67-011 | Moderator не получает ненужный семейный дневник. | server/http.ts; service.ts | HTTP/role/owner/diary negative tests | PASS  |
+| AC-55-67-012 | Опубликованы только разрешённые профили/offers. | contracts.ts; service.ts:application/publicOffers | onboarding/review/withdraw/stale tests; browser lifecycle | PASS  |
+| AC-55-67-013 | Новые записи unverified по умолчанию. | contracts.ts; service.ts:application/publicOffers | onboarding/review/withdraw/stale tests; browser lifecycle | PASS  |
+| AC-55-67-014 | Onboarding consent и moderation decision различаются. | contracts.ts; service.ts:application/publicOffers | onboarding/review/withdraw/stale tests; browser lifecycle | PASS  |
+| AC-55-67-015 | Withdraw отражается в public/search/favorites. | contracts.ts; service.ts:application/publicOffers | onboarding/review/withdraw/stale tests; browser lifecycle | PASS  |
+| AC-55-67-016 | Evidence и служебные заметки не публичны. | contracts.ts; service.ts:application/publicOffers | onboarding/review/withdraw/stale tests; browser lifecycle | PASS  |
+| AC-55-67-017 | Trust scope/source/date/limitation достоверны. | contracts.ts; service.ts:application/publicOffers | onboarding/review/withdraw/stale tests; browser lifecycle | PASS  |
+| AC-55-67-018 | Нет автоматической гарантии подлинности и результата. | contracts.ts; service.ts:application/publicOffers | onboarding/review/withdraw/stale tests; browser lifecycle | PASS  |
+| AC-55-67-019 | Contact показывает получателя, цель и состав до передачи. | Contacts.tsx; service.ts:contact | browser payload/confirmation; contact lifecycle tests | PASS  |
+| AC-55-67-020 | Payload минимален и не содержит весь intake/diary автоматически. | Contacts.tsx; service.ts:contact | browser payload/confirmation; contact lifecycle tests | PASS  |
+| AC-55-67-021 | External click не считается delivery. | Contacts.tsx; service.ts:contact | browser payload/confirmation; contact lifecycle tests | PASS  |
+| AC-55-67-022 | Server commit не считается appointment. | Contacts.tsx; service.ts:contact | browser payload/confirmation; contact lifecycle tests | PASS  |
+| AC-55-67-023 | Same key/payload возвращает прежний request. | operations PK; service.run; Pilot.tsx | restart/same-key/conflict; lost acknowledgement browser | PASS  |
+| AC-55-67-024 | Same key/different payload даёт conflict. | operations PK; service.run; Pilot.tsx | restart/same-key/conflict; lost acknowledgement browser | PASS  |
+| AC-55-67-025 | Timeout не создаёт повтор с новым ключом автоматически. | operations PK; service.run; Pilot.tsx | restart/same-key/conflict; lost acknowledgement browser | PASS  |
+| AC-55-67-026 | Delivery доказательства и callback replay проверены. | strict command; no callback route | client provider.callback rejection | PASS Sandbox inbox only; external signed receipt integration NOT RUN/не подключена. |
+| AC-55-67-027 | Backend failure не переключается на ложный local success. | contact state machine/history | cancel/late job/revoke/delete; server failure browser | PASS  |
+| AC-55-67-028 | Tracker имеет допустимые переходы и actor/source. | contact state machine/history | cancel/late job/revoke/delete; server failure browser | PASS  |
+| AC-55-67-029 | Ручная договорённость не выдана за независимое подтверждение. | contact state machine/history | cancel/late job/revoke/delete; server failure browser | PASS  |
+| AC-55-67-030 | Поздний callback не откатывает новое состояние молча. | contact state machine/history | cancel/late job/revoke/delete; server failure browser | PASS  |
+| AC-55-67-031 | Отмена, удаление и отзыв согласия различаются. | contact state machine/history | cancel/late job/revoke/delete; server failure browser | PASS  |
+| AC-55-67-032 | Calendar различает manual/confirmed. | calendar source/version/timing | confirmed/manual/restart/retry/conflict/year/leap/DST tests; keyboard browser | PASS  |
+| AC-55-67-033 | Demo request не создаёт настоящую встречу. | calendar source/version/timing | confirmed/manual/restart/retry/conflict/year/leap/DST tests; keyboard browser | PASS  |
+| AC-55-67-034 | Source event идемпотентен и не дублируется. | calendar source/version/timing | confirmed/manual/restart/retry/conflict/year/leap/DST tests; keyboard browser | PASS  |
+| AC-55-67-035 | Зона и границы времени проверены. | calendar source/version/timing | confirmed/manual/restart/retry/conflict/year/leap/DST tests; keyboard browser | PASS  |
+| AC-55-67-036 | Старое редактирование не затирает новую версию молча. | calendar source/version/timing | confirmed/manual/restart/retry/conflict/year/leap/DST tests; keyboard browser | PASS  |
+| AC-55-67-037 | Один выбранный reminder channel имеет фактическую матрицу поддержки. | CALENDAR_AND_REMINDERS; Calendar.tsx | in-app channel browser; opt-in integration | PASS OS Notification permission не используется; реальные платформы и внешняя доставка NOT RUN. |
+| AC-55-67-038 | Permission denied не ломает календарь. | CALENDAR_AND_REMINDERS; Calendar.tsx | in-app channel browser; opt-in integration | PASS OS Notification permission не используется; реальные платформы и внешняя доставка NOT RUN. |
+| AC-55-67-039 | Event edit/cancel инвалидирует старое напоминание. | service.ts:schedule/pump; jobs/inbox unique | revision invalidation/disable/restart/expired/dedup tests | PASS  |
+| AC-55-67-040 | Job retry/dedup и поздняя доставка обрабатываются явно. | service.ts:schedule/pump; jobs/inbox unique | revision invalidation/disable/restart/expired/dedup tests | PASS  |
+| AC-55-67-041 | Scheduled/accepted/delivered не смешиваются. | service.ts:schedule/pump; jobs/inbox unique | revision invalidation/disable/restart/expired/dedup tests | PASS  |
+| AC-55-67-042 | Lock-screen текст минимален и не раскрывает ребёнка. | inbox neutral kind/ref only | private-safe inbox DTO; no lock-screen provider | PASS Lock-screen канал не реализован; на экран блокировки ничего не отправляется. |
+| AC-55-67-043 | Подписка на offer change явная и отключаемая. | subscription.set; notifyChanges; SavedDemo | timestamp no-op/dedup/unsubscribe/withdraw; offline snapshot browser | PASS  |
+| AC-55-67-044 | Косметический timestamp не порождает существенное событие. | subscription.set; notifyChanges; SavedDemo | timestamp no-op/dedup/unsubscribe/withdraw; offline snapshot browser | PASS  |
+| AC-55-67-045 | Одно изменение не спамит повторно. | subscription.set; notifyChanges; SavedDemo | timestamp no-op/dedup/unsubscribe/withdraw; offline snapshot browser | PASS  |
+| AC-55-67-046 | Offline snapshot не объявляется обновлённым до sync. | subscription.set; notifyChanges; SavedDemo | timestamp no-op/dedup/unsubscribe/withdraw; offline snapshot browser | PASS  |
+| AC-55-67-047 | NextAction связан с реальным состоянием. | service.next; NextAction.tsx | next marker isolation/no duplicate tests | PASS  |
+| AC-55-67-048 | Manual completion не меняет реальную запись без доказательства. | service.next; NextAction.tsx | next marker isolation/no duplicate tests | PASS  |
+| AC-55-67-049 | Нет рейтинга детей, наказаний и процентов выздоровления. | service.next; NextAction.tsx | next marker isolation/no duplicate tests | PASS  |
+| AC-55-67-050 | Diary поля минимальны, их необходимость имеет статус проверки. | GOALS_DIARY_ASSIGNMENTS; LIVE_READINESS | parent + specialist field necessity interview | NOT RUN ASSUMPTION; synthetic workflow implemented. Live diary blocked. |
+| AC-55-67-051 | Diary приватен, ownership проверен вне UI. | private resources; audit; operations | A/B/moderator/specialist denied; scrub/no audit content; stale edit tests | PASS  |
+| AC-55-67-052 | Доступ specialist к дневнику не появляется из одной заявки автоматически. | private resources; audit; operations | A/B/moderator/specialist denied; scrub/no audit content; stale edit tests | PASS  |
+| AC-55-67-053 | Diary edit/delete/conflict имеют предсказуемое поведение. | private resources; audit; operations | A/B/moderator/specialist denied; scrub/no audit content; stale edit tests | PASS  |
+| AC-55-67-054 | Audit не сохраняет ненужные копии удалённого чувствительного текста. | private resources; audit; operations | A/B/moderator/specialist denied; scrub/no audit content; stale edit tests | PASS  |
+| AC-55-67-055 | Assignment создаёт уполномоченный автор для разрешённого recipient. | scopes; assignment instructionVersion | author/recipient/foreign/scope revoke/revision/unable/question tests; browser task | PASS  |
+| AC-55-67-056 | Версии задания и ответов связаны корректно. | scopes; assignment instructionVersion | author/recipient/foreign/scope revoke/revision/unable/question tests; browser task | PASS  |
+| AC-55-67-057 | Unable/question не наказываются и доступны. | scopes; assignment instructionVersion | author/recipient/foreign/scope revoke/revision/unable/question tests; browser task | PASS  |
+| AC-55-67-058 | Выполнение не превращается в диагноз/доказанный медицинский прогресс. | scopes; assignment instructionVersion | author/recipient/foreign/scope revoke/revision/unable/question tests; browser task | PASS  |
+| AC-55-67-059 | Summary по умолчанию не включает все приватные записи. | summary.preview; Summary component | default empty/exact selection; real clipboard, denied clipboard, download browser | PASS  |
+| AC-55-67-060 | Preview содержит ровно выбранное и показывает получателя перед отправкой. | summary.preview; Summary component | default empty/exact selection; real clipboard, denied clipboard, download browser | PASS  |
+| AC-55-67-061 | Copy/download/send имеют разные статусы и ошибки. | summary.preview; Summary component | default empty/exact selection; real clipboard, denied clipboard, download browser | PASS  |
+| AC-55-67-062 | Защищённая ссылка при реализации проверяет права, срок и отзыв. | SUMMARY_AND_EXPORT; no share route | scoped expiring/revocable link security tests | NOT RUN Защищённые ссылки не входят в выбранный минимальный экспорт; функция отсутствует. |
+| AC-55-67-063 | Отзыв не обещает вернуть внешнюю скачанную копию. | SUMMARY_AND_EXPORT; summary UI disclosure | browser copy/download; code review | PASS Отзыв внешних копий не обещается. |
+| AC-55-67-064 | Приватные API не попадают в прежний public cache. | public/sw.js; namespaces; mode guard | production offline cache inspection; testOnly; separate stores | PASS  |
+| AC-55-67-065 | Demo/live/test namespaces и конфигурация разделены. | public/sw.js; namespaces; mode guard | production offline cache inspection; testOnly; separate stores | PASS  |
+| AC-55-67-066 | Все новые системные тексты доступны RU/KK. | pilot/messages.ts; ResultMap; SavedDemo | RU/KK browser smoke; paired dictionary review | PASS Носитель и полноценная лингвистическая приёмка NOT RUN. |
+| AC-55-67-067 | Calendar и формы доступны клавиатурой и на телефоне. | native fields, semantic agenda, responsive CSS | pilot keyboard + 320px text200; CORE reflow and keyboard suites | PASS  |
+| AC-55-67-068 | Нет действующих секретов и PII в URL/логах/публичном bundle. | no-store API; minimal payload; no secrets configured | static secret scan + browser/cache/HTTP review | PASS Нет формального external security audit. Искусственные тексты допустимы только в test. |
+| AC-55-67-069 | Миграции проверены на тестовых данных и не применены самовольно к production. | server/migrations/001_pilot.sql | SQLite rerun/preservation/FK integration test | PASS Production DB не применялась; production backup restore NOT RUN. |
+| AC-55-67-070 | Регрессия CORE/PWA выполнена либо явно блокирует заявленную готовность. | CORE + new public shell | 79 dev browser tests; production release + offline suites | PASS  |
+| AC-55-67-071 | Sandbox, mocks и live не выданы за одно и то же. | LIVE_READINESS; start guard; HANDOVER | code/config review + mode tests | PASS Никаких production изменений, внешних отправок, фаз 68+. |
+| AC-55-67-072 | Фазы 68+ и реальные внешние действия не начаты автоматически. | LIVE_READINESS; start guard; HANDOVER | code/config review + mode tests | PASS Никаких production изменений, внешних отправок, фаз 68+. |
+
+---
+
+## Предыдущие фазы — историческая трассировка
+
+# Фазы 28–35: актуальная матрица
+
+Источник: docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt. Статусы ниже относятся к проверяемому срезу, не к полному MVP. Runtime-доказательства отдельно от документального review; журналы и ограничения — QA_RESULTS.md.
+
+| AC-28-35 | Условие | Реализация | Проверка | Статус |
+|---|---|---|---|---|
+|AC-28-35-001|Hard pass/fail/unknown|matching.ts / ConstraintCheck|matching.test.ts: mandatory language/format; p0.test.ts: age/budget|PASS|
+|AC-28-35-002|Fail не exact/incomplete|evaluateOffer eligibility|p0.test.ts hard fail + unknown; matching.test.ts same-offer|PASS|
+|AC-28-35-003|Unknown hard не exact|hardChecks → eligibility|p0.test.ts partial/null; search.test.ts incomplete|PASS|
+|AC-28-35-004|Same-offer|matching.ts + SearchService|matching.test.ts A/B synthetic regression; search.test.ts O23/O24|PASS|
+|AC-28-35-005|Возрастные границы|AGE_RANGES; matching.ts age|p0.test.ts все пять групп, endpoints/partial/disjoint|PASS|
+|AC-28-35-006|Budget null≠0|contracts.ts parseBudget|domain.test.ts; p0.test.ts zero/free; intake.spec.ts|PASS|
+|AC-28-35-007|From не конечная цена|matching.ts budget|matching.test.ts from4500/7000; p0.test.ts|PASS|
+|AC-28-35-008|Stale не hard pass|freshness.ts + budget|matching.test.ts recent copy; p0.test.ts TTL|PASS|
+|AC-28-35-009|Общий A|applicableFactors|matching.test.ts mixed format/district denominator|PASS|
+|AC-28-35-010|Unknown не снижает знаменатель|ranking.denominator|matching.test.ts removing positive facts; p0.test.ts reference85|PASS|
+|AC-28-35-011|Known false≠unknown|ranking.known|matching.test.ts availability false/null; empty tags|PASS|
+|AC-28-35-012|Пустой A null/null|SearchService mode/ranking|domain.test.ts neutral12/20|PASS|
+|AC-28-35-013|100/85/82.5|matching + manifest A|p0.test.ts isolated reference; domain.test.ts A|PASS|
+|AC-28-35-014|Best eligible offer|SearchService group/compare|matching.test.ts ties/budget better offer; search.test.ts price|PASS|
+|AC-28-35-015|Stable permutation|SearchService compare|matching.test.ts reversal and invariants|PASS|
+|AC-28-35-016|Hidden/withdrawn|publicCatalog|matching.test.ts hidden/withdrawn; p0-errors/profile e2e|PASS|
+|AC-28-35-017|Fact reasons same offer|MatchReason + templates|matching.test.ts evidence/kind/no fact; profile.spec.ts switching offer|PASS|
+|AC-28-35-018|Clock/policy|freshness.ts/profile.ts|matching.test.ts per-TTL/invalid/future/injected Clock|PASS|
+|AC-28-35-019|Locale invariant|locale вне SearchInput|intake/profile/p0 e2e RU/KK preserve conditions/IDs|PASS|
+|AC-28-35-020|S01 два входа|Home.tsx|intake.spec.ts direct path/guide; p0-keyboard.spec.ts|PASS|
+|AC-28-35-021|Без регистрации|Home/App routes|intake.spec.ts complete flow without account|PASS|
+|AC-28-35-022|S02 четыре шага/skip/Back/errors|Intake.tsx|intake.spec.ts; phases28-35.spec.ts|PASS|
+|AC-28-35-023|Не уверен → null|intakeDraft.needTag|phases28-35.spec.ts unsure; intake.spec.ts skip|PASS|
+|AC-28-35-024|Не URL/логи|AppState/session + local repository|intake.spec.ts URL/history/requests; phases28-35.spec.ts logs/URLs|PASS|
+|AC-28-35-025|UI language отдельно|AppState.locale / serviceLanguage|intake.spec.ts mid-step locale/back; profile.spec.ts|PASS|
+|AC-28-35-026|S03 canonical summary|Review.tsx appliedInputSummary|intake.spec.ts complete SearchInput and seven dl pairs|PASS|
+|AC-28-35-027|Preview тот же SearchService|Review.tsx/service.search|intake.spec.ts count equals catalog; phases28-35 draft apply|PASS|
+|AC-28-35-028|Ошибка≠0|App repository states|p0-errors.spec.ts; phases28-35.spec.ts load failure/retry|PASS|
+|AC-28-35-029|Edit сохраняет остальное|updateDraft + step state|intake.spec.ts edit budget/locale/back; phases28-35 invalid Back|PASS|
+|AC-28-35-030|CTA atomic applied input|applyIntake|phases28-35.spec.ts draft/applied/reload; intake.spec.ts catalog count|PASS|
+|AC-28-35-031|RU/KK templates/errors|messages/searchMessages|domain.test.ts key/placeholder parity; matching.test.ts reason templates; intake e2e KK|PASS|
+|AC-28-35-032|Keyboard/mobile|controls/styles/route focus|intake/p0-keyboard/p0-reflow/phases28-35 e2e:360/390/430,200%,reduce|PASS|
+|AC-28-35-033|Existing modules preserved|SearchService compatible DTO|profile/search/requests/p0 e2e + check:release|PASS|
+|AC-28-35-034|Фактические статусы|QA_RESULTS + logs|docs/phases28-35/check.log, build.log, e2e.log, release.log|PASS|
+|AC-28-35-035|Фаза36+ не объявлена|PHASES_28_35_HANDOFF|Документальный self-audit границ; не runtime-test|PASS|
+
+---
+
+Историческая матрица предыдущих фаз сохранена ниже.
+
 # Қолдау.Жол — прослеживаемость требований
+
+> Фаза 12 (07.11.2026): фактическое сопоставление реализации, P0-пути ru/kk, отрицательные случаи, исправления и версия проверки приведены в [QA_RESULTS.md](QA_RESULTS.md). Исторические D/A/G ниже не являются текущим вердиктом. A/B/C подтверждены в мобильном Chromium; полное закрытие P0 — NO-GO до обязательных ручных AT/zoom/device-проверок. NOT RUN не считается успешным результатом.
+
+> Фаза 8: FR-012/S06 и FR-013 реализованы и проверены: выбор опубликованной услуги, синхронные условия/reasons/unknowns, четыре раздела паспорта с источниками, датами и ограничениями, нейтральные deep links, hidden/not found, RU/KK и keyboard. Точная пара specialist/offer передаётся в резюме `/request/:offerId`. Полное сохранение S08–S09 и полная приёмка S07 остаются отдельной работой. Доказательства — [PHASE_8.md](PHASE_8.md); таблицы фазы 0 ниже исторические.
+
+> Фаза 7: S04–S05, поиск/нормализация, draft/apply/cancel/reset, карточки и причины, сортировки, отдельный incomplete, доступный диалог и возврат из профиля реализованы; доказательства — [PHASE_7.md](PHASE_7.md). Для FR-012/014 добавлен только необходимый каталогу просмотр выбранных услуг и сравнения, без заявления о завершении всех S06–S09. Исторические статусы таблиц фазы 0 ниже не переименованы в общую готовность P0.
+
+> Обновление 07.11.2026: реализованы S01–S03; FR-001–004 и относящиеся к этому срезу RU/KK, keyboard, storage, null/budget и privacy проверки подтверждены в [PHASE_6.md](PHASE_6.md). Часть matching реализована как необходимая основа общего счётчика. Таблицы ниже сохранены как исторический план фазы 0, а не текущая оценка готовности всего P0.
 
 Дата: 06.11.2026. Источник ID/AC/TEST — полное ТЗ SRC-A §19/21/22; локальные уточнения — [DECISIONS.md](DECISIONS.md), задачи W — [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md). Число в `TEST-xxx` — ссылка на запланированную проверку ТЗ, а не существующий файл теста.
 

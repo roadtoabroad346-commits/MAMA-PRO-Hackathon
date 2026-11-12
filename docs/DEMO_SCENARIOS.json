@@ -1,0 +1,100 @@
+{
+  "catalogVersion": "catalog-v2",
+  "rulesVersion": "rules-v2",
+  "demoClock": "2026-11-14T12:00:00+05:00",
+  "scenarios": {
+    "A": {
+      "input": {
+        "needTag": "speech",
+        "categoryIds": [],
+        "ageGroup": "AGE_3_5",
+        "serviceLanguage": "kk",
+        "languageHard": true,
+        "format": "offline",
+        "formatHard": true,
+        "budgetKzt": 6000,
+        "budgetHard": false,
+        "districtId": "BOSTANDYK",
+        "districtHard": false,
+        "availabilityPreferred": true,
+        "query": "",
+        "sort": "relevant"
+      },
+      "expectedExact": [
+        "O01",
+        "O03",
+        "O02",
+        "O11",
+        "O10"
+      ],
+      "expectedIncomplete": [
+        "O07",
+        "O08"
+      ],
+      "compare": [
+        "S01/O01",
+        "S03/O03"
+      ],
+      "final": "Save S03/O03 → recorded_demo; reload same generated request ID"
+    },
+    "B": {
+      "input": {
+        "needTag": null,
+        "categoryIds": [
+          "LOGOPED"
+        ],
+        "ageGroup": null,
+        "serviceLanguage": "kk",
+        "languageHard": true,
+        "format": "offline",
+        "formatHard": true,
+        "budgetKzt": 6000,
+        "budgetHard": true,
+        "districtId": null,
+        "districtHard": false,
+        "availabilityPreferred": false,
+        "query": "",
+        "sort": "relevant"
+      },
+      "expectedExact": [
+        "O01",
+        "O03",
+        "O06",
+        "O07"
+      ],
+      "expectedIncomplete": [
+        "O08",
+        "O10",
+        "O11"
+      ],
+      "compare": [
+        "S01/O01",
+        "S03/O03"
+      ],
+      "final": "Select S01/O01 → /request/O01; acknowledgement unchecked; do not claim real booking"
+    },
+    "C": {
+      "input": {
+        "needTag": null,
+        "categoryIds": [],
+        "ageGroup": null,
+        "serviceLanguage": "kk",
+        "languageHard": true,
+        "format": "offline",
+        "formatHard": true,
+        "budgetKzt": 1000,
+        "budgetHard": true,
+        "districtId": null,
+        "districtHard": false,
+        "availabilityPreferred": false,
+        "query": "",
+        "sort": "relevant"
+      },
+      "expectedExact": [],
+      "expectedIncomplete": [
+        "O11"
+      ],
+      "final": "Explicitly clear budget only and Apply; keep kk/offline hard"
+    }
+  }
+}

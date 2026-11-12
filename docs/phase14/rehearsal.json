@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-07T14:54:05.730066+00:00",
+  "method": "Paced automated operator rehearsal; not a parent test or spoken human rehearsal",
+  "viewport": [
+    390,
+    844
+  ],
+  "buildSetSha256": "968e7ea9c5d3ba08153e8e15081df69bc82859a358c38b46304d4bfa69ace1d5",
+  "milestones": [
+    {
+      "name": "entry",
+      "elapsed": 7.043,
+      "url": "http://127.0.0.1:5173/route"
+    },
+    {
+      "name": "review",
+      "elapsed": 32.208,
+      "url": "http://127.0.0.1:5173/route/review"
+    },
+    {
+      "name": "results",
+      "elapsed": 45.106,
+      "url": "http://127.0.0.1:5173/specialists"
+    },
+    {
+      "name": "unknown separated",
+      "elapsed": 57.04,
+      "url": "http://127.0.0.1:5173/specialists"
+    },
+    {
+      "name": "trust",
+      "elapsed": 70.162,
+      "url": "http://127.0.0.1:5173/specialists/S01?offer=O01"
+    },
+    {
+      "name": "education source scope limitation",
+      "elapsed": 77.058,
+      "url": "http://127.0.0.1:5173/specialists/S01?offer=O01"
+    },
+    {
+      "name": "compare",
+      "elapsed": 95.166,
+      "url": "http://127.0.0.1:5173/compare"
+    },
+    {
+      "name": "second comparison offer visible",
+      "elapsed": 102.055,
+      "url": "http://127.0.0.1:5173/compare"
+    },
+    {
+      "name": "chosen S03/O03",
+      "elapsed": 112.07,
+      "url": "http://127.0.0.1:5173/request/O03"
+    },
+    {
+      "name": "committed",
+      "elapsed": 120.162,
+      "url": "http://127.0.0.1:5173/request-status/3a1c1cf0-6289-44e6-a8ba-3e33eeae2f8a"
+    },
+    {
+      "name": "durable status",
+      "elapsed": 127.142,
+      "url": "http://127.0.0.1:5173/request-status/3a1c1cf0-6289-44e6-a8ba-3e33eeae2f8a"
+    }
+  ],
+  "errors": [],
+  "sends": [],
+  "browser": "156.0.8078.79",
+  "offersA": [
+    "O01",
+    "O03",
+    "O02",
+    "O11",
+    "O10"
+  ],
+  "incompleteA": [
+    "O07",
+    "O08"
+  ],
+  "demoSeconds": 127.142,
+  "demoReserveSeconds": 12.858,
+  "requestId": "3a1c1cf0-6289-44e6-a8ba-3e33eeae2f8a",
+  "status": "PASS"
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "locale": "ru",
+    "viewport": "390x844",
+    "reloadSameId": true,
+    "persisted": 1,
+    "pair": [
+      "S01",
+      "O01"
+    ],
+    "status": "cancelled_demo",
+    "sends": [],
+    "errors": []
+  },
+  {
+    "locale": "kk",
+    "viewport": "390x844",
+    "reloadSameId": true,
+    "persisted": 1,
+    "pair": [
+      "S01",
+      "O01"
+    ],
+    "status": "cancelled_demo",
+    "sends": [],
+    "errors": []
+  }
+]

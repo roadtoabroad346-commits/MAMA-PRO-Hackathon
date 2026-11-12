@@ -1,0 +1,17 @@
+
+> qoldau-zhol@0.6.0 test:e2e
+> playwright test tests/e2e/p0-errors.spec.ts --workers=2
+
+
+Running 4 tests using 2 workers
+
+(node:10937) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:10938) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/p0-errors.spec.ts:5:3 › ru: catalog error and Retry keep document language (3.6s)
+  ✓  2 tests/e2e/p0-errors.spec.ts:23:3 › ru: hidden offer IDs are never selectable in profile or request (3.5s)
+  ✓  3 tests/e2e/p0-errors.spec.ts:5:3 › kk: catalog error and Retry keep document language (3.0s)
+  ✓  4 tests/e2e/p0-errors.spec.ts:23:3 › kk: hidden offer IDs are never selectable in profile or request (2.6s)
+
+  4 passed (9.1s)

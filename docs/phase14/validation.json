@@ -1,0 +1,236 @@
+{
+  "checkedAt": "2026-11-07T20:00:31.043659+05:00",
+  "baseCommit": "ec3bb2baec74f5f86066d50f9d354359f62a285a",
+  "productChanged": false,
+  "hashes": {
+    "build": "PASS",
+    "source": "PASS"
+  },
+  "slideCount": 7,
+  "pdfTextSelectable": true,
+  "pptxEditableTextAndSpeakerNotes": true,
+  "pptxShapeBounds": "PASS",
+  "qaSource": "Historical phase12/13 logs, not rerun in phase14",
+  "newTimedBrowserRehearsal": {
+    "date": "2026-11-07T14:54:05.730066+00:00",
+    "method": "Paced automated operator rehearsal; not a parent test or spoken human rehearsal",
+    "viewport": [
+      390,
+      844
+    ],
+    "buildSetSha256": "968e7ea9c5d3ba08153e8e15081df69bc82859a358c38b46304d4bfa69ace1d5",
+    "milestones": [
+      {
+        "name": "entry",
+        "elapsed": 7.043,
+        "url": "http://127.0.0.1:5173/route"
+      },
+      {
+        "name": "review",
+        "elapsed": 32.208,
+        "url": "http://127.0.0.1:5173/route/review"
+      },
+      {
+        "name": "results",
+        "elapsed": 45.106,
+        "url": "http://127.0.0.1:5173/specialists"
+      },
+      {
+        "name": "unknown separated",
+        "elapsed": 57.04,
+        "url": "http://127.0.0.1:5173/specialists"
+      },
+      {
+        "name": "trust",
+        "elapsed": 70.162,
+        "url": "http://127.0.0.1:5173/specialists/S01?offer=O01"
+      },
+      {
+        "name": "education source scope limitation",
+        "elapsed": 77.058,
+        "url": "http://127.0.0.1:5173/specialists/S01?offer=O01"
+      },
+      {
+        "name": "compare",
+        "elapsed": 95.166,
+        "url": "http://127.0.0.1:5173/compare"
+      },
+      {
+        "name": "second comparison offer visible",
+        "elapsed": 102.055,
+        "url": "http://127.0.0.1:5173/compare"
+      },
+      {
+        "name": "chosen S03/O03",
+        "elapsed": 112.07,
+        "url": "http://127.0.0.1:5173/request/O03"
+      },
+      {
+        "name": "committed",
+        "elapsed": 120.162,
+        "url": "http://127.0.0.1:5173/request-status/3a1c1cf0-6289-44e6-a8ba-3e33eeae2f8a"
+      },
+      {
+        "name": "durable status",
+        "elapsed": 127.142,
+        "url": "http://127.0.0.1:5173/request-status/3a1c1cf0-6289-44e6-a8ba-3e33eeae2f8a"
+      }
+    ],
+    "errors": [],
+    "sends": [],
+    "browser": "156.0.8078.79",
+    "offersA": [
+      "O01",
+      "O03",
+      "O02",
+      "O11",
+      "O10"
+    ],
+    "incompleteA": [
+      "O07",
+      "O08"
+    ],
+    "demoSeconds": 127.142,
+    "demoReserveSeconds": 12.858,
+    "requestId": "3a1c1cf0-6289-44e6-a8ba-3e33eeae2f8a",
+    "status": "PASS"
+  },
+  "slotsSeconds": [
+    35,
+    20,
+    140,
+    35,
+    35,
+    25,
+    10
+  ],
+  "totalBudgetSeconds": 300,
+  "budgetKzt": [
+    100000,
+    45000,
+    35000,
+    40000,
+    15000,
+    20000,
+    45000
+  ],
+  "totalKzt": 300000,
+  "questions": 20,
+  "criteriaWeights": [
+    20,
+    20,
+    15,
+    20,
+    15,
+    10
+  ],
+  "claims": 20,
+  "speakerTextEstimates": [
+    {
+      "section": "0:00–0:35 — проблема, слайд 1",
+      "words": 56,
+      "budgetSeconds": 35,
+      "estimateAt110WordsPerMinute": 30.55,
+      "estimateOnly": true
+    },
+    {
+      "section": "0:35–0:55 — идея, слайд 2",
+      "words": 31,
+      "budgetSeconds": 20,
+      "estimateAt110WordsPerMinute": 16.91,
+      "estimateOnly": true
+    },
+    {
+      "section": "3:15–3:50 — доверие и реализуемость, слайд 4",
+      "words": 56,
+      "budgetSeconds": 35,
+      "estimateAt110WordsPerMinute": 30.55,
+      "estimateOnly": true
+    },
+    {
+      "section": "3:50–4:25 — проверка и социальный эффект, слайд 5",
+      "words": 60,
+      "budgetSeconds": 35,
+      "estimateAt110WordsPerMinute": 32.73,
+      "estimateOnly": true
+    },
+    {
+      "section": "4:25–4:50 — доработка и команда, слайд 6",
+      "words": 43,
+      "budgetSeconds": 25,
+      "estimateAt110WordsPerMinute": 23.45,
+      "estimateOnly": true
+    },
+    {
+      "section": "4:50–5:00 — завершение, слайд 7",
+      "words": 14,
+      "budgetSeconds": 10,
+      "estimateAt110WordsPerMinute": 7.64,
+      "estimateOnly": true
+    }
+  ],
+  "humanSpokenFullRehearsal": "NOT RUN",
+  "parentResearch": "NOT RUN",
+  "fallbackMedia": {
+    "demo-rehearsal-ru.webm": {
+      "duration": 128.72,
+      "decode": "PASS",
+      "streams": [
+        {
+          "codec_name": "vp8",
+          "width": 430,
+          "height": 960
+        }
+      ]
+    },
+    "FALLBACK_45s.mp4": {
+      "duration": 44.96,
+      "decode": "PASS",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 430,
+          "height": 960
+        }
+      ]
+    }
+  },
+  "relativeLinks": "PASS",
+  "fullP0": "NO-GO",
+  "live": "NO-GO",
+  "syntheticFullVoiceRehearsal": {
+    "format": "Synthetic eSpeak Russian speech with slides and previously recorded real production demo",
+    "humanRehearsal": "NOT RUN",
+    "parentResearch": "NOT RUN",
+    "all12SpeechClipsFitWithoutTruncation": true,
+    "lastSpeechEnd": 297.504,
+    "hardLimit": 300,
+    "media": {
+      "FULL_VOICE_REHEARSAL_RU.mp4": {
+        "duration": 298.0,
+        "sha256": "a033a6d985d1e1fd0cdd46a78dbc5d9d3aed6b3f65174949e20063dcb1c4de1c",
+        "decode": "PASS",
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1280,
+            "height": 720
+          },
+          {
+            "codec_name": "aac"
+          }
+        ]
+      },
+      "FULL_VOICE_REHEARSAL_RU.mp3": {
+        "duration": 298.057143,
+        "sha256": "bd42501901116cac52f60ccd81a084bc6754c8ae676b82146a3e0f60c6a97af2",
+        "decode": "PASS",
+        "streams": [
+          {
+            "codec_name": "mp3"
+          }
+        ]
+      }
+    }
+  }
+}

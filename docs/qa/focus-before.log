@@ -1,0 +1,41 @@
+
+> qoldau-zhol@0.6.0 test:e2e
+> playwright test tests/e2e/p0-keyboard.spec.ts --grep removal --workers=1
+
+
+Running 1 test using 1 worker
+
+(node:5319) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/p0-keyboard.spec.ts:13:1 › compare removal and clear keep a stable keyboard focus at 2/1/0 (6.7s)
+
+
+  1) tests/e2e/p0-keyboard.spec.ts:13:1 › compare removal and clear keep a stable keyboard focus at 2/1/0 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  locator('h1')
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" locator('h1') with timeout 5000ms
+      - waiting for locator('h1')
+        14 × locator resolved to <h1 tabindex="-1" data-page-title="true">Сравнение выбранных услуг</h1>
+           - unexpected value "inactive"
+
+
+      20 |     await page.keyboard.press('Enter');
+      21 |     await expect(page.getByTestId('comparison-card')).toHaveCount(count);
+    > 22 |     await expect(page.locator('h1')).toBeFocused();
+         |                                      ^
+      23 |   }
+      24 |   await keyboardActivate(page, page.getByRole('button', { name: 'Очистить сравнение', exact: true }));
+      25 |   await expect(page.getByTestId('comparison-card')).toHaveCount(0);
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/p0-keyboard.spec.ts:22:38
+
+    Error Context: test-results/p0-keyboard-compare-remova-a7ec1-ble-keyboard-focus-at-2-1-0/error-context.md
+
+  1 failed
+    tests/e2e/p0-keyboard.spec.ts:13:1 › compare removal and clear keep a stable keyboard focus at 2/1/0 

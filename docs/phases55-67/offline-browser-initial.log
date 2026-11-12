@@ -1,0 +1,64 @@
+[WebServer] (node:4384) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:4490) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/pilot-e2e/offline.spec.ts:2:1 › explicit synthetic saved card survives offline reload; private API and pilot excluded from public caches (10.5s)
+(node:5123) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 tests/pilot-e2e/offline.spec.ts:10:1 › map reuses current result, geolocation denied keeps manual search and list alternative (25.6s)
+
+
+  1) tests/pilot-e2e/offline.spec.ts:2:1 › explicit synthetic saved card survives offline reload; private API and pilot excluded from public caches 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: locator('article')
+    Timeout: 5000ms
+    - Expected  - 11
+    + Received  +  1
+
+    - Демо-специалист 01
+    -
+    - Индивидуальное занятие — демо
+    -
+    - 6000 ₸
+    -
+    - Подтверждение цены: 2026-11-13T12:00:00+05:00
+    -
+    - Сохранено на устройстве: 2026-11-10T23:44:08.486Z
+    -
+    - Удалить копию
+    + Демо-специалист 01Индивидуальное занятие — демо6000 ₸Подтверждение цены: 2026-11-13T12:00:00+05:00Сохранено на устройстве: 2026-11-10T23:44:08.486ZУдалить копию
+
+    Call log:
+      - Expect "toHaveText" locator('article') with timeout 5000ms
+      - waiting for locator('article')
+        13 × locator resolved to <article class="pilot-card">…</article>
+           - unexpected value "Демо-специалист 01Индивидуальное занятие — демо6000 ₸Подтверждение цены: 2026-11-13T12:00:00+05:00Сохранено на устройстве: 2026-11-10T23:44:08.486ZУдалить копию"
+
+
+      4 |  await page.evaluate(async()=>{await navigator.serviceWorker.ready;});await expect.poll(()=>page.evaluate(()=>!!navigator.serviceWorker.controller)).toBe(true);
+      5 |  await page.goto('/saved');await expect(page.locator('article')).toHaveCount(1);const stored=await page.locator('article').innerText();await page.request.get('/api/pilot/state');
+    > 6 |  await context.setOffline(true);await page.reload();await expect(page.locator('article')).toHaveCount(1);await expect(page.locator('article')).toHaveText(stored);
+        |                                                                                                                                                ^
+      7 |  await page.getByRole('button',{name:'Қаз',exact:true}).click();await expect(page.getByRole('heading',{name:'Сақталған демо карточкалар',exact:true})).toBeVisible();await page.goto('/pilot');await expect(page.getByText('Приватный пилот требует соединения с сервером.',{exact:false})).toBeVisible();
+      8 |  const urls=await page.evaluate(async()=>{const keys=await caches.keys();return (await Promise.all(keys.map(async key=>(await(await caches.open(key)).keys()).map(r=>r.url)))).flat();});expect(urls.some(url=>url.includes('/api/')||url.endsWith('/pilot'))).toBe(false);
+      9 | });
+        at /workspace/MAMA-PRO-Hackathon/tests/pilot-e2e/offline.spec.ts:6:144
+
+    Error Context: test-results/offline-explicit-synthetic-c6026-excluded-from-public-caches/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/offline-explicit-synthetic-c6026-excluded-from-public-caches/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/offline-explicit-synthetic-c6026-excluded-from-public-caches/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/pilot-e2e/offline.spec.ts:2:1 › explicit synthetic saved card survives offline reload; private API and pilot excluded from public caches 
+  1 passed (49.0s)

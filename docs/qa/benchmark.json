@@ -1,0 +1,23 @@
+{
+  "runtime": "v24.22.1",
+  "cpu": "AMD EPYC 9V74 80-Core Processor",
+  "device": "Cloud Linux Node; not a physical mobile browser",
+  "results": [
+    {
+      "offers": 20,
+      "samples": 100,
+      "warmup": 1000,
+      "p95Ms": 0.7029750000000377,
+      "maxMs": 0.9232800000000907,
+      "under100Ms": true
+    },
+    {
+      "offers": 30,
+      "samples": 100,
+      "warmup": 1000,
+      "p95Ms": 1.0809119999998984,
+      "maxMs": 4.562359000000015,
+      "under100Ms": true
+    }
+  ]
+}
