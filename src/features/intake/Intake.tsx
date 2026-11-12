@@ -4,7 +4,7 @@ import { useApp } from '../../app/AppState';
 import type { Step } from '../../app/session';
 import { AGE_GROUPS, DISTRICTS, NEED_TAGS, districtApplies, parseBudget, searchInputSchema, type SearchInput } from '../../domain/contracts';
 import { ageKeys, districtKeys, needKeys, type MessageKey } from '../../i18n/messages';
-import { Check, Choices, DemoNotice, PageTitle } from '../../ui/controls';
+import { Bird, Check, Choices, DemoNotice, PageTitle } from '../../ui/controls';
 
 const stepLabels = ['stepTopic', 'stepAge', 'stepFormat', 'stepConditions'] as const;
 const titles = ['topicTitle', 'ageTitle', 'formatTitle', 'conditionsTitle'] as const;
@@ -138,7 +138,7 @@ export function Intake() {
       </div>
       <button type="button" className="button text-button skip" onClick={skip}>{t('skip')}</button>
     </form>
-    <p className="help companion-line">{t('companion')}</p>
+    <p className="help companion-line"><Bird pose="guide" small />{t('companion')}</p>
     <p className="help storage-policy">{t('sessionPolicy')}</p>
   </div>;
 }
