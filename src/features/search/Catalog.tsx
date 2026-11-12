@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useApp } from '../../app/AppState';
 import { CATEGORIES, QUERY_MAX, districtApplies, emptySearchInput } from '../../domain/contracts';
 import { categoryKeys } from '../../i18n/messages';
-import { DemoNotice, PageTitle } from '../../ui/controls';
+import { Bird, DemoNotice, PageTitle } from '../../ui/controls';
 import { CompareTray } from './CompareTray';
 import { conditions } from './conditions';
 import { Filters } from './Filters';
@@ -57,11 +57,17 @@ export function Catalog() {
       }}>{chip.label}<span aria-hidden="true"> ×</span></button></li>)}
     </ul></section>}
     <div className="result-heading">
+      <Bird pose="search" small />
       {result && <p role="status" aria-atomic="true" data-testid="search-count">{t('count', { specialists: result.specialistCount, offers: result.eligibleOfferCount })}</p>}
-      <div className="field sort-field"><label htmlFor="sort">{t('sort')}</label><select id="sort" value={input.sort}
-        onChange={event => { const sort = ['relevant', 'price', 'district'].find(value => value === event.target.value) as typeof input.sort | undefined; if (sort) update({ sort }); }}>
-        <option value="relevant">{t('sortRelevant')}</option><option value="price">{t('sortPrice')}</option><option value="district">{t('sortDistrict')}</option>
-      </select></div>
+      <fieldset className="field sort-field">
+        <legend>{t('sort')}</legend>
+        <div className="segmented">
+          {(['relevant', 'price', 'district'] as const).map(value => <label className="segment" key={value}>
+            <input type="radio" name="sort" value={value} checked={input.sort === value} onChange={() => update({ sort: value })} />
+            <span>{t(({ relevant: 'sortRelevant', price: 'sortPrice', district: 'sortDistrict' } as const)[value])}</span>
+          </label>)}
+        </div>
+      </fieldset>
     </div>
     {input.sort === 'price' && <p className="help info">{t('priceSortHelp')}</p>}
     {input.sort === 'district' && <p className="help info">{t(districtApplies(input) && input.districtId ? 'districtSortHelp' : 'districtSortInactive')}</p>}

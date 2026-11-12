@@ -144,11 +144,11 @@ test('removes just one category chip; full reset retains interface locale', asyn
 test('price/district sorting changes selected offer and keeps counts and explanations aligned', async ({ page }) => {
   await open(page, example);
   for (const sort of ['price', 'district', 'relevant'] as const) {
-    await page.locator('#sort').selectOption(sort);
+    await page.locator(`input[name="sort"][value="${sort}"]`).check();
     await expectResult(page, { ...example, sort });
   }
   await page.getByRole('button', { name: 'Сбросить поиск и фильтры', exact: true }).click();
-  await page.locator('#sort').selectOption('price');
+  await page.locator('input[name="sort"][value="price"]').check();
   await expectResult(page, { ...base, sort: 'price' });
   await expect(page.getByTestId('specialist-card').first()).toHaveAttribute('data-offer-id', 'O06');
   await expect(page.getByText('Сравниваются цены за указанную услугу', { exact: false })).toBeVisible();
@@ -181,7 +181,7 @@ test('compare 1/2/3, fourth rejection, fixed offers, removal and changed conditi
   for (const index of [1, 2, 3]) await cards.nth(index).getByRole('button', { name: 'Сравнить', exact: true }).click();
   await expect(page.locator('.compare-tray')).toContainText('Выбрано для сравнения: 3/3');
   await expect(page.locator('.compare-tray')).toContainText('Можно сравнить до трёх');
-  await page.locator('#sort').selectOption('price');
+  await page.locator('input[name="sort"][value="price"]').check();
   await page.locator('#comparison-open').click();
   await expect(page.getByTestId('comparison-card')).toHaveCount(3);
   await expect(page.getByText('Условия поиска изменились;', { exact: false })).toHaveCount(0);
@@ -297,7 +297,7 @@ test('compare offer replacement is explicit and a fourth addition also reports t
   await page.locator('#query').fill('Демо-специалист 12');
   await page.getByTestId('specialist-card').getByRole('button', { name: 'Сравнить', exact: true }).click();
   await expect(page.locator('.compare-selected')).toContainText('O12');
-  await page.locator('#sort').selectOption('price');
+  await page.locator('input[name="sort"][value="price"]').check();
   await expect(page.getByTestId('specialist-card')).toHaveAttribute('data-offer-id', 'O23');
   await expect(page.locator('.compare-selected')).toContainText('O12');
   await page.getByRole('button', { name: 'Сравнить эту услугу вместо прежней', exact: true }).click();
