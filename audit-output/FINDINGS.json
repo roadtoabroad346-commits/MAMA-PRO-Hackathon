@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-11-11",
+  "audited_commit": "97541389f11e0afe10d0a2aeefdbe470bd3a6eff",
+  "branch": "completion-audit-2026-11-11",
+  "summary": { "p0_critical": 0, "p1_high": 0, "p2_medium": 3, "p3_low": 7, "info": 5 },
+  "findings": [
+    {
+      "id": "F-01",
+      "severity": "P2",
+      "category": "reliability-ux",
+      "title": "Corrupted intent key in sessionStorage permanently blocks demo request save until manual storage clear",
+      "files": ["src/app/requestAttempt.ts:13", "src/domain/DemoRequestService.ts:59-60", "src/domain/DemoRequestService.ts:68-71"],
+      "root_cause": "SessionAttemptStorage.read() throws ZodError on malformed JSON; submit/recover then always end in requestIntentError without clearing the key.",
+      "impact": "User cannot save a demo request in the affected tab; message is honest but recovery requires manual sessionStorage clear or tab close.",
+      "proposed_fix": "Clear malformed intent on read failure (or in service on requestIntentError) and start a fresh attempt; no false success is introduced.",
+      "verification": "unit: malformed intent then submit succeeds with new key; e2e: inject corrupt sessionStorage value, button becomes operable."
+    },
+    {
+      "id": "F-02",
+      "severity": "P2",
+      "category": "performance",
+      "title": "District sort re-evaluates every offer inside the comparator (O(n log n) full evaluations)",
+      "files": ["src/domain/SearchService.ts:92-99"],
+      "root_cause": "districtKey calls this.evaluate per comparison instead of precomputing per offer.",
+      "impact": "At 1000 offers measured p95 107.4 ms (crosses the project's 100 ms NFR target); at the real 20-offer catalog it is 1.6-2.3 ms and invisible.",
+      "proposed_fix": "Precompute districtKey per offer before sort.",
+      "verification": "order-equivalence test + benchmark at 1000 offers."
+    },
+    {
+      "id": "F-03",
+      "severity": "P2",
+      "category": "localization-process",
+      "title": "Kazakh copy has not been reviewed by a native speaker; specific candidates flagged",
+      "files": ["src/i18n/messages.ts:92,120,122", "src/features/pilot/messages.ts", "src/features/search/ResultMap.tsx:9"],
+      "root_cause": "Editorial review NOT RUN (documented in QA_RESULTS/LOCALIZATION_REVIEW); auditor is not a native speaker.",
+      "impact": "Possible unnatural phrasing, e.g. step: '4 қадамның {step}-қадамы', allCategories: 'Барлық санат'.",
+      "proposed_fix": "Native-speaker editorial pass recorded in LOCALIZATION_REVIEW.",
+      "verification": "RU/KK key parity tests + screenshots after edits."
+    },
+    {
+      "id": "F-04",
+      "severity": "P3",
+      "category": "portability",
+      "title": "Pilot/offline Playwright configs are Linux-only (hardcoded /usr/bin/chromium, POSIX env prefixes)",
+      "files": ["playwright.pilot.config.ts:6-7", "playwright.offline.config.ts:5"],
+      "impact": "Cannot run pilot/offline E2E on Windows without an extra config (audit used equivalent helper configs).",
+      "proposed_fix": "Executable path from env + webServer.env objects."
+    },
+    {
+      "id": "F-05",
+      "severity": "P3",
+      "category": "security",
+      "title": "No rate limit on POST /api/pilot/test-login",
+      "files": ["server/http.ts:28-34"],
+      "impact": "Session-table growth possible on a shared host; mitigated by loopback binding and per-cookie rotation; no passwords exist.",
+      "proposed_fix": "Simple in-memory per-IP counter or documented acceptance for test-only."
+    },
+    {
+      "id": "F-06",
+      "severity": "P3",
+      "category": "maintainability",
+      "title": "ResultMap and pilot footer strings are inline RU/KK instead of the i18n catalog",
+      "files": ["src/features/search/ResultMap.tsx:9", "src/app/App.tsx:78"],
+      "impact": "Risk of divergence when messages are edited."
+    },
+    {
+      "id": "F-07",
+      "severity": "P3",
+      "category": "maintainability",
+      "title": "Price display logic duplicated in three components",
+      "files": ["src/features/search/OfferCard.tsx:13", "src/features/request/DemoRequestStatus.tsx:81", "src/features/pilot/SavedDemo.tsx:17"]
+    },
+    {
+      "id": "F-08",
+      "severity": "P3",
+      "category": "performance",
+      "title": "Main JS chunk 515.49 kB exceeds Vite 500 kB advisory (gzip 153 kB)",
+      "files": ["vite.config.ts"],
+      "impact": "First-load cacheability; critical-path gzip (~157 kB) already under project NFR limits.",
+      "proposed_fix": "manualChunks for react-dom/zod."
+    },
+    {
+      "id": "F-09",
+      "severity": "P3",
+      "category": "security",
+      "title": "Cookie lacks Secure flag; no CSP/HSTS headers (test-only loopback stand)",
+      "files": ["server/http.ts:33"],
+      "impact": "Acceptable for loopback PILOT_TEST; must be fixed before any external exposure (already blocked by LIVE gate)."
+    },
+    {
+      "id": "F-10",
+      "severity": "P3",
+      "category": "security-process",
+      "title": "No npm audit/SCA step in CI",
+      "files": [".github/workflows/integrity.yml"]
+    },
+    {
+      "id": "F-11",
+      "severity": "INFO",
+      "category": "security",
+      "title": "npm audit/SCA and real-browser-zoom/screen-reader/physical-device checks were not performed in this audit",
+      "impact": "Listed in Remaining Unknowns; matches the project's own NOT RUN register."
+    },
+    {
+      "id": "F-12",
+      "severity": "INFO",
+      "category": "process",
+      "title": "39 team-attested phases have no per-phase requirements, code or test traces in the repository",
+      "files": ["docs/PHASE_REGISTRY.json", "docs/TEAM_REVIEW_ATTESTATION.md"],
+      "impact": "Attestation preserved as reported status; not convertible to verified completion without per-phase evidence."
+    }
+  ]
+}
