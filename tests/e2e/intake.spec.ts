@@ -23,7 +23,7 @@ async function exampleA(page: Page) {
   await page.getByRole('radio', { name: 'Казахский', exact: true }).check();
   await page.getByRole('radio', { name: 'Очно', exact: true }).check();
   await page.getByRole('button', { name: 'Далее', exact: true }).click();
-  await page.getByLabel('Район', { exact: true }).selectOption('BOSTANDYK');
+  await page.locator('input[name="districtId"][value="BOSTANDYK"]').check();
   await page.getByLabel('Бюджет за одно занятие, ₸', { exact: true }).fill('6000');
   await page.getByRole('checkbox', { name: 'Предпочесть актуально указанную готовность к обращению', exact: true }).check();
   await page.getByRole('button', { name: 'Посмотреть мой маршрут', exact: true }).click();
@@ -201,7 +201,7 @@ test('KK filled route validates budget; category editing updates the same servic
   await page.getByRole('radio', { name: 'Қазақша', exact: true }).check();
   await page.getByRole('radio', { name: 'Онлайн', exact: true }).check();
   await page.getByRole('button', { name: 'Келесі', exact: true }).click();
-  await page.getByLabel('Аудан', { exact: true }).selectOption('BOSTANDYK');
+  await page.locator('input[name="districtId"][value="BOSTANDYK"]').check();
   await expect(page.getByText('Онлайн форматта аудан ескерілмейді.', { exact: false })).toBeVisible();
   await page.locator('#budget').fill('-1');
   await page.getByRole('button', { name: 'Іздеу шарттарымды қарау', exact: true }).click();

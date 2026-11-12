@@ -4,7 +4,7 @@ import { useApp } from '../../app/AppState';
 import type { Step } from '../../app/session';
 import { AGE_GROUPS, DISTRICTS, NEED_TAGS, districtApplies, parseBudget, searchInputSchema, type SearchInput } from '../../domain/contracts';
 import { ageKeys, districtKeys, needKeys, type MessageKey } from '../../i18n/messages';
-import { Bird, Check, Choices, DemoNotice, PageTitle } from '../../ui/controls';
+import { Bird, BudgetChips, Check, Choices, DemoNotice, Icon, PageTitle } from '../../ui/controls';
 
 const stepLabels = ['stepTopic', 'stepAge', 'stepFormat', 'stepConditions'] as const;
 const titles = ['topicTitle', 'ageTitle', 'formatTitle', 'conditionsTitle'] as const;
@@ -91,20 +91,24 @@ export function Intake() {
           checked={input.formatHard} onChange={formatHard => update({ formatHard })} />}
       </>}
       {step === 4 && <>
-        <div className="field">
-          <label htmlFor="district">{t('district')}</label>
+        <fieldset className="field" aria-describedby={`district-help${!districtApplies(input) ? ' district-inactive' : ''}${errors.districtId ? ' district-error' : ''}`}>
+          <legend>{t('district')}</legend>
           <p id="district-help" className="help">{t('districtHelp')}</p>
-          <select id="district" value={input.districtId ?? ''} aria-describedby={`district-help${!districtApplies(input) ? ' district-inactive' : ''}${errors.districtId ? ' district-error' : ''}`}
-            aria-invalid={!!errors.districtId} onChange={e => {
-              const districtId = DISTRICTS.find(id => id === e.target.value) ?? null;
-              update({ districtId });
-            }}>
-            <option value="">{t('any')}</option>
-            {DISTRICTS.map(id => <option key={id} value={id}>{t(districtKeys[id])}</option>)}
-          </select>
+          <div className="district-grid">
+            <label className="district-tile" key="any">
+              <input type="radio" name="districtId" value="" checked={input.districtId === null} aria-invalid={!!errors.districtId}
+                onChange={() => update({ districtId: null })} />
+              <span><Icon name="any" />{t('any')}</span>
+            </label>
+            {DISTRICTS.map(id => <label className="district-tile" key={id}>
+              <input type="radio" name="districtId" value={id} checked={input.districtId === id} aria-invalid={!!errors.districtId}
+                onChange={() => update({ districtId: id })} />
+              <span><Icon name="pin" />{t(districtKeys[id])}</span>
+            </label>)}
+          </div>
           {!districtApplies(input) && <p className="help info" id="district-inactive">{t(input.format === 'online' && input.formatHard ? 'onlineDistrict' : 'districtInactive')}</p>}
           {errors.districtId && <p id="district-error" className="field-error" role="alert">{fieldError('districtId')}</p>}
-        </div>
+        </fieldset>
         {districtApplies(input) && input.districtId !== null && <Check label={t('districtRequired')} help={t('districtRequiredHelp')}
           checked={input.districtHard} onChange={districtHard => update({ districtHard })} />}
         <div className="field">
@@ -121,6 +125,14 @@ export function Intake() {
             }}
             onBlur={() => setErrors(old => ({ ...old, budgetKzt: parseBudget(budgetDraft).error ?? undefined }))} />
           {errors.budgetKzt && <p className="field-error" role="alert" id="budget-error">{fieldError('budgetKzt')}</p>}
+          <BudgetChips amounts={[3000, 6000, 10000]} onPick={amount => {
+            const raw = String(amount);
+            setBudgetDraft(raw);
+            const parsed = parseBudget(raw);
+            update({ budgetKzt: parsed.value });
+            setErrors(old => ({ ...old, budgetKzt: parsed.error ?? undefined }));
+            budgetInput.current?.focus();
+          }} />
         </div>
         <Choices name="budgetMode" label={t('budgetMode')} help={t('budgetModeHelp')} value={input.budgetHard ? 'hard' : 'soft'}
           options={[{ value: 'soft', label: t('budgetSoft') }, { value: 'hard', label: t('budgetHard') }]}

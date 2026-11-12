@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useApp } from '../../app/AppState';
 import { CATEGORIES, QUERY_MAX, districtApplies, emptySearchInput } from '../../domain/contracts';
 import { categoryKeys } from '../../i18n/messages';
-import { Bird, DemoNotice, PageTitle } from '../../ui/controls';
+import { Bird, DemoNotice, Icon, PageTitle } from '../../ui/controls';
 import { CompareTray } from './CompareTray';
 import { conditions } from './conditions';
 import { Filters } from './Filters';
@@ -32,8 +32,10 @@ export function Catalog() {
     <DemoNotice />
     <div className="catalog-toolbar">
       <div className="field"><label htmlFor="query">{t('nameSearch')}</label><p className="help" id="query-help">{t('searchHelp')}</p>
-        <input type="search" id="query" maxLength={QUERY_MAX} value={input.query} aria-describedby="query-help" autoComplete="off"
-          onChange={event => update({ query: event.target.value.normalize('NFKC').slice(0, QUERY_MAX) })} />
+        <div className="input-wrap"><Icon name="search" />
+          <input type="search" id="query" maxLength={QUERY_MAX} value={input.query} aria-describedby="query-help" autoComplete="off"
+            onChange={event => update({ query: event.target.value.normalize('NFKC').slice(0, QUERY_MAX) })} />
+        </div>
       </div>
       <div className="field"><label htmlFor="catalog-category">{t('category')}</label><p className="help" id="catalog-category-help">{t('categoryHelp')}</p>
         <select id="catalog-category" value={input.categoryIds.length === 1 ? input.categoryIds[0] : ''} aria-describedby="catalog-category-help" onChange={event => {
@@ -45,7 +47,7 @@ export function Catalog() {
         </select>
       </div>
     </div>
-    <div className="catalog-actions"><button type="button" id="filters-open" className="button primary" aria-haspopup="dialog" onClick={() => setFiltersOpen(true)}>{t('filters')}</button>
+    <div className="catalog-actions"><button type="button" id="filters-open" className="button primary" aria-haspopup="dialog" onClick={() => setFiltersOpen(true)}><Icon name="sliders" />{t('filters')}</button>
       <Link className="button secondary" to="/route/review">{t('reviewTitle')}</Link>
       <button type="button" className="button text-button" onClick={reset}>{t('resetAll')}</button>
     </div>
@@ -64,7 +66,7 @@ export function Catalog() {
         <div className="segmented">
           {(['relevant', 'price', 'district'] as const).map(value => <label className="segment" key={value}>
             <input type="radio" name="sort" value={value} checked={input.sort === value} onChange={() => update({ sort: value })} />
-            <span>{t(({ relevant: 'sortRelevant', price: 'sortPrice', district: 'sortDistrict' } as const)[value])}</span>
+            <span><Icon name={({ relevant: 'sort-relevant', price: 'sort-price', district: 'sort-district' } as const)[value]} />{t(({ relevant: 'sortRelevant', price: 'sortPrice', district: 'sortDistrict' } as const)[value])}</span>
           </label>)}
         </div>
       </fieldset>
@@ -81,7 +83,7 @@ export function Catalog() {
         <button type="button" className="button primary" onClick={() => setFiltersOpen(true)}>{t('editPreferences')}</button>
         <button type="button" className="button text-button" onClick={reset}>{t('resetAll')}</button>
       </section>}
-      <button type="button" className="button secondary" aria-expanded={mapVisible} onClick={() => setMapVisible(!mapVisible)}>{locale === 'ru' ? (mapVisible ? 'Скрыть схему карты' : 'Показать схему карты') : (mapVisible ? 'Карта сызбасын жасыру' : 'Карта сызбасын көрсету')}</button>
+      <button type="button" className="button secondary" aria-expanded={mapVisible} onClick={() => setMapVisible(!mapVisible)}><Icon name="map" />{locale === 'ru' ? (mapVisible ? 'Скрыть схему карты' : 'Показать схему карты') : (mapVisible ? 'Карта сызбасын жасыру' : 'Карта сызбасын көрсету')}</button>
       {mapVisible && <ResultMap result={result} />}
       <div className="catalog-grid">{result.items.map(item => <OfferCard key={item.specialistId} item={item} />)}</div>
       {result.incompleteSpecialistCount > 0 && <section className="incomplete-section" aria-labelledby="incomplete-title">

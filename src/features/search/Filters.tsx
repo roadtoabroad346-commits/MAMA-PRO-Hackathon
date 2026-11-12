@@ -3,7 +3,7 @@ import { useApp } from '../../app/AppState';
 import { AGE_GROUPS, CATEGORIES, DISTRICTS, NEED_TAGS, districtApplies, emptySearchInput, parseBudget, type SearchInput } from '../../domain/contracts';
 import type { SearchResult } from '../../domain/SearchService';
 import { ageKeys, categoryKeys, districtKeys, needKeys } from '../../i18n/messages';
-import { Check } from '../../ui/controls';
+import { BudgetChips, Check } from '../../ui/controls';
 import { Modal } from '../../ui/Modal';
 
 function Select<T extends string>({ id, label, value, options, onChange, help }: {
@@ -67,6 +67,10 @@ export function Filters({ onClose }: { onClose: () => void }) {
           <input id="filter-budget" type="text" inputMode="numeric" autoComplete="off" maxLength={32} value={budget}
             aria-invalid={!!parsedBudget.error} aria-describedby={`filter-budget-help${parsedBudget.error ? ' filter-budget-error' : ''}`} onChange={event => setBudget(event.target.value)} />
           {parsedBudget.error && <p className="field-error" id="filter-budget-error" role="alert">{t(parsedBudget.error)}</p>}
+          <BudgetChips amounts={[3000, 6000, 10000]} onPick={amount => {
+            setBudget(String(amount));
+            document.getElementById('filter-budget')?.focus();
+          }} />
         </div>
         <Select id="filter-budget-mode" label={t('budgetMode')} help={t('budgetModeHelp')} value={draft.budgetHard ? 'hard' : 'soft'}
           options={[{ value: 'soft', label: t('budgetSoft') }, { value: 'hard', label: t('budgetHard') }]} onChange={value => patch({ budgetHard: value === 'hard' })} />

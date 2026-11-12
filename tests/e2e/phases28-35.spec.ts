@@ -62,7 +62,7 @@ test('unsure topic stays null; mixed district is explicit hard and online-only d
   await page.goto('/route');
   await page.getByRole('radio', { name: messages.ru.unsure, exact: true }).check();
   for (let i = 0; i < 3; i++) await page.getByRole('button', { name: messages.ru.next, exact: true }).click();
-  await page.locator('#district').selectOption('BOSTANDYK');
+  await page.locator('input[name="districtId"][value="BOSTANDYK"]').check();
   await page.getByRole('checkbox', { name: messages.ru.districtRequired, exact: true }).check();
   await page.getByRole('button', { name: messages.ru.reviewCta, exact: true }).click();
   await expect(page.locator('[data-field="needTag"]')).toContainText(messages.ru.unsure);
