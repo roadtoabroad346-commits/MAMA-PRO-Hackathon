@@ -85,3 +85,32 @@ export function Bird({ pose = 'welcome', small = false }: { pose?: BirdPose; sma
 export function PageTitle({ children, intro }: { children: ReactNode; intro?: string }) {
   return <div className="page-title"><h1 tabIndex={-1} data-page-title>{children}</h1>{intro && <p>{intro}</p>}</div>;
 }
+
+export type IconName = 'search' | 'sliders' | 'sort-relevant' | 'sort-price' | 'sort-district' | 'map' | 'pin' | 'any';
+
+/**
+ * Tiny inline icon set (§13.2: no external assets). Decorative only:
+ * aria-hidden, inherits currentColor, sized via CSS (.icon).
+ */
+export function Icon({ name }: { name: IconName }) {
+  return <svg className="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    {name === 'search' && <><circle cx="11" cy="11" r="7" /><path d="M20 20l-4.2-4.2" /></>}
+    {name === 'sliders' && <><path d="M4 7h8M20 7h-4M4 17h4M12 17h8" /><circle cx="16" cy="7" r="2.2" /><circle cx="10" cy="17" r="2.2" /></>}
+    {name === 'sort-relevant' && <><path d="M12 3l2.1 5.3L19.5 10l-5.4 1.7L12 17l-2.1-5.3L4.5 10l5.4-1.7Z" /><path d="M18.6 15.8l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8Z" /></>}
+    {name === 'sort-price' && <><path d="M12 3v13" /><path d="M7 11l5 5 5-5" /><path d="M5 20h14" /></>}
+    {name === 'sort-district' && <><path d="M12 21s-6.8-5.4-6.8-11A6.8 6.8 0 0 1 18.8 10c0 5.6-6.8 11-6.8 11Z" /><circle cx="12" cy="10" r="2.4" /></>}
+    {name === 'map' && <><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z" /><path d="M9 4v14M15 6v14" /></>}
+    {name === 'pin' && <><path d="M12 21s-6.8-5.4-6.8-11A6.8 6.8 0 0 1 18.8 10c0 5.6-6.8 11-6.8 11Z" /><circle cx="12" cy="10" r="2.4" /></>}
+    {name === 'any' && <><circle cx="5.5" cy="12" r="1.4" fill="currentColor" stroke="none" /><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none" /><circle cx="18.5" cy="12" r="1.4" fill="currentColor" stroke="none" /></>}
+  </svg>;
+}
+
+/** Quick budget presets under the numeric input; buttons never submit forms. */
+export function BudgetChips({ amounts, onPick }: { amounts: number[]; onPick: (amount: number) => void }) {
+  const { locale } = useApp();
+  return <div className="amount-chips">
+    {amounts.map(amount => <button type="button" className="amount-chip" key={amount} onClick={() => onPick(amount)}>
+      {new Intl.NumberFormat(locale).format(amount)} ₸
+    </button>)}
+  </div>;
+}

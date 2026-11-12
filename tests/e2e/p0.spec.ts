@@ -32,7 +32,7 @@ for (const locale of ['ru', 'kk'] as const) {
     await page.getByRole('radio', { name: t.kazakh, exact: true }).check();
     await page.getByRole('radio', { name: t.offline, exact: true }).check();
     await page.getByRole('button', { name: t.next, exact: true }).click();
-    await page.locator('#district').selectOption('BOSTANDYK');
+    await page.locator('input[name="districtId"][value="BOSTANDYK"]').check();
     await page.locator('#budget').fill('6000');
     await page.getByRole('checkbox', { name: t.availability, exact: true }).check();
     await page.getByRole('button', { name: t.reviewCta, exact: true }).click();
