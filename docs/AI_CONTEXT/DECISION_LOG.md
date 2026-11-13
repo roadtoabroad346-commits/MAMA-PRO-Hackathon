@@ -18,3 +18,7 @@
 | CTX-011 | Не выдавать structural inventory за полный independent security audit | Все335 baseline файлов прочитаны для хеширования; текст проиндексирован, ключевые contracts/code/tests сопоставлены, бинарники не проигрывались. Оригинал Research и human evidence недоступны. Ограничения сохранены явно |
 
 Унаследованные действующие правила: same-offer hard/unknown evaluator; freshness-v2; separate draft/applied; synthetic-only Node/SQLite; in-app semantics; selective summary; public-only PWA. Ссылка на историческое решение о «пустом repo» или «устаревшей default» описывает момент его принятия, не сегодняшний Git.
+
+## EXP-01 continuation
+
+Новое прямое поручение разрешает EXP-разработку и supersedes initialization-only stop. Следовать зависимости EXP-01→02, не прыгать к рекомендуемому F136 до проверки CORE/pilot. Existing16 функций не дублировать: новый test закрывает отсутствие pose×locale×width matrix. Техническую приёмку отделить от BLOCKED_EXTERNAL parent/native KK. Исходные source snapshots/inventory не переписывать.

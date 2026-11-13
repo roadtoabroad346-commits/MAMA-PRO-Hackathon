@@ -1,48 +1,17 @@
 # Передача следующей сессии
 
-**LIVE_BLOCKED сохраняется; реальные пользователи/отправки/production не разрешены.**
+LIVE_BLOCKED сохраняется. Новое прямое поручение разрешает последовательную synthetic EXP-разработку; initialization-only STOP из прошлого запроса отменён владельцем.
 
-## Текущая точка
+Ветка: feature/mamapro-exp01-20261113. Основа: ffa8bd6e5ab86ac5ea7d2920b6d4f16a04224cfe, runtime 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Перед началом fetch всех heads подтвердил отсутствие новых коммитов; default phase-0-audit прежний; PR1/2 открыты и уже входят по ancestry. Вложения1–3 побайтово совпали с сохранёнными sources. Локальное дерево было чистым.
 
-- Ветка: `feature/context-init-2026-11-13`.
-- Приложение/проверяемый baseline: `7f8434a4cfd097b531fa584f5b97ebd1e772ad92` (default `phase-0-audit`). В этой задаче runtime не изменён.
-- Проверенный документационный checkpoint: **b0b4115b694ec8271ead0f90a1d4c7742327145f**. Push успешен; remote SHA==local SHA фактически прочитан в 2026-11-13T16:44:49.420189+00:00. [GitHub commit](https://github.com/roadtoabroad346-commits/MAMA-PRO-Hackathon/commit/b0b4115b694ec8271ead0f90a1d4c7742327145f). Эта запись — отдельный следующий docs commit; SHA выше относится к уже проверенному checkpoint на момент записи, не выдаётся за self hash текущего handoff.
-- Точное состояние HEAD/remote вычислять командами ниже; commit SHA нельзя встраивать в собственное содержимое без изменения hash.
-- Разрешено и выполнено: восстановление доступного контекста, 231 feature record, 25 EXP cards, source/code/test links, 335-file inventory, baseline QA, AGENTS recovery protocol. Продуктовые фичи не добавлены.
-- Активные продуктовые задачи: отсутствуют. Initialization доступных материалов завершена; source/human gaps сохранены. Финальная запись синхронизации проверяется отдельным docs push и внешним receipt, команды ниже показывают актуальный HEAD/remote.
+EXP-01 F001–F016: TECHNICAL_VERIFIED_HUMAN_BLOCKED. Существующий интерфейс не дублирован. Добавлен tests/e2e/exp01.spec.ts —6 сценариев RU/KK×320/390/1280; два anonymous CTA, browser Back, три декоративных неинтерактивных SVG, layout bounds, demo badges, runtime errors. Получены18 fresh screenshots; выборочно просмотрены3. Структурная/техническая приёмка AC01–04 прошла; понимание родителем/native KK BLOCKED_EXTERNAL. Полной human acceptance не заявлять.
 
-## Что работает и как воспроизвести
+Проверки: npm run check (strict TS +154 unit/integration +historical registry), build PASS; dev85, release18, pilot5, offline2 PASS —264 уникальных suite cases, failed0/skipped0. Отдельный focused rerun6 PASS не прибавлен повторно к264. Точные команды/границы и source/log hashes: [stage report](../expansion/stages/EXP-01.md), [machine evidence](../expansion/evidence/EXP-01.json). npm dependencies/runtime/security guard не изменялись.
 
-Node24.22.1, npm11.9.0, Chromium156.0.8078.79. Из root: `npm ci`, `npm run check`, `npm run build`. CORE `npm run dev`; отдельный synthetic backend `PILOT_MODE=PILOT_TEST npm run pilot`, страница `/pilot`.
+Синхронизация этого stage на момент записи ещё не наблюдалась; последний проверенный remote checkpoint ffa8bd6. После push записать точный observed stage SHA, не угадывать self hash. Текущий commit читается через git rev-parse HEAD; git ls-remote origin refs/heads/feature/mamapro-exp01-20261113 должен вернуть тот же SHA. git status --short --branch проверяет clean/ahead/behind. STATE.json хранит последнюю наблюдённую синхронизацию, не является самореферентным SHA документа.
 
-Current baseline: 154unit/integration +79dev +18release +5pilot +2offline =258PASS; failed0/skipped0. Typecheck/build/historical registry PASS; npm audit0. Команды/границы/хеши логов: [VALIDATION](VALIDATION.md).
+Следующая точная независимая задача — EXP-02 F017–F036: проверить20 функций и AC01–04, review/catalog count из одного SearchService, draft/applied separation, null/zero/hard, invalid budget0/negative/100001, Back/reload/expiry/KK. Исправлять только доказанный gap. EXP-11 F136 остаётся будущим новым поведением после проверки зависимостей, не следующим этапом сейчас. Не требуется повторное разрешение на уже порученную synthetic работу.
 
-## Восстановление Git
+BLOCKED_EXTERNAL: authentic parent interview, native KK, original Research DOCX/CSV/README package отсутствуют; real AT/devices/browser zoom NOT_RUN. Production identity/legal/operator/provider/ops gates остаются открытыми. Это не блокирует независимую EXP-02 regression. Исторические39 фаз TEAM_ATTESTED не повышать до verified. Feature statuses limited сохранены; источники и335 исходных файлов не переписаны.
 
-```sh
-git status --short --branch
-git log -5 --oneline
-git rev-parse HEAD
-git ls-remote --symref origin HEAD
-git ls-remote origin refs/heads/feature/context-init-2026-11-13
-```
-
-Если нужно продолжить существующую ветку в новом checkout, сначала fetch/inspect remote, затем checkout подходящего ref, сохраняя любые local changes. Не reset/clean/stash чужое. Открытые PR №1 и draft №2 имеют heads, уже входящие в baseline; не merge их ради восстановления.
-
-## Контекст и ограничения
-
-Начать с [AGENTS](../../AGENTS.md), [master](PROJECT_MASTER_CONTEXT.md), [phase map](PHASE_PROGRESS.md). Полные feature records в JSON; поля `phase_ref` разрешаются в EXP registry, пути относительно корня repo. Старый docs/PHASE_REGISTRY.json — только история0–68; не заменять новым.
-
-Original Research DOCX/CSV/README_START_HERE отсутствуют. Каноническая нумерация из одинакового AppendixA двух приложенных документов; original source metadata/hash сохранены. 39 исторических фаз TEAM_ATTESTED, independent delivery evidence UNKNOWN. Интервью родителя PENDING, native KK/real AT/device acceptance NOT_RUN. Все live gates сохраняются. Полный список: [OPEN_QUESTIONS](OPEN_QUESTIONS.md).
-
-F065: CORE район без полного address/venue. F104: audit metadata, без полноценного moderator case-history UI. F119: overlap warning, без server slot lock. F135/137/149/150/206/210 имеют только перечисленные foundations. Не пересоздавать имеющиеся audit fixes, Bird3 poses, gradients/icons, radio sort/district, budget chips, subgrid compare и Intl dates.
-
-## Точный следующий шаг
-
-**STOP после initialization. EXP-01 и далее требуют нового прямого указания владельца.** Исходный [context prompt](sources/00_CONTEXT_INITIALIZATION_REQUEST.md), раздел12: «Do not begin implementation of EXP-01 or later until I explicitly instruct you to continue.» Это ограничение scope, а не запрос дополнительного разрешения для завершения текущей документации.
-
-Рекомендация для будущего продуктового поручения: EXP-11, deterministic Trust Gap F136. Переиспользовать TrustPassport/OfferEvaluation.unknowns/freshness; неизвестный факт→вопрос+source state; без LLM. Перед этим сверить missing Research, текущий remote и baseline regressions.
-
-Предлагаемые slice AC: (1) вопросы только о missing/stale facts конкретного offer; (2) known current факт не порождает ложный пробел; (3) source/date/scope видны; (4) RU/KK и keyboard/320px; (5) нет clinical recommendations/автоматического hard relaxation; (6) deny/error/offline сохраняют deterministic fallback. Tests: pure table rules + focused E2E; stop после этих AC и checkpoint. Это предложение, код не создан.
-
-После любой будущей задачи обновить feature/phase status, decisions, тестовый evidence и handoff; stage exact files; commit; push authorized branch; read remote SHA. При отказе сохранить local SHA/patch и PUSH_BLOCKED, не писать success.
+Восстановление: AGENTS → master → handoff → PHASE_PROGRESS → Git → актуальная EXP-карточка/код/tests. Команды npm run check/build; браузер CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e -- --workers=2; после build check:release; pilot/offline отдельные configs. Dev/release5173 не запускать одновременно. После этапа обновить status/evidence/handoff, exact diff/stage, commit/push, проверить remote. Без merge/deploy/force-push/реальных отправок.

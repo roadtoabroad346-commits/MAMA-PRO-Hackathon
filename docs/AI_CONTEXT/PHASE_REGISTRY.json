@@ -73,7 +73,7 @@
       "F015",
       "F016"
     ],
-    "status": "EXISTING_DEMO_WITH_LIMITATIONS",
+    "status": "TECHNICAL_VERIFIED_HUMAN_BLOCKED",
     "objective": "Обеспечить понятный вход родителя без регистрации, чёткий CTA, RU/KK, достоверную маркировку демо и визуально связанный путь.",
     "prerequisites": "EXP-00.",
     "technical_architecture": "Не переписывать визуальную систему; при необходимости исправить обнаруженные проблемы текста, focus, mobile reflow, deep links, return navigation и состояния Қарлығаш.",
@@ -86,7 +86,7 @@
       "src/i18n/messages.ts"
     ],
     "reuse_foundations": "Home, App Router, AppState, controls/Bird, MASCOT_KARLYGASH, DESIGN_DELIVERY 12–13.11.",
-    "missing_implementation": "Полевые проверки/KK и доказательство каждого нового EXP AC; existing code не пересоздавать.",
+    "missing_implementation": "Runtime gap в EXP-01 не найден; native KK/parent UAT BLOCKED_EXTERNAL. Real AT/zoom NOT_RUN.",
     "backend_requirements": "Сохранять текущие domain/storage contracts; private authority в server/service.ts.",
     "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Обеспечить понятный вход родителя без регистрации, чёткий CTA, RU/KK, достоверную маркировку демо и визуально связанный путь.",
     "data_models": "Locale, Router, Bird pose, navigation focus",
@@ -116,9 +116,9 @@
     "allowed_result": "DEMO READY только после текущих тестов.",
     "completion_evidence": {
       "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
-      "qa": "VALIDATION.md",
-      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
-      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+      "qa": "docs/expansion/evidence/EXP-01.json",
+      "phase_ac_status": "AC01..04 automated/structural PASS; native meaning and parent comprehension BLOCKED_EXTERNAL",
+      "report": "docs/expansion/stages/EXP-01.md"
     },
     "source": {
       "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",

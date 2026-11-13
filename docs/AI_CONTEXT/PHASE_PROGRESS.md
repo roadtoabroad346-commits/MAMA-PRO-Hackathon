@@ -1,6 +1,6 @@
 # EXP-00–EXP-24: карта фаз
 
-Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Current action: context initialization only.
+Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Current action: EXP-01 technical acceptance; next independent EXP-02.
 
 Новые EXP-фазы отделены от исторического [реестра 0–68](../PHASE_REGISTRY.json). 39 исторических фаз (1–5, 9, 11, 15–27, 36–54) имеют TEAM_ATTESTED, а их per-phase требования/evidence остаются UNKNOWN. 29 исторических записей имеют артефакты; это не полная приёмка. Фаза 68 не начата; предложения 69–78 не являются выполненной историей.
 
@@ -9,7 +9,7 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Current action: context init
 | EXP | F-IDs | Состояние |
 |---|---|---|
 | [EXP-00](#exp-00) | F000–F000 | CONTEXT_INITIALIZED_WITH_SOURCE_GAPS |
-| [EXP-01](#exp-01) | F001–F016 | EXISTING_DEMO_WITH_LIMITATIONS |
+| [EXP-01](#exp-01) | F001–F016 | TECHNICAL_VERIFIED_HUMAN_BLOCKED |
 | [EXP-02](#exp-02) | F017–F036 | EXISTING_DEMO_WITH_LIMITATIONS |
 | [EXP-03](#exp-03) | F037–F060 | EXISTING_DEMO_WITH_LIMITATIONS |
 | [EXP-04](#exp-04) | F061–F075 | EXISTING_DEMO_WITH_LIMITATIONS |
@@ -81,7 +81,7 @@ Baseline, источники истины и разрешения — **CONTEXT_
 
 ## EXP-01
 
-DEMO: главная, языки, навигация и маскот — **EXISTING_DEMO_WITH_LIMITATIONS**. Охват: F001, F002, F003, F004, F005, F006, F007, F008, F009, F010, F011, F012, F013, F014, F015, F016.
+DEMO: главная, языки, навигация и маскот — **TECHNICAL_VERIFIED_HUMAN_BLOCKED**. Охват: F001, F002, F003, F004, F005, F006, F007, F008, F009, F010, F011, F012, F013, F014, F015, F016.
 
 **Цель:** Обеспечить понятный вход родителя без регистрации, чёткий CTA, RU/KK, достоверную маркировку демо и визуально связанный путь.
 
@@ -120,9 +120,11 @@ DEMO: главная, языки, навигация и маскот — **EXIST
 - EXP-01-AC-03: Демо-маркировка присутствует при каждом чувствительном действии.
 - EXP-01-AC-04: Три SVG-позы корректно выглядят при 320/390/1280 и не вмешиваются в accessibility tree.
 
-**Доказательства:** [baseline validation](VALIDATION.md), code SHA 7f8434a4cfd097b531fa584f5b97ebd1e772ad92; per-AC status NOT_INDIVIDUALLY_ADJUDICATED. Новые implementation commits этой фазы отсутствуют.
+**Доказательства:** [актуальная приёмка EXP-01](../expansion/stages/EXP-01.md), runtime SHA 7f8434a4cfd097b531fa584f5b97ebd1e772ad92, test source/log hashes в stage evidence. AC01–04 automated/structural PASS; parent/native KK BLOCKED_EXTERNAL.
 
 **Оригинал:** [карточка плана](sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md#L207).
+
+Текущая техническая приёмка AC01–04 и human BLOCKED_EXTERNAL: [отчёт EXP-01](../expansion/stages/EXP-01.md). Следующая независимая задача EXP-02.
 
 ## EXP-02
 

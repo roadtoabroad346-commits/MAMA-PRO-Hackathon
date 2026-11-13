@@ -79,6 +79,6 @@ for p in [R/'AGENTS.md',*(D.glob('*.md')),R/'docs/expansion/SOURCE_RECONCILIATIO
 for p in [R/'AGENTS.md',D/'PROJECT_MASTER_CONTEXT.md',D/'SESSION_HANDOFF.md']:
  check('LIVE_BLOCKED' in p.read_text(),str(p)+': missing live boundary')
 check('PENDING' in (D/'RESEARCH_TRACEABILITY.md').read_text(),'Parent interview pending marker missing')
-check('EXP-01' in (D/'SESSION_HANDOFF.md').read_text(),'Initialization stop condition missing')
+check('EXP-01' in (D/'SESSION_HANDOFF.md').read_text(),'Phase continuation marker missing')
 result={'status':'FAIL' if errors else 'PASS','checks':checks,'features':len(features),'phases':len(phases),'baseline_files_preserved':len(inventory),'errors':errors}
 print(json.dumps(result,ensure_ascii=False,indent=2));sys.exit(bool(errors))

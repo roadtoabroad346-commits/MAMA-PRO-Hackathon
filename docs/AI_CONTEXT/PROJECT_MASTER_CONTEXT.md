@@ -2,7 +2,7 @@
 
 **LIVE_BLOCKED сохраняется; DEMO/PILOT_TEST only.**
 
-Эта память восстановлена из GitHub и четырёх пользовательских вложений. Scope текущего поручения — анализ, постоянная память и docs-only Git checkpoint. EXP-01–24 не исполнялись. Приложение сохранено без изменений.
+Актуальное поручение после initialization разрешает продолжение EXP по зависимостям. EXP-01: техническая приёмка существующих F001–F016 и шесть новых E2E, human gates BLOCKED_EXTERNAL. Следующий независимый шаг — EXP-02. Runtime сохранён. [Отчёт EXP-01](../expansion/stages/EXP-01.md). Ниже сохранён контекст исходной инициализации.
 
 ## Продукт и пользователь
 
@@ -77,6 +77,6 @@
 
 Действующие product/architecture ADR сохраняются в [историческом журнале](../DECISIONS.md); новые решения восстановления — [DECISION_LOG](DECISION_LOG.md). Противоречия и их временное разрешение — [SOURCE_RECONCILIATION](../expansion/SOURCE_RECONCILIATION.md). Неполученные данные/решения — [OPEN_QUESTIONS](OPEN_QUESTIONS.md).
 
-Текущий результат — постоянная память с доказательными ссылками, baseline regression и docs-only checkpoint. Он не устраняет отсутствие первичного Research, интервью и operational sign-offs. Первое рекомендуемое продуктовое поручение после явного разрешения: EXP-11, узкий deterministic Trust Gap slice F136, переиспользующий existing unknown/freshness/trust data. Никакого LLM/provider подключения для него не требуется. Требования и stop condition записаны в handoff.
+Текущий результат — постоянная память с доказательными ссылками, baseline regression и docs-only checkpoint. Он не устраняет отсутствие первичного Research, интервью и operational sign-offs. Будущий новый продуктовый slice: EXP-11 Trust Gap F136 после технической проверки зависимостей EXP-02–10. Текущий следующий шаг EXP-02. Никакого LLM/provider подключения для него не требуется. Требования и stop condition записаны в handoff.
 
 Новая сессия читает AGENTS → master → handoff → phases → Git → нужные specs; затем фиксирует конкретное действие. После задачи обновляет только относящиеся feature/phase/decision/evidence записи, commit/push и проверяет remote. Память — version-controlled документы, а не обещание неограниченного контекста модели.

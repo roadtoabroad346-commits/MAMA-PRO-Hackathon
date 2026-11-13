@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "executionBranch": "feature/mamapro-exp01-20261113",
+  "baseSha": "ffa8bd6e5ab86ac5ea7d2920b6d4f16a04224cfe",
+  "currentStage": "EXP-02",
+  "previousStage": "EXP-01",
+  "phaseStatus": "TECHNICAL_VERIFIED_HUMAN_BLOCKED",
+  "featureIdsTouched": [
+    "F001",
+    "F002",
+    "F003",
+    "F004",
+    "F005",
+    "F006",
+    "F007",
+    "F008",
+    "F009",
+    "F010",
+    "F011",
+    "F012",
+    "F013",
+    "F014",
+    "F015",
+    "F016"
+  ],
+  "lastPushedCommit": "ffa8bd6e5ab86ac5ea7d2920b6d4f16a04224cfe",
+  "synchronization": "Previous observed checkpoint; stage push not observed yet",
+  "tests": {
+    "passed": 264,
+    "failed": 0,
+    "skipped": 0
+  },
+  "blockers": [
+    "Parent UAT and native KK acceptance BLOCKED_EXTERNAL",
+    "Primary Research absent; real AT/zoom NOT_RUN; LIVE_BLOCKED"
+  ],
+  "nextSafeStep": "EXP-02 F017–F036 acceptance verification; implement only demonstrated gaps",
+  "liveBlocked": true
+}

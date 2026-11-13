@@ -251,6 +251,8 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Это новая прове
 | [F230](#f230) | Production-запуск | LATER | EXP-24 | BLOCKED_EXTERNAL |
 
 
+EXP-01 F001–F016: техническая приёмка повторена, 6 новых E2E. Статусы limited сохранены до parent/native KK acceptance. [Отчёт](../expansion/stages/EXP-01.md).
+
 ## F000
 
 **Миссия: прозрачный цифровой навигатор поддержки семьи** — IMPLEMENTED_WITH_LIMITATIONS.

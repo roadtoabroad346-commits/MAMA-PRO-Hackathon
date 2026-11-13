@@ -1,0 +1,149 @@
+{
+  "observed_at_utc": "2026-11-13T18:12:57.117482+00:00",
+  "branch": "feature/mamapro-exp01-20261113",
+  "parent_checkpoint": "ffa8bd6e5ab86ac5ea7d2920b6d4f16a04224cfe",
+  "runtime_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+  "new_test_sha256": "f7b0b2a8fbab98310bdceed2b5dd455fa6b3320c8ccbcbe364b7dbeb2237120e",
+  "status": "TECHNICAL_VERIFIED_HUMAN_BLOCKED",
+  "tests": {
+    "dev": {
+      "passed": 85,
+      "failed": 0,
+      "skipped": 0,
+      "log_sha256": "828175c78cb62fa46634be277017fda6e763447e9b9158cc22475e04ca17705a"
+    },
+    "release": {
+      "passed": 18,
+      "failed": 0,
+      "skipped": 0,
+      "log_sha256": "310f8398e5f8d8a8ecf1143881915d1aa7a25bce58d1d23835890cd25e512bad"
+    },
+    "pilot": {
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "log_sha256": "c789c8631f027b5df219a23016db92304a5ad5117bcbd177c895442d608c0d4e"
+    },
+    "offline": {
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "log_sha256": "e9cbbe68f228b393f615dd46af407ff4b634b1db88502ba7426628c323745394"
+    },
+    "focused": {
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "log_sha256": "014998e02a03ae6aca8495ef34b09738f5f20cb6960979751b626f1702bb17ff"
+    },
+    "check": {
+      "status": "PASS",
+      "log_sha256": "fda9bed5e458c0d2407d9f727b642d9a23c0fa00b8ad4ef36e2b8ab7d5c717e7"
+    },
+    "build": {
+      "status": "PASS",
+      "log_sha256": "5bfa40cc6f110312d3aebcc29649db9c965319fdb29d575f58fb5f5931d3017b"
+    }
+  },
+  "unique_suite_cases_passed": 264,
+  "focused_rerun_cases": 6,
+  "screenshots": [
+    {
+      "file": "work/exp01/screenshots/kk-1280-guide.png",
+      "sha256": "b5ff066e13b927af25d92575ff9ef7e525a1bfecd8458cd7706d688db15036b7"
+    },
+    {
+      "file": "work/exp01/screenshots/kk-1280-search.png",
+      "sha256": "f9bae7893dcdef839ed995f85193f04a40a9736bcc9edb8b79e2db8fe0ea0f4c"
+    },
+    {
+      "file": "work/exp01/screenshots/kk-1280-welcome.png",
+      "sha256": "8da7c6b8e2c330a88ba8a603b1382fec5a3c7c3168482be686fedb721e6bd128"
+    },
+    {
+      "file": "work/exp01/screenshots/kk-320-guide.png",
+      "sha256": "e69e7777a27a1693a250676980eca5ce5e1a28813b33666492117353c93d5cc6"
+    },
+    {
+      "file": "work/exp01/screenshots/kk-320-search.png",
+      "sha256": "a8273d866108ccdc9abffeb8ff251fe1f72c35fef1e32a5633665300f2887b0c"
+    },
+    {
+      "file": "work/exp01/screenshots/kk-320-welcome.png",
+      "sha256": "5e776334592a06f3bd16993e55c5c0d018e7bdd5ff6822834efacf26056e0fbb"
+    },
+    {
+      "file": "work/exp01/screenshots/kk-390-guide.png",
+      "sha256": "e9f16bc4c2a8eea319540939ec0067bd6aab2479fe21dd52147cba0b240a6f7c"
+    },
+    {
+      "file": "work/exp01/screenshots/kk-390-search.png",
+      "sha256": "d7396e06a6eb35318c6cde037296a6fe694f83168fa5faa87063cf1aefa616ee"
+    },
+    {
+      "file": "work/exp01/screenshots/kk-390-welcome.png",
+      "sha256": "44b75f0d4943e012d5aa9a13c310f025f3ffffa377548512cfaf689606295457"
+    },
+    {
+      "file": "work/exp01/screenshots/ru-1280-guide.png",
+      "sha256": "16e28c4a1c7da2fe9402f191ba6300189c377fdb46be342e751eacf0a66adb54"
+    },
+    {
+      "file": "work/exp01/screenshots/ru-1280-search.png",
+      "sha256": "512ce65ea7383f8909660f45c49aa06ceab9b28149fd32a8f02ca30abded0c56"
+    },
+    {
+      "file": "work/exp01/screenshots/ru-1280-welcome.png",
+      "sha256": "0a87c0d921d0a22e8b466bf7ee6ceb23eb5e7065ffa0f5d14c32aec5ef3943d8"
+    },
+    {
+      "file": "work/exp01/screenshots/ru-320-guide.png",
+      "sha256": "7c4fb99b14fce0eee211e88759f84b783be060adf82cf87fe61425c7d609e865"
+    },
+    {
+      "file": "work/exp01/screenshots/ru-320-search.png",
+      "sha256": "0f20aacadf69080c06d23a5e401924e890a5cb64c78ea3386c2e0862868f84c6"
+    },
+    {
+      "file": "work/exp01/screenshots/ru-320-welcome.png",
+      "sha256": "f682809ac1afc7747ac43f53d3f470011fa4fbbb058d5aadbf95d7f4e7346a15"
+    },
+    {
+      "file": "work/exp01/screenshots/ru-390-guide.png",
+      "sha256": "17177f2b95da694c0a97573f166e45779ca8aefadc30e1de34db857b54a27258"
+    },
+    {
+      "file": "work/exp01/screenshots/ru-390-search.png",
+      "sha256": "5038c1f7e87d008a1fd9f28a037dc37717f0f9731b4351107c86789b35d0c94e"
+    },
+    {
+      "file": "work/exp01/screenshots/ru-390-welcome.png",
+      "sha256": "5782159c5a9dff8f6211e068f86066b0c9ca30e1fda94154fa9ff5fbd3f2ec7c"
+    }
+  ],
+  "visually_inspected": [
+    "kk-320-welcome.png",
+    "ru-390-guide.png",
+    "kk-1280-search.png"
+  ],
+  "human_gates": {
+    "parent_UAT": "BLOCKED_EXTERNAL",
+    "native_KK": "BLOCKED_EXTERNAL",
+    "real_AT_devices_zoom": "NOT_RUN"
+  },
+  "liveBlocked": true,
+  "next": "EXP-02 F017–F036 acceptance verification; implement only demonstrated gaps",
+  "commands": {
+    "check": "npm run check",
+    "build": "npm run build",
+    "dev": "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e -- --workers=2",
+    "release": "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run check:release -- --workers=2",
+    "pilot": "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npx playwright test --config playwright.pilot.config.ts",
+    "offline": "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npx playwright test --config playwright.offline.config.ts",
+    "focused": "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npx playwright test tests/e2e/exp01.spec.ts --workers=2"
+  },
+  "npm_audit": {
+    "vulnerabilities": 0,
+    "sha256": "e5510270fc01acadced17714c5ab3dd87aaa651506f93508f3ce3c45645516df"
+  }
+}
