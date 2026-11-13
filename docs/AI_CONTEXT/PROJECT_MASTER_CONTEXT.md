@@ -1,5 +1,7 @@
 # MamaPro — консолидированный контекст
 
+Current checkpoint: **EXP-03 F037–F060 VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO)** on sourceac82ec7. [Closure](../expansion/stages/EXP-03.md), [handoff](SESSION_HANDOFF.md). LIVE_BLOCKED and human/native KK/real AT/device limits preserved. EXP-04 not started; permission required. Earlier narrative below is historical context.
+
 **LIVE_BLOCKED сохраняется; DEMO/PILOT_TEST only.**
 
 Память сверена с полным Research Markdown, исходным CSV F000–F230, README и всеми тремя инженерными документами. Оригинальный DOCX в checkout/remote отсутствует: его чтение и сверка с извлечением не заявляются. Текущее прямое поручение разрешило EXP-02; F017–F036 проверены, runtime-пробелов не обнаружено. Добавлены тесты и доказательная документация; приложение сохранено без изменений.

@@ -64,9 +64,10 @@
     "docx": "UNAVAILABLE_IN_CHECKOUT; historical intake receipt only"
   },
   "latest_verification": {
-    "stage": "EXP-02",
-    "parent_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395",
-    "runtime_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
-    "evidence": "docs/expansion/stages/EXP-02.md"
+    "stage": "EXP-03",
+    "parent_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+    "runtime_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+    "scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "evidence": "docs/expansion/stages/EXP-03.md"
   }
 }

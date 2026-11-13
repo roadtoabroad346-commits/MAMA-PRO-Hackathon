@@ -1,12 +1,6 @@
 # EXP-00–EXP-24: карта фаз
 
-EXP-03 C CATALOG_UX_VERIFIED:localized service-title discovery, zero/incomplete/freshness/navigation and mobile/keyboard proof. [Stage](../expansion/stages/EXP-03.md). D pending.
-
-EXP-03 B DOMAIN_VERIFIED:196 unit/integration PASS; six reproduced regressions corrected. C/D pending; [stage/evidence](../expansion/stages/EXP-03.md).
-
-EXP-03 A AUDITED; B/C/D pending. Baseline154 PASS, real 20/100/1000 benchmark recorded. [Stage](../expansion/stages/EXP-03.md).
-
-Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Current action: EXP-02 F017–F036 verification and source reconciliation; runtime unchanged.
+Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Current action: EXP-03 F037–F060 VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source ac82ec7. Human/live gates BLOCKED_EXTERNAL; EXP-04 not started.
 
 Новые EXP-фазы отделены от исторического [реестра 0–68](../PHASE_REGISTRY.json). 39 исторических фаз (1–5, 9, 11, 15–27, 36–54) имеют TEAM_ATTESTED, а их per-phase требования/evidence остаются UNKNOWN. 29 исторических записей имеют артефакты; это не полная приёмка. Фаза 68 не начата; предложения 69–78 не являются выполненной историей.
 
@@ -17,7 +11,7 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Current action: EXP-02 F017�
 | [EXP-00](#exp-00) | F000–F000 | CONTEXT_INITIALIZED_WITH_SOURCE_GAPS |
 | [EXP-01](#exp-01) | F001–F016 | TECHNICAL_VERIFIED_ON_SIBLING_BRANCH_HUMAN_BLOCKED |
 | [EXP-02](#exp-02) | F017–F036 | TECHNICAL_VERIFIED_HUMAN_BLOCKED |
-| [EXP-03](#exp-03) | F037–F060 | EXISTING_DEMO_WITH_LIMITATIONS |
+| [EXP-03](#exp-03) | F037–F060 | VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO) |
 | [EXP-04](#exp-04) | F061–F075 | EXISTING_DEMO_WITH_LIMITATIONS |
 | [EXP-05](#exp-05) | F076–F087 | EXISTING_DEMO_WITH_LIMITATIONS |
 | [EXP-06](#exp-06) | F088–F094 | EXISTING_PILOT_TEST_ONLY |
@@ -177,7 +171,7 @@ DEMO: анкета и подтверждение условий — **TECHNICAL_
 
 ## EXP-03
 
-DEMO: offer-level matching и каталог — **EXISTING_DEMO_WITH_LIMITATIONS**. Охват: F037, F038, F039, F040, F041, F042, F043, F044, F045, F046, F047, F048, F049, F050, F051, F052, F053, F054, F055, F056, F057, F058, F059, F060.
+DEMO: offer-level matching и каталог — **VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO)**. Охват: F037, F038, F039, F040, F041, F042, F043, F044, F045, F046, F047, F048, F049, F050, F051, F052, F053, F054, F055, F056, F057, F058, F059, F060.
 
 **Цель:** Дать точный, объяснимый список конкретных услуг и честное пустое состояние.
 
@@ -187,7 +181,7 @@ DEMO: offer-level matching и каталог — **EXISTING_DEMO_WITH_LIMITATION
 
 **Переиспользование:** SearchService/matching/freshness/SearchResult, Catalog, Filters, ResultMap.
 
-**Недостающее:** Полевые проверки/KK и доказательство каждого нового EXP AC; existing code не пересоздавать.
+**Недостающее:** Human parent/native KK/real AT/device review BLOCKED_EXTERNAL; all technical AC are evidenced below.
 
 **Backend:** Сохранять текущие domain/storage contracts; private authority в server/service.ts.
 
@@ -216,7 +210,7 @@ DEMO: offer-level matching и каталог — **EXISTING_DEMO_WITH_LIMITATION
 - EXP-03-AC-03: 20/100/1000 synthetic offer benchmark задокументирован в той же среде, без fake field metrics.
 - EXP-03-AC-04: Zero results не приводит к скрытой смене ограничений.
 
-**Доказательства:** [baseline validation](VALIDATION.md), code SHA 7f8434a4cfd097b531fa584f5b97ebd1e772ad92; per-AC status NOT_INDIVIDUALLY_ADJUDICATED. Новые implementation commits этой фазы отсутствуют.
+**Доказательства:** [EXP-03 closure/matrix](../expansion/stages/EXP-03.md), [actual results](../expansion/evidence/EXP-03.json), [before/after benchmark](../expansion/evidence/EXP-03-benchmark.md). Source ac82ec7209de0ec5e0154947193cafcb7be856ba; AC-01…04 PASS_AUTOMATED_SYNTHETIC.196 unit/integration +103 dev +54 dist +5 pilot +2 offline=360 PASS; failed0/skipped0. No independent human/live acceptance. A/B/C confirmed remote; D containing SHA resolved after push.
 
 **Оригинал:** [карточка плана](sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md#L309).
 

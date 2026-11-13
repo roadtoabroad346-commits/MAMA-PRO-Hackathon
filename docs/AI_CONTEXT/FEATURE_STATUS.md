@@ -1,12 +1,6 @@
 # F000–F230: состояние функций
 
-EXP-03 C CATALOG_UX_VERIFIED:14 new browser cases RU/KK PASS,196 unit/integration PASS, build PASS; D final benchmarks/regression/closure pending.
-
-EXP-03 B: 42 focused tests including200 seeded sibling catalogs PASS; full196 PASS. F038/title, F056/clock and F057/ordinal ties fixed. Catalog/UX and final benchmarks pending; technical closure NOT_VERIFIED.
-
-EXP-03 checkpoint A: contracts audited, baseline154 PASS; F037–F060 NOT_VERIFIED for this task until B/C/D. See [stage](../expansion/stages/EXP-03.md).
-
-Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. EXP-02 F017–F036 перепроверен автоматикой; EXP-01 записан в отдельной remote-ветке a93cc18. Остальной roadmap не объявляется выполненным.
+Historical baseline:7f8434a. EXP-03 F037–F060 — **execution_state VERIFIED_DONE**, scope **AUTOMATED_SYNTHETIC_DEMO** on source ac82ec7209de0ec5e0154947193cafcb7be856ba.360 executed final tests PASS; [24-row AC/evidence matrix](../expansion/stages/EXP-03.md). Implementation status stays IMPLEMENTED_WITH_LIMITATIONS because human/live gates remain separate. EXP-02 and sibling EXP-01 retain their historical evidence; other EXP stages are not completed by this work.
 
 Канонические имена/номера сверены с полностью прочитанным Research Markdown, исходным CSV и двумя инженерными приложениями. DOCX недоступен; его чтение не заявляется. Исходный Research status сохранён отдельно. Полные поля, acceptance и именованные test anchors: [FEATURE_REGISTRY.json](FEATURE_REGISTRY.json); экспорт [CSV](FEATURE_REGISTRY.csv).
 
@@ -829,6 +823,8 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-03](PHASE_PROGRESS.md#exp-03). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
 
+**EXP-03 execution:** VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source `ac82ec7209de0ec5e0154947193cafcb7be856ba`. NFKC/name/finite RU/KK aliases, literal query and current input. [Evidence/matrix](../expansion/stages/EXP-03.md). Human/live: BLOCKED_EXTERNAL.
+
 ## F038
 
 **Поиск конкретных услуг** — IMPLEMENTED_WITH_LIMITATIONS.
@@ -842,6 +838,8 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-03](PHASE_PROGRESS.md#exp-03). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+**EXP-03 execution:** VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source `ac82ec7209de0ec5e0154947193cafcb7be856ba`. Own localized title and fixed selectedOfferId; sibling title/language denial. [Evidence/matrix](../expansion/stages/EXP-03.md). Human/live: BLOCKED_EXTERNAL.
 
 ## F039
 
@@ -857,6 +855,8 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-03](PHASE_PROGRESS.md#exp-03). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
 
+**EXP-03 execution:** VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source `ac82ec7209de0ec5e0154947193cafcb7be856ba`. Category hard OR, AND across fields on the same offer. [Evidence/matrix](../expansion/stages/EXP-03.md). Human/live: BLOCKED_EXTERNAL.
+
 ## F040
 
 **Фильтрация по возрасту** — IMPLEMENTED_WITH_LIMITATIONS.
@@ -870,6 +870,8 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-03](PHASE_PROGRESS.md#exp-03). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+**EXP-03 execution:** VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source `ac82ec7209de0ec5e0154947193cafcb7be856ba`. All5 age groups: inclusive endpoints, partial unknown, disjoint fail. [Evidence/matrix](../expansion/stages/EXP-03.md). Human/live: BLOCKED_EXTERNAL.
 
 ## F041
 
@@ -885,6 +887,8 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-03](PHASE_PROGRESS.md#exp-03). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
 
+**EXP-03 execution:** VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source `ac82ec7209de0ec5e0154947193cafcb7be856ba`. Hard/soft language; missing/future/source unknown. [Evidence/matrix](../expansion/stages/EXP-03.md). Human/live: BLOCKED_EXTERNAL.
+
 ## F042
 
 **Фильтрация по формату** — IMPLEMENTED_WITH_LIMITATIONS.
@@ -898,6 +902,8 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-03](PHASE_PROGRESS.md#exp-03). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+**EXP-03 execution:** VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source `ac82ec7209de0ec5e0154947193cafcb7be856ba`. Hard format pass/fail/unknown; independent per offer. [Evidence/matrix](../expansion/stages/EXP-03.md). Human/live: BLOCKED_EXTERNAL.
 
 ## F043
 
@@ -913,6 +919,8 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-03](PHASE_PROGRESS.md#exp-03). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
 
+**EXP-03 execution:** VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source `ac82ec7209de0ec5e0154947193cafcb7be856ba`. Hard district; online-only inactive, online cannot assert offline district. [Evidence/matrix](../expansion/stages/EXP-03.md). Human/live: BLOCKED_EXTERNAL.
+
 ## F044
 
 **Фильтрация по бюджету** — IMPLEMENTED_WITH_LIMITATIONS.
@@ -926,6 +934,8 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-03](PHASE_PROGRESS.md#exp-03). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+**EXP-03 execution:** VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source `ac82ec7209de0ec5e0154947193cafcb7be856ba`. Hard/soft budget;6000/6001 and100000 boundaries. [Evidence/matrix](../expansion/stages/EXP-03.md). Human/live: BLOCKED_EXTERNAL.
 
 ## F045
 
@@ -941,6 +951,8 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-03](PHASE_PROGRESS.md#exp-03). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
 
+**EXP-03 execution:** VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source `ac82ec7209de0ec5e0154947193cafcb7be856ba`. Unknown price=null/incomplete for hard0; never free or pass. [Evidence/matrix](../expansion/stages/EXP-03.md). Human/live: BLOCKED_EXTERNAL.
+
 ## F046
 
 **Учёт бесплатных услуг** — IMPLEMENTED_WITH_LIMITATIONS.
@@ -954,6 +966,8 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-03](PHASE_PROGRESS.md#exp-03). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+**EXP-03 execution:** VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source `ac82ec7209de0ec5e0154947193cafcb7be856ba`. Explicit free0 passes hard0 if current; stale free does not. [Evidence/matrix](../expansion/stages/EXP-03.md). Human/live: BLOCKED_EXTERNAL.
 
 ## F047
 
@@ -969,6 +983,8 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-03](PHASE_PROGRESS.md#exp-03). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
 
+**EXP-03 execution:** VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source `ac82ec7209de0ec5e0154947193cafcb7be856ba`. Availability preference; true/false/null/stale/future, no slot or booking claim. [Evidence/matrix](../expansion/stages/EXP-03.md). Human/live: BLOCKED_EXTERNAL.
+
 ## F048
 
 **Комбинация фильтров** — IMPLEMENTED_WITH_LIMITATIONS.
@@ -982,6 +998,8 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-03](PHASE_PROGRESS.md#exp-03). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+**EXP-03 execution:** VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source `ac82ec7209de0ec5e0154947193cafcb7be856ba`. Actual combined-filter UI and200 seeded four-offer hard oracle. [Evidence/matrix](../expansion/stages/EXP-03.md). Human/live: BLOCKED_EXTERNAL.
 
 ## F049
 
@@ -997,6 +1015,8 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-03](PHASE_PROGRESS.md#exp-03). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
 
+**EXP-03 execution:** VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source `ac82ec7209de0ec5e0154947193cafcb7be856ba`. Draft reset/cancel and explicit full applied reset retain locale. [Evidence/matrix](../expansion/stages/EXP-03.md). Human/live: BLOCKED_EXTERNAL.
+
 ## F050
 
 **Hard constraints** — IMPLEMENTED_WITH_LIMITATIONS.
@@ -1010,6 +1030,8 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-03](PHASE_PROGRESS.md#exp-03). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+**EXP-03 execution:** VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source `ac82ec7209de0ec5e0154947193cafcb7be856ba`. Fail dominates unknown and soft score; unknown never exact. [Evidence/matrix](../expansion/stages/EXP-03.md). Human/live: BLOCKED_EXTERNAL.
 
 ## F051
 
@@ -1025,6 +1047,8 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-03](PHASE_PROGRESS.md#exp-03). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
 
+**EXP-03 execution:** VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source `ac82ec7209de0ec5e0154947193cafcb7be856ba`. Soft rank never enlarges hard eligibility; persisted soft edits. [Evidence/matrix](../expansion/stages/EXP-03.md). Human/live: BLOCKED_EXTERNAL.
+
 ## F052
 
 **Расчёт matching score** — IMPLEMENTED_WITH_LIMITATIONS.
@@ -1038,6 +1062,8 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-03](PHASE_PROGRESS.md#exp-03). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+**EXP-03 execution:** VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source `ac82ec7209de0ec5e0154947193cafcb7be856ba`. Request-wide denominator100, exact score100, partial72.5; neutral null. [Evidence/matrix](../expansion/stages/EXP-03.md). Human/live: BLOCKED_EXTERNAL.
 
 ## F053
 
@@ -1053,6 +1079,8 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-03](PHASE_PROGRESS.md#exp-03). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
 
+**EXP-03 execution:** VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source `ac82ec7209de0ec5e0154947193cafcb7be856ba`. Coverage independent of score; false known; unknown loses coverage. [Evidence/matrix](../expansion/stages/EXP-03.md). Human/live: BLOCKED_EXTERNAL.
+
 ## F054
 
 **Объяснение соответствия** — IMPLEMENTED_WITH_LIMITATIONS.
@@ -1066,6 +1094,8 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-03](PHASE_PROGRESS.md#exp-03). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+**EXP-03 execution:** VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source `ac82ec7209de0ec5e0154947193cafcb7be856ba`. Same-offer evidence and typed RU/KK match/unknown/mismatch; stale explanations. [Evidence/matrix](../expansion/stages/EXP-03.md). Human/live: BLOCKED_EXTERNAL.
 
 ## F055
 
@@ -1081,6 +1111,8 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-03](PHASE_PROGRESS.md#exp-03). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
 
+**EXP-03 execution:** VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source `ac82ec7209de0ec5e0154947193cafcb7be856ba`. Exact/incomplete separated; specialist counted once; no hard failures in incomplete. [Evidence/matrix](../expansion/stages/EXP-03.md). Human/live: BLOCKED_EXTERNAL.
+
 ## F056
 
 **Проверка актуальности информации** — IMPLEMENTED_WITH_LIMITATIONS.
@@ -1094,6 +1126,8 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-03](PHASE_PROGRESS.md#exp-03). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+**EXP-03 execution:** VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source `ac82ec7209de0ec5e0154947193cafcb7be856ba`. Independent TTL/exact boundary/future/missing/source; updatedAt cannot refresh or verify. [Evidence/matrix](../expansion/stages/EXP-03.md). Human/live: BLOCKED_EXTERNAL.
 
 ## F057
 
@@ -1109,6 +1143,8 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-03](PHASE_PROGRESS.md#exp-03). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
 
+**EXP-03 execution:** VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source `ac82ec7209de0ec5e0154947193cafcb7be856ba`. Ordinal ID ties, reversed permutations, repeated search; price/district ordering. [Evidence/matrix](../expansion/stages/EXP-03.md). Human/live: BLOCKED_EXTERNAL.
+
 ## F058
 
 **Обработка отсутствия результатов** — IMPLEMENTED_WITH_LIMITATIONS.
@@ -1122,6 +1158,8 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-03](PHASE_PROGRESS.md#exp-03). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+**EXP-03 execution:** VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source `ac82ec7209de0ec5e0154947193cafcb7be856ba`. Exact0 and incomplete stay honest through cancel/locale/reload; manual actions only. [Evidence/matrix](../expansion/stages/EXP-03.md). Human/live: BLOCKED_EXTERNAL.
 
 ## F059
 
@@ -1137,6 +1175,8 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-03](PHASE_PROGRESS.md#exp-03). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
 
+**EXP-03 execution:** VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source `ac82ec7209de0ec5e0154947193cafcb7be856ba`. Same-tab applied conditions/IDs/sort persist through profile/compare/history/reload. [Evidence/matrix](../expansion/stages/EXP-03.md). Human/live: BLOCKED_EXTERNAL.
+
 ## F060
 
 **Защита от смешивания условий разных услуг одного специалиста** — IMPLEMENTED_WITH_LIMITATIONS.
@@ -1150,6 +1190,8 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-03](PHASE_PROGRESS.md#exp-03). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+**EXP-03 execution:** VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO); source `ac82ec7209de0ec5e0154947193cafcb7be856ba`. Adversarial siblings: attributes/title/category never combine;200 seeded catalogs. [Evidence/matrix](../expansion/stages/EXP-03.md). Human/live: BLOCKED_EXTERNAL.
 
 ## F061
 

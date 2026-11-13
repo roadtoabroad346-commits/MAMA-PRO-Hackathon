@@ -3722,7 +3722,7 @@
         "id": "EXP-03-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "Human parent comprehension/native KK/real AT/physical-device review NOT_VERIFIED; live BLOCKED_EXTERNAL. F059 is same-tab conditions, not F161 saved-search CRUD.",
     "required_tests": {
       "phase_ref": "EXP-03",
       "field": "required_tests"
@@ -3733,14 +3733,26 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-03.md",
+    "last_verified_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 274
     },
     "research_line": 381,
-    "registry_line": 39
+    "registry_line": 39,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "source_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "status": "VERIFIED_DONE",
+      "tests": [
+        "tests/search.test.ts",
+        "tests/e2e/search.spec.ts"
+      ],
+      "behavior": "NFKC/name/finite RU/KK aliases, literal query and current input",
+      "human_status": "BLOCKED_EXTERNAL"
+    }
   },
   {
     "id": "F038",
@@ -3826,7 +3838,7 @@
         "id": "EXP-03-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "Human parent comprehension/native KK/real AT/physical-device review NOT_VERIFIED; live BLOCKED_EXTERNAL. F059 is same-tab conditions, not F161 saved-search CRUD.",
     "required_tests": {
       "phase_ref": "EXP-03",
       "field": "required_tests"
@@ -3837,14 +3849,26 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-03.md",
+    "last_verified_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 275
     },
     "research_line": 382,
-    "registry_line": 40
+    "registry_line": 40,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "source_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "status": "VERIFIED_DONE",
+      "tests": [
+        "tests/exp03.test.ts",
+        "tests/e2e/exp03.spec.ts"
+      ],
+      "behavior": "Own localized title and fixed selectedOfferId; sibling title/language denial",
+      "human_status": "BLOCKED_EXTERNAL"
+    }
   },
   {
     "id": "F039",
@@ -3930,7 +3954,7 @@
         "id": "EXP-03-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "Human parent comprehension/native KK/real AT/physical-device review NOT_VERIFIED; live BLOCKED_EXTERNAL. F059 is same-tab conditions, not F161 saved-search CRUD.",
     "required_tests": {
       "phase_ref": "EXP-03",
       "field": "required_tests"
@@ -3941,14 +3965,26 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-03.md",
+    "last_verified_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 276
     },
     "research_line": 383,
-    "registry_line": 41
+    "registry_line": 41,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "source_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "status": "VERIFIED_DONE",
+      "tests": [
+        "tests/search.test.ts",
+        "tests/e2e/exp03.spec.ts"
+      ],
+      "behavior": "Category hard OR, AND across fields on the same offer",
+      "human_status": "BLOCKED_EXTERNAL"
+    }
   },
   {
     "id": "F040",
@@ -4034,7 +4070,7 @@
         "id": "EXP-03-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "Human parent comprehension/native KK/real AT/physical-device review NOT_VERIFIED; live BLOCKED_EXTERNAL. F059 is same-tab conditions, not F161 saved-search CRUD.",
     "required_tests": {
       "phase_ref": "EXP-03",
       "field": "required_tests"
@@ -4045,14 +4081,26 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-03.md",
+    "last_verified_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 277
     },
     "research_line": 384,
-    "registry_line": 42
+    "registry_line": 42,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "source_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "status": "VERIFIED_DONE",
+      "tests": [
+        "tests/exp03.test.ts",
+        "tests/matching.test.ts"
+      ],
+      "behavior": "All5 age groups: inclusive endpoints, partial unknown, disjoint fail",
+      "human_status": "BLOCKED_EXTERNAL"
+    }
   },
   {
     "id": "F041",
@@ -4138,7 +4186,7 @@
         "id": "EXP-03-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "Human parent comprehension/native KK/real AT/physical-device review NOT_VERIFIED; live BLOCKED_EXTERNAL. F059 is same-tab conditions, not F161 saved-search CRUD.",
     "required_tests": {
       "phase_ref": "EXP-03",
       "field": "required_tests"
@@ -4149,14 +4197,26 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-03.md",
+    "last_verified_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 278
     },
     "research_line": 385,
-    "registry_line": 43
+    "registry_line": 43,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "source_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "status": "VERIFIED_DONE",
+      "tests": [
+        "tests/matching.test.ts",
+        "tests/exp03.test.ts"
+      ],
+      "behavior": "Hard/soft language; missing/future/source unknown",
+      "human_status": "BLOCKED_EXTERNAL"
+    }
   },
   {
     "id": "F042",
@@ -4242,7 +4302,7 @@
         "id": "EXP-03-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "Human parent comprehension/native KK/real AT/physical-device review NOT_VERIFIED; live BLOCKED_EXTERNAL. F059 is same-tab conditions, not F161 saved-search CRUD.",
     "required_tests": {
       "phase_ref": "EXP-03",
       "field": "required_tests"
@@ -4253,14 +4313,26 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-03.md",
+    "last_verified_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 279
     },
     "research_line": 386,
-    "registry_line": 44
+    "registry_line": 44,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "source_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "status": "VERIFIED_DONE",
+      "tests": [
+        "tests/matching.test.ts",
+        "tests/exp03.test.ts"
+      ],
+      "behavior": "Hard format pass/fail/unknown; independent per offer",
+      "human_status": "BLOCKED_EXTERNAL"
+    }
   },
   {
     "id": "F043",
@@ -4346,7 +4418,7 @@
         "id": "EXP-03-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "Human parent comprehension/native KK/real AT/physical-device review NOT_VERIFIED; live BLOCKED_EXTERNAL. F059 is same-tab conditions, not F161 saved-search CRUD.",
     "required_tests": {
       "phase_ref": "EXP-03",
       "field": "required_tests"
@@ -4357,14 +4429,27 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-03.md",
+    "last_verified_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 280
     },
     "research_line": 387,
-    "registry_line": 45
+    "registry_line": 45,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "source_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "status": "VERIFIED_DONE",
+      "tests": [
+        "tests/matching.test.ts",
+        "tests/search.test.ts",
+        "tests/e2e/exp03.spec.ts"
+      ],
+      "behavior": "Hard district; online-only inactive, online cannot assert offline district",
+      "human_status": "BLOCKED_EXTERNAL"
+    }
   },
   {
     "id": "F044",
@@ -4450,7 +4535,7 @@
         "id": "EXP-03-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "Human parent comprehension/native KK/real AT/physical-device review NOT_VERIFIED; live BLOCKED_EXTERNAL. F059 is same-tab conditions, not F161 saved-search CRUD.",
     "required_tests": {
       "phase_ref": "EXP-03",
       "field": "required_tests"
@@ -4461,14 +4546,26 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-03.md",
+    "last_verified_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 281
     },
     "research_line": 388,
-    "registry_line": 46
+    "registry_line": 46,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "source_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "status": "VERIFIED_DONE",
+      "tests": [
+        "tests/exp03.test.ts",
+        "tests/e2e/exp03.spec.ts"
+      ],
+      "behavior": "Hard/soft budget;6000/6001 and100000 boundaries",
+      "human_status": "BLOCKED_EXTERNAL"
+    }
   },
   {
     "id": "F045",
@@ -4554,7 +4651,7 @@
         "id": "EXP-03-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "Human parent comprehension/native KK/real AT/physical-device review NOT_VERIFIED; live BLOCKED_EXTERNAL. F059 is same-tab conditions, not F161 saved-search CRUD.",
     "required_tests": {
       "phase_ref": "EXP-03",
       "field": "required_tests"
@@ -4565,14 +4662,26 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-03.md",
+    "last_verified_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 282
     },
     "research_line": 389,
-    "registry_line": 47
+    "registry_line": 47,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "source_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "status": "VERIFIED_DONE",
+      "tests": [
+        "tests/exp03.test.ts",
+        "tests/e2e/exp03.spec.ts"
+      ],
+      "behavior": "Unknown price=null/incomplete for hard0; never free or pass",
+      "human_status": "BLOCKED_EXTERNAL"
+    }
   },
   {
     "id": "F046",
@@ -4658,7 +4767,7 @@
         "id": "EXP-03-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "Human parent comprehension/native KK/real AT/physical-device review NOT_VERIFIED; live BLOCKED_EXTERNAL. F059 is same-tab conditions, not F161 saved-search CRUD.",
     "required_tests": {
       "phase_ref": "EXP-03",
       "field": "required_tests"
@@ -4669,14 +4778,26 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-03.md",
+    "last_verified_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 283
     },
     "research_line": 390,
-    "registry_line": 48
+    "registry_line": 48,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "source_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "status": "VERIFIED_DONE",
+      "tests": [
+        "tests/exp03.test.ts",
+        "tests/e2e/exp03.spec.ts"
+      ],
+      "behavior": "Explicit free0 passes hard0 if current; stale free does not",
+      "human_status": "BLOCKED_EXTERNAL"
+    }
   },
   {
     "id": "F047",
@@ -4762,7 +4883,7 @@
         "id": "EXP-03-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "Human parent comprehension/native KK/real AT/physical-device review NOT_VERIFIED; live BLOCKED_EXTERNAL. F059 is same-tab conditions, not F161 saved-search CRUD.",
     "required_tests": {
       "phase_ref": "EXP-03",
       "field": "required_tests"
@@ -4773,14 +4894,27 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-03.md",
+    "last_verified_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 284
     },
     "research_line": 391,
-    "registry_line": 49
+    "registry_line": 49,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "source_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "status": "VERIFIED_DONE",
+      "tests": [
+        "tests/matching.test.ts",
+        "tests/exp03.test.ts",
+        "tests/e2e/exp03.spec.ts"
+      ],
+      "behavior": "Availability preference; true/false/null/stale/future, no slot or booking claim",
+      "human_status": "BLOCKED_EXTERNAL"
+    }
   },
   {
     "id": "F048",
@@ -4866,7 +5000,7 @@
         "id": "EXP-03-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "Human parent comprehension/native KK/real AT/physical-device review NOT_VERIFIED; live BLOCKED_EXTERNAL. F059 is same-tab conditions, not F161 saved-search CRUD.",
     "required_tests": {
       "phase_ref": "EXP-03",
       "field": "required_tests"
@@ -4877,14 +5011,27 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-03.md",
+    "last_verified_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 285
     },
     "research_line": 392,
-    "registry_line": 50
+    "registry_line": 50,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "source_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "status": "VERIFIED_DONE",
+      "tests": [
+        "tests/search.test.ts",
+        "tests/exp03.test.ts",
+        "tests/e2e/exp03.spec.ts"
+      ],
+      "behavior": "Actual combined-filter UI and200 seeded four-offer hard oracle",
+      "human_status": "BLOCKED_EXTERNAL"
+    }
   },
   {
     "id": "F049",
@@ -4970,7 +5117,7 @@
         "id": "EXP-03-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "Human parent comprehension/native KK/real AT/physical-device review NOT_VERIFIED; live BLOCKED_EXTERNAL. F059 is same-tab conditions, not F161 saved-search CRUD.",
     "required_tests": {
       "phase_ref": "EXP-03",
       "field": "required_tests"
@@ -4981,14 +5128,26 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-03.md",
+    "last_verified_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 286
     },
     "research_line": 393,
-    "registry_line": 51
+    "registry_line": 51,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "source_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "status": "VERIFIED_DONE",
+      "tests": [
+        "tests/e2e/search.spec.ts",
+        "tests/e2e/exp03.spec.ts"
+      ],
+      "behavior": "Draft reset/cancel and explicit full applied reset retain locale",
+      "human_status": "BLOCKED_EXTERNAL"
+    }
   },
   {
     "id": "F050",
@@ -5074,7 +5233,7 @@
         "id": "EXP-03-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "Human parent comprehension/native KK/real AT/physical-device review NOT_VERIFIED; live BLOCKED_EXTERNAL. F059 is same-tab conditions, not F161 saved-search CRUD.",
     "required_tests": {
       "phase_ref": "EXP-03",
       "field": "required_tests"
@@ -5085,14 +5244,26 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-03.md",
+    "last_verified_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 287
     },
     "research_line": 394,
-    "registry_line": 52
+    "registry_line": 52,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "source_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "status": "VERIFIED_DONE",
+      "tests": [
+        "tests/exp03.test.ts",
+        "tests/matching.test.ts"
+      ],
+      "behavior": "Fail dominates unknown and soft score; unknown never exact",
+      "human_status": "BLOCKED_EXTERNAL"
+    }
   },
   {
     "id": "F051",
@@ -5178,7 +5349,7 @@
         "id": "EXP-03-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "Human parent comprehension/native KK/real AT/physical-device review NOT_VERIFIED; live BLOCKED_EXTERNAL. F059 is same-tab conditions, not F161 saved-search CRUD.",
     "required_tests": {
       "phase_ref": "EXP-03",
       "field": "required_tests"
@@ -5189,14 +5360,26 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-03.md",
+    "last_verified_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 288
     },
     "research_line": 395,
-    "registry_line": 53
+    "registry_line": 53,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "source_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "status": "VERIFIED_DONE",
+      "tests": [
+        "tests/exp03.test.ts",
+        "tests/e2e/exp02.spec.ts"
+      ],
+      "behavior": "Soft rank never enlarges hard eligibility; persisted soft edits",
+      "human_status": "BLOCKED_EXTERNAL"
+    }
   },
   {
     "id": "F052",
@@ -5282,7 +5465,7 @@
         "id": "EXP-03-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "Human parent comprehension/native KK/real AT/physical-device review NOT_VERIFIED; live BLOCKED_EXTERNAL. F059 is same-tab conditions, not F161 saved-search CRUD.",
     "required_tests": {
       "phase_ref": "EXP-03",
       "field": "required_tests"
@@ -5293,14 +5476,26 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-03.md",
+    "last_verified_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 289
     },
     "research_line": 396,
-    "registry_line": 54
+    "registry_line": 54,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "source_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "status": "VERIFIED_DONE",
+      "tests": [
+        "tests/exp03.test.ts",
+        "tests/matching.test.ts"
+      ],
+      "behavior": "Request-wide denominator100, exact score100, partial72.5; neutral null",
+      "human_status": "BLOCKED_EXTERNAL"
+    }
   },
   {
     "id": "F053",
@@ -5386,7 +5581,7 @@
         "id": "EXP-03-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "Human parent comprehension/native KK/real AT/physical-device review NOT_VERIFIED; live BLOCKED_EXTERNAL. F059 is same-tab conditions, not F161 saved-search CRUD.",
     "required_tests": {
       "phase_ref": "EXP-03",
       "field": "required_tests"
@@ -5397,14 +5592,26 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-03.md",
+    "last_verified_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 290
     },
     "research_line": 397,
-    "registry_line": 55
+    "registry_line": 55,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "source_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "status": "VERIFIED_DONE",
+      "tests": [
+        "tests/exp03.test.ts",
+        "tests/matching.test.ts"
+      ],
+      "behavior": "Coverage independent of score; false known; unknown loses coverage",
+      "human_status": "BLOCKED_EXTERNAL"
+    }
   },
   {
     "id": "F054",
@@ -5490,7 +5697,7 @@
         "id": "EXP-03-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "Human parent comprehension/native KK/real AT/physical-device review NOT_VERIFIED; live BLOCKED_EXTERNAL. F059 is same-tab conditions, not F161 saved-search CRUD.",
     "required_tests": {
       "phase_ref": "EXP-03",
       "field": "required_tests"
@@ -5501,14 +5708,27 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-03.md",
+    "last_verified_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 291
     },
     "research_line": 398,
-    "registry_line": 56
+    "registry_line": 56,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "source_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "status": "VERIFIED_DONE",
+      "tests": [
+        "tests/matching.test.ts",
+        "tests/exp03.test.ts",
+        "tests/e2e/exp03.spec.ts"
+      ],
+      "behavior": "Same-offer evidence and typed RU/KK match/unknown/mismatch; stale explanations",
+      "human_status": "BLOCKED_EXTERNAL"
+    }
   },
   {
     "id": "F055",
@@ -5594,7 +5814,7 @@
         "id": "EXP-03-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "Human parent comprehension/native KK/real AT/physical-device review NOT_VERIFIED; live BLOCKED_EXTERNAL. F059 is same-tab conditions, not F161 saved-search CRUD.",
     "required_tests": {
       "phase_ref": "EXP-03",
       "field": "required_tests"
@@ -5605,14 +5825,27 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-03.md",
+    "last_verified_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 292
     },
     "research_line": 399,
-    "registry_line": 57
+    "registry_line": 57,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "source_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "status": "VERIFIED_DONE",
+      "tests": [
+        "tests/search.test.ts",
+        "tests/exp03.test.ts",
+        "tests/e2e/search.spec.ts"
+      ],
+      "behavior": "Exact/incomplete separated; specialist counted once; no hard failures in incomplete",
+      "human_status": "BLOCKED_EXTERNAL"
+    }
   },
   {
     "id": "F056",
@@ -5698,7 +5931,7 @@
         "id": "EXP-03-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "Human parent comprehension/native KK/real AT/physical-device review NOT_VERIFIED; live BLOCKED_EXTERNAL. F059 is same-tab conditions, not F161 saved-search CRUD.",
     "required_tests": {
       "phase_ref": "EXP-03",
       "field": "required_tests"
@@ -5709,14 +5942,27 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-03.md",
+    "last_verified_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 293
     },
     "research_line": 400,
-    "registry_line": 58
+    "registry_line": 58,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "source_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "status": "VERIFIED_DONE",
+      "tests": [
+        "tests/matching.test.ts",
+        "tests/exp03.test.ts",
+        "tests/e2e/profile.spec.ts"
+      ],
+      "behavior": "Independent TTL/exact boundary/future/missing/source; updatedAt cannot refresh or verify",
+      "human_status": "BLOCKED_EXTERNAL"
+    }
   },
   {
     "id": "F057",
@@ -5802,7 +6048,7 @@
         "id": "EXP-03-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "Human parent comprehension/native KK/real AT/physical-device review NOT_VERIFIED; live BLOCKED_EXTERNAL. F059 is same-tab conditions, not F161 saved-search CRUD.",
     "required_tests": {
       "phase_ref": "EXP-03",
       "field": "required_tests"
@@ -5813,14 +6059,27 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-03.md",
+    "last_verified_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 294
     },
     "research_line": 401,
-    "registry_line": 59
+    "registry_line": 59,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "source_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "status": "VERIFIED_DONE",
+      "tests": [
+        "tests/search.test.ts",
+        "tests/exp03.test.ts",
+        "tests/e2e/search.spec.ts"
+      ],
+      "behavior": "Ordinal ID ties, reversed permutations, repeated search; price/district ordering",
+      "human_status": "BLOCKED_EXTERNAL"
+    }
   },
   {
     "id": "F058",
@@ -5906,7 +6165,7 @@
         "id": "EXP-03-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "Human parent comprehension/native KK/real AT/physical-device review NOT_VERIFIED; live BLOCKED_EXTERNAL. F059 is same-tab conditions, not F161 saved-search CRUD.",
     "required_tests": {
       "phase_ref": "EXP-03",
       "field": "required_tests"
@@ -5917,14 +6176,26 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-03.md",
+    "last_verified_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 295
     },
     "research_line": 402,
-    "registry_line": 60
+    "registry_line": 60,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "source_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "status": "VERIFIED_DONE",
+      "tests": [
+        "tests/e2e/exp03.spec.ts",
+        "tests/e2e/search.spec.ts"
+      ],
+      "behavior": "Exact0 and incomplete stay honest through cancel/locale/reload; manual actions only",
+      "human_status": "BLOCKED_EXTERNAL"
+    }
   },
   {
     "id": "F059",
@@ -6010,7 +6281,7 @@
         "id": "EXP-03-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "Human parent comprehension/native KK/real AT/physical-device review NOT_VERIFIED; live BLOCKED_EXTERNAL. F059 is same-tab conditions, not F161 saved-search CRUD.",
     "required_tests": {
       "phase_ref": "EXP-03",
       "field": "required_tests"
@@ -6021,14 +6292,27 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-03.md",
+    "last_verified_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 296
     },
     "research_line": 403,
-    "registry_line": 61
+    "registry_line": 61,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "source_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "status": "VERIFIED_DONE",
+      "tests": [
+        "tests/e2e/exp03.spec.ts",
+        "tests/e2e/search.spec.ts",
+        "tests/session.test.ts"
+      ],
+      "behavior": "Same-tab applied conditions/IDs/sort persist through profile/compare/history/reload",
+      "human_status": "BLOCKED_EXTERNAL"
+    }
   },
   {
     "id": "F060",
@@ -6114,7 +6398,7 @@
         "id": "EXP-03-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "Human parent comprehension/native KK/real AT/physical-device review NOT_VERIFIED; live BLOCKED_EXTERNAL. F059 is same-tab conditions, not F161 saved-search CRUD.",
     "required_tests": {
       "phase_ref": "EXP-03",
       "field": "required_tests"
@@ -6125,14 +6409,27 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-03.md",
+    "last_verified_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 297
     },
     "research_line": 404,
-    "registry_line": 62
+    "registry_line": 62,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "source_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "status": "VERIFIED_DONE",
+      "tests": [
+        "tests/exp03.test.ts",
+        "tests/matching.test.ts",
+        "tests/e2e/exp03.spec.ts"
+      ],
+      "behavior": "Adversarial siblings: attributes/title/category never combine;200 seeded catalogs",
+      "human_status": "BLOCKED_EXTERNAL"
+    }
   },
   {
     "id": "F061",
