@@ -1,5 +1,7 @@
 # F000–F230: состояние функций
 
+EXP-03 C CATALOG_UX_VERIFIED:14 new browser cases RU/KK PASS,196 unit/integration PASS, build PASS; D final benchmarks/regression/closure pending.
+
 EXP-03 B: 42 focused tests including200 seeded sibling catalogs PASS; full196 PASS. F038/title, F056/clock and F057/ordinal ties fixed. Catalog/UX and final benchmarks pending; technical closure NOT_VERIFIED.
 
 EXP-03 checkpoint A: contracts audited, baseline154 PASS; F037–F060 NOT_VERIFIED for this task until B/C/D. See [stage](../expansion/stages/EXP-03.md).

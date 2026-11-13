@@ -1,0 +1,25 @@
+[WebServer] (node:3152) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 14 tests using 2 workers
+
+(node:3172) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3170) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 tests/e2e/exp03.spec.ts:34:3 › EXP-03 ru: own service title selects one offer and cannot borrow a sibling language (2.4s)
+  ✓   1 tests/e2e/exp03.spec.ts:51:3 › EXP-03 ru: combined filters, price/age boundary, soft availability and explicit reset (3.3s)
+  ✓   4 tests/e2e/exp03.spec.ts:99:3 › EXP-03 ru: free zero is exact, missing price is incomplete and stale is never a budget match (1.5s)
+  ✓   3 tests/e2e/exp03.spec.ts:77:3 › EXP-03 ru: zero results never relax hard conditions through incomplete, cancel, language switch or reload (2.6s)
+  ✓   5 tests/e2e/exp03.spec.ts:116:3 › EXP-03 ru: applied query/sort/filters survive profile, comparison, history and reload (3.2s)
+  ✓   6 tests/e2e/exp03.spec.ts:136:3 › EXP-03 ru: mobile reflow, long query, text200%, keyboard modal, focus restore and reduced motion (4.0s)
+  ✓   7 tests/e2e/exp03.spec.ts:167:3 › EXP-03 ru: query injection stays text and never creates markup or outbound search requests (1.3s)
+  ✓   8 tests/e2e/exp03.spec.ts:34:3 › EXP-03 kk: own service title selects one offer and cannot borrow a sibling language (1.9s)
+  ✓   9 tests/e2e/exp03.spec.ts:51:3 › EXP-03 kk: combined filters, price/age boundary, soft availability and explicit reset (2.8s)
+  ✓  10 tests/e2e/exp03.spec.ts:77:3 › EXP-03 kk: zero results never relax hard conditions through incomplete, cancel, language switch or reload (2.2s)
+  ✓  11 tests/e2e/exp03.spec.ts:99:3 › EXP-03 kk: free zero is exact, missing price is incomplete and stale is never a budget match (1.7s)
+  ✓  12 tests/e2e/exp03.spec.ts:116:3 › EXP-03 kk: applied query/sort/filters survive profile, comparison, history and reload (2.9s)
+  ✓  14 tests/e2e/exp03.spec.ts:167:3 › EXP-03 kk: query injection stays text and never creates markup or outbound search requests (1.3s)
+  ✓  13 tests/e2e/exp03.spec.ts:136:3 › EXP-03 kk: mobile reflow, long query, text200%, keyboard modal, focus restore and reduced motion (3.7s)
+
+  14 passed (20.9s)

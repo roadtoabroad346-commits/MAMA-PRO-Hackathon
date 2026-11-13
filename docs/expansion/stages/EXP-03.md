@@ -18,6 +18,12 @@ Security: Zod strips nonpublic extra catalog fields and validates IDs/FKs/price/
 
 Reproduced6 FAIL/36 PASS in [red run](../evidence/EXP-03-B-red.log), then corrected SearchService title candidates, ordinal ID ties and invalid inspect clock. [Full check](../evidence/EXP-03-B-check.log): strict TS,196 unit/integration (42 new), historical registry PASS; failed0/skipped0. Added independent seeded hard-language/format/price oracle over200 four-offer sibling catalogs, permutation stability/soft-vs-hard/input immutability, per-offer RU/KK reason provenance, free/unknown/from/stale and budget/age boundaries, invalid inputs/catalogs/literal injection queries. Existing scenario IDs preserved. No changes to matching weights/schema/freshness policy or storage/API. Indexed fields are separate strings, so queries cannot span unrelated attributes.
 
+## C — catalog/UX
+
+RU/KK visible search labels/help and zero-result recovery mention concrete service titles. Reused existing Filters/Catalog/Modal/navigation: no new UI flow or storage schema. [Focused14 E2E](../evidence/EXP-03-C-focused.log) PASS in both locales with0 page errors; combined-filter UI and boundary6000, sibling contamination, free0 vs unknown/stale, honest zero through cancel/locale/reload, profile/compare/history/reload, XSS literal/no query network send,320/360/390/430/reduced motion/text200%/keyboard/Escape/focus. Screenshots `work/exp03/catalog-{ru,kk}-mobile.png` were inspected; text reflows, modal content scrolls and footer actions remain operable. Native browser chrome may receive focus during a native dialog tab cycle; no background control may receive it. Physical zoom/AT is not claimed.
+
+[Strict TS +196 tests](../evidence/EXP-03-C-check.log), [build](../evidence/EXP-03-C-build.log) and [context](../evidence/EXP-03-C-context.json) PASS. Initial C test-harness failure6pass/8fail is retained in work/exp03/C-initial-failed.log; diagnosis/fix recorded in decision log. No product assertions removed. [Full dev regression103/103](../evidence/EXP-03-C-dev.log) also PASS; failed0/skipped0. Dist/pilot/offline and benchmark closure follow in D.
+
 ## Acceptance and verification plan
 
 - AC-01: adversarial sibling offers, isolated inspectOffer and seeded permutation properties must never create a hybrid match.

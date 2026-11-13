@@ -10,7 +10,7 @@ const example: SearchInput = { ...base, needTag: 'speech', ageGroup: 'AGE_3_5', 
 
 test('typing a multiword query retains the space until service normalization', async ({ page }) => {
   await open(page);
-  const query = page.getByLabel('Имя или категория', { exact: true });
+  const query = page.getByLabel('Имя, категория или услуга', { exact: true });
   await query.pressSequentially('Демо-специалист 01');
   await expect(query).toHaveValue('Демо-специалист 01');
   await expect(page.getByTestId('specialist-card')).toHaveCount(1);

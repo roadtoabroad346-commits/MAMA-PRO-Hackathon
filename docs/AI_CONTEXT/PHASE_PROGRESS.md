@@ -1,5 +1,7 @@
 # EXP-00–EXP-24: карта фаз
 
+EXP-03 C CATALOG_UX_VERIFIED:localized service-title discovery, zero/incomplete/freshness/navigation and mobile/keyboard proof. [Stage](../expansion/stages/EXP-03.md). D pending.
+
 EXP-03 B DOMAIN_VERIFIED:196 unit/integration PASS; six reproduced regressions corrected. C/D pending; [stage/evidence](../expansion/stages/EXP-03.md).
 
 EXP-03 A AUDITED; B/C/D pending. Baseline154 PASS, real 20/100/1000 benchmark recorded. [Stage](../expansion/stages/EXP-03.md).

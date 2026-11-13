@@ -4,11 +4,11 @@
   "executionBranch": "codex/exp-03-offer-matching",
   "baseSha": "0ebd5bf206f082db718945096b7abfdeee1fa31b",
   "runtimeSha": null,
-  "lastLocalCommit": "cd1a7a5812ea65bd8bc49ee149bdfe105f0f1773",
-  "lastPushedCommit": "cd1a7a5812ea65bd8bc49ee149bdfe105f0f1773",
+  "lastLocalCommit": "08dd0f9e66333dfdc116b78c43e5642d9552f7d3",
+  "lastPushedCommit": "08dd0f9e66333dfdc116b78c43e5642d9552f7d3",
   "gitObservationScope": "Observed pre-checkpoint values; containing commit SHA cannot be embedded in its own content. Resolve current HEAD and compare ls-remote on resume. Final push receipt reported separately.",
   "currentStage": "EXP-03",
-  "phaseStatus": "B_DOMAIN_VERIFIED_CD_NOT_VERIFIED",
+  "phaseStatus": "C_CATALOG_UX_VERIFIED_D_NOT_VERIFIED",
   "featureIdsTouched": [
     "F037",
     "F038",
@@ -38,11 +38,13 @@
   "sourceCoverage": "F000–F230: 231/231 source anchors; source statuses unchanged",
   "tests": {
     "unit_integration": 196,
-    "focused_new": 42,
-    "initial_red_failed": 6,
+    "focused_new_domain": 42,
+    "focused_new_e2e": 14,
     "failed_final": 0,
     "skipped": 0,
-    "e2e": "NOT_RUN"
+    "build": "PASS",
+    "full_regression": "DEV_PASS_DIST_PILOT_OFFLINE_PENDING",
+    "full_dev": 103
   },
   "blockers": [
     "Original Research DOCX/parity/layout",
@@ -53,7 +55,7 @@
     "Pilot/offline suites not rerun; sources preserved",
     "Remote CI: push branch excluded by existing workflow"
   ],
-  "nextSafeStep": "C catalog UX/E2E; D performance and regression; stop before EXP-04.",
+  "nextSafeStep": "D: production/pilot/offline regression, final benchmarks and closure. Stop before EXP-04.",
   "liveBlocked": true,
   "featureMatrix": "docs/AI_CONTEXT/FEATURE_REGISTRY.json",
   "handoff": "docs/AI_CONTEXT/SESSION_HANDOFF.md",

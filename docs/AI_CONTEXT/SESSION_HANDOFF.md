@@ -1,3 +1,9 @@
+# EXP-03 checkpoint C handoff
+
+LIVE_BLOCKED; synthetic DEMO only. Branch `codex/exp-03-offer-matching`. Last remote B verified `08dd0f9e66333dfdc116b78c43e5642d9552f7d3`. C: localized service-title search label/help,14 acceptance E2E PASS in RU/KK including320–430px and keyboard;196 unit/integration, build and context PASS. No matching/storage/API changes in C. [Stage](../expansion/stages/EXP-03.md).
+
+D remains: dist acceptance, pilot/offline regressions, measured after benchmark20/100/1000, final feature matrix/evidence/remote receipt. Full dev gate103/103 PASS, failed0/skipped0. Screenshots reproducible under work/exp03; no real data. Native KK/parent/real AT/device gates remain BLOCKED_EXTERNAL. EXP-04 must not start without the user's permission. Containing SHA is read from Git after commit/push; no guessed self hash.
+
 # EXP-03 checkpoint B handoff
 
 LIVE_BLOCKED. Branch `codex/exp-03-offer-matching`. Last confirmed remote A: `cd1a7a5812ea65bd8bc49ee149bdfe105f0f1773`; containing commit is resolved after push. B corrects three SearchService defects proven by six red cases. New42 tests/200 seeded catalogs pass; full196 strict TS/unit/integration PASS. [Stage and matrix](../expansion/stages/EXP-03.md); [reviewed baseline changes](../expansion/evidence/EXP-03-verified-changes.json).
