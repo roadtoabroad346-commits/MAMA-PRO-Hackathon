@@ -1,0 +1,857 @@
+[
+  {
+    "path": "tests/domain.test.ts",
+    "line": 21,
+    "text": "it('rejects invalid enums and extra personal fields', () => {"
+  },
+  {
+    "path": "tests/domain.test.ts",
+    "line": 30,
+    "text": "it('neutral is 12 specialists / 20 offers, with no invented preference', () => {"
+  },
+  {
+    "path": "tests/domain.test.ts",
+    "line": 36,
+    "text": "it('A orders offers by declared conditions and never combines two offers', () => {"
+  },
+  {
+    "path": "tests/domain.test.ts",
+    "line": 43,
+    "text": "it('B excludes unknown final prices from strict matches', () => {"
+  },
+  {
+    "path": "tests/domain.test.ts",
+    "line": 49,
+    "text": "it('C stays empty until the user changes conditions', () => {"
+  },
+  {
+    "path": "tests/domain.test.ts",
+    "line": 56,
+    "text": "it('0 is a real hard budget; no automatic clear or fallback', () => {"
+  },
+  {
+    "path": "tests/domain.test.ts",
+    "line": 60,
+    "text": "it('keeps online-only district inactive but applies it to mixed requests (ADR-0012)', () => {"
+  },
+  {
+    "path": "tests/domain.test.ts",
+    "line": 66,
+    "text": "it('language and format preferences retain alternatives', () => {"
+  },
+  {
+    "path": "tests/domain.test.ts",
+    "line": 71,
+    "text": "it('validates catalog rather than silently counting broken records', () => {"
+  },
+  {
+    "path": "tests/domain.test.ts",
+    "line": 81,
+    "text": "it('RU/KK keys and named placeholders agree', () => {"
+  },
+  {
+    "path": "tests/e2e/intake.spec.ts",
+    "line": 32,
+    "text": "test('all steps can be skipped; null is preserved through review, reload and catalog', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/intake.spec.ts",
+    "line": 52,
+    "text": "test('direct path works without intake and supports category/name search', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/intake.spec.ts",
+    "line": 65,
+    "text": "test('review matches complete SearchInput; count equals catalog; locale, Back and editing preserve state', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/intake.spec.ts",
+    "line": 109,
+    "text": "test('Back and browser history preserve answers including invalid numeric draft; language does not change domain', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/intake.spec.ts",
+    "line": 130,
+    "text": "test('budget validates all boundaries, preserves invalid input, accepts zero, supports skip', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/intake.spec.ts",
+    "line": 156,
+    "text": "test('reload restores step and answers; expired/corrupt state resets visibly', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/intake.spec.ts",
+    "line": 176,
+    "text": "test('unavailable sessionStorage uses memory with an honest warning; flow remains usable', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/intake.spec.ts",
+    "line": 191,
+    "text": "test('KK filled route validates budget; category editing updates the same service count', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/intake.spec.ts",
+    "line": 223,
+    "text": "test('write failure and locale storage denial do not crash or silently promise persistence', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/intake.spec.ts",
+    "line": 235,
+    "text": "test('keyboard reaches both entry paths and completes wizard; native radio arrows work', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/intake.spec.ts",
+    "line": 265,
+    "text": "test(`${locale}: no personal fields, mobile reflow and reduced motion`, async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/p0-errors.spec.ts",
+    "line": 5,
+    "text": "test(`${locale}: catalog error and Retry keep document language`, async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/p0-errors.spec.ts",
+    "line": 23,
+    "text": "test(`${locale}: hidden offer IDs are never selectable in profile or request`, async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/p0-keyboard.spec.ts",
+    "line": 13,
+    "text": "test('compare removal and clear keep a stable keyboard focus at 2/1/0', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/p0-keyboard.spec.ts",
+    "line": 31,
+    "text": "test(`${locale}: keyboard-only entry → skipped input → compare → save → cancel dialog`, async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/p0-keyboard.spec.ts",
+    "line": 65,
+    "text": "test('unknown route, compare reload and changed hard conditions stay explicit', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/p0-keyboard.spec.ts",
+    "line": 89,
+    "text": "test('review exposes seven valid term/definition pairs with associated edit controls', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/p0-reflow.spec.ts",
+    "line": 4,
+    "text": "test(`${locale}: 320px with 200% text uses the layout viewport, including header and notices`, async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/p0.spec.ts",
+    "line": 20,
+    "text": "test(`${locale} P0 A: guided route → review → profile → compare → request → durable status`, async ({ page }, info) => {"
+  },
+  {
+    "path": "tests/e2e/p0.spec.ts",
+    "line": 70,
+    "text": "test(`${locale} P0 B: direct catalog → hard filters → compare → exact selection`, async ({ page }, info) => {"
+  },
+  {
+    "path": "tests/e2e/p0.spec.ts",
+    "line": 91,
+    "text": "test(`${locale} P0 C: no exact results → explicit budget reset → retry`, async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/phases28-35.spec.ts",
+    "line": 14,
+    "text": "test('draft preview never replaces applied catalog until review CTA; reload keeps both', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/phases28-35.spec.ts",
+    "line": 41,
+    "text": "test('invalid budget survives Back to review and blocks count/application until repaired', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/phases28-35.spec.ts",
+    "line": 61,
+    "text": "test('unsure topic stays null; mixed district is explicit hard and online-only disables its effect', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/phases28-35.spec.ts",
+    "line": 85,
+    "text": "test('catalog load failure on review is distinct from zero and Retry restores the synthetic draft', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/phases28-35.spec.ts",
+    "line": 103,
+    "text": "test(`${locale} S01–S03 at ${width}px, 200% text, reduced motion and no runtime errors`, async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/profile.spec.ts",
+    "line": 16,
+    "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/profile.spec.ts",
+    "line": 38,
+    "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/profile.spec.ts",
+    "line": 80,
+    "text": "test('unknown age disappears only when another offer supplies it', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/profile.spec.ts",
+    "line": 94,
+    "text": "test('deep link stays neutral even if this tab has search conditions', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/profile.spec.ts",
+    "line": 103,
+    "text": "test('unknown and mismatched IDs show clear not found; hidden offers and profiles cannot be opened', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/profile.spec.ts",
+    "line": 119,
+    "text": "test('passport keeps identity, education, contact and offer data separate with explicit evidence limits', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/profile.spec.ts",
+    "line": 139,
+    "text": "test('partial profile and missing verification remain unknown; unknown and stale prices are explicit', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/profile.spec.ts",
+    "line": 154,
+    "text": "test('expired/future/revoked evidence cannot appear as current source confirmation; private data is never rendered', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/profile.spec.ts",
+    "line": 174,
+    "text": "test('source confirmation remains scoped to its exact offer when switching', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/profile.spec.ts",
+    "line": 189,
+    "text": "test('missing approach and partial service facts remain explicit; free consultation keeps its own unit', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/profile.spec.ts",
+    "line": 207,
+    "text": "test('changing RU/KK inside a profile preserves offer, comparison and request target', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/profile.spec.ts",
+    "line": 222,
+    "text": "test(`${locale}: long name, reflow320, text200, landscape and keyboard service/request/Back`, async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/release.spec.ts",
+    "line": 6,
+    "text": "test(`${locale} release: direct routes, reload, local assets, cancel and clean restart`, async ({ page, request }) => {"
+  },
+  {
+    "path": "tests/e2e/release.spec.ts",
+    "line": 12,
+    "text": "/\\/@vite\\/|\\/@react-refresh|\\/src\\/|\\/node_modules\\//u.test(url.pathname)) violations.push(req.url());"
+  },
+  {
+    "path": "tests/e2e/requests.spec.ts",
+    "line": 39,
+    "text": "test('S08 ack defaults false, has no personal inputs; double click commits once; S09 reload/back/cancel', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/requests.spec.ts",
+    "line": 73,
+    "text": "test('add success then commit abort shows error, no success route or row; reload retries the same key', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/requests.spec.ts",
+    "line": 86,
+    "text": "test('uncertain commit checks the same key and resolves to the actual committed record', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/requests.spec.ts",
+    "line": 106,
+    "text": "test('reload during a lost outcome recovers the existing result, never auto inserts', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/requests.spec.ts",
+    "line": 124,
+    "text": "test('failed cancellation keeps confirmed status and offers retry; reload proves rollback', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/requests.spec.ts",
+    "line": 135,
+    "text": "test('missing and expired request never create records; expired row is removed at startup', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/requests.spec.ts",
+    "line": 154,
+    "text": "test('read failure is not missing or success; denied IndexedDB never saves in memory', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/requests.spec.ts",
+    "line": 166,
+    "text": "test('cleanup needs confirmation, handles abort and preserves other applications and settings', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/requests.spec.ts",
+    "line": 185,
+    "text": "test('KK, keyboard, 320px and 200% text: service, status, cancellation and cleanup stay operable', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/requests.spec.ts",
+    "line": 204,
+    "text": "test('uncertain cleanup refreshes S09 instead of leaving a stale saved claim', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/search.spec.ts",
+    "line": 11,
+    "text": "test('typing a multiword query retains the space until service normalization', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/search.spec.ts",
+    "line": 43,
+    "text": "test('search + category OR and cross-group AND use one applied input', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/search.spec.ts",
+    "line": 64,
+    "text": "test('Cancel, Escape, Close and backdrop discard draft and restore initiating focus', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/search.spec.ts",
+    "line": 84,
+    "text": "test('draft Reset does not apply; Apply publishes all fields atomically', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/search.spec.ts",
+    "line": 112,
+    "text": "test('invalid budget disables Apply and never shows a fabricated preview', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/search.spec.ts",
+    "line": 129,
+    "text": "test('removes just one category chip; full reset retains interface locale', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/search.spec.ts",
+    "line": 144,
+    "text": "test('price/district sorting changes selected offer and keeps counts and explanations aligned', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/search.spec.ts",
+    "line": 157,
+    "text": "test('empty keeps hard conditions; incomplete is an explicit separate action', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/search.spec.ts",
+    "line": 174,
+    "text": "test('compare 1/2/3, fourth rejection, fixed offers, removal and changed conditions', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/search.spec.ts",
+    "line": 200,
+    "text": "test('profile return preserves input, sort, compare, scroll and focus on the same offer', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/search.spec.ts",
+    "line": 217,
+    "text": "test(`${locale}: keyboard focus trap, mobile/landscape reflow, no numeric ratings`, async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/search.spec.ts",
+    "line": 246,
+    "text": "test('rapid text edits end with the newest input; 80-character limit is enforced', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/search.spec.ts",
+    "line": 255,
+    "text": "test('loading reserves cards; corrupted fixtures show error and Retry reloads validated data', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/search.spec.ts",
+    "line": 275,
+    "text": "test('empty opener can disappear after Apply and focus still returns to filters', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/search.spec.ts",
+    "line": 284,
+    "text": "test('direct profile has neutral explanations; mismatched public IDs never substitute another offer', async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/search.spec.ts",
+    "line": 295,
+    "text": "test('compare offer replacement is explicit and a fourth addition also reports the limit inside a profile', async ({ page }) => {"
+  },
+  {
+    "path": "tests/intent-recovery.test.ts",
+    "line": 42,
+    "text": "it('corrupt JSON is cleared and read returns null', () => {"
+  },
+  {
+    "path": "tests/intent-recovery.test.ts",
+    "line": 49,
+    "text": "it('schema-invalid JSON is cleared and read returns null', () => {"
+  },
+  {
+    "path": "tests/intent-recovery.test.ts",
+    "line": 56,
+    "text": "it('a valid attempt survives unchanged', () => {"
+  },
+  {
+    "path": "tests/intent-recovery.test.ts",
+    "line": 62,
+    "text": "it('after corruption a new explicit submit starts a fresh attempt and records it (no false success)', async () => {"
+  },
+  {
+    "path": "tests/intent-recovery.test.ts",
+    "line": 71,
+    "text": "it('genuine storage denial still reports requestIntentError (unchanged honesty)', async () => {"
+  },
+  {
+    "path": "tests/matching.test.ts",
+    "line": 31,
+    "text": "it('not applicable differs from missing, stale and current', () => {"
+  },
+  {
+    "path": "tests/matching.test.ts",
+    "line": 36,
+    "text": "it('a recent copy/profile update never refreshes price or availability', () => {"
+  },
+  {
+    "path": "tests/matching.test.ts",
+    "line": 47,
+    "text": "it('Clock injection changes freshness without changing machine time', () => {"
+  },
+  {
+    "path": "tests/matching.test.ts",
+    "line": 55,
+    "text": "it('contact and document expiry are independent; early revocation wins', () => {"
+  },
+  {
+    "path": "tests/matching.test.ts",
+    "line": 66,
+    "text": "it('catalog boundary normalizes an empty language list to unknown (spec §17.2)', () => {"
+  },
+  {
+    "path": "tests/matching.test.ts",
+    "line": 81,
+    "text": "it('category is hard OR; topic and category use a single need weight', () => {"
+  },
+  {
+    "path": "tests/matching.test.ts",
+    "line": 90,
+    "text": "it('known empty tags differ from unknown/missing-source tags', () => {"
+  },
+  {
+    "path": "tests/matching.test.ts",
+    "line": 96,
+    "text": "it('known false availability reduces score but preserves coverage', () => {"
+  },
+  {
+    "path": "tests/matching.test.ts",
+    "line": 101,
+    "text": "it('mixed-format district retains the same denominator for an online offer', () => {"
+  },
+  {
+    "path": "tests/matching.test.ts",
+    "line": 112,
+    "text": "it('same specialist A ru/offline/4500 and B kk/online/9500 cannot form kk/offline/6000', () => {"
+  },
+  {
+    "path": "tests/matching.test.ts",
+    "line": 126,
+    "text": "it('all reasons carry same-offer evidence, typed RU/KK templates and correct kind', () => {"
+  },
+  {
+    "path": "tests/matching.test.ts",
+    "line": 150,
+    "text": "it('ties are stable under reversal; grouping selects best and counts exact specialist once', () => {"
+  },
+  {
+    "path": "tests/matching.test.ts",
+    "line": 164,
+    "text": "it('hidden/withdrawn specialists and offers never enter public candidates', () => {"
+  },
+  {
+    "path": "tests/matching.test.ts",
+    "line": 173,
+    "text": "it('invalid catalog is an operation error; private extra fields cannot escape projection', () => {"
+  },
+  {
+    "path": "tests/matching.test.ts",
+    "line": 180,
+    "text": "it('stronger hard input cannot enlarge exact set; permutations and repeated requests agree', () => {"
+  },
+  {
+    "path": "tests/matching.test.ts",
+    "line": 196,
+    "text": "it('removing a positive fact cannot improve score or shrink its denominator', () => {"
+  },
+  {
+    "path": "tests/p0.test.ts",
+    "line": 20,
+    "text": "it(`${ageGroup}: inclusive endpoints, partial overlap and unknown are not exact`, () => {"
+  },
+  {
+    "path": "tests/p0.test.ts",
+    "line": 37,
+    "text": "it('hard budget0 accepts only a known free price; empty budget applies no constraint', () => {"
+  },
+  {
+    "path": "tests/p0.test.ts",
+    "line": 50,
+    "text": "it('hard fail never enters incomplete even when another hard field is unknown', () => {"
+  },
+  {
+    "path": "tests/p0.test.ts",
+    "line": 56,
+    "text": "it('isolated reference score/coverage is 100/1, 85/.85, 82.5/1', () => {"
+  },
+  {
+    "path": "tests/pilot-e2e/offline.spec.ts",
+    "line": 2,
+    "text": "test('explicit synthetic saved card survives offline reload; private API and pilot excluded from public caches',async({page,context})=>{"
+  },
+  {
+    "path": "tests/pilot-e2e/offline.spec.ts",
+    "line": 10,
+    "text": "test('map reuses current result, geolocation denied keeps manual search and list alternative',async({page})=>{"
+  },
+  {
+    "path": "tests/pilot-e2e/pilot.spec.ts",
+    "line": 7,
+    "text": "test('synthetic specialist → assigned moderation → contact → confirmed calendar → private summary and task',async({page,context})=>{"
+  },
+  {
+    "path": "tests/pilot-e2e/pilot.spec.ts",
+    "line": 28,
+    "text": "test('server failure keeps fields, no false local success, locale and 320px reflow',async({page})=>{"
+  },
+  {
+    "path": "tests/pilot-e2e/pilot.spec.ts",
+    "line": 34,
+    "text": "test('lost acknowledgement after server commit retries the original operation once',async({page})=>{"
+  },
+  {
+    "path": "tests/pilot-e2e/pilot.spec.ts",
+    "line": 39,
+    "text": "test('keyboard creates a personal event in accessible agenda without appointment confirmation',async({page})=>{"
+  },
+  {
+    "path": "tests/pilot-e2e/pilot.spec.ts",
+    "line": 43,
+    "text": "test('failed logout clears private screen without falsely claiming session revocation',async({page})=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 34,
+    "text": "it('migrates twice without losing records, constraints remain active',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 39,
+    "text": "it('blocks production/test bypass and live modes',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 42,
+    "text": "it('does not allow payload owner, role, verification or arbitrary operation',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 47,
+    "text": "it('publishes only consented public fields, never evidence/consent/contact',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 52,
+    "text": "it('requires assignment and permits needs_changes, resubmission, withdraw',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 59,
+    "text": "it('expires trust facts without permanent verified badge',()=>{publish();at=new Date('2027-01-10T00:00:00Z');expect(service.publicOffers()[0].facts[0].status).toBe('stale');});"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 60,
+    "text": "it('rechecks account active status, does not trust stale actor role',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 66,
+    "text": "it('same key/payload persists across restart, different payload conflicts',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 71,
+    "text": "it('parent B cannot read or change A request and moderator sees no requests',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 75,
+    "text": "it('separates server receipt, sandbox availability, parent report and confirmation',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 82,
+    "text": "it('late jobs cannot reopen cancellation; deletion is separate and scrubs text',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 86,
+    "text": "it('revocation cancels pending processing and confirmed event reminders',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 91,
+    "text": "it('original offer snapshot survives price edit and withdraw',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 94,
+    "text": "it('rate limit is per trusted owner and transaction does not enqueue rejected request',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 100,
+    "text": "it('retains exact instant and IANA zone across year boundary; rejects invalid zone/time',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 104,
+    "text": "it('handles leap-day and DST offsets as instants without server-zone rewriting',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 109,
+    "text": "it('rejects foreign calendar changes and stale edits without overwrite',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 113,
+    "text": "it('edit invalidates old reminder, job retry produces one in-app notice and not delivered',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 118,
+    "text": "it('disabled/cancelled and overdue jobs never notify, scheduler survives restart',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 125,
+    "text": "it('opt-in dedup/unsubscribe, cosmetic moderation timestamp no spam, withdrawal is public-safe',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 131,
+    "text": "it('next action state cannot change request or create meeting; no duplicate action',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 136,
+    "text": "it('denies parent B, moderator and specialist access to diary, rejects mass assignment and oversized text',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 142,
+    "text": "it('private edit conflict and delete scrub content including audit/idempotency copies',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 147,
+    "text": "it('accepts dangerous HTML as literal data, never as executable markup',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 150,
+    "text": "it('denies foreign goal attachment and assignments to unscoped recipients',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 155,
+    "text": "it('links responses to instruction version, permits unable/question and keeps old revisions',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 161,
+    "text": "it('scope revoke applies immediately to old session, while recipient retains authored history',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 165,
+    "text": "it('summary default selection empty and exact selection excludes all unselected data',()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 173,
+    "text": "it('auth/CSRF/origin enforced; guest sees public DTO only, no private HTML fallback',async()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 185,
+    "text": "it('login is rate limited per address (audit F-05): 30/min, 429 afterwards',async()=>{"
+  },
+  {
+    "path": "tests/pilot.test.ts",
+    "line": 195,
+    "text": "it('plots only eligible matching offer IDs; unknown/excluded never becomes map pass',async()=>{"
+  },
+  {
+    "path": "tests/profile.test.ts",
+    "line": 10,
+    "text": "it('defaults by stable ID, independent of fixture order', () => {"
+  },
+  {
+    "path": "tests/profile.test.ts",
+    "line": 15,
+    "text": "it('rejects unknown, wrong-owner, empty, hidden and withdrawn selections without fallback', () => {"
+  },
+  {
+    "path": "tests/profile.test.ts",
+    "line": 31,
+    "text": "it('document seen stays document seen; source confirmation requires source and date', () => {"
+  },
+  {
+    "path": "tests/profile.test.ts",
+    "line": 38,
+    "text": "it('expires reviews, refuses future evidence and preserves revocation', () => {"
+  },
+  {
+    "path": "tests/profile.test.ts",
+    "line": 43,
+    "text": "it('binds offer-data evidence to an existing offer owned by the specialist', () => {"
+  },
+  {
+    "path": "tests/requests.test.ts",
+    "line": 26,
+    "text": "it('commits an allowlisted row, unique key and survives a new repository instance', async () => {"
+  },
+  {
+    "path": "tests/requests.test.ts",
+    "line": 35,
+    "text": "it('add request success followed by transaction abort never resolves as saved', async () => {"
+  },
+  {
+    "path": "tests/requests.test.ts",
+    "line": 46,
+    "text": "it('concurrent duplicate keys return the original result, including its cancellation', async () => {"
+  },
+  {
+    "path": "tests/requests.test.ts",
+    "line": 54,
+    "text": "it('an ID collision with another key is an error, not another successful request', async () => {"
+  },
+  {
+    "path": "tests/requests.test.ts",
+    "line": 58,
+    "text": "it('cancel failure rolls back the status; successful cancellation survives reload', async () => {"
+  },
+  {
+    "path": "tests/requests.test.ts",
+    "line": 72,
+    "text": "it('unknown/expired IDs are absent; retention uses creation time, with a 7 day boundary', async () => {"
+  },
+  {
+    "path": "tests/requests.test.ts",
+    "line": 82,
+    "text": "it('clear fails on abort; a committed clear affects only our store', async () => {"
+  },
+  {
+    "path": "tests/requests.test.ts",
+    "line": 102,
+    "text": "it('unavailable storage and schema mismatch reject rather than fall back to memory', async () => {"
+  },
+  {
+    "path": "tests/requests.test.ts",
+    "line": 114,
+    "text": "it('requires acknowledgement; double click and replay return one committed result', async () => {"
+  },
+  {
+    "path": "tests/requests.test.ts",
+    "line": 125,
+    "text": "it('stays submitting until commit; failure never produces recorded_demo', async () => {"
+  },
+  {
+    "path": "tests/requests.test.ts",
+    "line": 134,
+    "text": "it('reconciles uncertain committed writes by the same key without inserting again', async () => {"
+  },
+  {
+    "path": "tests/requests.test.ts",
+    "line": 144,
+    "text": "it('uncertain absent writes retry the same key, while failed checks never permit a blind write', async () => {"
+  },
+  {
+    "path": "tests/requests.test.ts",
+    "line": 155,
+    "text": "it('cannot switch offer after an unresolved attempt or write without a persisted recovery intent', async () => {"
+  },
+  {
+    "path": "tests/requests.test.ts",
+    "line": 166,
+    "text": "it('cancellation is terminal on replay; uncertain cancellation is checked', async () => {"
+  },
+  {
+    "path": "tests/requests.test.ts",
+    "line": 175,
+    "text": "it('an expired attempt is checked first and requires a separate new action if absent', async () => {"
+  },
+  {
+    "path": "tests/search.test.ts",
+    "line": 15,
+    "text": "it('uses NFKC, case, spacing and ё/е consistently without merging Kazakh letters', () => {"
+  },
+  {
+    "path": "tests/search.test.ts",
+    "line": 28,
+    "text": "it('supports only explicit category aliases; unsupported terms give honest zero', () => {"
+  },
+  {
+    "path": "tests/search.test.ts",
+    "line": 35,
+    "text": "it('OR within categories and AND across groups operate on a single offer', () => {"
+  },
+  {
+    "path": "tests/search.test.ts",
+    "line": 42,
+    "text": "it('incomplete is separate, explained and never includes a hard failure', () => {"
+  },
+  {
+    "path": "tests/search.test.ts",
+    "line": 55,
+    "text": "it('price chooses a concrete offer, places from/stale after exact and uses stable IDs for ties', () => {"
+  },
+  {
+    "path": "tests/search.test.ts",
+    "line": 69,
+    "text": "it('district ranks known mismatch before unknown and does not invent distances', () => {"
+  },
+  {
+    "path": "tests/search.test.ts",
+    "line": 75,
+    "text": "it('district sort keys are precomputed without changing the previous order (F-02)', () => {"
+  },
+  {
+    "path": "tests/search.test.ts",
+    "line": 95,
+    "text": "it('fixed compare/profile selections are re-evaluated by the same classifier', () => {"
+  },
+  {
+    "path": "tests/search.test.ts",
+    "line": 103,
+    "text": "it('preserves verification scope and exposes general unknown facts in neutral results', () => {"
+  },
+  {
+    "path": "tests/session.test.ts",
+    "line": 13,
+    "text": "it('keeps the synthetic intake draft separate from applied input on reload', () => {"
+  },
+  {
+    "path": "tests/session.test.ts",
+    "line": 22,
+    "text": "it('round-trips null and zero distinctly, plus hard flags and step', () => {"
+  },
+  {
+    "path": "tests/session.test.ts",
+    "line": 41,
+    "text": "it('honestly reports read/write denial, with usable memory defaults', () => {"
+  }
+]

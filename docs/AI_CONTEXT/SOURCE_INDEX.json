@@ -1,0 +1,5281 @@
+{
+  "baseline_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+  "note": "Full text structural scan; anchors are discovery aids, not a claim of exhaustive semantic or binary review. Parameterized test titles are not execution totals.",
+  "anchors": [
+    {
+      "path": "README.md",
+      "line": 1,
+      "text": "# Текущая версия: ограниченный пилот 55–67"
+    },
+    {
+      "path": "README.md",
+      "line": 24,
+      "text": "# Қолдау.Жол — фазы 28–35"
+    },
+    {
+      "path": "README.md",
+      "line": 36,
+      "text": "# Қолдау.Жол — приложение фазы 13 и материалы защиты фазы 14"
+    },
+    {
+      "path": "README.md",
+      "line": 51,
+      "text": "## Запуск и build"
+    },
+    {
+      "path": "README.md",
+      "line": 79,
+      "text": "## Check"
+    },
+    {
+      "path": "README.md",
+      "line": 103,
+      "text": "## Demo и reset"
+    },
+    {
+      "path": "README.md",
+      "line": 125,
+      "text": "## Конфигурация и SPA fallback"
+    },
+    {
+      "path": "README.md",
+      "line": 151,
+      "text": "## Ограничения"
+    },
+    {
+      "path": "START_NEXT_PHASE.md",
+      "line": 3,
+      "text": "# Актуальная точка продолжения после фаз28–35"
+    },
+    {
+      "path": "START_NEXT_PHASE.md",
+      "line": 22,
+      "text": "# Начало следующей фазы: сначала восстановить реализацию"
+    },
+    {
+      "path": "START_NEXT_PHASE.md",
+      "line": 28,
+      "text": "## Каноническая точка продолжения"
+    },
+    {
+      "path": "START_NEXT_PHASE.md",
+      "line": 37,
+      "text": "## Если подключённый checkout пуст или открыт на другой ветке"
+    },
+    {
+      "path": "START_NEXT_PHASE.md",
+      "line": 61,
+      "text": "## Что реально есть и где читать"
+    },
+    {
+      "path": "START_NEXT_PHASE.md",
+      "line": 77,
+      "text": "## Запуск и границы"
+    },
+    {
+      "path": "audit-output/00_ENVIRONMENT_REPORT.md",
+      "line": 1,
+      "text": "# 00 — ENVIRONMENT REPORT (Stage 0)"
+    },
+    {
+      "path": "audit-output/00_ENVIRONMENT_REPORT.md",
+      "line": 5,
+      "text": "## 1. Фактическое состояние рабочего каталога"
+    },
+    {
+      "path": "audit-output/00_ENVIRONMENT_REPORT.md",
+      "line": 16,
+      "text": "## 2. Верификация снимка против GitHub"
+    },
+    {
+      "path": "audit-output/00_ENVIRONMENT_REPORT.md",
+      "line": 29,
+      "text": "## 3. Состояние GitHub (проверено через API 2026-11-11)"
+    },
+    {
+      "path": "audit-output/00_ENVIRONMENT_REPORT.md",
+      "line": 31,
+      "text": "### 3.1 Ветки (все, remote)"
+    },
+    {
+      "path": "audit-output/00_ENVIRONMENT_REPORT.md",
+      "line": 49,
+      "text": "### 3.2 Pull Requests"
+    },
+    {
+      "path": "audit-output/00_ENVIRONMENT_REPORT.md",
+      "line": 56,
+      "text": "## 4. Окружение исполнения"
+    },
+    {
+      "path": "audit-output/00_ENVIRONMENT_REPORT.md",
+      "line": 68,
+      "text": "## 5. Ограничения проверки"
+    },
+    {
+      "path": "audit-output/01_REPOSITORY_INVENTORY.md",
+      "line": 1,
+      "text": "# 01 — COMPLETE REPOSITORY INVENTORY (Stage 1)"
+    },
+    {
+      "path": "audit-output/01_REPOSITORY_INVENTORY.md",
+      "line": 5,
+      "text": "## 1. Структура и назначение"
+    },
+    {
+      "path": "audit-output/01_REPOSITORY_INVENTORY.md",
+      "line": 23,
+      "text": "## 2. Dependency map (UI → State → Domain → Data Access → Backend → Persistence)"
+    },
+    {
+      "path": "audit-output/01_REPOSITORY_INVENTORY.md",
+      "line": 38,
+      "text": "## 3. Контракты данных"
+    },
+    {
+      "path": "audit-output/01_REPOSITORY_INVENTORY.md",
+      "line": 50,
+      "text": "## 4. Экспорты и точки входа (ключевые)"
+    },
+    {
+      "path": "audit-output/01_REPOSITORY_INVENTORY.md",
+      "line": 58,
+      "text": "## 5. Обработка ошибок (архитектура)"
+    },
+    {
+      "path": "audit-output/01_REPOSITORY_INVENTORY.md",
+      "line": 69,
+      "text": "## 6. Возможные точки отказа и технический долг (выявлено при чтении)"
+    },
+    {
+      "path": "audit-output/01_REPOSITORY_INVENTORY.md",
+      "line": 84,
+      "text": "## 7. Dead code / неиспользуемые зависимости"
+    },
+    {
+      "path": "audit-output/01_REPOSITORY_INVENTORY.md",
+      "line": 90,
+      "text": "## 8. Модули и тестовое покрытие"
+    },
+    {
+      "path": "audit-output/02_GIT_FORENSICS.md",
+      "line": 1,
+      "text": "# 02 — GIT FORENSICS (Stage 2)"
+    },
+    {
+      "path": "audit-output/02_GIT_FORENSICS.md",
+      "line": 5,
+      "text": "## 1. Линейная история (проверено `git log` всех веток)"
+    },
+    {
+      "path": "audit-output/02_GIT_FORENSICS.md",
+      "line": 27,
+      "text": "## 2. Таблица коммитов"
+    },
+    {
+      "path": "audit-output/02_GIT_FORENSICS.md",
+      "line": 47,
+      "text": "## 3. Pull Requests"
+    },
+    {
+      "path": "audit-output/02_GIT_FORENSICS.md",
+      "line": 54,
+      "text": "## 4. Проверка на «забытые» изменения"
+    },
+    {
+      "path": "audit-output/02_GIT_FORENSICS.md",
+      "line": 62,
+      "text": "## 5. Неконсистентности (низкий приоритет)"
+    },
+    {
+      "path": "audit-output/02_GIT_FORENSICS.md",
+      "line": 68,
+      "text": "## 6. CI статус"
+    },
+    {
+      "path": "audit-output/03_PHASE_VERIFICATION_MATRIX.md",
+      "line": 1,
+      "text": "# 03 — PHASE-BY-PHASE VERIFICATION MATRIX (Stage 3)"
+    },
+    {
+      "path": "audit-output/03_PHASE_VERIFICATION_MATRIX.md",
+      "line": 5,
+      "text": "## Сводная матрица"
+    },
+    {
+      "path": "audit-output/03_PHASE_VERIFICATION_MATRIX.md",
+      "line": 46,
+      "text": "## Группировки (обязательные списки)"
+    },
+    {
+      "path": "audit-output/03_PHASE_VERIFICATION_MATRIX.md",
+      "line": 58,
+      "text": "## Проверка утверждений реестра этим аудитом"
+    },
+    {
+      "path": "audit-output/04_FUNCTIONAL_QA.md",
+      "line": 1,
+      "text": "# 04 — FUNCTIONAL QA OF USER JOURNEYS (Stage 4)"
+    },
+    {
+      "path": "audit-output/04_FUNCTIONAL_QA.md",
+      "line": 5,
+      "text": "## 1. Parent Experience (S01–S03)"
+    },
+    {
+      "path": "audit-output/04_FUNCTIONAL_QA.md",
+      "line": 21,
+      "text": "## 2. Search & Matching (ядро)"
+    },
+    {
+      "path": "audit-output/04_FUNCTIONAL_QA.md",
+      "line": 47,
+      "text": "## 3. Specialist Profiles (S06)"
+    },
+    {
+      "path": "audit-output/04_FUNCTIONAL_QA.md",
+      "line": 60,
+      "text": "## 4. Comparison (S08)"
+    },
+    {
+      "path": "audit-output/04_FUNCTIONAL_QA.md",
+      "line": 71,
+      "text": "## 5. Demo Requests (S07, S09)"
+    },
+    {
+      "path": "audit-output/04_FUNCTIONAL_QA.md",
+      "line": 90,
+      "text": "## 6. Pilot Features (55–67, реальный backend)"
+    },
+    {
+      "path": "audit-output/05_BACKEND_DATABASE_AUDIT.md",
+      "line": 1,
+      "text": "# 05 — BACKEND & DATABASE AUDIT (Stage 5)"
+    },
+    {
+      "path": "audit-output/05_BACKEND_DATABASE_AUDIT.md",
+      "line": 5,
+      "text": "## 1. Authentication"
+    },
+    {
+      "path": "audit-output/05_BACKEND_DATABASE_AUDIT.md",
+      "line": 20,
+      "text": "## 2. Authorization (по ресурсам)"
+    },
+    {
+      "path": "audit-output/05_BACKEND_DATABASE_AUDIT.md",
+      "line": 38,
+      "text": "## 3. Database (SQLite, node:sqlite)"
+    },
+    {
+      "path": "audit-output/05_BACKEND_DATABASE_AUDIT.md",
+      "line": 54,
+      "text": "## 4. Командная модель (30 операций)"
+    },
+    {
+      "path": "audit-output/05_BACKEND_DATABASE_AUDIT.md",
+      "line": 62,
+      "text": "## 5. Наблюдения (без критических находок)"
+    },
+    {
+      "path": "audit-output/06_SECURITY_PRIVACY_AUDIT.md",
+      "line": 1,
+      "text": "# 06 — SECURITY & PRIVACY AUDIT (Stage 6)"
+    },
+    {
+      "path": "audit-output/06_SECURITY_PRIVACY_AUDIT.md",
+      "line": 5,
+      "text": "## 1. Оценка по категориям"
+    },
+    {
+      "path": "audit-output/06_SECURITY_PRIVACY_AUDIT.md",
+      "line": 23,
+      "text": "## 2. Privacy"
+    },
+    {
+      "path": "audit-output/06_SECURITY_PRIVACY_AUDIT.md",
+      "line": 38,
+      "text": "## 3. Находки"
+    },
+    {
+      "path": "audit-output/06_SECURITY_PRIVACY_AUDIT.md",
+      "line": 50,
+      "text": "## 4. Ограничения аудита"
+    },
+    {
+      "path": "audit-output/07_UX_ACCESSIBILITY_AUDIT.md",
+      "line": 1,
+      "text": "# 07 — UI/UX & ACCESSIBILITY AUDIT (Stage 7)"
+    },
+    {
+      "path": "audit-output/07_UX_ACCESSIBILITY_AUDIT.md",
+      "line": 5,
+      "text": "## 1. Responsive"
+    },
+    {
+      "path": "audit-output/07_UX_ACCESSIBILITY_AUDIT.md",
+      "line": 15,
+      "text": "## 2. Accessibility"
+    },
+    {
+      "path": "audit-output/07_UX_ACCESSIBILITY_AUDIT.md",
+      "line": 32,
+      "text": "## 3. Localization (RU/KK)"
+    },
+    {
+      "path": "audit-output/07_UX_ACCESSIBILITY_AUDIT.md",
+      "line": 43,
+      "text": "## 4. UX"
+    },
+    {
+      "path": "audit-output/07_UX_ACCESSIBILITY_AUDIT.md",
+      "line": 56,
+      "text": "## 5. Визуальные артефакты"
+    },
+    {
+      "path": "audit-output/07_UX_ACCESSIBILITY_AUDIT.md",
+      "line": 60,
+      "text": "## 6. Находки"
+    },
+    {
+      "path": "audit-output/08_PERFORMANCE_AUDIT.md",
+      "line": 1,
+      "text": "# 08 — PERFORMANCE AUDIT (Stage 8)"
+    },
+    {
+      "path": "audit-output/08_PERFORMANCE_AUDIT.md",
+      "line": 5,
+      "text": "## 1. Bundle (production build, измерено)"
+    },
+    {
+      "path": "audit-output/08_PERFORMANCE_AUDIT.md",
+      "line": 18,
+      "text": "## 2. Matching engine (Node, 100 varied inputs, 1000 warmup, p50/p95/max)"
+    },
+    {
+      "path": "audit-output/08_PERFORMANCE_AUDIT.md",
+      "line": 30,
+      "text": "## 3. React-рендеринг"
+    },
+    {
+      "path": "audit-output/08_PERFORMANCE_AUDIT.md",
+      "line": 36,
+      "text": "## 4. Запуск приложения"
+    },
+    {
+      "path": "audit-output/08_PERFORMANCE_AUDIT.md",
+      "line": 41,
+      "text": "## 5. Storage"
+    },
+    {
+      "path": "audit-output/08_PERFORMANCE_AUDIT.md",
+      "line": 46,
+      "text": "## 6. Что НЕ измерялось"
+    },
+    {
+      "path": "audit-output/09_AUTOMATED_TEST_RESULTS.md",
+      "line": 1,
+      "text": "# 09 — AUTOMATED TEST RESULTS (Stage 9)"
+    },
+    {
+      "path": "audit-output/09_AUTOMATED_TEST_RESULTS.md",
+      "line": 5,
+      "text": "## 1. Установка"
+    },
+    {
+      "path": "audit-output/09_AUTOMATED_TEST_RESULTS.md",
+      "line": 11,
+      "text": "## 2. Статические проверки"
+    },
+    {
+      "path": "audit-output/09_AUTOMATED_TEST_RESULTS.md",
+      "line": 19,
+      "text": "## 3. Unit / integration (`npm test`)"
+    },
+    {
+      "path": "audit-output/09_AUTOMATED_TEST_RESULTS.md",
+      "line": 34,
+      "text": "## 4. Браузерные E2E (Playwright 1.65.0, Chromium headless shell 1248)"
+    },
+    {
+      "path": "audit-output/09_AUTOMATED_TEST_RESULTS.md",
+      "line": 47,
+      "text": "## 5. Живые security-пробы (HTTP, реальный test-сервер)"
+    },
+    {
+      "path": "audit-output/09_AUTOMATED_TEST_RESULTS.md",
+      "line": 78,
+      "text": "## 6. Не запускалось / причины"
+    },
+    {
+      "path": "audit-output/09_AUTOMATED_TEST_RESULTS.md",
+      "line": 84,
+      "text": "## 7. Regression-тесты для найденных наблюдений"
+    },
+    {
+      "path": "audit-output/10_ARCHITECTURE_REVIEW.md",
+      "line": 1,
+      "text": "# 10 — ARCHITECTURE QUALITY REVIEW (Stage 10)"
+    },
+    {
+      "path": "audit-output/10_ARCHITECTURE_REVIEW.md",
+      "line": 3,
+      "text": "## 1. Оценка по критериям"
+    },
+    {
+      "path": "audit-output/10_ARCHITECTURE_REVIEW.md",
+      "line": 20,
+      "text": "## 2. Специальные проверки (из задания)"
+    },
+    {
+      "path": "audit-output/10_ARCHITECTURE_REVIEW.md",
+      "line": 31,
+      "text": "## 3. Слабые границы / скрытые состояния"
+    },
+    {
+      "path": "audit-output/10_ARCHITECTURE_REVIEW.md",
+      "line": 38,
+      "text": "## 4. Рекомендации"
+    },
+    {
+      "path": "audit-output/11_RELEASE_READINESS.md",
+      "line": 1,
+      "text": "# 11 — RELEASE READINESS (Stage 11)"
+    },
+    {
+      "path": "audit-output/11_RELEASE_READINESS.md",
+      "line": 5,
+      "text": "## 1. Local demo (DEMO/CORE static)"
+    },
+    {
+      "path": "audit-output/11_RELEASE_READINESS.md",
+      "line": 18,
+      "text": "## 2. Hackathon presentation"
+    },
+    {
+      "path": "audit-output/11_RELEASE_READINESS.md",
+      "line": 27,
+      "text": "## 3. Internal synthetic pilot (PILOT_TEST)"
+    },
+    {
+      "path": "audit-output/11_RELEASE_READINESS.md",
+      "line": 40,
+      "text": "## 4. Limited real-user pilot (PILOT_LIVE)"
+    },
+    {
+      "path": "audit-output/11_RELEASE_READINESS.md",
+      "line": 44,
+      "text": "## 5. Production platform"
+    },
+    {
+      "path": "audit-output/11_RELEASE_READINESS.md",
+      "line": 48,
+      "text": "## 6. Матрица готовности (сводно)"
+    },
+    {
+      "path": "audit-output/12_FIX_PLAN.md",
+      "line": 1,
+      "text": "# 12 — FIX PLAN & TECHNICAL ROADMAP (Stage 12)"
+    },
+    {
+      "path": "audit-output/12_FIX_PLAN.md",
+      "line": 5,
+      "text": "## P2 MEDIUM"
+    },
+    {
+      "path": "audit-output/12_FIX_PLAN.md",
+      "line": 7,
+      "text": "### F-01 · Повреждённый attempt-ключ блокирует демозапрос до ручной очистки"
+    },
+    {
+      "path": "audit-output/12_FIX_PLAN.md",
+      "line": 15,
+      "text": "### F-02 · Масштабирование district-сортировки (переоценка в компараторе)"
+    },
+    {
+      "path": "audit-output/12_FIX_PLAN.md",
+      "line": 23,
+      "text": "### F-03 · KK-тексты: редактура носителем"
+    },
+    {
+      "path": "audit-output/12_FIX_PLAN.md",
+      "line": 30,
+      "text": "## P3 LOW"
+    },
+    {
+      "path": "audit-output/12_FIX_PLAN.md",
+      "line": 32,
+      "text": "### F-04 · Пилотные Playwright-конфиги непереносимы на Windows"
+    },
+    {
+      "path": "audit-output/12_FIX_PLAN.md",
+      "line": 37,
+      "text": "### F-05 · Rate limit на test-login (муор-защита сессий)"
+    },
+    {
+      "path": "audit-output/12_FIX_PLAN.md",
+      "line": 41,
+      "text": "### F-06 · Инлайн-тексты ResultMap → i18n-каталог"
+    },
+    {
+      "path": "audit-output/12_FIX_PLAN.md",
+      "line": 44,
+      "text": "### F-07 · Единый helper отображения цены"
+    },
+    {
+      "path": "audit-output/12_FIX_PLAN.md",
+      "line": 47,
+      "text": "### F-08 · Bundle: manualChunks для react-dom/zod"
+    },
+    {
+      "path": "audit-output/12_FIX_PLAN.md",
+      "line": 50,
+      "text": "### F-09 · Session TTL 1 ч для пилота — конфигурируемая константа"
+    },
+    {
+      "path": "audit-output/12_FIX_PLAN.md",
+      "line": 53,
+      "text": "### F-10 · `npm audit`/SCA в CI"
+    },
+    {
+      "path": "audit-output/12_FIX_PLAN.md",
+      "line": 56,
+      "text": "## Порядок работ"
+    },
+    {
+      "path": "audit-output/EXECUTIVE_SUMMARY.md",
+      "line": 1,
+      "text": "# EXECUTIVE SUMMARY — независимый аудит MAMA-PRO (Қолдау.Жол), 2026-11-11"
+    },
+    {
+      "path": "audit-output/EXECUTIVE_SUMMARY.md",
+      "line": 5,
+      "text": "## Факты одной таблицей"
+    },
+    {
+      "path": "audit-output/EXECUTIVE_SUMMARY.md",
+      "line": 18,
+      "text": "## Главные риски (не дефекты кода)"
+    },
+    {
+      "path": "audit-output/EXECUTIVE_SUMMARY.md",
+      "line": 23,
+      "text": "## Рекомендованные следующие шаги"
+    },
+    {
+      "path": "audit-output/FIXES_APPLIED_2026-11-11.md",
+      "line": 1,
+      "text": "# FIXES APPLIED — 2026-11-11 (follow-up to the completion audit)"
+    },
+    {
+      "path": "audit-output/FIXES_APPLIED_2026-11-11.md",
+      "line": 7,
+      "text": "## Where the fixes are"
+    },
+    {
+      "path": "audit-output/FIXES_APPLIED_2026-11-11.md",
+      "line": 17,
+      "text": "## Fixed"
+    },
+    {
+      "path": "audit-output/FIXES_APPLIED_2026-11-11.md",
+      "line": 32,
+      "text": "## Verification battery after fixes"
+    },
+    {
+      "path": "audit-output/FIXES_APPLIED_2026-11-11.md",
+      "line": 43,
+      "text": "## Honestly not done"
+    },
+    {
+      "path": "audit-output/GIT_STATUS.md",
+      "line": 1,
+      "text": "# GIT STATUS (сохранность файлов аудита)"
+    },
+    {
+      "path": "audit-output/GIT_STATUS.md",
+      "line": 3,
+      "text": "## Что было изменено/создано этим аудитом"
+    },
+    {
+      "path": "audit-output/GIT_STATUS.md",
+      "line": 5,
+      "text": "### Репозиторий/снимок пользователя (не тронут)"
+    },
+    {
+      "path": "audit-output/GIT_STATUS.md",
+      "line": 8,
+      "text": "### Новые файлы аудита (создано)"
+    },
+    {
+      "path": "audit-output/GIT_STATUS.md",
+      "line": 33,
+      "text": "### Временные (audit-only) файлы в worktree `%TEMP%\\opencode\\mama-pro-work` (НЕ в снимке; worktree одноразовый)"
+    },
+    {
+      "path": "audit-output/GIT_STATUS.md",
+      "line": 38,
+      "text": "### Секреты и реальные данные"
+    },
+    {
+      "path": "audit-output/GIT_STATUS.md",
+      "line": 41,
+      "text": "## Предлагаемый безопасный commit message (если будет отдельное разрешение)"
+    },
+    {
+      "path": "audit-output/GIT_STATUS.md",
+      "line": 53,
+      "text": "## Незакоммиченные/незапушенные изменения исходников"
+    },
+    {
+      "path": "audit-output/MASTER_AUDIT_REPORT.md",
+      "line": 1,
+      "text": "# MASTER AUDIT REPORT — MAMA-PRO Hackathon (Қолдау.Жол)"
+    },
+    {
+      "path": "audit-output/MASTER_AUDIT_REPORT.md",
+      "line": 5,
+      "text": "## Executive Summary"
+    },
+    {
+      "path": "audit-output/MASTER_AUDIT_REPORT.md",
+      "line": 9,
+      "text": "## Repository Status"
+    },
+    {
+      "path": "audit-output/MASTER_AUDIT_REPORT.md",
+      "line": 16,
+      "text": "## Architecture Assessment"
+    },
+    {
+      "path": "audit-output/MASTER_AUDIT_REPORT.md",
+      "line": 20,
+      "text": "## Functional Completeness"
+    },
+    {
+      "path": "audit-output/MASTER_AUDIT_REPORT.md",
+      "line": 24,
+      "text": "## Phase Completion"
+    },
+    {
+      "path": "audit-output/MASTER_AUDIT_REPORT.md",
+      "line": 36,
+      "text": "## Security Findings"
+    },
+    {
+      "path": "audit-output/MASTER_AUDIT_REPORT.md",
+      "line": 40,
+      "text": "## QA Results (фактические прогоны этого аудита)"
+    },
+    {
+      "path": "audit-output/MASTER_AUDIT_REPORT.md",
+      "line": 53,
+      "text": "## UX & Accessibility"
+    },
+    {
+      "path": "audit-output/MASTER_AUDIT_REPORT.md",
+      "line": 57,
+      "text": "## Performance"
+    },
+    {
+      "path": "audit-output/MASTER_AUDIT_REPORT.md",
+      "line": 61,
+      "text": "## Technical Debt"
+    },
+    {
+      "path": "audit-output/MASTER_AUDIT_REPORT.md",
+      "line": 65,
+      "text": "## Release Readiness"
+    },
+    {
+      "path": "audit-output/MASTER_AUDIT_REPORT.md",
+      "line": 69,
+      "text": "## Prioritized Fix Plan"
+    },
+    {
+      "path": "audit-output/MASTER_AUDIT_REPORT.md",
+      "line": 73,
+      "text": "## Evidence Index"
+    },
+    {
+      "path": "audit-output/MASTER_AUDIT_REPORT.md",
+      "line": 89,
+      "text": "## Remaining Unknowns"
+    },
+    {
+      "path": "audit-output/MASTER_AUDIT_REPORT.md",
+      "line": 99,
+      "text": "## Final Recommendation"
+    },
+    {
+      "path": "audit-output/repro/F-01-intent-corruption.repro.test.ts",
+      "line": 22,
+      "text": "describe('AUDIT F-01 reproduction: corrupted intent storage', () => {"
+    },
+    {
+      "path": "audit-output/repro/F-01-intent-corruption.repro.test.ts",
+      "line": 23,
+      "text": "it('a permanently corrupting intent storage keeps submit unusable (no auto-recovery)', async () => {"
+    },
+    {
+      "path": "docs/ACCESS_AND_DATA_MODEL.md",
+      "line": 1,
+      "text": "# Доступ и модель данных — PILOT_TEST"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "line": 1,
+      "text": "# Архитектура"
+    },
+    {
+      "path": "docs/AUDIT_FIX_DELIVERY.md",
+      "line": 1,
+      "text": "# Audit fix delivery — 2026-11-11"
+    },
+    {
+      "path": "docs/AUDIT_FIX_DELIVERY.md",
+      "line": 8,
+      "text": "## Findings addressed"
+    },
+    {
+      "path": "docs/AUDIT_FIX_DELIVERY.md",
+      "line": 23,
+      "text": "## Not applied here (honest limitations)"
+    },
+    {
+      "path": "docs/AUDIT_FIX_DELIVERY.md",
+      "line": 37,
+      "text": "## Verification summary (this branch)"
+    },
+    {
+      "path": "docs/CALENDAR_AND_REMINDERS.md",
+      "line": 1,
+      "text": "# Календарь и напоминания"
+    },
+    {
+      "path": "docs/CONTACT_AND_TRACKER.md",
+      "line": 1,
+      "text": "# Обращение и трекер"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "line": 1,
+      "text": "# Қолдау.Жол — решения и расхождения фазы 0"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "line": 3,
+      "text": "## Действующие уточнения фаз 28–35 (10.11.2026)"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "line": 21,
+      "text": "## Решения"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "line": 37,
+      "text": "## Контракты, которые фиксируются до UI"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "line": 39,
+      "text": "### MATCH: допуск, ранжирование, объяснение"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "line": 62,
+      "text": "### FLOW: услуга, сравнение, восстановление"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "line": 80,
+      "text": "### REQUEST: честный локальный автомат"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "line": 90,
+      "text": "## Реестр расхождений и пробелов"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "line": 109,
+      "text": "## Правила мероприятия и предварительные материалы"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "line": 131,
+      "text": "## Открытые вопросы и настоящие блокеры"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "line": 146,
+      "text": "## ADR-0017…0022 — объединённая 55–67, 10.11.2026"
+    },
+    {
+      "path": "docs/DEMO_DATA.md",
+      "line": 1,
+      "text": "# Синтетический каталог фаз 28–35"
+    },
+    {
+      "path": "docs/DEMO_RUNBOOK.md",
+      "line": 3,
+      "text": "# Инструкция демонстратора — фаза 13"
+    },
+    {
+      "path": "docs/DEMO_RUNBOOK.md",
+      "line": 9,
+      "text": "## Устройство, масштаб, вкладки и ответственный"
+    },
+    {
+      "path": "docs/DEMO_RUNBOOK.md",
+      "line": 24,
+      "text": "## Подготовка и первый запуск"
+    },
+    {
+      "path": "docs/DEMO_RUNBOOK.md",
+      "line": 37,
+      "text": "## Данные и полный reset"
+    },
+    {
+      "path": "docs/DEMO_RUNBOOK.md",
+      "line": 65,
+      "text": "## Точные параметры A/B/C"
+    },
+    {
+      "path": "docs/DEMO_RUNBOOK.md",
+      "line": 86,
+      "text": "## Последовательность A — основной показ"
+    },
+    {
+      "path": "docs/DEMO_RUNBOOK.md",
+      "line": 114,
+      "text": "## Последовательность B — прямой каталог и сравнение"
+    },
+    {
+      "path": "docs/DEMO_RUNBOOK.md",
+      "line": 126,
+      "text": "## Последовательность C — ноль exact и полезное действие"
+    },
+    {
+      "path": "docs/DEMO_RUNBOOK.md",
+      "line": 139,
+      "text": "## Fallback и видеозапись"
+    },
+    {
+      "path": "docs/DEMO_RUNBOOK.md",
+      "line": 173,
+      "text": "## Когда остановить показ"
+    },
+    {
+      "path": "docs/DESIGN_DELIVERY_2026-11-12.md",
+      "line": 1,
+      "text": "# Поставка дизайна — 2026-11-12 (эволюционный полиш + Қарлығаш ×3 + сегментированная сортировка)"
+    },
+    {
+      "path": "docs/DESIGN_DELIVERY_2026-11-12.md",
+      "line": 7,
+      "text": "## Состав"
+    },
+    {
+      "path": "docs/DESIGN_DELIVERY_2026-11-12.md",
+      "line": 9,
+      "text": "### 1. Маскот Қарлығаш — три позы (закрыт известный минор «одна статичная поза»)"
+    },
+    {
+      "path": "docs/DESIGN_DELIVERY_2026-11-12.md",
+      "line": 16,
+      "text": "### 2. Эволюционный полиш сайта (DNA палитры сохранён)"
+    },
+    {
+      "path": "docs/DESIGN_DELIVERY_2026-11-12.md",
+      "line": 26,
+      "text": "### 3. Сегментированная сортировка (интерактивный переключатель)"
+    },
+    {
+      "path": "docs/DESIGN_DELIVERY_2026-11-12.md",
+      "line": 34,
+      "text": "## Верификация"
+    },
+    {
+      "path": "docs/DESIGN_DELIVERY_2026-11-12.md",
+      "line": 42,
+      "text": "## Осознанно не тронуто"
+    },
+    {
+      "path": "docs/DESIGN_DELIVERY_2026-11-12.md",
+      "line": 50,
+      "text": "# Часть 2 — 2026-11-12 (иконки, градиенты, визуальный район, чипы бюджета)"
+    },
+    {
+      "path": "docs/DESIGN_DELIVERY_2026-11-12.md",
+      "line": 55,
+      "text": "## Изменения"
+    },
+    {
+      "path": "docs/DESIGN_DELIVERY_2026-11-12.md",
+      "line": 74,
+      "text": "## Верификация"
+    },
+    {
+      "path": "docs/DESIGN_DELIVERY_2026-11-13.md",
+      "line": 1,
+      "text": "# Поставка дизайна — 2026-11-13 (side-by-side compare + KK-даты Intl)"
+    },
+    {
+      "path": "docs/DESIGN_DELIVERY_2026-11-13.md",
+      "line": 7,
+      "text": "## 1. Сравнение side-by-side (минор «вертикальная структура compare» закрыт)"
+    },
+    {
+      "path": "docs/DESIGN_DELIVERY_2026-11-13.md",
+      "line": 17,
+      "text": "## 2. KK-даты Intl (минор «KK-даты Intl» закрыт)"
+    },
+    {
+      "path": "docs/DESIGN_DELIVERY_2026-11-13.md",
+      "line": 26,
+      "text": "## Верификация"
+    },
+    {
+      "path": "docs/DESIGN_DELIVERY_2026-11-13.md",
+      "line": 34,
+      "text": "## Примечание о процессе"
+    },
+    {
+      "path": "docs/DOMAIN_CONTRACTS.md",
+      "line": 1,
+      "text": "# Контракты фаз 28–35"
+    },
+    {
+      "path": "docs/DOMAIN_CONTRACTS.md",
+      "line": 26,
+      "text": "## Расширение 55–67"
+    },
+    {
+      "path": "docs/ERROR_HANDLING.md",
+      "line": 1,
+      "text": "# Ошибки пилота"
+    },
+    {
+      "path": "docs/GITHUB_SYNC_STATUS.md",
+      "line": 1,
+      "text": "# GitHub sync checkpoint — 11.11.2026"
+    },
+    {
+      "path": "docs/GITHUB_SYNC_STATUS.md",
+      "line": 8,
+      "text": "## Saved scope"
+    },
+    {
+      "path": "docs/GITHUB_SYNC_STATUS.md",
+      "line": 12,
+      "text": "## Verification and limits"
+    },
+    {
+      "path": "docs/GOALS_DIARY_ASSIGNMENTS.md",
+      "line": 1,
+      "text": "# Цели, наблюдения и задания"
+    },
+    {
+      "path": "docs/HANDOVER_55_67.md",
+      "line": 1,
+      "text": "# Передача ограниченного пилота 55–67"
+    },
+    {
+      "path": "docs/IMPLEMENTATION_PLAN.md",
+      "line": 1,
+      "text": "# Қолдау.Жол — согласованный план после фазы 0"
+    },
+    {
+      "path": "docs/IMPLEMENTATION_PLAN.md",
+      "line": 9,
+      "text": "## С чего начать"
+    },
+    {
+      "path": "docs/IMPLEMENTATION_PLAN.md",
+      "line": 17,
+      "text": "## Вертикальные задачи"
+    },
+    {
+      "path": "docs/IMPLEMENTATION_PLAN.md",
+      "line": 41,
+      "text": "## Oracle материалов для будущих тестов"
+    },
+    {
+      "path": "docs/IMPLEMENTATION_PLAN.md",
+      "line": 56,
+      "text": "## Временной план мероприятия и ограничения"
+    },
+    {
+      "path": "docs/IMPLEMENTATION_PLAN.md",
+      "line": 68,
+      "text": "## Риски реализации"
+    },
+    {
+      "path": "docs/IMPLEMENTATION_PLAN.md",
+      "line": 85,
+      "text": "## Финальная проверка и условие остановки"
+    },
+    {
+      "path": "docs/LIVE_READINESS.md",
+      "line": 1,
+      "text": "# Live readiness — 55–67"
+    },
+    {
+      "path": "docs/LOCALIZATION_REVIEW.md",
+      "line": 1,
+      "text": "# Локализация — 55–67"
+    },
+    {
+      "path": "docs/MASCOT_KARLYGASH.md",
+      "line": 1,
+      "text": "# Маскот Қарлығаш — три статичные иллюстрации (2026-11-12)"
+    },
+    {
+      "path": "docs/MASCOT_KARLYGASH.md",
+      "line": 7,
+      "text": "## Источник и происхождение"
+    },
+    {
+      "path": "docs/MASCOT_KARLYGASH.md",
+      "line": 19,
+      "text": "## Три позы и места использования"
+    },
+    {
+      "path": "docs/MASCOT_KARLYGASH.md",
+      "line": 27,
+      "text": "## Соблюдённые ограничения (проверка W-10)"
+    },
+    {
+      "path": "docs/MATCHING_ENGINE_SPEC.md",
+      "line": 1,
+      "text": "# Поиск по услугам — rules-v2"
+    },
+    {
+      "path": "docs/MODERATION.md",
+      "line": 1,
+      "text": "# Модерация"
+    },
+    {
+      "path": "docs/NEXT_ACTION.md",
+      "line": 1,
+      "text": "# Следующий шаг"
+    },
+    {
+      "path": "docs/NEXT_PHASE_HANDOFF.md",
+      "line": 1,
+      "text": "# Передача после фазы 14"
+    },
+    {
+      "path": "docs/NEXT_PHASE_HANDOFF.md",
+      "line": 19,
+      "text": "## Стабильная передача приложения после фазы 13"
+    },
+    {
+      "path": "docs/NEXT_PHASE_HANDOFF.md",
+      "line": 30,
+      "text": "## Начать здесь"
+    },
+    {
+      "path": "docs/NEXT_PHASE_HANDOFF.md",
+      "line": 39,
+      "text": "## Получить только исходный релиз фазы 13 (историческая инструкция)"
+    },
+    {
+      "path": "docs/NEXT_PHASE_HANDOFF.md",
+      "line": 69,
+      "text": "## Готовый резерв без npm и интернета"
+    },
+    {
+      "path": "docs/NEXT_PHASE_HANDOFF.md",
+      "line": 86,
+      "text": "## Что уже сделано и проверено"
+    },
+    {
+      "path": "docs/NEXT_PHASE_HANDOFF.md",
+      "line": 111,
+      "text": "## Ограничения, которые нельзя потерять"
+    },
+    {
+      "path": "docs/NEXT_PHASE_HANDOFF.md",
+      "line": 126,
+      "text": "## Граница следующей работы"
+    },
+    {
+      "path": "docs/OFFER_CHANGE_SUBSCRIPTIONS.md",
+      "line": 1,
+      "text": "# Подписки на изменения услуг"
+    },
+    {
+      "path": "docs/PHASES_28_35_HANDOFF.md",
+      "line": 1,
+      "text": "# Передача фаз 28–35 → 36"
+    },
+    {
+      "path": "docs/PHASE_10.md",
+      "line": 1,
+      "text": "# Фаза 10 — локальные демозапросы S08–S09"
+    },
+    {
+      "path": "docs/PHASE_10.md",
+      "line": 7,
+      "text": "## Реализация"
+    },
+    {
+      "path": "docs/PHASE_10.md",
+      "line": 22,
+      "text": "## Состав записи"
+    },
+    {
+      "path": "docs/PHASE_10.md",
+      "line": 30,
+      "text": "## Фактические проверки"
+    },
+    {
+      "path": "docs/PHASE_10.md",
+      "line": 51,
+      "text": "## Границы"
+    },
+    {
+      "path": "docs/PHASE_6.md",
+      "line": 1,
+      "text": "# Фаза 6 — S01–S03"
+    },
+    {
+      "path": "docs/PHASE_6.md",
+      "line": 5,
+      "text": "## Исходная точка"
+    },
+    {
+      "path": "docs/PHASE_6.md",
+      "line": 11,
+      "text": "## Поведение и доказательство"
+    },
+    {
+      "path": "docs/PHASE_6.md",
+      "line": 24,
+      "text": "## Фактические проверки"
+    },
+    {
+      "path": "docs/PHASE_7.md",
+      "line": 1,
+      "text": "# Фаза 7 — S04–S05"
+    },
+    {
+      "path": "docs/PHASE_7.md",
+      "line": 5,
+      "text": "## Реализованное поведение"
+    },
+    {
+      "path": "docs/PHASE_7.md",
+      "line": 29,
+      "text": "## Фактические проверки"
+    },
+    {
+      "path": "docs/PHASE_7.md",
+      "line": 41,
+      "text": "## Границы"
+    },
+    {
+      "path": "docs/PHASE_7_HANDOFF.md",
+      "line": 1,
+      "text": "# Основа для фазы 7: S04–S05"
+    },
+    {
+      "path": "docs/PHASE_7_HANDOFF.md",
+      "line": 7,
+      "text": "## Получение исходников"
+    },
+    {
+      "path": "docs/PHASE_7_HANDOFF.md",
+      "line": 23,
+      "text": "## Источники, доступные прямо в репозитории"
+    },
+    {
+      "path": "docs/PHASE_7_HANDOFF.md",
+      "line": 32,
+      "text": "## Где продолжать"
+    },
+    {
+      "path": "docs/PHASE_7_HANDOFF.md",
+      "line": 48,
+      "text": "## Точные границы следующей работы"
+    },
+    {
+      "path": "docs/PHASE_7_HANDOFF.md",
+      "line": 56,
+      "text": "## Готовность основы"
+    },
+    {
+      "path": "docs/PHASE_8.md",
+      "line": 1,
+      "text": "# Фаза 8 — S06"
+    },
+    {
+      "path": "docs/PHASE_8.md",
+      "line": 5,
+      "text": "## Реализованное поведение"
+    },
+    {
+      "path": "docs/PHASE_8.md",
+      "line": 25,
+      "text": "## Данные и совместимость"
+    },
+    {
+      "path": "docs/PHASE_8.md",
+      "line": 31,
+      "text": "## Проверки"
+    },
+    {
+      "path": "docs/PHASE_8.md",
+      "line": 50,
+      "text": "## Карта продолжения"
+    },
+    {
+      "path": "docs/PHASE_8_HANDOFF.md",
+      "line": 1,
+      "text": "# Передача к фазе 8"
+    },
+    {
+      "path": "docs/PHASE_8_HANDOFF.md",
+      "line": 5,
+      "text": "## Получение в новой среде"
+    },
+    {
+      "path": "docs/PHASE_8_HANDOFF.md",
+      "line": 28,
+      "text": "## Что уже работает"
+    },
+    {
+      "path": "docs/PHASE_8_HANDOFF.md",
+      "line": 36,
+      "text": "## Где продолжать"
+    },
+    {
+      "path": "docs/PHASE_8_HANDOFF.md",
+      "line": 51,
+      "text": "## Оставшееся для полного S06"
+    },
+    {
+      "path": "docs/PHASE_8_HANDOFF.md",
+      "line": 61,
+      "text": "## Не нарушить при продолжении"
+    },
+    {
+      "path": "docs/PHASE_8_HANDOFF.md",
+      "line": 70,
+      "text": "## Проверенная исходная точка"
+    },
+    {
+      "path": "docs/PHASE_CLOSURE_MATRIX.md",
+      "line": 1,
+      "text": "# Реестр фактически подтверждённых этапов — 11 ноября 2026"
+    },
+    {
+      "path": "docs/PHASE_CLOSURE_MATRIX.md",
+      "line": 5,
+      "text": "## Подтверждение команды, сообщённое 11.11.2026"
+    },
+    {
+      "path": "docs/PHASE_CLOSURE_MATRIX.md",
+      "line": 16,
+      "text": "## Текущий статус по диапазонам"
+    },
+    {
+      "path": "docs/PHASE_CLOSURE_MATRIX.md",
+      "line": 35,
+      "text": "## Существующий проверенный объём"
+    },
+    {
+      "path": "docs/PHASE_CLOSURE_MATRIX.md",
+      "line": 44,
+      "text": "## Формальные критерии закрытия каждой будущей фазы"
+    },
+    {
+      "path": "docs/PHASE_CLOSURE_MATRIX.md",
+      "line": 57,
+      "text": "## Отдельно об авторстве и хакатоне"
+    },
+    {
+      "path": "docs/PHASE_CLOSURE_MATRIX.md",
+      "line": 61,
+      "text": "## Источники"
+    },
+    {
+      "path": "docs/PHASE_DELIVERY_BACKLOG.md",
+      "line": 1,
+      "text": "# Расширенный план завершения проекта (proposed; НЕ выполнено)"
+    },
+    {
+      "path": "docs/PHASE_DELIVERY_BACKLOG.md",
+      "line": 7,
+      "text": "## A. Приоритет: убедительная, честная демонстрация для MamaPro (P0)"
+    },
+    {
+      "path": "docs/PHASE_DELIVERY_BACKLOG.md",
+      "line": 18,
+      "text": "## B. Неподтверждённые исторические диапазоны (P1 после восстановления источника)"
+    },
+    {
+      "path": "docs/PHASE_DELIVERY_BACKLOG.md",
+      "line": 25,
+      "text": "## C. Предлагаемые следующие пакеты после 67 (P1/P2, номера не утверждены)"
+    },
+    {
+      "path": "docs/PHASE_DELIVERY_BACKLOG.md",
+      "line": 43,
+      "text": "## D. Общие технические правила"
+    },
+    {
+      "path": "docs/PHASE_DELIVERY_BACKLOG.md",
+      "line": 53,
+      "text": "## E. Решение о запуске"
+    },
+    {
+      "path": "docs/PITCH_AND_DEMO.md",
+      "line": 3,
+      "text": "# Фаза 14 — защита по фактической реализации"
+    },
+    {
+      "path": "docs/PITCH_AND_DEMO.md",
+      "line": 12,
+      "text": "## 1. Что изучено и что считается доказательством"
+    },
+    {
+      "path": "docs/PITCH_AND_DEMO.md",
+      "line": 31,
+      "text": "## 2. Граница рассказа"
+    },
+    {
+      "path": "docs/PITCH_AND_DEMO.md",
+      "line": 41,
+      "text": "## 3. Семь слайдов"
+    },
+    {
+      "path": "docs/PITCH_AND_DEMO.md",
+      "line": 55,
+      "text": "## 4. Сценарий и текст выступающего"
+    },
+    {
+      "path": "docs/PITCH_AND_DEMO.md",
+      "line": 59,
+      "text": "### 0:00–0:35 — проблема, слайд 1"
+    },
+    {
+      "path": "docs/PITCH_AND_DEMO.md",
+      "line": 65,
+      "text": "### 0:35–0:55 — идея, слайд 2"
+    },
+    {
+      "path": "docs/PITCH_AND_DEMO.md",
+      "line": 71,
+      "text": "### 0:55–3:15 — демо, 140 секунд, слайд 3 → браузер"
+    },
+    {
+      "path": "docs/PITCH_AND_DEMO.md",
+      "line": 86,
+      "text": "### 3:15–3:50 — доверие и реализуемость, слайд 4"
+    },
+    {
+      "path": "docs/PITCH_AND_DEMO.md",
+      "line": 92,
+      "text": "### 3:50–4:25 — проверка и социальный эффект, слайд 5"
+    },
+    {
+      "path": "docs/PITCH_AND_DEMO.md",
+      "line": 98,
+      "text": "### 4:25–4:50 — доработка и команда, слайд 6"
+    },
+    {
+      "path": "docs/PITCH_AND_DEMO.md",
+      "line": 104,
+      "text": "### 4:50–5:00 — завершение, слайд 7"
+    },
+    {
+      "path": "docs/PITCH_AND_DEMO.md",
+      "line": 110,
+      "text": "## 5. Тайминг, измерения и правило остановки"
+    },
+    {
+      "path": "docs/PITCH_AND_DEMO.md",
+      "line": 120,
+      "text": "## 6. Честный fallback"
+    },
+    {
+      "path": "docs/PITCH_AND_DEMO.md",
+      "line": 138,
+      "text": "## 7. Реестр тезисов: что / чем / где / ограничение"
+    },
+    {
+      "path": "docs/PITCH_AND_DEMO.md",
+      "line": 165,
+      "text": "## 8. Матрица K1–K6"
+    },
+    {
+      "path": "docs/PITCH_AND_DEMO.md",
+      "line": 178,
+      "text": "## 9. Двадцать вопросов и ответов"
+    },
+    {
+      "path": "docs/PITCH_AND_DEMO.md",
+      "line": 201,
+      "text": "## 10. Предложение до 3 декабря и смета"
+    },
+    {
+      "path": "docs/PITCH_AND_DEMO.md",
+      "line": 225,
+      "text": "## 11. Условия готовности защиты"
+    },
+    {
+      "path": "docs/PROJECT_STATE.md",
+      "line": 1,
+      "text": "# Текущее состояние: объединённая фаза 55–67"
+    },
+    {
+      "path": "docs/PROJECT_STATE.md",
+      "line": 17,
+      "text": "## Исторический журнал — предыдущая база"
+    },
+    {
+      "path": "docs/PROJECT_STATE.md",
+      "line": 19,
+      "text": "# Текущее состояние: фазы 28–35"
+    },
+    {
+      "path": "docs/PROJECT_STATE.md",
+      "line": 35,
+      "text": "# Қолдау.Жол — состояние проекта"
+    },
+    {
+      "path": "docs/PROJECT_STATE.md",
+      "line": 67,
+      "text": "## Продукт и граница результата"
+    },
+    {
+      "path": "docs/PROJECT_STATE.md",
+      "line": 73,
+      "text": "## Материалы и происхождение утверждений"
+    },
+    {
+      "path": "docs/PROJECT_STATE.md",
+      "line": 93,
+      "text": "## Точный P0"
+    },
+    {
+      "path": "docs/PROJECT_STATE.md",
+      "line": 107,
+      "text": "## Исключено"
+    },
+    {
+      "path": "docs/PROJECT_STATE.md",
+      "line": 113,
+      "text": "## Карта фактической реализации"
+    },
+    {
+      "path": "docs/PROJECT_STATE.md",
+      "line": 127,
+      "text": "## Выполненные проверки фазы 0"
+    },
+    {
+      "path": "docs/PROJECT_STATE.md",
+      "line": 141,
+      "text": "## Оставшееся, блокеры и следующий шаг"
+    },
+    {
+      "path": "docs/PROJECT_STATE.md",
+      "line": 149,
+      "text": "## Сохранение результата в репозитории"
+    },
+    {
+      "path": "docs/PWA_AND_OFFLINE.md",
+      "line": 1,
+      "text": "# PWA и offline"
+    },
+    {
+      "path": "docs/QA_RESULTS.md",
+      "line": 1,
+      "text": "# QA: объединённая 55–67 — 10–11 ноября 2026 UTC"
+    },
+    {
+      "path": "docs/QA_RESULTS.md",
+      "line": 33,
+      "text": "## Исторические QA-результаты исходной версии"
+    },
+    {
+      "path": "docs/QA_RESULTS.md",
+      "line": 35,
+      "text": "# Фазы 28–35 — фактические проверки 10.11.2026"
+    },
+    {
+      "path": "docs/QA_RESULTS.md",
+      "line": 71,
+      "text": "# Фаза 12 — проверка P0 и исправление дефектов"
+    },
+    {
+      "path": "docs/QA_RESULTS.md",
+      "line": 77,
+      "text": "## Основание, версия и условия"
+    },
+    {
+      "path": "docs/QA_RESULTS.md",
+      "line": 88,
+      "text": "## Реальные команды и результаты"
+    },
+    {
+      "path": "docs/QA_RESULTS.md",
+      "line": 108,
+      "text": "## Сквозные пути"
+    },
+    {
+      "path": "docs/QA_RESULTS.md",
+      "line": 121,
+      "text": "## Отрицательные случаи"
+    },
+    {
+      "path": "docs/QA_RESULTS.md",
+      "line": 142,
+      "text": "## Сопоставление с traceability"
+    },
+    {
+      "path": "docs/QA_RESULTS.md",
+      "line": 168,
+      "text": "## Ручные и вспомогательные проверки"
+    },
+    {
+      "path": "docs/QA_RESULTS.md",
+      "line": 187,
+      "text": "## Дефекты, исправления и перепроверка"
+    },
+    {
+      "path": "docs/QA_RESULTS.md",
+      "line": 199,
+      "text": "## Оставшиеся ограничения и решение"
+    },
+    {
+      "path": "docs/QA_RESULTS.md",
+      "line": 211,
+      "text": "## Сохранение фазы"
+    },
+    {
+      "path": "docs/README_PHASE12.md",
+      "line": 1,
+      "text": "# Қолдау.Жол"
+    },
+    {
+      "path": "docs/README_PHASE12.md",
+      "line": 13,
+      "text": "## Запуск"
+    },
+    {
+      "path": "docs/README_PHASE12.md",
+      "line": 31,
+      "text": "## Проверки"
+    },
+    {
+      "path": "docs/README_PHASE12.md",
+      "line": 48,
+      "text": "## Данные и состояние"
+    },
+    {
+      "path": "docs/README_PHASE12.md",
+      "line": 58,
+      "text": "## Граница среза"
+    },
+    {
+      "path": "docs/RELEASE_CHECKLIST.md",
+      "line": 1,
+      "text": "# Фаза 13 — протокол демонстрационного релиза"
+    },
+    {
+      "path": "docs/RELEASE_CHECKLIST.md",
+      "line": 7,
+      "text": "## Какая сборка проверена"
+    },
+    {
+      "path": "docs/RELEASE_CHECKLIST.md",
+      "line": 31,
+      "text": "## Реально выполненные проверки"
+    },
+    {
+      "path": "docs/RELEASE_CHECKLIST.md",
+      "line": 68,
+      "text": "## Детерминированность и честные ограничения"
+    },
+    {
+      "path": "docs/RELEASE_CHECKLIST.md",
+      "line": 89,
+      "text": "## Передача и воспроизведение"
+    },
+    {
+      "path": "docs/RELEASE_MANIFEST.md",
+      "line": 1,
+      "text": "# Release manifest — pilot55-67-b6be202efcb0"
+    },
+    {
+      "path": "docs/REQUIREMENTS_TRACEABILITY.md",
+      "line": 1,
+      "text": "# Прослеживаемость 55–67"
+    },
+    {
+      "path": "docs/REQUIREMENTS_TRACEABILITY.md",
+      "line": 82,
+      "text": "## Предыдущие фазы — историческая трассировка"
+    },
+    {
+      "path": "docs/REQUIREMENTS_TRACEABILITY.md",
+      "line": 84,
+      "text": "# Фазы 28–35: актуальная матрица"
+    },
+    {
+      "path": "docs/REQUIREMENTS_TRACEABILITY.md",
+      "line": 130,
+      "text": "# Қолдау.Жол — прослеживаемость требований"
+    },
+    {
+      "path": "docs/REQUIREMENTS_TRACEABILITY.md",
+      "line": 144,
+      "text": "## Функциональный P0 из §21"
+    },
+    {
+      "path": "docs/REQUIREMENTS_TRACEABILITY.md",
+      "line": 169,
+      "text": "## Безопасность, UX и дополнительные NFR из §21"
+    },
+    {
+      "path": "docs/REQUIREMENTS_TRACEABILITY.md",
+      "line": 183,
+      "text": "## NFR-001…010 из §19 и продуктовая полнота"
+    },
+    {
+      "path": "docs/REQUIREMENTS_TRACEABILITY.md",
+      "line": 204,
+      "text": "## Локальные уточнения и их дополнительные проверки"
+    },
+    {
+      "path": "docs/SPECIALIST_ONBOARDING.md",
+      "line": 1,
+      "text": "# Onboarding специалистов"
+    },
+    {
+      "path": "docs/STATE_AND_STORAGE.md",
+      "line": 1,
+      "text": "# State и storage — текущая версия"
+    },
+    {
+      "path": "docs/SUMMARY_AND_EXPORT.md",
+      "line": 1,
+      "text": "# Выборочное резюме"
+    },
+    {
+      "path": "docs/TEAM_REVIEW_ATTESTATION.md",
+      "line": 1,
+      "text": "# Подтверждение проверки командой — 11 ноября 2026"
+    },
+    {
+      "path": "docs/TEAM_REVIEW_ATTESTATION.md",
+      "line": 3,
+      "text": "## Полученное заявление"
+    },
+    {
+      "path": "docs/TEAM_REVIEW_ATTESTATION.md",
+      "line": 11,
+      "text": "## Перечень охваченных заявлением фаз"
+    },
+    {
+      "path": "docs/TEAM_REVIEW_ATTESTATION.md",
+      "line": 22,
+      "text": "## Как довести до независимо подтверждённого закрытия"
+    },
+    {
+      "path": "docs/TEAM_REVIEW_ATTESTATION.md",
+      "line": 28,
+      "text": "## Сохранение истории"
+    },
+    {
+      "path": "docs/UX_SPEC.md",
+      "line": 1,
+      "text": "# S01–S03, фазы 28–35"
+    },
+    {
+      "path": "docs/phase14/OPERATOR_CARD.md",
+      "line": 1,
+      "text": "# Карточка оператора защиты"
+    },
+    {
+      "path": "docs/phase14/OPERATOR_CARD.md",
+      "line": 5,
+      "text": "## До таймера"
+    },
+    {
+      "path": "docs/phase14/OPERATOR_CARD.md",
+      "line": 13,
+      "text": "## Основной показ"
+    },
+    {
+      "path": "docs/phase14/OPERATOR_CARD.md",
+      "line": 31,
+      "text": "## Сбой"
+    },
+    {
+      "path": "docs/phase14/OPERATOR_CARD.md",
+      "line": 37,
+      "text": "## Вопросы"
+    },
+    {
+      "path": "docs/phase14/README.md",
+      "line": 1,
+      "text": "# Защита Қолдау.Жол — фаза 14"
+    },
+    {
+      "path": "docs/phase14/REHEARSAL_REPORT.md",
+      "line": 1,
+      "text": "# Протокол тайминга фазы 14"
+    },
+    {
+      "path": "docs/phase14/REHEARSAL_REPORT.md",
+      "line": 10,
+      "text": "## Метод и условия"
+    },
+    {
+      "path": "docs/phase14/REHEARSAL_REPORT.md",
+      "line": 20,
+      "text": "## Фактические точки"
+    },
+    {
+      "path": "docs/phase14/REHEARSAL_REPORT.md",
+      "line": 40,
+      "text": "## 300 секунд и речевой запас"
+    },
+    {
+      "path": "docs/phase14/REHEARSAL_REPORT.md",
+      "line": 55,
+      "text": "## Запись и fallback"
+    },
+    {
+      "path": "docs/phase14/REHEARSAL_REPORT.md",
+      "line": 64,
+      "text": "## Что не выполнялось заново"
+    },
+    {
+      "path": "docs/phase14/SLIDES_TEXT.md",
+      "line": 1,
+      "text": "# Текст семи слайдов"
+    },
+    {
+      "path": "docs/phase14/SLIDES_TEXT.md",
+      "line": 3,
+      "text": "## 1"
+    },
+    {
+      "path": "docs/phase14/SLIDES_TEXT.md",
+      "line": 44,
+      "text": "## 2"
+    },
+    {
+      "path": "docs/phase14/SLIDES_TEXT.md",
+      "line": 102,
+      "text": "## 3"
+    },
+    {
+      "path": "docs/phase14/SLIDES_TEXT.md",
+      "line": 128,
+      "text": "## 4"
+    },
+    {
+      "path": "docs/phase14/SLIDES_TEXT.md",
+      "line": 172,
+      "text": "## 5"
+    },
+    {
+      "path": "docs/phase14/SLIDES_TEXT.md",
+      "line": 208,
+      "text": "## 6"
+    },
+    {
+      "path": "docs/phase14/SLIDES_TEXT.md",
+      "line": 245,
+      "text": "## 7"
+    },
+    {
+      "path": "docs/phase14/voice/README.md",
+      "line": 1,
+      "text": "# Полный озвученный прогон — 8 ноября 2026"
+    },
+    {
+      "path": "docs/phase14/voice/TRANSCRIPT.md",
+      "line": 1,
+      "text": "# Полный озвученный прогон — синтетическая речь"
+    },
+    {
+      "path": "docs/phase14/voice/TRANSCRIPT.md",
+      "line": 3,
+      "text": "## 0–35 с"
+    },
+    {
+      "path": "docs/phase14/voice/TRANSCRIPT.md",
+      "line": 7,
+      "text": "## 35–55 с"
+    },
+    {
+      "path": "docs/phase14/voice/TRANSCRIPT.md",
+      "line": 11,
+      "text": "## 55–70 с"
+    },
+    {
+      "path": "docs/phase14/voice/TRANSCRIPT.md",
+      "line": 15,
+      "text": "## 70–100 с"
+    },
+    {
+      "path": "docs/phase14/voice/TRANSCRIPT.md",
+      "line": 19,
+      "text": "## 100–125 с"
+    },
+    {
+      "path": "docs/phase14/voice/TRANSCRIPT.md",
+      "line": 23,
+      "text": "## 125–150 с"
+    },
+    {
+      "path": "docs/phase14/voice/TRANSCRIPT.md",
+      "line": 27,
+      "text": "## 150–175 с"
+    },
+    {
+      "path": "docs/phase14/voice/TRANSCRIPT.md",
+      "line": 31,
+      "text": "## 175–195 с"
+    },
+    {
+      "path": "docs/phase14/voice/TRANSCRIPT.md",
+      "line": 35,
+      "text": "## 195–230 с"
+    },
+    {
+      "path": "docs/phase14/voice/TRANSCRIPT.md",
+      "line": 39,
+      "text": "## 230–265 с"
+    },
+    {
+      "path": "docs/phase14/voice/TRANSCRIPT.md",
+      "line": 43,
+      "text": "## 265–290 с"
+    },
+    {
+      "path": "docs/phase14/voice/TRANSCRIPT.md",
+      "line": 47,
+      "text": "## 290–298 с"
+    },
+    {
+      "path": "docs/phases55-67/pilot-browser-initial.log",
+      "line": 35,
+      "text": "7 | test('synthetic specialist → assigned moderation → contact → confirmed calendar → private summary and task',async({page})=>{"
+    },
+    {
+      "path": "docs/phases55-67/pilot-browser-initial.log",
+      "line": 66,
+      "text": "7 | test('synthetic specialist → assigned moderation → contact → confirmed calendar → private summary and task',async({page})=>{"
+    },
+    {
+      "path": "docs/phases55-67/pilot-browser-labels.log",
+      "line": 58,
+      "text": "25 | test('server failure keeps fields, no false local success, locale and 320px reflow',async({page})=>{"
+    },
+    {
+      "path": "docs/phases55-67/pilot-browser-labels.log",
+      "line": 87,
+      "text": "31 | test('lost acknowledgement after server commit retries the original operation once',async({page})=>{"
+    },
+    {
+      "path": "docs/phases55-67/pilot-browser-origin-denied.log",
+      "line": 36,
+      "text": "7 | test('synthetic specialist → assigned moderation → contact → confirmed calendar → private summary and task',async({page})=>{"
+    },
+    {
+      "path": "docs/phases55-67/pilot-browser-origin-denied.log",
+      "line": 70,
+      "text": "7 | test('synthetic specialist → assigned moderation → contact → confirmed calendar → private summary and task',async({page})=>{"
+    },
+    {
+      "path": "docs/qa/static.mjs",
+      "line": 12,
+      "text": "if(/(?:sk-proj-|ghp_|github_pat_|AKIA[0-9A-Z]{16}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----)/.test(content.toString()))findings.push(p);"
+    },
+    {
+      "path": "docs/sources/MASTER_ENGINEERING_CONTRACT.txt",
+      "line": 1,
+      "text": "# ҚОЛДАУ.ЖОЛ — MASTER ENGINEERING CONTRACT"
+    },
+    {
+      "path": "docs/sources/MASTER_ENGINEERING_CONTRACT.txt",
+      "line": 2,
+      "text": "# Общие инструкции для всех фаз"
+    },
+    {
+      "path": "docs/sources/MASTER_ENGINEERING_CONTRACT_55_67.txt",
+      "line": 1,
+      "text": "# ҚОЛДАУ.ЖОЛ — MASTER ENGINEERING CONTRACT"
+    },
+    {
+      "path": "docs/sources/MASTER_ENGINEERING_CONTRACT_55_67.txt",
+      "line": 2,
+      "text": "# Общие инструкции для всех фаз"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 1,
+      "text": "# Мастер-промпт для Codex: полное ТЗ «Қолдау.Жол» для Mama Pro Social Impact Hackathon 2026"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 7,
+      "text": "## 0. Режим работы и определение результата"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 9,
+      "text": "### 0.1. Профессиональные перспективы"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 17,
+      "text": "### 0.2. Разрешённые действия"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 27,
+      "text": "### 0.3. Границы этой задачи"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 35,
+      "text": "### 0.4. Что считается качественным ТЗ"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 53,
+      "text": "## 1. Источники, доказательства и происхождение требований"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 55,
+      "text": "### 1.1. Обязательные исходные материалы"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 66,
+      "text": "### 1.2. Иерархия и актуальность"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 74,
+      "text": "### 1.3. Статусы утверждений"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 88,
+      "text": "### 1.4. Если веб-доступа нет"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 92,
+      "text": "## 2. Проверенный снимок условий: 6 ноября 2026 года"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 96,
+      "text": "### 2.1. Сроки и задача"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 111,
+      "text": "### 2.2. Официальные критерии: сохраняй их нумерацию"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 128,
+      "text": "### 2.3. Обязательные условия и передача результатов"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 140,
+      "text": "### 2.4. Двенадцать материалов к финалу"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 159,
+      "text": "## 3. Продуктовая цель и опорная концепция"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 181,
+      "text": "### 3.1. Отличие, которое можно показать"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 195,
+      "text": "## 4. Исследование, пользователь и проверка гипотез"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 197,
+      "text": "### 4.1. Problem Statement и сегменты"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 210,
+      "text": "### 4.2. Родитель как соавтор"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 226,
+      "text": "### 4.3. Аналоги"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 234,
+      "text": "## 5. Границы продукта: P0, P1, P2"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 236,
+      "text": "### 5.1. P0: обязательный работающий срез"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 260,
+      "text": "### 5.2. P1: только после прохождения P0"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 266,
+      "text": "### 5.3. P2: после хакатона"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 272,
+      "text": "### 5.4. Приоритизация и отсечение"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 280,
+      "text": "## 6. Сквозные сценарии и критерии успеха"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 282,
+      "text": "### 6.1. Основной Golden Path"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 290,
+      "text": "### 6.2. Три обязательных демосценария"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 298,
+      "text": "### 6.3. Предлагаемые продуктовые цели"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 304,
+      "text": "## 7. Экранная спецификация и навигация"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 306,
+      "text": "### 7.1. Обязательные состояния интерфейса"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 324,
+      "text": "### 7.2. Контракт экрана"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 334,
+      "text": "### 7.3. Анкета 3–5 шагов"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 348,
+      "text": "### 7.4. Сохранение и восстановление"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 356,
+      "text": "## 8. Поиск, фильтры и данные одной услуги"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 358,
+      "text": "### 8.1. Поиск"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 364,
+      "text": "### 8.2. Фильтры"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 374,
+      "text": "### 8.3. Услуга как единица соответствия"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 382,
+      "text": "### 8.4. Стоимость и расположение"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 390,
+      "text": "### 8.5. Сортировка"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 394,
+      "text": "## 9. Объяснимый matching: строгий контракт"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 396,
+      "text": "### 9.1. Выбор подхода"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 404,
+      "text": "### 9.2. Hard constraints"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 417,
+      "text": "### 9.3. Soft ranking и полнота данных"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 449,
+      "text": "### 9.4. Обязательные артефакты алгоритма"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 464,
+      "text": "### 9.5. Объяснения"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 470,
+      "text": "### 9.6. Нулевые результаты"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 476,
+      "text": "## 10. Профиль, паспорт доверия и операционная проверка"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 478,
+      "text": "### 10.1. Публичный профиль"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 486,
+      "text": "### 10.2. Проверка по отдельным основаниям"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 502,
+      "text": "### 10.3. Процесс фонда"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 512,
+      "text": "### 10.4. Устаревшие сведения и жалобы"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 518,
+      "text": "## 11. Сравнение, выбор и первое обращение"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 520,
+      "text": "### 11.1. Сравнение"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 530,
+      "text": "### 11.2. Два честных режима контакта"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 549,
+      "text": "### 11.3. Состояния и надёжность заявки"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 563,
+      "text": "### 11.4. Первый разговор"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 569,
+      "text": "## 12. Визуальная система и доступность"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 573,
+      "text": "### 12.1. Конкретные дизайн-решения"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 581,
+      "text": "### 12.2. Компоненты"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 587,
+      "text": "### 12.3. Доступность как проверяемая цель"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 602,
+      "text": "### 12.4. Адаптивность"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 608,
+      "text": "### 12.5. Анимация"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 614,
+      "text": "## 13. Қарлығаш: фирменный проводник"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 636,
+      "text": "## 14. Русский и казахский: полноценная локализация"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 662,
+      "text": "## 15. Архитектура: минимальная надёжная реализация"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 664,
+      "text": "### 15.1. Сначала существующий проект"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 674,
+      "text": "### 15.2. Минимальное разделение"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 689,
+      "text": "### 15.3. Demo adapter и сервер"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 703,
+      "text": "### 15.4. Если рассматриваешь Supabase"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 723,
+      "text": "### 15.5. Hosting, PWA и внешние сервисы"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 731,
+      "text": "### 15.6. Архитектурные решения ADR"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 735,
+      "text": "## 16. Данные, права и минимизация"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 737,
+      "text": "### 16.1. Сущности без избыточных таблиц"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 747,
+      "text": "### 16.2. Data provenance"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 753,
+      "text": "### 16.3. Матрица прав"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 761,
+      "text": "### 16.4. Guest-first и приватные запросы"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 767,
+      "text": "### 16.5. Приватность и Казахстан"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 779,
+      "text": "### 16.6. Логи и удаление"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 785,
+      "text": "## 17. Контракты операций и ошибок"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 806,
+      "text": "## 18. AI: решение по полезности и риску"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 822,
+      "text": "## 19. Демоданные и воспроизводимость"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 844,
+      "text": "## 20. Нефункциональные требования"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 846,
+      "text": "### 20.1. Скорость"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 854,
+      "text": "### 20.2. Надёжность"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 860,
+      "text": "### 20.3. Безопасность"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 866,
+      "text": "### 20.4. Сопровождение"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 872,
+      "text": "## 21. Критерии приёмки и проверки"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 874,
+      "text": "### 21.1. Идентификаторы и прослеживаемость"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 880,
+      "text": "### 21.2. Формат AC"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 902,
+      "text": "### 21.3. Набор тестов, соразмерный риску"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 913,
+      "text": "### 21.4. Definition of Done P0"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 919,
+      "text": "## 22. План команды и восемь часов 14 ноября"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 944,
+      "text": "## 23. Демо и защита на пять минут"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 962,
+      "text": "### 23.1. Резервный показ"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 968,
+      "text": "## 24. Социальный эффект и поддержка фондом"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 980,
+      "text": "## 25. План до 3 декабря и бюджет 300 000 ₸"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 999,
+      "text": "## 26. Риски, права и передача"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 1021,
+      "text": "## 27. Структура итогового комплекта"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 1025,
+      "text": "### Обязательные документы"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 1043,
+      "text": "### Единый источник каждого правила"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 1058,
+      "text": "## 28. Порядок выполнения и итоговый аудит"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 1060,
+      "text": "### Фаза A — основания"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 1064,
+      "text": "### Фаза B — продуктовый срез"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 1068,
+      "text": "### Фаза C — контракты"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 1072,
+      "text": "### Фаза D — реализация как план"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 1076,
+      "text": "### Фаза E — доказательство ценности"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 1080,
+      "text": "### Фаза F — критический аудит"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 1109,
+      "text": "### Финальные таблицы"
+    },
+    {
+      "path": "docs/sources/MASTER_PROMPT_MAMAPRO_CODEX.txt",
+      "line": 1117,
+      "text": "### Формат завершающего ответа"
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 1,
+      "text": "# ҚОЛДАУ.ЖОЛ"
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 2,
+      "text": "# ОБЪЕДИНЁННАЯ ФАЗА 28–35"
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 3,
+      "text": "# Hard constraints → ranking → freshness → explanations → tests → вход → анкета → маршрут"
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 772,
+      "text": "AC-28-35-001. Hard pass/fail/unknown определены и проверены."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 773,
+      "text": "AC-28-35-002. Fail не попадает в exact или incomplete."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 774,
+      "text": "AC-28-35-003. Unknown hard не является exact."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 775,
+      "text": "AC-28-35-004. Same-offer regression исключает ложную комбинацию."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 776,
+      "text": "AC-28-35-005. Проверены возрастные границы и частичное пересечение."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 777,
+      "text": "AC-28-35-006. Budget null и 0 различаются."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 778,
+      "text": "AC-28-35-007. From в пределах бюджета не подтверждает конечную цену."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 779,
+      "text": "AC-28-35-008. Stale не даёт текущий hard pass."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 780,
+      "text": "AC-28-35-009. Score использует единое применимое множество запроса."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 781,
+      "text": "AC-28-35-010. Неполный профиль не уменьшает собственный знаменатель."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 782,
+      "text": "AC-28-35-011. Known false отличается от unknown при расчёте coverage."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 783,
+      "text": "AC-28-35-012. Пустое множество даёт null без NaN."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 784,
+      "text": "AC-28-35-013. Ручные результаты 100/85/82.5 воспроизводятся."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 785,
+      "text": "AC-28-35-014. Группировка выбирает best eligible offer."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 786,
+      "text": "AC-28-35-015. Сортировка стабильна при перестановке fixtures."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 787,
+      "text": "AC-28-35-016. Hidden/withdrawn не возвращаются публично."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 788,
+      "text": "AC-28-35-017. Reasons следуют из фактов выбранной offer."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 789,
+      "text": "AC-28-35-018. Freshness использует Clock и версию policy."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 790,
+      "text": "AC-28-35-019. Locale не меняет ID, score и порядок."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 791,
+      "text": "AC-28-35-020. S01 имеет оба работающих входа."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 792,
+      "text": "AC-28-35-021. Регистрация не требуется."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 793,
+      "text": "AC-28-35-022. Анкета поддерживает четыре шага, пропуск, Back и ошибки."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 794,
+      "text": "AC-28-35-023. «Не уверен» не приводит к диагнозу."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 795,
+      "text": "AC-28-35-024. Answers не попадают в публичный URL и логи."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 796,
+      "text": "AC-28-35-025. Язык UI не подменяет язык занятий."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 797,
+      "text": "AC-28-35-026. S03 summary соответствует SearchInput."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 798,
+      "text": "AC-28-35-027. Preview использует канонический SearchService."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 799,
+      "text": "AC-28-35-028. Ошибка каталога отличается от нуля результатов."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 800,
+      "text": "AC-28-35-029. Редактирование сохраняет остальные ответы."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 801,
+      "text": "AC-28-35-030. CTA передаёт applied input без скрытого изменения смысла."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 802,
+      "text": "AC-28-35-031. RU/KK-строки и сообщения валидации доступны."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 803,
+      "text": "AC-28-35-032. S01–S03 проверены клавиатурой и на телефоне."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 804,
+      "text": "AC-28-35-033. Затронутое существующее поведение не регрессировало."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 805,
+      "text": "AC-28-35-034. Проверки имеют фактический статус."
+    },
+    {
+      "path": "docs/sources/PHASES_28-35_QOLDAU_ZHOL.txt",
+      "line": 806,
+      "text": "AC-28-35-035. Фазы 36+ не объявлены готовыми."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 1,
+      "text": "# ҚОЛДАУ.ЖОЛ"
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 2,
+      "text": "# ОБЪЕДИНЁННАЯ ФАЗА 55–67"
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 3,
+      "text": "# Карта → основания live → специалисты → модерация → обращения → трекер → календарь → напоминания → обновления → следующий шаг → дневник → задания → резюме"
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 923,
+      "text": "AC-55-67-001. Повторная фаза 55 не создаёт вторую карту/выдачу."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 924,
+      "text": "AC-55-67-002. Карта сохраняет offerId, источники и списочную альтернативу."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 925,
+      "text": "AC-55-67-003. Отказ геолокации не блокирует ручной поиск."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 926,
+      "text": "AC-55-67-004. Readiness register отделяет техническую готовность и live-основания."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 927,
+      "text": "AC-55-67-005. Реальные чувствительные данные заблокированы при незакрытых соответствующих основаниях."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 928,
+      "text": "AC-55-67-006. Тестовый identity bypass недоступен production-конфигурации."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 929,
+      "text": "AC-55-67-007. Владелец и роли берутся из доверенного identity, не из payload."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 930,
+      "text": "AC-55-67-008. Guest видит только public projection."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 931,
+      "text": "AC-55-67-009. Parent A не читает и не изменяет resources B."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 932,
+      "text": "AC-55-67-010. Specialist не назначает себе verified."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 933,
+      "text": "AC-55-67-011. Moderator не получает ненужный семейный дневник."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 934,
+      "text": "AC-55-67-012. Опубликованы только разрешённые профили/offers."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 935,
+      "text": "AC-55-67-013. Новые записи unverified по умолчанию."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 936,
+      "text": "AC-55-67-014. Onboarding consent и moderation decision различаются."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 937,
+      "text": "AC-55-67-015. Withdraw отражается в public/search/favorites."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 938,
+      "text": "AC-55-67-016. Evidence и служебные заметки не публичны."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 939,
+      "text": "AC-55-67-017. Trust scope/source/date/limitation достоверны."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 940,
+      "text": "AC-55-67-018. Нет автоматической гарантии подлинности и результата."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 941,
+      "text": "AC-55-67-019. Contact показывает получателя, цель и состав до передачи."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 942,
+      "text": "AC-55-67-020. Payload минимален и не содержит весь intake/diary автоматически."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 943,
+      "text": "AC-55-67-021. External click не считается delivery."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 944,
+      "text": "AC-55-67-022. Server commit не считается appointment."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 945,
+      "text": "AC-55-67-023. Same key/payload возвращает прежний request."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 946,
+      "text": "AC-55-67-024. Same key/different payload даёт conflict."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 947,
+      "text": "AC-55-67-025. Timeout не создаёт повтор с новым ключом автоматически."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 948,
+      "text": "AC-55-67-026. Delivery доказательства и callback replay проверены."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 949,
+      "text": "AC-55-67-027. Backend failure не переключается на ложный local success."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 950,
+      "text": "AC-55-67-028. Tracker имеет допустимые переходы и actor/source."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 951,
+      "text": "AC-55-67-029. Ручная договорённость не выдана за независимое подтверждение."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 952,
+      "text": "AC-55-67-030. Поздний callback не откатывает новое состояние молча."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 953,
+      "text": "AC-55-67-031. Отмена, удаление и отзыв согласия различаются."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 954,
+      "text": "AC-55-67-032. Calendar различает manual/confirmed."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 955,
+      "text": "AC-55-67-033. Demo request не создаёт настоящую встречу."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 956,
+      "text": "AC-55-67-034. Source event идемпотентен и не дублируется."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 957,
+      "text": "AC-55-67-035. Зона и границы времени проверены."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 958,
+      "text": "AC-55-67-036. Старое редактирование не затирает новую версию молча."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 959,
+      "text": "AC-55-67-037. Один выбранный reminder channel имеет фактическую матрицу поддержки."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 960,
+      "text": "AC-55-67-038. Permission denied не ломает календарь."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 961,
+      "text": "AC-55-67-039. Event edit/cancel инвалидирует старое напоминание."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 962,
+      "text": "AC-55-67-040. Job retry/dedup и поздняя доставка обрабатываются явно."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 963,
+      "text": "AC-55-67-041. Scheduled/accepted/delivered не смешиваются."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 964,
+      "text": "AC-55-67-042. Lock-screen текст минимален и не раскрывает ребёнка."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 965,
+      "text": "AC-55-67-043. Подписка на offer change явная и отключаемая."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 966,
+      "text": "AC-55-67-044. Косметический timestamp не порождает существенное событие."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 967,
+      "text": "AC-55-67-045. Одно изменение не спамит повторно."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 968,
+      "text": "AC-55-67-046. Offline snapshot не объявляется обновлённым до sync."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 969,
+      "text": "AC-55-67-047. NextAction связан с реальным состоянием."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 970,
+      "text": "AC-55-67-048. Manual completion не меняет реальную запись без доказательства."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 971,
+      "text": "AC-55-67-049. Нет рейтинга детей, наказаний и процентов выздоровления."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 972,
+      "text": "AC-55-67-050. Diary поля минимальны, их необходимость имеет статус проверки."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 973,
+      "text": "AC-55-67-051. Diary приватен, ownership проверен вне UI."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 974,
+      "text": "AC-55-67-052. Доступ specialist к дневнику не появляется из одной заявки автоматически."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 975,
+      "text": "AC-55-67-053. Diary edit/delete/conflict имеют предсказуемое поведение."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 976,
+      "text": "AC-55-67-054. Audit не сохраняет ненужные копии удалённого чувствительного текста."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 977,
+      "text": "AC-55-67-055. Assignment создаёт уполномоченный автор для разрешённого recipient."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 978,
+      "text": "AC-55-67-056. Версии задания и ответов связаны корректно."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 979,
+      "text": "AC-55-67-057. Unable/question не наказываются и доступны."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 980,
+      "text": "AC-55-67-058. Выполнение не превращается в диагноз/доказанный медицинский прогресс."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 981,
+      "text": "AC-55-67-059. Summary по умолчанию не включает все приватные записи."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 982,
+      "text": "AC-55-67-060. Preview содержит ровно выбранное и показывает получателя перед отправкой."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 983,
+      "text": "AC-55-67-061. Copy/download/send имеют разные статусы и ошибки."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 984,
+      "text": "AC-55-67-062. Защищённая ссылка при реализации проверяет права, срок и отзыв."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 985,
+      "text": "AC-55-67-063. Отзыв не обещает вернуть внешнюю скачанную копию."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 986,
+      "text": "AC-55-67-064. Приватные API не попадают в прежний public cache."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 987,
+      "text": "AC-55-67-065. Demo/live/test namespaces и конфигурация разделены."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 988,
+      "text": "AC-55-67-066. Все новые системные тексты доступны RU/KK."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 989,
+      "text": "AC-55-67-067. Calendar и формы доступны клавиатурой и на телефоне."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 990,
+      "text": "AC-55-67-068. Нет действующих секретов и PII в URL/логах/публичном bundle."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 991,
+      "text": "AC-55-67-069. Миграции проверены на тестовых данных и не применены самовольно к production."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 992,
+      "text": "AC-55-67-070. Регрессия CORE/PWA выполнена либо явно блокирует заявленную готовность."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 993,
+      "text": "AC-55-67-071. Sandbox, mocks и live не выданы за одно и то же."
+    },
+    {
+      "path": "docs/sources/PHASES_55-67_QOLDAU_ZHOL.txt",
+      "line": 994,
+      "text": "AC-55-67-072. Фазы 68+ и реальные внешние действия не начаты автоматически."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 294,
+      "text": "AC-S01: обе кнопки доступны клавиатурой, locale меняет весь экран, нет требования регистрации."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 310,
+      "text": "AC-S02: все шаги можно пройти без персональных данных; пропуск сохраняет null, а не 0/false; Back не сбрасывает ответы."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 319,
+      "text": "AC-S03: резюме точно соответствует input; редактирование не создаёт дублирующую сессию."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 332,
+      "text": "AC-S04: число соответствует результату; карточка показывает конкретную offer; изменение фильтра не подменяется поздним ответом старого запроса."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 339,
+      "text": "AC-S05: Cancel не меняет результат; Apply меняет все поля одновременно; клавиатура позволяет использовать все controls."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 352,
+      "text": "AC-S06: смена offer не сохраняет ошибочную цену; сведения о проверке не объединены в глобальную гарантию."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 361,
+      "text": "AC-S07: максимальное число 3; четвёртый не заменяет ранее выбранного; длинные KK-тексты читаются без уменьшения шрифта."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 372,
+      "text": "AC-S08: без acknowledge отправка недоступна с понятным объяснением; никакого network side effect для запроса; storage failure не называется успехом."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 381,
+      "text": "AC-S09: статус соответствует локальной записи; timestamp форматируется по выбранному locale; ошибка чтения отличается от отсутствия записи."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 955,
+      "text": "SEC-T1: запрос чужого request_id → forbidden/notfound без раскрытия данных."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 956,
+      "text": "SEC-T2: специалист отправляет verificationStatus=checked → ignored/rejected, только moderator route."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 957,
+      "text": "SEC-T3: direct URL документа гостем → denied."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 958,
+      "text": "SEC-T4: подмена owner_id → denied на доверенной стороне/БД."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 959,
+      "text": "SEC-T5: hidden offer через API → не публикуется."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 960,
+      "text": "SEC-T6: массовые заявки → rate limit и минимальная anti-abuse мера без избыточного fingerprint."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 966,
+      "text": "NFR-001. Mobile first: 360/390/430 px и reflow320, keyboard/zoom. Проверяется ручным проходом и mobile e2e."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 967,
+      "text": "NFR-002. Performance цели: LCP≤2.5s, INP≤200ms, CLS≤0.1 при релевантных условиях. Это ориентиры, не результаты. Для реального p75 нужны полевые данные; Lighthouse не доказывает весь набор."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 968,
+      "text": "NFR-003. Для 30 offers локальная фильтрация целевой p95≤100ms на согласованном тестовом устройстве после load. Метод: 100 повторов разнообразных запросов, performance.now, не включая искусственный debounce. Цель уточняется фактическим измерением."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 969,
+      "text": "NFR-004. Изображения local, оптимизированы, задана геометрия. Суммарный первоначальный JS и шрифты контролируются build report; предварительный бюджет compressed JS≤250KB, first-load assets≤700KB, как PROPOSAL, не жертвуя доступностью."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 970,
+      "text": "NFR-005. Нет потери применённых фильтров при profile-back и смене языка в текущей сессии."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 971,
+      "text": "NFR-006. Операции сохранения/отмены различают success/error и выдерживают повтор."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 972,
+      "text": "NFR-007. Бизнес-правила чистые и покрыты значимыми тестами; UI не дублирует алгоритм."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 973,
+      "text": "NFR-008. Startup/load errors видны, не превращаются в пустую успешную выдачу."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 974,
+      "text": "NFR-009. Reduced motion сохраняет весь функционал."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 975,
+      "text": "NFR-010. Воспроизводимая установка: lockfile, README, build/start/check commands, безопасная конфигурация. Конкретные команды подтверждаются фактическим package.json при реализации."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1021,
+      "text": "FR-001 locale ru/kk на всём P0; AC-001: после переключения все видимые системные строки выбранного языка, domain state неизменен; TEST-001 e2e."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1022,
+      "text": "FR-002 два способа входа; AC-002: прямой каталог работает без intake; TEST-002 e2e."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1023,
+      "text": "FR-003 анкета 4 шага с пропуском; AC-003: null не превращается в 0 и Back сохраняет; TEST-003 integration."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1024,
+      "text": "FR-004 review параметров; AC-004: summary и SearchInput совпадают; TEST-004 integration."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1025,
+      "text": "FR-005 поиск имени/категории; AC-005: нормализованный query даёт ожидаемые IDs без слияния kk-букв; TEST-005 unit."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1026,
+      "text": "FR-006 draft/apply filters; AC-006: Cancel не меняет applied; TEST-006 integration."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1027,
+      "text": "FR-007 hard tri-state; AC-007: unknown не pass, fail не incomplete; TEST-007 unit."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1028,
+      "text": "FR-008 same-offer matching; AC-008: S12 O23/O24 не формируют ложный KK offline≤6000; TEST-008 unit."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1029,
+      "text": "FR-009 score/coverage; AC-009: пример 100/85/82.5 и coverage1/.85/1; TEST-009 unit."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1030,
+      "text": "FR-010 no-data state; AC-010: A пусто → null score, без NaN/ложной персонализации; TEST-010 unit."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1031,
+      "text": "FR-011 explanations from facts; AC-011: LANGUAGE_MATCH невозможно без kk в выбранной offer; TEST-011 unit."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1032,
+      "text": "FR-012 профиль; AC-012: offer selector меняет цену/reasons атомарно; TEST-012 integration."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1033,
+      "text": "FR-013 passport; AC-013: synthetic verification маркируется и scope виден; TEST-013 manual/e2e."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1034,
+      "text": "FR-014 compare 2–3; AC-014: четвёртый не меняет список; TEST-014 integration/e2e."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1035,
+      "text": "FR-015 demo request; AC-015: нет реального network send, success после commit; TEST-015 integration/e2e."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1036,
+      "text": "FR-016 idempotency; AC-016: повтор одного key возвращает один id; TEST-016 storage integration."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1037,
+      "text": "FR-017 cancellation; AC-017: записанный status cancelled_demo переживает reload; TEST-017 e2e."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1038,
+      "text": "FR-018 empty; AC-018: budget1000 hard не ослабляется без пользователя; TEST-018 e2e."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1039,
+      "text": "FR-019 reload/back; AC-019: восстановление соответствует section6, неизвестный request не создаётся; TEST-019 e2e."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1040,
+      "text": "FR-020 reset; AC-020: очищается только app-owned demo storage; TEST-020 integration."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1041,
+      "text": "SEC-001 no real PII; AC-021: форма не имеет полей ребёнка/контактов/файлов; TEST-021 review."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1042,
+      "text": "SEC-002 no secrets; AC-022: source/build/config не содержит действующих токенов; TEST-022 review."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1043,
+      "text": "SEC-003 no PII logs/URL; AC-023: анкета не появляется в query/history/analytics; TEST-023 inspection."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1044,
+      "text": "SEC-004 demo isolation; AC-024: URL не включает LIVE и нет messaging integration; TEST-024 review/e2e."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1048,
+      "text": "NFR-011 coherent timestamps; AC-028: fixed clock даёт стабильные freshness и результаты; TEST-028 unit."
+    },
+    {
+      "path": "docs/sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt",
+      "line": 1049,
+      "text": "NFR-012 locale keys; AC-029: набор ключей ru=kk, нет undefined; TEST-029 static/unit."
+    },
+    {
+      "path": "playwright.config.ts",
+      "line": 3,
+      "text": "export default defineConfig({"
+    },
+    {
+      "path": "playwright.offline.config.ts",
+      "line": 5,
+      "text": "export default defineConfig({"
+    },
+    {
+      "path": "playwright.pilot.config.ts",
+      "line": 7,
+      "text": "export default defineConfig({"
+    },
+    {
+      "path": "playwright.release.config.ts",
+      "line": 3,
+      "text": "export default defineConfig({"
+    },
+    {
+      "path": "releases/phase13-968e7ea9c5d3/README.md",
+      "line": 1,
+      "text": "# Сохранённый демонстрационный релиз"
+    },
+    {
+      "path": "releases/phase14-defense/README.md",
+      "line": 1,
+      "text": "# Материалы защиты — фаза 14"
+    },
+    {
+      "path": "scripts/audit-release.mjs",
+      "line": 18,
+      "text": "for (const file of [...(await files('dist')).sort(), ...inputs.filter(f => f.startsWith('src/') || /^(?:package.*\\.json|vite\\.config\\.ts|index\\.html)$/u.test(f))]) {"
+    },
+    {
+      "path": "scripts/audit-release.mjs",
+      "line": 20,
+      "text": "if (secret.test(content.toString())) findings.push({ file, kind: 'secret-pattern' });"
+    },
+    {
+      "path": "scripts/audit-release.mjs",
+      "line": 23,
+      "text": "if (dev.test(content.toString()) || file.endsWith('.map')) findings.push({ file, kind: 'dev-marker-or-source-map' });"
+    },
+    {
+      "path": "scripts/audit-release.mjs",
+      "line": 30,
+      "text": "const envFiles = (await readdir('.')).filter(name => /^\\.env/u.test(name));"
+    },
+    {
+      "path": "server/contracts.ts",
+      "line": 9,
+      "text": "export const offer=z.object({"
+    },
+    {
+      "path": "server/contracts.ts",
+      "line": 20,
+      "text": "export type ApplicationData=z.infer<typeof offer> & {moderator?:string;facts?:{scope:string;status:string;source:string;checkedAt:string;reviewDueAt:string;limitation:string}[];decision?:string;previousPublic?:Record<string,unknown>};"
+    },
+    {
+      "path": "server/contracts.ts",
+      "line": 21,
+      "text": "export const timing=z.object({start:moment,end:moment,timezone}).strict().refine(t=>Date.parse(t.end)>Date.parse(t.start)&&Date.parse(t.end)-Date.parse(t.start)<=86400000,'TIME_RANGE');"
+    },
+    {
+      "path": "server/contracts.ts",
+      "line": 23,
+      "text": "export const command=z.discriminatedUnion('op',["
+    },
+    {
+      "path": "server/contracts.ts",
+      "line": 55,
+      "text": "export type Command=z.infer<typeof command>;"
+    },
+    {
+      "path": "server/contracts.ts",
+      "line": 56,
+      "text": "export interface ContactData {offerId:string; snapshot:{name:{ru:string;kk:string};title:{ru:string;kk:string};price:number|null;priceKind:string;version:number};purpose:string;consentVersion:string;revoked?:boolean;history:{status:string;actor:string;source:string;at:string}[]}"
+    },
+    {
+      "path": "server/contracts.ts",
+      "line": 57,
+      "text": "export interface CalendarData {title:string;timing:z.infer<typeof timing>;place:string;source:'manual'|'confirmed_request';reminder?:{enabled:boolean;minutes:number}}"
+    },
+    {
+      "path": "server/contracts.ts",
+      "line": 58,
+      "text": "export interface GoalData {text:string;discussedOn:string|null}"
+    },
+    {
+      "path": "server/contracts.ts",
+      "line": 59,
+      "text": "export interface DiaryData {date:string;goalId:string|null;observation:string;context:string}"
+    },
+    {
+      "path": "server/contracts.ts",
+      "line": 60,
+      "text": "export interface AssignmentData {instruction:string;conditions:string;goalId:string|null;due:string|null;reviewOn:string|null;instructionVersion:number;revisions:{version:number;instruction:string;conditions:string;due:string|null;reviewOn:string|null}[];responses:{version:number;status:string;observation:string;author:string;at:string}[]}"
+    },
+    {
+      "path": "server/http.ts",
+      "line": 5,
+      "text": "export function testOnly(mode=process.env.PILOT_MODE,environment=process.env.NODE_ENV){"
+    },
+    {
+      "path": "server/http.ts",
+      "line": 8,
+      "text": "export function createPilotServer(service:PilotService,mode=process.env.PILOT_MODE,environment=process.env.NODE_ENV){"
+    },
+    {
+      "path": "server/service.ts",
+      "line": 10,
+      "text": "export class PilotService {"
+    },
+    {
+      "path": "server/start.ts",
+      "line": 7,
+      "text": "if(!/^[a-zA-Z0-9_-]{1,100}$/.test(databaseName))throw new Error('INVALID_TEST_DB_NAME');"
+    },
+    {
+      "path": "server/store.ts",
+      "line": 4,
+      "text": "export interface Actor { id: string; role: 'parent'|'specialist'|'moderator'|'admin' }"
+    },
+    {
+      "path": "server/store.ts",
+      "line": 5,
+      "text": "export interface Resource<T = Record<string, unknown>> {"
+    },
+    {
+      "path": "server/store.ts",
+      "line": 9,
+      "text": "export class Fault extends Error {"
+    },
+    {
+      "path": "server/store.ts",
+      "line": 13,
+      "text": "export function requireThat(value: unknown, code = 'NOT_FOUND', status = 404): asserts value {"
+    },
+    {
+      "path": "server/store.ts",
+      "line": 16,
+      "text": "export class Store {"
+    },
+    {
+      "path": "src/app/App.tsx",
+      "line": 83,
+      "text": "export function App() {"
+    },
+    {
+      "path": "src/app/AppState.tsx",
+      "line": 35,
+      "text": "export function AppStateProvider({ catalog, children }: { catalog: Catalog; children: ReactNode }) {"
+    },
+    {
+      "path": "src/app/AppState.tsx",
+      "line": 90,
+      "text": "export function useApp(): AppState {"
+    },
+    {
+      "path": "src/app/DemoRequests.tsx",
+      "line": 8,
+      "text": "export function DemoRequestsProvider({ children }: { children: ReactNode }) {"
+    },
+    {
+      "path": "src/app/DemoRequests.tsx",
+      "line": 19,
+      "text": "export function useDemoRequests() {"
+    },
+    {
+      "path": "src/app/requestAttempt.ts",
+      "line": 4,
+      "text": "export const ATTEMPT_KEY = 'qoldau.demo-request-attempt';"
+    },
+    {
+      "path": "src/app/requestAttempt.ts",
+      "line": 9,
+      "text": "export class SessionAttemptStorage implements AttemptStorage {"
+    },
+    {
+      "path": "src/app/session.ts",
+      "line": 4,
+      "text": "export const SESSION_KEY = 'qoldau.demo-search';"
+    },
+    {
+      "path": "src/app/session.ts",
+      "line": 5,
+      "text": "export const LOCALE_KEY = 'qoldau.locale';"
+    },
+    {
+      "path": "src/app/session.ts",
+      "line": 6,
+      "text": "export const SESSION_TTL = 2 * 60 * 60 * 1000;"
+    },
+    {
+      "path": "src/app/session.ts",
+      "line": 11,
+      "text": "export type Step = 1 | 2 | 3 | 4;"
+    },
+    {
+      "path": "src/app/session.ts",
+      "line": 12,
+      "text": "export type StorageNotice = 'storageUnavailable' | 'storageReset' | null;"
+    },
+    {
+      "path": "src/app/session.ts",
+      "line": 13,
+      "text": "export interface Session {"
+    },
+    {
+      "path": "src/app/session.ts",
+      "line": 17,
+      "text": "export function restoreSession(storage: Pick<Storage, 'getItem' | 'removeItem'>, catalogVersion: string, now: number): Session {"
+    },
+    {
+      "path": "src/app/session.ts",
+      "line": 39,
+      "text": "export function saveSession(storage: Pick<Storage, 'setItem'>, session: Session, catalogVersion: string): boolean {"
+    },
+    {
+      "path": "src/data/IndexedDbRequestRepository.ts",
+      "line": 3,
+      "text": "export const REQUEST_DB = 'qoldau-demo-v1';"
+    },
+    {
+      "path": "src/data/IndexedDbRequestRepository.ts",
+      "line": 4,
+      "text": "export const REQUEST_STORE = 'requests';"
+    },
+    {
+      "path": "src/data/IndexedDbRequestRepository.ts",
+      "line": 6,
+      "text": "export class IndexedDbRequestRepository implements RequestRepository {"
+    },
+    {
+      "path": "src/data/catalogRepository.ts",
+      "line": 4,
+      "text": "export async function loadCatalog(): Promise<Catalog> {"
+    },
+    {
+      "path": "src/data/catalogRepository.ts",
+      "line": 12,
+      "text": "export interface CatalogRepository { load(): Promise<Catalog> }"
+    },
+    {
+      "path": "src/data/catalogRepository.ts",
+      "line": 13,
+      "text": "export const catalogRepository: CatalogRepository = { load: loadCatalog };"
+    },
+    {
+      "path": "src/domain/DemoRequestService.ts",
+      "line": 4,
+      "text": "export interface RequestFlowState {"
+    },
+    {
+      "path": "src/domain/DemoRequestService.ts",
+      "line": 10,
+      "text": "export class DemoRequestService {"
+    },
+    {
+      "path": "src/domain/SearchService.ts",
+      "line": 5,
+      "text": "export { isFresh } from './freshness';"
+    },
+    {
+      "path": "src/domain/SearchService.ts",
+      "line": 6,
+      "text": "export type { MatchReason as Reason } from './matching';"
+    },
+    {
+      "path": "src/domain/SearchService.ts",
+      "line": 8,
+      "text": "export interface RatedOffer {"
+    },
+    {
+      "path": "src/domain/SearchService.ts",
+      "line": 13,
+      "text": "export type GroupedSearchItem = RatedOffer & { matchingOfferIds: string[] };"
+    },
+    {
+      "path": "src/domain/SearchService.ts",
+      "line": 14,
+      "text": "export interface SearchResult {"
+    },
+    {
+      "path": "src/domain/SearchService.ts",
+      "line": 27,
+      "text": "export function publicCatalog(raw: Catalog): Catalog {"
+    },
+    {
+      "path": "src/domain/SearchService.ts",
+      "line": 34,
+      "text": "export class SearchService {"
+    },
+    {
+      "path": "src/domain/catalog.ts",
+      "line": 31,
+      "text": "export const catalogSchema = z.object({"
+    },
+    {
+      "path": "src/domain/catalog.ts",
+      "line": 66,
+      "text": "export type Catalog = z.infer<typeof catalogSchema>;"
+    },
+    {
+      "path": "src/domain/catalog.ts",
+      "line": 67,
+      "text": "export type Offer = Catalog['offers'][number];"
+    },
+    {
+      "path": "src/domain/catalog.ts",
+      "line": 68,
+      "text": "export type Specialist = Catalog['specialists'][number];"
+    },
+    {
+      "path": "src/domain/catalog.ts",
+      "line": 69,
+      "text": "export type VerificationFact = Specialist['verificationFacts'][number];"
+    },
+    {
+      "path": "src/domain/contracts.ts",
+      "line": 4,
+      "text": "export const NEED_TAGS = ['speech', 'learning', 'interaction'] as const;"
+    },
+    {
+      "path": "src/domain/contracts.ts",
+      "line": 5,
+      "text": "export const AGE_GROUPS = ['AGE_0_2', 'AGE_3_5', 'AGE_6_9', 'AGE_10_14', 'AGE_15_17'] as const;"
+    },
+    {
+      "path": "src/domain/contracts.ts",
+      "line": 6,
+      "text": "export const LANGUAGES = ['ru', 'kk'] as const;"
+    },
+    {
+      "path": "src/domain/contracts.ts",
+      "line": 7,
+      "text": "export const FORMATS = ['offline', 'online'] as const;"
+    },
+    {
+      "path": "src/domain/contracts.ts",
+      "line": 8,
+      "text": "export const DISTRICTS = ['BOSTANDYK', 'ALMALY', 'AUEZOV', 'MEDEU'] as const;"
+    },
+    {
+      "path": "src/domain/contracts.ts",
+      "line": 9,
+      "text": "export const CATEGORIES = ['LOGOPED', 'DEFECTOLOG', 'PSYCHOLOG'] as const;"
+    },
+    {
+      "path": "src/domain/contracts.ts",
+      "line": 10,
+      "text": "export const AGE_RANGES = {"
+    },
+    {
+      "path": "src/domain/contracts.ts",
+      "line": 14,
+      "text": "export const BUDGET_MAX = 100_000;"
+    },
+    {
+      "path": "src/domain/contracts.ts",
+      "line": 15,
+      "text": "export const QUERY_MAX = 80;"
+    },
+    {
+      "path": "src/domain/contracts.ts",
+      "line": 16,
+      "text": "export type Locale = typeof LANGUAGES[number];"
+    },
+    {
+      "path": "src/domain/contracts.ts",
+      "line": 17,
+      "text": "export type NeedTag = typeof NEED_TAGS[number];"
+    },
+    {
+      "path": "src/domain/contracts.ts",
+      "line": 18,
+      "text": "export type AgeGroup = typeof AGE_GROUPS[number];"
+    },
+    {
+      "path": "src/domain/contracts.ts",
+      "line": 19,
+      "text": "export type District = typeof DISTRICTS[number];"
+    },
+    {
+      "path": "src/domain/contracts.ts",
+      "line": 20,
+      "text": "export type Category = typeof CATEGORIES[number];"
+    },
+    {
+      "path": "src/domain/contracts.ts",
+      "line": 22,
+      "text": "export const searchInputSchema = z.strictObject({"
+    },
+    {
+      "path": "src/domain/contracts.ts",
+      "line": 38,
+      "text": "export type SearchInput = z.infer<typeof searchInputSchema>;"
+    },
+    {
+      "path": "src/domain/contracts.ts",
+      "line": 40,
+      "text": "export function emptySearchInput(): SearchInput {"
+    },
+    {
+      "path": "src/domain/contracts.ts",
+      "line": 49,
+      "text": "export function normalizeSearchInput(value: SearchInput): SearchInput {"
+    },
+    {
+      "path": "src/domain/contracts.ts",
+      "line": 56,
+      "text": "export const normalizeSearchText = (text: string): string => text.normalize('NFKC').trim()"
+    },
+    {
+      "path": "src/domain/contracts.ts",
+      "line": 59,
+      "text": "export function districtApplies(input: SearchInput): boolean {"
+    },
+    {
+      "path": "src/domain/contracts.ts",
+      "line": 63,
+      "text": "export type BudgetError = 'budgetInteger' | 'budgetNegative' | 'budgetLimit';"
+    },
+    {
+      "path": "src/domain/contracts.ts",
+      "line": 64,
+      "text": "export function parseBudget(raw: string): { value: number | null; error: BudgetError | null } {"
+    },
+    {
+      "path": "src/domain/contracts.ts",
+      "line": 67,
+      "text": "if (/^-\\d+$/u.test(text)) return { value: null, error: 'budgetNegative' };"
+    },
+    {
+      "path": "src/domain/contracts.ts",
+      "line": 68,
+      "text": "if (!/^\\d+$/u.test(text)) return { value: null, error: 'budgetInteger' };"
+    },
+    {
+      "path": "src/domain/demoRequest.ts",
+      "line": 4,
+      "text": "export const REQUEST_TTL = 7 * 24 * 60 * 60 * 1000;"
+    },
+    {
+      "path": "src/domain/demoRequest.ts",
+      "line": 6,
+      "text": "export const demoRequestSchema = z.strictObject({"
+    },
+    {
+      "path": "src/domain/demoRequest.ts",
+      "line": 19,
+      "text": "export type DemoRequest = z.infer<typeof demoRequestSchema>;"
+    },
+    {
+      "path": "src/domain/demoRequest.ts",
+      "line": 20,
+      "text": "export type RequestPhase = 'draft' | 'submitting' | 'checking' | 'recorded_demo' | 'error' | 'cancelled_demo';"
+    },
+    {
+      "path": "src/domain/demoRequest.ts",
+      "line": 21,
+      "text": "export interface RequestAttempt {"
+    },
+    {
+      "path": "src/domain/demoRequest.ts",
+      "line": 24,
+      "text": "export interface AttemptStorage {"
+    },
+    {
+      "path": "src/domain/demoRequest.ts",
+      "line": 29,
+      "text": "export const isExpiredAttempt = (attempt: RequestAttempt, now: number) => now - attempt.startedAt > 2 * 60 * 60 * 1000;"
+    },
+    {
+      "path": "src/domain/demoRequest.ts",
+      "line": 30,
+      "text": "export function offerSnapshot(offer: Offer): DemoRequest['nonPersonalOfferSnapshot'] {"
+    },
+    {
+      "path": "src/domain/demoRequest.ts",
+      "line": 39,
+      "text": "export const isExpiredRequest = (record: DemoRequest, now: number) => now - Date.parse(record.createdAt) > REQUEST_TTL;"
+    },
+    {
+      "path": "src/domain/demoRequest.ts",
+      "line": 41,
+      "text": "export class StorageFailure extends Error {}"
+    },
+    {
+      "path": "src/domain/demoRequest.ts",
+      "line": 42,
+      "text": "export class UncertainStorageResult extends StorageFailure {}"
+    },
+    {
+      "path": "src/domain/demoRequest.ts",
+      "line": 43,
+      "text": "export interface RequestRepository {"
+    },
+    {
+      "path": "src/domain/freshness.ts",
+      "line": 3,
+      "text": "export interface Clock { now(): Date }"
+    },
+    {
+      "path": "src/domain/freshness.ts",
+      "line": 4,
+      "text": "export const fixedClock = (instant: string): Clock => ({ now: () => new Date(instant) });"
+    },
+    {
+      "path": "src/domain/freshness.ts",
+      "line": 7,
+      "text": "export const FRESHNESS_POLICY = {"
+    },
+    {
+      "path": "src/domain/freshness.ts",
+      "line": 11,
+      "text": "export type FreshnessStatus = 'known_current' | 'unknown' | 'stale' | 'not_applicable';"
+    },
+    {
+      "path": "src/domain/freshness.ts",
+      "line": 12,
+      "text": "export interface FieldFreshness {"
+    },
+    {
+      "path": "src/domain/freshness.ts",
+      "line": 20,
+      "text": "export function fieldFreshness(timestamp: string | null, clock: Clock, days?: number, applies = true): FieldFreshness {"
+    },
+    {
+      "path": "src/domain/freshness.ts",
+      "line": 34,
+      "text": "export function isFresh(timestamp: string | null, now: Date, days: number): boolean {"
+    },
+    {
+      "path": "src/domain/map.ts",
+      "line": 2,
+      "text": "export interface LocatedOffer {offerId:string;lat:number;lon:number;source:string;checkedAt:string;access:{stepFree:null;lift:null;source:string;checkedAt:null}}"
+    },
+    {
+      "path": "src/domain/map.ts",
+      "line": 4,
+      "text": "export const demoLocations:LocatedOffer[]=[['O01',43.222,76.901],['O02',43.25,76.91],['O04',43.235,76.85],['O06',43.218,76.913],['O07',43.212,76.9],['O08',43.219,76.922],['O10',43.24,76.96],['O11',43.209,76.924],['O12',43.26,76.929],['O13',43.24,76.839],['O16',43.255,76.94],['O17',43.23,76.97],['O23',43.217,76.94]].map(([id,lat,lon])=>({offerId:String(id),lat:Number(lat),lon:Number(lon),source:'sy"
+    },
+    {
+      "path": "src/domain/map.ts",
+      "line": 5,
+      "text": "export function mapSearchResult(result:SearchResult,locations=demoLocations){"
+    },
+    {
+      "path": "src/domain/map.ts",
+      "line": 9,
+      "text": "export function straightDistanceKm(a:{lat:number;lon:number},b:{lat:number;lon:number}){const r=Math.PI/180,dLat=(b.lat-a.lat)*r,dLon=(b.lon-a.lon)*r;return 6371*2*Math.asin(Math.sqrt(Math.sin(dLat/2)**2+Math.cos(a.lat*r)*Math.cos(b.lat*r)*Math.sin(dLon/2)**2));}"
+    },
+    {
+      "path": "src/domain/matching.ts",
+      "line": 5,
+      "text": "export type Factor = 'need' | 'age' | 'language' | 'format' | 'budget' | 'district' | 'availability';"
+    },
+    {
+      "path": "src/domain/matching.ts",
+      "line": 6,
+      "text": "export type ConstraintField = Factor | 'category';"
+    },
+    {
+      "path": "src/domain/matching.ts",
+      "line": 7,
+      "text": "export const WEIGHTS: Record<Factor, number> = { need: 30, age: 15, language: 15, format: 10, budget: 15, district: 10, availability: 5 };"
+    },
+    {
+      "path": "src/domain/matching.ts",
+      "line": 8,
+      "text": "export interface ConstraintCheck {"
+    },
+    {
+      "path": "src/domain/matching.ts",
+      "line": 12,
+      "text": "export type ReasonLocaleKey = 'reasonNeed' | 'reasonCategory' | 'reasonAge' | 'reasonLanguage' | 'reasonFormat' | 'reasonBudget' | 'reasonDistrict' | 'reasonAvailability'"
+    },
+    {
+      "path": "src/domain/matching.ts",
+      "line": 16,
+      "text": "export interface MatchReason {"
+    },
+    {
+      "path": "src/domain/matching.ts",
+      "line": 23,
+      "text": "export interface RankingResult {"
+    },
+    {
+      "path": "src/domain/matching.ts",
+      "line": 27,
+      "text": "export interface OfferEvaluation {"
+    },
+    {
+      "path": "src/domain/matching.ts",
+      "line": 40,
+      "text": "export function applicableFactors(input: SearchInput): Factor[] {"
+    },
+    {
+      "path": "src/domain/matching.ts",
+      "line": 50,
+      "text": "export function evaluateOffer(input: SearchInput, offer: Offer, context: { clock: Clock; rulesVersion: string; catalogVersion: string }): OfferEvaluation {"
+    },
+    {
+      "path": "src/domain/profile.ts",
+      "line": 5,
+      "text": "export function resolveProfile(catalog: Catalog, specialistId: string | undefined, offerId: string | null) {"
+    },
+    {
+      "path": "src/domain/profile.ts",
+      "line": 16,
+      "text": "export function verificationStatus(fact: VerificationFact, demoClock: string): VerificationFact['status'] {"
+    },
+    {
+      "path": "src/features/Home.tsx",
+      "line": 5,
+      "text": "export function Home() {"
+    },
+    {
+      "path": "src/features/intake/Intake.tsx",
+      "line": 21,
+      "text": "export function Intake() {"
+    },
+    {
+      "path": "src/features/intake/Review.tsx",
+      "line": 7,
+      "text": "export function Review() {"
+    },
+    {
+      "path": "src/features/pilot/Calendar.tsx",
+      "line": 11,
+      "text": "export function Calendar({state,run}:{state:PilotState;run:Run}){"
+    },
+    {
+      "path": "src/features/pilot/Contacts.tsx",
+      "line": 13,
+      "text": "export function PilotCatalog({state,run}:{state:PilotState;run:Run}){"
+    },
+    {
+      "path": "src/features/pilot/Contacts.tsx",
+      "line": 22,
+      "text": "export function Tracker({state,run}:{state:PilotState;run:Run}){"
+    },
+    {
+      "path": "src/features/pilot/Forms.tsx",
+      "line": 4,
+      "text": "export function useWords(){const {locale}=useApp();return {locale,s:(key:PilotKey)=>pilotText(locale,key),status:(value:string)=>pilotStatus(locale,value)};}"
+    },
+    {
+      "path": "src/features/pilot/Forms.tsx",
+      "line": 5,
+      "text": "export function Field({label,name,value,onChange,type='text',required=true,max=1000}:{label:string;name:string;value:string;onChange:(v:string)=>void;type?:string;required?:boolean;max?:number}){"
+    },
+    {
+      "path": "src/features/pilot/Forms.tsx",
+      "line": 8,
+      "text": "export function Text({label,value,onChange,max=1000,required=true}:{label:string;value:string;onChange:(v:string)=>void;max?:number;required?:boolean}){"
+    },
+    {
+      "path": "src/features/pilot/Forms.tsx",
+      "line": 11,
+      "text": "export function Choice({label,value,options,onChange}:{label:string;value:string;options:readonly string[];onChange:(v:string)=>void}){const {status}=useWords();const id=useId();return <div className=\"field\"><label htmlFor={id}>{label}</label><select id={id} value={value} onChange={e=>onChange(e.target.value)}>{options.map(v=><option key={v} value={v}>{status(v)}</option>)}</select></div>;}"
+    },
+    {
+      "path": "src/features/pilot/Forms.tsx",
+      "line": 12,
+      "text": "export function Form({children,onSubmit,label}:{children:ReactNode;onSubmit:()=>Promise<unknown>;label:PilotKey}){"
+    },
+    {
+      "path": "src/features/pilot/Forms.tsx",
+      "line": 17,
+      "text": "export function Action({children,onClick}:{children:ReactNode;onClick:()=>Promise<unknown>}){"
+    },
+    {
+      "path": "src/features/pilot/Forms.tsx",
+      "line": 20,
+      "text": "export function TimingFields({value,onChange}:{value:{start:string;end:string;timezone:string};onChange:(v:{start:string;end:string;timezone:string})=>void}){const {s}=useWords();return <><Field name=\"start\" label={s('start')} value={value.start} onChange={start=>onChange({...value,start})}/><Field name=\"end\" label={s('end')} value={value.end} onChange={end=>onChange({...value,end})}/><Field name="
+    },
+    {
+      "path": "src/features/pilot/Forms.tsx",
+      "line": 21,
+      "text": "export function initialTiming(){const start=new Date(Date.now()+86400000);start.setUTCMinutes(0,0,0);return {start:start.toISOString(),end:new Date(start.getTime()+3600000).toISOString(),timezone:'Asia/Almaty'};}"
+    },
+    {
+      "path": "src/features/pilot/Inbox.tsx",
+      "line": 3,
+      "text": "export function Inbox({state,run}:{state:PilotState;run:Run}){"
+    },
+    {
+      "path": "src/features/pilot/NextAction.tsx",
+      "line": 4,
+      "text": "export function NextAction({next,run}:{next:NonNullable<PilotState['next']>;run:Run}){"
+    },
+    {
+      "path": "src/features/pilot/Onboarding.tsx",
+      "line": 6,
+      "text": "export function ApplicationEditor({run,existing,onDone}:{run:Run;existing?:Resource<ApplicationData>;onDone?:()=>void}){"
+    },
+    {
+      "path": "src/features/pilot/Onboarding.tsx",
+      "line": 39,
+      "text": "export function Onboarding({state,run}:{state:PilotState;run:Run}){"
+    },
+    {
+      "path": "src/features/pilot/Pilot.tsx",
+      "line": 16,
+      "text": "export function Pilot(){"
+    },
+    {
+      "path": "src/features/pilot/PrivateRecords.tsx",
+      "line": 12,
+      "text": "export function PrivateRecords({state,run}:{state:PilotState;run:Run}){"
+    },
+    {
+      "path": "src/features/pilot/PrivateRecords.tsx",
+      "line": 23,
+      "text": "export function Tasks({state,run}:{state:PilotState;run:Run}){"
+    },
+    {
+      "path": "src/features/pilot/PrivateRecords.tsx",
+      "line": 30,
+      "text": "export function Summary({state,run}:{state:PilotState;run:Run}){"
+    },
+    {
+      "path": "src/features/pilot/SavedDemo.tsx",
+      "line": 13,
+      "text": "export function SaveDemo({offerId}:{offerId:string}){"
+    },
+    {
+      "path": "src/features/pilot/SavedDemo.tsx",
+      "line": 17,
+      "text": "export function SavedDemo(){"
+    },
+    {
+      "path": "src/features/pilot/api.ts",
+      "line": 3,
+      "text": "export type PilotState=ReturnType<PilotService['state']>;"
+    },
+    {
+      "path": "src/features/pilot/api.ts",
+      "line": 4,
+      "text": "export type Preview={recipient:string;items:{id:string;kind:string;text:string;author:string;version:number}[];questions:string};"
+    },
+    {
+      "path": "src/features/pilot/api.ts",
+      "line": 5,
+      "text": "export async function pilotApi<T>(path:string,body?:unknown,csrf?:string):Promise<T>{"
+    },
+    {
+      "path": "src/features/pilot/api.ts",
+      "line": 10,
+      "text": "export type Run=(command:Command)=>Promise<unknown>;"
+    },
+    {
+      "path": "src/features/pilot/messages.ts",
+      "line": 8,
+      "text": "export type PilotKey=keyof typeof pairs;"
+    },
+    {
+      "path": "src/features/pilot/messages.ts",
+      "line": 9,
+      "text": "export function pilotText(locale:'ru'|'kk',key:PilotKey):string{return pairs[key][locale==='ru'?0:1];}"
+    },
+    {
+      "path": "src/features/pilot/messages.ts",
+      "line": 10,
+      "text": "export function pilotStatus(locale:'ru'|'kk',value:string){return value in pairs?pilotText(locale,value as PilotKey):pilotText(locale,'unknown');}"
+    },
+    {
+      "path": "src/features/pilot/messages.ts",
+      "line": 11,
+      "text": "export function errorKey(code:string):PilotKey{return code==='AUTH_REQUIRED'?'auth':code.includes('CONFLICT')?'conflict':code==='INVALID_INPUT'||code==='PAYLOAD_TOO_LARGE'?'invalid':code==='RATE_LIMITED'?'busy':['NOT_FOUND','CSRF_DENIED','INVALID_TRANSITION','NOT_ACCEPTING','ORIGIN_DENIED'].includes(code)?'denied':'unavailable';}"
+    },
+    {
+      "path": "src/features/profile/DemoRequestEntry.tsx",
+      "line": 49,
+      "text": "export function DemoRequestEntry() {"
+    },
+    {
+      "path": "src/features/profile/OfferProfile.tsx",
+      "line": 13,
+      "text": "export function OfferProfile() {"
+    },
+    {
+      "path": "src/features/profile/RequestAction.tsx",
+      "line": 8,
+      "text": "export function RequestAction({ offer, incompatible, hasContext, fromComparison = false }: {"
+    },
+    {
+      "path": "src/features/profile/TrustPassport.tsx",
+      "line": 36,
+      "text": "export function TrustPassport({ specialist, offer }: { specialist: Specialist; offer: Offer }) {"
+    },
+    {
+      "path": "src/features/request/ClearDemoRequests.tsx",
+      "line": 6,
+      "text": "export function ClearDemoRequests({ onCleared, onRecheck }: { onCleared?: () => void; onRecheck?: () => void }) {"
+    },
+    {
+      "path": "src/features/request/DemoRequestStatus.tsx",
+      "line": 11,
+      "text": "export function DemoRequestStatus() {"
+    },
+    {
+      "path": "src/features/search/Catalog.tsx",
+      "line": 13,
+      "text": "export function Catalog() {"
+    },
+    {
+      "path": "src/features/search/CompareTray.tsx",
+      "line": 5,
+      "text": "export function CompareTray() {"
+    },
+    {
+      "path": "src/features/search/Filters.tsx",
+      "line": 21,
+      "text": "export function Filters({ onClose }: { onClose: () => void }) {"
+    },
+    {
+      "path": "src/features/search/OfferCard.tsx",
+      "line": 10,
+      "text": "export const scopeKeys = { identity: 'scopeIdentity', education: 'scopeEducation', qualification: 'scopeQualification', contact: 'scopeContact', offer_data: 'scopeOfferData' } as const;"
+    },
+    {
+      "path": "src/features/search/OfferCard.tsx",
+      "line": 12,
+      "text": "export function OfferFacts({ offer }: { offer: Offer }) {"
+    },
+    {
+      "path": "src/features/search/OfferCard.tsx",
+      "line": 34,
+      "text": "export function Explanations({ item, fallbackUnknowns }: { item: RatedOffer | null; fallbackUnknowns?: RatedOffer['unknowns'] }) {"
+    },
+    {
+      "path": "src/features/search/OfferCard.tsx",
+      "line": 52,
+      "text": "export function Verification({ specialistId }: { specialistId: string }) {"
+    },
+    {
+      "path": "src/features/search/OfferCard.tsx",
+      "line": 69,
+      "text": "export function CompareButton({ offer, onRemoved }: { offer: Offer; onRemoved?: () => void }) {"
+    },
+    {
+      "path": "src/features/search/OfferCard.tsx",
+      "line": 79,
+      "text": "export function OfferCard({ item }: { item: RatedOffer }) {"
+    },
+    {
+      "path": "src/features/search/ResultMap.tsx",
+      "line": 7,
+      "text": "export function ResultMap({result}:{result:SearchResult}){"
+    },
+    {
+      "path": "src/features/search/SelectionViews.tsx",
+      "line": 8,
+      "text": "export function Comparison() {"
+    },
+    {
+      "path": "src/features/search/conditions.ts",
+      "line": 5,
+      "text": "export function conditions(input: SearchInput, t: Translate, locale: string) {"
+    },
+    {
+      "path": "src/i18n/messages.ts",
+      "line": 158,
+      "text": "export const messages = { ru, kk };"
+    },
+    {
+      "path": "src/i18n/messages.ts",
+      "line": 159,
+      "text": "export type MessageKey = keyof typeof ru;"
+    },
+    {
+      "path": "src/i18n/messages.ts",
+      "line": 160,
+      "text": "export function translate(locale: Locale, key: MessageKey, values: Record<string, string | number> = {}): string {"
+    },
+    {
+      "path": "src/i18n/messages.ts",
+      "line": 163,
+      "text": "export const ageKeys: Record<AgeGroup, MessageKey> = { AGE_0_2: 'age0', AGE_3_5: 'age3', AGE_6_9: 'age6', AGE_10_14: 'age10', AGE_15_17: 'age15' };"
+    },
+    {
+      "path": "src/i18n/messages.ts",
+      "line": 164,
+      "text": "export const needKeys: Record<NeedTag, MessageKey> = { speech: 'speech', learning: 'learning', interaction: 'interaction' };"
+    },
+    {
+      "path": "src/i18n/messages.ts",
+      "line": 165,
+      "text": "export const districtKeys: Record<District, MessageKey> = { BOSTANDYK: 'BOSTANDYK', ALMALY: 'ALMALY', AUEZOV: 'AUEZOV', MEDEU: 'MEDEU' };"
+    },
+    {
+      "path": "src/i18n/messages.ts",
+      "line": 166,
+      "text": "export const categoryKeys: Record<Category, MessageKey> = { LOGOPED: 'LOGOPED', DEFECTOLOG: 'DEFECTOLOG', PSYCHOLOG: 'PSYCHOLOG' };"
+    },
+    {
+      "path": "src/i18n/price.ts",
+      "line": 12,
+      "text": "export function priceText("
+    },
+    {
+      "path": "src/i18n/profileMessages.ts",
+      "line": 1,
+      "text": "export const profileRu = {"
+    },
+    {
+      "path": "src/i18n/profileMessages.ts",
+      "line": 36,
+      "text": "export const profileKk: Record<keyof typeof profileRu, string> = {"
+    },
+    {
+      "path": "src/i18n/requestMessages.ts",
+      "line": 1,
+      "text": "export const requestRu = {"
+    },
+    {
+      "path": "src/i18n/requestMessages.ts",
+      "line": 39,
+      "text": "export const requestKk: Record<keyof typeof requestRu, string> = {"
+    },
+    {
+      "path": "src/i18n/searchMessages.ts",
+      "line": 1,
+      "text": "export const searchRu = {"
+    },
+    {
+      "path": "src/i18n/searchMessages.ts",
+      "line": 61,
+      "text": "export const searchKk: Record<keyof typeof searchRu, string> = {"
+    },
+    {
+      "path": "src/ui/Modal.tsx",
+      "line": 3,
+      "text": "export function Modal({ titleId, onDismiss, children, className = '', fallbackFocusId }: {"
+    },
+    {
+      "path": "src/ui/controls.tsx",
+      "line": 4,
+      "text": "export function Choices<T extends string>({ name, label, help, value, options, onChange, error }: {"
+    },
+    {
+      "path": "src/ui/controls.tsx",
+      "line": 24,
+      "text": "export function Check({ label, help, checked, onChange }: {"
+    },
+    {
+      "path": "src/ui/controls.tsx",
+      "line": 34,
+      "text": "export function DemoNotice() {"
+    },
+    {
+      "path": "src/ui/controls.tsx",
+      "line": 39,
+      "text": "export type BirdPose = 'welcome' | 'guide' | 'search';"
+    },
+    {
+      "path": "src/ui/controls.tsx",
+      "line": 48,
+      "text": "export function Bird({ pose = 'welcome', small = false }: { pose?: BirdPose; small?: boolean }) {"
+    },
+    {
+      "path": "src/ui/controls.tsx",
+      "line": 85,
+      "text": "export function PageTitle({ children, intro }: { children: ReactNode; intro?: string }) {"
+    },
+    {
+      "path": "src/ui/controls.tsx",
+      "line": 89,
+      "text": "export type IconName = 'search' | 'sliders' | 'sort-relevant' | 'sort-price' | 'sort-district' | 'map' | 'pin' | 'any';"
+    },
+    {
+      "path": "src/ui/controls.tsx",
+      "line": 95,
+      "text": "export function Icon({ name }: { name: IconName }) {"
+    },
+    {
+      "path": "src/ui/controls.tsx",
+      "line": 109,
+      "text": "export function BudgetChips({ amounts, onPick }: { amounts: number[]; onPick: (amount: number) => void }) {"
+    },
+    {
+      "path": "tests/domain.test.ts",
+      "line": 12,
+      "text": "describe('budget contract: skip ≠ zero', () => {"
+    },
+    {
+      "path": "tests/domain.test.ts",
+      "line": 21,
+      "text": "it('rejects invalid enums and extra personal fields', () => {"
+    },
+    {
+      "path": "tests/domain.test.ts",
+      "line": 29,
+      "text": "describe('same SearchService for review and catalog; phase-0 oracle', () => {"
+    },
+    {
+      "path": "tests/domain.test.ts",
+      "line": 30,
+      "text": "it('neutral is 12 specialists / 20 offers, with no invented preference', () => {"
+    },
+    {
+      "path": "tests/domain.test.ts",
+      "line": 36,
+      "text": "it('A orders offers by declared conditions and never combines two offers', () => {"
+    },
+    {
+      "path": "tests/domain.test.ts",
+      "line": 43,
+      "text": "it('B excludes unknown final prices from strict matches', () => {"
+    },
+    {
+      "path": "tests/domain.test.ts",
+      "line": 49,
+      "text": "it('C stays empty until the user changes conditions', () => {"
+    },
+    {
+      "path": "tests/domain.test.ts",
+      "line": 56,
+      "text": "it('0 is a real hard budget; no automatic clear or fallback', () => {"
+    },
+    {
+      "path": "tests/domain.test.ts",
+      "line": 60,
+      "text": "it('keeps online-only district inactive but applies it to mixed requests (ADR-0012)', () => {"
+    },
+    {
+      "path": "tests/domain.test.ts",
+      "line": 66,
+      "text": "it('language and format preferences retain alternatives', () => {"
+    },
+    {
+      "path": "tests/domain.test.ts",
+      "line": 71,
+      "text": "it('validates catalog rather than silently counting broken records', () => {"
+    },
+    {
+      "path": "tests/domain.test.ts",
+      "line": 81,
+      "text": "it('RU/KK keys and named placeholders agree', () => {"
+    },
+    {
+      "path": "tests/e2e/intake.spec.ts",
+      "line": 32,
+      "text": "test('all steps can be skipped; null is preserved through review, reload and catalog', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/intake.spec.ts",
+      "line": 52,
+      "text": "test('direct path works without intake and supports category/name search', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/intake.spec.ts",
+      "line": 65,
+      "text": "test('review matches complete SearchInput; count equals catalog; locale, Back and editing preserve state', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/intake.spec.ts",
+      "line": 109,
+      "text": "test('Back and browser history preserve answers including invalid numeric draft; language does not change domain', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/intake.spec.ts",
+      "line": 130,
+      "text": "test('budget validates all boundaries, preserves invalid input, accepts zero, supports skip', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/intake.spec.ts",
+      "line": 156,
+      "text": "test('reload restores step and answers; expired/corrupt state resets visibly', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/intake.spec.ts",
+      "line": 176,
+      "text": "test('unavailable sessionStorage uses memory with an honest warning; flow remains usable', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/intake.spec.ts",
+      "line": 191,
+      "text": "test('KK filled route validates budget; category editing updates the same service count', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/intake.spec.ts",
+      "line": 223,
+      "text": "test('write failure and locale storage denial do not crash or silently promise persistence', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/intake.spec.ts",
+      "line": 235,
+      "text": "test('keyboard reaches both entry paths and completes wizard; native radio arrows work', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/intake.spec.ts",
+      "line": 265,
+      "text": "test(`${locale}: no personal fields, mobile reflow and reduced motion`, async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/p0-errors.spec.ts",
+      "line": 5,
+      "text": "test(`${locale}: catalog error and Retry keep document language`, async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/p0-errors.spec.ts",
+      "line": 23,
+      "text": "test(`${locale}: hidden offer IDs are never selectable in profile or request`, async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/p0-keyboard.spec.ts",
+      "line": 13,
+      "text": "test('compare removal and clear keep a stable keyboard focus at 2/1/0', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/p0-keyboard.spec.ts",
+      "line": 31,
+      "text": "test(`${locale}: keyboard-only entry → skipped input → compare → save → cancel dialog`, async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/p0-keyboard.spec.ts",
+      "line": 65,
+      "text": "test('unknown route, compare reload and changed hard conditions stay explicit', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/p0-keyboard.spec.ts",
+      "line": 89,
+      "text": "test('review exposes seven valid term/definition pairs with associated edit controls', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/p0-reflow.spec.ts",
+      "line": 4,
+      "text": "test(`${locale}: 320px with 200% text uses the layout viewport, including header and notices`, async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/p0.spec.ts",
+      "line": 20,
+      "text": "test(`${locale} P0 A: guided route → review → profile → compare → request → durable status`, async ({ page }, info) => {"
+    },
+    {
+      "path": "tests/e2e/p0.spec.ts",
+      "line": 70,
+      "text": "test(`${locale} P0 B: direct catalog → hard filters → compare → exact selection`, async ({ page }, info) => {"
+    },
+    {
+      "path": "tests/e2e/p0.spec.ts",
+      "line": 91,
+      "text": "test(`${locale} P0 C: no exact results → explicit budget reset → retry`, async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/phases28-35.spec.ts",
+      "line": 14,
+      "text": "test('draft preview never replaces applied catalog until review CTA; reload keeps both', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/phases28-35.spec.ts",
+      "line": 41,
+      "text": "test('invalid budget survives Back to review and blocks count/application until repaired', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/phases28-35.spec.ts",
+      "line": 61,
+      "text": "test('unsure topic stays null; mixed district is explicit hard and online-only disables its effect', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/phases28-35.spec.ts",
+      "line": 85,
+      "text": "test('catalog load failure on review is distinct from zero and Retry restores the synthetic draft', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/phases28-35.spec.ts",
+      "line": 103,
+      "text": "test(`${locale} S01–S03 at ${width}px, 200% text, reduced motion and no runtime errors`, async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/profile.spec.ts",
+      "line": 16,
+      "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/profile.spec.ts",
+      "line": 38,
+      "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/profile.spec.ts",
+      "line": 80,
+      "text": "test('unknown age disappears only when another offer supplies it', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/profile.spec.ts",
+      "line": 94,
+      "text": "test('deep link stays neutral even if this tab has search conditions', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/profile.spec.ts",
+      "line": 103,
+      "text": "test('unknown and mismatched IDs show clear not found; hidden offers and profiles cannot be opened', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/profile.spec.ts",
+      "line": 119,
+      "text": "test('passport keeps identity, education, contact and offer data separate with explicit evidence limits', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/profile.spec.ts",
+      "line": 139,
+      "text": "test('partial profile and missing verification remain unknown; unknown and stale prices are explicit', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/profile.spec.ts",
+      "line": 154,
+      "text": "test('expired/future/revoked evidence cannot appear as current source confirmation; private data is never rendered', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/profile.spec.ts",
+      "line": 174,
+      "text": "test('source confirmation remains scoped to its exact offer when switching', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/profile.spec.ts",
+      "line": 189,
+      "text": "test('missing approach and partial service facts remain explicit; free consultation keeps its own unit', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/profile.spec.ts",
+      "line": 207,
+      "text": "test('changing RU/KK inside a profile preserves offer, comparison and request target', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/profile.spec.ts",
+      "line": 222,
+      "text": "test(`${locale}: long name, reflow320, text200, landscape and keyboard service/request/Back`, async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/release.spec.ts",
+      "line": 6,
+      "text": "test(`${locale} release: direct routes, reload, local assets, cancel and clean restart`, async ({ page, request }) => {"
+    },
+    {
+      "path": "tests/e2e/release.spec.ts",
+      "line": 12,
+      "text": "/\\/@vite\\/|\\/@react-refresh|\\/src\\/|\\/node_modules\\//u.test(url.pathname)) violations.push(req.url());"
+    },
+    {
+      "path": "tests/e2e/requests.spec.ts",
+      "line": 39,
+      "text": "test('S08 ack defaults false, has no personal inputs; double click commits once; S09 reload/back/cancel', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/requests.spec.ts",
+      "line": 73,
+      "text": "test('add success then commit abort shows error, no success route or row; reload retries the same key', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/requests.spec.ts",
+      "line": 86,
+      "text": "test('uncertain commit checks the same key and resolves to the actual committed record', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/requests.spec.ts",
+      "line": 106,
+      "text": "test('reload during a lost outcome recovers the existing result, never auto inserts', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/requests.spec.ts",
+      "line": 124,
+      "text": "test('failed cancellation keeps confirmed status and offers retry; reload proves rollback', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/requests.spec.ts",
+      "line": 135,
+      "text": "test('missing and expired request never create records; expired row is removed at startup', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/requests.spec.ts",
+      "line": 154,
+      "text": "test('read failure is not missing or success; denied IndexedDB never saves in memory', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/requests.spec.ts",
+      "line": 166,
+      "text": "test('cleanup needs confirmation, handles abort and preserves other applications and settings', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/requests.spec.ts",
+      "line": 185,
+      "text": "test('KK, keyboard, 320px and 200% text: service, status, cancellation and cleanup stay operable', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/requests.spec.ts",
+      "line": 204,
+      "text": "test('uncertain cleanup refreshes S09 instead of leaving a stale saved claim', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/search.spec.ts",
+      "line": 11,
+      "text": "test('typing a multiword query retains the space until service normalization', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/search.spec.ts",
+      "line": 43,
+      "text": "test('search + category OR and cross-group AND use one applied input', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/search.spec.ts",
+      "line": 64,
+      "text": "test('Cancel, Escape, Close and backdrop discard draft and restore initiating focus', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/search.spec.ts",
+      "line": 84,
+      "text": "test('draft Reset does not apply; Apply publishes all fields atomically', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/search.spec.ts",
+      "line": 112,
+      "text": "test('invalid budget disables Apply and never shows a fabricated preview', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/search.spec.ts",
+      "line": 129,
+      "text": "test('removes just one category chip; full reset retains interface locale', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/search.spec.ts",
+      "line": 144,
+      "text": "test('price/district sorting changes selected offer and keeps counts and explanations aligned', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/search.spec.ts",
+      "line": 157,
+      "text": "test('empty keeps hard conditions; incomplete is an explicit separate action', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/search.spec.ts",
+      "line": 174,
+      "text": "test('compare 1/2/3, fourth rejection, fixed offers, removal and changed conditions', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/search.spec.ts",
+      "line": 200,
+      "text": "test('profile return preserves input, sort, compare, scroll and focus on the same offer', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/search.spec.ts",
+      "line": 217,
+      "text": "test(`${locale}: keyboard focus trap, mobile/landscape reflow, no numeric ratings`, async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/search.spec.ts",
+      "line": 246,
+      "text": "test('rapid text edits end with the newest input; 80-character limit is enforced', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/search.spec.ts",
+      "line": 255,
+      "text": "test('loading reserves cards; corrupted fixtures show error and Retry reloads validated data', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/search.spec.ts",
+      "line": 275,
+      "text": "test('empty opener can disappear after Apply and focus still returns to filters', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/search.spec.ts",
+      "line": 284,
+      "text": "test('direct profile has neutral explanations; mismatched public IDs never substitute another offer', async ({ page }) => {"
+    },
+    {
+      "path": "tests/e2e/search.spec.ts",
+      "line": 295,
+      "text": "test('compare offer replacement is explicit and a fourth addition also reports the limit inside a profile', async ({ page }) => {"
+    },
+    {
+      "path": "tests/intent-recovery.test.ts",
+      "line": 39,
+      "text": "describe('F-01 recovery: malformed attempt data is dropped, storage denial stays honest', () => {"
+    },
+    {
+      "path": "tests/intent-recovery.test.ts",
+      "line": 42,
+      "text": "it('corrupt JSON is cleared and read returns null', () => {"
+    },
+    {
+      "path": "tests/intent-recovery.test.ts",
+      "line": 49,
+      "text": "it('schema-invalid JSON is cleared and read returns null', () => {"
+    },
+    {
+      "path": "tests/intent-recovery.test.ts",
+      "line": 56,
+      "text": "it('a valid attempt survives unchanged', () => {"
+    },
+    {
+      "path": "tests/intent-recovery.test.ts",
+      "line": 62,
+      "text": "it('after corruption a new explicit submit starts a fresh attempt and records it (no false success)', async () => {"
+    },
+    {
+      "path": "tests/intent-recovery.test.ts",
+      "line": 71,
+      "text": "it('genuine storage denial still reports requestIntentError (unchanged honesty)', async () => {"
+    },
+    {
+      "path": "tests/matching.test.ts",
+      "line": 21,
+      "text": "describe('field-level freshness and independent clocks', () => {"
+    },
+    {
+      "path": "tests/matching.test.ts",
+      "line": 22,
+      "text": "it.each(Object.entries(FRESHNESS_POLICY.days))('%s expires at its own exact TTL', (_field, days) => {"
+    },
+    {
+      "path": "tests/matching.test.ts",
+      "line": 28,
+      "text": "it.each([null, 'invalid', '2026-02-30T00:00:00Z', '2026-11-15T00:00:00Z'])('%s cannot confirm current evidence', date => {"
+    },
+    {
+      "path": "tests/matching.test.ts",
+      "line": 31,
+      "text": "it('not applicable differs from missing, stale and current', () => {"
+    },
+    {
+      "path": "tests/matching.test.ts",
+      "line": 36,
+      "text": "it('a recent copy/profile update never refreshes price or availability', () => {"
+    },
+    {
+      "path": "tests/matching.test.ts",
+      "line": 47,
+      "text": "it('Clock injection changes freshness without changing machine time', () => {"
+    },
+    {
+      "path": "tests/matching.test.ts",
+      "line": 55,
+      "text": "it('contact and document expiry are independent; early revocation wins', () => {"
+    },
+    {
+      "path": "tests/matching.test.ts",
+      "line": 65,
+      "text": "describe('request-wide ranking, coverage and same-offer hard evaluation', () => {"
+    },
+    {
+      "path": "tests/matching.test.ts",
+      "line": 66,
+      "text": "it('catalog boundary normalizes an empty language list to unknown (spec §17.2)', () => {"
+    },
+    {
+      "path": "tests/matching.test.ts",
+      "line": 78,
+      "text": "it.each([['offline', 'pass'], ['online', 'fail'], ['unknown', 'unknown']] as const)('mandatory format %s gives %s', (format, result) => {"
+    },
+    {
+      "path": "tests/matching.test.ts",
+      "line": 81,
+      "text": "it('category is hard OR; topic and category use a single need weight', () => {"
+    },
+    {
+      "path": "tests/matching.test.ts",
+      "line": 90,
+      "text": "it('known empty tags differ from unknown/missing-source tags', () => {"
+    },
+    {
+      "path": "tests/matching.test.ts",
+      "line": 96,
+      "text": "it('known false availability reduces score but preserves coverage', () => {"
+    },
+    {
+      "path": "tests/matching.test.ts",
+      "line": 101,
+      "text": "it('mixed-format district retains the same denominator for an online offer', () => {"
+    },
+    {
+      "path": "tests/matching.test.ts",
+      "line": 112,
+      "text": "it('same specialist A ru/offline/4500 and B kk/online/9500 cannot form kk/offline/6000', () => {"
+    },
+    {
+      "path": "tests/matching.test.ts",
+      "line": 126,
+      "text": "it('all reasons carry same-offer evidence, typed RU/KK templates and correct kind', () => {"
+    },
+    {
+      "path": "tests/matching.test.ts",
+      "line": 143,
+      "text": "describe('whole catalog pipeline and stable grouping invariants', () => {"
+    },
+    {
+      "path": "tests/matching.test.ts",
+      "line": 145,
+      "text": "it.each(Object.entries(manifest.scenarios))('scenario %s preserves agreed IDs', (_name, scenario) => {"
+    },
+    {
+      "path": "tests/matching.test.ts",
+      "line": 150,
+      "text": "it('ties are stable under reversal; grouping selects best and counts exact specialist once', () => {"
+    },
+    {
+      "path": "tests/matching.test.ts",
+      "line": 164,
+      "text": "it('hidden/withdrawn specialists and offers never enter public candidates', () => {"
+    },
+    {
+      "path": "tests/matching.test.ts",
+      "line": 173,
+      "text": "it('invalid catalog is an operation error; private extra fields cannot escape projection', () => {"
+    },
+    {
+      "path": "tests/matching.test.ts",
+      "line": 180,
+      "text": "it('stronger hard input cannot enlarge exact set; permutations and repeated requests agree', () => {"
+    },
+    {
+      "path": "tests/matching.test.ts",
+      "line": 196,
+      "text": "it('removing a positive fact cannot improve score or shrink its denominator', () => {"
+    },
+    {
+      "path": "tests/p0.test.ts",
+      "line": 18,
+      "text": "describe('P0 boundary proof independent of production classifier', () => {"
+    },
+    {
+      "path": "tests/p0.test.ts",
+      "line": 20,
+      "text": "it(`${ageGroup}: inclusive endpoints, partial overlap and unknown are not exact`, () => {"
+    },
+    {
+      "path": "tests/p0.test.ts",
+      "line": 37,
+      "text": "it('hard budget0 accepts only a known free price; empty budget applies no constraint', () => {"
+    },
+    {
+      "path": "tests/p0.test.ts",
+      "line": 50,
+      "text": "it('hard fail never enters incomplete even when another hard field is unknown', () => {"
+    },
+    {
+      "path": "tests/p0.test.ts",
+      "line": 56,
+      "text": "it('isolated reference score/coverage is 100/1, 85/.85, 82.5/1', () => {"
+    },
+    {
+      "path": "tests/pilot-e2e/offline.spec.ts",
+      "line": 2,
+      "text": "test('explicit synthetic saved card survives offline reload; private API and pilot excluded from public caches',async({page,context})=>{"
+    },
+    {
+      "path": "tests/pilot-e2e/offline.spec.ts",
+      "line": 10,
+      "text": "test('map reuses current result, geolocation denied keeps manual search and list alternative',async({page})=>{"
+    },
+    {
+      "path": "tests/pilot-e2e/pilot.spec.ts",
+      "line": 7,
+      "text": "test('synthetic specialist → assigned moderation → contact → confirmed calendar → private summary and task',async({page,context})=>{"
+    },
+    {
+      "path": "tests/pilot-e2e/pilot.spec.ts",
+      "line": 28,
+      "text": "test('server failure keeps fields, no false local success, locale and 320px reflow',async({page})=>{"
+    },
+    {
+      "path": "tests/pilot-e2e/pilot.spec.ts",
+      "line": 34,
+      "text": "test('lost acknowledgement after server commit retries the original operation once',async({page})=>{"
+    },
+    {
+      "path": "tests/pilot-e2e/pilot.spec.ts",
+      "line": 39,
+      "text": "test('keyboard creates a personal event in accessible agenda without appointment confirmation',async({page})=>{"
+    },
+    {
+      "path": "tests/pilot-e2e/pilot.spec.ts",
+      "line": 43,
+      "text": "test('failed logout clears private screen without falsely claiming session revocation',async({page})=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 33,
+      "text": "describe('real SQLite authorization and application lifecycle',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 34,
+      "text": "it('migrates twice without losing records, constraints remain active',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 39,
+      "text": "it('blocks production/test bypass and live modes',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 42,
+      "text": "it('does not allow payload owner, role, verification or arbitrary operation',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 47,
+      "text": "it('publishes only consented public fields, never evidence/consent/contact',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 52,
+      "text": "it('requires assignment and permits needs_changes, resubmission, withdraw',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 59,
+      "text": "it('expires trust facts without permanent verified badge',()=>{publish();at=new Date('2027-01-10T00:00:00Z');expect(service.publicOffers()[0].facts[0].status).toBe('stale');});"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 60,
+      "text": "it('rechecks account active status, does not trust stale actor role',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 65,
+      "text": "describe('contact, tracker and durable sandbox inbox',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 66,
+      "text": "it('same key/payload persists across restart, different payload conflicts',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 71,
+      "text": "it('parent B cannot read or change A request and moderator sees no requests',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 75,
+      "text": "it('separates server receipt, sandbox availability, parent report and confirmation',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 82,
+      "text": "it('late jobs cannot reopen cancellation; deletion is separate and scrubs text',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 86,
+      "text": "it('revocation cancels pending processing and confirmed event reminders',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 91,
+      "text": "it('original offer snapshot survives price edit and withdraw',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 94,
+      "text": "it('rate limit is per trusted owner and transaction does not enqueue rejected request',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 99,
+      "text": "describe('calendar and reminders',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 100,
+      "text": "it('retains exact instant and IANA zone across year boundary; rejects invalid zone/time',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 104,
+      "text": "it('handles leap-day and DST offsets as instants without server-zone rewriting',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 109,
+      "text": "it('rejects foreign calendar changes and stale edits without overwrite',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 113,
+      "text": "it('edit invalidates old reminder, job retry produces one in-app notice and not delivered',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 118,
+      "text": "it('disabled/cancelled and overdue jobs never notify, scheduler survives restart',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 124,
+      "text": "describe('subscriptions and next action',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 125,
+      "text": "it('opt-in dedup/unsubscribe, cosmetic moderation timestamp no spam, withdrawal is public-safe',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 131,
+      "text": "it('next action state cannot change request or create meeting; no duplicate action',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 135,
+      "text": "describe('private goals, diary, assignments and exact summary selection',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 136,
+      "text": "it('denies parent B, moderator and specialist access to diary, rejects mass assignment and oversized text',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 142,
+      "text": "it('private edit conflict and delete scrub content including audit/idempotency copies',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 147,
+      "text": "it('accepts dangerous HTML as literal data, never as executable markup',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 150,
+      "text": "it('denies foreign goal attachment and assignments to unscoped recipients',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 155,
+      "text": "it('links responses to instruction version, permits unable/question and keeps old revisions',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 161,
+      "text": "it('scope revoke applies immediately to old session, while recipient retains authored history',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 165,
+      "text": "it('summary default selection empty and exact selection excludes all unselected data',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 172,
+      "text": "describe('HTTP boundary, sessions and real transport',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 173,
+      "text": "it('auth/CSRF/origin enforced; guest sees public DTO only, no private HTML fallback',async()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 185,
+      "text": "it('login is rate limited per address (audit F-05): 30/min, 429 afterwards',async()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 194,
+      "text": "describe('same SearchResult map contract',()=>{"
+    },
+    {
+      "path": "tests/pilot.test.ts",
+      "line": 195,
+      "text": "it('plots only eligible matching offer IDs; unknown/excluded never becomes map pass',async()=>{"
+    },
+    {
+      "path": "tests/profile.test.ts",
+      "line": 9,
+      "text": "describe('public profile selection', () => {"
+    },
+    {
+      "path": "tests/profile.test.ts",
+      "line": 10,
+      "text": "it('defaults by stable ID, independent of fixture order', () => {"
+    },
+    {
+      "path": "tests/profile.test.ts",
+      "line": 15,
+      "text": "it('rejects unknown, wrong-owner, empty, hidden and withdrawn selections without fallback', () => {"
+    },
+    {
+      "path": "tests/profile.test.ts",
+      "line": 30,
+      "text": "describe('evidence cannot become a broader or current guarantee', () => {"
+    },
+    {
+      "path": "tests/profile.test.ts",
+      "line": 31,
+      "text": "it('document seen stays document seen; source confirmation requires source and date', () => {"
+    },
+    {
+      "path": "tests/profile.test.ts",
+      "line": 38,
+      "text": "it('expires reviews, refuses future evidence and preserves revocation', () => {"
+    },
+    {
+      "path": "tests/profile.test.ts",
+      "line": 43,
+      "text": "it('binds offer-data evidence to an existing offer owned by the specialist', () => {"
+    },
+    {
+      "path": "tests/requests.test.ts",
+      "line": 25,
+      "text": "describe('IndexedDB commit contract', () => {"
+    },
+    {
+      "path": "tests/requests.test.ts",
+      "line": 26,
+      "text": "it('commits an allowlisted row, unique key and survives a new repository instance', async () => {"
+    },
+    {
+      "path": "tests/requests.test.ts",
+      "line": 35,
+      "text": "it('add request success followed by transaction abort never resolves as saved', async () => {"
+    },
+    {
+      "path": "tests/requests.test.ts",
+      "line": 46,
+      "text": "it('concurrent duplicate keys return the original result, including its cancellation', async () => {"
+    },
+    {
+      "path": "tests/requests.test.ts",
+      "line": 54,
+      "text": "it('an ID collision with another key is an error, not another successful request', async () => {"
+    },
+    {
+      "path": "tests/requests.test.ts",
+      "line": 58,
+      "text": "it('cancel failure rolls back the status; successful cancellation survives reload', async () => {"
+    },
+    {
+      "path": "tests/requests.test.ts",
+      "line": 72,
+      "text": "it('unknown/expired IDs are absent; retention uses creation time, with a 7 day boundary', async () => {"
+    },
+    {
+      "path": "tests/requests.test.ts",
+      "line": 82,
+      "text": "it('clear fails on abort; a committed clear affects only our store', async () => {"
+    },
+    {
+      "path": "tests/requests.test.ts",
+      "line": 102,
+      "text": "it('unavailable storage and schema mismatch reject rather than fall back to memory', async () => {"
+    },
+    {
+      "path": "tests/requests.test.ts",
+      "line": 113,
+      "text": "describe('request lifecycle', () => {"
+    },
+    {
+      "path": "tests/requests.test.ts",
+      "line": 114,
+      "text": "it('requires acknowledgement; double click and replay return one committed result', async () => {"
+    },
+    {
+      "path": "tests/requests.test.ts",
+      "line": 125,
+      "text": "it('stays submitting until commit; failure never produces recorded_demo', async () => {"
+    },
+    {
+      "path": "tests/requests.test.ts",
+      "line": 134,
+      "text": "it('reconciles uncertain committed writes by the same key without inserting again', async () => {"
+    },
+    {
+      "path": "tests/requests.test.ts",
+      "line": 144,
+      "text": "it('uncertain absent writes retry the same key, while failed checks never permit a blind write', async () => {"
+    },
+    {
+      "path": "tests/requests.test.ts",
+      "line": 155,
+      "text": "it('cannot switch offer after an unresolved attempt or write without a persisted recovery intent', async () => {"
+    },
+    {
+      "path": "tests/requests.test.ts",
+      "line": 166,
+      "text": "it('cancellation is terminal on replay; uncertain cancellation is checked', async () => {"
+    },
+    {
+      "path": "tests/requests.test.ts",
+      "line": 175,
+      "text": "it('an expired attempt is checked first and requires a separate new action if absent', async () => {"
+    },
+    {
+      "path": "tests/search.test.ts",
+      "line": 14,
+      "text": "describe('phase 7 search contract', () => {"
+    },
+    {
+      "path": "tests/search.test.ts",
+      "line": 15,
+      "text": "it('uses NFKC, case, spacing and ё/е consistently without merging Kazakh letters', () => {"
+    },
+    {
+      "path": "tests/search.test.ts",
+      "line": 28,
+      "text": "it('supports only explicit category aliases; unsupported terms give honest zero', () => {"
+    },
+    {
+      "path": "tests/search.test.ts",
+      "line": 35,
+      "text": "it('OR within categories and AND across groups operate on a single offer', () => {"
+    },
+    {
+      "path": "tests/search.test.ts",
+      "line": 42,
+      "text": "it('incomplete is separate, explained and never includes a hard failure', () => {"
+    },
+    {
+      "path": "tests/search.test.ts",
+      "line": 55,
+      "text": "it('price chooses a concrete offer, places from/stale after exact and uses stable IDs for ties', () => {"
+    },
+    {
+      "path": "tests/search.test.ts",
+      "line": 69,
+      "text": "it('district ranks known mismatch before unknown and does not invent distances', () => {"
+    },
+    {
+      "path": "tests/search.test.ts",
+      "line": 75,
+      "text": "it('district sort keys are precomputed without changing the previous order (F-02)', () => {"
+    },
+    {
+      "path": "tests/search.test.ts",
+      "line": 95,
+      "text": "it('fixed compare/profile selections are re-evaluated by the same classifier', () => {"
+    },
+    {
+      "path": "tests/search.test.ts",
+      "line": 103,
+      "text": "it('preserves verification scope and exposes general unknown facts in neutral results', () => {"
+    },
+    {
+      "path": "tests/session.test.ts",
+      "line": 12,
+      "text": "describe('synthetic session reload policy', () => {"
+    },
+    {
+      "path": "tests/session.test.ts",
+      "line": 13,
+      "text": "it('keeps the synthetic intake draft separate from applied input on reload', () => {"
+    },
+    {
+      "path": "tests/session.test.ts",
+      "line": 22,
+      "text": "it('round-trips null and zero distinctly, plus hard flags and step', () => {"
+    },
+    {
+      "path": "tests/session.test.ts",
+      "line": 29,
+      "text": "it.each(['expired', 'schema', 'catalog', 'enum', 'corrupt', 'personal'])('discards %s data with an explanation', reason => {"
+    },
+    {
+      "path": "tests/session.test.ts",
+      "line": 41,
+      "text": "it('honestly reports read/write denial, with usable memory defaults', () => {"
+    },
+    {
+      "path": "tests/support/catalog.ts",
+      "line": 4,
+      "text": "export function catalogWithOffers(catalog: Catalog, offers: Offer[]): Catalog {"
+    },
+    {
+      "path": "vite.config.ts",
+      "line": 6,
+      "text": "export default defineConfig({"
+    }
+  ]
+}
