@@ -1,0 +1,84 @@
+{
+  "observed_at_utc": "2026-11-13T16:42:17.184812+00:00",
+  "baseline_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+  "runtime_unchanged": true,
+  "tests": {
+    "unit_integration": 154,
+    "core_dev": 79,
+    "release": 18,
+    "pilot": 5,
+    "offline": 2,
+    "passed": 258,
+    "failed": 0,
+    "skipped": 0
+  },
+  "typecheck": "PASS",
+  "build": "PASS",
+  "historical_phase_registry": "PASS",
+  "npm_audit_vulnerabilities": 0,
+  "evidence": [
+    {
+      "path": "docs/AI_CONTEXT/evidence/install.log",
+      "bytes": 234,
+      "sha256": "0ede7d89e1e0698453b9792cd75f6ae6f8233fec5d57979f808f56068beb852b"
+    },
+    {
+      "path": "docs/AI_CONTEXT/evidence/check.log",
+      "bytes": 781,
+      "sha256": "366c11fa287fc5b28ed410736c87ded60468b6b1e0e67f4e36dd4a6e4df35a10"
+    },
+    {
+      "path": "docs/AI_CONTEXT/evidence/build.log",
+      "bytes": 1729,
+      "sha256": "a9749097862e3776f33a7fc217f9809f057c4154b326b443bd57355e2453b4bf"
+    },
+    {
+      "path": "docs/AI_CONTEXT/evidence/e2e-dev.log",
+      "bytes": 786,
+      "sha256": "72a186d110bb2d5ba23e65ef1cba5abe63dcd1235355d3f601a4d108906425c6"
+    },
+    {
+      "path": "docs/AI_CONTEXT/evidence/e2e-release.log",
+      "bytes": 3042,
+      "sha256": "c97f345c25cf1488d6cfbe4dc67b00175e6f5e101b856281a8b577eeaa8b8aa6"
+    },
+    {
+      "path": "docs/AI_CONTEXT/evidence/e2e-pilot.log",
+      "bytes": 1296,
+      "sha256": "686290174934323443e6bc20a121a26636759d8b2aeaab835636fb5b80f9c620"
+    },
+    {
+      "path": "docs/AI_CONTEXT/evidence/e2e-offline.log",
+      "bytes": 709,
+      "sha256": "f14f349b67f53af7a663b25d621425c9f349a9c46b7804fe7b9573c54cb9420f"
+    },
+    {
+      "path": "docs/AI_CONTEXT/evidence/npm-audit.json",
+      "bytes": 363,
+      "sha256": "e5510270fc01acadced17714c5ab3dd87aaa651506f93508f3ce3c45645516df"
+    },
+    {
+      "path": "docs/AI_CONTEXT/evidence/context-validation.json",
+      "bytes": 128,
+      "sha256": "c10dbbc5b6a8eb4556ad48beb9848c3424504035de9a7ee806c2c5c718565e1d"
+    }
+  ],
+  "context_validation": {
+    "status": "PASS",
+    "checks": 10067,
+    "features": 231,
+    "phases": 25,
+    "baseline_files_preserved": 335,
+    "errors": []
+  },
+  "remote_sync": "PENDING",
+  "not_run": [
+    "primary Research DOCX review (file absent)",
+    "parent interview/UAT",
+    "native KK editorial review",
+    "real screen readers, physical devices, browser zoom and real mobile installation",
+    "current official hackathon/legal/market source validation",
+    "production deployment/CI attestation/backup restore/live delivery"
+  ],
+  "context_validation_note": "Initial run flagged missing literal LIVE_BLOCKED in master/handoff; explicit guards added; final rerun PASS. No product changes."
+}

@@ -1,0 +1,1548 @@
+[
+  {
+    "id": "EXP-00",
+    "name": "Baseline, источники истины и разрешения",
+    "feature_ids": [
+      "F000"
+    ],
+    "status": "CONTEXT_INITIALIZATION",
+    "objective": "Согласовать назначение платформы и не потерять фактическое состояние: code SHA, historical phase status, scope, sources, known unknowns. Не изменять продукт ради выполнения этапа.",
+    "prerequisites": "Только репозиторий и Research.",
+    "technical_architecture": "Создать FEATURE_MATRIX 231 ID, gap map, ADR о синтетическом демо, requirements-to-tests map, STATE/PROGRESS/HANDOFF и рабочую ветку. Прочитать AGENTS.md и реальные npm scripts.",
+    "existing_implementation": [],
+    "reuse_foundations": "Research v1.0; Git status, открытые PR; исходные docs/PHASE_REGISTRY.json и аудит; проверить новые коммиты и собственные локальные файлы.",
+    "missing_implementation": "Только контекст и проверка; продуктовые изменения не разрешены в этой сессии.",
+    "backend_requirements": "Нет runtime изменений; Git и документальные реестры.",
+    "frontend_requirements": "Навигация по постоянной памяти.",
+    "data_models": "GitSnapshot, FeatureRecord, PhaseRecord, source hashes",
+    "security_requirements": "Секреты не печатать, личные файлы не перезаписывать; ни один live gate не менять.",
+    "required_tests": "Schema/uniqueness validation для registry; npm scripts discovery; baseline QA без выдуманных PASS.",
+    "negative_tests": "Рабочая папка грязная; неверный remote/default; docs отстают от кода; доступ в GitHub только read-only.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-00-AC-01",
+        "text": "231 ID 0–230 присутствует без дубликатов, Research status сохранён отдельно от code status."
+      },
+      {
+        "id": "EXP-00-AC-02",
+        "text": "HEAD/remote status/dirty files/PR описаны с настоящими SHA и датами."
+      },
+      {
+        "id": "EXP-00-AC-03",
+        "text": "Каждый неизвестный исторический stage помечен UNKNOWN/TEAM_ATTESTED, а не выдуман как VERIFIED."
+      },
+      {
+        "id": "EXP-00-AC-04",
+        "text": "Первый docs-only checkpoint запушен и remote SHA совпадает; если права отсутствуют — честный PUSH_BLOCKED."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-00) contracts/evidence` → `test/feat(exp-00) validated slice` → `docs(exp-00) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Участник подтверждает границы при обнаружении противоречий. Отдельный оригинальный Codex chat URL отсутствует.",
+    "allowed_result": "Документация/план, не live.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "CHECK_CONTEXT_VALIDATOR_AND_SYNC",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 173
+    }
+  },
+  {
+    "id": "EXP-01",
+    "name": "DEMO: главная, языки, навигация и маскот",
+    "feature_ids": [
+      "F001",
+      "F002",
+      "F003",
+      "F004",
+      "F005",
+      "F006",
+      "F007",
+      "F008",
+      "F009",
+      "F010",
+      "F011",
+      "F012",
+      "F013",
+      "F014",
+      "F015",
+      "F016"
+    ],
+    "status": "EXISTING_DEMO_WITH_LIMITATIONS",
+    "objective": "Обеспечить понятный вход родителя без регистрации, чёткий CTA, RU/KK, достоверную маркировку демо и визуально связанный путь.",
+    "prerequisites": "EXP-00.",
+    "technical_architecture": "Не переписывать визуальную систему; при необходимости исправить обнаруженные проблемы текста, focus, mobile reflow, deep links, return navigation и состояния Қарлығаш.",
+    "existing_implementation": [
+      "src/features/Home.tsx",
+      "src/app/App.tsx",
+      "src/app/AppState.tsx",
+      "src/ui/controls.tsx",
+      "src/styles.css",
+      "src/i18n/messages.ts"
+    ],
+    "reuse_foundations": "Home, App Router, AppState, controls/Bird, MASCOT_KARLYGASH, DESIGN_DELIVERY 12–13.11.",
+    "missing_implementation": "Полевые проверки/KK и доказательство каждого нового EXP AC; existing code не пересоздавать.",
+    "backend_requirements": "Сохранять текущие domain/storage contracts; private authority в server/service.ts.",
+    "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Обеспечить понятный вход родителя без регистрации, чёткий CTA, RU/KK, достоверную маркировку демо и визуально связанный путь.",
+    "data_models": "Locale, Router, Bird pose, navigation focus",
+    "security_requirements": "Не собирать данные ребёнка, не обещать реальную связь. Избегать декоративной AI-анимации, мешающей клавиатуре.",
+    "required_tests": "dev E2E, production release E2E, screenshot comparison, keyboard/axe if available.",
+    "negative_tests": "Back/refresh/deep link, unavailable localStorage, browser 200% zoom, long KK labels.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-01-AC-01",
+        "text": "С нуля можно выбрать один из двух маршрутов, оба работают без регистрации."
+      },
+      {
+        "id": "EXP-01-AC-02",
+        "text": "Смена RU/KK изменяет все публичные сообщения и сохраняет прогресс."
+      },
+      {
+        "id": "EXP-01-AC-03",
+        "text": "Демо-маркировка присутствует при каждом чувствительном действии."
+      },
+      {
+        "id": "EXP-01-AC-04",
+        "text": "Три SVG-позы корректно выглядят при 320/390/1280 и не вмешиваются в accessibility tree."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-01) contracts/evidence` → `test/feat(exp-01) validated slice` → `docs(exp-01) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Редактор KK и реальный родитель подтверждают понятность формулировок; до этого NOT_RUN.",
+    "allowed_result": "DEMO READY только после текущих тестов.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 207
+    }
+  },
+  {
+    "id": "EXP-02",
+    "name": "DEMO: анкета и подтверждение условий",
+    "feature_ids": [
+      "F017",
+      "F018",
+      "F019",
+      "F020",
+      "F021",
+      "F022",
+      "F023",
+      "F024",
+      "F025",
+      "F026",
+      "F027",
+      "F028",
+      "F029",
+      "F030",
+      "F031",
+      "F032",
+      "F033",
+      "F034",
+      "F035",
+      "F036"
+    ],
+    "status": "EXISTING_DEMO_WITH_LIMITATIONS",
+    "objective": "Родитель без знания специальности может выразить ограничения без диагноза, увидеть ровно те параметры, которые применятся в поиске.",
+    "prerequisites": "EXP-01.",
+    "technical_architecture": "Проверить четыре шага, null semantics, hard/soft switches, budget validation, review count и сохранение текста/настроек. Улучшать UX только по измеренным проблемам.",
+    "existing_implementation": [
+      "src/features/intake/Intake.tsx",
+      "src/features/intake/Review.tsx",
+      "src/app/session.ts",
+      "src/app/AppState.tsx",
+      "src/domain/contracts.ts"
+    ],
+    "reuse_foundations": "Intake.tsx, Review.tsx, canonical SearchInput/session schemas.",
+    "missing_implementation": "Полевые проверки/KK и доказательство каждого нового EXP AC; existing code не пересоздавать.",
+    "backend_requirements": "Сохранять текущие domain/storage contracts; private authority в server/service.ts.",
+    "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Родитель без знания специальности может выразить ограничения без диагноза, увидеть ровно те параметры, которые применятся в поиске.",
+    "data_models": "SearchInput, Session, intakeDraft, applied input",
+    "security_requirements": "Никаких name/DOB/medical details; private search answers не отправлять в analytics.",
+    "required_tests": "unit boundary/session; Playwright route/review A/B/C RU/KK.",
+    "negative_tests": "0, пусто, отрицательное, 100001, длинная строка, back forward history, expired session, KK.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-02-AC-01",
+        "text": "Все 20 IDs функционально прослежены к code/test или зарегистрирован gap."
+      },
+      {
+        "id": "EXP-02-AC-02",
+        "text": "Review preview использует тот же SearchService и точно соответствует каталогу."
+      },
+      {
+        "id": "EXP-02-AC-03",
+        "text": "Неизвестный ответ не становится медицинской категорией или ложным hard constraint."
+      },
+      {
+        "id": "EXP-02-AC-04",
+        "text": "Невалидный бюджет видимо блокирует apply, остальные ответы сохраняются."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-02) contracts/evidence` → `test/feat(exp-02) validated slice` → `docs(exp-02) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Наблюдение родителя по сценарию «не знаю категорию» — отдельный Human UAT.",
+    "allowed_result": "DEMO; полевые выводы отдельно.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 256
+    }
+  },
+  {
+    "id": "EXP-03",
+    "name": "DEMO: offer-level matching и каталог",
+    "feature_ids": [
+      "F037",
+      "F038",
+      "F039",
+      "F040",
+      "F041",
+      "F042",
+      "F043",
+      "F044",
+      "F045",
+      "F046",
+      "F047",
+      "F048",
+      "F049",
+      "F050",
+      "F051",
+      "F052",
+      "F053",
+      "F054",
+      "F055",
+      "F056",
+      "F057",
+      "F058",
+      "F059",
+      "F060"
+    ],
+    "status": "EXISTING_DEMO_WITH_LIMITATIONS",
+    "objective": "Дать точный, объяснимый список конкретных услуг и честное пустое состояние.",
+    "prerequisites": "EXP-02.",
+    "technical_architecture": "Проверить 24 ID, strict hard filters, soft rank, unknown/incomplete, stale, tie-break, grouping after evaluation, price 0 vs UNKNOWN, error/retry. Не заменять текущий алгоритм LLM.",
+    "existing_implementation": [
+      "src/features/search/Catalog.tsx",
+      "src/features/search/Filters.tsx",
+      "src/features/search/conditions.ts",
+      "src/domain/SearchService.ts",
+      "src/domain/matching.ts",
+      "src/domain/freshness.ts"
+    ],
+    "reuse_foundations": "SearchService/matching/freshness/SearchResult, Catalog, Filters, ResultMap.",
+    "missing_implementation": "Полевые проверки/KK и доказательство каждого нового EXP AC; existing code не пересоздавать.",
+    "backend_requirements": "Сохранять текущие domain/storage contracts; private authority в server/service.ts.",
+    "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Дать точный, объяснимый список конкретных услуг и честное пустое состояние.",
+    "data_models": "OfferEvaluation, SearchResult, FieldFreshness, MatchReason",
+    "security_requirements": "No clinical prediction; offer provenance; без автоматического ослабления hard.",
+    "required_tests": "matching/search Vitest + E2E filters/explanations; benchmark and build.",
+    "negative_tests": "multiple offers, mixed hard, unknown data, stale boundary, budget zero, 1000 offer performance.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-03-AC-01",
+        "text": "Свойства двух офферов одного специалиста никогда не объединяются для ложного match."
+      },
+      {
+        "id": "EXP-03-AC-02",
+        "text": "Критерии и объяснения RU/KK коррелируют с результатом; stale исключает ложное verified."
+      },
+      {
+        "id": "EXP-03-AC-03",
+        "text": "20/100/1000 synthetic offer benchmark задокументирован в той же среде, без fake field metrics."
+      },
+      {
+        "id": "EXP-03-AC-04",
+        "text": "Zero results не приводит к скрытой смене ограничений."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-03) contracts/evidence` → `test/feat(exp-03) validated slice` → `docs(exp-03) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Родитель объясняет причины выбора, не считать тест алгоритма человеческой оценкой.",
+    "allowed_result": "DEMO; реальные списки не подмешивать.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 309
+    }
+  },
+  {
+    "id": "EXP-04",
+    "name": "DEMO: профиль, паспорт доверия, сравнение",
+    "feature_ids": [
+      "F061",
+      "F062",
+      "F063",
+      "F064",
+      "F065",
+      "F066",
+      "F067",
+      "F068",
+      "F069",
+      "F070",
+      "F071",
+      "F072",
+      "F073",
+      "F074",
+      "F075"
+    ],
+    "status": "EXISTING_DEMO_WITH_LIMITATIONS",
+    "objective": "Родитель видит условия конкретной услуги, источники фактов и сравнивает до трёх вариантов.",
+    "prerequisites": "EXP-03.",
+    "technical_architecture": "Проверить даты/единицы цены/offer switching, verified scopes, side-by-side desktop, mobile stack, action state и persistence. При статусе проверки обязательно показывать limitations.",
+    "existing_implementation": [
+      "src/features/profile/OfferProfile.tsx",
+      "src/features/profile/TrustPassport.tsx",
+      "src/features/search/SelectionViews.tsx",
+      "src/features/search/OfferCard.tsx",
+      "src/features/search/CompareTray.tsx",
+      "src/domain/profile.ts"
+    ],
+    "reuse_foundations": "OfferProfile, TrustPassport, Comparison, дизайн 13.11.",
+    "missing_implementation": "Полевые проверки/KK и доказательство каждого нового EXP AC; existing code не пересоздавать.",
+    "backend_requirements": "Сохранять текущие domain/storage contracts; private authority в server/service.ts.",
+    "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Родитель видит условия конкретной услуги, источники фактов и сравнивает до трёх вариантов.",
+    "data_models": "Offer, Specialist, VerificationFact, comparison selection",
+    "security_requirements": "Синтетический badge не равен подлинной проверке диплома.",
+    "required_tests": "profile/compare unit E2E screenshots.",
+    "negative_tests": "missing price/source, withdrawn service, stale fact, unavailable comparison item, KK long text.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-04-AC-01",
+        "text": "Профиль отражает именно выбранный offer, ссылка и возврат работают."
+      },
+      {
+        "id": "EXP-04-AC-02",
+        "text": "В сравнение можно добавить/удалить 2–3 варианта без потери фильтров."
+      },
+      {
+        "id": "EXP-04-AC-03",
+        "text": "Паспорт показывает источник+дату+ограничение, неизвестный факт честно неизвестен."
+      },
+      {
+        "id": "EXP-04-AC-04",
+        "text": "На 390/1280 сравнение читается, keyboard accessible."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-04) contracts/evidence` → `test/feat(exp-04) validated slice` → `docs(exp-04) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Проверка понимания бейджа родителем; native KK review.",
+    "allowed_result": "DEMO; без обещаний качества услуг.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 366
+    }
+  },
+  {
+    "id": "EXP-05",
+    "name": "DEMO: заявки, карта, PWA и устойчивость",
+    "feature_ids": [
+      "F076",
+      "F077",
+      "F078",
+      "F079",
+      "F080",
+      "F081",
+      "F082",
+      "F083",
+      "F084",
+      "F085",
+      "F086",
+      "F087"
+    ],
+    "status": "EXISTING_DEMO_WITH_LIMITATIONS",
+    "objective": "Закончить демонстрационный путь честной локальной записью действия и устойчивым восстановлением.",
+    "prerequisites": "EXP-04.",
+    "technical_architecture": "Не подключать реальный send. Проверить IndexedDB transaction, same-key retry, double-click, cancel, purge, 7-day TTL, map/list/geolocation refusal, public offline snapshot. Сохранить no-store private APIs.",
+    "existing_implementation": [
+      "src/domain/DemoRequestService.ts",
+      "src/data/IndexedDbRequestRepository.ts",
+      "src/features/profile/DemoRequestEntry.tsx",
+      "src/features/request/DemoRequestStatus.tsx",
+      "src/features/request/ClearDemoRequests.tsx",
+      "src/features/pilot/SavedDemo.tsx",
+      "src/features/search/ResultMap.tsx",
+      "src/domain/map.ts",
+      "public/sw.js"
+    ],
+    "reuse_foundations": "DemoRequestService, IndexedDB, SavedDemo, SW, ResultMap.",
+    "missing_implementation": "Полевые проверки/KK и доказательство каждого нового EXP AC; existing code не пересоздавать.",
+    "backend_requirements": "Сохранять текущие domain/storage contracts; private authority в server/service.ts.",
+    "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Закончить демонстрационный путь честной локальной записью действия и устойчивым восстановлением.",
+    "data_models": "DemoRequest, RequestAttempt, public SavedDemo snapshot, shell manifest",
+    "security_requirements": "Не отправлять в live; никаких sensitive данных в IndexedDB и cache; демозаявка не подтверждает визит.",
+    "required_tests": "unit demo request + release E2E + offline Playwright.",
+    "negative_tests": "Corrupt sessionStorage, IndexedDB denial, abort, offline reload, duplicate clicks, expire, cancelled.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-05-AC-01",
+        "text": "Success появляется только после подтверждённого локального сохранения, а не после click."
+      },
+      {
+        "id": "EXP-05-AC-02",
+        "text": "Двойной submit/uncertain response не порождает дубль."
+      },
+      {
+        "id": "EXP-05-AC-03",
+        "text": "Offline saved snapshot явно помечен stale; private API не кэшируется."
+      },
+      {
+        "id": "EXP-05-AC-04",
+        "text": "Карта доступна списком, отказ geolocation не блокирует поиск."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-05) contracts/evidence` → `test/feat(exp-05) validated slice` → `docs(exp-05) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Живой демо-прогон; проверить формулировку «реальная запись не создана».",
+    "allowed_result": "DEMO only.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 414
+    }
+  },
+  {
+    "id": "EXP-06",
+    "name": "PILOT_TEST: synthetic identity, роли и доступы",
+    "feature_ids": [
+      "F088",
+      "F089",
+      "F090",
+      "F091",
+      "F092",
+      "F093",
+      "F094"
+    ],
+    "status": "EXISTING_PILOT_TEST_ONLY",
+    "objective": "Убедиться, что тестовые акторы и серверный контроль доступны только в предназначенном synthetic режиме.",
+    "prerequisites": "EXP-00 и готовая база пилота.",
+    "technical_architecture": "Аудит role/owner/scope, cookie, CSRF/origin, session expiry/logout, invalid actor, operation throttle. Разработать interface для будущего IdP, не внедрять real login.",
+    "existing_implementation": [
+      "src/features/pilot/Pilot.tsx",
+      "src/features/pilot/api.ts",
+      "server/http.ts",
+      "server/service.ts",
+      "server/store.ts"
+    ],
+    "reuse_foundations": "server/http.ts, contracts.ts, service/store, PILOT_MODE/guard.",
+    "missing_implementation": "Полевые проверки/KK и доказательство каждого нового EXP AC; existing code не пересоздавать.",
+    "backend_requirements": "Сохранять текущие domain/storage contracts; private authority в server/service.ts.",
+    "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Убедиться, что тестовые акторы и серверный контроль доступны только в предназначенном synthetic режиме.",
+    "data_models": "Actor, accounts, sessions, scopes",
+    "security_requirements": "PILOT_TEST loopback; production mode login запрещён; не менять LIVE_BLOCKED.",
+    "required_tests": "pilot unit real HTTP negative + 5 pilot E2E baseline.",
+    "negative_tests": "IDOR, role spoof, revoked sessions, CSRF, cross-site, brute test, logout failure.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-06-AC-01",
+        "text": "Гость не получает private data; Parent A не читает Parent B."
+      },
+      {
+        "id": "EXP-06-AC-02",
+        "text": "Specialist/Moderator/Admin не получают дневник родителя по роли."
+      },
+      {
+        "id": "EXP-06-AC-03",
+        "text": "Сессии/CSRF/Origin fail-closed; закрытая или expired session не продолжает запись."
+      },
+      {
+        "id": "EXP-06-AC-04",
+        "text": "NODE_ENV=production + test-login и PILOT_LIVE не стартуют."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-06) contracts/evidence` → `test/feat(exp-06) validated slice` → `docs(exp-06) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Production identity design требует ответственного security owner.",
+    "allowed_result": "Только PILOT_TEST.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 459
+    }
+  },
+  {
+    "id": "EXP-07",
+    "name": "PILOT_TEST: специалист, анкета и модерация",
+    "feature_ids": [
+      "F095",
+      "F096",
+      "F097",
+      "F098",
+      "F099",
+      "F100",
+      "F101",
+      "F102",
+      "F103",
+      "F104"
+    ],
+    "status": "EXISTING_PILOT_TEST_ONLY",
+    "objective": "Отправить на проверку конкретный оффер, безопасно вернуть на доработку, публиковать и отзывать синтетическую запись.",
+    "prerequisites": "EXP-06.",
+    "technical_architecture": "Проверить model application lifecycle, assigned moderator, source scope, publication consent, freshness, immutable history, publish/withdraw, needs_changes, audit.",
+    "existing_implementation": [
+      "src/features/pilot/Onboarding.tsx",
+      "src/features/pilot/Forms.tsx",
+      "server/contracts.ts",
+      "server/service.ts",
+      "server/migrations/001_pilot.sql"
+    ],
+    "reuse_foundations": "Onboarding, Forms, server application+moderation.",
+    "missing_implementation": "Полевые проверки/KK и доказательство каждого нового EXP AC; existing code не пересоздавать.",
+    "backend_requirements": "Сохранять текущие domain/storage contracts; private authority в server/service.ts.",
+    "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Отправить на проверку конкретный оффер, безопасно вернуть на доработку, публиковать и отзывать синтетическую запись.",
+    "data_models": "application Resource<ApplicationData>, public offer DTO, audit",
+    "security_requirements": "Нельзя доверять specialist self-verified; private evidence не попадает в public projection.",
+    "required_tests": "test state machine, forbidden transitions, E2E role workflow.",
+    "negative_tests": "Self-approval, stale review, unauthorized decision, overposting, deleted source.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-07-AC-01",
+        "text": "Только назначенный модератор решает допуск; специалист не self-publishes."
+      },
+      {
+        "id": "EXP-07-AC-02",
+        "text": "При изменении опубликованной услуги требуется новый review; history snapshot сохранён."
+      },
+      {
+        "id": "EXP-07-AC-03",
+        "text": "Withdraw немедленно удаляет предложение из публичного поиска."
+      },
+      {
+        "id": "EXP-07-AC-04",
+        "text": "Публичная projection не раскрывает внутреннее evidence или контактные данные."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-07) contracts/evidence` → `test/feat(exp-07) validated slice` → `docs(exp-07) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Реальные модераторы/SLA и проверка документов не утверждены.",
+    "allowed_result": "Синтетическая модерация.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 499
+    }
+  },
+  {
+    "id": "EXP-08",
+    "name": "PILOT_TEST: обращения и статусы",
+    "feature_ids": [
+      "F105",
+      "F106",
+      "F107",
+      "F108",
+      "F109",
+      "F110",
+      "F111",
+      "F112",
+      "F113",
+      "F114"
+    ],
+    "status": "EXISTING_PILOT_TEST_ONLY",
+    "objective": "Подтвердить честное и устойчивое server-side создание обращения в sandbox с возможностью отзыва.",
+    "prerequisites": "EXP-06/07.",
+    "technical_architecture": "Воспроизвести platform received → sandbox available → replied → specialist-confirmed; cancel/revoke/delete; unique key + payload hash; restart durability.",
+    "existing_implementation": [
+      "src/features/pilot/Contacts.tsx",
+      "src/features/pilot/Inbox.tsx",
+      "server/contracts.ts",
+      "server/service.ts",
+      "server/store.ts"
+    ],
+    "reuse_foundations": "Contacts, Inbox, server contact state machine and idempotent operations.",
+    "missing_implementation": "Полевые проверки/KK и доказательство каждого нового EXP AC; existing code не пересоздавать.",
+    "backend_requirements": "Сохранять текущие domain/storage contracts; private authority в server/service.ts.",
+    "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Подтвердить честное и устойчивое server-side создание обращения в sandbox с возможностью отзыва.",
+    "data_models": "contact Resource<ContactData>, operations, sandbox jobs, inbox",
+    "security_requirements": "Server receipt ≠ provider delivered; no external send; owner checked.",
+    "required_tests": "SQLite restart/transaction, negative HTTP, pilot E2E.",
+    "negative_tests": "Dropped response after commit, race/cancel, forged role, actor A/B, store restart.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-08-AC-01",
+        "text": "Повтор того же idempotency key возвращает тот же результат; другой payload получает conflict."
+      },
+      {
+        "id": "EXP-08-AC-02",
+        "text": "Отмена не допускает позднего перевода записи в active."
+      },
+      {
+        "id": "EXP-08-AC-03",
+        "text": "Статус appointment confirmed появляется только после разрешённого действия специалиста."
+      },
+      {
+        "id": "EXP-08-AC-04",
+        "text": "Нет фальшивых delivery/read states."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-08) contracts/evidence` → `test/feat(exp-08) validated slice` → `docs(exp-08) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Контактный канал реального фонда не определён.",
+    "allowed_result": "Sandbox only.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 542
+    }
+  },
+  {
+    "id": "EXP-09",
+    "name": "PILOT_TEST: календарь, inbox и подписки",
+    "feature_ids": [
+      "F115",
+      "F116",
+      "F117",
+      "F118",
+      "F119",
+      "F120",
+      "F121",
+      "F122"
+    ],
+    "status": "EXISTING_PILOT_TEST_ONLY",
+    "objective": "Дать родителю организационную историю событий и безопасные in-app reminders без обещания фоновой доставки.",
+    "prerequisites": "EXP-08.",
+    "technical_architecture": "Проверить time zones, version conflicts, overlap warning, cancelled jobs, in-app opt-in, dedup and change alert semantics.",
+    "existing_implementation": [
+      "src/features/pilot/Calendar.tsx",
+      "src/features/pilot/Inbox.tsx",
+      "server/service.ts",
+      "server/contracts.ts"
+    ],
+    "reuse_foundations": "Calendar, Inbox, NextAction-related jobs, offer subscriptions.",
+    "missing_implementation": "Полевые проверки/KK и доказательство каждого нового EXP AC; existing code не пересоздавать.",
+    "backend_requirements": "Сохранять текущие domain/storage contracts; private authority в server/service.ts.",
+    "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Дать родителю организационную историю событий и безопасные in-app reminders без обещания фоновой доставки.",
+    "data_models": "CalendarData, jobs revision, subscription, change_notice",
+    "security_requirements": "В уведомлении нет чувствительных полей; нет push/email/recurrence пока.",
+    "required_tests": "calendar/reminder unit and browser pilot/offline.",
+    "negative_tests": "stale event revision, overlapping, server shutdown, late job, unknown time zone.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-09-AC-01",
+        "text": "Реальный confirmed event рождается из разрешённого подтверждения, personal событие остаётся planned."
+      },
+      {
+        "id": "EXP-09-AC-02",
+        "text": "Редактирование/отмена инвалидируют старое напоминание и предотвращают повторные inbox-сообщения."
+      },
+      {
+        "id": "EXP-09-AC-03",
+        "text": "Подписка отключаемая, косметическое обновление не создаёт notice."
+      },
+      {
+        "id": "EXP-09-AC-04",
+        "text": "Таймзоны, DST/leap и частичное отсутствие сети обработаны честно."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-09) contracts/evidence` → `test/feat(exp-09) validated slice` → `docs(exp-09) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Фоновая доставка и устройство пользователя не проверены.",
+    "allowed_result": "In-app при работающем сервере, не push.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 585
+    }
+  },
+  {
+    "id": "EXP-10",
+    "name": "PILOT_TEST: next action, приватные цели и сводка",
+    "feature_ids": [
+      "F123",
+      "F124",
+      "F125",
+      "F126",
+      "F127",
+      "F128",
+      "F129",
+      "F130"
+    ],
+    "status": "EXISTING_PILOT_TEST_ONLY",
+    "objective": "Сопровождать организационные задачи семьи без рейтинга ребёнка, профилирования состояния или неподтверждённой медицинской помощи.",
+    "prerequisites": "EXP-06/08/09.",
+    "technical_architecture": "Проверить CRUD/version/deletion, scoped assignment and response, question/unable, retraction, summary opt-in selection, clipboard and download.",
+    "existing_implementation": [
+      "src/features/pilot/NextAction.tsx",
+      "src/features/pilot/PrivateRecords.tsx",
+      "server/service.ts",
+      "server/contracts.ts"
+    ],
+    "reuse_foundations": "NextAction, PrivateRecords, goals/diary/assignments, summary.",
+    "missing_implementation": "Полевые проверки/KK и доказательство каждого нового EXP AC; existing code не пересоздавать.",
+    "backend_requirements": "Сохранять текущие domain/storage contracts; private authority в server/service.ts.",
+    "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Сопровождать организационные задачи семьи без рейтинга ребёнка, профилирования состояния или неподтверждённой медицинской помощи.",
+    "data_models": "GoalData, DiaryData, AssignmentData, next marker, Summary Preview",
+    "security_requirements": "Дневник приватен даже от модератора и специалиста без отдельного explicit scope; scrub sensitive text from audit.",
+    "required_tests": "pilot unit+E2E private and scoped cases.",
+    "negative_tests": "XSS literal, cross-account, revoked scope, stale version, clipboard denial, export denial.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-10-AC-01",
+        "text": "Редактирование/удаление goals/diary не раскрывает текст audit или чужому аккаунту."
+      },
+      {
+        "id": "EXP-10-AC-02",
+        "text": "Специалист видит только recipient+scope и версию собственной инструкции."
+      },
+      {
+        "id": "EXP-10-AC-03",
+        "text": "Manual next-action marker не меняет lifecycle записи."
+      },
+      {
+        "id": "EXP-10-AC-04",
+        "text": "Summary default-empty, только явно выбранные поля, никакой внешней отправки."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-10) contracts/evidence` → `test/feat(exp-10) validated slice` → `docs(exp-10) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Необходимость полей дневника и реальный consent требуют интервью и privacy owner.",
+    "allowed_result": "Synthetic privacy-only.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 626
+    }
+  },
+  {
+    "id": "EXP-11",
+    "name": "LATER: deterministic Қарлығаш и explainability",
+    "feature_ids": [
+      "F131",
+      "F132",
+      "F133",
+      "F134",
+      "F135",
+      "F136",
+      "F137",
+      "F138",
+      "F139",
+      "F140"
+    ],
+    "status": "PLANNED_WITH_PARTIAL_FOUNDATIONS",
+    "objective": "Интерактивный проводник снижает неопределённость, но не подменяет специалиста и не выдаёт диагноз.",
+    "prerequisites": "EXP-01–04; sources/QA completed.",
+    "technical_architecture": "Создать decision graph + safe dictionary: questions for missing facts; explain category, reasons, next action, safe zero results; optional LLM adapter interface with feature flag OFF. UI clear fallback.",
+    "existing_implementation": [],
+    "reuse_foundations": "Bird, text dictionaries, search explanations and trust facts.",
+    "missing_implementation": "Создать decision graph + safe dictionary: questions for missing facts; explain category, reasons, next action, safe zero results; optional LLM adapter interface with feature flag OFF. UI clear fallback.",
+    "backend_requirements": "Создать decision graph + safe dictionary: questions for missing facts; explain category, reasons, next action, safe zero results; optional LLM adapter interface with feature flag OFF. UI clear fallback.",
+    "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Интерактивный проводник снижает неопределённость, но не подменяет специалиста и не выдаёт диагноз.",
+    "data_models": "Proposed GuidanceDecision, sourced question, deterministic rule graph",
+    "security_requirements": "Запрет медсоветов, вымышленных фактов/verified badges; sanitize input; no child-sensitive payload.",
+    "required_tests": "table-driven rules; negative medical assertions; E2E guide RU/KK.",
+    "negative_tests": "prompt injection, category ambiguity, stale facts, 0 matches, misleading medical language.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-11-AC-01",
+        "text": "Қарлығаш умеет объяснять подход и источник каждого факта на RU/KK без LLM."
+      },
+      {
+        "id": "EXP-11-AC-02",
+        "text": "Trust Gap задаёт вопрос по неизвестному факту и не отвечает за специалиста."
+      },
+      {
+        "id": "EXP-11-AC-03",
+        "text": "Zero results объясняет ограничение, не снимает hard без подтверждения."
+      },
+      {
+        "id": "EXP-11-AC-04",
+        "text": "Offline/error → deterministic fallback без фальшивого AI-thinking."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-11) contracts/evidence` → `test/feat(exp-11) validated slice` → `docs(exp-11) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Родитель и эксперт по текстам проверяют понятность; native KK review.",
+    "allowed_result": "Synthetic demo of guidance; AI outbound OFF.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 667
+    }
+  },
+  {
+    "id": "EXP-12",
+    "name": "LATER: voice, semantic search и assistant safety",
+    "feature_ids": [
+      "F141",
+      "F142",
+      "F143",
+      "F144",
+      "F145",
+      "F146",
+      "F147",
+      "F148",
+      "F149",
+      "F150"
+    ],
+    "status": "PLANNED_WITH_PARTIAL_FOUNDATIONS",
+    "objective": "Упростить навигацию для разных пользователей при сохранении текста как основного и полностью доступного пути.",
+    "prerequisites": "EXP-11, manual accessibility review.",
+    "technical_architecture": "Определить voice command grammar RU/KK, confirmation before mutations; TTS as optional local/browser capability, semantic retrieval only over allowlisted public source-backed facts; optional LLM after separate review.",
+    "existing_implementation": [],
+    "reuse_foundations": "Existing search input schema and deterministic assistant; no new PII needed.",
+    "missing_implementation": "Определить voice command grammar RU/KK, confirmation before mutations; TTS as optional local/browser capability, semantic retrieval only over allowlisted public source-backed facts; optional LLM after separate review.",
+    "backend_requirements": "Определить voice command grammar RU/KK, confirmation before mutations; TTS as optional local/browser capability, semantic retrieval only over allowlisted public source-backed facts; optional LLM after separate review.",
+    "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Упростить навигацию для разных пользователей при сохранении текста как основного и полностью доступного пути.",
+    "data_models": "Proposed voice command and public fact retrieval contracts",
+    "security_requirements": "Микрофон только по явному действию, кратковременные данные, stop controls; no passive recording; semantic search не обходит hard rules.",
+    "required_tests": "text/voice command grammar unit, mocked mic denies, schema, security prompt tests.",
+    "negative_tests": "misrecognition KK, prompt injection, inaccessible voice-only action, no permission.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-12-AC-01",
+        "text": "Все голосовые команды имеют текстовый эквивалент, отключаемы и объясняют разрешения."
+      },
+      {
+        "id": "EXP-12-AC-02",
+        "text": "AI/semantic result проходит те же hard filters и provenance controls."
+      },
+      {
+        "id": "EXP-12-AC-03",
+        "text": "Вопрос о медицинском диагнозе не превращается в совет по лечению."
+      },
+      {
+        "id": "EXP-12-AC-04",
+        "text": "Отказ микрофона/поставщика сохраняет работоспособность DEMO."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-12) contracts/evidence` → `test/feat(exp-12) validated slice` → `docs(exp-12) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Носители RU/KK, accessibility reviewers и privacy owner до реального voice.",
+    "allowed_result": "Опциональный синтетический prototype; voice не обязателен к хакатону.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 710
+    }
+  },
+  {
+    "id": "EXP-13",
+    "name": "LATER: Accessibility Fit + True Cost Calculator",
+    "feature_ids": [
+      "F151",
+      "F152",
+      "F153",
+      "F154"
+    ],
+    "status": "PLANNED",
+    "objective": "Сопоставить доступность помещения и экономическую сторону посещений без недоказанных свойств и «скрытых цен».",
+    "prerequisites": "EXP-03, verified/source-backed schema.",
+    "technical_architecture": "Создать source-backed venue attributes; cost calculator с прозрачными inputs: offer price/unit × planned visits + travel estimate + separately known fees; ranges, unknown and editable assumptions.",
+    "existing_implementation": [],
+    "reuse_foundations": "Offer DTO, price fields, location unknown handling, Intl KZT.",
+    "missing_implementation": "Создать source-backed venue attributes; cost calculator с прозрачными inputs: offer price/unit × planned visits + travel estimate + separately known fees; ranges, unknown and editable assumptions.",
+    "backend_requirements": "Создать source-backed venue attributes; cost calculator с прозрачными inputs: offer price/unit × planned visits + travel estimate + separately known fees; ranges, unknown and editable assumptions.",
+    "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Сопоставить доступность помещения и экономическую сторону посещений без недоказанных свойств и «скрытых цен».",
+    "data_models": "Proposed VenueAccessibility and CostEstimate (KZT/visits/travel/unknown)",
+    "security_requirements": "Не выводить особые потребности ребёнка по ответам и не помечать «подходит для состояния X».",
+    "required_tests": "domain cost math/property cases, i18n, a11y, comparison E2E.",
+    "negative_tests": "unknown price, free=0, different units, missing travel, venue source expired, overflow.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-13-AC-01",
+        "text": "Если вход не подтверждён, UI пишет unknown, не «доступно»."
+      },
+      {
+        "id": "EXP-13-AC-02",
+        "text": "Стоимость рассчитана по ясной формуле и показана как оценка, не оферта."
+      },
+      {
+        "id": "EXP-13-AC-03",
+        "text": "Множитель frequency/visits, KZT и неизвестные расходы явно видны."
+      },
+      {
+        "id": "EXP-13-AC-04",
+        "text": "Матрица доступности использует факты помещения, не диагнозы."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-13) contracts/evidence` → `test/feat(exp-13) validated slice` → `docs(exp-13) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Реальное подтверждение атрибутов и стоимости делает владелец данных.",
+    "allowed_result": "Synthetic only until sourced real offers.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 753
+    }
+  },
+  {
+    "id": "EXP-14",
+    "name": "LATER: маршруты, доступность слотов и расширенный поиск",
+    "feature_ids": [
+      "F155",
+      "F156",
+      "F157",
+      "F158",
+      "F159",
+      "F160",
+      "F161",
+      "F162",
+      "F163",
+      "F164",
+      "F165",
+      "F166"
+    ],
+    "status": "PLANNED",
+    "objective": "Помочь осознанно находить варианты по времени, дороге, нескольким районам и изменению предложений без ложных гарантий.",
+    "prerequisites": "EXP-03/13; external provider agreement for real routes/availability.",
+    "technical_architecture": "Схема verified slots/stale timestamps; route provider interface, multi-district search, saved searches, notification subscriptions, alternative after cancellation, offer validity policy; ручное смягчение soft.",
+    "existing_implementation": [],
+    "reuse_foundations": "SearchService, ResultMap and in-app subscriptions.",
+    "missing_implementation": "Схема verified slots/stale timestamps; route provider interface, multi-district search, saved searches, notification subscriptions, alternative after cancellation, offer validity policy; ручное смягчение soft.",
+    "backend_requirements": "Схема verified slots/stale timestamps; route provider interface, multi-district search, saved searches, notification subscriptions, alternative after cancellation, offer validity policy; ручное смягчение soft.",
+    "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Помочь осознанно находить варианты по времени, дороге, нескольким районам и изменению предложений без ложных гарантий.",
+    "data_models": "Proposed verified slot, RouteEstimate, saved search, multi-district query",
+    "security_requirements": "Геолокация opt-in, private route inputs not logged; no fake real-time booking.",
+    "required_tests": "adapter contract fake, invalid slots, A/B isolation, permission tests, responsive.",
+    "negative_tests": "route API unavailable, stale slots, geolocation denied, multiple districts/unknown availability.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-14-AC-01",
+        "text": "Свободный слот показывается только с provider timestamp и статусом, без подтверждения не booking."
+      },
+      {
+        "id": "EXP-14-AC-02",
+        "text": "Если маршрутизатор недоступен, показываются адрес и неопределённая длительность, не придуманное ETA."
+      },
+      {
+        "id": "EXP-14-AC-03",
+        "text": "Сохранённые фильтры остаются tenant-scoped, уведомления opt-in и dedup."
+      },
+      {
+        "id": "EXP-14-AC-04",
+        "text": "После отмены предлагаются варианты, не создавая новую запись самостоятельно."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-14) contracts/evidence` → `test/feat(exp-14) validated slice` → `docs(exp-14) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Настоящий поставщик расписания/карт, согласия на geo и проверенные данные.",
+    "allowed_result": "Mock routes/slots until provider and agreement.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 790
+    }
+  },
+  {
+    "id": "EXP-15",
+    "name": "LATER: Social Support Navigator",
+    "feature_ids": [
+      "F167",
+      "F168",
+      "F169",
+      "F170"
+    ],
+    "status": "PLANNED",
+    "objective": "Позволить семье увидеть и понять условия доступных бесплатных/льготных программ без обещания права участия.",
+    "prerequisites": "EXP-03/13; human source verification.",
+    "technical_architecture": "SupportProgram schema with region, issuer, verified conditions, expiry, eligibility, limits, source link, contact method, human verification role. Search/list/filter, rule-based question checklist.",
+    "existing_implementation": [],
+    "reuse_foundations": "Existing catalog, trust provenance, RU/KK filters.",
+    "missing_implementation": "SupportProgram schema with region, issuer, verified conditions, expiry, eligibility, limits, source link, contact method, human verification role. Search/list/filter, rule-based question checklist.",
+    "backend_requirements": "SupportProgram schema with region, issuer, verified conditions, expiry, eligibility, limits, source link, contact method, human verification role. Search/list/filter, rule-based question checklist.",
+    "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Позволить семье увидеть и понять условия доступных бесплатных/льготных программ без обещания права участия.",
+    "data_models": "Proposed SupportProgram with source/eligibility/expiry",
+    "security_requirements": "Не спрашивать диагноз или загружать документы для простой выдачи; право на льготу не определять автоматически.",
+    "required_tests": "support source validation, expired boundaries, catalogue E2E.",
+    "negative_tests": "missing source, expired program, mixed funding, no eligibility, update conflicts.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-15-AC-01",
+        "text": "Каждая программа имеет source URL, date checked, status и ограничение."
+      },
+      {
+        "id": "EXP-15-AC-02",
+        "text": "Unknown eligibility объясняется и отправляет к официальному источнику, не автоматически APPROVED."
+      },
+      {
+        "id": "EXP-15-AC-03",
+        "text": "Можно отфильтровать бесплатные/субсидируемые, доступны RU/KK."
+      },
+      {
+        "id": "EXP-15-AC-04",
+        "text": "Истёкшие программы скрыты или явно stale, synthetic fixtures заметны."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-15) contracts/evidence` → `test/feat(exp-15) validated slice` → `docs(exp-15) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Реестр программ и условия подтверждает фонд/ответственный.",
+    "allowed_result": "Синтетические программы до подтверждения организаций.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 835
+    }
+  },
+  {
+    "id": "EXP-16",
+    "name": "LATER: production identity, family permissions, consent",
+    "feature_ids": [
+      "F171",
+      "F172",
+      "F173",
+      "F174",
+      "F175",
+      "F176",
+      "F177",
+      "F178",
+      "F179",
+      "F180"
+    ],
+    "status": "BLOCKED_EXTERNAL_FOR_LIVE",
+    "objective": "Определить реальные учётные записи, полномочия представителей ребёнка и целевые согласия без несанкционированного расширения доступа.",
+    "prerequisites": "EXP-06/10 + legal/privacy/operator gate.",
+    "technical_architecture": "Сначала synthetic family relationship and consent version/revoke model. Строго отделить future identity provider, MFA/account recovery, privacy export and relation expiry. Не заменять synthetic login на self-declared parent.",
+    "existing_implementation": [],
+    "reuse_foundations": "Existing synthetic RBAC/owner checks, Zod contracts, sessions.",
+    "missing_implementation": "Сначала synthetic family relationship and consent version/revoke model. Строго отделить future identity provider, MFA/account recovery, privacy export and relation expiry. Не заменять synthetic login на self-declared parent.",
+    "backend_requirements": "Сначала synthetic family relationship and consent version/revoke model. Строго отделить future identity provider, MFA/account recovery, privacy export and relation expiry. Не заменять synthetic login на self-declared parent.",
+    "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Определить реальные учётные записи, полномочия представителей ребёнка и целевые согласия без несанкционированного расширения доступа.",
+    "data_models": "Proposed FamilyRelation, Invitation, ConsentRecord, ResourcePolicy, production IdP boundary",
+    "security_requirements": "Принцип наименьших привилегий, purpose-specific consent, no auto diary access, encrypted-at-rest planning, audit without child content.",
+    "required_tests": "policy matrix, consent/revoke, auth E2E synthetic.",
+    "negative_tests": "replayed invites, leaked token, family impersonation, export other child, stolen session.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-16-AC-01",
+        "text": "Invited adult получает только указанные scopes/время, A/B изоляция выдерживает отрицательные тесты."
+      },
+      {
+        "id": "EXP-16-AC-02",
+        "text": "Revoked/expired invite мгновенно закрывает дальнейшие чтения/записи."
+      },
+      {
+        "id": "EXP-16-AC-03",
+        "text": "Consent version меняет разрешение целевого действия, withdrawal effects проверяются."
+      },
+      {
+        "id": "EXP-16-AC-04",
+        "text": "Реальный IdP и enrollment остаются behind explicit external gate."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-16) contracts/evidence` → `test/feat(exp-16) validated slice` → `docs(exp-16) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Юрист РК, оператор, подтверждение полномочий законного представителя, security review.",
+    "allowed_result": "Только проектирование/synthetic tests до approval.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 872
+    }
+  },
+  {
+    "id": "EXP-17",
+    "name": "LATER: семейная координация и portability",
+    "feature_ids": [
+      "F181",
+      "F182",
+      "F183",
+      "F184",
+      "F185"
+    ],
+    "status": "BLOCKED_EXTERNAL_FOR_LIVE",
+    "objective": "Помочь нескольким законно уполномоченным взрослым согласованно вести организационные задачи без лишнего доступа к приватным записям.",
+    "prerequisites": "EXP-16.",
+    "technical_architecture": "Shared calendar and question list as separate resources with explicit grants; safe export, delete request lifecycle, shared favorites and revocation semantics.",
+    "existing_implementation": [],
+    "reuse_foundations": "Calendar, private records, saved offers, consent scopes.",
+    "missing_implementation": "Shared calendar and question list as separate resources with explicit grants; safe export, delete request lifecycle, shared favorites and revocation semantics.",
+    "backend_requirements": "Shared calendar and question list as separate resources with explicit grants; safe export, delete request lifecycle, shared favorites and revocation semantics.",
+    "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Помочь нескольким законно уполномоченным взрослым согласованно вести организационные задачи без лишнего доступа к приватным записям.",
+    "data_models": "Proposed SharedTask, SharedQuestion, family favorite, deletion workflow",
+    "security_requirements": "Усечённый default share, приватное не передаётся автоматически, expiry and revocation applied on every read.",
+    "required_tests": "A/B, scope, export, revoked capability, concurrency.",
+    "negative_tests": "cross-family share, stale group membership, leaked export, simultaneous updates.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-17-AC-01",
+        "text": "Shared item доступен только конкретно приглашённому пользователю."
+      },
+      {
+        "id": "EXP-17-AC-02",
+        "text": "Отзыв права немедленно скрывает записи и будущие выгрузки."
+      },
+      {
+        "id": "EXP-17-AC-03",
+        "text": "Экспорт содержит только разрешённые поля и даты; удаление фиксирует workflow и retention limitations."
+      },
+      {
+        "id": "EXP-17-AC-04",
+        "text": "Параллельные правки показывают conflict, не перетирают записи."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-17) contracts/evidence` → `test/feat(exp-17) validated slice` → `docs(exp-17) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Approval family authority, record retention policy.",
+    "allowed_result": "Synthetic until legal/ops.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 915
+    }
+  },
+  {
+    "id": "EXP-18",
+    "name": "LATER: связь с живым специалистом и каналы уведомлений",
+    "feature_ids": [
+      "F186",
+      "F187",
+      "F188",
+      "F189",
+      "F190",
+      "F191",
+      "F192",
+      "F193",
+      "F194",
+      "F195"
+    ],
+    "status": "BLOCKED_EXTERNAL_FOR_LIVE",
+    "objective": "Не только сохранить тестовую заявку, а честно доставить согласованное обращение и показать точный статус.",
+    "prerequisites": "EXP-08 + EXP-16/20 + provider authorization.",
+    "technical_architecture": "Outbox, fake provider, queued/sent/provider_ack/delivered/read distinct, signed callbacks, retries, cancellation, chat boundary, push/email/Telegram adapter toggles. Все реальные endpoints по умолчанию OFF.",
+    "existing_implementation": [],
+    "reuse_foundations": "Sandbox inbox/contact state machine, idempotency, consent.",
+    "missing_implementation": "Outbox, fake provider, queued/sent/provider_ack/delivered/read distinct, signed callbacks, retries, cancellation, chat boundary, push/email/Telegram adapter toggles. Все реальные endpoints по умолчанию OFF.",
+    "backend_requirements": "Outbox, fake provider, queued/sent/provider_ack/delivered/read distinct, signed callbacks, retries, cancellation, chat boundary, push/email/Telegram adapter toggles. Все реальные endpoints по умолчанию OFF.",
+    "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Не только сохранить тестовую заявку, а честно доставить согласованное обращение и показать точный статус.",
+    "data_models": "Proposed OutboundMessage, signed receipt, Booking, FakeProvider, chat policy",
+    "security_requirements": "Server-side secrets, provider permission, anti-abuse, opt-in, per-purpose consent, content minimization, no sensitive lock-screen.",
+    "required_tests": "fake-provider integration, webhook crypto signatures, queue idempotency, CSRF/IDOR.",
+    "negative_tests": "provider down, lost receipt, forged callback, revoked consent, duplicate, 429, timeout.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-18-AC-01",
+        "text": "No duplicate real-effect attempts on retry; fake provider records attempt once."
+      },
+      {
+        "id": "EXP-18-AC-02",
+        "text": "UI не называет DELIVERED без provider receipt и не называет booking confirmed без специалиста."
+      },
+      {
+        "id": "EXP-18-AC-03",
+        "text": "Отозванный consent предотвращает будущую отправку, errors recoverable."
+      },
+      {
+        "id": "EXP-18-AC-04",
+        "text": "Chat out-of-scope private files/diagnoses are blocked absent approved model."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-18) contracts/evidence` → `test/feat(exp-18) validated slice` → `docs(exp-18) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Подключение/договор с каналом, одобрение оператора и получателей, incident plan.",
+    "allowed_result": "Integration fake-only; real messages blocked.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 953
+    }
+  },
+  {
+    "id": "EXP-19",
+    "name": "LATER: календарные интеграции и booking lifecycle",
+    "feature_ids": [
+      "F196",
+      "F197",
+      "F198",
+      "F199",
+      "F200"
+    ],
+    "status": "BLOCKED_EXTERNAL_FOR_LIVE",
+    "objective": "Предотвратить двойную запись, обеспечить отмену/перенос и синхронизацию только после реального подтверждения.",
+    "prerequisites": "EXP-18; trusted provider slots.",
+    "technical_architecture": "Google Calendar provider interface, OAuth scope plan, recurrence RRULE/zone, specialist availability, waitlist, collision detection, cancellation and automatic suggestion with manual confirm.",
+    "existing_implementation": [],
+    "reuse_foundations": "Calendar timed event schema, contact confirmation.",
+    "missing_implementation": "Google Calendar provider interface, OAuth scope plan, recurrence RRULE/zone, specialist availability, waitlist, collision detection, cancellation and automatic suggestion with manual confirm.",
+    "backend_requirements": "Google Calendar provider interface, OAuth scope plan, recurrence RRULE/zone, specialist availability, waitlist, collision detection, cancellation and automatic suggestion with manual confirm.",
+    "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Предотвратить двойную запись, обеспечить отмену/перенос и синхронизацию только после реального подтверждения.",
+    "data_models": "Proposed calendar grant, recurrence, waitlist, slot version",
+    "security_requirements": "Calendar tokens protected backend, consent for sync, no sensitive title in third-party calendar by default.",
+    "required_tests": "booking transactional integration, fake calendar OAuth, timezone, replay/race.",
+    "negative_tests": "DST, leap, revoked OAuth, race double-book, provider latency, recurrence edits.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-19-AC-01",
+        "text": "Conflicting slot rejected or surfaced as stale, never silently double-booked."
+      },
+      {
+        "id": "EXP-19-AC-02",
+        "text": "Reschedule/cancel changes event and invalidates reminders consistently."
+      },
+      {
+        "id": "EXP-19-AC-03",
+        "text": "Waitlist offers are invitations, not automatic booking or unsolicited messages."
+      },
+      {
+        "id": "EXP-19-AC-04",
+        "text": "OAuth absent → safe local calendar unchanged."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-19) contracts/evidence` → `test/feat(exp-19) validated slice` → `docs(exp-19) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Provider contracts/permissions, real specialist calendar, test accounts and approval.",
+    "allowed_result": "Mock provider until approvals.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 996
+    }
+  },
+  {
+    "id": "EXP-20",
+    "name": "LATER: реальный trust, модерация, отзывы",
+    "feature_ids": [
+      "F201",
+      "F202",
+      "F203",
+      "F204",
+      "F205",
+      "F206",
+      "F207",
+      "F208",
+      "F209",
+      "F210"
+    ],
+    "status": "BLOCKED_EXTERNAL_FOR_LIVE",
+    "objective": "Проверяемые факты квалификации и доступных услуг, безопасный процесс жалоб и прозрачность отзывов.",
+    "prerequisites": "EXP-07 + EXP-16/18 + qualified moderator.",
+    "technical_architecture": "Verified scope for education/org/identity, document handling boundary without real uploads, review/appeal with audit, expiry revocation, verified contact-linked reviews and specialist response.",
+    "existing_implementation": [],
+    "reuse_foundations": "Synthetic trust passport, moderation source/fact model.",
+    "missing_implementation": "Verified scope for education/org/identity, document handling boundary without real uploads, review/appeal with audit, expiry revocation, verified contact-linked reviews and specialist response.",
+    "backend_requirements": "Verified scope for education/org/identity, document handling boundary without real uploads, review/appeal with audit, expiry revocation, verified contact-linked reviews and specialist response.",
+    "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Проверяемые факты квалификации и доступных услуг, безопасный процесс жалоб и прозрачность отзывов.",
+    "data_models": "Proposed VerificationCase, Appeal, Review, reviewer evidence metadata",
+    "security_requirements": "Никакого AI self-verification, no public evidence scans, impersonation defense, neutral moderation, challenge handling.",
+    "required_tests": "RBAC, state machine, audit and moderation E2E.",
+    "negative_tests": "self-review, forged source, duplicate reviews, conflicts, expired evidence, privilege escalation.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-20-AC-01",
+        "text": "Каждый verification badge имеет scope/source/date/reviewer, stale revokes visible status."
+      },
+      {
+        "id": "EXP-20-AC-02",
+        "text": "Неавторизованный специалист не утверждает собственную квалификацию."
+      },
+      {
+        "id": "EXP-20-AC-03",
+        "text": "Verified review связан с реальным разрешённым interaction, без disclosure ребёнка."
+      },
+      {
+        "id": "EXP-20-AC-04",
+        "text": "Appeal не меняет public status без ответственного reviewer."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-20) contracts/evidence` → `test/feat(exp-20) validated slice` → `docs(exp-20) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Назначенные компетентные модераторы, процедура проверки реальных документов, согласия на отзывы.",
+    "allowed_result": "Synthetic fake evidence only until human-approved.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 1034
+    }
+  },
+  {
+    "id": "EXP-21",
+    "name": "LATER: Social Impact Dashboard и research metrics",
+    "feature_ids": [
+      "F211",
+      "F212",
+      "F213",
+      "F214",
+      "F215",
+      "F216",
+      "F217"
+    ],
+    "status": "BLOCKED_EXTERNAL_FOR_LIVE",
+    "objective": "Измерять устранение информационных барьеров, а не выдумывать медицинские показатели успеха.",
+    "prerequisites": "EXP-00, research protocol, consent/retention if live.",
+    "technical_architecture": "Event taxonomy and consent gate, synthetic metrics: time-to-understand, clarify questions, filter recoveries, search completion, confirmed contact, failed demand, geographic gaps; cohort thresholds; source label.",
+    "existing_implementation": [],
+    "reuse_foundations": "Research hypotheses, test event schema; no existing real-user data.",
+    "missing_implementation": "Event taxonomy and consent gate, synthetic metrics: time-to-understand, clarify questions, filter recoveries, search completion, confirmed contact, failed demand, geographic gaps; cohort thresholds; source label.",
+    "backend_requirements": "Event taxonomy and consent gate, synthetic metrics: time-to-understand, clarify questions, filter recoveries, search completion, confirmed contact, failed demand, geographic gaps; cohort thresholds; source label.",
+    "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Измерять устранение информационных барьеров, а не выдумывать медицинские показатели успеха.",
+    "data_models": "Proposed ImpactEvent, aggregate metric, small-cohort suppression",
+    "security_requirements": "No private diary text in analytics; no unconsented identifiers; aggregate/small-cohort suppression.",
+    "required_tests": "aggregator property/fake telemetry, privacy no-sensitive, dashboard E2E.",
+    "negative_tests": "n=0, very small group, same event duplicate, opt-out, missing consent.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-21-AC-01",
+        "text": "Synthetic dashboard явно маркирован, не выдаётся за реальные результаты интервью."
+      },
+      {
+        "id": "EXP-21-AC-02",
+        "text": "Метрика раскрывает numerator/denominator, период, статус данных, sample n."
+      },
+      {
+        "id": "EXP-21-AC-03",
+        "text": "Отсутствие live events показывает «данных нет», не 100% успеха."
+      },
+      {
+        "id": "EXP-21-AC-04",
+        "text": "Нет показателей выздоровления/качества ребёнка из интерфейсной активности."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-21) contracts/evidence` → `test/feat(exp-21) validated slice` → `docs(exp-21) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Реальное интервью и оператор analytics policy before field events.",
+    "allowed_result": "Synthetic measurement demo; real impact not claimed.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 1077
+    }
+  },
+  {
+    "id": "EXP-22",
+    "name": "LATER: кабинет фонда, партнёры, Telegram, регионы",
+    "feature_ids": [
+      "F218",
+      "F219",
+      "F220",
+      "F221",
+      "F222",
+      "F223",
+      "F224"
+    ],
+    "status": "BLOCKED_EXTERNAL_FOR_LIVE",
+    "objective": "Сделать масштабируемый административный контур, не превращая внутреннюю статистику в доступ к частным семейным данным.",
+    "prerequisites": "EXP-15/16/18/20/21; partner agreements.",
+    "technical_architecture": "Partner portal with scoped org roles, programs, review workflow, public API contracts/rate limits, Telegram Mini App as optional presentation shell, multi-city data partitions & localisation.",
+    "existing_implementation": [],
+    "reuse_foundations": "Role-based admin, public offers, moderation, safe aggregate events.",
+    "missing_implementation": "Partner portal with scoped org roles, programs, review workflow, public API contracts/rate limits, Telegram Mini App as optional presentation shell, multi-city data partitions & localisation.",
+    "backend_requirements": "Partner portal with scoped org roles, programs, review workflow, public API contracts/rate limits, Telegram Mini App as optional presentation shell, multi-city data partitions & localisation.",
+    "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Сделать масштабируемый административный контур, не превращая внутреннюю статистику в доступ к частным семейным данным.",
+    "data_models": "Proposed PartnerOrganization, scoped role, API grant, region",
+    "security_requirements": "Partner cannot read other organizations/family diary; API keys rotatable, scopes fine-grained, logging and abuse controls.",
+    "required_tests": "partner A/B, API scopes, region TZ, rate limits, contract.",
+    "negative_tests": "org IDOR, token leakage, API spam, region mixing, revoked partnership.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-22-AC-01",
+        "text": "Public/partner endpoints return only allowlisted data, enforce scopes and provenance."
+      },
+      {
+        "id": "EXP-22-AC-02",
+        "text": "Другой город не меняет базовые права; фильтры и таймзоны корректны."
+      },
+      {
+        "id": "EXP-22-AC-03",
+        "text": "Telegram shell работает без расширения разрешений и без вывода private data в URL."
+      },
+      {
+        "id": "EXP-22-AC-04",
+        "text": "Фонд видит агрегаты и назначенные задачи, не весь личный дневник."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-22) contracts/evidence` → `test/feat(exp-22) validated slice` → `docs(exp-22) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Фонд/партнёры, соглашения, budgets, approved provider policies.",
+    "allowed_result": "Synthetic partner fixtures until agreements.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 1117
+    }
+  },
+  {
+    "id": "EXP-23",
+    "name": "LATER: observability, backups, production security, real-device a11y",
+    "feature_ids": [
+      "F225",
+      "F226",
+      "F227",
+      "F228"
+    ],
+    "status": "BLOCKED_EXTERNAL_FOR_LIVE",
+    "objective": "Управляемость и готовность инфраструктуры к безопасному ограниченному пилоту.",
+    "prerequisites": "EXP-06/16/18/20/22; operator/security owners.",
+    "technical_architecture": "Staging infrastructure plan, logs/metrics with redaction, incident escalation, backup+restore drill on synthetic DB, token rotation, data retention/delete pipeline, CSP/HSTS on TLS layer, SCA, tests across devices and assistive tech.",
+    "existing_implementation": [],
+    "reuse_foundations": "Existing audit metadata, CI, release runbooks, live readiness register.",
+    "missing_implementation": "Staging infrastructure plan, logs/metrics with redaction, incident escalation, backup+restore drill on synthetic DB, token rotation, data retention/delete pipeline, CSP/HSTS on TLS layer, SCA, tests across devices and assistive tech.",
+    "backend_requirements": "Staging infrastructure plan, logs/metrics with redaction, incident escalation, backup+restore drill on synthetic DB, token rotation, data retention/delete pipeline, CSP/HSTS on TLS layer, SCA, tests across devices and assistive tech.",
+    "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Управляемость и готовность инфраструктуры к безопасному ограниченному пилоту.",
+    "data_models": "Proposed Incident, BackupManifest, RestoreReport, access review",
+    "security_requirements": "Not merely scan tools: require access review, encryption/secrets, recovery RTO/RPO proposal and tested restore, vulnerability triage.",
+    "required_tests": "restore drill, failover simulation, secret scan, E2E release and independent manual.",
+    "negative_tests": "corrupt DB, restore conflict, leaked logs, absent owner, expired credential, inaccessible form.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-23-AC-01",
+        "text": "Синтетический backup+restore в чистом окружении повторён и проверен checksum/record semantics."
+      },
+      {
+        "id": "EXP-23-AC-02",
+        "text": "Алёрты не раскрывают PII, key expiry/rotation monitored, least privilege documented."
+      },
+      {
+        "id": "EXP-23-AC-03",
+        "text": "CI reports checks accurately, dependency risk triaged, rollback measured."
+      },
+      {
+        "id": "EXP-23-AC-04",
+        "text": "Реальные screen reader/Android/iOS имеют протокол или честный NOT_RUN."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-23) contracts/evidence` → `test/feat(exp-23) validated slice` → `docs(exp-23) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Security owner, ops oncall, privacy owner, device testers, native KK editor.",
+    "allowed_result": "Production readiness gate still BLOCKED until operational proof.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 1157
+    }
+  },
+  {
+    "id": "EXP-24",
+    "name": "LATER: ограниченный live pilot и production launch",
+    "feature_ids": [
+      "F229",
+      "F230"
+    ],
+    "status": "BLOCKED_EXTERNAL_FOR_LIVE",
+    "objective": "Контролируемо проверить реальную полезность при сохранении права на остановку, поддержку и исправление ошибок.",
+    "prerequisites": "EXP-16–23 + all required LIVE_READINESS sign-offs.",
+    "technical_architecture": "Только после отдельного письменного разрешения: staging review, contract/legal checklist, informed consent, limited cohorts, support/oncall, rollback/switch-off, monitoring and post-launch review. Без разрешения подготовить полный go/no-go pack и остановиться.",
+    "existing_implementation": [],
+    "reuse_foundations": "Product demo/synthetic platform, pilot plan, release manifests.",
+    "missing_implementation": "Только после отдельного письменного разрешения: staging review, contract/legal checklist, informed consent, limited cohorts, support/oncall, rollback/switch-off, monitoring and post-launch review. Без разрешения подготовить полный go/no-go pack и остановиться.",
+    "backend_requirements": "Только после отдельного письменного разрешения: staging review, contract/legal checklist, informed consent, limited cohorts, support/oncall, rollback/switch-off, monitoring and post-launch review. Без разрешения подготовить полный go/no-go pack и остановиться.",
+    "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Контролируемо проверить реальную полезность при сохранении права на остановку, поддержку и исправление ошибок.",
+    "data_models": "Proposed LaunchApproval, cohort/support/rollback checklist",
+    "security_requirements": "No live personal information without formal lawful processing, no public deployment by this prompt alone.",
+    "required_tests": "staging drills only; UAT independent; no production deployment until separate authorization.",
+    "negative_tests": "denied consent, incident, broken rollback, provider outage, missing support, unknown legal basis.",
+    "acceptance_criteria": [
+      {
+        "id": "EXP-24-AC-01",
+        "text": "Go/no-go checklist имеет имена ответственных, доказательства и даты, не заполнен фиктивно."
+      },
+      {
+        "id": "EXP-24-AC-02",
+        "text": "Release candidate SHA воспроизводим, smoke/rollback/recovery инцидентный сценарий проверены."
+      },
+      {
+        "id": "EXP-24-AC-03",
+        "text": "Пилот имеет согласованный recruitment/support/retention/incident scope и explicit stop condition."
+      },
+      {
+        "id": "EXP-24-AC-04",
+        "text": "Если любой gate не закрыт — статус NO-GO, `LIVE_BLOCKED` не менять."
+      }
+    ],
+    "git_checkpoint": "`docs(exp-24) contracts/evidence` → `test/feat(exp-24) validated slice` → `docs(exp-24) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
+    "external_dependencies": "Юрист, оператор/фонд, privacy и security owners, реальные специалисты, письменный authorization.",
+    "allowed_result": "BLOCKED_EXTERNAL из исходного состояния.",
+    "completion_evidence": {
+      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+      "qa": "VALIDATION.md",
+      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+    },
+    "source": {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "line": 1194
+    }
+  }
+]

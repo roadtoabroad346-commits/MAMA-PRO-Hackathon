@@ -1,0 +1,36 @@
+{
+  "baseline_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+  "branch": "feature/context-init-2026-11-13",
+  "created_at_utc": "2026-11-13T16:34:24.783032+00:00",
+  "local_time": "2026-11-13T21:34:24.783047+05:00",
+  "feature_counts": {
+    "IMPLEMENTED_WITH_LIMITATIONS": 88,
+    "PILOT_TEST_ONLY": 43,
+    "PLANNED": 51,
+    "PARTIALLY_IMPLEMENTED": 6,
+    "BLOCKED_EXTERNAL": 43
+  },
+  "feature_total": 231,
+  "phase_total": 25,
+  "baseline_files": 335,
+  "text_files": 275,
+  "binary_files": 60,
+  "source_snapshots": [
+    {
+      "path": "docs/AI_CONTEXT/sources/00_CONTEXT_INITIALIZATION_REQUEST.md",
+      "sha256": "b43b4abd91cb5f0df4e17c89d5b803c60d65b09253db75bc0eb153bf9242ea30"
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
+      "sha256": "62da3a173aa812dd78aec11fee0fe1aba96ed9c4d0ea8c4c9e4330d4206a4898"
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/02_CODEX_ENGINEERING_PLAYBOOK.md",
+      "sha256": "3f3b12f5ef3ebba6adbd699b577500ccc884ee1c07500b3d5846360221cfecfa"
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "sha256": "bd6470f570a6d6c2bdb29d122784c53840bb1a3590d9c2f7e130d11b6aca95ff"
+    }
+  ]
+}
