@@ -1,48 +1,46 @@
-# Передача следующей сессии
+# Передача после EXP-02
 
-**LIVE_BLOCKED сохраняется; реальные пользователи/отправки/production не разрешены.**
+**LIVE_BLOCKED; DEMO/PILOT_TEST only. Реальные семьи, отправки, запись и deployment не разрешены.**
 
-## Текущая точка
+Выполнено текущее поручение: сверка поступивших источников и проверка EXP-02 F017–F036. Runtime gap не найден; добавлены 10 acceptance cases и проверки документации. Все 20 функций уже были реализованы и повторно не создавались. [Полный отчёт, AC,20 mappings, rollback](../expansion/stages/EXP-02.md).
 
-- Ветка: `feature/context-init-2026-11-13`.
-- Приложение/проверяемый baseline: `7f8434a4cfd097b531fa584f5b97ebd1e772ad92` (default `phase-0-audit`). В этой задаче runtime не изменён.
-- Проверенный документационный checkpoint: **b0b4115b694ec8271ead0f90a1d4c7742327145f**. Push успешен; remote SHA==local SHA фактически прочитан в 2026-11-13T16:44:49.420189+00:00. [GitHub commit](https://github.com/roadtoabroad346-commits/MAMA-PRO-Hackathon/commit/b0b4115b694ec8271ead0f90a1d4c7742327145f). Эта запись — отдельный следующий docs commit; SHA выше относится к уже проверенному checkpoint на момент записи, не выдаётся за self hash текущего handoff.
-- Точное состояние HEAD/remote вычислять командами ниже; commit SHA нельзя встраивать в собственное содержимое без изменения hash.
-- Разрешено и выполнено: восстановление доступного контекста, 231 feature record, 25 EXP cards, source/code/test links, 335-file inventory, baseline QA, AGENTS recovery protocol. Продуктовые фичи не добавлены.
-- Активные продуктовые задачи: отсутствуют. Initialization доступных материалов завершена; source/human gaps сохранены. Финальная запись синхронизации проверяется отдельным docs push и внешним receipt, команды ниже показывают актуальный HEAD/remote.
+## Git и источники
 
-## Что работает и как воспроизвести
+Рабочая ветка: `feature/context-init-2026-11-13`; проверенный remote до текущего checkpoint и его parent — `0e7e1896776dc50e2c7be114e0ed249b8e800395`. Runtime совпадает с `7f8434a4cfd097b531fa584f5b97ebd1e772ad92`. Этот документ входит в новый test/docs commit; его self SHA в собственное содержимое не встраивается. Факт push проверяется отдельно; для актуального checkpoint выполнить команды ниже.
 
-Node24.22.1, npm11.9.0, Chromium156.0.8078.79. Из root: `npm ci`, `npm run check`, `npm run build`. CORE `npm run dev`; отдельный synthetic backend `PILOT_MODE=PILOT_TEST npm run pilot`, страница `/pilot`.
+EXP-01 уже сохранён в отдельной `feature/mamapro-exp01-20261113` @`a93cc18d7b357a637c7114e9408ec11242156eba`. Его stage/evidence/test прочитаны; runtime совпадает с baseline. Ветки не объединялись, EXP-01 не дублировался. В этой ветке dev suite89, в sibling EXP-01 исторически 85: это 79 общих +10EXP-02 либо +6EXP-01 соответственно, а не потеря тестов. Открытые PR1/2 остаются историческими, их heads входят в baseline; merge не выполнялся.
 
-Current baseline: 154unit/integration +79dev +18release +5pilot +2offline =258PASS; failed0/skipped0. Typecheck/build/historical registry PASS; npm audit0. Команды/границы/хеши логов: [VALIDATION](VALIDATION.md).
+Прочитаны полностью: Research Markdown §00–18, исходный CSV231, root README, README_START_HERE, STAGE_MAP, manifest/intake и все три инженерных документа. Вложения 01–03 побайтово совпадают с Git sources. [Имена, SHA256, размеры и read scope](../expansion/evidence/EXP-02-sources.json). Код/тесты: Intake, Review, AppState, session, SearchInput/contracts, SearchService/matching, Catalog, связанные dictionaries и tests/configs; сохранены прежние архитектура и исторические фазы.
 
-## Восстановление Git
+**Оригинального Research DOCX и папки research/ нет в workspace и fetched GitHub heads.** Historical intake сообщает о Library-копии; она не смонтирована. DOCX в этой сессии НЕ прочитан, его hash/layout/полнота извлечения НЕ перепроверены. Не выдавать Markdown за проверенный бинарный оригинал. Владелец подтвердил путь архива MamaPro_Codex_Expansion/00_REFERENCE_RESEARCH.docx и ожидаемый SHA2563ceb39a…bd6, явно разрешил продолжать по Markdown. После фактического получения сверить с derivative и обновить provenance отдельным checkpoint, сохранив результаты EXP-02.
+
+## Что подтверждено
+
+- 231 IDs F000–F230, без пропусков/дубликатов; source statuses MISSION1/DEMO87/PILOT_TEST43/LATER100 и 25 EXP сохранены. Каждый ID имеет `research_line`/`registry_line`, проверяемые против исходных материалов.
+- EXP-02 AC-01…04: PASS_AUTOMATED_SYNTHETIC. A/B/C RU/KK, exact/incomplete IDs и counts,4 шага, null/zero, hard/soft, draft/applied, editing, Back/history/reload и бюджет проверены.
+- Invalid budget блокирует count/apply; остальные ответы не теряются. Raw budget живёт только в памяти: reload восстанавливает валидированный null/number; это существующий контракт. Expired/corrupt/storage denial покрыты прежними тестами.
+- Исходные 335 baseline-файлов побайтово сохранены; src/server/public/dependencies/migrations не изменены. Статусы остаются IMPLEMENTED_WITH_LIMITATIONS; human readiness не повышена.
+
+Текущая проверка: strict TS +154 unit/integration и исторический audit PASS; build PASS; dev89/89; dist40/40 (18 существующих release +12 intake +10 EXP-02). Основные прогоны:283 PASS, failed0/skipped0. Отдельный focused10 PASS и baseline-focused22 PASS не добавляются повторно в283. Pilot/offline повторно NOT_RUN, их код не изменён. [Команды, хеши и полные логи](../expansion/evidence/EXP-02.json).
+
+Первые два пробных прогона новых тестов:6fail/2pass каждый, причина — неверный test selector incomplete-card. Исправлен тест по исходнику OfferCard, expected IDs/assertions сохранены. Это не продуктовый дефект и не основание править runtime. Фактические команды/логи/хеши — в stage evidence.
+
+## Восстановление и следующий шаг
 
 ```sh
 git status --short --branch
 git log -5 --oneline
 git rev-parse HEAD
-git ls-remote --symref origin HEAD
 git ls-remote origin refs/heads/feature/context-init-2026-11-13
+python3 docs/AI_CONTEXT/validate_context.py
+npm ci
+npm run check
+npm run build
+CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e -- --workers=2
 ```
 
-Если нужно продолжить существующую ветку в новом checkout, сначала fetch/inspect remote, затем checkout подходящего ref, сохраняя любые local changes. Не reset/clean/stash чужое. Открытые PR №1 и draft №2 имеют heads, уже входящие в baseline; не merge их ради восстановления.
+Node24.22.1/npm11.9.0/Chromium156.0.8078.79. Не запускать dev/release одновременно на 5173. Обычный release gate: `CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run check:release -- --workers=2`. Полный EXP-02 dist acceptance: `CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npx playwright test --config playwright.exp02.config.ts --workers=2`. PILOT_MODE=PILOT_TEST/npm run pilot — только отдельный synthetic backend; в этой задаче он не изменён.
 
-## Контекст и ограничения
+**STOP после EXP-02 и push.** Следующий кандидат, только по новому поручению: EXP-03 F037–F060 — same-offer/hard/unknown/freshness/zero results и benchmark20/100/1000. Не переходить к EXP-11 поверх непроверенных зависимостей, не придумывать требования неизвестных исторических фаз.
 
-Начать с [AGENTS](../../AGENTS.md), [master](PROJECT_MASTER_CONTEXT.md), [phase map](PHASE_PROGRESS.md). Полные feature records в JSON; поля `phase_ref` разрешаются в EXP registry, пути относительно корня repo. Старый docs/PHASE_REGISTRY.json — только история0–68; не заменять новым.
-
-**Source intake 13.11.2026:** Research DOCX получен из загруженного ZIP и сохранён в ChatGPT Library, полное текстовое/табличное извлечение [Research](sources/00_REFERENCE_RESEARCH.md), исходный [CSV](sources/FEATURE_REGISTRY_000-230.csv), [STAGE_MAP](sources/STAGE_MAP.json), [README](sources/README_START_HERE.md) и SHA256 manifest добавлены в ветку. 231 ID и 25 EXP стадий структурно проверены; статусы реализации остаются прежними. 39 исторических фаз TEAM_ATTESTED, independent delivery evidence UNKNOWN. Интервью родителя PENDING, native KK/real AT/device acceptance NOT_RUN. LIVE_BLOCKED не изменён. Полный список: [OPEN_QUESTIONS](OPEN_QUESTIONS.md).
-
-F065: CORE район без полного address/venue. F104: audit metadata, без полноценного moderator case-history UI. F119: overlap warning, без server slot lock. F135/137/149/150/206/210 имеют только перечисленные foundations. Не пересоздавать имеющиеся audit fixes, Bird3 poses, gradients/icons, radio sort/district, budget chips, subgrid compare и Intl dates.
-
-## Точный следующий шаг
-
-**STOP после initialization. EXP-01 и далее требуют нового прямого указания владельца.** Исходный [context prompt](sources/00_CONTEXT_INITIALIZATION_REQUEST.md), раздел12: «Do not begin implementation of EXP-01 or later until I explicitly instruct you to continue.» Это ограничение scope, а не запрос дополнительного разрешения для завершения текущей документации.
-
-Рекомендация для будущего продуктового поручения: EXP-11, deterministic Trust Gap F136. Переиспользовать TrustPassport/OfferEvaluation.unknowns/freshness; неизвестный факт→вопрос+source state; без LLM. Перед этим сверить новый Research и первичные источники, текущий remote и baseline regressions.
-
-Предлагаемые slice AC: (1) вопросы только о missing/stale facts конкретного offer; (2) known current факт не порождает ложный пробел; (3) source/date/scope видны; (4) RU/KK и keyboard/320px; (5) нет clinical recommendations/автоматического hard relaxation; (6) deny/error/offline сохраняют deterministic fallback. Tests: pure table rules + focused E2E; stop после этих AC и checkpoint. Это предложение, код не создан.
-
-После любой будущей задачи обновить feature/phase status, decisions, тестовый evidence и handoff; stage exact files; commit; push authorized branch; read remote SHA. При отказе сохранить local SHA/patch и PUSH_BLOCKED, не писать success.
+Открыто: DOCX; первичные market/competitor URLs и актуальные условия конкурса; аутентичный созвон родителя PENDING; native KK/real AT/device/browser zoom NOT_RUN;39 фаз TEAM_ATTESTED без независимого per-phase evidence; real identity/consent/operators/providers/ops/live gates. Технический PASS не доказывает социальный эффект. См. [OPEN_QUESTIONS](OPEN_QUESTIONS.md).

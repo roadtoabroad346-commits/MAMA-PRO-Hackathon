@@ -1,10 +1,10 @@
 # F000–F230: состояние функций
 
-Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Это новая проверка существующей реализации, не исполнение EXP-01–24.
+Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. EXP-02 F017–F036 перепроверен автоматикой; EXP-01 записан в отдельной remote-ветке a93cc18. Остальной roadmap не объявляется выполненным.
 
-Канонические имена/номера взяты из приложенного master; оригинал Research не найден. Исходный Research status сохранён отдельно. Полные поля, acceptance и именованные test anchors: [FEATURE_REGISTRY.json](FEATURE_REGISTRY.json); экспорт [CSV](FEATURE_REGISTRY.csv).
+Канонические имена/номера сверены с полностью прочитанным Research Markdown, исходным CSV и двумя инженерными приложениями. DOCX недоступен; его чтение не заявляется. Исходный Research status сохранён отдельно. Полные поля, acceptance и именованные test anchors: [FEATURE_REGISTRY.json](FEATURE_REGISTRY.json); экспорт [CSV](FEATURE_REGISTRY.csv).
 
-Статусы: VERIFIED_IMPLEMENTED — доказан весь заявленный объём; IMPLEMENTED_WITH_LIMITATIONS — работает с перечисленными ограничениями; PILOT_TEST_ONLY — только интегрированный synthetic pilot; PARTIALLY_IMPLEMENTED — доказана часть целевой функции; PLANNED — целевого пути нет; BLOCKED_EXTERNAL — завершение требует внешних условий; UNKNOWN — доказательств недостаточно. В этой матрице VERIFIED_IMPLEMENTED намеренно не используется: полный новый EXP acceptance и human gates не закрыты.
+Статусы: VERIFIED_IMPLEMENTED — доказан весь заявленный объём; IMPLEMENTED_WITH_LIMITATIONS — работает с перечисленными ограничениями; PILOT_TEST_ONLY — только интегрированный synthetic pilot; PARTIALLY_IMPLEMENTED — доказана часть целевой функции; PLANNED — целевого пути нет; BLOCKED_EXTERNAL — завершение требует внешних условий; UNKNOWN — доказательств недостаточно. В этой матрице VERIFIED_IMPLEMENTED намеренно не используется: human gates не закрыты; техническая приёмка EXP-02 описана отдельно в [отчёте](../expansion/stages/EXP-02.md).
 
 Тестовые ссылки означают относящиеся к области проверки, а не доказательство всех требований одной зелёной строкой. Future-scope foundations не означают готовность AI, family или live.
 
@@ -261,7 +261,7 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Это новая прове
 
 Именованные проверки: Target-specific tests отсутствуют.
 
-Осталось: Оригинал Research отсутствует; контекст доступных источников восстановлен с явными unknowns.
+Осталось: Research Markdown прочитан полностью; оригинальный DOCX отсутствует в checkout/remote heads. Интервью, первичные внешние источники и human/live gates остаются непроверенными.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-00](PHASE_PROGRESS.md#exp-00). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
 
@@ -495,13 +495,15 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Это новая прове
 
 Требование / AC: Предоставить ровно четыре шага анкеты и review.
 
-Код / foundations: [src/features/intake/Intake.tsx:1](../../src/features/intake/Intake.tsx#L1); [src/features/intake/Review.tsx:1](../../src/features/intake/Review.tsx#L1); [src/app/session.ts:1](../../src/app/session.ts#L1)
+Код / foundations: [src/features/intake/Intake.tsx:9](../../src/features/intake/Intake.tsx#L9)
 
-Именованные проверки: [tests/session.test.ts:13](../../tests/session.test.ts#L13); [tests/e2e/phases28-35.spec.ts:14](../../tests/e2e/phases28-35.spec.ts#L14); [tests/e2e/phases28-35.spec.ts:85](../../tests/e2e/phases28-35.spec.ts#L85)
+Именованные проверки: [tests/e2e/intake.spec.ts:32](../../tests/e2e/intake.spec.ts#L32); [tests/e2e/exp02.spec.ts:46](../../tests/e2e/exp02.spec.ts#L46)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-02](PHASE_PROGRESS.md#exp-02). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.md). Human UAT/native KK NOT_RUN.
 
 ## F018
 
@@ -509,13 +511,15 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Это новая прове
 
 Требование / AC: Сохранить выбранную потребность needTag.
 
-Код / foundations: [src/features/intake/Intake.tsx:1](../../src/features/intake/Intake.tsx#L1); [src/features/intake/Review.tsx:1](../../src/features/intake/Review.tsx#L1); [src/app/session.ts:1](../../src/app/session.ts#L1)
+Код / foundations: [src/features/intake/Intake.tsx:75](../../src/features/intake/Intake.tsx#L75)
 
-Именованные проверки: [tests/domain.test.ts:21](../../tests/domain.test.ts#L21); [tests/session.test.ts:13](../../tests/session.test.ts#L13); [tests/session.test.ts:22](../../tests/session.test.ts#L22)
+Именованные проверки: [tests/e2e/exp02.spec.ts:46](../../tests/e2e/exp02.spec.ts#L46); [tests/e2e/exp02.spec.ts:94](../../tests/e2e/exp02.spec.ts#L94)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-02](PHASE_PROGRESS.md#exp-02). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.md). Human UAT/native KK NOT_RUN.
 
 ## F019
 
@@ -523,13 +527,15 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Это новая прове
 
 Требование / AC: Сохранить categoryIds без выдуманного диагноза.
 
-Код / foundations: [src/features/intake/Intake.tsx:1](../../src/features/intake/Intake.tsx#L1); [src/features/intake/Review.tsx:1](../../src/features/intake/Review.tsx#L1); [src/app/session.ts:1](../../src/app/session.ts#L1)
+Код / foundations: [src/features/intake/Review.tsx:48](../../src/features/intake/Review.tsx#L48)
 
-Именованные проверки: [tests/domain.test.ts:21](../../tests/domain.test.ts#L21); [tests/session.test.ts:13](../../tests/session.test.ts#L13); [tests/session.test.ts:22](../../tests/session.test.ts#L22)
+Именованные проверки: [tests/e2e/exp02.spec.ts:46](../../tests/e2e/exp02.spec.ts#L46)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-02](PHASE_PROGRESS.md#exp-02). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.md). Human UAT/native KK NOT_RUN.
 
 ## F020
 
@@ -537,13 +543,15 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Это новая прове
 
 Требование / AC: Разрешить неопределённую категорию и null-потребность.
 
-Код / foundations: [src/features/intake/Intake.tsx:1](../../src/features/intake/Intake.tsx#L1); [src/features/intake/Review.tsx:1](../../src/features/intake/Review.tsx#L1); [src/app/session.ts:1](../../src/app/session.ts#L1)
+Код / foundations: [src/features/intake/Intake.tsx:76](../../src/features/intake/Intake.tsx#L76)
 
-Именованные проверки: [tests/e2e/phases28-35.spec.ts:61](../../tests/e2e/phases28-35.spec.ts#L61); [tests/domain.test.ts:21](../../tests/domain.test.ts#L21); [tests/domain.test.ts:30](../../tests/domain.test.ts#L30)
+Именованные проверки: [tests/e2e/phases28-35.spec.ts:61](../../tests/e2e/phases28-35.spec.ts#L61); [tests/e2e/exp02.spec.ts:46](../../tests/e2e/exp02.spec.ts#L46)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-02](PHASE_PROGRESS.md#exp-02). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.md). Human UAT/native KK NOT_RUN.
 
 ## F021
 
@@ -551,13 +559,15 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Это новая прове
 
 Требование / AC: Выбрать возрастную группу без DOB ребёнка.
 
-Код / foundations: [src/features/intake/Intake.tsx:1](../../src/features/intake/Intake.tsx#L1); [src/features/intake/Review.tsx:1](../../src/features/intake/Review.tsx#L1); [src/app/session.ts:1](../../src/app/session.ts#L1)
+Код / foundations: [src/features/intake/Intake.tsx:78](../../src/features/intake/Intake.tsx#L78)
 
-Именованные проверки: [tests/domain.test.ts:21](../../tests/domain.test.ts#L21); [tests/session.test.ts:13](../../tests/session.test.ts#L13); [tests/session.test.ts:22](../../tests/session.test.ts#L22)
+Именованные проверки: [tests/e2e/exp02.spec.ts:46](../../tests/e2e/exp02.spec.ts#L46); [tests/e2e/exp02.spec.ts:94](../../tests/e2e/exp02.spec.ts#L94)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-02](PHASE_PROGRESS.md#exp-02). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.md). Human UAT/native KK NOT_RUN.
 
 ## F022
 
@@ -565,13 +575,15 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Это новая прове
 
 Требование / AC: Выбрать ru/kk языка услуги отдельно от locale UI.
 
-Код / foundations: [src/features/intake/Intake.tsx:1](../../src/features/intake/Intake.tsx#L1); [src/features/intake/Review.tsx:1](../../src/features/intake/Review.tsx#L1); [src/app/session.ts:1](../../src/app/session.ts#L1)
+Код / foundations: [src/features/intake/Intake.tsx:82](../../src/features/intake/Intake.tsx#L82)
 
-Именованные проверки: [tests/domain.test.ts:21](../../tests/domain.test.ts#L21); [tests/session.test.ts:13](../../tests/session.test.ts#L13); [tests/session.test.ts:22](../../tests/session.test.ts#L22)
+Именованные проверки: [tests/e2e/exp02.spec.ts:46](../../tests/e2e/exp02.spec.ts#L46); [tests/e2e/exp02.spec.ts:16](../../tests/e2e/exp02.spec.ts#L16)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-02](PHASE_PROGRESS.md#exp-02). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.md). Human UAT/native KK NOT_RUN.
 
 ## F023
 
@@ -579,13 +591,15 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Это новая прове
 
 Требование / AC: Выбрать online/offline и hard flag.
 
-Код / foundations: [src/features/intake/Intake.tsx:1](../../src/features/intake/Intake.tsx#L1); [src/features/intake/Review.tsx:1](../../src/features/intake/Review.tsx#L1); [src/app/session.ts:1](../../src/app/session.ts#L1)
+Код / foundations: [src/features/intake/Intake.tsx:87](../../src/features/intake/Intake.tsx#L87)
 
-Именованные проверки: [tests/domain.test.ts:21](../../tests/domain.test.ts#L21); [tests/session.test.ts:13](../../tests/session.test.ts#L13); [tests/session.test.ts:22](../../tests/session.test.ts#L22)
+Именованные проверки: [tests/e2e/exp02.spec.ts:46](../../tests/e2e/exp02.spec.ts#L46); [tests/e2e/exp02.spec.ts:16](../../tests/e2e/exp02.spec.ts#L16)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-02](PHASE_PROGRESS.md#exp-02). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.md). Human UAT/native KK NOT_RUN.
 
 ## F024
 
@@ -593,13 +607,15 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Это новая прове
 
 Требование / AC: Выбрать один район; online-only не применяет район.
 
-Код / foundations: [src/features/intake/Intake.tsx:1](../../src/features/intake/Intake.tsx#L1); [src/features/intake/Review.tsx:1](../../src/features/intake/Review.tsx#L1); [src/app/session.ts:1](../../src/app/session.ts#L1)
+Код / foundations: [src/features/intake/Intake.tsx:97](../../src/features/intake/Intake.tsx#L97)
 
-Именованные проверки: [tests/domain.test.ts:21](../../tests/domain.test.ts#L21); [tests/session.test.ts:13](../../tests/session.test.ts#L13); [tests/session.test.ts:22](../../tests/session.test.ts#L22)
+Именованные проверки: [tests/e2e/phases28-35.spec.ts:61](../../tests/e2e/phases28-35.spec.ts#L61); [tests/e2e/exp02.spec.ts:16](../../tests/e2e/exp02.spec.ts#L16)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-02](PHASE_PROGRESS.md#exp-02). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.md). Human UAT/native KK NOT_RUN.
 
 ## F025
 
@@ -607,13 +623,15 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Это новая прове
 
 Требование / AC: Валидировать целый бюджет 0–100000 KZT; пусто=null.
 
-Код / foundations: [src/features/intake/Intake.tsx:1](../../src/features/intake/Intake.tsx#L1); [src/features/intake/Review.tsx:1](../../src/features/intake/Review.tsx#L1); [src/app/session.ts:1](../../src/app/session.ts#L1)
+Код / foundations: [src/features/intake/Intake.tsx:117](../../src/features/intake/Intake.tsx#L117); [src/domain/contracts.ts:64](../../src/domain/contracts.ts#L64)
 
-Именованные проверки: [tests/domain.test.ts:56](../../tests/domain.test.ts#L56); [tests/e2e/phases28-35.spec.ts:41](../../tests/e2e/phases28-35.spec.ts#L41); [tests/e2e/intake.spec.ts:130](../../tests/e2e/intake.spec.ts#L130)
+Именованные проверки: [tests/e2e/exp02.spec.ts:94](../../tests/e2e/exp02.spec.ts#L94); [tests/e2e/intake.spec.ts:130](../../tests/e2e/intake.spec.ts#L130)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-02](PHASE_PROGRESS.md#exp-02). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.md). Human UAT/native KK NOT_RUN.
 
 ## F026
 
@@ -621,13 +639,15 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Это новая прове
 
 Требование / AC: Учитывать acceptingEnquiries как dated preference, не свободный слот.
 
-Код / foundations: [src/features/intake/Intake.tsx:1](../../src/features/intake/Intake.tsx#L1); [src/features/intake/Review.tsx:1](../../src/features/intake/Review.tsx#L1); [src/app/session.ts:1](../../src/app/session.ts#L1)
+Код / foundations: [src/features/intake/Intake.tsx:140](../../src/features/intake/Intake.tsx#L140); [src/domain/matching.ts:79](../../src/domain/matching.ts#L79)
 
-Именованные проверки: [tests/domain.test.ts:21](../../tests/domain.test.ts#L21); [tests/session.test.ts:13](../../tests/session.test.ts#L13); [tests/session.test.ts:22](../../tests/session.test.ts#L22)
+Именованные проверки: [tests/e2e/exp02.spec.ts:46](../../tests/e2e/exp02.spec.ts#L46); [tests/e2e/exp02.spec.ts:16](../../tests/e2e/exp02.spec.ts#L16)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-02](PHASE_PROGRESS.md#exp-02). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.md). Human UAT/native KK NOT_RUN.
 
 ## F027
 
@@ -635,13 +655,15 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Это новая прове
 
 Требование / AC: Различать hard pass/fail/unknown.
 
-Код / foundations: [src/features/intake/Intake.tsx:1](../../src/features/intake/Intake.tsx#L1); [src/features/intake/Review.tsx:1](../../src/features/intake/Review.tsx#L1); [src/app/session.ts:1](../../src/app/session.ts#L1)
+Код / foundations: [src/domain/matching.ts:95](../../src/domain/matching.ts#L95); [src/features/intake/Intake.tsx:137](../../src/features/intake/Intake.tsx#L137)
 
-Именованные проверки: [tests/domain.test.ts:21](../../tests/domain.test.ts#L21); [tests/session.test.ts:13](../../tests/session.test.ts#L13); [tests/session.test.ts:22](../../tests/session.test.ts#L22)
+Именованные проверки: [tests/e2e/exp02.spec.ts:46](../../tests/e2e/exp02.spec.ts#L46); [tests/e2e/phases28-35.spec.ts:61](../../tests/e2e/phases28-35.spec.ts#L61)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-02](PHASE_PROGRESS.md#exp-02). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.md). Human UAT/native KK NOT_RUN.
 
 ## F028
 
@@ -649,13 +671,15 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Это новая прове
 
 Требование / AC: Различать soft preferences и исключающие условия.
 
-Код / foundations: [src/features/intake/Intake.tsx:1](../../src/features/intake/Intake.tsx#L1); [src/features/intake/Review.tsx:1](../../src/features/intake/Review.tsx#L1); [src/app/session.ts:1](../../src/app/session.ts#L1)
+Код / foundations: [src/domain/matching.ts:116](../../src/domain/matching.ts#L116); [src/features/intake/Intake.tsx:86](../../src/features/intake/Intake.tsx#L86)
 
-Именованные проверки: [tests/domain.test.ts:21](../../tests/domain.test.ts#L21); [tests/session.test.ts:13](../../tests/session.test.ts#L13); [tests/session.test.ts:22](../../tests/session.test.ts#L22)
+Именованные проверки: [tests/e2e/exp02.spec.ts:16](../../tests/e2e/exp02.spec.ts#L16)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-02](PHASE_PROGRESS.md#exp-02). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.md). Human UAT/native KK NOT_RUN.
 
 ## F029
 
@@ -663,13 +687,15 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Это новая прове
 
 Требование / AC: Разрешить пропуск optional полей без default фактов.
 
-Код / foundations: [src/features/intake/Intake.tsx:1](../../src/features/intake/Intake.tsx#L1); [src/features/intake/Review.tsx:1](../../src/features/intake/Review.tsx#L1); [src/app/session.ts:1](../../src/app/session.ts#L1)
+Код / foundations: [src/features/intake/Intake.tsx:55](../../src/features/intake/Intake.tsx#L55)
 
-Именованные проверки: [tests/domain.test.ts:21](../../tests/domain.test.ts#L21); [tests/session.test.ts:13](../../tests/session.test.ts#L13); [tests/session.test.ts:22](../../tests/session.test.ts#L22)
+Именованные проверки: [tests/e2e/intake.spec.ts:32](../../tests/e2e/intake.spec.ts#L32); [tests/e2e/exp02.spec.ts:16](../../tests/e2e/exp02.spec.ts#L16)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-02](PHASE_PROGRESS.md#exp-02). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.md). Human UAT/native KK NOT_RUN.
 
 ## F030
 
@@ -677,13 +703,15 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Это новая прове
 
 Требование / AC: Возвращаться назад с сохранением ответов.
 
-Код / foundations: [src/features/intake/Intake.tsx:1](../../src/features/intake/Intake.tsx#L1); [src/features/intake/Review.tsx:1](../../src/features/intake/Review.tsx#L1); [src/app/session.ts:1](../../src/app/session.ts#L1)
+Код / foundations: [src/features/intake/Intake.tsx:147](../../src/features/intake/Intake.tsx#L147)
 
-Именованные проверки: [tests/domain.test.ts:21](../../tests/domain.test.ts#L21); [tests/session.test.ts:13](../../tests/session.test.ts#L13); [tests/session.test.ts:22](../../tests/session.test.ts#L22)
+Именованные проверки: [tests/e2e/exp02.spec.ts:94](../../tests/e2e/exp02.spec.ts#L94); [tests/e2e/intake.spec.ts:109](../../tests/e2e/intake.spec.ts#L109)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-02](PHASE_PROGRESS.md#exp-02). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.md). Human UAT/native KK NOT_RUN.
 
 ## F031
 
@@ -691,13 +719,15 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Это новая прове
 
 Требование / AC: Редактировать draft отдельно от applied input.
 
-Код / foundations: [src/features/intake/Intake.tsx:1](../../src/features/intake/Intake.tsx#L1); [src/features/intake/Review.tsx:1](../../src/features/intake/Review.tsx#L1); [src/app/session.ts:1](../../src/app/session.ts#L1)
+Код / foundations: [src/features/intake/Review.tsx:31](../../src/features/intake/Review.tsx#L31); [src/app/AppState.tsx:62](../../src/app/AppState.tsx#L62)
 
-Именованные проверки: [tests/domain.test.ts:21](../../tests/domain.test.ts#L21); [tests/session.test.ts:13](../../tests/session.test.ts#L13); [tests/session.test.ts:22](../../tests/session.test.ts#L22)
+Именованные проверки: [tests/e2e/exp02.spec.ts:16](../../tests/e2e/exp02.spec.ts#L16); [tests/e2e/exp02.spec.ts:94](../../tests/e2e/exp02.spec.ts#L94)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-02](PHASE_PROGRESS.md#exp-02). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.md). Human UAT/native KK NOT_RUN.
 
 ## F032
 
@@ -705,13 +735,15 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Это новая прове
 
 Требование / AC: Восстановить synthetic session с TTL 2h и catalogVersion.
 
-Код / foundations: [src/app/session.ts:17](../../src/app/session.ts#L17); [src/features/intake/Intake.tsx:1](../../src/features/intake/Intake.tsx#L1); [src/features/intake/Review.tsx:1](../../src/features/intake/Review.tsx#L1)
+Код / foundations: [src/app/session.ts:17](../../src/app/session.ts#L17); [src/app/AppState.tsx:12](../../src/app/AppState.tsx#L12)
 
-Именованные проверки: [tests/session.test.ts:22](../../tests/session.test.ts#L22); [tests/domain.test.ts:21](../../tests/domain.test.ts#L21); [tests/domain.test.ts:30](../../tests/domain.test.ts#L30)
+Именованные проверки: [tests/session.test.ts:13](../../tests/session.test.ts#L13); [tests/e2e/intake.spec.ts:156](../../tests/e2e/intake.spec.ts#L156); [tests/e2e/exp02.spec.ts:46](../../tests/e2e/exp02.spec.ts#L46)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-02](PHASE_PROGRESS.md#exp-02). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.md). Human UAT/native KK NOT_RUN.
 
 ## F033
 
@@ -719,13 +751,15 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Это новая прове
 
 Требование / AC: Показать ошибки budget/schema до apply.
 
-Код / foundations: [src/domain/contracts.ts:64](../../src/domain/contracts.ts#L64); [src/features/intake/Intake.tsx:1](../../src/features/intake/Intake.tsx#L1); [src/features/intake/Review.tsx:1](../../src/features/intake/Review.tsx#L1)
+Код / foundations: [src/features/intake/Intake.tsx:36](../../src/features/intake/Intake.tsx#L36); [src/features/intake/Review.tsx:52](../../src/features/intake/Review.tsx#L52)
 
-Именованные проверки: [tests/domain.test.ts:56](../../tests/domain.test.ts#L56); [tests/e2e/phases28-35.spec.ts:41](../../tests/e2e/phases28-35.spec.ts#L41); [tests/e2e/intake.spec.ts:130](../../tests/e2e/intake.spec.ts#L130)
+Именованные проверки: [tests/e2e/exp02.spec.ts:94](../../tests/e2e/exp02.spec.ts#L94); [tests/e2e/intake.spec.ts:130](../../tests/e2e/intake.spec.ts#L130)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-02](PHASE_PROGRESS.md#exp-02). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.md). Human UAT/native KK NOT_RUN.
 
 ## F034
 
@@ -733,13 +767,15 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Это новая прове
 
 Требование / AC: Показать review фактических draft ответов.
 
-Код / foundations: [src/features/intake/Review.tsx:7](../../src/features/intake/Review.tsx#L7); [src/features/intake/Intake.tsx:1](../../src/features/intake/Intake.tsx#L1); [src/app/session.ts:1](../../src/app/session.ts#L1)
+Код / foundations: [src/features/intake/Review.tsx:12](../../src/features/intake/Review.tsx#L12)
 
-Именованные проверки: [tests/domain.test.ts:21](../../tests/domain.test.ts#L21); [tests/session.test.ts:13](../../tests/session.test.ts#L13); [tests/session.test.ts:22](../../tests/session.test.ts#L22)
+Именованные проверки: [tests/e2e/exp02.spec.ts:46](../../tests/e2e/exp02.spec.ts#L46); [tests/e2e/exp02.spec.ts:16](../../tests/e2e/exp02.spec.ts#L16)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-02](PHASE_PROGRESS.md#exp-02). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.md). Human UAT/native KK NOT_RUN.
 
 ## F035
 
@@ -747,13 +783,15 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Это новая прове
 
 Требование / AC: Считать preview тем же SearchService, что каталог.
 
-Код / foundations: [src/features/intake/Review.tsx:10](../../src/features/intake/Review.tsx#L10); [src/features/intake/Intake.tsx:1](../../src/features/intake/Intake.tsx#L1); [src/app/session.ts:1](../../src/app/session.ts#L1)
+Код / foundations: [src/features/intake/Review.tsx:10](../../src/features/intake/Review.tsx#L10); [src/features/search/Catalog.tsx:22](../../src/features/search/Catalog.tsx#L22)
 
-Именованные проверки: [tests/e2e/phases28-35.spec.ts:14](../../tests/e2e/phases28-35.spec.ts#L14); [tests/domain.test.ts:21](../../tests/domain.test.ts#L21); [tests/domain.test.ts:30](../../tests/domain.test.ts#L30)
+Именованные проверки: [tests/e2e/exp02.spec.ts:46](../../tests/e2e/exp02.spec.ts#L46); [tests/e2e/phases28-35.spec.ts:85](../../tests/e2e/phases28-35.spec.ts#L85)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-02](PHASE_PROGRESS.md#exp-02). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.md). Human UAT/native KK NOT_RUN.
 
 ## F036
 
@@ -761,13 +799,15 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Это новая прове
 
 Требование / AC: Применить валидный draft только явным CTA.
 
-Код / foundations: [src/features/intake/Intake.tsx:1](../../src/features/intake/Intake.tsx#L1); [src/features/intake/Review.tsx:1](../../src/features/intake/Review.tsx#L1); [src/app/session.ts:1](../../src/app/session.ts#L1)
+Код / foundations: [src/features/intake/Review.tsx:61](../../src/features/intake/Review.tsx#L61); [src/app/AppState.tsx:19](../../src/app/AppState.tsx#L19)
 
-Именованные проверки: [tests/domain.test.ts:21](../../tests/domain.test.ts#L21); [tests/session.test.ts:13](../../tests/session.test.ts#L13); [tests/session.test.ts:22](../../tests/session.test.ts#L22)
+Именованные проверки: [tests/e2e/exp02.spec.ts:46](../../tests/e2e/exp02.spec.ts#L46); [tests/e2e/exp02.spec.ts:94](../../tests/e2e/exp02.spec.ts#L94)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
 Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-02](PHASE_PROGRESS.md#exp-02). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+
+EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.md). Human UAT/native KK NOT_RUN.
 
 ## F037
 

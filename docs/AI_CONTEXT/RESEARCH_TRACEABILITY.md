@@ -4,7 +4,7 @@
 
 - CODE/TEST_OBSERVED: текущие файлы и реально выполненные команды на baseline; лог/команда/SHA в VALIDATION.
 - HISTORICAL_RECORDED: исходные ТЗ/QA/ADR/attestation с собственными датами; не новый факт этой сессии.
-- DERIVATIVE_SOURCE: утверждение master/plan, существовавшее до поступления исходного Research. Текст Research теперь доступен, но ссылки на первичные внешние факты и реальный human research остаются непроверенными.
+- RESEARCH_DOCUMENT_READ: полностью прочитано текстовое/табличное извлечение Research §00–18; исходные CSV/README/STAGE_MAP и инженерные документы сопоставлены. DOCX недоступен; достоверность конверсии/Word layout не проверены. PUBLIC_SOURCE_UNVERIFIED: первичные внешние URL названы в Research, но не проверены этой сессией.
 - PROPOSAL/HYPOTHESIS: решение/ожидание команды; не наблюдение родителя.
 - PENDING/UNKNOWN: первичных данных нет. Никакие результаты в эту категорию не дорисованы.
 
@@ -21,7 +21,7 @@
 | R-05 | [EXP plan](sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md) | Все25 карточек, dependencies, AC, market caveats | Actual execution, external permissions или измеренный impact |
 | R-06 | [Historical phase registry](../PHASE_REGISTRY.json), [attestation](../TEAM_REVIEW_ATTESTATION.md) | Какие evidence/заявления записаны | Независимое подтверждение39 фаз |
 | R-07 | [Новый inventory](SOURCE_INVENTORY.csv), [validation](VALIDATION.md) | Наличие/хеши335 baseline файлов, текущие baseline tests | Human UAT, полевые данные, содержимое binary видео/слайдов |
-| R-08 | [Research text extract](sources/00_REFERENCE_RESEARCH.md), [CSV](sources/FEATURE_REGISTRY_000-230.csv), [README](sources/README_START_HERE.md), [STAGE_MAP](sources/STAGE_MAP.json) | SOURCE_RECEIVED 13.11.2026; документ-первоисточник сохранён в Library, текст и таблицы доступны Codex в repo | Бинарный DOCX не вложен в Git, ручная валидация исследований/полевых данных не проведена |
+| R-08 | [Research text extract](sources/00_REFERENCE_RESEARCH.md), [CSV](sources/FEATURE_REGISTRY_000-230.csv), [README](sources/README_START_HERE.md), [STAGE_MAP](sources/STAGE_MAP.json) | READ_FULL_THIS_SESSION: 1314 строк Research, 231 CSV-запись, 25 EXP; происхождение DOCX в Library известно только из historical intake | Бинарный DOCX не вложен в Git, ручная валидация исследований/полевых данных не проведена |
 
 ## Цепочки требований
 
@@ -38,7 +38,7 @@
 | P-09 | Координация взрослых без лишнего доступа | F171–185; EXP-16/17 | Proposed family grant/expiry/revoke/isolation/export | Legal authority/consent и family validation; live BLOCKED |
 | P-10 | Доказательство социальной пользы/партнёрской устойчивости | F211–230; EXP-21–24 | Proposed safe event aggregation, partner scopes, ops gates | Протокол исследования, реальные owners/contracts, explicit launch authorization |
 
-Все проблемы выше — гипотезы/intent исходного ТЗ, пока нет аутентичного полевого наблюдения. Полнота links→features проверяется скриптом; статистическая подтверждённость от этого не возникает.
+Все проблемы выше — гипотезы/intent Research §02/05 и ТЗ, пока нет аутентичного полевого наблюдения. Полнота links→features проверяется скриптом; статистическая подтверждённость от этого не возникает.
 
 ## Реестр утверждений для защиты
 
@@ -46,9 +46,9 @@
 |---|---|---|
 | Есть работающий CORE и synthetic pilot | CODE/TEST_OBSERVED | На указанном SHA воспроизведены перечисленные автоматические проверки; данные вымышленные |
 | Поиск уменьшает неопределённость и экономит время | HYPOTHESIS | Предлагаем проверить заданиями и baseline; измеренного улучшения пока нет |
-| >237 тыс. детей с ООП, 125,1 тыс. с инвалидностью | DERIVATIVE_SOURCE из R-05 | Производный документ приводит эти числа; primary URL/даты/метод не проверены в этой сессии; не суммировать, не считать TAM/SAM/покупателями |
+| >237 тыс. детей с ООП, 125,1 тыс. с инвалидностью | RESEARCH_DOCUMENT_READ §03/18; PUBLIC_SOURCE_UNVERIFIED | Research ссылается на S01/S02; primary URL/даты/метод не проверены в этой сессии; не суммировать, не считать TAM/SAM/покупателями |
 | Отличаемся explanation+Trust Passport+support navigation | PROPOSAL | Это проверяемая гипотеза дифференциации; support navigation ещё LATER |
-| 2GIS/103.kz и сообщества решают часть поиска | HISTORICAL/кандидаты из R-02 | Нужна актуальная матрица возможностей; отсутствие функции у аналога не установлено |
+| 103.kz/Logozavr/2GIS, сообщества и центры | RESEARCH_DOCUMENT_READ §04, S07/S08 | Нужна актуальная матрица возможностей; отсутствие функции у аналога не установлено |
 | Фонд/партнёры поддержат платформу | PROPOSAL | Предлагается модель; подтверждённых партнёров/обязательств нет |
 | Социальный/клинический результат достигнут | UNKNOWN | Такого доказательства нет; не включать как achieved claim |
 | 300000 KZT / 3 декабря | HISTORICAL_PROPOSAL из R-02 | План/оценка исходного brief, не полученное финансирование и не обещание release |
@@ -60,3 +60,20 @@
 Для будущего разрешённого исследования: добровольное согласие отдельно от разрешения цитат/записи; минимум организационных сведений; пять задач P-01/P-02/P-03/P-04/P-05; фиксировать task/action/help/errors/time/outcome без medical history. Затем observation ID→problem→hypothesis→F-ID→experiment→result→decision→retest. Не отправлять родителям приглашения из этой задачи.
 
 Пример будущей метрики — только определение: search completion = completed search tasks / attempted tasks за выбранный период и sample n; n=0 означает «нет данных». Technical request receipt, specialist response, confirmed appointment и посещение — четыре разные ступени. Никогда не выводить «выздоровление» или clinical quality из интерфейсной активности.
+
+## Сверка поступившего Research и EXP-02 — 13.11.2026
+
+[Ledger прочитанных файлов, SHA256 и Git refs](../expansion/evidence/EXP-02-sources.json). Все три текущих вложения побайтово совпадают с Git sources. Исходные CSV и STAGE_MAP сверены с Research §08 и реестрами. Для всех F000–F230 записаны `research_line` и `registry_line`; исходные статусы 1 MISSION /87 DEMO /43 PILOT_TEST /100 LATER сохранены. [Валидатор](validate_context.py) теперь проверяет эти источники непосредственно, а не только одинаковые приложения инженерных документов.
+
+§09: семь направлений Smart Guide / Trust Gap / Smart Zero / Accessibility Fit / True Cost / Social Support / Impact. §10: H1 начало без категории; H2 понимание matching; H3 сравнение2–3; H4 понимание trust; H5 понимание демозаявки; H6 вопросы по unknown; H7 доступность поддержки. Это цели экспериментов, не измеренные достижения. §11 намеренно пуст; §12 требует добровольного согласия и минимизации. §13 — гипотезы каналов и финансирования, §14/17 — launch gates/риски, §15/16 — сценарий питча, а не новый launch report.
+
+| Research reference | Что прочитано | Предел проверки |
+|---|---|---|
+| S01/S02 | ООП >237000; 125100 детей с инвалидностью; 6,9 млн детей; 539 организаций; отдельные даты и ссылки | URL не открывались; категории не складывать, TAM не измерен |
+| S03–S05 | UNICEF: системные барьеры, исторический доступ к соцпомощи, digital inclusion | Не доказательство частоты боли в Алматы или эффекта продукта |
+| S06/S09 | DataReportal 19,5 млн /93,4%; БНС ИКТ | Цифровой контекст; не клиенты |
+| S07/S08 | 103.kz и Logozavr; цены отдельных объявлений 1500–25000₸+ | Не средняя цена, не актуальный feature-by-feature аудит конкурентов |
+| S10 | MamaPro/Creaton; доступ при подготовке Research был ограничен | Даты/критерии не проверены |
+| R01–R11 | GitHub/ТЗ/документы, их собственные даты | Текущий код проверен отдельно; исторические логи не новый QA |
+
+P-01/P-02 → F017–F036 → [EXP-02 AC/evidence](../expansion/stages/EXP-02.md): технические AC-01…04 пройдены, приложение не переписано. Возможность заполнить/подтвердить анкету не подтверждает H1/H2 или понятность KK у родителя. EXP-01 найден в sibling remote @a93cc18, не выполнялся повторно. Оригинальный DOCX остаётся UNAVAILABLE_IN_CHECKOUT; требование его полного чтения в этой сессии не закрыто.

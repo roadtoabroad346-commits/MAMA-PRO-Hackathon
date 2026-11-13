@@ -18,3 +18,7 @@
 | CTX-011 | Не выдавать structural inventory за полный independent security audit | Все335 baseline файлов прочитаны для хеширования; текст проиндексирован, ключевые contracts/code/tests сопоставлены, бинарники не проигрывались. Оригинал Research и human evidence недоступны. Ограничения сохранены явно |
 
 Унаследованные действующие правила: same-offer hard/unknown evaluator; freshness-v2; separate draft/applied; synthetic-only Node/SQLite; in-app semantics; selective summary; public-only PWA. Ссылка на историческое решение о «пустом repo» или «устаревшей default» описывает момент его принятия, не сегодняшний Git.
+
+## ADR-CTX-EXP02 — источники, ветки и граница исправлений
+
+13.11.2026: прямое поручение разрешает EXP-02, отменяя исторический STOP после initialization только для этого scope. Работа в указанной feature/context-init-2026-11-13 от0e7e189; sibling EXP-01@a93cc18 учтён отдельно без merge/дублирования. Research Markdown полностью прочитан, но отсутствие DOCX отражено явно. Runtime не изменён: воспроизводимые проверки не выявили дефекта; добавлены недостающие acceptance tests и прямые source checks. Исходные Research statuses и human/live gates не повышаются от автоматического PASS. Полные AC/rollback: [EXP-02](../expansion/stages/EXP-02.md).

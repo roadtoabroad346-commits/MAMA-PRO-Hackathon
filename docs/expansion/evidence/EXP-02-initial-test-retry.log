@@ -1,0 +1,190 @@
+[WebServer] (node:3579) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 8 tests using 2 workers
+(node:3620) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3619) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+F(node:3938) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+F(node:4011) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+·F(node:4285) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+F(node:4436) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+F(node:4589) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+F·
+
+  1) tests/e2e/exp02.spec.ts:17:5 › EXP-02 ru A: four-step draft, shared exact/incomplete counts and explicit apply
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('#incomplete-results [data-testid="specialist-card"]')
+    Expected: 2
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('#incomplete-results [data-testid="specialist-card"]') with timeout 5000ms
+      - waiting for locator('#incomplete-results [data-testid="specialist-card"]')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      52 |       await expect(page.getByTestId('specialist-card')).toHaveCount(expected.specialistCount);
+      53 |       await page.getByRole('button', { name: t.showIncomplete.replace('{count}', String(expected.incompleteSpecialistCount)), exact: true }).click();
+    > 54 |       await expect(page.locator('#incomplete-results [data-testid="specialist-card"]')).toHaveCount(expected.incompleteSpecialistCount);
+         |                                                                                         ^
+      55 |       expect(await page.locator('#incomplete-results [data-testid="specialist-card"]').evaluateAll(cards => cards.map(card => card.getAttribute('data-offer-id')))).toEqual(scenario.expectedIncomplete);
+      56 |       await expect(page.getByTestId('incomplete-count')).toHaveText(t.incompleteCount.replace('{specialists}', String(expected.incompleteSpecialistCount)).replace('{offers}', String(expected.incompleteOfferCount)));
+      57 |       await page.goBack();
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/exp02.spec.ts:54:89
+
+    Error Context: test-results/exp02-EXP-02-ru-A-four-ste-a22a8-e-counts-and-explicit-apply/error-context.md
+
+  2) tests/e2e/exp02.spec.ts:17:5 › EXP-02 ru B: four-step draft, shared exact/incomplete counts and explicit apply
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('#incomplete-results [data-testid="specialist-card"]')
+    Expected: 3
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('#incomplete-results [data-testid="specialist-card"]') with timeout 5000ms
+      - waiting for locator('#incomplete-results [data-testid="specialist-card"]')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      52 |       await expect(page.getByTestId('specialist-card')).toHaveCount(expected.specialistCount);
+      53 |       await page.getByRole('button', { name: t.showIncomplete.replace('{count}', String(expected.incompleteSpecialistCount)), exact: true }).click();
+    > 54 |       await expect(page.locator('#incomplete-results [data-testid="specialist-card"]')).toHaveCount(expected.incompleteSpecialistCount);
+         |                                                                                         ^
+      55 |       expect(await page.locator('#incomplete-results [data-testid="specialist-card"]').evaluateAll(cards => cards.map(card => card.getAttribute('data-offer-id')))).toEqual(scenario.expectedIncomplete);
+      56 |       await expect(page.getByTestId('incomplete-count')).toHaveText(t.incompleteCount.replace('{specialists}', String(expected.incompleteSpecialistCount)).replace('{offers}', String(expected.incompleteOfferCount)));
+      57 |       await page.goBack();
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/exp02.spec.ts:54:89
+
+    Error Context: test-results/exp02-EXP-02-ru-B-four-ste-9d7c0-e-counts-and-explicit-apply/error-context.md
+
+  3) tests/e2e/exp02.spec.ts:17:5 › EXP-02 ru C: four-step draft, shared exact/incomplete counts and explicit apply
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('#incomplete-results [data-testid="specialist-card"]')
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('#incomplete-results [data-testid="specialist-card"]') with timeout 5000ms
+      - waiting for locator('#incomplete-results [data-testid="specialist-card"]')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      52 |       await expect(page.getByTestId('specialist-card')).toHaveCount(expected.specialistCount);
+      53 |       await page.getByRole('button', { name: t.showIncomplete.replace('{count}', String(expected.incompleteSpecialistCount)), exact: true }).click();
+    > 54 |       await expect(page.locator('#incomplete-results [data-testid="specialist-card"]')).toHaveCount(expected.incompleteSpecialistCount);
+         |                                                                                         ^
+      55 |       expect(await page.locator('#incomplete-results [data-testid="specialist-card"]').evaluateAll(cards => cards.map(card => card.getAttribute('data-offer-id')))).toEqual(scenario.expectedIncomplete);
+      56 |       await expect(page.getByTestId('incomplete-count')).toHaveText(t.incompleteCount.replace('{specialists}', String(expected.incompleteSpecialistCount)).replace('{offers}', String(expected.incompleteOfferCount)));
+      57 |       await page.goBack();
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/exp02.spec.ts:54:89
+
+    Error Context: test-results/exp02-EXP-02-ru-C-four-ste-abc86-e-counts-and-explicit-apply/error-context.md
+
+  4) tests/e2e/exp02.spec.ts:17:5 › EXP-02 kk A: four-step draft, shared exact/incomplete counts and explicit apply
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('#incomplete-results [data-testid="specialist-card"]')
+    Expected: 2
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('#incomplete-results [data-testid="specialist-card"]') with timeout 5000ms
+      - waiting for locator('#incomplete-results [data-testid="specialist-card"]')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      52 |       await page.goto('/route');
+      53 |       await radio(page, 'needTag', input.needTag);
+    > 54 |       await page.getByRole('button', { name: t.next, exact: true }).click();
+         |                                                                             ^
+      55 |       await radio(page, 'ageGroup', input.ageGroup);
+      56 |       await page.getByRole('button', { name: t.next, exact: true }).click();
+      57 |       await radio(page, 'serviceLanguage', input.serviceLanguage);
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/exp02.spec.ts:54:89
+
+    Error Context: test-results/exp02-EXP-02-kk-A-four-ste-9a92d-e-counts-and-explicit-apply/error-context.md
+
+  5) tests/e2e/exp02.spec.ts:17:5 › EXP-02 kk B: four-step draft, shared exact/incomplete counts and explicit apply
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('#incomplete-results [data-testid="specialist-card"]')
+    Expected: 3
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('#incomplete-results [data-testid="specialist-card"]') with timeout 5000ms
+      - waiting for locator('#incomplete-results [data-testid="specialist-card"]')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      52 |       await page.goto('/route');
+      53 |       await radio(page, 'needTag', input.needTag);
+    > 54 |       await page.getByRole('button', { name: t.next, exact: true }).click();
+         |                                                                             ^
+      55 |       await radio(page, 'ageGroup', input.ageGroup);
+      56 |       await page.getByRole('button', { name: t.next, exact: true }).click();
+      57 |       await radio(page, 'serviceLanguage', input.serviceLanguage);
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/exp02.spec.ts:54:89
+
+    Error Context: test-results/exp02-EXP-02-kk-B-four-ste-63983-e-counts-and-explicit-apply/error-context.md
+
+  6) tests/e2e/exp02.spec.ts:17:5 › EXP-02 kk C: four-step draft, shared exact/incomplete counts and explicit apply
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('#incomplete-results [data-testid="specialist-card"]')
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('#incomplete-results [data-testid="specialist-card"]') with timeout 5000ms
+      - waiting for locator('#incomplete-results [data-testid="specialist-card"]')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      52 |       await page.goto('/route');
+      53 |       await radio(page, 'needTag', input.needTag);
+    > 54 |       await page.getByRole('button', { name: t.next, exact: true }).click();
+         |                                                                             ^
+      55 |       await radio(page, 'ageGroup', input.ageGroup);
+      56 |       await page.getByRole('button', { name: t.next, exact: true }).click();
+      57 |       await radio(page, 'serviceLanguage', input.serviceLanguage);
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/exp02.spec.ts:54:89
+
+    Error Context: test-results/exp02-EXP-02-kk-C-four-ste-0e94b-e-counts-and-explicit-apply/error-context.md
+
+  6 failed
+    tests/e2e/exp02.spec.ts:17:5 › EXP-02 ru A: four-step draft, shared exact/incomplete counts and explicit apply
+    tests/e2e/exp02.spec.ts:17:5 › EXP-02 ru B: four-step draft, shared exact/incomplete counts and explicit apply
+    tests/e2e/exp02.spec.ts:17:5 › EXP-02 ru C: four-step draft, shared exact/incomplete counts and explicit apply
+    tests/e2e/exp02.spec.ts:17:5 › EXP-02 kk A: four-step draft, shared exact/incomplete counts and explicit apply
+    tests/e2e/exp02.spec.ts:17:5 › EXP-02 kk B: four-step draft, shared exact/incomplete counts and explicit apply
+    tests/e2e/exp02.spec.ts:17:5 › EXP-02 kk C: four-step draft, shared exact/incomplete counts and explicit apply
+  2 passed (37.8s)

@@ -1,0 +1,129 @@
+{
+  "observed_at_utc": "2026-11-13T18:48:29.835832+00:00",
+  "parent_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395",
+  "runtime_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+  "branch": "feature/context-init-2026-11-13",
+  "status": "TECHNICAL_VERIFIED_HUMAN_BLOCKED",
+  "scope": "EXP-02 F017–F036 and source reconciliation F000–F230",
+  "runtime_changed": false,
+  "baseline_files_preserved": 335,
+  "source_ledger": "docs/expansion/evidence/EXP-02-sources.json",
+  "commands": {
+    "check": "npm run check",
+    "build": "npm run build",
+    "dev": "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e -- --workers=2",
+    "release": "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npx playwright test --config playwright.exp02.config.ts --workers=2",
+    "focused": "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npx playwright test tests/e2e/exp02.spec.ts --workers=2"
+  },
+  "final_tests": {
+    "unit_integration": 154,
+    "dev": 89,
+    "dist": 40,
+    "failed": 0,
+    "skipped": 0,
+    "focused_rerun": 10,
+    "baseline_focused_before_edits": 22,
+    "main_run_total": 283
+  },
+  "release_report_stats": {
+    "startTime": "2026-11-13T18:45:55.637Z",
+    "duration": 63905.82,
+    "expected": 40,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "logs": {
+    "check": {
+      "path": "docs/expansion/evidence/EXP-02-check.log",
+      "bytes": 782,
+      "sha256": "9fed873d1a3c3a22a296d5023d228784e3898340a91ead5e9527c3a767b06315",
+      "raw_source_sha256": "9fed873d1a3c3a22a296d5023d228784e3898340a91ead5e9527c3a767b06315",
+      "storage_normalization": "Trailing spaces/tabs and blank EOF lines removed only; test output/results unchanged; raw source retained in ignored work/exp02 during this session."
+    },
+    "build": {
+      "path": "docs/expansion/evidence/EXP-02-build.log",
+      "bytes": 1729,
+      "sha256": "a962c9fd4e8ce893df4621b86275f4c9d6bac856fbc66f6feef1d12333a59977",
+      "raw_source_sha256": "a962c9fd4e8ce893df4621b86275f4c9d6bac856fbc66f6feef1d12333a59977",
+      "storage_normalization": "Trailing spaces/tabs and blank EOF lines removed only; test output/results unchanged; raw source retained in ignored work/exp02 during this session."
+    },
+    "dev": {
+      "path": "docs/expansion/evidence/EXP-02-dev.log",
+      "bytes": 807,
+      "sha256": "8368f2186f5e4d6d1738d4135f481c2152b7db46bbbef521bfb5d84a447e5c38",
+      "raw_source_sha256": "8368f2186f5e4d6d1738d4135f481c2152b7db46bbbef521bfb5d84a447e5c38",
+      "storage_normalization": "Trailing spaces/tabs and blank EOF lines removed only; test output/results unchanged; raw source retained in ignored work/exp02 during this session."
+    },
+    "release": {
+      "path": "docs/expansion/evidence/EXP-02-release.log",
+      "bytes": 5825,
+      "sha256": "41fe8461d1e7cb0807400e062d51475f4a4bd32dee0b2a0af0bd3330ad5766ee",
+      "raw_source_sha256": "41fe8461d1e7cb0807400e062d51475f4a4bd32dee0b2a0af0bd3330ad5766ee",
+      "storage_normalization": "Trailing spaces/tabs and blank EOF lines removed only; test output/results unchanged; raw source retained in ignored work/exp02 during this session."
+    },
+    "focused": {
+      "path": "docs/expansion/evidence/EXP-02-focused.log",
+      "bytes": 588,
+      "sha256": "8e08158443869e96ffd8ff3b9b3040c61c30a2285fe3bb88e3ec6dbc49db4d9c",
+      "raw_source_sha256": "8e08158443869e96ffd8ff3b9b3040c61c30a2285fe3bb88e3ec6dbc49db4d9c",
+      "storage_normalization": "Trailing spaces/tabs and blank EOF lines removed only; test output/results unchanged; raw source retained in ignored work/exp02 during this session."
+    },
+    "initial-test": {
+      "path": "docs/expansion/evidence/EXP-02-initial-test.log",
+      "bytes": 10877,
+      "sha256": "bde89cec0537667bc6e3f5f758e979cc8b2163fcf8f84805a00ef94aff1af79c",
+      "raw_source_sha256": "7bc7e8d502a274d0d2b26bbeb9e6ca7049a7d3d2d93fafa08780807bace97fda",
+      "storage_normalization": "Trailing spaces/tabs and blank EOF lines removed only; test output/results unchanged; raw source retained in ignored work/exp02 during this session."
+    },
+    "initial-test-retry": {
+      "path": "docs/expansion/evidence/EXP-02-initial-test-retry.log",
+      "bytes": 11306,
+      "sha256": "e4d7691959a075f2be9bf09e6db2bcf88aa75a27723c85a036830d92ddbd6dae",
+      "raw_source_sha256": "7f1fbce1145a27be15eeeca095f696823db013be564af253a021a0402489f954",
+      "storage_normalization": "Trailing spaces/tabs and blank EOF lines removed only; test output/results unchanged; raw source retained in ignored work/exp02 during this session."
+    },
+    "release-config-startup": {
+      "path": "docs/expansion/evidence/EXP-02-release-config-startup.log",
+      "bytes": 1068,
+      "sha256": "66d6aa768e60ef7df1e59d62e4800c3614bc1b098c84bf69cf8c3ecb9fd54726",
+      "raw_source_sha256": "5a389722b88b93ed5cd2dfdc36e42b8b59d92270445ea54a9ec4ea5ba14cce98",
+      "storage_normalization": "Trailing spaces/tabs and blank EOF lines removed only; test output/results unchanged; raw source retained in ignored work/exp02 during this session."
+    }
+  },
+  "files_sha256": {
+    "tests/e2e/exp02.spec.ts": "49afdfa8fea3dbe7e66b284647e229b3194a0ce95adf663d654baf9ff4161140",
+    "playwright.exp02.config.ts": "ec4d428fe2341546fb8c818c7025af700f0e427584e62fc3f89f67694f978d6b",
+    "package-lock.json": "a82a02b303be4e6ab7bd5a7e91e29c62c2a3e81a6d2ca13d432f65e0b06f0c65"
+  },
+  "earlier_failures": [
+    {
+      "log": "EXP-02-initial-test.log",
+      "failed": 6,
+      "passed": 2,
+      "reason": "Wrong test selector specialist-card for incomplete-card"
+    },
+    {
+      "log": "EXP-02-initial-test-retry.log",
+      "failed": 6,
+      "passed": 2,
+      "reason": "Same wrong selector after adding explicit wait; fixed against OfferCard source"
+    },
+    {
+      "log": "EXP-02-release-config-startup.log",
+      "tests_executed": 0,
+      "reason": "Temporary config cwd resolved relative server path under work/exp02; replaced by durable root config"
+    }
+  ],
+  "not_run": [
+    "Original Research DOCX/parity/layout",
+    "Research primary external sources/competitor task matrix",
+    "Parent interview/human UAT",
+    "Native KK editorial review",
+    "Physical device/real AT/browser zoom",
+    "Pilot/offline suites not rerun; sources preserved",
+    "Remote CI: push branch excluded by existing workflow"
+  ],
+  "liveBlocked": true,
+  "git_receipt_note": "This report belongs to a new atomic checkpoint. Final commit SHA is resolved from Git; remote==HEAD observed after push and reported to user, never guessed as a self hash."
+}

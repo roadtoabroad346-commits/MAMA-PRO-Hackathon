@@ -4,7 +4,7 @@
 
 | Расхождение | Наблюдаемое доказательство | Принятое разрешение |
 |---|---|---|
-| Master/EXP final prompts предлагают идти по всей программе; последний context prompt ограничивает initialization | [Последнее поручение](../AI_CONTEXT/sources/00_CONTEXT_INITIALIZATION_REQUEST.md), раздел12/final | Только docs+registry+baseline QA+checkpoint. EXP-01+ ждёт нового прямого указания |
+| Master/EXP final prompts предлагают идти по всей программе; последний context prompt ограничивает initialization | [Последнее поручение](../AI_CONTEXT/sources/00_CONTEXT_INITIALIZATION_REQUEST.md), раздел12/final | Историческое ограничение заменено прямым текущим поручением EXP-02 F017–F036; после него остановка |
 | README/PROJECT_STATE/старый audit называют default исторической | ls-remote/API/history: phase-0-audit@7f8434a… включает merges PR3–7 | Зафиксировать текущую default как baseline, старые statements читать по их дате |
 | PROJECT_STATE сообщает147 unit; design/fixes154 | Числа относятся к разным SHA; новый `npm run check`154 PASS | Использовать current validation с SHA/командами, историю не менять |
 | Старые compare/mascot/date minors ещё упоминаются | controls/Bird3 poses, styles subgrid, Intl; design13 ноября уже в baseline | Сохранить существующие улучшения; не создавать дубли |
@@ -19,3 +19,10 @@
 | Structural scan всех файлов может восприниматься как exhaustive audit | Inventory различает TEXT_SCANNED/BINARY_HASHED_ONLY | Хеши/индекс всех335, targeted semantic review и current tests; видео/слайды не воспроизведены, независимая приёмка не заявлена |
 
 В будущем расхождения записывать с источником/датой/решением. Не отдавать первенство удобному описанию вопреки коду/тестам или authentic human evidence.
+
+## Текущая сверка EXP-02
+
+- Указанный `0e7e189` — source-intake checkpoint; в нём нет `research/` и DOCX. Полностью прочитаны имеющиеся Research Markdown, CSV, README, STAGE_MAP, документы01–03 (побайтово равны новым вложениям). Historical Library receipt не подменяет текущее чтение DOCX. [Ledger](evidence/EXP-02-sources.json).
+- EXP-01 существует в отдельной ветке @`a93cc18d7b357a637c7114e9408ec11242156eba`; runtime равен baseline. Его тесты/документы не копировались, ветки не объединялись. Текущая работа остаётся в разрешённой `feature/context-init-2026-11-13`.
+- FEATURE_STATUS/FEATURE_REGISTRY сохраняли устаревшее «Research отсутствует». Теперь источник прочитан и проверяется по строкам; DOCX, primary URL и human evidence по-прежнему отдельно UNKNOWN/NOT_RUN.
+- EXP-02: runtime gap не обнаружен; доказанные пробелы — отсутствие полного RU/KK A/B/C intake acceptance и прямой сверки исходного Research/CSV/STAGE_MAP валидатором. Добавлены только tests/docs. Старые тесты не ослаблены.

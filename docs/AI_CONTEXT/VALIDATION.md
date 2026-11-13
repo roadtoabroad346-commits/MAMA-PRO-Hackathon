@@ -31,3 +31,9 @@ NOT_RUN/BLOCKED: отсутствующий первичный DOCX/CSV/README �
 Первый запуск context validator потребовал явную строку LIVE_BLOCKED в master/handoff; строки добавлены, повторная проверка PASS. Это документационное исправление; runtime/tests не менялись.
 
 Staged review: 35 новых контекстных файлов, unrelated/runtime paths0; secret-pattern findings0. CSV приведены к LF; source-directory .gitattributes сохраняет исходные Markdown hard-break spaces без изменения оригинальных вложений. После этого `git diff --cached --check` PASS.
+
+## EXP-02 — текущий checkpoint13.11.2026
+
+Runtime сохраняется на7f8434a; parent0e7e189. [Stage/20 feature mappings](../expansion/stages/EXP-02.md): strict TS/154unit/89dev/40dist PASS, failed0/skipped0; focused10 PASS отдельно. Все335 baseline-файлов сохранены. Оригинальные source statuses/231 IDs/25 EXP сверены с Research Markdown/CSV/STAGE_MAP/manifest; валидатор теперь проверяет прямые source anchors, links и tests. [Точные команды и хеши логов](../expansion/evidence/EXP-02.json); [текущая context validation](../expansion/evidence/EXP-02-context.json).
+
+Первые два прогона новых тестов6fail/2pass из-за ошибочного incomplete-card selector; временный release config не стартовал из-за cwd. Исправлены тестовый селектор/воспроизводимый root config; runtime/старые assertions не менялись. Старый validation выше описывает свой SHA. Native KK/parent/real AT/DOCX/primary external URLs не проверены. Pilot/offline в этой сессии повторно NOT_RUN. Remote CI не запускался: текущая ветка не входит в push allowlist workflow.

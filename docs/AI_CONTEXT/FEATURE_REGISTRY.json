@@ -63,7 +63,7 @@
         "id": "EXP-00-AC-04"
       }
     ],
-    "remaining_work": "Оригинал Research отсутствует; контекст доступных источников восстановлен с явными unknowns.",
+    "remaining_work": "Research Markdown прочитан полностью; оригинальный DOCX отсутствует в checkout/remote heads. Интервью, первичные внешние источники и human/live gates остаются непроверенными.",
     "required_tests": {
       "phase_ref": "EXP-00",
       "field": "required_tests"
@@ -79,7 +79,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 222
-    }
+    },
+    "research_line": 322,
+    "registry_line": 2
   },
   {
     "id": "F001",
@@ -181,7 +183,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 228
-    }
+    },
+    "research_line": 331,
+    "registry_line": 3
   },
   {
     "id": "F002",
@@ -283,7 +287,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 229
-    }
+    },
+    "research_line": 332,
+    "registry_line": 4
   },
   {
     "id": "F003",
@@ -385,7 +391,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 230
-    }
+    },
+    "research_line": 333,
+    "registry_line": 5
   },
   {
     "id": "F004",
@@ -487,7 +495,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 231
-    }
+    },
+    "research_line": 334,
+    "registry_line": 6
   },
   {
     "id": "F005",
@@ -589,7 +599,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 232
-    }
+    },
+    "research_line": 335,
+    "registry_line": 7
   },
   {
     "id": "F006",
@@ -691,7 +703,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 233
-    }
+    },
+    "research_line": 336,
+    "registry_line": 8
   },
   {
     "id": "F007",
@@ -793,7 +807,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 234
-    }
+    },
+    "research_line": 337,
+    "registry_line": 9
   },
   {
     "id": "F008",
@@ -895,7 +911,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 235
-    }
+    },
+    "research_line": 338,
+    "registry_line": 10
   },
   {
     "id": "F009",
@@ -997,7 +1015,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 236
-    }
+    },
+    "research_line": 339,
+    "registry_line": 11
   },
   {
     "id": "F010",
@@ -1099,7 +1119,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 237
-    }
+    },
+    "research_line": 340,
+    "registry_line": 12
   },
   {
     "id": "F011",
@@ -1201,7 +1223,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 238
-    }
+    },
+    "research_line": 341,
+    "registry_line": 13
   },
   {
     "id": "F012",
@@ -1303,7 +1327,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 239
-    }
+    },
+    "research_line": 342,
+    "registry_line": 14
   },
   {
     "id": "F013",
@@ -1405,7 +1431,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 240
-    }
+    },
+    "research_line": 343,
+    "registry_line": 15
   },
   {
     "id": "F014",
@@ -1507,7 +1535,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 241
-    }
+    },
+    "research_line": 344,
+    "registry_line": 16
   },
   {
     "id": "F015",
@@ -1609,7 +1639,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 242
-    }
+    },
+    "research_line": 345,
+    "registry_line": 17
   },
   {
     "id": "F016",
@@ -1711,7 +1743,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 243
-    }
+    },
+    "research_line": 346,
+    "registry_line": 18
   },
   {
     "id": "F017",
@@ -1733,35 +1767,22 @@
     "code_refs": [
       {
         "path": "src/features/intake/Intake.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/features/intake/Review.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/app/session.ts",
-        "line": 1
+        "line": 9
       }
     ],
     "existing_tests": [
       {
-        "path": "tests/session.test.ts",
-        "line": 13,
-        "text": "it('keeps the synthetic intake draft separate from applied input on reload', () => {"
+        "path": "tests/e2e/intake.spec.ts",
+        "line": 32,
+        "text": "test('all steps can be skipped; null is preserved through review, reload and catalog', async ({ page }) => {"
       },
       {
-        "path": "tests/e2e/phases28-35.spec.ts",
-        "line": 14,
-        "text": "test('draft preview never replaces applied catalog until review CTA; reload keeps both', async ({ page }) => {"
-      },
-      {
-        "path": "tests/e2e/phases28-35.spec.ts",
-        "line": 85,
-        "text": "test('catalog load failure on review is distinct from zero and Retry restores the synthetic draft', async ({ page }) => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 46,
+        "text": "test(`EXP-02 ${locale} ${name}: four-step draft, shared exact/incomplete counts and explicit apply`, async ({ page }) => {"
       }
     ],
-    "test_evidence_scope": "Related suite/test anchors; not a one-to-one assertion that all new EXP AC passed. Future-scope tests cover foundations only.",
+    "test_evidence_scope": "EXP-02: direct feature assertions mapped in docs/expansion/stages/EXP-02.md; automated synthetic verification, not human validation.",
     "technical_dependencies": [
       "EXP-01.",
       "SearchInput, Session, intakeDraft, applied input"
@@ -1808,12 +1829,16 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
+    "evidence": "docs/expansion/stages/EXP-02.md",
     "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 249
-    }
+    },
+    "research_line": 354,
+    "registry_line": 19,
+    "verification_status": "AUTOMATED_VERIFIED_SYNTHETIC; HUMAN_NOT_RUN",
+    "verification_parent_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395"
   },
   {
     "id": "F018",
@@ -1835,35 +1860,22 @@
     "code_refs": [
       {
         "path": "src/features/intake/Intake.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/features/intake/Review.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/app/session.ts",
-        "line": 1
+        "line": 75
       }
     ],
     "existing_tests": [
       {
-        "path": "tests/domain.test.ts",
-        "line": 21,
-        "text": "it('rejects invalid enums and extra personal fields', () => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 46,
+        "text": "test(`EXP-02 ${locale} ${name}: four-step draft, shared exact/incomplete counts and explicit apply`, async ({ page }) => {"
       },
       {
-        "path": "tests/session.test.ts",
-        "line": 13,
-        "text": "it('keeps the synthetic intake draft separate from applied input on reload', () => {"
-      },
-      {
-        "path": "tests/session.test.ts",
-        "line": 22,
-        "text": "it('round-trips null and zero distinctly, plus hard flags and step', () => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 94,
+        "text": "test(`EXP-02 ${locale}: invalid budget blocks review apply and keeps other answers through history`, async ({ page }) => {"
       }
     ],
-    "test_evidence_scope": "Related suite/test anchors; not a one-to-one assertion that all new EXP AC passed. Future-scope tests cover foundations only.",
+    "test_evidence_scope": "EXP-02: direct feature assertions mapped in docs/expansion/stages/EXP-02.md; automated synthetic verification, not human validation.",
     "technical_dependencies": [
       "EXP-01.",
       "SearchInput, Session, intakeDraft, applied input"
@@ -1910,12 +1922,16 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
+    "evidence": "docs/expansion/stages/EXP-02.md",
     "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 250
-    }
+    },
+    "research_line": 355,
+    "registry_line": 20,
+    "verification_status": "AUTOMATED_VERIFIED_SYNTHETIC; HUMAN_NOT_RUN",
+    "verification_parent_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395"
   },
   {
     "id": "F019",
@@ -1936,36 +1952,18 @@
     "route": "/route; /route/review",
     "code_refs": [
       {
-        "path": "src/features/intake/Intake.tsx",
-        "line": 1
-      },
-      {
         "path": "src/features/intake/Review.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/app/session.ts",
-        "line": 1
+        "line": 48
       }
     ],
     "existing_tests": [
       {
-        "path": "tests/domain.test.ts",
-        "line": 21,
-        "text": "it('rejects invalid enums and extra personal fields', () => {"
-      },
-      {
-        "path": "tests/session.test.ts",
-        "line": 13,
-        "text": "it('keeps the synthetic intake draft separate from applied input on reload', () => {"
-      },
-      {
-        "path": "tests/session.test.ts",
-        "line": 22,
-        "text": "it('round-trips null and zero distinctly, plus hard flags and step', () => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 46,
+        "text": "test(`EXP-02 ${locale} ${name}: four-step draft, shared exact/incomplete counts and explicit apply`, async ({ page }) => {"
       }
     ],
-    "test_evidence_scope": "Related suite/test anchors; not a one-to-one assertion that all new EXP AC passed. Future-scope tests cover foundations only.",
+    "test_evidence_scope": "EXP-02: direct feature assertions mapped in docs/expansion/stages/EXP-02.md; automated synthetic verification, not human validation.",
     "technical_dependencies": [
       "EXP-01.",
       "SearchInput, Session, intakeDraft, applied input"
@@ -2012,12 +2010,16 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
+    "evidence": "docs/expansion/stages/EXP-02.md",
     "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 251
-    }
+    },
+    "research_line": 356,
+    "registry_line": 21,
+    "verification_status": "AUTOMATED_VERIFIED_SYNTHETIC; HUMAN_NOT_RUN",
+    "verification_parent_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395"
   },
   {
     "id": "F020",
@@ -2039,15 +2041,7 @@
     "code_refs": [
       {
         "path": "src/features/intake/Intake.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/features/intake/Review.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/app/session.ts",
-        "line": 1
+        "line": 76
       }
     ],
     "existing_tests": [
@@ -2057,17 +2051,12 @@
         "text": "test('unsure topic stays null; mixed district is explicit hard and online-only disables its effect', async ({ page }) => {"
       },
       {
-        "path": "tests/domain.test.ts",
-        "line": 21,
-        "text": "it('rejects invalid enums and extra personal fields', () => {"
-      },
-      {
-        "path": "tests/domain.test.ts",
-        "line": 30,
-        "text": "it('neutral is 12 specialists / 20 offers, with no invented preference', () => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 46,
+        "text": "test(`EXP-02 ${locale} ${name}: four-step draft, shared exact/incomplete counts and explicit apply`, async ({ page }) => {"
       }
     ],
-    "test_evidence_scope": "Related suite/test anchors; not a one-to-one assertion that all new EXP AC passed. Future-scope tests cover foundations only.",
+    "test_evidence_scope": "EXP-02: direct feature assertions mapped in docs/expansion/stages/EXP-02.md; automated synthetic verification, not human validation.",
     "technical_dependencies": [
       "EXP-01.",
       "SearchInput, Session, intakeDraft, applied input"
@@ -2114,12 +2103,16 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
+    "evidence": "docs/expansion/stages/EXP-02.md",
     "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 252
-    }
+    },
+    "research_line": 357,
+    "registry_line": 22,
+    "verification_status": "AUTOMATED_VERIFIED_SYNTHETIC; HUMAN_NOT_RUN",
+    "verification_parent_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395"
   },
   {
     "id": "F021",
@@ -2141,35 +2134,22 @@
     "code_refs": [
       {
         "path": "src/features/intake/Intake.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/features/intake/Review.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/app/session.ts",
-        "line": 1
+        "line": 78
       }
     ],
     "existing_tests": [
       {
-        "path": "tests/domain.test.ts",
-        "line": 21,
-        "text": "it('rejects invalid enums and extra personal fields', () => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 46,
+        "text": "test(`EXP-02 ${locale} ${name}: four-step draft, shared exact/incomplete counts and explicit apply`, async ({ page }) => {"
       },
       {
-        "path": "tests/session.test.ts",
-        "line": 13,
-        "text": "it('keeps the synthetic intake draft separate from applied input on reload', () => {"
-      },
-      {
-        "path": "tests/session.test.ts",
-        "line": 22,
-        "text": "it('round-trips null and zero distinctly, plus hard flags and step', () => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 94,
+        "text": "test(`EXP-02 ${locale}: invalid budget blocks review apply and keeps other answers through history`, async ({ page }) => {"
       }
     ],
-    "test_evidence_scope": "Related suite/test anchors; not a one-to-one assertion that all new EXP AC passed. Future-scope tests cover foundations only.",
+    "test_evidence_scope": "EXP-02: direct feature assertions mapped in docs/expansion/stages/EXP-02.md; automated synthetic verification, not human validation.",
     "technical_dependencies": [
       "EXP-01.",
       "SearchInput, Session, intakeDraft, applied input"
@@ -2216,12 +2196,16 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
+    "evidence": "docs/expansion/stages/EXP-02.md",
     "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 253
-    }
+    },
+    "research_line": 358,
+    "registry_line": 23,
+    "verification_status": "AUTOMATED_VERIFIED_SYNTHETIC; HUMAN_NOT_RUN",
+    "verification_parent_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395"
   },
   {
     "id": "F022",
@@ -2243,35 +2227,22 @@
     "code_refs": [
       {
         "path": "src/features/intake/Intake.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/features/intake/Review.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/app/session.ts",
-        "line": 1
+        "line": 82
       }
     ],
     "existing_tests": [
       {
-        "path": "tests/domain.test.ts",
-        "line": 21,
-        "text": "it('rejects invalid enums and extra personal fields', () => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 46,
+        "text": "test(`EXP-02 ${locale} ${name}: four-step draft, shared exact/incomplete counts and explicit apply`, async ({ page }) => {"
       },
       {
-        "path": "tests/session.test.ts",
-        "line": 13,
-        "text": "it('keeps the synthetic intake draft separate from applied input on reload', () => {"
-      },
-      {
-        "path": "tests/session.test.ts",
-        "line": 22,
-        "text": "it('round-trips null and zero distinctly, plus hard flags and step', () => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 16,
+        "text": "test(`EXP-02 ${locale}: language and format preferences remain soft after editing and reload`, async ({ page }) => {"
       }
     ],
-    "test_evidence_scope": "Related suite/test anchors; not a one-to-one assertion that all new EXP AC passed. Future-scope tests cover foundations only.",
+    "test_evidence_scope": "EXP-02: direct feature assertions mapped in docs/expansion/stages/EXP-02.md; automated synthetic verification, not human validation.",
     "technical_dependencies": [
       "EXP-01.",
       "SearchInput, Session, intakeDraft, applied input"
@@ -2318,12 +2289,16 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
+    "evidence": "docs/expansion/stages/EXP-02.md",
     "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 254
-    }
+    },
+    "research_line": 359,
+    "registry_line": 24,
+    "verification_status": "AUTOMATED_VERIFIED_SYNTHETIC; HUMAN_NOT_RUN",
+    "verification_parent_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395"
   },
   {
     "id": "F023",
@@ -2345,35 +2320,22 @@
     "code_refs": [
       {
         "path": "src/features/intake/Intake.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/features/intake/Review.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/app/session.ts",
-        "line": 1
+        "line": 87
       }
     ],
     "existing_tests": [
       {
-        "path": "tests/domain.test.ts",
-        "line": 21,
-        "text": "it('rejects invalid enums and extra personal fields', () => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 46,
+        "text": "test(`EXP-02 ${locale} ${name}: four-step draft, shared exact/incomplete counts and explicit apply`, async ({ page }) => {"
       },
       {
-        "path": "tests/session.test.ts",
-        "line": 13,
-        "text": "it('keeps the synthetic intake draft separate from applied input on reload', () => {"
-      },
-      {
-        "path": "tests/session.test.ts",
-        "line": 22,
-        "text": "it('round-trips null and zero distinctly, plus hard flags and step', () => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 16,
+        "text": "test(`EXP-02 ${locale}: language and format preferences remain soft after editing and reload`, async ({ page }) => {"
       }
     ],
-    "test_evidence_scope": "Related suite/test anchors; not a one-to-one assertion that all new EXP AC passed. Future-scope tests cover foundations only.",
+    "test_evidence_scope": "EXP-02: direct feature assertions mapped in docs/expansion/stages/EXP-02.md; automated synthetic verification, not human validation.",
     "technical_dependencies": [
       "EXP-01.",
       "SearchInput, Session, intakeDraft, applied input"
@@ -2420,12 +2382,16 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
+    "evidence": "docs/expansion/stages/EXP-02.md",
     "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 255
-    }
+    },
+    "research_line": 360,
+    "registry_line": 25,
+    "verification_status": "AUTOMATED_VERIFIED_SYNTHETIC; HUMAN_NOT_RUN",
+    "verification_parent_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395"
   },
   {
     "id": "F024",
@@ -2447,35 +2413,22 @@
     "code_refs": [
       {
         "path": "src/features/intake/Intake.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/features/intake/Review.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/app/session.ts",
-        "line": 1
+        "line": 97
       }
     ],
     "existing_tests": [
       {
-        "path": "tests/domain.test.ts",
-        "line": 21,
-        "text": "it('rejects invalid enums and extra personal fields', () => {"
+        "path": "tests/e2e/phases28-35.spec.ts",
+        "line": 61,
+        "text": "test('unsure topic stays null; mixed district is explicit hard and online-only disables its effect', async ({ page }) => {"
       },
       {
-        "path": "tests/session.test.ts",
-        "line": 13,
-        "text": "it('keeps the synthetic intake draft separate from applied input on reload', () => {"
-      },
-      {
-        "path": "tests/session.test.ts",
-        "line": 22,
-        "text": "it('round-trips null and zero distinctly, plus hard flags and step', () => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 16,
+        "text": "test(`EXP-02 ${locale}: language and format preferences remain soft after editing and reload`, async ({ page }) => {"
       }
     ],
-    "test_evidence_scope": "Related suite/test anchors; not a one-to-one assertion that all new EXP AC passed. Future-scope tests cover foundations only.",
+    "test_evidence_scope": "EXP-02: direct feature assertions mapped in docs/expansion/stages/EXP-02.md; automated synthetic verification, not human validation.",
     "technical_dependencies": [
       "EXP-01.",
       "SearchInput, Session, intakeDraft, applied input"
@@ -2522,12 +2475,16 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
+    "evidence": "docs/expansion/stages/EXP-02.md",
     "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 256
-    }
+    },
+    "research_line": 361,
+    "registry_line": 26,
+    "verification_status": "AUTOMATED_VERIFIED_SYNTHETIC; HUMAN_NOT_RUN",
+    "verification_parent_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395"
   },
   {
     "id": "F025",
@@ -2549,27 +2506,18 @@
     "code_refs": [
       {
         "path": "src/features/intake/Intake.tsx",
-        "line": 1
+        "line": 117
       },
       {
-        "path": "src/features/intake/Review.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/app/session.ts",
-        "line": 1
+        "path": "src/domain/contracts.ts",
+        "line": 64
       }
     ],
     "existing_tests": [
       {
-        "path": "tests/domain.test.ts",
-        "line": 56,
-        "text": "it('0 is a real hard budget; no automatic clear or fallback', () => {"
-      },
-      {
-        "path": "tests/e2e/phases28-35.spec.ts",
-        "line": 41,
-        "text": "test('invalid budget survives Back to review and blocks count/application until repaired', async ({ page }) => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 94,
+        "text": "test(`EXP-02 ${locale}: invalid budget blocks review apply and keeps other answers through history`, async ({ page }) => {"
       },
       {
         "path": "tests/e2e/intake.spec.ts",
@@ -2577,7 +2525,7 @@
         "text": "test('budget validates all boundaries, preserves invalid input, accepts zero, supports skip', async ({ page }) => {"
       }
     ],
-    "test_evidence_scope": "Related suite/test anchors; not a one-to-one assertion that all new EXP AC passed. Future-scope tests cover foundations only.",
+    "test_evidence_scope": "EXP-02: direct feature assertions mapped in docs/expansion/stages/EXP-02.md; automated synthetic verification, not human validation.",
     "technical_dependencies": [
       "EXP-01.",
       "SearchInput, Session, intakeDraft, applied input"
@@ -2624,12 +2572,16 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
+    "evidence": "docs/expansion/stages/EXP-02.md",
     "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 257
-    }
+    },
+    "research_line": 362,
+    "registry_line": 27,
+    "verification_status": "AUTOMATED_VERIFIED_SYNTHETIC; HUMAN_NOT_RUN",
+    "verification_parent_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395"
   },
   {
     "id": "F026",
@@ -2651,35 +2603,26 @@
     "code_refs": [
       {
         "path": "src/features/intake/Intake.tsx",
-        "line": 1
+        "line": 140
       },
       {
-        "path": "src/features/intake/Review.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/app/session.ts",
-        "line": 1
+        "path": "src/domain/matching.ts",
+        "line": 79
       }
     ],
     "existing_tests": [
       {
-        "path": "tests/domain.test.ts",
-        "line": 21,
-        "text": "it('rejects invalid enums and extra personal fields', () => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 46,
+        "text": "test(`EXP-02 ${locale} ${name}: four-step draft, shared exact/incomplete counts and explicit apply`, async ({ page }) => {"
       },
       {
-        "path": "tests/session.test.ts",
-        "line": 13,
-        "text": "it('keeps the synthetic intake draft separate from applied input on reload', () => {"
-      },
-      {
-        "path": "tests/session.test.ts",
-        "line": 22,
-        "text": "it('round-trips null and zero distinctly, plus hard flags and step', () => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 16,
+        "text": "test(`EXP-02 ${locale}: language and format preferences remain soft after editing and reload`, async ({ page }) => {"
       }
     ],
-    "test_evidence_scope": "Related suite/test anchors; not a one-to-one assertion that all new EXP AC passed. Future-scope tests cover foundations only.",
+    "test_evidence_scope": "EXP-02: direct feature assertions mapped in docs/expansion/stages/EXP-02.md; automated synthetic verification, not human validation.",
     "technical_dependencies": [
       "EXP-01.",
       "SearchInput, Session, intakeDraft, applied input"
@@ -2726,12 +2669,16 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
+    "evidence": "docs/expansion/stages/EXP-02.md",
     "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 258
-    }
+    },
+    "research_line": 363,
+    "registry_line": 28,
+    "verification_status": "AUTOMATED_VERIFIED_SYNTHETIC; HUMAN_NOT_RUN",
+    "verification_parent_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395"
   },
   {
     "id": "F027",
@@ -2752,36 +2699,27 @@
     "route": "/route; /route/review",
     "code_refs": [
       {
+        "path": "src/domain/matching.ts",
+        "line": 95
+      },
+      {
         "path": "src/features/intake/Intake.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/features/intake/Review.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/app/session.ts",
-        "line": 1
+        "line": 137
       }
     ],
     "existing_tests": [
       {
-        "path": "tests/domain.test.ts",
-        "line": 21,
-        "text": "it('rejects invalid enums and extra personal fields', () => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 46,
+        "text": "test(`EXP-02 ${locale} ${name}: four-step draft, shared exact/incomplete counts and explicit apply`, async ({ page }) => {"
       },
       {
-        "path": "tests/session.test.ts",
-        "line": 13,
-        "text": "it('keeps the synthetic intake draft separate from applied input on reload', () => {"
-      },
-      {
-        "path": "tests/session.test.ts",
-        "line": 22,
-        "text": "it('round-trips null and zero distinctly, plus hard flags and step', () => {"
+        "path": "tests/e2e/phases28-35.spec.ts",
+        "line": 61,
+        "text": "test('unsure topic stays null; mixed district is explicit hard and online-only disables its effect', async ({ page }) => {"
       }
     ],
-    "test_evidence_scope": "Related suite/test anchors; not a one-to-one assertion that all new EXP AC passed. Future-scope tests cover foundations only.",
+    "test_evidence_scope": "EXP-02: direct feature assertions mapped in docs/expansion/stages/EXP-02.md; automated synthetic verification, not human validation.",
     "technical_dependencies": [
       "EXP-01.",
       "SearchInput, Session, intakeDraft, applied input"
@@ -2828,12 +2766,16 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
+    "evidence": "docs/expansion/stages/EXP-02.md",
     "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 259
-    }
+    },
+    "research_line": 364,
+    "registry_line": 29,
+    "verification_status": "AUTOMATED_VERIFIED_SYNTHETIC; HUMAN_NOT_RUN",
+    "verification_parent_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395"
   },
   {
     "id": "F028",
@@ -2854,36 +2796,22 @@
     "route": "/route; /route/review",
     "code_refs": [
       {
+        "path": "src/domain/matching.ts",
+        "line": 116
+      },
+      {
         "path": "src/features/intake/Intake.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/features/intake/Review.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/app/session.ts",
-        "line": 1
+        "line": 86
       }
     ],
     "existing_tests": [
       {
-        "path": "tests/domain.test.ts",
-        "line": 21,
-        "text": "it('rejects invalid enums and extra personal fields', () => {"
-      },
-      {
-        "path": "tests/session.test.ts",
-        "line": 13,
-        "text": "it('keeps the synthetic intake draft separate from applied input on reload', () => {"
-      },
-      {
-        "path": "tests/session.test.ts",
-        "line": 22,
-        "text": "it('round-trips null and zero distinctly, plus hard flags and step', () => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 16,
+        "text": "test(`EXP-02 ${locale}: language and format preferences remain soft after editing and reload`, async ({ page }) => {"
       }
     ],
-    "test_evidence_scope": "Related suite/test anchors; not a one-to-one assertion that all new EXP AC passed. Future-scope tests cover foundations only.",
+    "test_evidence_scope": "EXP-02: direct feature assertions mapped in docs/expansion/stages/EXP-02.md; automated synthetic verification, not human validation.",
     "technical_dependencies": [
       "EXP-01.",
       "SearchInput, Session, intakeDraft, applied input"
@@ -2930,12 +2858,16 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
+    "evidence": "docs/expansion/stages/EXP-02.md",
     "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 260
-    }
+    },
+    "research_line": 365,
+    "registry_line": 30,
+    "verification_status": "AUTOMATED_VERIFIED_SYNTHETIC; HUMAN_NOT_RUN",
+    "verification_parent_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395"
   },
   {
     "id": "F029",
@@ -2957,35 +2889,22 @@
     "code_refs": [
       {
         "path": "src/features/intake/Intake.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/features/intake/Review.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/app/session.ts",
-        "line": 1
+        "line": 55
       }
     ],
     "existing_tests": [
       {
-        "path": "tests/domain.test.ts",
-        "line": 21,
-        "text": "it('rejects invalid enums and extra personal fields', () => {"
+        "path": "tests/e2e/intake.spec.ts",
+        "line": 32,
+        "text": "test('all steps can be skipped; null is preserved through review, reload and catalog', async ({ page }) => {"
       },
       {
-        "path": "tests/session.test.ts",
-        "line": 13,
-        "text": "it('keeps the synthetic intake draft separate from applied input on reload', () => {"
-      },
-      {
-        "path": "tests/session.test.ts",
-        "line": 22,
-        "text": "it('round-trips null and zero distinctly, plus hard flags and step', () => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 16,
+        "text": "test(`EXP-02 ${locale}: language and format preferences remain soft after editing and reload`, async ({ page }) => {"
       }
     ],
-    "test_evidence_scope": "Related suite/test anchors; not a one-to-one assertion that all new EXP AC passed. Future-scope tests cover foundations only.",
+    "test_evidence_scope": "EXP-02: direct feature assertions mapped in docs/expansion/stages/EXP-02.md; automated synthetic verification, not human validation.",
     "technical_dependencies": [
       "EXP-01.",
       "SearchInput, Session, intakeDraft, applied input"
@@ -3032,12 +2951,16 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
+    "evidence": "docs/expansion/stages/EXP-02.md",
     "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 261
-    }
+    },
+    "research_line": 366,
+    "registry_line": 31,
+    "verification_status": "AUTOMATED_VERIFIED_SYNTHETIC; HUMAN_NOT_RUN",
+    "verification_parent_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395"
   },
   {
     "id": "F030",
@@ -3059,35 +2982,22 @@
     "code_refs": [
       {
         "path": "src/features/intake/Intake.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/features/intake/Review.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/app/session.ts",
-        "line": 1
+        "line": 147
       }
     ],
     "existing_tests": [
       {
-        "path": "tests/domain.test.ts",
-        "line": 21,
-        "text": "it('rejects invalid enums and extra personal fields', () => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 94,
+        "text": "test(`EXP-02 ${locale}: invalid budget blocks review apply and keeps other answers through history`, async ({ page }) => {"
       },
       {
-        "path": "tests/session.test.ts",
-        "line": 13,
-        "text": "it('keeps the synthetic intake draft separate from applied input on reload', () => {"
-      },
-      {
-        "path": "tests/session.test.ts",
-        "line": 22,
-        "text": "it('round-trips null and zero distinctly, plus hard flags and step', () => {"
+        "path": "tests/e2e/intake.spec.ts",
+        "line": 109,
+        "text": "test('Back and browser history preserve answers including invalid numeric draft; language does not change domain', async ({ page }) => {"
       }
     ],
-    "test_evidence_scope": "Related suite/test anchors; not a one-to-one assertion that all new EXP AC passed. Future-scope tests cover foundations only.",
+    "test_evidence_scope": "EXP-02: direct feature assertions mapped in docs/expansion/stages/EXP-02.md; automated synthetic verification, not human validation.",
     "technical_dependencies": [
       "EXP-01.",
       "SearchInput, Session, intakeDraft, applied input"
@@ -3134,12 +3044,16 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
+    "evidence": "docs/expansion/stages/EXP-02.md",
     "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 262
-    }
+    },
+    "research_line": 367,
+    "registry_line": 32,
+    "verification_status": "AUTOMATED_VERIFIED_SYNTHETIC; HUMAN_NOT_RUN",
+    "verification_parent_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395"
   },
   {
     "id": "F031",
@@ -3160,36 +3074,27 @@
     "route": "/route; /route/review",
     "code_refs": [
       {
-        "path": "src/features/intake/Intake.tsx",
-        "line": 1
-      },
-      {
         "path": "src/features/intake/Review.tsx",
-        "line": 1
+        "line": 31
       },
       {
-        "path": "src/app/session.ts",
-        "line": 1
+        "path": "src/app/AppState.tsx",
+        "line": 62
       }
     ],
     "existing_tests": [
       {
-        "path": "tests/domain.test.ts",
-        "line": 21,
-        "text": "it('rejects invalid enums and extra personal fields', () => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 16,
+        "text": "test(`EXP-02 ${locale}: language and format preferences remain soft after editing and reload`, async ({ page }) => {"
       },
       {
-        "path": "tests/session.test.ts",
-        "line": 13,
-        "text": "it('keeps the synthetic intake draft separate from applied input on reload', () => {"
-      },
-      {
-        "path": "tests/session.test.ts",
-        "line": 22,
-        "text": "it('round-trips null and zero distinctly, plus hard flags and step', () => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 94,
+        "text": "test(`EXP-02 ${locale}: invalid budget blocks review apply and keeps other answers through history`, async ({ page }) => {"
       }
     ],
-    "test_evidence_scope": "Related suite/test anchors; not a one-to-one assertion that all new EXP AC passed. Future-scope tests cover foundations only.",
+    "test_evidence_scope": "EXP-02: direct feature assertions mapped in docs/expansion/stages/EXP-02.md; automated synthetic verification, not human validation.",
     "technical_dependencies": [
       "EXP-01.",
       "SearchInput, Session, intakeDraft, applied input"
@@ -3236,12 +3141,16 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
+    "evidence": "docs/expansion/stages/EXP-02.md",
     "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 263
-    }
+    },
+    "research_line": 368,
+    "registry_line": 33,
+    "verification_status": "AUTOMATED_VERIFIED_SYNTHETIC; HUMAN_NOT_RUN",
+    "verification_parent_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395"
   },
   {
     "id": "F032",
@@ -3266,32 +3175,28 @@
         "line": 17
       },
       {
-        "path": "src/features/intake/Intake.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/features/intake/Review.tsx",
-        "line": 1
+        "path": "src/app/AppState.tsx",
+        "line": 12
       }
     ],
     "existing_tests": [
       {
         "path": "tests/session.test.ts",
-        "line": 22,
-        "text": "it('round-trips null and zero distinctly, plus hard flags and step', () => {"
+        "line": 13,
+        "text": "it('keeps the synthetic intake draft separate from applied input on reload', () => {"
       },
       {
-        "path": "tests/domain.test.ts",
-        "line": 21,
-        "text": "it('rejects invalid enums and extra personal fields', () => {"
+        "path": "tests/e2e/intake.spec.ts",
+        "line": 156,
+        "text": "test('reload restores step and answers; expired/corrupt state resets visibly', async ({ page }) => {"
       },
       {
-        "path": "tests/domain.test.ts",
-        "line": 30,
-        "text": "it('neutral is 12 specialists / 20 offers, with no invented preference', () => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 46,
+        "text": "test(`EXP-02 ${locale} ${name}: four-step draft, shared exact/incomplete counts and explicit apply`, async ({ page }) => {"
       }
     ],
-    "test_evidence_scope": "Related suite/test anchors; not a one-to-one assertion that all new EXP AC passed. Future-scope tests cover foundations only.",
+    "test_evidence_scope": "EXP-02: direct feature assertions mapped in docs/expansion/stages/EXP-02.md; automated synthetic verification, not human validation.",
     "technical_dependencies": [
       "EXP-01.",
       "SearchInput, Session, intakeDraft, applied input"
@@ -3338,12 +3243,16 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
+    "evidence": "docs/expansion/stages/EXP-02.md",
     "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 264
-    }
+    },
+    "research_line": 369,
+    "registry_line": 34,
+    "verification_status": "AUTOMATED_VERIFIED_SYNTHETIC; HUMAN_NOT_RUN",
+    "verification_parent_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395"
   },
   {
     "id": "F033",
@@ -3364,28 +3273,19 @@
     "route": "/route; /route/review",
     "code_refs": [
       {
-        "path": "src/domain/contracts.ts",
-        "line": 64
-      },
-      {
         "path": "src/features/intake/Intake.tsx",
-        "line": 1
+        "line": 36
       },
       {
         "path": "src/features/intake/Review.tsx",
-        "line": 1
+        "line": 52
       }
     ],
     "existing_tests": [
       {
-        "path": "tests/domain.test.ts",
-        "line": 56,
-        "text": "it('0 is a real hard budget; no automatic clear or fallback', () => {"
-      },
-      {
-        "path": "tests/e2e/phases28-35.spec.ts",
-        "line": 41,
-        "text": "test('invalid budget survives Back to review and blocks count/application until repaired', async ({ page }) => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 94,
+        "text": "test(`EXP-02 ${locale}: invalid budget blocks review apply and keeps other answers through history`, async ({ page }) => {"
       },
       {
         "path": "tests/e2e/intake.spec.ts",
@@ -3393,7 +3293,7 @@
         "text": "test('budget validates all boundaries, preserves invalid input, accepts zero, supports skip', async ({ page }) => {"
       }
     ],
-    "test_evidence_scope": "Related suite/test anchors; not a one-to-one assertion that all new EXP AC passed. Future-scope tests cover foundations only.",
+    "test_evidence_scope": "EXP-02: direct feature assertions mapped in docs/expansion/stages/EXP-02.md; automated synthetic verification, not human validation.",
     "technical_dependencies": [
       "EXP-01.",
       "SearchInput, Session, intakeDraft, applied input"
@@ -3440,12 +3340,16 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
+    "evidence": "docs/expansion/stages/EXP-02.md",
     "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 265
-    }
+    },
+    "research_line": 370,
+    "registry_line": 35,
+    "verification_status": "AUTOMATED_VERIFIED_SYNTHETIC; HUMAN_NOT_RUN",
+    "verification_parent_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395"
   },
   {
     "id": "F034",
@@ -3467,35 +3371,22 @@
     "code_refs": [
       {
         "path": "src/features/intake/Review.tsx",
-        "line": 7
-      },
-      {
-        "path": "src/features/intake/Intake.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/app/session.ts",
-        "line": 1
+        "line": 12
       }
     ],
     "existing_tests": [
       {
-        "path": "tests/domain.test.ts",
-        "line": 21,
-        "text": "it('rejects invalid enums and extra personal fields', () => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 46,
+        "text": "test(`EXP-02 ${locale} ${name}: four-step draft, shared exact/incomplete counts and explicit apply`, async ({ page }) => {"
       },
       {
-        "path": "tests/session.test.ts",
-        "line": 13,
-        "text": "it('keeps the synthetic intake draft separate from applied input on reload', () => {"
-      },
-      {
-        "path": "tests/session.test.ts",
-        "line": 22,
-        "text": "it('round-trips null and zero distinctly, plus hard flags and step', () => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 16,
+        "text": "test(`EXP-02 ${locale}: language and format preferences remain soft after editing and reload`, async ({ page }) => {"
       }
     ],
-    "test_evidence_scope": "Related suite/test anchors; not a one-to-one assertion that all new EXP AC passed. Future-scope tests cover foundations only.",
+    "test_evidence_scope": "EXP-02: direct feature assertions mapped in docs/expansion/stages/EXP-02.md; automated synthetic verification, not human validation.",
     "technical_dependencies": [
       "EXP-01.",
       "SearchInput, Session, intakeDraft, applied input"
@@ -3542,12 +3433,16 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
+    "evidence": "docs/expansion/stages/EXP-02.md",
     "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 266
-    }
+    },
+    "research_line": 371,
+    "registry_line": 36,
+    "verification_status": "AUTOMATED_VERIFIED_SYNTHETIC; HUMAN_NOT_RUN",
+    "verification_parent_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395"
   },
   {
     "id": "F035",
@@ -3572,32 +3467,23 @@
         "line": 10
       },
       {
-        "path": "src/features/intake/Intake.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/app/session.ts",
-        "line": 1
+        "path": "src/features/search/Catalog.tsx",
+        "line": 22
       }
     ],
     "existing_tests": [
       {
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 46,
+        "text": "test(`EXP-02 ${locale} ${name}: four-step draft, shared exact/incomplete counts and explicit apply`, async ({ page }) => {"
+      },
+      {
         "path": "tests/e2e/phases28-35.spec.ts",
-        "line": 14,
-        "text": "test('draft preview never replaces applied catalog until review CTA; reload keeps both', async ({ page }) => {"
-      },
-      {
-        "path": "tests/domain.test.ts",
-        "line": 21,
-        "text": "it('rejects invalid enums and extra personal fields', () => {"
-      },
-      {
-        "path": "tests/domain.test.ts",
-        "line": 30,
-        "text": "it('neutral is 12 specialists / 20 offers, with no invented preference', () => {"
+        "line": 85,
+        "text": "test('catalog load failure on review is distinct from zero and Retry restores the synthetic draft', async ({ page }) => {"
       }
     ],
-    "test_evidence_scope": "Related suite/test anchors; not a one-to-one assertion that all new EXP AC passed. Future-scope tests cover foundations only.",
+    "test_evidence_scope": "EXP-02: direct feature assertions mapped in docs/expansion/stages/EXP-02.md; automated synthetic verification, not human validation.",
     "technical_dependencies": [
       "EXP-01.",
       "SearchInput, Session, intakeDraft, applied input"
@@ -3644,12 +3530,16 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
+    "evidence": "docs/expansion/stages/EXP-02.md",
     "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 267
-    }
+    },
+    "research_line": 372,
+    "registry_line": 37,
+    "verification_status": "AUTOMATED_VERIFIED_SYNTHETIC; HUMAN_NOT_RUN",
+    "verification_parent_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395"
   },
   {
     "id": "F036",
@@ -3670,36 +3560,27 @@
     "route": "/route; /route/review",
     "code_refs": [
       {
-        "path": "src/features/intake/Intake.tsx",
-        "line": 1
-      },
-      {
         "path": "src/features/intake/Review.tsx",
-        "line": 1
+        "line": 61
       },
       {
-        "path": "src/app/session.ts",
-        "line": 1
+        "path": "src/app/AppState.tsx",
+        "line": 19
       }
     ],
     "existing_tests": [
       {
-        "path": "tests/domain.test.ts",
-        "line": 21,
-        "text": "it('rejects invalid enums and extra personal fields', () => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 46,
+        "text": "test(`EXP-02 ${locale} ${name}: four-step draft, shared exact/incomplete counts and explicit apply`, async ({ page }) => {"
       },
       {
-        "path": "tests/session.test.ts",
-        "line": 13,
-        "text": "it('keeps the synthetic intake draft separate from applied input on reload', () => {"
-      },
-      {
-        "path": "tests/session.test.ts",
-        "line": 22,
-        "text": "it('round-trips null and zero distinctly, plus hard flags and step', () => {"
+        "path": "tests/e2e/exp02.spec.ts",
+        "line": 94,
+        "text": "test(`EXP-02 ${locale}: invalid budget blocks review apply and keeps other answers through history`, async ({ page }) => {"
       }
     ],
-    "test_evidence_scope": "Related suite/test anchors; not a one-to-one assertion that all new EXP AC passed. Future-scope tests cover foundations only.",
+    "test_evidence_scope": "EXP-02: direct feature assertions mapped in docs/expansion/stages/EXP-02.md; automated synthetic verification, not human validation.",
     "technical_dependencies": [
       "EXP-01.",
       "SearchInput, Session, intakeDraft, applied input"
@@ -3746,12 +3627,16 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
+    "evidence": "docs/expansion/stages/EXP-02.md",
     "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 268
-    }
+    },
+    "research_line": 373,
+    "registry_line": 38,
+    "verification_status": "AUTOMATED_VERIFIED_SYNTHETIC; HUMAN_NOT_RUN",
+    "verification_parent_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395"
   },
   {
     "id": "F037",
@@ -3853,7 +3738,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 274
-    }
+    },
+    "research_line": 381,
+    "registry_line": 39
   },
   {
     "id": "F038",
@@ -3955,7 +3842,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 275
-    }
+    },
+    "research_line": 382,
+    "registry_line": 40
   },
   {
     "id": "F039",
@@ -4057,7 +3946,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 276
-    }
+    },
+    "research_line": 383,
+    "registry_line": 41
   },
   {
     "id": "F040",
@@ -4159,7 +4050,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 277
-    }
+    },
+    "research_line": 384,
+    "registry_line": 42
   },
   {
     "id": "F041",
@@ -4261,7 +4154,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 278
-    }
+    },
+    "research_line": 385,
+    "registry_line": 43
   },
   {
     "id": "F042",
@@ -4363,7 +4258,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 279
-    }
+    },
+    "research_line": 386,
+    "registry_line": 44
   },
   {
     "id": "F043",
@@ -4465,7 +4362,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 280
-    }
+    },
+    "research_line": 387,
+    "registry_line": 45
   },
   {
     "id": "F044",
@@ -4567,7 +4466,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 281
-    }
+    },
+    "research_line": 388,
+    "registry_line": 46
   },
   {
     "id": "F045",
@@ -4669,7 +4570,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 282
-    }
+    },
+    "research_line": 389,
+    "registry_line": 47
   },
   {
     "id": "F046",
@@ -4771,7 +4674,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 283
-    }
+    },
+    "research_line": 390,
+    "registry_line": 48
   },
   {
     "id": "F047",
@@ -4873,7 +4778,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 284
-    }
+    },
+    "research_line": 391,
+    "registry_line": 49
   },
   {
     "id": "F048",
@@ -4975,7 +4882,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 285
-    }
+    },
+    "research_line": 392,
+    "registry_line": 50
   },
   {
     "id": "F049",
@@ -5077,7 +4986,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 286
-    }
+    },
+    "research_line": 393,
+    "registry_line": 51
   },
   {
     "id": "F050",
@@ -5179,7 +5090,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 287
-    }
+    },
+    "research_line": 394,
+    "registry_line": 52
   },
   {
     "id": "F051",
@@ -5281,7 +5194,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 288
-    }
+    },
+    "research_line": 395,
+    "registry_line": 53
   },
   {
     "id": "F052",
@@ -5383,7 +5298,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 289
-    }
+    },
+    "research_line": 396,
+    "registry_line": 54
   },
   {
     "id": "F053",
@@ -5485,7 +5402,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 290
-    }
+    },
+    "research_line": 397,
+    "registry_line": 55
   },
   {
     "id": "F054",
@@ -5587,7 +5506,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 291
-    }
+    },
+    "research_line": 398,
+    "registry_line": 56
   },
   {
     "id": "F055",
@@ -5689,7 +5610,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 292
-    }
+    },
+    "research_line": 399,
+    "registry_line": 57
   },
   {
     "id": "F056",
@@ -5791,7 +5714,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 293
-    }
+    },
+    "research_line": 400,
+    "registry_line": 58
   },
   {
     "id": "F057",
@@ -5893,7 +5818,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 294
-    }
+    },
+    "research_line": 401,
+    "registry_line": 59
   },
   {
     "id": "F058",
@@ -5995,7 +5922,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 295
-    }
+    },
+    "research_line": 402,
+    "registry_line": 60
   },
   {
     "id": "F059",
@@ -6097,7 +6026,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 296
-    }
+    },
+    "research_line": 403,
+    "registry_line": 61
   },
   {
     "id": "F060",
@@ -6199,7 +6130,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 297
-    }
+    },
+    "research_line": 404,
+    "registry_line": 62
   },
   {
     "id": "F061",
@@ -6301,7 +6234,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 303
-    }
+    },
+    "research_line": 412,
+    "registry_line": 63
   },
   {
     "id": "F062",
@@ -6403,7 +6338,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 304
-    }
+    },
+    "research_line": 413,
+    "registry_line": 64
   },
   {
     "id": "F063",
@@ -6505,7 +6442,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 305
-    }
+    },
+    "research_line": 414,
+    "registry_line": 65
   },
   {
     "id": "F064",
@@ -6607,7 +6546,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 306
-    }
+    },
+    "research_line": 415,
+    "registry_line": 66
   },
   {
     "id": "F065",
@@ -6709,7 +6650,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 307
-    }
+    },
+    "research_line": 416,
+    "registry_line": 67
   },
   {
     "id": "F066",
@@ -6811,7 +6754,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 308
-    }
+    },
+    "research_line": 417,
+    "registry_line": 68
   },
   {
     "id": "F067",
@@ -6913,7 +6858,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 309
-    }
+    },
+    "research_line": 418,
+    "registry_line": 69
   },
   {
     "id": "F068",
@@ -7015,7 +6962,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 310
-    }
+    },
+    "research_line": 419,
+    "registry_line": 70
   },
   {
     "id": "F069",
@@ -7117,7 +7066,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 311
-    }
+    },
+    "research_line": 420,
+    "registry_line": 71
   },
   {
     "id": "F070",
@@ -7219,7 +7170,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 312
-    }
+    },
+    "research_line": 421,
+    "registry_line": 72
   },
   {
     "id": "F071",
@@ -7321,7 +7274,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 313
-    }
+    },
+    "research_line": 422,
+    "registry_line": 73
   },
   {
     "id": "F072",
@@ -7423,7 +7378,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 314
-    }
+    },
+    "research_line": 423,
+    "registry_line": 74
   },
   {
     "id": "F073",
@@ -7525,7 +7482,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 315
-    }
+    },
+    "research_line": 424,
+    "registry_line": 75
   },
   {
     "id": "F074",
@@ -7627,7 +7586,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 316
-    }
+    },
+    "research_line": 425,
+    "registry_line": 76
   },
   {
     "id": "F075",
@@ -7729,7 +7690,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 317
-    }
+    },
+    "research_line": 426,
+    "registry_line": 77
   },
   {
     "id": "F076",
@@ -7831,7 +7794,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 323
-    }
+    },
+    "research_line": 434,
+    "registry_line": 78
   },
   {
     "id": "F077",
@@ -7933,7 +7898,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 324
-    }
+    },
+    "research_line": 435,
+    "registry_line": 79
   },
   {
     "id": "F078",
@@ -8035,7 +8002,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 325
-    }
+    },
+    "research_line": 436,
+    "registry_line": 80
   },
   {
     "id": "F079",
@@ -8137,7 +8106,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 326
-    }
+    },
+    "research_line": 437,
+    "registry_line": 81
   },
   {
     "id": "F080",
@@ -8239,7 +8210,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 327
-    }
+    },
+    "research_line": 438,
+    "registry_line": 82
   },
   {
     "id": "F081",
@@ -8341,7 +8314,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 328
-    }
+    },
+    "research_line": 439,
+    "registry_line": 83
   },
   {
     "id": "F082",
@@ -8443,7 +8418,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 329
-    }
+    },
+    "research_line": 440,
+    "registry_line": 84
   },
   {
     "id": "F083",
@@ -8545,7 +8522,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 330
-    }
+    },
+    "research_line": 441,
+    "registry_line": 85
   },
   {
     "id": "F084",
@@ -8647,7 +8626,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 331
-    }
+    },
+    "research_line": 442,
+    "registry_line": 86
   },
   {
     "id": "F085",
@@ -8749,7 +8730,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 332
-    }
+    },
+    "research_line": 443,
+    "registry_line": 87
   },
   {
     "id": "F086",
@@ -8851,7 +8834,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 333
-    }
+    },
+    "research_line": 444,
+    "registry_line": 88
   },
   {
     "id": "F087",
@@ -8953,7 +8938,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 334
-    }
+    },
+    "research_line": 445,
+    "registry_line": 89
   },
   {
     "id": "F088",
@@ -9055,7 +9042,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 340
-    }
+    },
+    "research_line": 453,
+    "registry_line": 90
   },
   {
     "id": "F089",
@@ -9157,7 +9146,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 341
-    }
+    },
+    "research_line": 454,
+    "registry_line": 91
   },
   {
     "id": "F090",
@@ -9259,7 +9250,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 342
-    }
+    },
+    "research_line": 455,
+    "registry_line": 92
   },
   {
     "id": "F091",
@@ -9361,7 +9354,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 343
-    }
+    },
+    "research_line": 456,
+    "registry_line": 93
   },
   {
     "id": "F092",
@@ -9463,7 +9458,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 344
-    }
+    },
+    "research_line": 457,
+    "registry_line": 94
   },
   {
     "id": "F093",
@@ -9565,7 +9562,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 345
-    }
+    },
+    "research_line": 458,
+    "registry_line": 95
   },
   {
     "id": "F094",
@@ -9667,7 +9666,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 346
-    }
+    },
+    "research_line": 459,
+    "registry_line": 96
   },
   {
     "id": "F095",
@@ -9769,7 +9770,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 347
-    }
+    },
+    "research_line": 460,
+    "registry_line": 97
   },
   {
     "id": "F096",
@@ -9871,7 +9874,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 348
-    }
+    },
+    "research_line": 461,
+    "registry_line": 98
   },
   {
     "id": "F097",
@@ -9973,7 +9978,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 349
-    }
+    },
+    "research_line": 462,
+    "registry_line": 99
   },
   {
     "id": "F098",
@@ -10075,7 +10082,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 350
-    }
+    },
+    "research_line": 463,
+    "registry_line": 100
   },
   {
     "id": "F099",
@@ -10177,7 +10186,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 351
-    }
+    },
+    "research_line": 464,
+    "registry_line": 101
   },
   {
     "id": "F100",
@@ -10279,7 +10290,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 352
-    }
+    },
+    "research_line": 465,
+    "registry_line": 102
   },
   {
     "id": "F101",
@@ -10381,7 +10394,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 353
-    }
+    },
+    "research_line": 466,
+    "registry_line": 103
   },
   {
     "id": "F102",
@@ -10483,7 +10498,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 354
-    }
+    },
+    "research_line": 467,
+    "registry_line": 104
   },
   {
     "id": "F103",
@@ -10585,7 +10602,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 355
-    }
+    },
+    "research_line": 468,
+    "registry_line": 105
   },
   {
     "id": "F104",
@@ -10687,7 +10706,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 356
-    }
+    },
+    "research_line": 469,
+    "registry_line": 106
   },
   {
     "id": "F105",
@@ -10789,7 +10810,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 362
-    }
+    },
+    "research_line": 477,
+    "registry_line": 107
   },
   {
     "id": "F106",
@@ -10891,7 +10914,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 363
-    }
+    },
+    "research_line": 478,
+    "registry_line": 108
   },
   {
     "id": "F107",
@@ -10993,7 +11018,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 364
-    }
+    },
+    "research_line": 479,
+    "registry_line": 109
   },
   {
     "id": "F108",
@@ -11095,7 +11122,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 365
-    }
+    },
+    "research_line": 480,
+    "registry_line": 110
   },
   {
     "id": "F109",
@@ -11197,7 +11226,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 366
-    }
+    },
+    "research_line": 481,
+    "registry_line": 111
   },
   {
     "id": "F110",
@@ -11299,7 +11330,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 367
-    }
+    },
+    "research_line": 482,
+    "registry_line": 112
   },
   {
     "id": "F111",
@@ -11401,7 +11434,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 368
-    }
+    },
+    "research_line": 483,
+    "registry_line": 113
   },
   {
     "id": "F112",
@@ -11503,7 +11538,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 369
-    }
+    },
+    "research_line": 484,
+    "registry_line": 114
   },
   {
     "id": "F113",
@@ -11605,7 +11642,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 370
-    }
+    },
+    "research_line": 485,
+    "registry_line": 115
   },
   {
     "id": "F114",
@@ -11707,7 +11746,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 371
-    }
+    },
+    "research_line": 486,
+    "registry_line": 116
   },
   {
     "id": "F115",
@@ -11809,7 +11850,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 377
-    }
+    },
+    "research_line": 494,
+    "registry_line": 117
   },
   {
     "id": "F116",
@@ -11911,7 +11954,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 378
-    }
+    },
+    "research_line": 495,
+    "registry_line": 118
   },
   {
     "id": "F117",
@@ -12013,7 +12058,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 379
-    }
+    },
+    "research_line": 496,
+    "registry_line": 119
   },
   {
     "id": "F118",
@@ -12115,7 +12162,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 380
-    }
+    },
+    "research_line": 497,
+    "registry_line": 120
   },
   {
     "id": "F119",
@@ -12217,7 +12266,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 381
-    }
+    },
+    "research_line": 498,
+    "registry_line": 121
   },
   {
     "id": "F120",
@@ -12319,7 +12370,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 382
-    }
+    },
+    "research_line": 499,
+    "registry_line": 122
   },
   {
     "id": "F121",
@@ -12421,7 +12474,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 383
-    }
+    },
+    "research_line": 500,
+    "registry_line": 123
   },
   {
     "id": "F122",
@@ -12523,7 +12578,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 384
-    }
+    },
+    "research_line": 501,
+    "registry_line": 124
   },
   {
     "id": "F123",
@@ -12625,7 +12682,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 390
-    }
+    },
+    "research_line": 509,
+    "registry_line": 125
   },
   {
     "id": "F124",
@@ -12727,7 +12786,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 391
-    }
+    },
+    "research_line": 510,
+    "registry_line": 126
   },
   {
     "id": "F125",
@@ -12829,7 +12890,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 392
-    }
+    },
+    "research_line": 511,
+    "registry_line": 127
   },
   {
     "id": "F126",
@@ -12931,7 +12994,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 393
-    }
+    },
+    "research_line": 512,
+    "registry_line": 128
   },
   {
     "id": "F127",
@@ -13033,7 +13098,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 394
-    }
+    },
+    "research_line": 513,
+    "registry_line": 129
   },
   {
     "id": "F128",
@@ -13135,7 +13202,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 395
-    }
+    },
+    "research_line": 514,
+    "registry_line": 130
   },
   {
     "id": "F129",
@@ -13237,7 +13306,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 396
-    }
+    },
+    "research_line": 515,
+    "registry_line": 131
   },
   {
     "id": "F130",
@@ -13339,7 +13410,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 397
-    }
+    },
+    "research_line": 516,
+    "registry_line": 132
   },
   {
     "id": "F131",
@@ -13412,7 +13485,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 403
-    }
+    },
+    "research_line": 524,
+    "registry_line": 133
   },
   {
     "id": "F132",
@@ -13485,7 +13560,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 404
-    }
+    },
+    "research_line": 525,
+    "registry_line": 134
   },
   {
     "id": "F133",
@@ -13558,7 +13635,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 405
-    }
+    },
+    "research_line": 526,
+    "registry_line": 135
   },
   {
     "id": "F134",
@@ -13631,7 +13710,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 406
-    }
+    },
+    "research_line": 527,
+    "registry_line": 136
   },
   {
     "id": "F135",
@@ -13725,7 +13806,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 407
-    }
+    },
+    "research_line": 528,
+    "registry_line": 137
   },
   {
     "id": "F136",
@@ -13798,7 +13881,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 408
-    }
+    },
+    "research_line": 529,
+    "registry_line": 138
   },
   {
     "id": "F137",
@@ -13892,7 +13977,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 409
-    }
+    },
+    "research_line": 530,
+    "registry_line": 139
   },
   {
     "id": "F138",
@@ -13965,7 +14052,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 410
-    }
+    },
+    "research_line": 531,
+    "registry_line": 140
   },
   {
     "id": "F139",
@@ -14038,7 +14127,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 411
-    }
+    },
+    "research_line": 532,
+    "registry_line": 141
   },
   {
     "id": "F140",
@@ -14111,7 +14202,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 412
-    }
+    },
+    "research_line": 533,
+    "registry_line": 142
   },
   {
     "id": "F141",
@@ -14184,7 +14277,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 413
-    }
+    },
+    "research_line": 534,
+    "registry_line": 143
   },
   {
     "id": "F142",
@@ -14257,7 +14352,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 414
-    }
+    },
+    "research_line": 535,
+    "registry_line": 144
   },
   {
     "id": "F143",
@@ -14330,7 +14427,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 415
-    }
+    },
+    "research_line": 536,
+    "registry_line": 145
   },
   {
     "id": "F144",
@@ -14403,7 +14502,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 416
-    }
+    },
+    "research_line": 537,
+    "registry_line": 146
   },
   {
     "id": "F145",
@@ -14476,7 +14577,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 417
-    }
+    },
+    "research_line": 538,
+    "registry_line": 147
   },
   {
     "id": "F146",
@@ -14549,7 +14652,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 418
-    }
+    },
+    "research_line": 539,
+    "registry_line": 148
   },
   {
     "id": "F147",
@@ -14622,7 +14727,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 419
-    }
+    },
+    "research_line": 540,
+    "registry_line": 149
   },
   {
     "id": "F148",
@@ -14695,7 +14802,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 420
-    }
+    },
+    "research_line": 541,
+    "registry_line": 150
   },
   {
     "id": "F149",
@@ -14789,7 +14898,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 421
-    }
+    },
+    "research_line": 542,
+    "registry_line": 151
   },
   {
     "id": "F150",
@@ -14883,7 +14994,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 422
-    }
+    },
+    "research_line": 543,
+    "registry_line": 152
   },
   {
     "id": "F151",
@@ -14956,7 +15069,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 428
-    }
+    },
+    "research_line": 551,
+    "registry_line": 153
   },
   {
     "id": "F152",
@@ -15029,7 +15144,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 429
-    }
+    },
+    "research_line": 552,
+    "registry_line": 154
   },
   {
     "id": "F153",
@@ -15102,7 +15219,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 430
-    }
+    },
+    "research_line": 553,
+    "registry_line": 155
   },
   {
     "id": "F154",
@@ -15175,7 +15294,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 431
-    }
+    },
+    "research_line": 554,
+    "registry_line": 156
   },
   {
     "id": "F155",
@@ -15248,7 +15369,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 432
-    }
+    },
+    "research_line": 555,
+    "registry_line": 157
   },
   {
     "id": "F156",
@@ -15321,7 +15444,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 433
-    }
+    },
+    "research_line": 556,
+    "registry_line": 158
   },
   {
     "id": "F157",
@@ -15394,7 +15519,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 434
-    }
+    },
+    "research_line": 557,
+    "registry_line": 159
   },
   {
     "id": "F158",
@@ -15467,7 +15594,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 435
-    }
+    },
+    "research_line": 558,
+    "registry_line": 160
   },
   {
     "id": "F159",
@@ -15540,7 +15669,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 436
-    }
+    },
+    "research_line": 559,
+    "registry_line": 161
   },
   {
     "id": "F160",
@@ -15613,7 +15744,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 437
-    }
+    },
+    "research_line": 560,
+    "registry_line": 162
   },
   {
     "id": "F161",
@@ -15686,7 +15819,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 438
-    }
+    },
+    "research_line": 561,
+    "registry_line": 163
   },
   {
     "id": "F162",
@@ -15759,7 +15894,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 439
-    }
+    },
+    "research_line": 562,
+    "registry_line": 164
   },
   {
     "id": "F163",
@@ -15832,7 +15969,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 440
-    }
+    },
+    "research_line": 563,
+    "registry_line": 165
   },
   {
     "id": "F164",
@@ -15905,7 +16044,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 441
-    }
+    },
+    "research_line": 564,
+    "registry_line": 166
   },
   {
     "id": "F165",
@@ -15978,7 +16119,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 442
-    }
+    },
+    "research_line": 565,
+    "registry_line": 167
   },
   {
     "id": "F166",
@@ -16051,7 +16194,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 443
-    }
+    },
+    "research_line": 566,
+    "registry_line": 168
   },
   {
     "id": "F167",
@@ -16124,7 +16269,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 444
-    }
+    },
+    "research_line": 567,
+    "registry_line": 169
   },
   {
     "id": "F168",
@@ -16197,7 +16344,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 445
-    }
+    },
+    "research_line": 568,
+    "registry_line": 170
   },
   {
     "id": "F169",
@@ -16270,7 +16419,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 446
-    }
+    },
+    "research_line": 569,
+    "registry_line": 171
   },
   {
     "id": "F170",
@@ -16343,7 +16494,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 447
-    }
+    },
+    "research_line": 570,
+    "registry_line": 172
   },
   {
     "id": "F171",
@@ -16416,7 +16569,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 453
-    }
+    },
+    "research_line": 578,
+    "registry_line": 173
   },
   {
     "id": "F172",
@@ -16489,7 +16644,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 454
-    }
+    },
+    "research_line": 579,
+    "registry_line": 174
   },
   {
     "id": "F173",
@@ -16562,7 +16719,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 455
-    }
+    },
+    "research_line": 580,
+    "registry_line": 175
   },
   {
     "id": "F174",
@@ -16635,7 +16794,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 456
-    }
+    },
+    "research_line": 581,
+    "registry_line": 176
   },
   {
     "id": "F175",
@@ -16708,7 +16869,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 457
-    }
+    },
+    "research_line": 582,
+    "registry_line": 177
   },
   {
     "id": "F176",
@@ -16781,7 +16944,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 458
-    }
+    },
+    "research_line": 583,
+    "registry_line": 178
   },
   {
     "id": "F177",
@@ -16854,7 +17019,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 459
-    }
+    },
+    "research_line": 584,
+    "registry_line": 179
   },
   {
     "id": "F178",
@@ -16927,7 +17094,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 460
-    }
+    },
+    "research_line": 585,
+    "registry_line": 180
   },
   {
     "id": "F179",
@@ -17000,7 +17169,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 461
-    }
+    },
+    "research_line": 586,
+    "registry_line": 181
   },
   {
     "id": "F180",
@@ -17073,7 +17244,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 462
-    }
+    },
+    "research_line": 587,
+    "registry_line": 182
   },
   {
     "id": "F181",
@@ -17146,7 +17319,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 463
-    }
+    },
+    "research_line": 588,
+    "registry_line": 183
   },
   {
     "id": "F182",
@@ -17219,7 +17394,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 464
-    }
+    },
+    "research_line": 589,
+    "registry_line": 184
   },
   {
     "id": "F183",
@@ -17292,7 +17469,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 465
-    }
+    },
+    "research_line": 590,
+    "registry_line": 185
   },
   {
     "id": "F184",
@@ -17365,7 +17544,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 466
-    }
+    },
+    "research_line": 591,
+    "registry_line": 186
   },
   {
     "id": "F185",
@@ -17438,7 +17619,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 467
-    }
+    },
+    "research_line": 592,
+    "registry_line": 187
   },
   {
     "id": "F186",
@@ -17511,7 +17694,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 473
-    }
+    },
+    "research_line": 600,
+    "registry_line": 188
   },
   {
     "id": "F187",
@@ -17584,7 +17769,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 474
-    }
+    },
+    "research_line": 601,
+    "registry_line": 189
   },
   {
     "id": "F188",
@@ -17657,7 +17844,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 475
-    }
+    },
+    "research_line": 602,
+    "registry_line": 190
   },
   {
     "id": "F189",
@@ -17730,7 +17919,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 476
-    }
+    },
+    "research_line": 603,
+    "registry_line": 191
   },
   {
     "id": "F190",
@@ -17803,7 +17994,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 477
-    }
+    },
+    "research_line": 604,
+    "registry_line": 192
   },
   {
     "id": "F191",
@@ -17876,7 +18069,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 478
-    }
+    },
+    "research_line": 605,
+    "registry_line": 193
   },
   {
     "id": "F192",
@@ -17949,7 +18144,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 479
-    }
+    },
+    "research_line": 606,
+    "registry_line": 194
   },
   {
     "id": "F193",
@@ -18022,7 +18219,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 480
-    }
+    },
+    "research_line": 607,
+    "registry_line": 195
   },
   {
     "id": "F194",
@@ -18095,7 +18294,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 481
-    }
+    },
+    "research_line": 608,
+    "registry_line": 196
   },
   {
     "id": "F195",
@@ -18168,7 +18369,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 482
-    }
+    },
+    "research_line": 609,
+    "registry_line": 197
   },
   {
     "id": "F196",
@@ -18241,7 +18444,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 483
-    }
+    },
+    "research_line": 610,
+    "registry_line": 198
   },
   {
     "id": "F197",
@@ -18314,7 +18519,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 484
-    }
+    },
+    "research_line": 611,
+    "registry_line": 199
   },
   {
     "id": "F198",
@@ -18387,7 +18594,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 485
-    }
+    },
+    "research_line": 612,
+    "registry_line": 200
   },
   {
     "id": "F199",
@@ -18460,7 +18669,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 486
-    }
+    },
+    "research_line": 613,
+    "registry_line": 201
   },
   {
     "id": "F200",
@@ -18533,7 +18744,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 487
-    }
+    },
+    "research_line": 614,
+    "registry_line": 202
   },
   {
     "id": "F201",
@@ -18606,7 +18819,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 493
-    }
+    },
+    "research_line": 622,
+    "registry_line": 203
   },
   {
     "id": "F202",
@@ -18679,7 +18894,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 494
-    }
+    },
+    "research_line": 623,
+    "registry_line": 204
   },
   {
     "id": "F203",
@@ -18752,7 +18969,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 495
-    }
+    },
+    "research_line": 624,
+    "registry_line": 205
   },
   {
     "id": "F204",
@@ -18825,7 +19044,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 496
-    }
+    },
+    "research_line": 625,
+    "registry_line": 206
   },
   {
     "id": "F205",
@@ -18898,7 +19119,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 497
-    }
+    },
+    "research_line": 626,
+    "registry_line": 207
   },
   {
     "id": "F206",
@@ -18984,7 +19207,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 498
-    }
+    },
+    "research_line": 627,
+    "registry_line": 208
   },
   {
     "id": "F207",
@@ -19057,7 +19282,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 499
-    }
+    },
+    "research_line": 628,
+    "registry_line": 209
   },
   {
     "id": "F208",
@@ -19130,7 +19357,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 500
-    }
+    },
+    "research_line": 629,
+    "registry_line": 210
   },
   {
     "id": "F209",
@@ -19203,7 +19432,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 501
-    }
+    },
+    "research_line": 630,
+    "registry_line": 211
   },
   {
     "id": "F210",
@@ -19285,7 +19516,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 502
-    }
+    },
+    "research_line": 631,
+    "registry_line": 212
   },
   {
     "id": "F211",
@@ -19358,7 +19591,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 508
-    }
+    },
+    "research_line": 639,
+    "registry_line": 213
   },
   {
     "id": "F212",
@@ -19431,7 +19666,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 509
-    }
+    },
+    "research_line": 640,
+    "registry_line": 214
   },
   {
     "id": "F213",
@@ -19504,7 +19741,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 510
-    }
+    },
+    "research_line": 641,
+    "registry_line": 215
   },
   {
     "id": "F214",
@@ -19577,7 +19816,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 511
-    }
+    },
+    "research_line": 642,
+    "registry_line": 216
   },
   {
     "id": "F215",
@@ -19650,7 +19891,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 512
-    }
+    },
+    "research_line": 643,
+    "registry_line": 217
   },
   {
     "id": "F216",
@@ -19723,7 +19966,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 513
-    }
+    },
+    "research_line": 644,
+    "registry_line": 218
   },
   {
     "id": "F217",
@@ -19796,7 +20041,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 514
-    }
+    },
+    "research_line": 645,
+    "registry_line": 219
   },
   {
     "id": "F218",
@@ -19869,7 +20116,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 515
-    }
+    },
+    "research_line": 646,
+    "registry_line": 220
   },
   {
     "id": "F219",
@@ -19942,7 +20191,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 516
-    }
+    },
+    "research_line": 647,
+    "registry_line": 221
   },
   {
     "id": "F220",
@@ -20015,7 +20266,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 517
-    }
+    },
+    "research_line": 648,
+    "registry_line": 222
   },
   {
     "id": "F221",
@@ -20088,7 +20341,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 518
-    }
+    },
+    "research_line": 649,
+    "registry_line": 223
   },
   {
     "id": "F222",
@@ -20161,7 +20416,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 519
-    }
+    },
+    "research_line": 650,
+    "registry_line": 224
   },
   {
     "id": "F223",
@@ -20234,7 +20491,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 520
-    }
+    },
+    "research_line": 651,
+    "registry_line": 225
   },
   {
     "id": "F224",
@@ -20307,7 +20566,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 521
-    }
+    },
+    "research_line": 652,
+    "registry_line": 226
   },
   {
     "id": "F225",
@@ -20380,7 +20641,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 522
-    }
+    },
+    "research_line": 653,
+    "registry_line": 227
   },
   {
     "id": "F226",
@@ -20453,7 +20716,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 523
-    }
+    },
+    "research_line": 654,
+    "registry_line": 228
   },
   {
     "id": "F227",
@@ -20526,7 +20791,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 524
-    }
+    },
+    "research_line": 655,
+    "registry_line": 229
   },
   {
     "id": "F228",
@@ -20599,7 +20866,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 525
-    }
+    },
+    "research_line": 656,
+    "registry_line": 230
   },
   {
     "id": "F229",
@@ -20672,7 +20941,9 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 526
-    }
+    },
+    "research_line": 657,
+    "registry_line": 231
   },
   {
     "id": "F230",
@@ -20745,6 +21016,8 @@
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 527
-    }
+    },
+    "research_line": 658,
+    "registry_line": 232
   }
 ]

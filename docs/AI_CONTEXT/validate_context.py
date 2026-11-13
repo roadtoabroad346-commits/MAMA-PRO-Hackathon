@@ -27,13 +27,41 @@ for name in ['01_MASTER_IMPLEMENTATION_PROMPT.md','03_INTEGRATED_PHASE_EXECUTION
  canonical.append(rows)
 check(len(canonical[0])==231 and canonical[0]==canonical[1],'Original master/plan canonical names/status/phase do not agree')
 check([(f['id'],f['name'],f['research_status'],f['phase']) for f in features]==canonical[0],'Generated registry differs from original canonical rows')
+# Verify the received research package independently of the engineering appendices.
+with (D/'sources/FEATURE_REGISTRY_000-230.csv').open(encoding='utf-8-sig',newline='') as f:
+ source_rows=list(csv.DictReader(f))
+check([(r['feature_id'],r['research_name'],r['research_status'],r['exp_stage']) for r in source_rows]==canonical[0],
+ 'Original Research CSV differs from canonical feature names/status/stages')
+research=(D/'sources/00_REFERENCE_RESEARCH.md').read_text()
+research_rows=[]
+for line in research.splitlines():
+ m=re.match(r'\| (\d+) \| (.*?) \| (DEMO|PILOT_TEST|LATER) \|',line)
+ if m:research_rows.append((f'F{int(m[1]):03}',m[2],m[3]))
+check(research_rows==[(r[0],r[1],r[2]) for r in canonical[0][1:]],
+ 'Research extract must contain all 230 named subfeatures in order, with original statuses')
+check('0. Продуктовая миссия' in research,'Research mission F000 missing')
+stage_map=read('sources/STAGE_MAP.json')['stages']
+check([(p['stage'],p['feature_ids']) for p in stage_map]==[(p['id'],p['feature_ids']) for p in phases],
+ 'Original stage map differs from generated EXP registry')
+for row in source_rows:check(bool(row['research_boundary']),row['feature_id']+': original boundary missing')
+for name in ['01_MASTER_IMPLEMENTATION_PROMPT.md','02_CODEX_ENGINEERING_PLAYBOOK.md','03_INTEGRATED_PHASE_EXECUTION_PLAN.md','FEATURE_REGISTRY_000-230.csv','README_START_HERE.md','STAGE_MAP.json']:
+ manifest=(D/'sources/SHA256_MANIFEST.txt').read_text()
+ expected_hash=re.search(r'^([a-f0-9]{64})  '+re.escape(name)+r'$',manifest,re.M)
+ check(bool(expected_hash) and hashlib.sha256((D/'sources'/name).read_bytes()).hexdigest()==expected_hash[1],
+  'Received source differs from archive manifest: '+name)
 coverage=[fid for p in phases for fid in p['feature_ids']]
 check(collections.Counter(coverage)==collections.Counter(expected),'Phase coverage has missing/duplicate F-IDs')
 check(collections.Counter(f['status'] for f in features)==summary['feature_counts'],'Summary status counts differ')
 check(collections.Counter(f['research_status'] for f in features)=={'MISSION':1,'DEMO':87,'PILOT_TEST':43,'LATER':100},'Research horizons differ')
 allowed={'VERIFIED_IMPLEMENTED','IMPLEMENTED_WITH_LIMITATIONS','PILOT_TEST_ONLY','PARTIALLY_IMPLEMENTED','PLANNED','BLOCKED_EXTERNAL','UNKNOWN'}
 required=['id','name','purpose','parent_user_problem','functional_requirements','status','code_refs','existing_tests','technical_dependencies','security_considerations','ux_requirements','acceptance_criteria','phase','remaining_work','human_gate','last_verified_sha']
-for f in features:
+for feature_index,f in enumerate(features):
+ check(f.get('registry_line')==feature_index+2,f"{f['id']}: original CSV line mismatch")
+ research_line=f.get('research_line',0)
+ check(1<=research_line<=len(research.splitlines()),f"{f['id']}: missing original Research line")
+ if 1<=research_line<=len(research.splitlines()):
+  source_line=research.splitlines()[research_line-1]
+  check('0. Продуктовая миссия' in source_line if feature_index==0 else source_line.startswith(f'| {feature_index} | {f["name"]} | {f["research_status"]} |'),f"{f['id']}: original Research anchor mismatch")
  check(all(k in f for k in required),f"{f['id']}: missing required fields")
  check(f['status'] in allowed,f"{f['id']}: bad status")
  check(f['id'] in pm[f['phase']]['feature_ids'],f"{f['id']}: phase assignment mismatch")
@@ -57,7 +85,7 @@ for record in refs([features,phases]):
 with (D/'FEATURE_REGISTRY.csv').open(newline='') as f:csvrows=list(csv.DictReader(f))
 check([x['id'] for x in csvrows]==expected,'CSV feature set mismatch')
 for row,f in zip(csvrows,features):
- for key in ['name','research_status','phase','status']:check(row[key]==f[key],f"CSV {f['id']}: {key} mismatch")
+ for key in ['name','research_status','phase','status','research_line','registry_line']:check(row[key]==str(f[key]),f"CSV {f['id']}: {key} mismatch")
 md=(D/'FEATURE_STATUS.md').read_text();check(re.findall(r'^## (F\d{3})$',md,re.M)==expected,'Readable feature sections mismatch')
 for f in features:check(f"**{f['name']}** — {f['status']}." in md,f"Readable status mismatch: {f['id']}")
 phase_md=(D/'PHASE_PROGRESS.md').read_text();check(re.findall(r'^## (EXP-\d\d)$',phase_md,re.M)==list(pm),'Readable phase sections mismatch')
@@ -70,7 +98,7 @@ for record in inventory:
 for record in summary['source_snapshots']:
  check(hashlib.sha256((R/record['path']).read_bytes()).hexdigest()==record['sha256'],'Uploaded source snapshot changed: '+record['path'])
 # New narrative documents only: archived original prompts have historical/example links.
-for p in [R/'AGENTS.md',*(D.glob('*.md')),R/'docs/expansion/SOURCE_RECONCILIATION.md']:
+for p in [R/'AGENTS.md',*(D.glob('*.md')),*(R/'docs/expansion').rglob('*.md')]:
  for target in re.findall(r'\[[^\]\n]+\]\(([^)\n]+)\)',p.read_text()):
   if re.match(r'^[a-z]+://',target):continue
   path,_,fragment=target.partition('#');dest=p.parent/path if path else p
@@ -79,6 +107,6 @@ for p in [R/'AGENTS.md',*(D.glob('*.md')),R/'docs/expansion/SOURCE_RECONCILIATIO
 for p in [R/'AGENTS.md',D/'PROJECT_MASTER_CONTEXT.md',D/'SESSION_HANDOFF.md']:
  check('LIVE_BLOCKED' in p.read_text(),str(p)+': missing live boundary')
 check('PENDING' in (D/'RESEARCH_TRACEABILITY.md').read_text(),'Parent interview pending marker missing')
-check('EXP-01' in (D/'SESSION_HANDOFF.md').read_text(),'Initialization stop condition missing')
+check('EXP-02' in (D/'SESSION_HANDOFF.md').read_text(),'Current EXP-02 scope missing')
 result={'status':'FAIL' if errors else 'PASS','checks':checks,'features':len(features),'phases':len(phases),'baseline_files_preserved':len(inventory),'errors':errors}
 print(json.dumps(result,ensure_ascii=False,indent=2));sys.exit(bool(errors))

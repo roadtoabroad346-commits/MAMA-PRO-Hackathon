@@ -2,7 +2,7 @@
 
 **LIVE_BLOCKED сохраняется; DEMO/PILOT_TEST only.**
 
-Эта память восстановлена из GitHub и четырёх пользовательских вложений. Scope текущего поручения — анализ, постоянная память и docs-only Git checkpoint. EXP-01–24 не исполнялись. Приложение сохранено без изменений.
+Память сверена с полным Research Markdown, исходным CSV F000–F230, README и всеми тремя инженерными документами. Оригинальный DOCX в checkout/remote отсутствует: его чтение и сверка с извлечением не заявляются. Текущее прямое поручение разрешило EXP-02; F017–F036 проверены, runtime-пробелов не обнаружено. Добавлены тесты и доказательная документация; приложение сохранено без изменений.
 
 ## Продукт и пользователь
 
@@ -22,7 +22,7 @@
 
 ## Проверенная исходная точка
 
-Репозиторий: https://github.com/roadtoabroad346-commits/MAMA-PRO-Hackathon . Default на момент проверки — `phase-0-audit`, SHA `7f8434a4cfd097b531fa584f5b97ebd1e772ad92`. Несмотря на имя, ветка содержит текущий CORE, pilot55–67, audit fixes и дизайн 12–13 ноября. Создана `feature/context-init-2026-11-13` от этого SHA. Точные ref/время/PR: [GIT_SNAPSHOT](GIT_SNAPSHOT.json); синхронизация текущего результата: [SESSION_HANDOFF](SESSION_HANDOFF.md).
+Репозиторий: https://github.com/roadtoabroad346-commits/MAMA-PRO-Hackathon . Default на момент проверки — `phase-0-audit`, SHA `7f8434a4cfd097b531fa584f5b97ebd1e772ad92`. Несмотря на имя, ветка содержит текущий CORE, pilot55–67, audit fixes и дизайн 12–13 ноября. Создана `feature/context-init-2026-11-13` от этого SHA. Исторический снимок: [GIT_SNAPSHOT](GIT_SNAPSHOT.json). В этой сессии remote рабочей ветки подтверждён как `0e7e1896776dc50e2c7be114e0ed249b8e800395`; это родитель нового checkpoint. Найден EXP-01 на отдельной ветке `feature/mamapro-exp01-20261113` @ `a93cc18d7b357a637c7114e9408ec11242156eba` (тот же runtime, тесты/документация). Он прочитан, не объединён и не продублирован. Текущий source/Git receipt: [EXP-02 sources](../expansion/evidence/EXP-02-sources.json); новый HEAD/remote проверяются командами из [handoff](SESSION_HANDOFF.md).
 
 Начальный checkout в этой среде был unborn `work`, без source/коммитов/dirty/stash. Выполнен fetch всех heads, сохранена история, затем новая ветка. Доступ к чужим машинам и их неопубликованной работе отсутствует; выводов об их состоянии нет.
 
@@ -41,7 +41,7 @@
 
 ## Полный функциональный охват
 
-[FEATURE_STATUS](FEATURE_STATUS.md) и [FEATURE_REGISTRY.json](FEATURE_REGISTRY.json) содержат ровно 231 запись F000–F230. Имена и EXP assignment сверены между master и integrated plan.
+[FEATURE_STATUS](FEATURE_STATUS.md) и [FEATURE_REGISTRY.json](FEATURE_REGISTRY.json) содержат ровно 231 запись F000–F230. Имена, source statuses и EXP assignment сверены между Research Markdown, исходным CSV, STAGE_MAP, master, integrated plan и существующими реестрами: 231 ID, без пропусков/дубликатов. `research_line`/`registry_line` дают исходную строку для каждого ID. Полное покрытие реестром не означает проверку всего будущего runtime.
 
 | Текущий статус | Число | Значение |
 |---|---|---|
@@ -59,11 +59,11 @@
 
 ## Исследование и рынок
 
-Исходный `00_REFERENCE_RESEARCH.docx` получен из пользовательского ZIP 13.11.2026 и сохранён в Библиотеке ChatGPT. Его [полное текстовое/табличное извлечение](sources/00_REFERENCE_RESEARCH.md), [исходный CSV](sources/FEATURE_REGISTRY_000-230.csv), [STAGE_MAP](sources/STAGE_MAP.json), [README](sources/README_START_HERE.md) и [manifest](sources/SHA256_MANIFEST.txt) добавлены в Git. Историческое утверждение об отсутствии оригинала относилось к состоянию до поступления архива; подробности [SOURCE_PACKAGE_INTAKE](sources/SOURCE_PACKAGE_INTAKE.md).
+Исторический intake утверждает, что `00_REFERENCE_RESEARCH.docx` получен из ZIP и сохранён в Библиотеке ChatGPT; эта библиотека не смонтирована. В текущей сессии DOCX и папка `research/` не найдены ни в workspace, ни в fetched heads; бинарный hash/полнота конверсии не перепроверены. Его [полное текстовое/табличное извлечение](sources/00_REFERENCE_RESEARCH.md), [исходный CSV](sources/FEATURE_REGISTRY_000-230.csv), [STAGE_MAP](sources/STAGE_MAP.json), [README](sources/README_START_HERE.md) и [manifest](sources/SHA256_MANIFEST.txt) добавлены в Git. Историческое утверждение об отсутствии оригинала относилось к состоянию до поступления архива; подробности [SOURCE_PACKAGE_INTAKE](sources/SOURCE_PACKAGE_INTAKE.md).
 
-Рынок Казахстана, языковые/финансовые/территориальные барьеры и проблема fragmented search — продуктовые гипотезы. В производном плане названы >237 тыс. детей с ООП и 125,1 тыс. детей с инвалидностью. Первичные источники чисел здесь не проверены; числа не складывать и не выдавать за покупателей/TAM/SAM. Нельзя утверждать «первый/единственный».
+Рынок Казахстана, языковые/финансовые/территориальные барьеры и проблема fragmented search — продуктовые гипотезы. В прочитанном Research §03 названы >237 тыс. детей с ООП, 125,1 тыс. детей с инвалидностью, 6,9 млн детей, 539 организаций и 19,5 млн пользователей интернета (93,4%). Первичные источники чисел здесь не проверены; числа не складывать и не выдавать за покупателей/TAM/SAM. Нельзя утверждать «первый/единственный».
 
-Аналоги из исходных briefs: 2GIS, 103.kz, общий поиск, соцсети/родительские сообщества. Текущая feature-by-feature проверка конкурентов не выполнена; нельзя выводить отсутствие у них функций. Гипотеза отличия — same-offer explanation + provenance Trust Passport + организационный путь, позднее affordability/support navigation.
+Research §04 называет 103.kz, Logozavr, 2GIS/карты, соцсети/чаты, прямые центры и фонды. Текущая feature-by-feature проверка конкурентов не выполнена; нельзя выводить отсутствие у них функций. Гипотеза отличия — same-offer explanation + provenance Trust Passport + организационный путь, позднее affordability/support navigation.
 
 Социальные метрики предложены для процесса: ясность следующего шага, завершение поиска/сравнения, вопросы к специалисту, unmatched queries, technical receipt, specialist confirmation. Измеренного социального/медицинского эффекта нет. Для будущего dashboard нужны event definition, период, n, numerator/denominator и synthetic/live labels.
 
@@ -71,12 +71,13 @@
 
 Раздел **«Созвон с родителем и анализ её проблемы на практике» — PENDING**. Аутентичные материалы/согласие/протокол отсутствуют. Интервью, цитаты, достижения и human UAT не выдумываются. Полная цепочка доказательств/гипотез: [RESEARCH_TRACEABILITY](RESEARCH_TRACEABILITY.md).
 
+Research §09 задаёт семь LATER-направлений: Smart Guide, Trust Gap, Smart Zero, Accessibility Fit, True Cost, Social Support Navigator, Impact Dashboard. §10 содержит H1–H7; все остаются гипотезами. Эксперименты H1–H5 связаны с пятью заданиями интервью, H6 — с unknown-вопросами, H7 — с доступностью поддержки. Технический EXP-02 подтверждает возможность задать условия, но не успех реального родителя.
+
 Материалы защиты уже есть в `docs/phase14/`: slides/video/rehearsal, включая синтезированную голосовую запись. Их наличие/хеши учтены; запись человека и результаты исследования из этого не следуют. Бинарные материалы в этой инициализации не воспроизводились. Актуальность условий конкурса после исторической проверки 6 ноября не подтверждалась.
 
 ## Решения и следующий шаг
 
 Действующие product/architecture ADR сохраняются в [историческом журнале](../DECISIONS.md); новые решения восстановления — [DECISION_LOG](DECISION_LOG.md). Противоречия и их временное разрешение — [SOURCE_RECONCILIATION](../expansion/SOURCE_RECONCILIATION.md). Неполученные данные/решения — [OPEN_QUESTIONS](OPEN_QUESTIONS.md).
 
-Текущий результат — постоянная память с доказательными ссылками, baseline regression и docs-only checkpoint. Он не устраняет отсутствие реального интервью, независимой проверки статистики и operational sign-offs. Первое рекомендуемое продуктовое поручение после явного разрешения: EXP-11, узкий deterministic Trust Gap slice F136, переиспользующий existing unknown/freshness/trust data. Никакого LLM/provider подключения для него не требуется. Требования и stop condition записаны в handoff.
-
+Текущий результат — [EXP-02](../expansion/stages/EXP-02.md): четыре AC подтверждены автоматикой, F017–F036 имеют точные code/test связи; A/B/C RU/KK, soft/hard, draft/applied, бюджет, Back/reload проверены. Runtime и 335 исходных baseline-файлов не изменены. Следующий безопасный кандидат — EXP-03 F037–F060, только после нового поручения: matching invariants, same-offer, freshness, zero results и benchmark. Human UAT/native KK/real AT, первичные внешние источники, DOCX и live sign-offs остаются открытыми.
 Новая сессия читает AGENTS → master → handoff → phases → Git → нужные specs; затем фиксирует конкретное действие. После задачи обновляет только относящиеся feature/phase/decision/evidence записи, commit/push и проверяет remote. Память — version-controlled документы, а не обещание неограниченного контекста модели.

@@ -73,7 +73,7 @@
       "F015",
       "F016"
     ],
-    "status": "EXISTING_DEMO_WITH_LIMITATIONS",
+    "status": "TECHNICAL_VERIFIED_ON_SIBLING_BRANCH_HUMAN_BLOCKED",
     "objective": "Обеспечить понятный вход родителя без регистрации, чёткий CTA, RU/KK, достоверную маркировку демо и визуально связанный путь.",
     "prerequisites": "EXP-00.",
     "technical_architecture": "Не переписывать визуальную систему; при необходимости исправить обнаруженные проблемы текста, focus, mobile reflow, deep links, return navigation и состояния Қарлығаш.",
@@ -116,9 +116,11 @@
     "allowed_result": "DEMO READY только после текущих тестов.",
     "completion_evidence": {
       "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
-      "qa": "VALIDATION.md",
-      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
-      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+      "qa": "https://github.com/roadtoabroad346-commits/MAMA-PRO-Hackathon/blob/a93cc18d7b357a637c7114e9408ec11242156eba/docs/expansion/stages/EXP-01.md",
+      "phase_ac_status": "HISTORICAL_RECORDED_ON_SIBLING_BRANCH",
+      "recorded_remote_sha": "a93cc18d7b357a637c7114e9408ec11242156eba",
+      "branch": "feature/mamapro-exp01-20261113",
+      "reason": "Read remote evidence; no merge or copy of EXP-01 test/doc implementation. Runtime identical."
     },
     "source": {
       "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
@@ -150,7 +152,7 @@
       "F035",
       "F036"
     ],
-    "status": "EXISTING_DEMO_WITH_LIMITATIONS",
+    "status": "TECHNICAL_VERIFIED_HUMAN_BLOCKED",
     "objective": "Родитель без знания специальности может выразить ограничения без диагноза, увидеть ровно те параметры, которые применятся в поиске.",
     "prerequisites": "EXP-01.",
     "technical_architecture": "Проверить четыре шага, null semantics, hard/soft switches, budget validation, review count и сохранение текста/настроек. Улучшать UX только по измеренным проблемам.",
@@ -162,7 +164,7 @@
       "src/domain/contracts.ts"
     ],
     "reuse_foundations": "Intake.tsx, Review.tsx, canonical SearchInput/session schemas.",
-    "missing_implementation": "Полевые проверки/KK и доказательство каждого нового EXP AC; existing code не пересоздавать.",
+    "missing_implementation": "Runtime gap не обнаружен. Human UAT/native KK/real device и оригинальный DOCX остаются NOT_RUN/UNAVAILABLE.",
     "backend_requirements": "Сохранять текущие domain/storage contracts; private authority в server/service.ts.",
     "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Родитель без знания специальности может выразить ограничения без диагноза, увидеть ровно те параметры, которые применятся в поиске.",
     "data_models": "SearchInput, Session, intakeDraft, applied input",
@@ -192,9 +194,16 @@
     "allowed_result": "DEMO; полевые выводы отдельно.",
     "completion_evidence": {
       "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
-      "qa": "VALIDATION.md",
-      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
-      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+      "parent_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395",
+      "qa": "docs/expansion/stages/EXP-02.md",
+      "phase_ac_status": "AUTOMATED_VERIFIED_SYNTHETIC",
+      "ac_results": {
+        "EXP-02-AC-01": "PASS_AUTOMATED",
+        "EXP-02-AC-02": "PASS_AUTOMATED",
+        "EXP-02-AC-03": "PASS_AUTOMATED",
+        "EXP-02-AC-04": "PASS_AUTOMATED"
+      },
+      "reason": "20 feature-specific code/test mappings; new A/B/C RU/KK and budget/soft-flag evidence. Runtime unchanged; human gate open."
     },
     "source": {
       "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",

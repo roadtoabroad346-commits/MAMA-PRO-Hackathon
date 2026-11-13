@@ -8,11 +8,11 @@
 4. Проверить `git status --short --branch`, `git log -5 --oneline`, remote HEAD/ветки и открытые PR.
 5. Прочитать относящиеся к задаче исходные требования и текущий код. Назвать точный следующий шаг перед редактированием.
 
-Текущий scope — **инициализация контекста**. EXP-01 и далее не начинать, пока владелец явно не поручит продолжение. Текущие прямые инструкции пользователя имеют приоритет над историческими промптами внутри docs/sources и docs/AI_CONTEXT/sources. Старый README о неактуальной default не использовать без проверки Git.
+Текущий scope — **сверка поступивших источников и EXP-02 F017–F036**, явно порученный владельцем. После EXP-02 остановиться; EXP-03+ не начинать без нового поручения. Текущие прямые инструкции пользователя имеют приоритет над историческими промптами внутри docs/sources и docs/AI_CONTEXT/sources. Старый README о неактуальной default не использовать без проверки Git.
 
 ## Исходный пакет Research (13.11.2026)
 
-Исходные материалы пользователя теперь доступны внутри Git: [читабельный Research](docs/AI_CONTEXT/sources/00_REFERENCE_RESEARCH.md), [оригинальный CSV реестра 231 функций](docs/AI_CONTEXT/sources/FEATURE_REGISTRY_000-230.csv), [карта 25 EXP стадий](docs/AI_CONTEXT/sources/STAGE_MAP.json), [README архива](docs/AI_CONTEXT/sources/README_START_HERE.md), [SHA-256 manifest](docs/AI_CONTEXT/sources/SHA256_MANIFEST.txt), [provenance и ограничения импорта](docs/AI_CONTEXT/sources/SOURCE_PACKAGE_INTAKE.md). Research Markdown — текстовое извлечение из исходного DOCX, не отменяет проверку первичных внешних источников. Числа рынка/конкуренты/интервью остаются неподтверждёнными, если отдельное evidence отсутствует.
+Материалы доступны внутри Git; Research ниже — Markdown-извлечение. Оригинального DOCX и папки research/ в проверенных remote heads/workspace нет; не заявлять чтение бинарника. Доступные источники: [читабельный Research](docs/AI_CONTEXT/sources/00_REFERENCE_RESEARCH.md), [оригинальный CSV реестра 231 функций](docs/AI_CONTEXT/sources/FEATURE_REGISTRY_000-230.csv), [карта 25 EXP стадий](docs/AI_CONTEXT/sources/STAGE_MAP.json), [README архива](docs/AI_CONTEXT/sources/README_START_HERE.md), [SHA-256 manifest](docs/AI_CONTEXT/sources/SHA256_MANIFEST.txt), [provenance и ограничения импорта](docs/AI_CONTEXT/sources/SOURCE_PACKAGE_INTAKE.md). Research Markdown — текстовое извлечение из исходного DOCX, не отменяет проверку первичных внешних источников. Числа рынка/конкуренты/интервью остаются неподтверждёнными, если отдельное evidence отсутствует.
 
 ## Карта памяти
 

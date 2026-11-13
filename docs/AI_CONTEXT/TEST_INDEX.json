@@ -853,5 +853,20 @@
     "path": "tests/session.test.ts",
     "line": 41,
     "text": "it('honestly reports read/write denial, with usable memory defaults', () => {"
+  },
+  {
+    "path": "tests/e2e/exp02.spec.ts",
+    "line": 16,
+    "text": "test(`EXP-02 ${locale}: language and format preferences remain soft after editing and reload`, async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/exp02.spec.ts",
+    "line": 46,
+    "text": "test(`EXP-02 ${locale} ${name}: four-step draft, shared exact/incomplete counts and explicit apply`, async ({ page }) => {"
+  },
+  {
+    "path": "tests/e2e/exp02.spec.ts",
+    "line": 94,
+    "text": "test(`EXP-02 ${locale}: invalid budget blocks review apply and keeps other answers through history`, async ({ page }) => {"
   }
 ]
