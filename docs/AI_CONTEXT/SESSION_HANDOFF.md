@@ -33,7 +33,7 @@ git ls-remote origin refs/heads/feature/context-init-2026-11-13
 
 Начать с [AGENTS](../../AGENTS.md), [master](PROJECT_MASTER_CONTEXT.md), [phase map](PHASE_PROGRESS.md). Полные feature records в JSON; поля `phase_ref` разрешаются в EXP registry, пути относительно корня repo. Старый docs/PHASE_REGISTRY.json — только история0–68; не заменять новым.
 
-Original Research DOCX/CSV/README_START_HERE отсутствуют. Каноническая нумерация из одинакового AppendixA двух приложенных документов; original source metadata/hash сохранены. 39 исторических фаз TEAM_ATTESTED, independent delivery evidence UNKNOWN. Интервью родителя PENDING, native KK/real AT/device acceptance NOT_RUN. Все live gates сохраняются. Полный список: [OPEN_QUESTIONS](OPEN_QUESTIONS.md).
+**Source intake 13.11.2026:** Research DOCX получен из загруженного ZIP и сохранён в ChatGPT Library, полное текстовое/табличное извлечение [Research](sources/00_REFERENCE_RESEARCH.md), исходный [CSV](sources/FEATURE_REGISTRY_000-230.csv), [STAGE_MAP](sources/STAGE_MAP.json), [README](sources/README_START_HERE.md) и SHA256 manifest добавлены в ветку. 231 ID и 25 EXP стадий структурно проверены; статусы реализации остаются прежними. 39 исторических фаз TEAM_ATTESTED, independent delivery evidence UNKNOWN. Интервью родителя PENDING, native KK/real AT/device acceptance NOT_RUN. LIVE_BLOCKED не изменён. Полный список: [OPEN_QUESTIONS](OPEN_QUESTIONS.md).
 
 F065: CORE район без полного address/venue. F104: audit metadata, без полноценного moderator case-history UI. F119: overlap warning, без server slot lock. F135/137/149/150/206/210 имеют только перечисленные foundations. Не пересоздавать имеющиеся audit fixes, Bird3 poses, gradients/icons, radio sort/district, budget chips, subgrid compare и Intl dates.
 
@@ -41,7 +41,7 @@ F065: CORE район без полного address/venue. F104: audit metadata,
 
 **STOP после initialization. EXP-01 и далее требуют нового прямого указания владельца.** Исходный [context prompt](sources/00_CONTEXT_INITIALIZATION_REQUEST.md), раздел12: «Do not begin implementation of EXP-01 or later until I explicitly instruct you to continue.» Это ограничение scope, а не запрос дополнительного разрешения для завершения текущей документации.
 
-Рекомендация для будущего продуктового поручения: EXP-11, deterministic Trust Gap F136. Переиспользовать TrustPassport/OfferEvaluation.unknowns/freshness; неизвестный факт→вопрос+source state; без LLM. Перед этим сверить missing Research, текущий remote и baseline regressions.
+Рекомендация для будущего продуктового поручения: EXP-11, deterministic Trust Gap F136. Переиспользовать TrustPassport/OfferEvaluation.unknowns/freshness; неизвестный факт→вопрос+source state; без LLM. Перед этим сверить новый Research и первичные источники, текущий remote и baseline regressions.
 
 Предлагаемые slice AC: (1) вопросы только о missing/stale facts конкретного offer; (2) known current факт не порождает ложный пробел; (3) source/date/scope видны; (4) RU/KK и keyboard/320px; (5) нет clinical recommendations/автоматического hard relaxation; (6) deny/error/offline сохраняют deterministic fallback. Tests: pure table rules + focused E2E; stop после этих AC и checkpoint. Это предложение, код не создан.
 

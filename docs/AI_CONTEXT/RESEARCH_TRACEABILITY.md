@@ -4,7 +4,7 @@
 
 - CODE/TEST_OBSERVED: текущие файлы и реально выполненные команды на baseline; лог/команда/SHA в VALIDATION.
 - HISTORICAL_RECORDED: исходные ТЗ/QA/ADR/attestation с собственными датами; не новый факт этой сессии.
-- DERIVATIVE_SOURCE: утверждение производных приложенных master/plan со ссылкой на отсутствующий Research; первичная проверка не выполнена.
+- DERIVATIVE_SOURCE: утверждение master/plan, существовавшее до поступления исходного Research. Текст Research теперь доступен, но ссылки на первичные внешние факты и реальный human research остаются непроверенными.
 - PROPOSAL/HYPOTHESIS: решение/ожидание команды; не наблюдение родителя.
 - PENDING/UNKNOWN: первичных данных нет. Никакие результаты в эту категорию не дорисованы.
 
@@ -16,12 +16,12 @@
 |---|---|---|---|
 | R-01 | [ТЗ6 ноября](../sources/QOLDAU_ZHOL_FULL_TECHNICAL_SPEC_v1.0.txt) | Исходный контракт, сегменты/гипотезы, P0, правила и proposed метрики | Проведённые интервью, нынешнюю готовность приложения, актуальность правил конкурса |
 | R-02 | [Исходный brief](../sources/MASTER_PROMPT_MAMAPRO_CODEX.txt) | Требование исследовать, аналоги-кандидаты, предложенные задачи родителя | Выполнение исследования/конкурентный факт |
-| R-03 | [Master13 ноября](sources/01_MASTER_IMPLEMENTATION_PROMPT.md) | Все231 original names, research labels, продуктовые инварианты | Подлинность недоступного Research, текущую реализацию каждого ID |
+| R-03 | [Master13 ноября](sources/01_MASTER_IMPLEMENTATION_PROMPT.md) | Все 231 F-ID/названия и продуктовые инварианты | Фактическую реализацию функций не подтверждает; для Research сверять [источник](sources/00_REFERENCE_RESEARCH.md) |
 | R-04 | [Engineering playbook](sources/02_CODEX_ENGINEERING_PLAYBOOK.md) | Правила provenance/QA/безопасности и delivery workflow | Approval оператора/live |
 | R-05 | [EXP plan](sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md) | Все25 карточек, dependencies, AC, market caveats | Actual execution, external permissions или измеренный impact |
 | R-06 | [Historical phase registry](../PHASE_REGISTRY.json), [attestation](../TEAM_REVIEW_ATTESTATION.md) | Какие evidence/заявления записаны | Независимое подтверждение39 фаз |
 | R-07 | [Новый inventory](SOURCE_INVENTORY.csv), [validation](VALIDATION.md) | Наличие/хеши335 baseline файлов, текущие baseline tests | Human UAT, полевые данные, содержимое binary видео/слайдов |
-| R-08 | Original DOCX, original CSV, README_START_HERE | MISSING_AFTER_SEARCH: attachments, adjacent /workspace, Git tree | Никаких conclusions из их отсутствующего текста |
+| R-08 | [Research text extract](sources/00_REFERENCE_RESEARCH.md), [CSV](sources/FEATURE_REGISTRY_000-230.csv), [README](sources/README_START_HERE.md), [STAGE_MAP](sources/STAGE_MAP.json) | SOURCE_RECEIVED 13.11.2026; документ-первоисточник сохранён в Library, текст и таблицы доступны Codex в repo | Бинарный DOCX не вложен в Git, ручная валидация исследований/полевых данных не проведена |
 
 ## Цепочки требований
 
