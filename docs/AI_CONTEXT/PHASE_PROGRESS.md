@@ -1,5 +1,7 @@
 # EXP-00–EXP-24: карта фаз
 
+EXP-03 B DOMAIN_VERIFIED:196 unit/integration PASS; six reproduced regressions corrected. C/D pending; [stage/evidence](../expansion/stages/EXP-03.md).
+
 EXP-03 A AUDITED; B/C/D pending. Baseline154 PASS, real 20/100/1000 benchmark recorded. [Stage](../expansion/stages/EXP-03.md).
 
 Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Current action: EXP-02 F017–F036 verification and source reconciliation; runtime unchanged.

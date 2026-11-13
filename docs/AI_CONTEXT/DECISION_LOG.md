@@ -26,3 +26,9 @@
 ## ADR-CTX-EXP03-A — authorized scope and snapshot
 
 Direct user instruction authorizes only EXP-03 F037–F060, four checkpoints and branch pushes. Start from verified EXP-02 remote0ebd5bf rather than old default; sibling EXP-01 remains separate, no merge. Reuse current evaluator and schemas. Correct identified gaps at SearchService/text/explanations only as demonstrated by regression tests. F059 means same-tab condition restoration; saved-search CRUD F161 is outside this phase. No EXP-04 without permission. LIVE_BLOCKED unchanged.
+
+## ADR-CTX-EXP03-B — candidate text, ties and evidence integrity
+
+Six red regression cases reproduced omitted RU/KK title (2), host-collated ID ties (3 sort modes), and invalid inspectOffer clock (1). SearchService now indexes normalized fields separately per offer once at construction, including own title and own category plus specialist name. No sibling text or fact aggregation. Inputs/field weights/eligibility stay rules-v2; catalog-v2/session schema/freshness-v2 unchanged. Opaque ID tie-break is explicit UTF-16 ordinal, preserving the existing ASCII demo order; score semantics do not change. inspectOffer uses search's existing invalid-clock error. Public catalog is a parsed service-owned snapshot; no runtime catalog editing is supported.
+
+Historical inventory335 remains immutable as evidence. Context validator now checks reviewed changed files against both historical Git blobs and an explicit current-hash manifest; every unlisted path must retain its original hash. It no longer falsely requires bug fixes to leave all runtime bytes unchanged. Original source prompts remain byte-exact. No schema migration or live effect.

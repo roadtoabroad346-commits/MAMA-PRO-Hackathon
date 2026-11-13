@@ -22,6 +22,8 @@ const aliases: Record<Category, readonly string[]> = {
   DEFECTOLOG: ['дефектология', 'арнайы педагог'],
   PSYCHOLOG: ['психология'],
 };
+// IDs are opaque tie-break keys: compare UTF-16 code units, never host collation.
+const compareId = (a: string, b: string): number => a < b ? -1 : a > b ? 1 : 0;
 
 // Validate and strip unrecognized fields before any public candidate evaluation.
 export function publicCatalog(raw: Catalog): Catalog {
@@ -34,27 +36,36 @@ export function publicCatalog(raw: Catalog): Catalog {
 export class SearchService {
   readonly catalog: Catalog;
   private readonly clock: Clock;
+  private readonly textIndex: Map<string, string[]>;
   constructor(catalog: Catalog, clock: Clock = fixedClock(catalog.demoClock)) {
     this.catalog = publicCatalog(catalog);
     this.clock = clock;
+    // The service owns a parsed catalog snapshot. Index only each offer's own
+    // title/category and its specialist's name; sibling offer facts never enter.
+    const specialists = new Map(this.catalog.specialists.map(s => [s.id, s]));
+    const categories = new Map(this.catalog.categories.map(c => [c.id, c]));
+    this.textIndex = new Map(this.catalog.offers.map(offer => {
+      const specialist = specialists.get(offer.specialistId)!;
+      const category = categories.get(offer.categoryId)!;
+      return [offer.id, [specialist.displayName.ru, specialist.displayName.kk,
+        category.label.ru, category.label.kk, offer.title.ru, offer.title.kk,
+        ...aliases[offer.categoryId]].map(normalizeSearchText)];
+    }));
   }
 
   // Shared evaluation for profile/compare; no hybrid or fallback selection.
   inspectOffer(raw: SearchInput, offerId: string): RatedOffer | null {
     const input = normalizeSearchInput(raw);
     const now = this.clock.now();
-    const offer = this.catalog.offers.find(o => o.id === offerId && this.textMatches(o, input));
+    if (!Number.isFinite(now.getTime())) throw new Error('INVALID_CATALOG_CLOCK');
+    const offer = this.catalog.offers.find(o => o.id === offerId && this.textMatches(o.id, normalizeSearchText(input.query)));
     if (!offer) return null;
     const evaluation = this.evaluate(input, offer, { now: () => now });
     return evaluation.eligibility === 'excluded' ? null : this.toRated(evaluation);
   }
 
-  private textMatches(offer: Offer, input: SearchInput): boolean {
-    if (!input.query) return true;
-    const specialist = this.catalog.specialists.find(s => s.id === offer.specialistId);
-    const category = this.catalog.categories.find(c => c.id === offer.categoryId);
-    return [specialist?.displayName.ru ?? '', specialist?.displayName.kk ?? '', category?.label.ru ?? '', category?.label.kk ?? '', ...aliases[offer.categoryId]]
-      .some(text => normalizeSearchText(text).includes(normalizeSearchText(input.query)));
+  private textMatches(offerId: string, query: string): boolean {
+    return !query || (this.textIndex.get(offerId)?.some(text => text.includes(query)) ?? false);
   }
 
   private evaluate(input: SearchInput, offer: Offer, clock: Clock): OfferEvaluation {
@@ -75,11 +86,12 @@ export class SearchService {
 
   search(raw: SearchInput, now = this.clock.now()): SearchResult {
     const input = normalizeSearchInput(raw);
+    const query = normalizeSearchText(input.query);
     if (!Number.isFinite(now.getTime())) throw new Error('INVALID_CATALOG_CLOCK');
     const eligible: RatedOffer[] = [], incomplete: RatedOffer[] = [];
     const clock: Clock = { now: () => now };
     for (const offer of this.catalog.offers) {
-      if (!this.textMatches(offer, input)) continue;
+      if (!this.textMatches(offer.id, query)) continue;
       const evaluation = this.evaluate(input, offer, clock);
       if (evaluation.eligibility === 'excluded') continue;
       (evaluation.eligibility === 'eligible' ? eligible : incomplete).push(this.toRated(evaluation));
@@ -99,14 +111,14 @@ export class SearchService {
         const [ag, ap] = priceKey(ao), [bg, bp] = priceKey(bo);
         const diff = ag - bg || ap - bp;
         if (diff) return diff;
-        return a.specialistId.localeCompare(b.specialistId) || a.selectedOfferId.localeCompare(b.selectedOfferId);
+        return compareId(a.specialistId, b.specialistId) || compareId(a.selectedOfferId, b.selectedOfferId);
       }
       if (districtKeys) {
         const diff = districtKeys.get(ao.id)! - districtKeys.get(bo.id)!;
         if (diff) return diff;
       }
       return (b.score ?? 0) - (a.score ?? 0) || (b.coverage ?? 0) - (a.coverage ?? 0)
-        || a.specialistId.localeCompare(b.specialistId) || a.selectedOfferId.localeCompare(b.selectedOfferId);
+        || compareId(a.specialistId, b.specialistId) || compareId(a.selectedOfferId, b.selectedOfferId);
     };
     const group = (offers: RatedOffer[]): GroupedSearchItem[] => {
       const groups = new Map<string, GroupedSearchItem>();

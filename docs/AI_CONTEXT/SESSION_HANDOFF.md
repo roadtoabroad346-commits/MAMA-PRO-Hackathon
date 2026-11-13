@@ -1,3 +1,9 @@
+# EXP-03 checkpoint B handoff
+
+LIVE_BLOCKED. Branch `codex/exp-03-offer-matching`. Last confirmed remote A: `cd1a7a5812ea65bd8bc49ee149bdfe105f0f1773`; containing commit is resolved after push. B corrects three SearchService defects proven by six red cases. New42 tests/200 seeded catalogs pass; full196 strict TS/unit/integration PASS. [Stage and matrix](../expansion/stages/EXP-03.md); [reviewed baseline changes](../expansion/evidence/EXP-03-verified-changes.json).
+
+Next C: localized label/help for own-title search and real browser tests RU/KK, mobile, keyboard, errors, navigation, zero/incomplete. D benchmarks/full regression/closure pending. No EXP-04. Human/native KK/physical-device/real AT evidence remains BLOCKED_EXTERNAL/NOT_VERIFIED. Baseline/EXP-02 history follows.
+
 # EXP-03 checkpoint A handoff
 
 LIVE_BLOCKED; synthetic-only. Current branch: `codex/exp-03-offer-matching` from verified remote EXP-02 `0ebd5bf206f082db718945096b7abfdeee1fa31b`. Direct user request supersedes prior STOP at EXP-02; STOP now after EXP-03. [Contracts, findings, matrix and rollback](../expansion/stages/EXP-03.md).

@@ -89,12 +89,24 @@ for row,f in zip(csvrows,features):
 md=(D/'FEATURE_STATUS.md').read_text();check(re.findall(r'^## (F\d{3})$',md,re.M)==expected,'Readable feature sections mismatch')
 for f in features:check(f"**{f['name']}** — {f['status']}." in md,f"Readable status mismatch: {f['id']}")
 phase_md=(D/'PHASE_PROGRESS.md').read_text();check(re.findall(r'^## (EXP-\d\d)$',phase_md,re.M)==list(pm),'Readable phase sections mismatch')
-# Verify every original baseline file hash, including binaries; no product/config/test was overwritten.
+# Preserve the historical snapshot, while checking explicitly reviewed EXP changes
+# against both the original Git blob and their recorded current content hash.
 with (D/'SOURCE_INVENTORY.csv').open(newline='') as f:inventory=list(csv.DictReader(f))
 check(len(inventory)==335,'Expected 335 baseline records')
 check({x['path'] for x in inventory}==set(git('ls-tree','-r','--name-only',summary['baseline_sha']).splitlines()),'Inventory differs from baseline Git tree')
+change_path=R/'docs/expansion/evidence/EXP-03-verified-changes.json'
+changes=json.loads(change_path.read_text())['changes'] if change_path.exists() else []
+changed={x['path']:x for x in changes}
+check(len(changed)==len(changes),'Duplicate reviewed change path')
+check(set(changed)<=set(x['path'] for x in inventory),'Reviewed changes must refer to baseline files')
 for record in inventory:
- p=R/record['path'];check(p.is_file() and hashlib.sha256(p.read_bytes()).hexdigest()==record['sha256'],'Baseline file changed/missing: '+record['path'])
+ p=R/record['path'];reviewed=changed.get(record['path'])
+ if reviewed:
+  check(reviewed['baselineSha256']==record['sha256'],'Reviewed baseline hash mismatch: '+record['path'])
+  original=subprocess.check_output(['git','show',summary['baseline_sha']+':'+record['path']],cwd=R)
+  check(hashlib.sha256(original).hexdigest()==record['sha256'],'Original Git blob differs: '+record['path'])
+  check(bool(reviewed.get('reason')) and bool(reviewed.get('verification')),'Missing change review: '+record['path'])
+ check(p.is_file() and hashlib.sha256(p.read_bytes()).hexdigest()==(reviewed['currentSha256'] if reviewed else record['sha256']),'Unreviewed file change/missing: '+record['path'])
 for record in summary['source_snapshots']:
  check(hashlib.sha256((R/record['path']).read_bytes()).hexdigest()==record['sha256'],'Uploaded source snapshot changed: '+record['path'])
 # New narrative documents only: archived original prompts have historical/example links.
@@ -107,6 +119,6 @@ for p in [R/'AGENTS.md',*(D.glob('*.md')),*(R/'docs/expansion').rglob('*.md')]:
 for p in [R/'AGENTS.md',D/'PROJECT_MASTER_CONTEXT.md',D/'SESSION_HANDOFF.md']:
  check('LIVE_BLOCKED' in p.read_text(),str(p)+': missing live boundary')
 check('PENDING' in (D/'RESEARCH_TRACEABILITY.md').read_text(),'Parent interview pending marker missing')
-check('EXP-02' in (D/'SESSION_HANDOFF.md').read_text(),'Current EXP-02 scope missing')
-result={'status':'FAIL' if errors else 'PASS','checks':checks,'features':len(features),'phases':len(phases),'baseline_files_preserved':len(inventory),'errors':errors}
+check(read('../expansion/STATE.json')['currentStage'] in (D/'SESSION_HANDOFF.md').read_text(),'Current stage scope missing')
+result={'status':'FAIL' if errors else 'PASS','checks':checks,'features':len(features),'phases':len(phases),'baseline_files_preserved':len(inventory)-len(changed),'baseline_files_reviewed_changed':len(changed),'errors':errors}
 print(json.dumps(result,ensure_ascii=False,indent=2));sys.exit(bool(errors))

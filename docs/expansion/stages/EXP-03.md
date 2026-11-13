@@ -14,6 +14,10 @@ Confirmed gaps to fix in B/C: text candidate selection omits RU/KK offer titles;
 
 Security: Zod strips nonpublic extra catalog fields and validates IDs/FKs/price/date invariants; query is a bounded literal substring, rendered as React text. Published-only candidates; no secrets/real PII/provider/send/live changes. Negative proof will include invalid inputs/catalogs and injection strings. Review source dates independently from specialist verification badges.
 
+## B — domain correctness
+
+Reproduced6 FAIL/36 PASS in [red run](../evidence/EXP-03-B-red.log), then corrected SearchService title candidates, ordinal ID ties and invalid inspect clock. [Full check](../evidence/EXP-03-B-check.log): strict TS,196 unit/integration (42 new), historical registry PASS; failed0/skipped0. Added independent seeded hard-language/format/price oracle over200 four-offer sibling catalogs, permutation stability/soft-vs-hard/input immutability, per-offer RU/KK reason provenance, free/unknown/from/stale and budget/age boundaries, invalid inputs/catalogs/literal injection queries. Existing scenario IDs preserved. No changes to matching weights/schema/freshness policy or storage/API. Indexed fields are separate strings, so queries cannot span unrelated attributes.
+
 ## Acceptance and verification plan
 
 - AC-01: adversarial sibling offers, isolated inspectOffer and seeded permutation properties must never create a hybrid match.

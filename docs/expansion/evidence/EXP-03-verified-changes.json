@@ -1,0 +1,12 @@
+{
+  "historicalBaselineSha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+  "changes": [
+    {
+      "path": "src/domain/SearchService.ts",
+      "baselineSha256": "886beaa16a3151b207c8ca6c4726f3f4511cc2f4773d5e48b4fb403dc7e36f91",
+      "currentSha256": "55613edb9426a09bcbdb3708e776ca627301ad95706d0a5d428f33a4b95b6f7e",
+      "reason": "F038 own-title candidate index; F057 ordinal ID ties; F056 inspect clock consistency. Score/weights/eligibility schemas unchanged.",
+      "verification": "tests/exp03.test.ts: red6/green42; npm run check196 PASS; existing scenario IDs unchanged"
+    }
+  ]
+}
