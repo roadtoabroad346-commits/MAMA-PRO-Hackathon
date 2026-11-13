@@ -1,4 +1,10 @@
-# Передача после EXP-02
+# EXP-03 checkpoint A handoff
+
+LIVE_BLOCKED; synthetic-only. Current branch: `codex/exp-03-offer-matching` from verified remote EXP-02 `0ebd5bf206f082db718945096b7abfdeee1fa31b`. Direct user request supersedes prior STOP at EXP-02; STOP now after EXP-03. [Contracts, findings, matrix and rollback](../expansion/stages/EXP-03.md).
+
+A: npm ci/check PASS (154 tests, strict TS, historical registry); measured baseline20/100/1000. Runtime unchanged. Next B: reproduce omitted offer-title query, locale-sensitive ID tie and invalid inspect clock; add domain properties and narrow fixes. C/D remain NOT_VERIFIED. Human/native KK/real AT/device approval BLOCKED_EXTERNAL. Current containing commit self SHA is resolved with git rev-parse HEAD and git ls-remote origin refs/heads/codex/exp-03-offer-matching after push; do not guess it.
+
+# Historical handoff after EXP-02
 
 **LIVE_BLOCKED; DEMO/PILOT_TEST only. Реальные семьи, отправки, запись и deployment не разрешены.**
 

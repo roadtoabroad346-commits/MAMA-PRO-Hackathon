@@ -22,3 +22,7 @@
 ## ADR-CTX-EXP02 — источники, ветки и граница исправлений
 
 13.11.2026: прямое поручение разрешает EXP-02, отменяя исторический STOP после initialization только для этого scope. Работа в указанной feature/context-init-2026-11-13 от0e7e189; sibling EXP-01@a93cc18 учтён отдельно без merge/дублирования. Research Markdown полностью прочитан, но отсутствие DOCX отражено явно. Runtime не изменён: воспроизводимые проверки не выявили дефекта; добавлены недостающие acceptance tests и прямые source checks. Исходные Research statuses и human/live gates не повышаются от автоматического PASS. Полные AC/rollback: [EXP-02](../expansion/stages/EXP-02.md).
+
+## ADR-CTX-EXP03-A — authorized scope and snapshot
+
+Direct user instruction authorizes only EXP-03 F037–F060, four checkpoints and branch pushes. Start from verified EXP-02 remote0ebd5bf rather than old default; sibling EXP-01 remains separate, no merge. Reuse current evaluator and schemas. Correct identified gaps at SearchService/text/explanations only as demonstrated by regression tests. F059 means same-tab condition restoration; saved-search CRUD F161 is outside this phase. No EXP-04 without permission. LIVE_BLOCKED unchanged.

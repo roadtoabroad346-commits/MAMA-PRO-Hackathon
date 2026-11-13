@@ -1,5 +1,7 @@
 # F000–F230: состояние функций
 
+EXP-03 checkpoint A: contracts audited, baseline154 PASS; F037–F060 NOT_VERIFIED for this task until B/C/D. See [stage](../expansion/stages/EXP-03.md).
+
 Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. EXP-02 F017–F036 перепроверен автоматикой; EXP-01 записан в отдельной remote-ветке a93cc18. Остальной roadmap не объявляется выполненным.
 
 Канонические имена/номера сверены с полностью прочитанным Research Markdown, исходным CSV и двумя инженерными приложениями. DOCX недоступен; его чтение не заявляется. Исходный Research status сохранён отдельно. Полные поля, acceptance и именованные test anchors: [FEATURE_REGISTRY.json](FEATURE_REGISTRY.json); экспорт [CSV](FEATURE_REGISTRY.csv).

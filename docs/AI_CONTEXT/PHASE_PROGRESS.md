@@ -1,5 +1,7 @@
 # EXP-00–EXP-24: карта фаз
 
+EXP-03 A AUDITED; B/C/D pending. Baseline154 PASS, real 20/100/1000 benchmark recorded. [Stage](../expansion/stages/EXP-03.md).
+
 Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Current action: EXP-02 F017–F036 verification and source reconciliation; runtime unchanged.
 
 Новые EXP-фазы отделены от исторического [реестра 0–68](../PHASE_REGISTRY.json). 39 исторических фаз (1–5, 9, 11, 15–27, 36–54) имеют TEAM_ATTESTED, а их per-phase требования/evidence остаются UNKNOWN. 29 исторических записей имеют артефакты; это не полная приёмка. Фаза 68 не начата; предложения 69–78 не являются выполненной историей.
