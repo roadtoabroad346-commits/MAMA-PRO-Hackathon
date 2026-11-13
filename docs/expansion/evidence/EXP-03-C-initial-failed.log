@@ -1,0 +1,235 @@
+[WebServer] (node:1493) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 14 tests using 2 workers
+
+(node:1512) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1511) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   1 tests/e2e/exp03.spec.ts:49:3 › EXP-03 ru: combined filters, price/age boundary, soft availability and explicit reset (2.3s)
+(node:1803) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   3 tests/e2e/exp03.spec.ts:75:3 › EXP-03 ru: zero results never relax hard conditions through incomplete, cancel, language switch or reload (1.4s)
+  ✘   2 tests/e2e/exp03.spec.ts:32:3 › EXP-03 ru: own service title selects one offer and cannot borrow a sibling language (6.4s)
+(node:1990) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   5 tests/e2e/exp03.spec.ts:114:3 › EXP-03 ru: applied query/sort/filters survive profile, comparison, history and reload (1.7s)
+  ✘   4 tests/e2e/exp03.spec.ts:97:3 › EXP-03 ru: free zero is exact, missing price is incomplete and stale is never a budget match (5.5s)
+(node:2188) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   6 tests/e2e/exp03.spec.ts:134:3 › EXP-03 ru: mobile reflow, long query, text200%, keyboard trap, focus restore and reduced motion (1.5s)
+(node:2197) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   7 tests/e2e/exp03.spec.ts:163:3 › EXP-03 ru: query injection stays text and never creates markup or outbound search requests (2.8s)
+  ✘   9 tests/e2e/exp03.spec.ts:49:3 › EXP-03 kk: combined filters, price/age boundary, soft availability and explicit reset (1.8s)
+(node:2546) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 tests/e2e/exp03.spec.ts:75:3 › EXP-03 kk: zero results never relax hard conditions through incomplete, cancel, language switch or reload (1.5s)
+  ✘   8 tests/e2e/exp03.spec.ts:32:3 › EXP-03 kk: own service title selects one offer and cannot borrow a sibling language (6.2s)
+(node:2743) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  12 tests/e2e/exp03.spec.ts:114:3 › EXP-03 kk: applied query/sort/filters survive profile, comparison, history and reload (1.9s)
+  ✘  13 tests/e2e/exp03.spec.ts:134:3 › EXP-03 kk: mobile reflow, long query, text200%, keyboard trap, focus restore and reduced motion (1.4s)
+(node:2936) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  11 tests/e2e/exp03.spec.ts:97:3 › EXP-03 kk: free zero is exact, missing price is incomplete and stale is never a budget match (5.5s)
+  ✓  14 tests/e2e/exp03.spec.ts:163:3 › EXP-03 kk: query injection stays text and never creates markup or outbound search requests (1.2s)
+
+
+  1) tests/e2e/exp03.spec.ts:32:3 › EXP-03 ru: own service title selects one offer and cannot borrow a sibling language
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('search-count')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByTestId('search-count') with timeout 5000ms
+      - waiting for getByTestId('search-count')
+
+
+      25 |   }, { locale, input });
+      26 |   await page.goto('/specialists');
+    > 27 |   await expect(page.getByTestId('search-count')).toBeVisible();
+         |                                                  ^
+      28 | }
+      29 |
+      30 | for (const locale of ['ru', 'kk'] as const) {
+        at open (/workspace/MAMA-PRO-Hackathon/tests/e2e/exp03.spec.ts:27:50)
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/exp03.spec.ts:35:5
+
+    Error Context: test-results/exp03-EXP-03-ru-own-servic-d29d8-t-borrow-a-sibling-language/error-context.md
+
+  2) tests/e2e/exp03.spec.ts:49:3 › EXP-03 ru: combined filters, price/age boundary, soft availability and explicit reset
+
+    Error: locator.check: Error: strict mode violation: getByRole('checkbox') resolved to 4 elements:
+        1) <input type="checkbox" aria-describedby="_r_0_"/> aka getByRole('checkbox', { name: 'Логопед' })
+        2) <input type="checkbox" aria-describedby="_r_1_"/> aka getByRole('checkbox', { name: 'Дефектолог' })
+        3) <input type="checkbox" aria-describedby="_r_2_"/> aka getByRole('checkbox', { name: 'Психолог' })
+        4) <input type="checkbox" aria-describedby="_r_3_"/> aka getByRole('checkbox', { name: 'Предпочесть актуально указанную готовность к обращению' })
+
+    Call log:
+      - waiting for getByRole('checkbox')
+
+
+      50 |     await open(page, locale);
+      51 |     await page.locator('#filters-open').click();
+    > 52 |     await page.getByRole('checkbox', { name: t.logoped, exact: true }).check();
+         |                                                                        ^
+      53 |     await page.getByRole('checkbox', { name: t.psycholog, exact: true }).check();
+      54 |     await page.locator('#filter-age').selectOption('AGE_3_5');
+      55 |     await page.locator('#filter-language').selectOption('kk');
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/exp03.spec.ts:52:72
+
+    Error Context: test-results/exp03-EXP-03-ru-combined-f-53a52-lability-and-explicit-reset/error-context.md
+
+  3) tests/e2e/exp03.spec.ts:97:3 › EXP-03 ru: free zero is exact, missing price is incomplete and stale is never a budget match
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('search-count')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByTestId('search-count') with timeout 5000ms
+      - waiting for getByTestId('search-count')
+
+
+      25 |   }, { locale, input });
+      26 |   await page.goto('/specialists');
+    > 27 |   await expect(page.getByTestId('search-count')).toBeVisible();
+         |                                                  ^
+      28 | }
+      29 |
+      30 | for (const locale of ['ru', 'kk'] as const) {
+        at open (/workspace/MAMA-PRO-Hackathon/tests/e2e/exp03.spec.ts:27:50)
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/exp03.spec.ts:101:5
+
+    Error Context: test-results/exp03-EXP-03-ru-free-zero--fa54f-ale-is-never-a-budget-match/error-context.md
+
+  4) tests/e2e/exp03.spec.ts:134:3 › EXP-03 ru: mobile reflow, long query, text200%, keyboard trap, focus restore and reduced motion
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      153 |     for (let i = 0; i < 35; i++) {
+      154 |       await page.keyboard.press('Tab');
+    > 155 |       expect(await dialog.evaluate(node => node.contains(document.activeElement))).toBe(true);
+          |                                                                                    ^
+      156 |     }
+      157 |     await page.screenshot({ path: `work/exp03/catalog-${locale}-mobile.png`, fullPage: true });
+      158 |     await page.keyboard.press('Escape');
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/exp03.spec.ts:155:84
+
+    Error Context: test-results/exp03-EXP-03-ru-mobile-ref-a9c45--restore-and-reduced-motion/error-context.md
+
+  5) tests/e2e/exp03.spec.ts:32:3 › EXP-03 kk: own service title selects one offer and cannot borrow a sibling language
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('search-count')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByTestId('search-count') with timeout 5000ms
+      - waiting for getByTestId('search-count')
+
+
+      25 |   }, { locale, input });
+      26 |   await page.goto('/specialists');
+    > 27 |   await expect(page.getByTestId('search-count')).toBeVisible();
+         |                                                  ^
+      28 | }
+      29 |
+      30 | for (const locale of ['ru', 'kk'] as const) {
+        at open (/workspace/MAMA-PRO-Hackathon/tests/e2e/exp03.spec.ts:27:50)
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/exp03.spec.ts:35:5
+
+    Error Context: test-results/exp03-EXP-03-kk-own-servic-9cfaf-t-borrow-a-sibling-language/error-context.md
+
+  6) tests/e2e/exp03.spec.ts:49:3 › EXP-03 kk: combined filters, price/age boundary, soft availability and explicit reset
+
+    Error: locator.check: Error: strict mode violation: getByRole('checkbox') resolved to 4 elements:
+        1) <input type="checkbox" aria-describedby="_r_0_"/> aka getByRole('checkbox', { name: 'Логопед' })
+        2) <input type="checkbox" aria-describedby="_r_1_"/> aka getByRole('checkbox', { name: 'Дефектолог' })
+        3) <input type="checkbox" aria-describedby="_r_2_"/> aka getByRole('checkbox', { name: 'Психолог' })
+        4) <input type="checkbox" aria-describedby="_r_3_"/> aka getByRole('checkbox', { name: 'Өтініш қабылдауға дайындығы өзекті көрсетілген нұсқаларды жоғары қою' })
+
+    Call log:
+      - waiting for getByRole('checkbox')
+
+
+      50 |     await open(page, locale);
+      51 |     await page.locator('#filters-open').click();
+    > 52 |     await page.getByRole('checkbox', { name: t.LOGOPED, exact: true }).check();
+         |                                                                        ^
+      53 |     await page.getByRole('checkbox', { name: t.PSYCHOLOG, exact: true }).check();
+      54 |     await page.locator('#filter-age').selectOption('AGE_3_5');
+      55 |     await page.locator('#filter-language').selectOption('kk');
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/exp03.spec.ts:52:72
+
+    Error Context: test-results/exp03-EXP-03-kk-combined-f-4e5cb-lability-and-explicit-reset/error-context.md
+
+  7) tests/e2e/exp03.spec.ts:97:3 › EXP-03 kk: free zero is exact, missing price is incomplete and stale is never a budget match
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('search-count')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByTestId('search-count') with timeout 5000ms
+      - waiting for getByTestId('search-count')
+
+
+      25 |   }, { locale, input });
+      26 |   await page.goto('/specialists');
+    > 27 |   await expect(page.getByTestId('search-count')).toBeVisible();
+         |                                                  ^
+      28 | }
+      29 |
+      30 | for (const locale of ['ru', 'kk'] as const) {
+        at open (/workspace/MAMA-PRO-Hackathon/tests/e2e/exp03.spec.ts:27:50)
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/exp03.spec.ts:101:5
+
+    Error Context: test-results/exp03-EXP-03-kk-free-zero--483ae-ale-is-never-a-budget-match/error-context.md
+
+  8) tests/e2e/exp03.spec.ts:134:3 › EXP-03 kk: mobile reflow, long query, text200%, keyboard trap, focus restore and reduced motion
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      153 |     for (let i = 0; i < 35; i++) {
+      154 |       await page.keyboard.press('Tab');
+    > 155 |       expect(await dialog.evaluate(node => node.contains(document.activeElement))).toBe(true);
+          |                                                                                    ^
+      156 |     }
+      157 |     await page.screenshot({ path: `work/exp03/catalog-${locale}-mobile.png`, fullPage: true });
+      158 |     await page.keyboard.press('Escape');
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/exp03.spec.ts:155:84
+
+    Error Context: test-results/exp03-EXP-03-kk-mobile-ref-17551--restore-and-reduced-motion/error-context.md
+
+  8 failed
+    tests/e2e/exp03.spec.ts:32:3 › EXP-03 ru: own service title selects one offer and cannot borrow a sibling language
+    tests/e2e/exp03.spec.ts:49:3 › EXP-03 ru: combined filters, price/age boundary, soft availability and explicit reset
+    tests/e2e/exp03.spec.ts:97:3 › EXP-03 ru: free zero is exact, missing price is incomplete and stale is never a budget match
+    tests/e2e/exp03.spec.ts:134:3 › EXP-03 ru: mobile reflow, long query, text200%, keyboard trap, focus restore and reduced motion
+    tests/e2e/exp03.spec.ts:32:3 › EXP-03 kk: own service title selects one offer and cannot borrow a sibling language
+    tests/e2e/exp03.spec.ts:49:3 › EXP-03 kk: combined filters, price/age boundary, soft availability and explicit reset
+    tests/e2e/exp03.spec.ts:97:3 › EXP-03 kk: free zero is exact, missing price is incomplete and stale is never a budget match
+    tests/e2e/exp03.spec.ts:134:3 › EXP-03 kk: mobile reflow, long query, text200%, keyboard trap, focus restore and reduced motion
+  6 passed (29.0s)

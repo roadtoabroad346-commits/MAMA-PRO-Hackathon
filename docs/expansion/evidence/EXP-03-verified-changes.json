@@ -1,0 +1,53 @@
+{
+  "historicalBaselineSha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+  "changes": [
+    {
+      "path": "src/domain/SearchService.ts",
+      "baselineSha256": "886beaa16a3151b207c8ca6c4726f3f4511cc2f4773d5e48b4fb403dc7e36f91",
+      "currentSha256": "55613edb9426a09bcbdb3708e776ca627301ad95706d0a5d428f33a4b95b6f7e",
+      "reason": "F038 own-title candidate index; F057 ordinal ID ties; F056 inspect clock consistency. Score/weights/eligibility schemas unchanged.",
+      "verification": "tests/exp03.test.ts: red6/green42; npm run check196 PASS; existing scenario IDs unchanged"
+    },
+    {
+      "path": "src/i18n/messages.ts",
+      "baselineSha256": "f7b8a85267c44c7abc7804454f276e0341533c7201eedffd18d2f4753b4d1294",
+      "currentSha256": "3590abbf72675543d537b0a5e56a79805a85c2d66dddf184ddfe7c7c596a8154",
+      "reason": "RU/KK visible search label and help now include offer title",
+      "verification": "EXP-03 focused E2E14 PASS; full regression recorded in C/D evidence"
+    },
+    {
+      "path": "src/i18n/searchMessages.ts",
+      "baselineSha256": "b44361bfef12c04a737c2a86646a8a194e24cfe48f66f524b96de2034e806057",
+      "currentSha256": "3d42d3114db7ac11bdb03a48a0f640d2619ebc9f59c6487c050ea95cd550a510",
+      "reason": "RU/KK zero-results recovery includes service-title query",
+      "verification": "EXP-03 focused E2E14 PASS; full regression recorded in C/D evidence"
+    },
+    {
+      "path": "tests/e2e/search.spec.ts",
+      "baselineSha256": "d7896b40e68eb647b034c2ff108c287180eafcbac30e3d9b3963b1066a15c412",
+      "currentSha256": "8de0ab3eb671a2c47fbd5d8a3480e754d31c0746269594deef11836505d8d715",
+      "reason": "Update only accessible name to the new RU search label; assertions unchanged",
+      "verification": "EXP-03 focused E2E14 PASS; full regression recorded in C/D evidence"
+    },
+    {
+      "path": "tests/e2e/intake.spec.ts",
+      "baselineSha256": "9faa05b123b2a342fb82956678c801aa506ddff22a6faa3640145005f65365c2",
+      "currentSha256": "909ac37ddae093f3d3306e5391a959cf36f0f690bed873473f7d1f5acb057d94",
+      "reason": "Update only accessible name to the new RU search label; assertions unchanged",
+      "verification": "EXP-03 focused E2E14 PASS; full regression recorded in C/D evidence"
+    }
+  ],
+  "verifiedSourceSha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+  "verifiedSourceFiles": {
+    "src/domain/SearchService.ts": "55613edb9426a09bcbdb3708e776ca627301ad95706d0a5d428f33a4b95b6f7e",
+    "src/i18n/messages.ts": "3590abbf72675543d537b0a5e56a79805a85c2d66dddf184ddfe7c7c596a8154",
+    "src/i18n/searchMessages.ts": "3d42d3114db7ac11bdb03a48a0f640d2619ebc9f59c6487c050ea95cd550a510",
+    "tests/e2e/search.spec.ts": "8de0ab3eb671a2c47fbd5d8a3480e754d31c0746269594deef11836505d8d715",
+    "tests/e2e/intake.spec.ts": "909ac37ddae093f3d3306e5391a959cf36f0f690bed873473f7d1f5acb057d94",
+    "tests/exp03.test.ts": "afba88e00f937f51fe45cf7f736fcddf36f61729d10b8245f2f102ec6035e1be",
+    "tests/e2e/exp03.spec.ts": "a2ddbb46a954eef688efd0fb8bdd48b98f1801d7e16d3315de85b3ee5088eb8d",
+    "tests/support/syntheticCatalog.ts": "2c9c5484bf14e7d464b92198caf23b8d0970d3a01e27e57c343360dc35739904",
+    "scripts/benchmark-search.mjs": "84d42109fcf265d665e5a374e02eae135a5e49524533637784e96702df83de3f",
+    "playwright.exp03.config.ts": "1c404e9140f0c372bd89e7f1c16e6eaf59a6dbea92e1f1eb45b4862723555209"
+  }
+}

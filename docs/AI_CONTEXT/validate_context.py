@@ -16,6 +16,8 @@ def refs(record):
   for value in record:yield from refs(value)
 def git(*args):return subprocess.check_output(['git',*args],cwd=R,text=True).strip()
 features=read('FEATURE_REGISTRY.json');phases=read('PHASE_REGISTRY.json');summary=read('GENERATION_SUMMARY.json');pm={p['id']:p for p in phases}
+exp03_path=R/'docs/expansion/evidence/EXP-03.json'
+exp03=json.loads(exp03_path.read_text()) if exp03_path.exists() else None
 expected=[f'F{i:03}' for i in range(231)];check([f['id'] for f in features]==expected,'Feature set/order must be exactly F000–F230')
 check([p['id'] for p in phases]==[f'EXP-{i:02}' for i in range(25)],'Phase set/order must be exactly EXP-00–24')
 canonical=[]
@@ -66,7 +68,13 @@ for feature_index,f in enumerate(features):
  check(f['status'] in allowed,f"{f['id']}: bad status")
  check(f['id'] in pm[f['phase']]['feature_ids'],f"{f['id']}: phase assignment mismatch")
  check(f['release_permission']=='SYNTHETIC_ONLY; LIVE_BLOCKED',f"{f['id']}: release boundary changed")
- check(f['last_verified_sha'] in [None,summary['baseline_sha']],f"{f['id']}: unknown evidence SHA")
+ allowed_shas=[None,summary['baseline_sha']]+([exp03['sourceSha']] if exp03 and f['phase']=='EXP-03' else [])
+ check(f['last_verified_sha'] in allowed_shas,f"{f['id']}: unknown evidence SHA")
+ if f.get('execution_state')=='VERIFIED_DONE':
+  check(bool(exp03) and f['id'] in exp03['features'],f"{f['id']}: completion without EXP evidence")
+  check(f.get('verification_scope')=='AUTOMATED_SYNTHETIC_DEMO',f"{f['id']}: completion scope missing")
+  check(f['last_verified_sha']==exp03['sourceSha'],f"{f['id']}: completion SHA mismatch")
+  for test in f['technical_verification']['tests']:check((R/test).is_file(),f"{f['id']}: missing technical proof file {test}")
  if f['status'] in {'VERIFIED_IMPLEMENTED','IMPLEMENTED_WITH_LIMITATIONS','PILOT_TEST_ONLY','PARTIALLY_IMPLEMENTED'}:check(bool(f['code_refs']),f"{f['id']}: implemented status without code/foundation evidence")
  if f['status']=='PLANNED':check(not f['code_refs'],f"{f['id']}: planned path mislabelled as code")
  for key in ['parent_user_problem','security_considerations','ux_requirements','required_tests','human_gate']:
@@ -85,16 +93,46 @@ for record in refs([features,phases]):
 with (D/'FEATURE_REGISTRY.csv').open(newline='') as f:csvrows=list(csv.DictReader(f))
 check([x['id'] for x in csvrows]==expected,'CSV feature set mismatch')
 for row,f in zip(csvrows,features):
- for key in ['name','research_status','phase','status','research_line','registry_line']:check(row[key]==str(f[key]),f"CSV {f['id']}: {key} mismatch")
+ for key in ['name','research_status','phase','status','research_line','registry_line','last_verified_sha']:check(row[key]==str(f[key] if f[key] is not None else ''),f"CSV {f['id']}: {key} mismatch")
+ for key in ['execution_state','verification_scope']:check(row.get(key,'')==f.get(key,''),f"CSV {f['id']}: {key} mismatch")
 md=(D/'FEATURE_STATUS.md').read_text();check(re.findall(r'^## (F\d{3})$',md,re.M)==expected,'Readable feature sections mismatch')
 for f in features:check(f"**{f['name']}** — {f['status']}." in md,f"Readable status mismatch: {f['id']}")
 phase_md=(D/'PHASE_PROGRESS.md').read_text();check(re.findall(r'^## (EXP-\d\d)$',phase_md,re.M)==list(pm),'Readable phase sections mismatch')
-# Verify every original baseline file hash, including binaries; no product/config/test was overwritten.
+# Preserve the historical snapshot, while checking explicitly reviewed EXP changes
+# against both the original Git blob and their recorded current content hash.
 with (D/'SOURCE_INVENTORY.csv').open(newline='') as f:inventory=list(csv.DictReader(f))
 check(len(inventory)==335,'Expected 335 baseline records')
 check({x['path'] for x in inventory}==set(git('ls-tree','-r','--name-only',summary['baseline_sha']).splitlines()),'Inventory differs from baseline Git tree')
+change_path=R/'docs/expansion/evidence/EXP-03-verified-changes.json'
+change_manifest=json.loads(change_path.read_text()) if change_path.exists() else {}
+changes=change_manifest.get('changes',[])
+changed={x['path']:x for x in changes}
+check(len(changed)==len(changes),'Duplicate reviewed change path')
+check(set(changed)<=set(x['path'] for x in inventory),'Reviewed changes must refer to baseline files')
 for record in inventory:
- p=R/record['path'];check(p.is_file() and hashlib.sha256(p.read_bytes()).hexdigest()==record['sha256'],'Baseline file changed/missing: '+record['path'])
+ p=R/record['path'];reviewed=changed.get(record['path'])
+ if reviewed:
+  check(reviewed['baselineSha256']==record['sha256'],'Reviewed baseline hash mismatch: '+record['path'])
+  original=subprocess.check_output(['git','show',summary['baseline_sha']+':'+record['path']],cwd=R)
+  check(hashlib.sha256(original).hexdigest()==record['sha256'],'Original Git blob differs: '+record['path'])
+  check(bool(reviewed.get('reason')) and bool(reviewed.get('verification')),'Missing change review: '+record['path'])
+ check(p.is_file() and hashlib.sha256(p.read_bytes()).hexdigest()==(reviewed['currentSha256'] if reviewed else record['sha256']),'Unreviewed file change/missing: '+record['path'])
+if exp03:
+ source_sha=exp03['sourceSha']
+ check(change_manifest.get('verifiedSourceSha')==source_sha,'EXP-03 evidence/manifest SHA mismatch')
+ check(subprocess.run(['git','merge-base','--is-ancestor',source_sha,'HEAD'],cwd=R).returncode==0,'Verified source is not in current ancestry')
+ for path,expected_hash in change_manifest.get('verifiedSourceFiles',{}).items():
+  original=subprocess.check_output(['git','show',source_sha+':'+path],cwd=R)
+  check(hashlib.sha256(original).hexdigest()==expected_hash,'Verified Git source mismatch: '+path)
+  check(hashlib.sha256((R/path).read_bytes()).hexdigest()==expected_hash,'Current source differs from tested tree: '+path)
+ for path,record in exp03['evidenceFiles'].items():
+  check(hashlib.sha256((R/path).read_bytes()).hexdigest()==record['sha256'],'EXP-03 evidence changed: '+path)
+ check(set(exp03['features'])==set(f'F{i:03}' for i in range(37,61)),'EXP-03 must prove exactly F037–F060')
+ check(exp03['verification_scope']=='AUTOMATED_SYNTHETIC_DEMO' and exp03['live']=='LIVE_BLOCKED','EXP-03 release scope changed')
+ check(exp03['tests']['total_final_executions']==sum(exp03['tests'][k] for k in ['unit_integration','dev','dist','pilot','offline']),'EXP-03 test total mismatch')
+ for name,key in [('C-check','unit_integration'),('C-dev','dev'),('D-dist','dist'),('D-pilot','pilot'),('D-offline','offline')]:
+  log=(R/f'docs/expansion/evidence/EXP-03-{name}.log').read_text()
+  check(bool(re.search(r'\b'+str(exp03['tests'][key])+r' passed',log)),'EXP-03 executed log total mismatch: '+name)
 for record in summary['source_snapshots']:
  check(hashlib.sha256((R/record['path']).read_bytes()).hexdigest()==record['sha256'],'Uploaded source snapshot changed: '+record['path'])
 # New narrative documents only: archived original prompts have historical/example links.
@@ -107,6 +145,6 @@ for p in [R/'AGENTS.md',*(D.glob('*.md')),*(R/'docs/expansion').rglob('*.md')]:
 for p in [R/'AGENTS.md',D/'PROJECT_MASTER_CONTEXT.md',D/'SESSION_HANDOFF.md']:
  check('LIVE_BLOCKED' in p.read_text(),str(p)+': missing live boundary')
 check('PENDING' in (D/'RESEARCH_TRACEABILITY.md').read_text(),'Parent interview pending marker missing')
-check('EXP-02' in (D/'SESSION_HANDOFF.md').read_text(),'Current EXP-02 scope missing')
-result={'status':'FAIL' if errors else 'PASS','checks':checks,'features':len(features),'phases':len(phases),'baseline_files_preserved':len(inventory),'errors':errors}
+check(read('../expansion/STATE.json')['currentStage'] in (D/'SESSION_HANDOFF.md').read_text(),'Current stage scope missing')
+result={'status':'FAIL' if errors else 'PASS','checks':checks,'features':len(features),'phases':len(phases),'baseline_files_preserved':len(inventory)-len(changed),'baseline_files_reviewed_changed':len(changed),'errors':errors}
 print(json.dumps(result,ensure_ascii=False,indent=2));sys.exit(bool(errors))

@@ -239,7 +239,7 @@
       "F059",
       "F060"
     ],
-    "status": "EXISTING_DEMO_WITH_LIMITATIONS",
+    "status": "VERIFIED_DONE",
     "objective": "Дать точный, объяснимый список конкретных услуг и честное пустое состояние.",
     "prerequisites": "EXP-02.",
     "technical_architecture": "Проверить 24 ID, strict hard filters, soft rank, unknown/incomplete, stale, tie-break, grouping after evaluation, price 0 vs UNKNOWN, error/retry. Не заменять текущий алгоритм LLM.",
@@ -252,7 +252,7 @@
       "src/domain/freshness.ts"
     ],
     "reuse_foundations": "SearchService/matching/freshness/SearchResult, Catalog, Filters, ResultMap.",
-    "missing_implementation": "Полевые проверки/KK и доказательство каждого нового EXP AC; existing code не пересоздавать.",
+    "missing_implementation": "Technical F037–F060 acceptance complete. Human/KK/real AT/device review BLOCKED_EXTERNAL; no live permission.",
     "backend_requirements": "Сохранять текущие domain/storage contracts; private authority в server/service.ts.",
     "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Дать точный, объяснимый список конкретных услуг и честное пустое состояние.",
     "data_models": "OfferEvaluation, SearchResult, FieldFreshness, MatchReason",
@@ -262,34 +262,40 @@
     "acceptance_criteria": [
       {
         "id": "EXP-03-AC-01",
-        "text": "Свойства двух офферов одного специалиста никогда не объединяются для ложного match."
+        "text": "Свойства двух офферов одного специалиста никогда не объединяются для ложного match.",
+        "execution_status": "PASS_AUTOMATED_SYNTHETIC"
       },
       {
         "id": "EXP-03-AC-02",
-        "text": "Критерии и объяснения RU/KK коррелируют с результатом; stale исключает ложное verified."
+        "text": "Критерии и объяснения RU/KK коррелируют с результатом; stale исключает ложное verified.",
+        "execution_status": "PASS_AUTOMATED_SYNTHETIC"
       },
       {
         "id": "EXP-03-AC-03",
-        "text": "20/100/1000 synthetic offer benchmark задокументирован в той же среде, без fake field metrics."
+        "text": "20/100/1000 synthetic offer benchmark задокументирован в той же среде, без fake field metrics.",
+        "execution_status": "PASS_AUTOMATED_SYNTHETIC"
       },
       {
         "id": "EXP-03-AC-04",
-        "text": "Zero results не приводит к скрытой смене ограничений."
+        "text": "Zero results не приводит к скрытой смене ограничений.",
+        "execution_status": "PASS_AUTOMATED_SYNTHETIC"
       }
     ],
     "git_checkpoint": "`docs(exp-03) contracts/evidence` → `test/feat(exp-03) validated slice` → `docs(exp-03) handoff`, каждый содержательный шаг commit+push после проверок; точные SHA фиксировать в STATE.json.",
     "external_dependencies": "Родитель объясняет причины выбора, не считать тест алгоритма человеческой оценкой.",
     "allowed_result": "DEMO; реальные списки не подмешивать.",
     "completion_evidence": {
-      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
-      "qa": "VALIDATION.md",
-      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
-      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+      "code_sha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+      "qa": "../expansion/evidence/EXP-03.json",
+      "phase_ac_status": "PASS_AUTOMATED_SYNTHETIC",
+      "human_status": "BLOCKED_EXTERNAL",
+      "live": "LIVE_BLOCKED"
     },
     "source": {
       "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
       "line": 309
-    }
+    },
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO"
   },
   {
     "id": "EXP-04",

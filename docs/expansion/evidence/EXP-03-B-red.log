@@ -1,0 +1,84 @@
+
+ RUN  v4.1.12 /workspace/MAMA-PRO-Hackathon
+
+ ❯ tests/exp03.test.ts (42 tests | 6 failed) 493ms
+     × searches a concrete localized title: Редкая услуга 11ms
+     × searches a concrete localized title: Ерекше қызмет 2ms
+     × ID ties use ordinal order independent of host locale: relevant 10ms
+     × ID ties use ordinal order independent of host locale: price 2ms
+     × ID ties use ordinal order independent of host locale: district 1ms
+     × inspect and search both reject an invalid evaluation clock 7ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 6 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/exp03.test.ts > EXP-03 candidate isolation and deterministic service contract > searches a concrete localized title: Редкая услуга
+ FAIL  tests/exp03.test.ts > EXP-03 candidate isolation and deterministic service contract > searches a concrete localized title: Ерекше қызмет
+AssertionError: expected undefined to deeply equal [ 'A' ]
+
+- Expected:
+[
+  "A",
+]
+
++ Received:
+undefined
+
+ ❯ tests/exp03.test.ts:30:69
+     28|     const b = offer({ id: 'B', title: { ru: 'Другая услуга', kk: 'Басқ…
+     29|     const s = service([a, b]);
+     30|     expect(s.search({ ...base, query }).items[0]?.matchingOfferIds).to…
+       |                                                                     ^
+     31|     expect(s.inspectOffer({ ...base, query }, 'B')).toBeNull();
+     32|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/6]⎯
+
+ FAIL  tests/exp03.test.ts > EXP-03 candidate isolation and deterministic service contract > ID ties use ordinal order independent of host locale: relevant
+ FAIL  tests/exp03.test.ts > EXP-03 candidate isolation and deterministic service contract > ID ties use ordinal order independent of host locale: price
+ FAIL  tests/exp03.test.ts > EXP-03 candidate isolation and deterministic service contract > ID ties use ordinal order independent of host locale: district
+AssertionError: expected [ '_', 'a', 'A' ] to deeply equal [ 'A', '_', 'a' ]
+
+- Expected
++ Received
+
+  [
+-   "A",
+    "_",
+    "a",
++   "A",
+  ]
+
+ ❯ tests/exp03.test.ts:43:46
+     41|     const input = { ...base, sort, districtId: 'BOSTANDYK' as const };
+     42|     const result = service(values).search(input);
+     43|     expect(result.items[0].matchingOfferIds).toEqual(['A', '_', 'a']);
+       |                                              ^
+     44|     expect(result).toEqual(service([...values].reverse()).search(input…
+     45|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/6]⎯
+
+ FAIL  tests/exp03.test.ts > EXP-03 candidate isolation and deterministic service contract > inspect and search both reject an invalid evaluation clock
+AssertionError: expected [Function] to throw an error
+
+- Expected:
+null
+
++ Received:
+undefined
+
+ ❯ tests/exp03.test.ts:49:47
+     47|     const s = new SearchService(catalog, { now: () => new Date(NaN) });
+     48|     expect(() => s.search(base)).toThrow('INVALID_CATALOG_CLOCK');
+     49|     expect(() => s.inspectOffer(base, 'O01')).toThrow('INVALID_CATALOG…
+       |                                               ^
+     50|   });
+     51|   it.each(['.*', "' OR 1=1 --", '<img src=x onerror=alert(1)>', '__pro…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/6]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  6 failed | 36 passed (42)
+   Start at  19:09:00
+   Duration  1.11s (transform 279ms, setup 0ms, import 407ms, tests 493ms, environment 0ms)

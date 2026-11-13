@@ -1,0 +1,28 @@
+
+> qoldau-zhol@0.6.0 check
+> npm run typecheck && npm test && npm run audit:phases
+
+
+> qoldau-zhol@0.6.0 typecheck
+> tsc -b
+
+
+> qoldau-zhol@0.6.0 test
+> vitest run
+
+
+ RUN  v4.1.12 /workspace/MAMA-PRO-Hackathon
+
+
+ Test Files  10 passed (10)
+      Tests  196 passed (196)
+   Start at  19:09:41
+   Duration  4.18s (transform 494ms, setup 0ms, import 1.48s, tests 1.49s, environment 1ms)
+
+
+> qoldau-zhol@0.6.0 audit:phases
+> node scripts/audit-phase-registry.mjs
+
+Phase registry valid: 69 records, 29 have recorded historical evidence, 40 without verified delivery evidence.
+Team-reported review confirmations: 39 (not independently evidenced, not closed by this audit).
+Evidence recorded does NOT mean full acceptance, legal readiness, user validation, deployment, or new tests passed.

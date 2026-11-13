@@ -54,7 +54,7 @@ test('direct path works without intake and supports category/name search', async
   await page.getByRole('link', { name: 'Я знаю, кого ищу', exact: true }).click();
   await expect(page.getByTestId('specialist-card')).toHaveCount(12);
   await page.getByLabel('Категория специалиста', { exact: true }).selectOption('LOGOPED');
-  await page.getByLabel('Имя или категория', { exact: true }).fill('Демо-специалист 01');
+  await page.getByLabel('Имя, категория или услуга', { exact: true }).fill('Демо-специалист 01');
   await expect(page.getByTestId('specialist-card')).toHaveCount(1);
   await page.getByRole('link', { name: 'Ваши условия поиска', exact: true }).click();
   await expect(page.locator('[data-field="query"]')).toContainText('Демо-специалист 01');

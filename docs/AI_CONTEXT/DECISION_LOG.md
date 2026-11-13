@@ -22,3 +22,23 @@
 ## ADR-CTX-EXP02 — источники, ветки и граница исправлений
 
 13.11.2026: прямое поручение разрешает EXP-02, отменяя исторический STOP после initialization только для этого scope. Работа в указанной feature/context-init-2026-11-13 от0e7e189; sibling EXP-01@a93cc18 учтён отдельно без merge/дублирования. Research Markdown полностью прочитан, но отсутствие DOCX отражено явно. Runtime не изменён: воспроизводимые проверки не выявили дефекта; добавлены недостающие acceptance tests и прямые source checks. Исходные Research statuses и human/live gates не повышаются от автоматического PASS. Полные AC/rollback: [EXP-02](../expansion/stages/EXP-02.md).
+
+## ADR-CTX-EXP03-A — authorized scope and snapshot
+
+Direct user instruction authorizes only EXP-03 F037–F060, four checkpoints and branch pushes. Start from verified EXP-02 remote0ebd5bf rather than old default; sibling EXP-01 remains separate, no merge. Reuse current evaluator and schemas. Correct identified gaps at SearchService/text/explanations only as demonstrated by regression tests. F059 means same-tab condition restoration; saved-search CRUD F161 is outside this phase. No EXP-04 without permission. LIVE_BLOCKED unchanged.
+
+## ADR-CTX-EXP03-B — candidate text, ties and evidence integrity
+
+Six red regression cases reproduced omitted RU/KK title (2), host-collated ID ties (3 sort modes), and invalid inspectOffer clock (1). SearchService now indexes normalized fields separately per offer once at construction, including own title and own category plus specialist name. No sibling text or fact aggregation. Inputs/field weights/eligibility stay rules-v2; catalog-v2/session schema/freshness-v2 unchanged. Opaque ID tie-break is explicit UTF-16 ordinal, preserving the existing ASCII demo order; score semantics do not change. inspectOffer uses search's existing invalid-clock error. Public catalog is a parsed service-owned snapshot; no runtime catalog editing is supported.
+
+Historical inventory335 remains immutable as evidence. Context validator now checks reviewed changed files against both historical Git blobs and an explicit current-hash manifest; every unlisted path must retain its original hash. It no longer falsely requires bug fixes to leave all runtime bytes unchanged. Original source prompts remain byte-exact. No schema migration or live effect.
+
+## ADR-CTX-EXP03-C — localized search and native modal semantics
+
+The visible RU/KK search label/help and zero-result recovery now include the concrete offer title. Existing native filters, draft/apply/reset, incomplete disclosure and same-tab restoration already satisfy the intended behavior; no UI rewrite. Existing tests changed only the accessible search name. New14 browser cases cover both locales, actual combined-filter UI, adversarial sibling-title/KK/offline, free0/unknown/stale, zero-result invariants through cancel/locale/reload, profile/compare/history/reload, literal XSS,320/360/390/430 reflow and200% text/reduced motion/keyboard/Escape/focus restoration. Native showModal may focus browser chrome between cycles; background controls remain inaccessible. Test the native policy rather than forcing a custom trap. Text200% is a proxy, not physical browser zoom or real AT review.
+
+Initial C run6pass/8fail was test-harness error: two nonexistent dictionary keys, overbroad catalog route replacing the Vite JS ?url module (four cases), and an assertion that disallowed browser chrome focus (two). Fixed test harness and independently checked current free-zero fixture count2; product assertions retained. Focused rerun14pass, zero page errors. Full dev/regression and dist results are captured separately. Source fallback is not substituted on search errors.
+
+## ADR-CTX-EXP03-D — technical completion and honest performance
+
+All24 technical feature AC and four phase AC proved on sourceac82ec7:360 final test executions PASS, build/context/audit PASS, actual20/100/1000 benchmark. Mark execution_state VERIFIED_DONE with explicit AUTOMATED_SYNTHETIC_DEMO scope; keep implementation statuses IMPLEMENTED_WITH_LIMITATIONS and human/live gates separate. Text lookup improves; some other scenario timings regress, so no universal speedup or statistical/field claim. Source hash checks bind current files and per-feature last_verified_sha to an actual Git tree; historical baseline hashes remain checked separately. Final containing D SHA is reported only after push/ls-remote; documents carry the preceding confirmed C SHA and resume commands. EXP-04 technically unblocked, not authorized or started.

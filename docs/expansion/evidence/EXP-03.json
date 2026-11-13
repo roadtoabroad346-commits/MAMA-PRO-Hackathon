@@ -1,0 +1,404 @@
+{
+  "stage": "EXP-03",
+  "status": "VERIFIED_DONE",
+  "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+  "live": "LIVE_BLOCKED",
+  "sourceSha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+  "baseSha": "0ebd5bf206f082db718945096b7abfdeee1fa31b",
+  "branch": "codex/exp-03-offer-matching",
+  "recordedAt": "2026-11-13T19:25:02.076377+00:00",
+  "tests": {
+    "unit_integration": 196,
+    "dev": 103,
+    "dist": 54,
+    "pilot": 5,
+    "offline": 2,
+    "total_final_executions": 360,
+    "failed_final": 0,
+    "skipped_final": 0,
+    "focused_new_domain": 42,
+    "focused_e2e_rerun": 14
+  },
+  "initial_failures": {
+    "B_regressions": {
+      "failed": 6,
+      "passed": 36
+    },
+    "C_harness": {
+      "failed": 8,
+      "passed": 6
+    },
+    "final_status": "All corrected and reverified; retained in logs, excluded from final PASS totals"
+  },
+  "commands": {
+    "unit_integration": "npm run check",
+    "build": "npm run build",
+    "dev": "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e -- --workers=2 --reporter=list",
+    "dist": "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npx playwright test --config playwright.exp03.config.ts --workers=2",
+    "pilot": "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npx playwright test --config playwright.pilot.config.ts",
+    "offline": "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npx playwright test --config playwright.offline.config.ts",
+    "benchmark": "node scripts/benchmark-search.mjs --output work/exp03/benchmark-after.json",
+    "context": "python3 docs/AI_CONTEXT/validate_context.py",
+    "dependency_advisories": "npm audit --json"
+  },
+  "acceptance": {
+    "EXP-03-AC-01": "PASS_AUTOMATED_SYNTHETIC",
+    "EXP-03-AC-02": "PASS_AUTOMATED_SYNTHETIC",
+    "EXP-03-AC-03": "PASS_AUTOMATED_SYNTHETIC",
+    "EXP-03-AC-04": "PASS_AUTOMATED_SYNTHETIC"
+  },
+  "features": {
+    "F037": {
+      "status": "VERIFIED_DONE",
+      "scope": "AUTOMATED_SYNTHETIC_DEMO",
+      "tests": [
+        "tests/search.test.ts",
+        "tests/e2e/search.spec.ts"
+      ],
+      "behavior": "NFKC/name/finite RU/KK aliases, literal query and current input"
+    },
+    "F038": {
+      "status": "VERIFIED_DONE",
+      "scope": "AUTOMATED_SYNTHETIC_DEMO",
+      "tests": [
+        "tests/exp03.test.ts",
+        "tests/e2e/exp03.spec.ts"
+      ],
+      "behavior": "Own localized title and fixed selectedOfferId; sibling title/language denial"
+    },
+    "F039": {
+      "status": "VERIFIED_DONE",
+      "scope": "AUTOMATED_SYNTHETIC_DEMO",
+      "tests": [
+        "tests/search.test.ts",
+        "tests/e2e/exp03.spec.ts"
+      ],
+      "behavior": "Category hard OR, AND across fields on the same offer"
+    },
+    "F040": {
+      "status": "VERIFIED_DONE",
+      "scope": "AUTOMATED_SYNTHETIC_DEMO",
+      "tests": [
+        "tests/exp03.test.ts",
+        "tests/matching.test.ts"
+      ],
+      "behavior": "All5 age groups: inclusive endpoints, partial unknown, disjoint fail"
+    },
+    "F041": {
+      "status": "VERIFIED_DONE",
+      "scope": "AUTOMATED_SYNTHETIC_DEMO",
+      "tests": [
+        "tests/matching.test.ts",
+        "tests/exp03.test.ts"
+      ],
+      "behavior": "Hard/soft language; missing/future/source unknown"
+    },
+    "F042": {
+      "status": "VERIFIED_DONE",
+      "scope": "AUTOMATED_SYNTHETIC_DEMO",
+      "tests": [
+        "tests/matching.test.ts",
+        "tests/exp03.test.ts"
+      ],
+      "behavior": "Hard format pass/fail/unknown; independent per offer"
+    },
+    "F043": {
+      "status": "VERIFIED_DONE",
+      "scope": "AUTOMATED_SYNTHETIC_DEMO",
+      "tests": [
+        "tests/matching.test.ts",
+        "tests/search.test.ts",
+        "tests/e2e/exp03.spec.ts"
+      ],
+      "behavior": "Hard district; online-only inactive, online cannot assert offline district"
+    },
+    "F044": {
+      "status": "VERIFIED_DONE",
+      "scope": "AUTOMATED_SYNTHETIC_DEMO",
+      "tests": [
+        "tests/exp03.test.ts",
+        "tests/e2e/exp03.spec.ts"
+      ],
+      "behavior": "Hard/soft budget;6000/6001 and100000 boundaries"
+    },
+    "F045": {
+      "status": "VERIFIED_DONE",
+      "scope": "AUTOMATED_SYNTHETIC_DEMO",
+      "tests": [
+        "tests/exp03.test.ts",
+        "tests/e2e/exp03.spec.ts"
+      ],
+      "behavior": "Unknown price=null/incomplete for hard0; never free or pass"
+    },
+    "F046": {
+      "status": "VERIFIED_DONE",
+      "scope": "AUTOMATED_SYNTHETIC_DEMO",
+      "tests": [
+        "tests/exp03.test.ts",
+        "tests/e2e/exp03.spec.ts"
+      ],
+      "behavior": "Explicit free0 passes hard0 if current; stale free does not"
+    },
+    "F047": {
+      "status": "VERIFIED_DONE",
+      "scope": "AUTOMATED_SYNTHETIC_DEMO",
+      "tests": [
+        "tests/matching.test.ts",
+        "tests/exp03.test.ts",
+        "tests/e2e/exp03.spec.ts"
+      ],
+      "behavior": "Availability preference; true/false/null/stale/future, no slot or booking claim"
+    },
+    "F048": {
+      "status": "VERIFIED_DONE",
+      "scope": "AUTOMATED_SYNTHETIC_DEMO",
+      "tests": [
+        "tests/search.test.ts",
+        "tests/exp03.test.ts",
+        "tests/e2e/exp03.spec.ts"
+      ],
+      "behavior": "Actual combined-filter UI and200 seeded four-offer hard oracle"
+    },
+    "F049": {
+      "status": "VERIFIED_DONE",
+      "scope": "AUTOMATED_SYNTHETIC_DEMO",
+      "tests": [
+        "tests/e2e/search.spec.ts",
+        "tests/e2e/exp03.spec.ts"
+      ],
+      "behavior": "Draft reset/cancel and explicit full applied reset retain locale"
+    },
+    "F050": {
+      "status": "VERIFIED_DONE",
+      "scope": "AUTOMATED_SYNTHETIC_DEMO",
+      "tests": [
+        "tests/exp03.test.ts",
+        "tests/matching.test.ts"
+      ],
+      "behavior": "Fail dominates unknown and soft score; unknown never exact"
+    },
+    "F051": {
+      "status": "VERIFIED_DONE",
+      "scope": "AUTOMATED_SYNTHETIC_DEMO",
+      "tests": [
+        "tests/exp03.test.ts",
+        "tests/e2e/exp02.spec.ts"
+      ],
+      "behavior": "Soft rank never enlarges hard eligibility; persisted soft edits"
+    },
+    "F052": {
+      "status": "VERIFIED_DONE",
+      "scope": "AUTOMATED_SYNTHETIC_DEMO",
+      "tests": [
+        "tests/exp03.test.ts",
+        "tests/matching.test.ts"
+      ],
+      "behavior": "Request-wide denominator100, exact score100, partial72.5; neutral null"
+    },
+    "F053": {
+      "status": "VERIFIED_DONE",
+      "scope": "AUTOMATED_SYNTHETIC_DEMO",
+      "tests": [
+        "tests/exp03.test.ts",
+        "tests/matching.test.ts"
+      ],
+      "behavior": "Coverage independent of score; false known; unknown loses coverage"
+    },
+    "F054": {
+      "status": "VERIFIED_DONE",
+      "scope": "AUTOMATED_SYNTHETIC_DEMO",
+      "tests": [
+        "tests/matching.test.ts",
+        "tests/exp03.test.ts",
+        "tests/e2e/exp03.spec.ts"
+      ],
+      "behavior": "Same-offer evidence and typed RU/KK match/unknown/mismatch; stale explanations"
+    },
+    "F055": {
+      "status": "VERIFIED_DONE",
+      "scope": "AUTOMATED_SYNTHETIC_DEMO",
+      "tests": [
+        "tests/search.test.ts",
+        "tests/exp03.test.ts",
+        "tests/e2e/search.spec.ts"
+      ],
+      "behavior": "Exact/incomplete separated; specialist counted once; no hard failures in incomplete"
+    },
+    "F056": {
+      "status": "VERIFIED_DONE",
+      "scope": "AUTOMATED_SYNTHETIC_DEMO",
+      "tests": [
+        "tests/matching.test.ts",
+        "tests/exp03.test.ts",
+        "tests/e2e/profile.spec.ts"
+      ],
+      "behavior": "Independent TTL/exact boundary/future/missing/source; updatedAt cannot refresh or verify"
+    },
+    "F057": {
+      "status": "VERIFIED_DONE",
+      "scope": "AUTOMATED_SYNTHETIC_DEMO",
+      "tests": [
+        "tests/search.test.ts",
+        "tests/exp03.test.ts",
+        "tests/e2e/search.spec.ts"
+      ],
+      "behavior": "Ordinal ID ties, reversed permutations, repeated search; price/district ordering"
+    },
+    "F058": {
+      "status": "VERIFIED_DONE",
+      "scope": "AUTOMATED_SYNTHETIC_DEMO",
+      "tests": [
+        "tests/e2e/exp03.spec.ts",
+        "tests/e2e/search.spec.ts"
+      ],
+      "behavior": "Exact0 and incomplete stay honest through cancel/locale/reload; manual actions only"
+    },
+    "F059": {
+      "status": "VERIFIED_DONE",
+      "scope": "AUTOMATED_SYNTHETIC_DEMO",
+      "tests": [
+        "tests/e2e/exp03.spec.ts",
+        "tests/e2e/search.spec.ts",
+        "tests/session.test.ts"
+      ],
+      "behavior": "Same-tab applied conditions/IDs/sort persist through profile/compare/history/reload"
+    },
+    "F060": {
+      "status": "VERIFIED_DONE",
+      "scope": "AUTOMATED_SYNTHETIC_DEMO",
+      "tests": [
+        "tests/exp03.test.ts",
+        "tests/matching.test.ts",
+        "tests/e2e/exp03.spec.ts"
+      ],
+      "behavior": "Adversarial siblings: attributes/title/category never combine;200 seeded catalogs"
+    }
+  },
+  "security": {
+    "newDependencies": 0,
+    "dependencyAdvisories": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "realData": false,
+    "externalSend": false,
+    "merge": false,
+    "deploy": false,
+    "liveGuard": "UNCHANGED"
+  },
+  "blockers": {
+    "human_parent_comprehension": "BLOCKED_EXTERNAL",
+    "native_KK_editorial": "BLOCKED_EXTERNAL",
+    "real_screen_reader_physical_device_browser_zoom": "NOT_VERIFIED",
+    "original_research_DOCX": "UNAVAILABLE_IN_CHECKOUT",
+    "production_identity_consent_operator_provider_ops": "BLOCKED_EXTERNAL",
+    "remote_CI": "NOT_RUN: existing push allowlist excludes this feature branch; local equivalent checks passed"
+  },
+  "checkpoint_receipts": {
+    "A": "cd1a7a5812ea65bd8bc49ee149bdfe105f0f1773",
+    "B": "08dd0f9e66333dfdc116b78c43e5642d9552f7d3",
+    "C": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
+    "D": "Containing commit; resolve HEAD and compare remote after push, no self-SHA guessing"
+  },
+  "next": "STOP. EXP-04 technically unblocked by EXP-03, needs explicit user authorization.",
+  "evidenceFiles": {
+    "docs/expansion/evidence/EXP-03-A-check.log": {
+      "sha256": "a09f6f3ae651d967b605c6b6b506cbd91674de882e0c44c12765d512682b6718",
+      "bytes": 781
+    },
+    "docs/expansion/evidence/EXP-03-B-check.log": {
+      "sha256": "4f76564b8e44d960a21a8a66ef3e1a00a0b4f9736b424d9a080cb8e7a4bb6e2b",
+      "bytes": 783
+    },
+    "docs/expansion/evidence/EXP-03-B-red.log": {
+      "sha256": "53a954bf5cacb131e68af9e13f6e370e2e29abd7e9b642bc76a698e88c94f670",
+      "bytes": 3562
+    },
+    "docs/expansion/evidence/EXP-03-C-build.log": {
+      "sha256": "71836cc7a24aa8c5b02c46c690dc530e070aeba729cc1f19cd91cbf48f3c7d7c",
+      "bytes": 1729
+    },
+    "docs/expansion/evidence/EXP-03-C-check.log": {
+      "sha256": "961485680171e72f6dbb663eb3e3efdbdfede06178b3e480f31078e9221c6a3a",
+      "bytes": 784
+    },
+    "docs/expansion/evidence/EXP-03-C-context.json": {
+      "sha256": "f6b13fa3f52f8efec4491b7bfa62f6410d782357a518356f284f4db3dbe3b199",
+      "bytes": 168
+    },
+    "docs/expansion/evidence/EXP-03-C-dev.log": {
+      "sha256": "a451bd950fc6d4d834956b992c1d1da67a8073720a8cba8cde21a4bce7e8ff32",
+      "bytes": 14440
+    },
+    "docs/expansion/evidence/EXP-03-C-focused.log": {
+      "sha256": "edc2745e482fb493042f056a03683ae809669667ad70c4e65ec6fb634e92895d",
+      "bytes": 2561
+    },
+    "docs/expansion/evidence/EXP-03-C-initial-failed.log": {
+      "sha256": "0cc54b7e408a9743eb8a17fe1c65c2a4e30811cdb616761c2ff7fef64fd4fd94",
+      "bytes": 13631
+    },
+    "docs/expansion/evidence/EXP-03-D-audit.json": {
+      "sha256": "e5510270fc01acadced17714c5ab3dd87aaa651506f93508f3ce3c45645516df",
+      "bytes": 363
+    },
+    "docs/expansion/evidence/EXP-03-D-dist.log": {
+      "sha256": "06b1165f6b9d3028601d215c74c7cdeca9a5163404173576b60ebe6373608a6c",
+      "bytes": 7813
+    },
+    "docs/expansion/evidence/EXP-03-D-offline.log": {
+      "sha256": "9dbbb836561eb0b70b32e78769533aae501e3e6ed631b14ce2202f3f142e6182",
+      "bytes": 709
+    },
+    "docs/expansion/evidence/EXP-03-D-pilot.log": {
+      "sha256": "d3d96d8df4c9f8aae3ff87f2784aa9d35d1d8018d8e9c34c5cadbe780e67229d",
+      "bytes": 1299
+    },
+    "docs/expansion/evidence/EXP-03-benchmark-after.json": {
+      "sha256": "a9c4f971adf52a301263375efdaab4ea7e1ed69ba4f352163d4ec3d0b71b96b8",
+      "bytes": 8401
+    },
+    "docs/expansion/evidence/EXP-03-benchmark-before.json": {
+      "sha256": "b606e6db5f7664e1e89c9a4c1f6a0d1fdd004deaf5a79fece5a54db65ad07df4",
+      "bytes": 8397
+    },
+    "docs/expansion/evidence/EXP-03-benchmark.md": {
+      "sha256": "4ccd850339a52c70e2255f6fe4a86e38885569aa90f26b60a1bc5c57eb078680",
+      "bytes": 3816
+    },
+    "docs/expansion/evidence/EXP-03-source-ledger.json": {
+      "sha256": "f0212906e212a4ee5ab8ba56ca868d054a592893ec14507c27e5cc823c547ae4",
+      "bytes": 7276
+    },
+    "docs/expansion/evidence/EXP-03-verified-changes.json": {
+      "sha256": "2deb2f8d719329069b89bb13339f5324751a4e7abbb3e86bff6f2bebc36fd19e",
+      "bytes": 3371
+    }
+  },
+  "screenshots": {
+    "work/exp03/catalog-kk-mobile.png": {
+      "sha256": "0fadbc7c83448ff5a6721dee4472d9418914c55bae5a8bb0cc9170276fcf7574",
+      "bytes": 1061475,
+      "scope": "synthetic,320–430px and text200%, inspected; regenerate with focused E2E; ignored artifact"
+    },
+    "work/exp03/catalog-ru-mobile.png": {
+      "sha256": "65b0735e348b9108c10b8707711421722884185faf0ad9a2b1ba37231d5a5aca",
+      "bytes": 1081243,
+      "scope": "synthetic,320–430px and text200%, inspected; regenerate with focused E2E; ignored artifact"
+    }
+  },
+  "contextValidation": {
+    "status": "PASS",
+    "checks": 12380,
+    "features": 231,
+    "phases": 25,
+    "baseline_files_preserved": 330,
+    "baseline_files_reviewed_changed": 5,
+    "errors": []
+  },
+  "logNormalization": "Trailing whitespace/extra EOF blank lines removed from archived transcripts for git whitespace checks; assertions, counts and diagnostic text retained."
+}
