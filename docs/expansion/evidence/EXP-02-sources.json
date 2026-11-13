@@ -1,0 +1,113 @@
+{
+  "observed_at_utc": "2026-11-13T18:41:27.573863+00:00",
+  "parent_checkpoint": "0e7e1896776dc50e2c7be114e0ed249b8e800395",
+  "default_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+  "working_branch": "feature/context-init-2026-11-13",
+  "remote_working_sha_before": "0e7e1896776dc50e2c7be114e0ed249b8e800395",
+  "sibling_exp01_sha": "a93cc18d7b357a637c7114e9408ec11242156eba",
+  "initial_tree": "CLEAN after restoring unborn checkout without reset/clean/stash",
+  "sources": [
+    {
+      "path": "README.md",
+      "sha256": "6fc40b49dc26e4a706078f4a6245e424f385420dd91ccaac2222ae9a027acb8f",
+      "bytes": 14503,
+      "lines": 171,
+      "read_scope": "FULL"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "4172fa56e1c32ba3e3148bacbda6ee22ca9cebb341119ce4bd43909798dc00bd",
+      "bytes": 6052,
+      "lines": 42,
+      "read_scope": "FULL"
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/00_REFERENCE_RESEARCH.md",
+      "sha256": "4e542e1a51d2f41c22cf77496c4e95212e6d2376f4aa02bbb4c4fbe9eab74da2",
+      "bytes": 106892,
+      "lines": 1314,
+      "read_scope": "FULL"
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/FEATURE_REGISTRY_000-230.csv",
+      "sha256": "e088453ceae5280d50ae24f22bf9f40aa98ebd7101caea4d39983053cfba8392",
+      "bytes": 30597,
+      "lines": 232,
+      "read_scope": "FULL"
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/README_START_HERE.md",
+      "sha256": "ed46aa8c6c4fdbbce1f5b9090fa78d46790640251cd2a0703a4ba9dae01f347c",
+      "bytes": 4187,
+      "lines": 31,
+      "read_scope": "FULL"
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/STAGE_MAP.json",
+      "sha256": "4581e8e84088785c27e62678e288d2dcd66d12ebf712d0cc256a114a539a5318",
+      "bytes": 9660,
+      "lines": 439,
+      "read_scope": "FULL"
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/SHA256_MANIFEST.txt",
+      "sha256": "b7a4bccf5856411d747c5244474e85206b0f0800a9fe21ea7b1d14e3880ad71a",
+      "bytes": 994,
+      "lines": 12,
+      "read_scope": "FULL"
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/SOURCE_PACKAGE_INTAKE.md",
+      "sha256": "28bc49dc14153d4db906c7ad7f1ad6cb349d10d9b53846965531319c0591c9cb",
+      "bytes": 2556,
+      "lines": 29,
+      "read_scope": "FULL"
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
+      "sha256": "62da3a173aa812dd78aec11fee0fe1aba96ed9c4d0ea8c4c9e4330d4206a4898",
+      "bytes": 52477,
+      "lines": 534,
+      "read_scope": "FULL",
+      "attachment_matches": true
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/02_CODEX_ENGINEERING_PLAYBOOK.md",
+      "sha256": "3f3b12f5ef3ebba6adbd699b577500ccc884ee1c07500b3d5846360221cfecfa",
+      "bytes": 30587,
+      "lines": 297,
+      "read_scope": "FULL",
+      "attachment_matches": true
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "sha256": "bd6470f570a6d6c2bdb29d122784c53840bb1a3590d9c2f7e130d11b6aca95ff",
+      "bytes": 132668,
+      "lines": 1609,
+      "read_scope": "FULL",
+      "attachment_matches": true
+    }
+  ],
+  "research_docx": {
+    "status": "UNAVAILABLE",
+    "expected_sha256_from_historical_intake": "3ceb39a99c95a1f59fd5139641c7611e68b1036028c4a4a351fd771a0a810bd6",
+    "searched": [
+      "workspace including attachments/library-files",
+      "all fetched GitHub heads; research path history empty"
+    ],
+    "claim": "Only Markdown derivative fully read; no DOCX parity/layout or original binary hash recheck performed."
+  },
+  "open_prs": [
+    1,
+    2
+  ],
+  "scope": "SOURCES_RECONCILED; EXP-02_AUTOMATED_SYNTHETIC; LIVE_BLOCKED",
+  "source_snapshot_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395",
+  "source_snapshot_note": "Hashes describe the incoming files when read, before edits to AGENTS/context. Original sources remain immutable.",
+  "remote_refs_inspected_for_docx_or_research": 19,
+  "user_clarification": {
+    "archive_path": "MamaPro_Codex_Expansion/00_REFERENCE_RESEARCH.docx",
+    "sha256": "3ceb39a99c95a1f59fd5139641c7611e68b1036028c4a4a351fd771a0a810bd6",
+    "scope": "User explicitly confirmed continuing EXP-02 from available Markdown and specifications; original DOCX still NOT_OBSERVED/NOT_COMPARED in this environment."
+  }
+}

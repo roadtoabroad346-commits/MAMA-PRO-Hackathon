@@ -1,0 +1,2 @@
+# Preserve original Markdown hard-break spaces in archived user sources only.
+*.md whitespace=-blank-at-eol

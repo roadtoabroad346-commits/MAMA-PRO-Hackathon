@@ -1,0 +1,72 @@
+{
+  "baseline_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+  "branch": "feature/context-init-2026-11-13",
+  "created_at_utc": "2026-11-13T16:34:24.783032+00:00",
+  "local_time": "2026-11-13T21:34:24.783047+05:00",
+  "feature_counts": {
+    "IMPLEMENTED_WITH_LIMITATIONS": 88,
+    "PILOT_TEST_ONLY": 43,
+    "PLANNED": 51,
+    "PARTIALLY_IMPLEMENTED": 6,
+    "BLOCKED_EXTERNAL": 43
+  },
+  "feature_total": 231,
+  "phase_total": 25,
+  "baseline_files": 335,
+  "text_files": 275,
+  "binary_files": 60,
+  "source_snapshots": [
+    {
+      "path": "docs/AI_CONTEXT/sources/00_CONTEXT_INITIALIZATION_REQUEST.md",
+      "sha256": "b43b4abd91cb5f0df4e17c89d5b803c60d65b09253db75bc0eb153bf9242ea30"
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
+      "sha256": "62da3a173aa812dd78aec11fee0fe1aba96ed9c4d0ea8c4c9e4330d4206a4898"
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/02_CODEX_ENGINEERING_PLAYBOOK.md",
+      "sha256": "3f3b12f5ef3ebba6adbd699b577500ccc884ee1c07500b3d5846360221cfecfa"
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "sha256": "bd6470f570a6d6c2bdb29d122784c53840bb1a3590d9c2f7e130d11b6aca95ff"
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/00_REFERENCE_RESEARCH.md",
+      "sha256": "4e542e1a51d2f41c22cf77496c4e95212e6d2376f4aa02bbb4c4fbe9eab74da2"
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/FEATURE_REGISTRY_000-230.csv",
+      "sha256": "e088453ceae5280d50ae24f22bf9f40aa98ebd7101caea4d39983053cfba8392"
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/STAGE_MAP.json",
+      "sha256": "4581e8e84088785c27e62678e288d2dcd66d12ebf712d0cc256a114a539a5318"
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/README_START_HERE.md",
+      "sha256": "ed46aa8c6c4fdbbce1f5b9090fa78d46790640251cd2a0703a4ba9dae01f347c"
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/SHA256_MANIFEST.txt",
+      "sha256": "b7a4bccf5856411d747c5244474e85206b0f0800a9fe21ea7b1d14e3880ad71a"
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/SOURCE_PACKAGE_INTAKE.md",
+      "sha256": "28bc49dc14153d4db906c7ad7f1ad6cb349d10d9b53846965531319c0591c9cb"
+    }
+  ],
+  "research_sources": {
+    "text": "docs/AI_CONTEXT/sources/00_REFERENCE_RESEARCH.md",
+    "csv": "docs/AI_CONTEXT/sources/FEATURE_REGISTRY_000-230.csv",
+    "lines": "Each feature.research_line and registry_line refer to these original materials; F000 is mission paragraph.",
+    "docx": "UNAVAILABLE_IN_CHECKOUT; historical intake receipt only"
+  },
+  "latest_verification": {
+    "stage": "EXP-02",
+    "parent_sha": "0e7e1896776dc50e2c7be114e0ed249b8e800395",
+    "runtime_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/stages/EXP-02.md"
+  }
+}

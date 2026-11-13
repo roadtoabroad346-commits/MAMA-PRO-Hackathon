@@ -1,0 +1,439 @@
+{
+  "schemaVersion": 1,
+  "source_research_sha256": "3ceb39a99c95a1f59fd5139641c7611e68b1036028c4a4a351fd771a0a810bd6",
+  "baseSha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+  "note": "Baseline at research date; verify current state before execution.",
+  "stages": [
+    {
+      "stage": "EXP-00",
+      "feature_ids": [
+        "F000"
+      ],
+      "title": "Baseline, источники истины и разрешения",
+      "dependencies": "Только репозиторий и Research",
+      "horizon": "H0"
+    },
+    {
+      "stage": "EXP-01",
+      "feature_ids": [
+        "F001",
+        "F002",
+        "F003",
+        "F004",
+        "F005",
+        "F006",
+        "F007",
+        "F008",
+        "F009",
+        "F010",
+        "F011",
+        "F012",
+        "F013",
+        "F014",
+        "F015",
+        "F016"
+      ],
+      "title": "DEMO: главная, языки, навигация и маскот",
+      "dependencies": "EXP-00",
+      "horizon": "H0"
+    },
+    {
+      "stage": "EXP-02",
+      "feature_ids": [
+        "F017",
+        "F018",
+        "F019",
+        "F020",
+        "F021",
+        "F022",
+        "F023",
+        "F024",
+        "F025",
+        "F026",
+        "F027",
+        "F028",
+        "F029",
+        "F030",
+        "F031",
+        "F032",
+        "F033",
+        "F034",
+        "F035",
+        "F036"
+      ],
+      "title": "DEMO: анкета и подтверждение условий",
+      "dependencies": "EXP-01",
+      "horizon": "H0"
+    },
+    {
+      "stage": "EXP-03",
+      "feature_ids": [
+        "F037",
+        "F038",
+        "F039",
+        "F040",
+        "F041",
+        "F042",
+        "F043",
+        "F044",
+        "F045",
+        "F046",
+        "F047",
+        "F048",
+        "F049",
+        "F050",
+        "F051",
+        "F052",
+        "F053",
+        "F054",
+        "F055",
+        "F056",
+        "F057",
+        "F058",
+        "F059",
+        "F060"
+      ],
+      "title": "DEMO: offer-level matching и каталог",
+      "dependencies": "EXP-02",
+      "horizon": "H0"
+    },
+    {
+      "stage": "EXP-04",
+      "feature_ids": [
+        "F061",
+        "F062",
+        "F063",
+        "F064",
+        "F065",
+        "F066",
+        "F067",
+        "F068",
+        "F069",
+        "F070",
+        "F071",
+        "F072",
+        "F073",
+        "F074",
+        "F075"
+      ],
+      "title": "DEMO: профиль, паспорт доверия, сравнение",
+      "dependencies": "EXP-03",
+      "horizon": "H0"
+    },
+    {
+      "stage": "EXP-05",
+      "feature_ids": [
+        "F076",
+        "F077",
+        "F078",
+        "F079",
+        "F080",
+        "F081",
+        "F082",
+        "F083",
+        "F084",
+        "F085",
+        "F086",
+        "F087"
+      ],
+      "title": "DEMO: заявки, карта, PWA и устойчивость",
+      "dependencies": "EXP-04",
+      "horizon": "H0"
+    },
+    {
+      "stage": "EXP-06",
+      "feature_ids": [
+        "F088",
+        "F089",
+        "F090",
+        "F091",
+        "F092",
+        "F093",
+        "F094"
+      ],
+      "title": "PILOT_TEST: synthetic identity, роли и доступы",
+      "dependencies": "EXP-00 и готовая база пилота",
+      "horizon": "H0"
+    },
+    {
+      "stage": "EXP-07",
+      "feature_ids": [
+        "F095",
+        "F096",
+        "F097",
+        "F098",
+        "F099",
+        "F100",
+        "F101",
+        "F102",
+        "F103",
+        "F104"
+      ],
+      "title": "PILOT_TEST: специалист, анкета и модерация",
+      "dependencies": "EXP-06",
+      "horizon": "H0"
+    },
+    {
+      "stage": "EXP-08",
+      "feature_ids": [
+        "F105",
+        "F106",
+        "F107",
+        "F108",
+        "F109",
+        "F110",
+        "F111",
+        "F112",
+        "F113",
+        "F114"
+      ],
+      "title": "PILOT_TEST: обращения и статусы",
+      "dependencies": "EXP-06/07",
+      "horizon": "H0"
+    },
+    {
+      "stage": "EXP-09",
+      "feature_ids": [
+        "F115",
+        "F116",
+        "F117",
+        "F118",
+        "F119",
+        "F120",
+        "F121",
+        "F122"
+      ],
+      "title": "PILOT_TEST: календарь, inbox и подписки",
+      "dependencies": "EXP-08",
+      "horizon": "H0"
+    },
+    {
+      "stage": "EXP-10",
+      "feature_ids": [
+        "F123",
+        "F124",
+        "F125",
+        "F126",
+        "F127",
+        "F128",
+        "F129",
+        "F130"
+      ],
+      "title": "PILOT_TEST: next action, приватные цели и сводка",
+      "dependencies": "EXP-06/08/09",
+      "horizon": "H0"
+    },
+    {
+      "stage": "EXP-11",
+      "feature_ids": [
+        "F131",
+        "F132",
+        "F133",
+        "F134",
+        "F135",
+        "F136",
+        "F137",
+        "F138",
+        "F139",
+        "F140"
+      ],
+      "title": "LATER: deterministic Қарлығаш и explainability",
+      "dependencies": "EXP-01–04; sources/QA completed",
+      "horizon": "H0→H1"
+    },
+    {
+      "stage": "EXP-12",
+      "feature_ids": [
+        "F141",
+        "F142",
+        "F143",
+        "F144",
+        "F145",
+        "F146",
+        "F147",
+        "F148",
+        "F149",
+        "F150"
+      ],
+      "title": "LATER: voice, semantic search и assistant safety",
+      "dependencies": "EXP-11, manual accessibility review",
+      "horizon": "H1"
+    },
+    {
+      "stage": "EXP-13",
+      "feature_ids": [
+        "F151",
+        "F152",
+        "F153",
+        "F154"
+      ],
+      "title": "LATER: Accessibility Fit + True Cost Calculator",
+      "dependencies": "EXP-03, verified/source-backed schema",
+      "horizon": "H1"
+    },
+    {
+      "stage": "EXP-14",
+      "feature_ids": [
+        "F155",
+        "F156",
+        "F157",
+        "F158",
+        "F159",
+        "F160",
+        "F161",
+        "F162",
+        "F163",
+        "F164",
+        "F165",
+        "F166"
+      ],
+      "title": "LATER: маршруты, доступность слотов и расширенный поиск",
+      "dependencies": "EXP-03/13; external provider agreement for real routes/availability",
+      "horizon": "H1→H2"
+    },
+    {
+      "stage": "EXP-15",
+      "feature_ids": [
+        "F167",
+        "F168",
+        "F169",
+        "F170"
+      ],
+      "title": "LATER: Social Support Navigator",
+      "dependencies": "EXP-03/13; human source verification",
+      "horizon": "H1"
+    },
+    {
+      "stage": "EXP-16",
+      "feature_ids": [
+        "F171",
+        "F172",
+        "F173",
+        "F174",
+        "F175",
+        "F176",
+        "F177",
+        "F178",
+        "F179",
+        "F180"
+      ],
+      "title": "LATER: production identity, family permissions, consent",
+      "dependencies": "EXP-06/10 + legal/privacy/operator gate",
+      "horizon": "H2"
+    },
+    {
+      "stage": "EXP-17",
+      "feature_ids": [
+        "F181",
+        "F182",
+        "F183",
+        "F184",
+        "F185"
+      ],
+      "title": "LATER: семейная координация и portability",
+      "dependencies": "EXP-16",
+      "horizon": "H2"
+    },
+    {
+      "stage": "EXP-18",
+      "feature_ids": [
+        "F186",
+        "F187",
+        "F188",
+        "F189",
+        "F190",
+        "F191",
+        "F192",
+        "F193",
+        "F194",
+        "F195"
+      ],
+      "title": "LATER: связь с живым специалистом и каналы уведомлений",
+      "dependencies": "EXP-08 + EXP-16/20 + provider authorization",
+      "horizon": "H2"
+    },
+    {
+      "stage": "EXP-19",
+      "feature_ids": [
+        "F196",
+        "F197",
+        "F198",
+        "F199",
+        "F200"
+      ],
+      "title": "LATER: календарные интеграции и booking lifecycle",
+      "dependencies": "EXP-18; trusted provider slots",
+      "horizon": "H2"
+    },
+    {
+      "stage": "EXP-20",
+      "feature_ids": [
+        "F201",
+        "F202",
+        "F203",
+        "F204",
+        "F205",
+        "F206",
+        "F207",
+        "F208",
+        "F209",
+        "F210"
+      ],
+      "title": "LATER: реальный trust, модерация, отзывы",
+      "dependencies": "EXP-07 + EXP-16/18 + qualified moderator",
+      "horizon": "H2"
+    },
+    {
+      "stage": "EXP-21",
+      "feature_ids": [
+        "F211",
+        "F212",
+        "F213",
+        "F214",
+        "F215",
+        "F216",
+        "F217"
+      ],
+      "title": "LATER: Social Impact Dashboard и research metrics",
+      "dependencies": "EXP-00, research protocol, consent/retention if live",
+      "horizon": "H1→H2"
+    },
+    {
+      "stage": "EXP-22",
+      "feature_ids": [
+        "F218",
+        "F219",
+        "F220",
+        "F221",
+        "F222",
+        "F223",
+        "F224"
+      ],
+      "title": "LATER: кабинет фонда, партнёры, Telegram, регионы",
+      "dependencies": "EXP-15/16/18/20/21; partner agreements",
+      "horizon": "H2"
+    },
+    {
+      "stage": "EXP-23",
+      "feature_ids": [
+        "F225",
+        "F226",
+        "F227",
+        "F228"
+      ],
+      "title": "LATER: observability, backups, production security, real-device a11y",
+      "dependencies": "EXP-06/16/18/20/22; operator/security owners",
+      "horizon": "H2"
+    },
+    {
+      "stage": "EXP-24",
+      "feature_ids": [
+        "F229",
+        "F230"
+      ],
+      "title": "LATER: ограниченный live pilot и production launch",
+      "dependencies": "EXP-16–23 + all required LIVE_READINESS sign-offs",
+      "horizon": "H2 external gate"
+    }
+  ]
+}
