@@ -8,7 +8,7 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Current action: context init
 
 | EXP | F-IDs | Состояние |
 |---|---|---|
-| [EXP-00](#exp-00) | F000–F000 | CONTEXT_INITIALIZATION |
+| [EXP-00](#exp-00) | F000–F000 | CONTEXT_INITIALIZED_WITH_SOURCE_GAPS |
 | [EXP-01](#exp-01) | F001–F016 | EXISTING_DEMO_WITH_LIMITATIONS |
 | [EXP-02](#exp-02) | F017–F036 | EXISTING_DEMO_WITH_LIMITATIONS |
 | [EXP-03](#exp-03) | F037–F060 | EXISTING_DEMO_WITH_LIMITATIONS |
@@ -36,7 +36,7 @@ Baseline: 7f8434a4cfd097b531fa584f5b97ebd1e772ad92. Current action: context init
 
 ## EXP-00
 
-Baseline, источники истины и разрешения — **CONTEXT_INITIALIZATION**. Охват: F000.
+Baseline, источники истины и разрешения — **CONTEXT_INITIALIZED_WITH_SOURCE_GAPS**. Охват: F000.
 
 **Цель:** Согласовать назначение платформы и не потерять фактическое состояние: code SHA, historical phase status, scope, sources, known unknowns. Не изменять продукт ради выполнения этапа.
 
@@ -75,7 +75,7 @@ Baseline, источники истины и разрешения — **CONTEXT_
 - EXP-00-AC-03: Каждый неизвестный исторический stage помечен UNKNOWN/TEAM_ATTESTED, а не выдуман как VERIFIED.
 - EXP-00-AC-04: Первый docs-only checkpoint запушен и remote SHA совпадает; если права отсутствуют — честный PUSH_BLOCKED.
 
-**Доказательства:** [baseline validation](VALIDATION.md), code SHA 7f8434a4cfd097b531fa584f5b97ebd1e772ad92; per-AC status CHECK_CONTEXT_VALIDATOR_AND_SYNC. Новые implementation commits этой фазы отсутствуют.
+**Доказательства:** [baseline validation](VALIDATION.md), code SHA 7f8434a4cfd097b531fa584f5b97ebd1e772ad92; EXP-00-AC-01..04 PASS для доступного контекста: validator coverage, Git snapshot, historical UNKNOWN/attestation, verified remote checkpoint b0b4115b694ec8271ead0f90a1d4c7742327145f. Original Research остаётся отсутствующим. Implementation commits этой фазы отсутствуют; docs checkpoint создан.
 
 **Оригинал:** [карточка плана](sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md#L173).
 

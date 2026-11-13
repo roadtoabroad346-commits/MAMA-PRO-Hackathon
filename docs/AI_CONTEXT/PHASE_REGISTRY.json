@@ -5,7 +5,7 @@
     "feature_ids": [
       "F000"
     ],
-    "status": "CONTEXT_INITIALIZATION",
+    "status": "CONTEXT_INITIALIZED_WITH_SOURCE_GAPS",
     "objective": "Согласовать назначение платформы и не потерять фактическое состояние: code SHA, historical phase status, scope, sources, known unknowns. Не изменять продукт ради выполнения этапа.",
     "prerequisites": "Только репозиторий и Research.",
     "technical_architecture": "Создать FEATURE_MATRIX 231 ID, gap map, ADR о синтетическом демо, requirements-to-tests map, STATE/PROGRESS/HANDOFF и рабочую ветку. Прочитать AGENTS.md и реальные npm scripts.",
@@ -42,8 +42,10 @@
     "completion_evidence": {
       "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
       "qa": "VALIDATION.md",
-      "phase_ac_status": "CHECK_CONTEXT_VALIDATOR_AND_SYNC",
-      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+      "phase_ac_status": "EXP-00-AC-01..04: PASS for available-source initialization; original Research unavailable",
+      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates.",
+      "checkpoint_sha": "b0b4115b694ec8271ead0f90a1d4c7742327145f",
+      "remote_verified_at_utc": "2026-11-13T16:44:49.420189+00:00"
     },
     "source": {
       "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",

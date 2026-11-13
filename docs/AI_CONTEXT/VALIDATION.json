@@ -71,7 +71,14 @@
     "baseline_files_preserved": 335,
     "errors": []
   },
-  "remote_sync": "PENDING",
+  "remote_sync": {
+    "status": "VERIFIED",
+    "checkpoint_sha": "b0b4115b694ec8271ead0f90a1d4c7742327145f",
+    "remote_sha": "b0b4115b694ec8271ead0f90a1d4c7742327145f",
+    "observed_at_utc": "2026-11-13T16:44:49.420189+00:00",
+    "branch": "feature/context-init-2026-11-13",
+    "scope": "Initial docs checkpoint; the subsequent handoff-record commit is verified separately, avoiding self-referential hashes."
+  },
   "not_run": [
     "primary Research DOCX review (file absent)",
     "parent interview/UAT",
@@ -80,5 +87,7 @@
     "current official hackathon/legal/market source validation",
     "production deployment/CI attestation/backup restore/live delivery"
   ],
-  "context_validation_note": "Initial run flagged missing literal LIVE_BLOCKED in master/handoff; explicit guards added; final rerun PASS. No product changes."
+  "context_validation_note": "Initial run flagged missing literal LIVE_BLOCKED in master/handoff; explicit guards added; final rerun PASS. No product changes.",
+  "initialization_scope": "COMPLETE_FOR_AVAILABLE_SOURCES",
+  "primary_research_complete": false
 }

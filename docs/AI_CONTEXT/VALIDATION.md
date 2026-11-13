@@ -16,7 +16,7 @@
 | Dependency advisories | `npm audit --json` | total0, high0, critical0 |
 | Context consistency | `python3 docs/AI_CONTEXT/validate_context.py` | PASS; 10067 проверок согласованности, 231 features/25 phases/335 files |
 | Diff/staged boundary | `git diff --cached --check`, allowlisted names и original hashes | См. итоговую запись checkpoint |
-| Push/remote SHA | `git push -u origin feature/context-init-2026-11-13` + `git ls-remote` | Фактический observed checkpoint в SESSION_HANDOFF; до него PENDING |
+| Push/remote SHA | `git push -u origin feature/context-init-2026-11-13` + `git ls-remote` | PASS для initial checkpoint b0b4115b694ec8271ead0f90a1d4c7742327145f; subsequent handoff-record commit проверяется отдельно |
 
 Итого выполнено **258** unit/integration/browser проверок, failed0/skipped0. Логи с исходным stdout сохранены в [evidence](evidence/check.log); все пути/размеры/SHA256 — в [VALIDATION.json](VALIDATION.json). NO_COLOR/FORCE_COLOR и experimental node:sqlite warnings не трактуются как failed checks. Browser suites работали на собственных серверах с CI=1; pilot DB имеет отдельное e2e имя и не коммитится.
 
@@ -29,3 +29,5 @@ NOT_RUN/BLOCKED: отсутствующий первичный DOCX/CSV/README �
 Протокол безопасности: синтетические данные, `LIVE_BLOCKED` неизменён и covered existing unit suite; никаких real providers, external messages, deployment, merge или force-push. Исторические source prompts сохранены как источники требований, не как новые полномочия.
 
 Первый запуск context validator потребовал явную строку LIVE_BLOCKED в master/handoff; строки добавлены, повторная проверка PASS. Это документационное исправление; runtime/tests не менялись.
+
+Staged review: 35 новых контекстных файлов, unrelated/runtime paths0; secret-pattern findings0. CSV приведены к LF; source-directory .gitattributes сохраняет исходные Markdown hard-break spaces без изменения оригинальных вложений. После этого `git diff --cached --check` PASS.
