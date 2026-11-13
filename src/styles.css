@@ -161,6 +161,16 @@ dd { margin: 4px 0 0; display: flex; flex-wrap: wrap; gap: 8px 12px; align-items
 .verification p { margin-bottom: 8px; }
 .verification > :last-child, .verification > div > :last-child { margin-bottom: 0; }
 .card-actions { display: flex; flex-direction: column; gap: 12px; margin-top: auto; }
+/* Side-by-side comparison: the five blocks of each card (head, facts,
+   explanations, verification, actions) share one row per block across
+   cards via subgrid, so section tops align (closes the known minor
+   'vertical compare'). Browsers without subgrid keep the stacked card. */
+.comparison-grid { grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); }
+@supports (grid-template-rows: subgrid) {
+  @media (min-width: 1000px) {
+    .comparison-grid .specialist-card { display: grid; grid-template-rows: subgrid; grid-row: span 5; align-content: start; }
+  }
+}
 .result-heading { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; }
 .result-heading > .bird.small { width: 60px; height: 46px; flex-shrink: 0; }
 .result-heading > p { font-weight: 650; }
@@ -290,6 +300,9 @@ html { scroll-padding-bottom: calc(var(--compare-tray-height, 0px) + 24px); }
 .pilot-form fieldset fieldset { margin-block: 16px; }
 .pilot-form .field, .pilot-page > section > .field { display: flex; flex-direction: column; gap: 8px; margin-block: 16px; }
 .pilot-page textarea, .pilot-page input, .pilot-page select { max-width: 100%; width: 100%; padding: 12px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; font: inherit; }
+.pilot-page input[type='date'] { min-height: 44px; accent-color: var(--primary); }
+.pilot-page input[type='number'] { font-variant-numeric: tabular-nums; }
+.pilot-page input[type='number']::-webkit-inner-spin-button { accent-color: var(--primary); }
 .pilot-page input[type='checkbox'] { width: 22px; height: 22px; flex: 0 0 22px; }
 .pilot-page .checkbox { display: flex; gap: 12px; align-items: flex-start; margin-block: 16px; min-height: 44px; }
 .pilot-page details { margin-block: 20px; }

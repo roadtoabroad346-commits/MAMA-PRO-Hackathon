@@ -20,8 +20,10 @@ export function Comparison() {
       if (!offer || !specialist) return null;
       const item = service.inspectOffer(input, offer.id);
       return <article key={specialist.id} className="specialist-card" data-testid="comparison-card" data-offer-id={offer.id}>
-        <h2>{specialist.displayName[locale]}</h2><p className="offer-title">{offer.title[locale]} · {offer.id}</p><p>{t(categoryKeys[offer.categoryId])}</p>
-        <OfferFacts offer={offer} /><Explanations item={item} /><Verification specialistId={specialist.id} />
+        <div className="compare-head"><h2>{specialist.displayName[locale]}</h2><p className="offer-title">{offer.title[locale]} · {offer.id}</p><p>{t(categoryKeys[offer.categoryId])}</p></div>
+        <div className="compare-block"><OfferFacts offer={offer} /></div>
+        <div className="compare-block"><Explanations item={item} /></div>
+        <div className="compare-block"><Verification specialistId={specialist.id} /></div>
         <div className="card-actions">
           <RequestAction key={`${offer.id}-${item === null}`} offer={offer} incompatible={item === null} hasContext fromComparison />
           <Link className="button secondary" to={`/specialists/${specialist.id}?offer=${offer.id}`} state={{ fromComparison: true }}>{t('profile')}</Link><CompareButton offer={offer} onRemoved={focusTitle} />
