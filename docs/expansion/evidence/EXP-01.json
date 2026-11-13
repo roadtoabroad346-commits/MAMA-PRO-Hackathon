@@ -145,5 +145,10 @@
   "npm_audit": {
     "vulnerabilities": 0,
     "sha256": "e5510270fc01acadced17714c5ab3dd87aaa651506f93508f3ce3c45645516df"
+  },
+  "verified_checkpoint": {
+    "sha": "a7404075e822babeea7c886a5b23197ecdc3a123",
+    "remote_sha": "a7404075e822babeea7c886a5b23197ecdc3a123",
+    "observed_at_utc": "2026-11-13T18:13:49.120836+00:00"
   }
 }

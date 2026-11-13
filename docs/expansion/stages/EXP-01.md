@@ -30,3 +30,5 @@ BLOCKED_EXTERNAL: реальный родитель и native KK редакто�
 Следующая задача: EXP-02 F017–F036 — сопоставить20 функций с каждым AC, подтвердить review count тем же SearchService, draft/applied separation, null/zero/hard flags, invalid budget/reload/Back/KK. Новые функции создавать только при доказанном gap. EXP-11 не перескакивать поверх непроверенных зависимостей.
 
 Rollback: revert отдельного stage commit удаляет новые test/docs изменения; DB/schema/runtime изменений нет. Checkpoint этой стадии определяется `git log -1 -- tests/e2e/exp01.spec.ts`; observed push записывается отдельно после проверки remote. Никакого merge/deploy/force-push.
+
+Проверенный stage checkpoint: `a7404075e822babeea7c886a5b23197ecdc3a123`, local==remote, 2026-11-13T18:13:49.120836+00:00. Последующий docs receipt commit только фиксирует этот уже наблюдённый SHA; актуальный HEAD проверять через git/remote.

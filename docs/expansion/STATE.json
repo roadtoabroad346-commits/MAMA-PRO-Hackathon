@@ -23,8 +23,8 @@
     "F015",
     "F016"
   ],
-  "lastPushedCommit": "ffa8bd6e5ab86ac5ea7d2920b6d4f16a04224cfe",
-  "synchronization": "Previous observed checkpoint; stage push not observed yet",
+  "lastPushedCommit": "a7404075e822babeea7c886a5b23197ecdc3a123",
+  "synchronization": "VERIFIED stage checkpoint at 2026-11-13T18:13:49.120836+00:00; subsequent receipt-document commit verified separately",
   "tests": {
     "passed": 264,
     "failed": 0,
