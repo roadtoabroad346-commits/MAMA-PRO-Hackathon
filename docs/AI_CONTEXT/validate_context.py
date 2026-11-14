@@ -128,7 +128,7 @@ if exp03:
  for path,expected_hash in change_manifest.get('verifiedSourceFiles',{}).items():
   original=subprocess.check_output(['git','show',source_sha+':'+path],cwd=R)
   check(hashlib.sha256(original).hexdigest()==expected_hash,'Verified Git source mismatch: '+path)
-  current_expected=next((x['currentSha256'] for x in exp04_manifest.get('changes',[]) if x['path']==path),expected_hash)
+  current_expected=exp04_manifest.get('successorFiles',{}).get(path,next((x['currentSha256'] for x in exp04_manifest.get('changes',[]) if x['path']==path),expected_hash))
   check(hashlib.sha256((R/path).read_bytes()).hexdigest()==current_expected,'Current source has no reviewed tested successor: '+path)
  for path,record in exp03['evidenceFiles'].items():
   check(hashlib.sha256((R/path).read_bytes()).hexdigest()==record['sha256'],'EXP-03 evidence changed: '+path)

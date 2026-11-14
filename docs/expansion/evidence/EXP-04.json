@@ -27,5 +27,38 @@
       "passed": 13,
       "log": "docs/expansion/evidence/EXP-04-B-profile.log"
     }
+  },
+  "domainCheckpoint": "424c36db3caa423d304ca403d01e7a6bff372011",
+  "ux": {
+    "check": {
+      "passed": 237,
+      "status": "PASS",
+      "log": "docs/expansion/evidence/EXP-04-C-check.log"
+    },
+    "dev": {
+      "passed": 121,
+      "failed": 0,
+      "skipped": 0,
+      "status": "PASS",
+      "log": "docs/expansion/evidence/EXP-04-C-dev.log"
+    },
+    "build": {
+      "status": "PASS",
+      "mainKib": 380.0,
+      "mainGzipKib": 111.42,
+      "log": "docs/expansion/evidence/EXP-04-C-build.log"
+    },
+    "screenshots": [
+      "docs/expansion/evidence/EXP-04-screenshots/compare-kk-390.jpg",
+      "docs/expansion/evidence/EXP-04-screenshots/compare-ru-390.jpg",
+      "docs/expansion/evidence/EXP-04-screenshots/compare-ru-1280.jpg",
+      "docs/expansion/evidence/EXP-04-screenshots/compare-kk-320-text200.jpg",
+      "docs/expansion/evidence/EXP-04-screenshots/compare-kk-1280.jpg"
+    ],
+    "intermediate_failures": [
+      "C-initial:24 PASS/3 FAIL (hover alignment + locale expectation)",
+      "C-second:27 PASS/2 FAIL (invalid harness category aggregate + Node/Chromium ICU mismatch)",
+      "C-dev-initial:120 PASS/1 FAIL (preexisting reload read race); corrected waiting for same expected ID count"
+    ]
   }
 }

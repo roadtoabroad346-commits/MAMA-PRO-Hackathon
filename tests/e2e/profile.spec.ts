@@ -9,7 +9,8 @@ async function seed(page: Page, input: SearchInput = emptySearchInput(), locale:
   }, { input, locale });
 }
 async function fixture(page: Page, data: unknown) {
-  await page.route('**/src/data/catalog.json', route => route.fulfill({ json: data }));
+  await page.route(/\/(?:src\/data\/catalog\.json|assets\/catalog-[^/]+\.json)(?:\?.*)?$/, route =>
+    route.request().resourceType() === 'fetch' ? route.fulfill({ json: data }) : route.continue());
 }
 const selected = (page: Page) => page.getByTestId('selected-offer');
 

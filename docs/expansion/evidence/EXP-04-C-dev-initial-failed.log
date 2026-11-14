@@ -1,0 +1,49 @@
+
+> qoldau-zhol@0.6.0 test:e2e
+> playwright test --workers=2
+
+[WebServer] (node:8032) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 121 tests using 2 workers
+(node:8052) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:8053) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+··············F·(node:8959) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+································································
+·········································
+
+  1) tests/e2e/exp03.spec.ts:116:3 › EXP-03 ru: applied query/sort/filters survive profile, comparison, history and reload
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 9
+    + Received  + 1
+
+    - Array [
+    -   "O06",
+    -   "O07",
+    -   "O03",
+    -   "O01",
+    -   "O02",
+    -   "O10",
+    -   "O11",
+    - ]
+    + Array []
+
+      131 |     await page.reload();
+      132 |     expect(await applied(page)).toEqual(input);
+    > 133 |     expect(await page.getByTestId('specialist-card').evaluateAll(nodes => nodes.map(n => n.getAttribute('data-offer-id')))).toEqual(ids);
+          |                                                                                                                             ^
+      134 |   });
+      135 |
+      136 |   test(`EXP-03 ${locale}: mobile reflow, long query, text200%, keyboard modal, focus restore and reduced motion`, async ({ page }) => {
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/exp03.spec.ts:133:125
+
+    Error Context: test-results/exp03-EXP-03-ru-applied-qu-05a5c-mparison-history-and-reload/error-context.md
+
+  1 failed
+    tests/e2e/exp03.spec.ts:116:3 › EXP-03 ru: applied query/sort/filters survive profile, comparison, history and reload
+  120 passed (2.8m)

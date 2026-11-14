@@ -1,17 +1,16 @@
+import { factDateText } from '../../i18n/date';
 import { useApp } from '../../app/AppState';
 import type { Offer, Specialist, VerificationFact } from '../../domain/catalog';
-import { FRESHNESS_POLICY } from '../../domain/freshness';
-import { isFresh } from '../../domain/SearchService';
-import { verificationStatus } from '../../domain/profile';
+import { fieldFreshness, fixedClock, FRESHNESS_POLICY } from '../../domain/freshness';
+import { scopeKeys, verificationStatus } from '../../domain/profile';
 import type { MessageKey } from '../../i18n/messages';
-import { scopeKeys } from '../search/OfferCard';
 
 function FactDetails({ status, source, date, scope, limit, reviewDue }: {
   status: VerificationFact['status']; source: string; date: string | null;
   scope: string; limit: string; reviewDue?: string | null;
 }) {
   const { locale, t } = useApp();
-  const format = (value: string) => new Intl.DateTimeFormat(locale, { dateStyle: 'medium', timeZone: 'Asia/Almaty' }).format(new Date(value));
+  const format = (value: string) => factDateText(value, locale);
   return <dl className="trust-details">
     <div><dt>{t('factStatus')}</dt><dd>{t(status)}</dd></div>
     <div><dt>{t('factSource')}</dt><dd>{source}</dd></div>
@@ -22,10 +21,10 @@ function FactDetails({ status, source, date, scope, limit, reviewDue }: {
   </dl>;
 }
 
-function EvidenceFact({ fact }: { fact: VerificationFact }) {
+export function EvidenceFact({ fact }: { fact: VerificationFact }) {
   const { catalog, locale, t } = useApp();
   return <>
-    <FactDetails status={verificationStatus(fact, catalog.demoClock)} source={fact.sourceLabel?.[locale] ?? t('sourceUnknown')}
+    <FactDetails status={verificationStatus(fact, catalog.demoClock)} source={fact.sourceLabel?.[locale].trim() || t('sourceUnknown')}
       date={fact.checkedAt} scope={fact.evidenceSummary[locale]} limit={fact.limitations[locale]} reviewDue={fact.reviewDueAt} />
     {fact.status === 'DOCUMENT_SEEN' && <p className="help">{t('noDocumentAuthenticity')}</p>}
     {fact.checkedAt && Date.parse(fact.checkedAt) > Date.parse(catalog.demoClock) && <p className="warning-text">{t('verificationFuture')}</p>}
@@ -33,8 +32,8 @@ function EvidenceFact({ fact }: { fact: VerificationFact }) {
   </>;
 }
 
-export function TrustPassport({ specialist, offer }: { specialist: Specialist; offer: Offer }) {
-  const { catalog, locale, t } = useApp();
+export function OfferEvidence({ specialist, offer }: { specialist: Specialist; offer: Offer }) {
+  const { catalog, t } = useApp();
   const fields: { key: string; label: MessageKey; known: boolean; freshDays?: number }[] = [
     { key: 'ageRange', label: 'ageRange', known: offer.ageMinMonths !== null && offer.ageMaxMonths !== null },
     { key: 'languages', label: 'serviceLanguage', known: !!offer.languages?.length },
@@ -43,9 +42,29 @@ export function TrustPassport({ specialist, offer }: { specialist: Specialist; o
     { key: 'price', label: 'priceLabel', known: offer.priceKind !== 'unknown', freshDays: FRESHNESS_POLICY.days.price },
     { key: 'availability', label: 'availabilityLabel', known: offer.acceptingEnquiries !== null, freshDays: FRESHNESS_POLICY.days.availability },
   ];
+  return <section className="trust-fact" data-trust-scope="offer_data" data-trust-offer-id={offer.id}>
+      <h3>{t('scopeOfferData')} · {offer.id}</h3>
+      {specialist.verificationFacts.filter(fact => fact.scope === 'offer_data' && fact.offerId === offer.id).map((fact, index) => <EvidenceFact key={index} fact={fact} />)}
+      {fields.map(field => {
+        const source = offer.fieldSources[field.key];
+        const date = field.key === 'price' ? offer.priceConfirmedAt : field.key === 'availability' ? offer.availabilityConfirmedAt : source?.checkedAt ?? null;
+        const freshness = fieldFreshness(source?.checkedAt === date ? date : null, fixedClock(catalog.demoClock), field.freshDays);
+        const reported = source?.sourceKind === 'synthetic_self_reported';
+        const status = !field.known || freshness.status === 'unknown' || !reported ? 'UNVERIFIED'
+          : freshness.status === 'stale' ? 'STALE' : 'SELF_DECLARED';
+        return <section className="offer-trust-field" key={field.key} data-trust-field={field.key}>
+          <h4>{t(field.label)}</h4><FactDetails status={status} source={reported ? t('selfReportedSource') : t('sourceUnknown')}
+            date={source?.checkedAt ?? null} scope={t('offerFieldScope', { field: t(field.label), id: offer.id })} limit={t('offerFieldLimit')} />
+        </section>;
+      })}
+    </section>;
+}
+
+export function TrustPassport({ specialist, offer }: { specialist: Specialist; offer: Offer }) {
+  const { catalog, locale, t } = useApp();
   return <section className="trust-passport" aria-labelledby="passport-title">
     <h2 id="passport-title">{t('passport')}</h2><p>{t('passportHelp')}</p>
-    <p className="help">{t('reviewClock', { date: new Intl.DateTimeFormat(locale, { dateStyle: 'medium', timeZone: 'Asia/Almaty' }).format(new Date(catalog.demoClock)) })}</p>
+    <p className="help">{t('reviewClock', { date: factDateText(catalog.demoClock, locale) })}</p>
     <div className="passport-grid">{(['identity', 'education', 'contact', ...(specialist.verificationFacts.some(f => f.scope === 'qualification') ? ['qualification' as const] : [])] as const).map(scope => {
       const facts = specialist.verificationFacts.filter(fact => fact.scope === scope);
       return <section className="trust-fact" data-trust-scope={scope} key={scope}>
@@ -54,20 +73,6 @@ export function TrustPassport({ specialist, offer }: { specialist: Specialist; o
           : <FactDetails status="UNVERIFIED" source={t('sourceUnknown')} date={null} scope={t('noFactScope')} limit={t('noFactLimit')} />}
       </section>;
     })}</div>
-    <section className="trust-fact" data-trust-scope="offer_data" data-trust-offer-id={offer.id}>
-      <h3>{t('scopeOfferData')} · {offer.id}</h3>
-      {specialist.verificationFacts.filter(fact => fact.scope === 'offer_data' && fact.offerId === offer.id).map((fact, index) => <EvidenceFact key={index} fact={fact} />)}
-      {fields.map(field => {
-        const source = offer.fieldSources[field.key];
-        const dated = !!source?.checkedAt && Date.parse(source.checkedAt) <= Date.parse(catalog.demoClock);
-        const reported = source?.sourceKind === 'synthetic_self_reported';
-        const status = !field.known || !dated || !reported ? 'UNVERIFIED'
-          : field.freshDays && !isFresh(source.checkedAt, new Date(catalog.demoClock), field.freshDays) ? 'STALE' : 'SELF_DECLARED';
-        return <section className="offer-trust-field" key={field.key} data-trust-field={field.key}>
-          <h4>{t(field.label)}</h4><FactDetails status={status} source={reported ? t('selfReportedSource') : t('sourceUnknown')}
-            date={source?.checkedAt ?? null} scope={t('offerFieldScope', { field: t(field.label), id: offer.id })} limit={t('offerFieldLimit')} />
-        </section>;
-      })}
-    </section>
+    <OfferEvidence specialist={specialist} offer={offer} />
   </section>;
 }

@@ -1,6 +1,8 @@
 import type { Catalog, VerificationFact } from './catalog';
 import { fieldFreshness, fixedClock, FRESHNESS_POLICY } from './freshness';
 
+export const scopeKeys = { identity: 'scopeIdentity', education: 'scopeEducation', qualification: 'scopeQualification', contact: 'scopeContact', offer_data: 'scopeOfferData' } as const;
+
 // Explicit invalid/hidden selections never fall back to a different offer.
 export function resolveProfile(catalog: Catalog, specialistId: string | undefined, offerId: string | null) {
   const specialist = catalog.specialists.find(s => s.id === specialistId && s.publicationStatus === 'published');

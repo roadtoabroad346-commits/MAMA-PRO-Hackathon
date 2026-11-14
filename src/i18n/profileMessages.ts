@@ -1,5 +1,8 @@
 export const profileRu = {
   priceLabel: 'Цена',
+  addressLabel: 'Адрес', addressUnknown: 'Адрес не указан; уточните место проведения.', onlineAddressNA: 'Для онлайн-услуги адрес не требуется.',
+  availabilityDate: 'Дата сведений об обращениях: {date}',
+  comparisonUnavailable: 'Выбранная услуга больше недоступна. Она не заменена другой.',
   offerCompatible: 'Не противоречит обязательным условиям', offerIncomplete: 'Нужно уточнить обязательные условия',
   offerIncompatible: 'Не соответствует текущему поиску', approachUnknown: 'Описание подхода не предоставлено.',
   syntheticProfile: 'Вымышленный специалист · синтетические данные',
@@ -35,6 +38,9 @@ export const profileRu = {
 
 export const profileKk: Record<keyof typeof profileRu, string> = {
   priceLabel: 'Баға',
+  addressLabel: 'Мекенжай', addressUnknown: 'Мекенжай көрсетілмеген; өтетін орынды нақтылаңыз.', onlineAddressNA: 'Онлайн қызметке мекенжай қажет емес.',
+  availabilityDate: 'Өтініштер туралы мәлімет күні: {date}',
+  comparisonUnavailable: 'Таңдалған қызмет енді қолжетімсіз. Ол басқа қызметпен ауыстырылған жоқ.',
   offerCompatible: 'Міндетті шарттарға қайшы келмейді', offerIncomplete: 'Міндетті шарттарды нақтылау қажет',
   offerIncompatible: 'Қазіргі іздеуге сәйкес келмейді', approachUnknown: 'Тәсіл сипаттамасы ұсынылмаған.',
   syntheticProfile: 'Ойдан шығарылған маман · синтетикалық деректер',

@@ -1,32 +1,110 @@
 {
   "changes": [
     {
-      "path": "src/domain/profile.ts",
-      "baselineSha256": "206160a46beef1524d6109af7f35e53afb2d89081608f6af4ef43e4b30d6abbe",
-      "currentSha256": "11de4be9316986ac16d7d94964ee9cedee8e7d0be397c5026ecdda169173251f",
-      "reason": "EXP04 explicit profile identity and public provenance guards",
-      "verification": "EXP-04-B-check.log:235 PASS; EXP-04-B-profile.log:13 PASS"
-    },
-    {
-      "path": "src/domain/SearchService.ts",
-      "baselineSha256": "886beaa16a3151b207c8ca6c4726f3f4511cc2f4773d5e48b4fb403dc7e36f91",
-      "currentSha256": "7fa2371d1c7f2ce752f3fccf06ab24d0d156b792678d640fd69caa98931cfe94",
-      "reason": "EXP04 explicit profile identity and public provenance guards",
-      "verification": "EXP-04-B-check.log:235 PASS; EXP-04-B-profile.log:13 PASS"
+      "path": "src/app/AppState.tsx",
+      "baselineSha256": "702e9e88562b510e5ba768dc68d689bd4a96afd9adcaad40f7679eef380144ac",
+      "currentSha256": "02d95172a0be4a05677d329d5b7677d92ea0e408b916101e7be684b9ee423575",
+      "reason": "EXP04 scoped public provenance, terms/date formatting, comparison and behavior-preserving browser synchronization",
+      "verification": "EXP04 check/profile/compare tests; exact executed results in EXP-04.json"
     },
     {
       "path": "src/data/catalogRepository.ts",
       "baselineSha256": "993d4ffca75e137b05e21e7e05c05b931a055b58e15edca6679bf90883bd75a5",
       "currentSha256": "379572dc4fca74c54805b4fb0004b55dd50987071a1a14ac073811b3053f33a3",
-      "reason": "EXP04 explicit profile identity and public provenance guards",
-      "verification": "EXP-04-B-check.log:235 PASS; EXP-04-B-profile.log:13 PASS"
+      "reason": "EXP04 scoped public provenance, terms/date formatting, comparison and behavior-preserving browser synchronization",
+      "verification": "EXP04 check/profile/compare tests; exact executed results in EXP-04.json"
+    },
+    {
+      "path": "src/domain/SearchService.ts",
+      "baselineSha256": "886beaa16a3151b207c8ca6c4726f3f4511cc2f4773d5e48b4fb403dc7e36f91",
+      "currentSha256": "7fa2371d1c7f2ce752f3fccf06ab24d0d156b792678d640fd69caa98931cfe94",
+      "reason": "EXP04 scoped public provenance, terms/date formatting, comparison and behavior-preserving browser synchronization",
+      "verification": "EXP04 check/profile/compare tests; exact executed results in EXP-04.json"
+    },
+    {
+      "path": "src/domain/profile.ts",
+      "baselineSha256": "206160a46beef1524d6109af7f35e53afb2d89081608f6af4ef43e4b30d6abbe",
+      "currentSha256": "bb7322fce2c619d4a6ba520bb3be0d50705e36fc4ff12f2d5c338ef75d815864",
+      "reason": "EXP04 scoped public provenance, terms/date formatting, comparison and behavior-preserving browser synchronization",
+      "verification": "EXP04 check/profile/compare tests; exact executed results in EXP-04.json"
     },
     {
       "path": "src/features/profile/OfferProfile.tsx",
       "baselineSha256": "f8944ce995f517ce2f526c9c8389533a30e02a875068a020b722b1db7d2bbac4",
-      "currentSha256": "7e97cec1ea1469f76be74b5c375ca2c6e87d62d5dca1c412640768fdeb7c7b07",
-      "reason": "EXP04 explicit profile identity and public provenance guards",
-      "verification": "EXP-04-B-check.log:235 PASS; EXP-04-B-profile.log:13 PASS"
+      "currentSha256": "bc5abf2e7ecc5ffa6618e4ae41bcb021949bfa72375c0805de0a8e277d249d26",
+      "reason": "EXP04 scoped public provenance, terms/date formatting, comparison and behavior-preserving browser synchronization",
+      "verification": "EXP04 check/profile/compare tests; exact executed results in EXP-04.json"
+    },
+    {
+      "path": "src/features/profile/TrustPassport.tsx",
+      "baselineSha256": "9b2953497c1f48df9f585fea614f529eecf5724143baa5f91f2de4efba8868f5",
+      "currentSha256": "ec1935097aa0a50b9e5bbec7791cce29ac172b2d057e6afd946029e06de2efa1",
+      "reason": "EXP04 scoped public provenance, terms/date formatting, comparison and behavior-preserving browser synchronization",
+      "verification": "EXP04 check/profile/compare tests; exact executed results in EXP-04.json"
+    },
+    {
+      "path": "src/features/search/OfferCard.tsx",
+      "baselineSha256": "a5cfb4d6e0609f5089a470f169a74c8c702564063ca006377b18f548f339781c",
+      "currentSha256": "70817fd318af1e42928a4d77b7474ca86c4780503a68bf869a4595bfe1ceb58e",
+      "reason": "EXP04 scoped public provenance, terms/date formatting, comparison and behavior-preserving browser synchronization",
+      "verification": "EXP04 check/profile/compare tests; exact executed results in EXP-04.json"
+    },
+    {
+      "path": "src/features/search/SelectionViews.tsx",
+      "baselineSha256": "58a0d3dc49dac919b7eecb147d5cf7b32d9902626748cc6485bb9b3de2ac4f27",
+      "currentSha256": "b9598a32189ca1306a44fa3edfdb89dad117d9fd1b87ce36759c01c82f873e4e",
+      "reason": "EXP04 scoped public provenance, terms/date formatting, comparison and behavior-preserving browser synchronization",
+      "verification": "EXP04 check/profile/compare tests; exact executed results in EXP-04.json"
+    },
+    {
+      "path": "src/i18n/price.ts",
+      "baselineSha256": "36a622e03ca4315d945fb64c3f628e114cb817ba557c916a48fdc38d5008e663",
+      "currentSha256": "e0856b026057d3979a62faa4b9e81d9ffcced69ca53765ae793d827b0bb6a468",
+      "reason": "EXP04 scoped public provenance, terms/date formatting, comparison and behavior-preserving browser synchronization",
+      "verification": "EXP04 check/profile/compare tests; exact executed results in EXP-04.json"
+    },
+    {
+      "path": "src/i18n/profileMessages.ts",
+      "baselineSha256": "7c37b162ac50f0eba5b09d6d04e276c3b111fd9045772b20adfc864d51c6f7d3",
+      "currentSha256": "a29a47f8e97150c797a24d3360c9a76e82fde6bb1cacdb26e59ecdcde00fb7e6",
+      "reason": "EXP04 scoped public provenance, terms/date formatting, comparison and behavior-preserving browser synchronization",
+      "verification": "EXP04 check/profile/compare tests; exact executed results in EXP-04.json"
+    },
+    {
+      "path": "src/styles.css",
+      "baselineSha256": "97c69028a197143e6e473a0d10d7b2bfd0047780bf7645a10691e932955a3a5c",
+      "currentSha256": "a5123bbc5640ae754a6fce5e00e5afe226ea2a39f2a42b875f0765c8308ba2aa",
+      "reason": "EXP04 scoped public provenance, terms/date formatting, comparison and behavior-preserving browser synchronization",
+      "verification": "EXP04 check/profile/compare tests; exact executed results in EXP-04.json"
+    },
+    {
+      "path": "tests/e2e/profile.spec.ts",
+      "baselineSha256": "f4d61f5bd9b74fe3476cecd0b293f5ede3f0a4e22041b9e2fb0a145724aa7a5b",
+      "currentSha256": "5787a5bcc467d2fe6505135495a2cd01da34f1c81616c530724fc182cdc02c88",
+      "reason": "EXP04 scoped public provenance, terms/date formatting, comparison and behavior-preserving browser synchronization",
+      "verification": "EXP04 check/profile/compare tests; exact executed results in EXP-04.json"
     }
-  ]
+  ],
+  "successorFiles": {
+    "playwright.exp04.config.ts": "e83e37f2c5e40f76c4044cd204231638c8b6f1e5ea40deff6284dbd1dc902641",
+    "src/app/AppState.tsx": "02d95172a0be4a05677d329d5b7677d92ea0e408b916101e7be684b9ee423575",
+    "src/data/catalogRepository.ts": "379572dc4fca74c54805b4fb0004b55dd50987071a1a14ac073811b3053f33a3",
+    "src/domain/SearchService.ts": "7fa2371d1c7f2ce752f3fccf06ab24d0d156b792678d640fd69caa98931cfe94",
+    "src/domain/profile.ts": "bb7322fce2c619d4a6ba520bb3be0d50705e36fc4ff12f2d5c338ef75d815864",
+    "src/features/profile/OfferProfile.tsx": "bc5abf2e7ecc5ffa6618e4ae41bcb021949bfa72375c0805de0a8e277d249d26",
+    "src/features/profile/TrustPassport.tsx": "ec1935097aa0a50b9e5bbec7791cce29ac172b2d057e6afd946029e06de2efa1",
+    "src/features/search/OfferCard.tsx": "70817fd318af1e42928a4d77b7474ca86c4780503a68bf869a4595bfe1ceb58e",
+    "src/features/search/SelectionViews.tsx": "b9598a32189ca1306a44fa3edfdb89dad117d9fd1b87ce36759c01c82f873e4e",
+    "src/i18n/date.ts": "be2add2d6f1c708bf299d94459c9a0a535cf30e859eead3803e6a1ca5e9c5972",
+    "src/i18n/price.ts": "e0856b026057d3979a62faa4b9e81d9ffcced69ca53765ae793d827b0bb6a468",
+    "src/i18n/profileMessages.ts": "a29a47f8e97150c797a24d3360c9a76e82fde6bb1cacdb26e59ecdcde00fb7e6",
+    "src/styles.css": "a5123bbc5640ae754a6fce5e00e5afe226ea2a39f2a42b875f0765c8308ba2aa",
+    "tests/e2e/exp03.spec.ts": "b05b99b7d841ea72cf42750510e1a016f977f6e5ef38f571b01db725ae09492c",
+    "tests/e2e/exp04-state.spec.ts": "fdb7941ea17fee2eda7d7b9e901d456bc22f20c48533c279cd788f193bc73eb7",
+    "tests/e2e/exp04.spec.ts": "ba5b317e23d7ebea8065316143a5a1dc188b3d910069a8709b1dac5874bd4601",
+    "tests/e2e/fixtures/exp04-state.html": "1bc8fe1d2fa29baaff8ba35f45edd31a92c2ae2f5b1832083cc942c42687f3d1",
+    "tests/e2e/fixtures/exp04-state.tsx": "0cec13315eec8990424a38e1539751e772bb23a7d33b67e410b639d548870699",
+    "tests/e2e/profile.spec.ts": "5787a5bcc467d2fe6505135495a2cd01da34f1c81616c530724fc182cdc02c88",
+    "tests/exp04.test.ts": "e86cd765efd7ed6124497d06214b4257d3758c6585792f3864c5d0a0612310df"
+  }
 }

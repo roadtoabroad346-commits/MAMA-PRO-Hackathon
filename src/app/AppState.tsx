@@ -73,12 +73,16 @@ export function AppStateProvider({ catalog, children }: { catalog: Catalog; chil
     comparison: comparisonState.items, comparisonInput: comparisonState.input, comparisonNotice: comparisonState.notice,
     clearComparison: () => setComparison({ items: [], input: null, notice: null }),
     toggleCompare: (specialistId, offerId) => setComparison(old => {
+      // An unavailable pinned pair must remain removable; never replace it.
+      if (old.items.some(item => item.specialistId === specialistId && item.offerId === offerId)) {
+        const items = old.items.filter(item => item.specialistId !== specialistId || item.offerId !== offerId);
+        return { items, input: items.length ? old.input : null, notice: null };
+      }
       const offer = catalog.offers.find(o => o.id === offerId && o.specialistId === specialistId && o.publicationStatus === 'published');
       if (!offer || !catalog.specialists.some(s => s.id === specialistId && s.publicationStatus === 'published')) return old;
       const existing = old.items.find(item => item.specialistId === specialistId);
       if (!existing && old.items.length === 3) return { ...old, notice: 'compareLimit' };
-      const items = existing?.offerId === offerId ? old.items.filter(item => item.specialistId !== specialistId)
-        : existing ? old.items.map(item => item.specialistId === specialistId ? { specialistId, offerId } : item)
+      const items = existing ? old.items.map(item => item.specialistId === specialistId ? { specialistId, offerId } : item)
           : [...old.items, { specialistId, offerId }];
       return { items, input: items.length ? old.input ?? structuredClone(session.input) : null, notice: null };
     }),

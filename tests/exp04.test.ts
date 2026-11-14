@@ -1,3 +1,4 @@
+import { factDateText } from '../src/i18n/date';
 import { describe, expect, it } from 'vitest';
 import raw from '../src/data/catalog.json';
 import { catalogSchema, type Catalog, type VerificationFact } from '../src/domain/catalog';
@@ -122,5 +123,13 @@ describe('EXP04 terms and dates (P04-T11..17)', () => {
   it.each(['price', 'availability'] as const)('%s expires at its own threshold; future is unknown', field => {
     expect(fieldFreshness(daysAgo(FRESHNESS_POLICY.days[field]), fixedClock(now), FRESHNESS_POLICY.days[field]).status).toBe('stale');
     expect(fieldFreshness('2099-01-01T00:00:00Z', fixedClock(now)).status).toBe('unknown');
+  });
+});
+
+describe('EXP04 documented Almaty date policy', () => {
+  it.each(['ru', 'kk'] as const)('%s has no ICU month placeholder or day-offset drift', locale => {
+    expect(factDateText('2026-11-12T20:00:00Z', locale)).toBe(factDateText('2026-11-13T00:00:00+05:00', locale));
+    expect(factDateText('2026-11-12T20:00:00Z', locale)).not.toMatch(/M11/u);
+    if (locale === 'kk') expect(factDateText('2026-11-12T20:00:00Z', locale)).toBe('13.11.2026');
   });
 });

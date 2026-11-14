@@ -6470,12 +6470,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 17,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 39,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -6574,12 +6574,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 17,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 39,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -6678,12 +6678,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 17,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 39,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -6782,12 +6782,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 17,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 39,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -6881,17 +6881,17 @@
     "existing_tests": [
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 17,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 103,
+        "line": 104,
         "text": "test('unknown and mismatched IDs show clear not found; hidden offers and profiles cannot be opened', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 139,
+        "line": 140,
         "text": "test('partial profile and missing verification remain unknown; unknown and stale prices are explicit', async ({ page }) => {"
       }
     ],
@@ -6990,12 +6990,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 17,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 39,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -7094,12 +7094,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 17,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 39,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -7198,12 +7198,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 17,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 39,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -7302,12 +7302,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 17,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 39,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -7406,12 +7406,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 17,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 39,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -7510,12 +7510,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 17,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 39,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -7614,12 +7614,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 17,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 39,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -7718,12 +7718,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 17,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 39,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -7822,12 +7822,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 17,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 39,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -7921,7 +7921,7 @@
     "existing_tests": [
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 207,
+        "line": 208,
         "text": "test('changing RU/KK inside a profile preserves offer, comparison and request target', async ({ page }) => {"
       },
       {
@@ -15134,12 +15134,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 17,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 39,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],

@@ -19,3 +19,5 @@ No remaining known technical EXP-03 defects after these gates. External limits: 
 **STOP. EXP-04 technically ready to audit next; do not start it without the user's explicit permission.** Rollback via reverting only EXP-03 commits in reverse order; no data migration and no reset/clean of shared history.
 
 EXP-04 B:235 unit/integration +13 profile browser PASS;8 reproduced defects fixed. Same schema and demo clock; public roles/hidden-offer evidence stripped at ingestion. A remote c43fedc00fbfa4f85ef9a432c9fdb32470f22d2e. Next C. LIVE_BLOCKED; HUMAN_QA_PENDING.
+
+EXP-04 C verified:237 unit/integration,121 full dev browser, strict TS/build/context PASS,0 final failed/skipped. Responsive3 columns1280 and stacked390/320, text200%, native keyboard, locale/date/price, exact pin/replace/withdrawal proved. Five synthetic browser screenshots retained in docs/expansion/evidence/EXP-04-screenshots. B remote verified 424c36db3caa423d304ca403d01e7a6bff372011. Next D: dist/pilot/offline and final per-feature closure. LIVE_BLOCKED; HUMAN_QA_PENDING.

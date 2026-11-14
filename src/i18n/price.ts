@@ -19,7 +19,8 @@ export function priceText(
   if (kind === 'unknown') return lookup('priceUnknown');
   if (kind === 'free') return freeExtra === undefined ? lookup('priceFree') : `${lookup('priceFree')} · ${freeExtra}`;
   if (kind === 'from' || kind === 'exact') {
-    return lookup(kind === 'from' ? 'priceFrom' : 'priceExact', { amount: new Intl.NumberFormat(locale).format(amountKzt!) });
+    // Keep KK thousands groups readable even on partial-ICU browsers.
+    return lookup(kind === 'from' ? 'priceFrom' : 'priceExact', { amount: new Intl.NumberFormat(locale).formatToParts(amountKzt!).map(part => locale === 'kk' && part.type === 'group' ? '\u00a0' : part.value).join('') });
   }
   return lookup('priceUnknown');
 }
