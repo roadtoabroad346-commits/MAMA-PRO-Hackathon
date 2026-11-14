@@ -83,6 +83,20 @@
       "currentSha256": "85794e3f168060bbafbab541fc4f51ede253748e0b0c5959228ee8edf51e7e3e",
       "reason": "EXP04 scoped public provenance, terms/date formatting, comparison and behavior-preserving browser synchronization",
       "verification": "EXP04 check/profile/compare tests; exact executed results in EXP-04.json"
+    },
+    {
+      "path": "docs/DOMAIN_CONTRACTS.md",
+      "baselineSha256": "ffd596315d7de45554850735f4d1a64c5dc7e19a4456b237db4ccb4ed89929bc",
+      "currentSha256": "abb7ca3d4603e50200b3153574ada3c67c2fa4c67579f0767ef47cc8fd7428b6",
+      "reason": "EXP04 closure/contract update; historical records retained",
+      "verification": "Current source/proof hashes and context validator; runtime unchanged from C"
+    },
+    {
+      "path": "docs/PROJECT_STATE.md",
+      "baselineSha256": "97a5d8112f1dd2b4639e4af728b56e062c750faf5eca3e8aadfee1cd4a3f5349",
+      "currentSha256": "ac1a692b0fe65d2a882cfa519583ca8764d8c244efccbf9eaab90ce75d435c25",
+      "reason": "EXP04 closure/contract update; historical records retained",
+      "verification": "Current source/proof hashes and context validator; runtime unchanged from C"
     }
   ],
   "successorFiles": {
@@ -106,5 +120,6 @@
     "tests/e2e/fixtures/exp04-state.tsx": "0cec13315eec8990424a38e1539751e772bb23a7d33b67e410b639d548870699",
     "tests/e2e/profile.spec.ts": "85794e3f168060bbafbab541fc4f51ede253748e0b0c5959228ee8edf51e7e3e",
     "tests/exp04.test.ts": "e86cd765efd7ed6124497d06214b4257d3758c6585792f3864c5d0a0612310df"
-  }
+  },
+  "verifiedSourceSha": "2711bee46cb37aac64f98dafa14103e2dbe545b4"
 }

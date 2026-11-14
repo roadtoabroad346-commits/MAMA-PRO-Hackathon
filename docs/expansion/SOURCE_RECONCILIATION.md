@@ -26,3 +26,5 @@
 - EXP-01 существует в отдельной ветке @`a93cc18d7b357a637c7114e9408ec11242156eba`; runtime равен baseline. Его тесты/документы не копировались, ветки не объединялись. Текущая работа остаётся в разрешённой `feature/context-init-2026-11-13`.
 - FEATURE_STATUS/FEATURE_REGISTRY сохраняли устаревшее «Research отсутствует». Теперь источник прочитан и проверяется по строкам; DOCX, primary URL и human evidence по-прежнему отдельно UNKNOWN/NOT_RUN.
 - EXP-02: runtime gap не обнаружен; доказанные пробелы — отсутствие полного RU/KK A/B/C intake acceptance и прямой сверки исходного Research/CSV/STAGE_MAP валидатором. Добавлены только tests/docs. Старые тесты не ослаблены.
+
+EXP04 on14 November: default7f8434a remains behind EXP03@7340dff. Use explicit dependency branch without merging sibling EXP01. Integrated plan/CSV bind EXP04 to F061–F075; generic master/playbook examples referring to F136 under EXP04 are examples, not canonical scope. CORE has no postal-address field: honest unknown display satisfies absence without invented data or unnecessary schema. Original DOCX SOURCE_UNAVAILABLE; Markdown/CSV retained.

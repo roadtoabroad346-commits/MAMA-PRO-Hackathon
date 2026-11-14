@@ -77,3 +77,5 @@
 | R01–R11 | GitHub/ТЗ/документы, их собственные даты | Текущий код проверен отдельно; исторические логи не новый QA |
 
 P-01/P-02 → F017–F036 → [EXP-02 AC/evidence](../expansion/stages/EXP-02.md): технические AC-01…04 пройдены, приложение не переписано. Возможность заполнить/подтвердить анкету не подтверждает H1/H2 или понятность KK у родителя. EXP-01 найден в sibling remote @a93cc18, не выполнялся повторно. Оригинальный DOCX остаётся UNAVAILABLE_IN_CHECKOUT; требование его полного чтения в этой сессии не закрыто.
+
+EXP04 P-03/P-04 technical proof: all F061–F075 and4 AC are automated synthetic PASS (see ../expansion/stages/EXP-04.md). Actual parent badge comprehension, native KK and real AT/device remain HUMAN_QA_PENDING. This is not H3/H4 user validation; interview PENDING, original DOCX SOURCE_UNAVAILABLE.

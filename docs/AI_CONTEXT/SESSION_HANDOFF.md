@@ -1,3 +1,18 @@
+# EXP-04 closure / STOP before EXP-05
+
+**VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO). LIVE_BLOCKED; HUMAN_QA_PENDING.**
+Branch `codex/exp-04-profile-trust-comparison`; base `7340dffa1b15e8452bf693f090f6c4085d46b158`; tested source/remote C2 `2711bee46cb37aac64f98dafa14103e2dbe545b4`. Default remains7f8434a; EXP03 PR8, context PR9 and EXP01 sibling PR10 are unmerged. D contains docs/validator only; its own SHA is resolved after push, never guessed in its own contents.
+
+All F061–F075 and4 AC PASS, scope automated synthetic only:237 unit/integration +121 dev +83 dist +5 pilot +2 offline =448 final executed instances,0 failures/0 skips. No claim of448 unique scenarios. New41 domain cases +18 browser cases; earlier failed diagnostic runs excluded from final totals. [Full15-feature matrix / commands / limits](../expansion/stages/EXP-04.md), [machine evidence](../expansion/evidence/EXP-04.json).
+
+Changed narrow profile trust/public projection guards; reused exact offer selector, canonical SearchService and RequestAction. Shared selected-offer conditions/evidence in comparison; max3/one pair per provider/explicit replace/tab memory unchanged. Numeric KK dates dd.mm.yyyy with Asia/Almaty avoid observed ICU M11 placeholder; explicit unknown postal address, online N/A; no new persisted/public schema. Private roles/nonpublic offer facts stripped. No real data, sends, merge, deployment, or live switch.
+
+Reproduce npm ci; npm run check; npm run build; python3 docs/AI_CONTEXT/validate_context.py; CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e -- --workers=2; same env with npx playwright test --config playwright.exp04.config.ts --workers=2; pilot/offline configs independently. Servers sequential or isolated ports; synthetic pilot DB unique. Screenshots in docs/expansion/evidence/EXP-04-screenshots; text200% is an automated proxy, not physical zoom/AT.
+
+Pending actual parent badge comprehension, native KK review, physical device/AT/browser zoom, original Research DOCX, all legal/identity/operator/provider/ops live gates. No fabricated research or validation. Rollback only by reverting owned EXP04 commits in reverse order; no migration/reset/clean. EXP05 F076–F087 is not started and needs a new user request.
+
+## Historical session records
+
 > Current authorization: EXP-04 F061–F075, user request14 November2026. Branch `codex/exp-04-profile-trust-comparison`, base `7340dffa1b15e8452bf693f090f6c4085d46b158`. Audit [stage](../expansion/stages/EXP-04.md). LIVE_BLOCKED; HUMAN_QA_PENDING. Historical EXP-03 stop instructions below are superseded only for EXP-04. Next: B domain/trust regression.
 
 # EXP-03 closure / STOP before EXP-04

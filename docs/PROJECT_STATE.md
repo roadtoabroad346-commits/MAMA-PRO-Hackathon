@@ -1,3 +1,5 @@
+> 14.11.2026 EXP-04 F061–F075 automated synthetic acceptance complete on `2711bee46cb37aac64f98dafa14103e2dbe545b4`:237 unit +121 dev +83 dist +5 pilot +2 offline PASS. LIVE_BLOCKED; HUMAN_QA_PENDING. [Closure](expansion/stages/EXP-04.md). No merge/deploy; stop before EXP05.
+
 # Текущее состояние: объединённая фаза 55–67
 
 Версия: локальный development 0.6.0 + pilot55–67, база origin/phases-28-35@6f9619f. Проверено фактическое восстановление из GitHub; в исходном локальном checkout не было коммитов. Результаты 36–55 отсутствуют, прежней карты/PWA/backend не было. Существующий CORE сохранён; фазы 68+ не выполнялись.

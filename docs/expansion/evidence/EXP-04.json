@@ -1,6 +1,6 @@
 {
   "stage": "EXP-04",
-  "status": "IN_PROGRESS",
+  "status": "VERIFIED_DONE",
   "baseSha": "7340dffa1b15e8452bf693f090f6c4085d46b158",
   "branch": "codex/exp-04-profile-trust-comparison",
   "live": "LIVE_BLOCKED",
@@ -70,5 +70,845 @@
     "pilot": 5,
     "offline": 2,
     "sourceEquivalence": "DEV never registers SW; full121 dev on C remains equivalent. Current31 focused dev and83 dist rerun; no assertions removed."
+  },
+  "sourceSha": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
+  "observed_at_utc": "2026-11-14T04:13:06.588222+00:00",
+  "features": {
+    "F061": {
+      "status": "ALREADY_VERIFIED",
+      "code": [
+        "src/features/profile/OfferProfile.tsx",
+        "src/domain/profile.ts"
+      ],
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts",
+        "tests/exp04.test.ts",
+        "tests/profile.test.ts"
+      ],
+      "cases": [
+        "P04-T01",
+        "P04-T03",
+        "P04-T04",
+        "P04-T05",
+        "P04-T06",
+        "P04-T10"
+      ],
+      "remaining": "HUMAN_QA_PENDING; address SOURCE_UNAVAILABLE where applicable"
+    },
+    "F062": {
+      "status": "FIXED_AND_VERIFIED",
+      "code": [
+        "src/features/profile/OfferProfile.tsx"
+      ],
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts"
+      ],
+      "cases": [
+        "P04-T02",
+        "P04-T08",
+        "P04-T32",
+        "P04-T44"
+      ],
+      "remaining": "HUMAN_QA_PENDING; address SOURCE_UNAVAILABLE where applicable"
+    },
+    "F063": {
+      "status": "FIXED_AND_VERIFIED",
+      "code": [
+        "src/features/search/OfferCard.tsx"
+      ],
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts",
+        "tests/exp04.test.ts"
+      ],
+      "cases": [
+        "P04-T02",
+        "P04-T14",
+        "P04-T15",
+        "P04-T16"
+      ],
+      "remaining": "HUMAN_QA_PENDING; address SOURCE_UNAVAILABLE where applicable"
+    },
+    "F064": {
+      "status": "FIXED_AND_VERIFIED",
+      "code": [
+        "src/features/search/OfferCard.tsx",
+        "src/i18n/price.ts"
+      ],
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/exp04.test.ts"
+      ],
+      "cases": [
+        "P04-T11",
+        "P04-T12",
+        "P04-T13",
+        "P04-T16"
+      ],
+      "remaining": "HUMAN_QA_PENDING; address SOURCE_UNAVAILABLE where applicable"
+    },
+    "F065": {
+      "status": "FIXED_AND_VERIFIED",
+      "code": [
+        "src/features/search/OfferCard.tsx"
+      ],
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts"
+      ],
+      "cases": [
+        "P04-T14",
+        "P04-T36"
+      ],
+      "remaining": "HUMAN_QA_PENDING; address SOURCE_UNAVAILABLE where applicable"
+    },
+    "F066": {
+      "status": "FIXED_AND_VERIFIED",
+      "code": [
+        "src/features/profile/TrustPassport.tsx"
+      ],
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts",
+        "tests/exp04.test.ts"
+      ],
+      "cases": [
+        "P04-T18",
+        "P04-T19",
+        "P04-T25",
+        "P04-T26"
+      ],
+      "remaining": "HUMAN_QA_PENDING; address SOURCE_UNAVAILABLE where applicable"
+    },
+    "F067": {
+      "status": "FIXED_AND_VERIFIED",
+      "code": [
+        "src/domain/profile.ts"
+      ],
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts",
+        "tests/exp04.test.ts"
+      ],
+      "cases": [
+        "P04-T19",
+        "P04-T20",
+        "P04-T21",
+        "P04-T22",
+        "P04-T23",
+        "P04-T24"
+      ],
+      "remaining": "HUMAN_QA_PENDING; address SOURCE_UNAVAILABLE where applicable"
+    },
+    "F068": {
+      "status": "FIXED_AND_VERIFIED",
+      "code": [
+        "src/features/profile/TrustPassport.tsx",
+        "src/domain/SearchService.ts"
+      ],
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts",
+        "tests/exp04.test.ts"
+      ],
+      "cases": [
+        "P04-T18",
+        "P04-T24",
+        "P04-T26",
+        "P04-T43"
+      ],
+      "remaining": "HUMAN_QA_PENDING; address SOURCE_UNAVAILABLE where applicable"
+    },
+    "F069": {
+      "status": "FIXED_AND_VERIFIED",
+      "code": [
+        "src/domain/profile.ts",
+        "src/domain/freshness.ts",
+        "src/i18n/date.ts"
+      ],
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts",
+        "tests/exp04.test.ts"
+      ],
+      "cases": [
+        "P04-T17",
+        "P04-T21",
+        "P04-T22"
+      ],
+      "remaining": "HUMAN_QA_PENDING; address SOURCE_UNAVAILABLE where applicable"
+    },
+    "F070": {
+      "status": "FIXED_AND_VERIFIED",
+      "code": [
+        "src/features/search/OfferCard.tsx",
+        "src/features/profile/TrustPassport.tsx"
+      ],
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts",
+        "tests/exp04.test.ts"
+      ],
+      "cases": [
+        "P04-T10",
+        "P04-T12",
+        "P04-T15",
+        "P04-T24"
+      ],
+      "remaining": "HUMAN_QA_PENDING; address SOURCE_UNAVAILABLE where applicable"
+    },
+    "F071": {
+      "status": "FIXED_AND_VERIFIED",
+      "code": [
+        "src/features/search/SelectionViews.tsx"
+      ],
+      "tests": [
+        "tests/e2e/exp04-state.spec.ts",
+        "tests/e2e/exp04.spec.ts"
+      ],
+      "cases": [
+        "P04-T28",
+        "P04-T32",
+        "P04-T33",
+        "P04-T34"
+      ],
+      "remaining": "HUMAN_QA_PENDING; address SOURCE_UNAVAILABLE where applicable"
+    },
+    "F072": {
+      "status": "ALREADY_VERIFIED",
+      "code": [
+        "src/app/AppState.tsx",
+        "src/features/search/CompareTray.tsx"
+      ],
+      "tests": [
+        "tests/e2e/exp04-state.spec.ts",
+        "tests/e2e/exp04.spec.ts"
+      ],
+      "cases": [
+        "P04-T28",
+        "P04-T29",
+        "P04-T30",
+        "P04-T32",
+        "P04-T33"
+      ],
+      "remaining": "HUMAN_QA_PENDING; address SOURCE_UNAVAILABLE where applicable"
+    },
+    "F073": {
+      "status": "FIXED_AND_VERIFIED",
+      "code": [
+        "src/app/AppState.tsx",
+        "src/features/search/SelectionViews.tsx"
+      ],
+      "tests": [
+        "tests/e2e/exp04-state.spec.ts",
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts"
+      ],
+      "cases": [
+        "P04-T31",
+        "P04-T34",
+        "P04-T38"
+      ],
+      "remaining": "HUMAN_QA_PENDING; address SOURCE_UNAVAILABLE where applicable"
+    },
+    "F074": {
+      "status": "FIXED_AND_VERIFIED",
+      "code": [
+        "src/features/search/SelectionViews.tsx",
+        "src/features/search/OfferCard.tsx"
+      ],
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts",
+        "tests/exp04.test.ts"
+      ],
+      "cases": [
+        "P04-T11",
+        "P04-T13",
+        "P04-T16",
+        "P04-T18",
+        "P04-T25",
+        "P04-T36"
+      ],
+      "remaining": "HUMAN_QA_PENDING; address SOURCE_UNAVAILABLE where applicable"
+    },
+    "F075": {
+      "status": "FIXED_AND_VERIFIED",
+      "code": [
+        "src/styles.css",
+        "src/features/search/SelectionViews.tsx"
+      ],
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts"
+      ],
+      "cases": [
+        "P04-T27",
+        "P04-T37",
+        "P04-T38",
+        "P04-T39",
+        "P04-T41"
+      ],
+      "remaining": "HUMAN_QA_PENDING; address SOURCE_UNAVAILABLE where applicable"
+    }
+  },
+  "tests": {
+    "unit_integration": 237,
+    "dev": 121,
+    "dist": 83,
+    "pilot": 5,
+    "offline": 2,
+    "total_final_executions": 448,
+    "failed_final": 0,
+    "skipped_final": 0,
+    "new_domain_cases": 41,
+    "new_browser_cases": 18
+  },
+  "environment": {
+    "os": "Linux x64",
+    "node": "24.22.1",
+    "npm": "11.9.0",
+    "chromium": "156.0.8078.79",
+    "playwright": "1.65.0",
+    "browser": "headless Chromium, Pixel7 emulation/explicit CSS viewports; not a physical device"
+  },
+  "remoteCI": "NOT_RUN_AT_DOCUMENT_CHECKPOINT; feature push excluded by allowlist; draft PR may trigger integrity workflow",
+  "source_DOCX": "SOURCE_UNAVAILABLE; Research Markdown/CSV available",
+  "testCases": {
+    "P04-T01": {
+      "status": "PASS",
+      "tests": [
+        "tests/exp04.test.ts",
+        "tests/e2e/profile.spec.ts"
+      ]
+    },
+    "P04-T02": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts"
+      ]
+    },
+    "P04-T03": {
+      "status": "PASS",
+      "tests": [
+        "tests/profile.test.ts",
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T04": {
+      "status": "PASS",
+      "tests": [
+        "tests/exp04.test.ts",
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T05": {
+      "status": "PASS",
+      "tests": [
+        "tests/exp04.test.ts",
+        "tests/e2e/profile.spec.ts"
+      ]
+    },
+    "P04-T06": {
+      "status": "PASS",
+      "tests": [
+        "tests/exp04.test.ts",
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T07": {
+      "status": "PASS",
+      "tests": [
+        "tests/exp04.test.ts",
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T08": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts"
+      ]
+    },
+    "P04-T09": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/exp03.spec.ts",
+        "tests/e2e/search.spec.ts"
+      ]
+    },
+    "P04-T10": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T11": {
+      "status": "PASS",
+      "tests": [
+        "tests/exp04.test.ts",
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T12": {
+      "status": "PASS",
+      "tests": [
+        "tests/exp04.test.ts",
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T13": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T14": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/profile.spec.ts",
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T15": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/profile.spec.ts",
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T16": {
+      "status": "PASS",
+      "tests": [
+        "tests/exp04.test.ts",
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T17": {
+      "status": "PASS",
+      "tests": [
+        "tests/exp04.test.ts",
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T18": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/profile.spec.ts",
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T19": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/profile.spec.ts"
+      ]
+    },
+    "P04-T20": {
+      "status": "PASS",
+      "tests": [
+        "tests/exp04.test.ts",
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T21": {
+      "status": "PASS",
+      "tests": [
+        "tests/exp04.test.ts",
+        "tests/e2e/profile.spec.ts"
+      ]
+    },
+    "P04-T22": {
+      "status": "PASS",
+      "tests": [
+        "tests/exp04.test.ts",
+        "tests/e2e/profile.spec.ts"
+      ]
+    },
+    "P04-T23": {
+      "status": "PASS",
+      "tests": [
+        "tests/exp04.test.ts",
+        "tests/e2e/profile.spec.ts"
+      ]
+    },
+    "P04-T24": {
+      "status": "PASS",
+      "tests": [
+        "tests/exp04.test.ts",
+        "tests/e2e/profile.spec.ts"
+      ]
+    },
+    "P04-T25": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts"
+      ]
+    },
+    "P04-T26": {
+      "status": "PASS",
+      "tests": [
+        "tests/exp04.test.ts",
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T27": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T28": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T29": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T30": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/exp04-state.spec.ts"
+      ]
+    },
+    "P04-T31": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T32": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T33": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T34": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04-state.spec.ts"
+      ]
+    },
+    "P04-T35": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T36": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T37": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T38": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts"
+      ]
+    },
+    "P04-T39": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T40": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T41": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T42": {
+      "status": "PASS",
+      "tests": [
+        "tests/exp04.test.ts",
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T43": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T44": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts"
+      ]
+    },
+    "P04-T45": {
+      "status": "PASS",
+      "tests": [
+        "tests/exp04.test.ts"
+      ]
+    },
+    "P04-T46": {
+      "status": "PASS",
+      "tests": [
+        "tests/exp04.test.ts"
+      ]
+    },
+    "P04-T47": {
+      "status": "PASS",
+      "tests": [
+        "tests/exp04.test.ts"
+      ]
+    },
+    "P04-T48": {
+      "status": "PASS",
+      "tests": [
+        "tests/exp04.test.ts",
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/exp04-state.spec.ts"
+      ]
+    }
+  },
+  "acceptance": {
+    "EXP-04-AC-01": {
+      "status": "PASS",
+      "tests": [
+        "tests/exp04.test.ts",
+        "tests/e2e/profile.spec.ts",
+        "tests/e2e/exp04.spec.ts"
+      ],
+      "commands": [
+        "npm run check",
+        "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e -- --workers=2",
+        "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npx playwright test --config playwright.exp04.config.ts --workers=2"
+      ],
+      "screenshots": []
+    },
+    "EXP-04-AC-02": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/exp04-state.spec.ts",
+        "tests/e2e/search.spec.ts"
+      ],
+      "commands": [
+        "npm run check",
+        "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e -- --workers=2",
+        "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npx playwright test --config playwright.exp04.config.ts --workers=2"
+      ],
+      "screenshots": []
+    },
+    "EXP-04-AC-03": {
+      "status": "PASS",
+      "tests": [
+        "tests/exp04.test.ts",
+        "tests/e2e/profile.spec.ts",
+        "tests/e2e/exp04.spec.ts"
+      ],
+      "commands": [
+        "npm run check",
+        "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e -- --workers=2",
+        "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npx playwright test --config playwright.exp04.config.ts --workers=2"
+      ],
+      "screenshots": []
+    },
+    "EXP-04-AC-04": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts"
+      ],
+      "commands": [
+        "npm run check",
+        "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e -- --workers=2",
+        "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npx playwright test --config playwright.exp04.config.ts --workers=2"
+      ],
+      "screenshots": [
+        "docs/expansion/evidence/EXP-04-screenshots/compare-kk-390.jpg",
+        "docs/expansion/evidence/EXP-04-screenshots/compare-ru-390.jpg",
+        "docs/expansion/evidence/EXP-04-screenshots/compare-ru-1280.jpg",
+        "docs/expansion/evidence/EXP-04-screenshots/compare-kk-320-text200.jpg",
+        "docs/expansion/evidence/EXP-04-screenshots/compare-kk-1280.jpg"
+      ]
+    }
+  },
+  "checkpoints": [
+    {
+      "slice": "A",
+      "sha": "c43fedc00fbfa4f85ef9a432c9fdb32470f22d2e",
+      "remote_verified": true,
+      "url": "https://github.com/roadtoabroad346-commits/MAMA-PRO-Hackathon/commit/c43fedc00fbfa4f85ef9a432c9fdb32470f22d2e"
+    },
+    {
+      "slice": "B",
+      "sha": "424c36db3caa423d304ca403d01e7a6bff372011",
+      "remote_verified": true,
+      "url": "https://github.com/roadtoabroad346-commits/MAMA-PRO-Hackathon/commit/424c36db3caa423d304ca403d01e7a6bff372011"
+    },
+    {
+      "slice": "C",
+      "sha": "25a262fa3461fd2c5bbc8313eb2419833af64dee",
+      "remote_verified": true,
+      "url": "https://github.com/roadtoabroad346-commits/MAMA-PRO-Hackathon/commit/25a262fa3461fd2c5bbc8313eb2419833af64dee"
+    },
+    {
+      "slice": "C2",
+      "sha": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
+      "remote_verified": true,
+      "url": "https://github.com/roadtoabroad346-commits/MAMA-PRO-Hackathon/commit/2711bee46cb37aac64f98dafa14103e2dbe545b4"
+    }
+  ],
+  "fullRegressionSourceSha": "25a262fa3461fd2c5bbc8313eb2419833af64dee",
+  "sourceEquivalence": "C2 changes only SW fixture guards/comments in two browser files. Runtime and domain tests byte-identical to full237/121 C gates; current237 check,31 focused dev and83 dist re-executed. Offline suite exercises real SW separately; focused31 not added twice.",
+  "focused_refresh": {
+    "count": 31,
+    "log": "docs/expansion/evidence/EXP-04-C2-focused-dev.log",
+    "reproduction": "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e -- tests/e2e/exp04.spec.ts tests/e2e/exp04-state.spec.ts tests/e2e/profile.spec.ts --workers=2; original temporary config only isolated server port5174 with1 worker."
+  },
+  "gitObservationScope": "Containing D SHA cannot be embedded in its own commit. Current source/checkpoint C2 above is remote verified; D receipt must compare HEAD with ls-remote and is written after push outside Git.",
+  "evidenceFiles": {
+    "docs/expansion/evidence/EXP-04-A-check.log": {
+      "sha256": "c4c7de9096ba3516424551b528a8b582666831b700f50deb6dd491dca7ae38a7"
+    },
+    "docs/expansion/evidence/EXP-04-B-check.log": {
+      "sha256": "5e3901e11d18b0e50aeb345943cc23d0a7429835d02fb42711a6f62104e411dc"
+    },
+    "docs/expansion/evidence/EXP-04-B-profile.log": {
+      "sha256": "040c9bdc53069b01fc9dd8ce79cbe63ce2687ab6a0e6c396d6fd8c198c823913"
+    },
+    "docs/expansion/evidence/EXP-04-B-red.log": {
+      "sha256": "63a1faf89b0c2ac355634d0c3b328b5fb883595784b7dec55431f170119af43d"
+    },
+    "docs/expansion/evidence/EXP-04-C-build.log": {
+      "sha256": "4b51909374a06a64a5f70bc8f1f448b65a31d2c8746a6948d8de4c275062c3e9"
+    },
+    "docs/expansion/evidence/EXP-04-C-check.log": {
+      "sha256": "fae02f5f472e8a33dd167befc2d36290eca72b0df64b651fba1a39939c8ad022"
+    },
+    "docs/expansion/evidence/EXP-04-C-dev-initial-failed.log": {
+      "sha256": "faf06a54bc770931b1f6b6a2902dc17f942b31ec25d753cd36f974f174047d77"
+    },
+    "docs/expansion/evidence/EXP-04-C-dev.log": {
+      "sha256": "9d2653b6ed0b280b168dcbe8f70091ab40b485edbe24ae44bf3f093b92682cb3"
+    },
+    "docs/expansion/evidence/EXP-04-C-initial-failed.log": {
+      "sha256": "597e17214019ce805a25f875db09daa3f571c2a630093ff2f938b32e1dd91afd"
+    },
+    "docs/expansion/evidence/EXP-04-C-second-failed.log": {
+      "sha256": "dccdcadad175c68addcba800de131d9cc364a650d7cfce788ca58d4fa9e10169"
+    },
+    "docs/expansion/evidence/EXP-04-C2-focused-dev.log": {
+      "sha256": "206e1f38f11fff325c3b24d1938df0446c015443926ab4bff2f69233554af213"
+    },
+    "docs/expansion/evidence/EXP-04-D-build.log": {
+      "sha256": "7ead85aa0535efc121d7cd6e3cb191d904231914210da66c652f44435682a04e"
+    },
+    "docs/expansion/evidence/EXP-04-D-check.log": {
+      "sha256": "0e04161eddf1280f83ef5eb8a893ef65d46454af190cefe2ec6dae27b9716fe3"
+    },
+    "docs/expansion/evidence/EXP-04-D-dist-initial-failed.log": {
+      "sha256": "5ef6cf8c5a498caf01131669605e9e9b1c978c67f3a19a2e45b352c542f22eac"
+    },
+    "docs/expansion/evidence/EXP-04-D-dist.log": {
+      "sha256": "b52fc5e7b3eab5d4dbaa58b2920793fab3f6afb51aedef69ba8a245d90412721"
+    },
+    "docs/expansion/evidence/EXP-04-D-offline.log": {
+      "sha256": "1fb24f65eba251d0c6dc1e688ad4d093db22f18ac5dcf075f7fd3551ce043b79"
+    },
+    "docs/expansion/evidence/EXP-04-D-pilot.log": {
+      "sha256": "55622c6c39883a378c86257d0163a0e7181b9ccaafc1de6cc7a5f96233747cbd"
+    },
+    "docs/expansion/evidence/EXP-04-screenshots/compare-kk-1280.jpg": {
+      "sha256": "ca3cd88f542eac4272f5c50591c93381fdc3f7e596420f3ad69e8afa818ec3ba"
+    },
+    "docs/expansion/evidence/EXP-04-screenshots/compare-kk-320-text200.jpg": {
+      "sha256": "c16084ee1eec75d82b9619d17e1d1fb87b9b7fc5071f3553d8219ced1929d77f"
+    },
+    "docs/expansion/evidence/EXP-04-screenshots/compare-kk-390.jpg": {
+      "sha256": "099998f169c9d0480f369400f9bf836ffa2aff57bd9ed22da29228113b2a3b22"
+    },
+    "docs/expansion/evidence/EXP-04-screenshots/compare-ru-1280.jpg": {
+      "sha256": "1eaee8a8d1c0015c155467f2fc45b01f35d251b7b7496ef1d824554d536c74d8"
+    },
+    "docs/expansion/evidence/EXP-04-screenshots/compare-ru-390.jpg": {
+      "sha256": "891f8ea2ca032f3a003ac3ec5625d2d4afadece50782842017503f963bd53c06"
+    },
+    "docs/expansion/evidence/EXP-04-D-audit.json": {
+      "sha256": "e5510270fc01acadced17714c5ab3dd87aaa651506f93508f3ce3c45645516df"
+    }
+  },
+  "commands": [
+    {
+      "command": "npm run check",
+      "status": "PASS",
+      "source": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
+      "log": "EXP-04-D-check.log"
+    },
+    {
+      "command": "npm run build",
+      "status": "PASS",
+      "source": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
+      "log": "EXP-04-D-build.log"
+    },
+    {
+      "command": "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e -- --workers=2",
+      "status": "PASS",
+      "source": "25a262fa3461fd2c5bbc8313eb2419833af64dee",
+      "log": "EXP-04-C-dev.log"
+    },
+    {
+      "command": "EXP04_ARTIFACT_DIR=work/exp04/dist-screenshots CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npx playwright test --config playwright.exp04.config.ts --workers=2",
+      "status": "PASS",
+      "source": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
+      "log": "EXP-04-D-dist.log"
+    },
+    {
+      "command": "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npx playwright test --config playwright.pilot.config.ts",
+      "status": "PASS",
+      "source": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
+      "log": "EXP-04-D-pilot.log"
+    },
+    {
+      "command": "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npx playwright test --config playwright.offline.config.ts",
+      "status": "PASS",
+      "source": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
+      "log": "EXP-04-D-offline.log"
+    },
+    {
+      "command": "CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npx playwright test --config work/exp04/focused-dev.config.ts --workers=1",
+      "status": "PASS",
+      "source": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
+      "log": "EXP-04-C2-focused-dev.log"
+    }
+  ],
+  "buildEquivalence": {
+    "app_shell_sha256": "883107eac9aa3722e4c005da1d47391f2eb85659a39e9f2e8f59161cf169c83e",
+    "before_after": "MATCH; rebuilding C2 preserved artifact manifest/version"
   }
 }

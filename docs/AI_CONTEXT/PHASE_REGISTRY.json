@@ -317,7 +317,7 @@
       "F074",
       "F075"
     ],
-    "status": "EXISTING_DEMO_WITH_LIMITATIONS",
+    "status": "TECHNICAL_VERIFIED_HUMAN_BLOCKED",
     "objective": "Родитель видит условия конкретной услуги, источники фактов и сравнивает до трёх вариантов.",
     "prerequisites": "EXP-03.",
     "technical_architecture": "Проверить даты/единицы цены/offer switching, verified scopes, side-by-side desktop, mobile stack, action state и persistence. При статусе проверки обязательно показывать limitations.",
@@ -330,7 +330,7 @@
       "src/domain/profile.ts"
     ],
     "reuse_foundations": "OfferProfile, TrustPassport, Comparison, дизайн 13.11.",
-    "missing_implementation": "Полевые проверки/KK и доказательство каждого нового EXP AC; existing code не пересоздавать.",
+    "missing_implementation": "Automated EXP04 complete; parent/native KK/real AT/device gates pending. CORE postal address SOURCE_UNAVAILABLE, displayed unknown. No live permission.",
     "backend_requirements": "Сохранять текущие domain/storage contracts; private authority в server/service.ts.",
     "frontend_requirements": "RU/KK; semantic controls, 320–430px, focus, empty/error/retry; Родитель видит условия конкретной услуги, источники фактов и сравнивает до трёх вариантов.",
     "data_models": "Offer, Specialist, VerificationFact, comparison selection",
@@ -359,15 +359,17 @@
     "external_dependencies": "Проверка понимания бейджа родителем; native KK review.",
     "allowed_result": "DEMO; без обещаний качества услуг.",
     "completion_evidence": {
-      "code_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
-      "qa": "VALIDATION.md",
-      "phase_ac_status": "NOT_INDIVIDUALLY_ADJUDICATED",
-      "reason": "Baseline regression не закрывает автоматически новые EXP AC и human gates."
+      "code_sha": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
+      "qa": "../expansion/evidence/EXP-04.json",
+      "phase_ac_status": "PASS (AUTOMATED_SYNTHETIC_DEMO)",
+      "reason": "Current237 unit +121 dev +83 dist +5 pilot +2 offline executions; HUMAN_QA_PENDING, LIVE_BLOCKED."
     },
     "source": {
       "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
       "line": 366
-    }
+    },
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO"
   },
   {
     "id": "EXP-05",

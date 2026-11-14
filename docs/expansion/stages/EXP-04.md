@@ -1,6 +1,6 @@
 # EXP-04 — Profile, Trust Passport & Comparison
 
-Status: IN_PROGRESS (audit). Synthetic DEMO only; LIVE_BLOCKED; HUMAN_QA_PENDING.
+Current: VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO). Historical slice A audit follows. Synthetic DEMO only; LIVE_BLOCKED; HUMAN_QA_PENDING.
 
 Branch `codex/exp-04-profile-trust-comparison`, dependency/base `7340dffa1b15e8452bf693f090f6c4085d46b158`. Default `7f8434a4cfd097b531fa584f5b97ebd1e772ad92`. EXP-03 PR8 is unmerged; context PR9 and sibling EXP-01 PR10 are also unmerged. No sibling merge. Clean unborn checkout recovered by fetch; no user edits/stashes.
 
@@ -53,3 +53,58 @@ All profile/compare public dates use Asia/Almaty and catalog.demoClock. RU keeps
 EXP-04 C verified:237 unit/integration,121 full dev browser, strict TS/build/context PASS,0 final failed/skipped. Responsive3 columns1280 and stacked390/320, text200%, native keyboard, locale/date/price, exact pin/replace/withdrawal proved. Five synthetic browser screenshots retained in docs/expansion/evidence/EXP-04-screenshots. B remote verified 424c36db3caa423d304ca403d01e7a6bff372011. Next D: dist/pilot/offline and final per-feature closure. LIVE_BLOCKED; HUMAN_QA_PENDING.
 
 EXP04 C2: test-only serviceWorkers:block isolates route-injected synthetic catalogs after reload; runtime unchanged from remote25a262fa3461fd2c5bbc8313eb2419833af64dee. Current237 check,31 focused dev and83 dist PASS; original full121 dev equivalent (DEV never registers SW). Actual SW remains enabled in separate release/offline tests;5 pilot and2 offline PASS. Initial80pass/3fail dist log retained. No assertions removed, no production SW disablement. Next final D closure; LIVE_BLOCKED/HUMAN_QA_PENDING.
+
+## D — final acceptance
+
+**VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO)** on source `2711bee46cb37aac64f98dafa14103e2dbe545b4`. LIVE_BLOCKED; HUMAN_QA_PENDING.
+
+| ID | Exact feature | Status | Code | Current test proof | Remaining |
+|---|---|---|---|---|---|
+| F061 | Карточка специалиста | ALREADY_VERIFIED | src/features/profile/OfferProfile.tsx, src/domain/profile.ts | tests/e2e/exp04.spec.ts, tests/e2e/profile.spec.ts, tests/exp04.test.ts, tests/profile.test.ts; P04-T01, P04-T03, P04-T04, P04-T05, P04-T06, P04-T10 | Human QA pending; address source unavailable where applicable |
+| F062 | Несколько услуг одного специалиста | FIXED_AND_VERIFIED | src/features/profile/OfferProfile.tsx | tests/e2e/exp04.spec.ts, tests/e2e/profile.spec.ts; P04-T02, P04-T08, P04-T32, P04-T44 | Human QA pending; address source unavailable where applicable |
+| F063 | Подробные условия услуги | FIXED_AND_VERIFIED | src/features/search/OfferCard.tsx | tests/e2e/exp04.spec.ts, tests/e2e/profile.spec.ts, tests/exp04.test.ts; P04-T02, P04-T14, P04-T15, P04-T16 | Human QA pending; address source unavailable where applicable |
+| F064 | Цена и продолжительность | FIXED_AND_VERIFIED | src/features/search/OfferCard.tsx, src/i18n/price.ts | tests/e2e/exp04.spec.ts, tests/exp04.test.ts; P04-T11, P04-T12, P04-T13, P04-T16 | Human QA pending; address source unavailable where applicable |
+| F065 | Адрес и формат | FIXED_AND_VERIFIED | src/features/search/OfferCard.tsx | tests/e2e/exp04.spec.ts, tests/e2e/profile.spec.ts; P04-T14, P04-T36 | Human QA pending; address source unavailable where applicable |
+| F066 | Паспорт доверия | FIXED_AND_VERIFIED | src/features/profile/TrustPassport.tsx | tests/e2e/exp04.spec.ts, tests/e2e/profile.spec.ts, tests/exp04.test.ts; P04-T18, P04-T19, P04-T25, P04-T26 | Human QA pending; address source unavailable where applicable |
+| F067 | Статус проверки | FIXED_AND_VERIFIED | src/domain/profile.ts | tests/e2e/exp04.spec.ts, tests/e2e/profile.spec.ts, tests/exp04.test.ts; P04-T19, P04-T20, P04-T21, P04-T22, P04-T23, P04-T24 | Human QA pending; address source unavailable where applicable |
+| F068 | Источник информации | FIXED_AND_VERIFIED | src/features/profile/TrustPassport.tsx, src/domain/SearchService.ts | tests/e2e/exp04.spec.ts, tests/e2e/profile.spec.ts, tests/exp04.test.ts; P04-T18, P04-T24, P04-T26, P04-T43 | Human QA pending; address source unavailable where applicable |
+| F069 | Дата проверки | FIXED_AND_VERIFIED | src/domain/profile.ts, src/domain/freshness.ts, src/i18n/date.ts | tests/e2e/exp04.spec.ts, tests/e2e/profile.spec.ts, tests/exp04.test.ts; P04-T17, P04-T21, P04-T22 | Human QA pending; address source unavailable where applicable |
+| F070 | Неизвестные сведения | FIXED_AND_VERIFIED | src/features/search/OfferCard.tsx, src/features/profile/TrustPassport.tsx | tests/e2e/exp04.spec.ts, tests/e2e/profile.spec.ts, tests/exp04.test.ts; P04-T10, P04-T12, P04-T15, P04-T24 | Human QA pending; address source unavailable where applicable |
+| F071 | Сравнение специалистов | FIXED_AND_VERIFIED | src/features/search/SelectionViews.tsx | tests/e2e/exp04-state.spec.ts, tests/e2e/exp04.spec.ts; P04-T28, P04-T32, P04-T33, P04-T34 | Human QA pending; address source unavailable where applicable |
+| F072 | Добавление в сравнение | ALREADY_VERIFIED | src/app/AppState.tsx, src/features/search/CompareTray.tsx | tests/e2e/exp04-state.spec.ts, tests/e2e/exp04.spec.ts; P04-T28, P04-T29, P04-T30, P04-T32, P04-T33 | Human QA pending; address source unavailable where applicable |
+| F073 | Удаление из сравнения | FIXED_AND_VERIFIED | src/app/AppState.tsx, src/features/search/SelectionViews.tsx | tests/e2e/exp04-state.spec.ts, tests/e2e/exp04.spec.ts, tests/e2e/profile.spec.ts; P04-T31, P04-T34, P04-T38 | Human QA pending; address source unavailable where applicable |
+| F074 | Сравнение условий | FIXED_AND_VERIFIED | src/features/search/SelectionViews.tsx, src/features/search/OfferCard.tsx | tests/e2e/exp04.spec.ts, tests/e2e/profile.spec.ts, tests/exp04.test.ts; P04-T11, P04-T13, P04-T16, P04-T18, P04-T25, P04-T36 | Human QA pending; address source unavailable where applicable |
+| F075 | Side-by-side сравнение на компьютере | FIXED_AND_VERIFIED | src/styles.css, src/features/search/SelectionViews.tsx | tests/e2e/exp04.spec.ts, tests/e2e/profile.spec.ts; P04-T27, P04-T37, P04-T38, P04-T39, P04-T41 | Human QA pending; address source unavailable where applicable |
+
+| AC | Result | Evidence |
+|---|---|---|
+| AC-01 exact profile | PASS | exp04.test.ts; profile.spec.ts; exp04.spec.ts; C-check/C-dev/D-dist logs |
+| AC-02 2–3 exact comparisons | PASS | exp04.spec.ts; exp04-state.spec.ts; search.spec.ts; C-dev/D-dist logs |
+| AC-03 honest passport | PASS | exp04.test.ts; profile.spec.ts; exp04.spec.ts; source/date/scope/limits and private projection |
+| AC-04 responsive/keyboard | PASS | exp04.spec.ts RU/KK1280/390/320/text200%; retained screenshots |
+
+Actual final executions:237 unit/integration (11 files),121 dev,83 dist,5 pilot,2 offline=448;0 failed/skipped. These are executions across overlapping suites, not448 unique tests.41 new domain cases and18 browser cases. Build PASS (main380.00kB, gzip111.42kB); npm audit0 vulnerabilities. Chromium156.0.8078.79, Playwright1.65.0, Node24.22.1, npm11.9.0 on Linux; Pixel7 emulation plus explicit CSS viewports. No physical-device claim. [Machine evidence](../evidence/EXP-04.json) lists48 P04 categories mapped to real assertions, commands, logs and hashes.
+
+Production initial80pass/3fail: production SW cache bypassed Playwright route fixtures across reload. C2 adds test-only serviceWorkers:block to the two fixture suites; real SW remains enabled in release/offline tests. Runtime/domain tests byte-identical to C. Current237 check,31 focused dev and83 dist re-executed; prior full121 dev is equivalent because DEV never registers SW. Focused31 not added to final totals. C2 receipt 2711bee46cb37aac64f98dafa14103e2dbe545b4.
+
+Initial diagnostic failures preserved: B8/39 red before fixes; C24pass/3fail hover/locale, C27pass/2fail invalid harness aggregate/Node-vs-Chromium ICU expectation; first full dev120pass/1fail old reload race. Corrected harness/synchronization without removing exact ID/order/publication assertions. Final gates above passed.
+
+Security/trust: mismatched/forged/ambiguous IDs rejected; hidden/withdrawn pairs guarded; private notes/scan/ID unknown fields stripped and checker role null; nonpublic offer facts removed; future/malformed/missing/review-due evidence cannot confer current trust, REVOKED preserved; script-like strings render as text. Provider fact/sibling additions cannot fabricate selected-offer evidence. Source badges are synthetic and not issuing-authority verification or quality claims. Search constraints remain in session, not shareable URLs; direct links neutral. No outbound sends/real family data/live enablement.
+
+No-op verified areas: matching rules/weights, freshness TTLs, catalog schema, session2h policy, native selector, RequestAction acknowledgement/DEMO-only target, CompareTray add limit and explicit replacement semantics. No second matching/provenance/persistence system. Rollback: revert owned EXP04 commits reverse order; no migration.
+
+Screenshots (actual headless browser, CSS pixels):
+
+- [compare-kk-1280.jpg](../evidence/EXP-04-screenshots/compare-kk-1280.jpg)
+- [compare-kk-320-text200.jpg](../evidence/EXP-04-screenshots/compare-kk-320-text200.jpg)
+- [compare-kk-390.jpg](../evidence/EXP-04-screenshots/compare-kk-390.jpg)
+- [compare-ru-1280.jpg](../evidence/EXP-04-screenshots/compare-ru-1280.jpg)
+- [compare-ru-390.jpg](../evidence/EXP-04-screenshots/compare-ru-390.jpg)
+
+Reproduce: npm ci; npm run check; npm run build; python3 docs/AI_CONTEXT/validate_context.py. With CI=1 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium run npm run test:e2e -- --workers=2, then npx playwright test --config playwright.exp04.config.ts --workers=2, then pilot/offline configs. Artifact destination can be set via EXP04_ARTIFACT_DIR. Keep servers sequential or isolated.
+
+Checkpoints A c43fedc00fbfa4f85ef9a432c9fdb32470f22d2e, B424c36db3caa423d304ca403d01e7a6bff372011, C25a262fa3461fd2c5bbc8313eb2419833af64dee are REMOTE_VERIFIED. Containing D SHA must be read after push; cannot embed its own hash. Final ignored receipt and user response record D HEAD=remote. No merge/deploy. Draft PR, if created, targets EXP03.
+
+Remaining human gates: actual parent comprehension of badges, native KK review, real assistive technology/device/physical zoom, original Research DOCX. Postal addresses need a real source before any venue claim. Comparison persistence remains tab-memory by established contract. All identity/consent/operator/provider/legal/ops live gates remain blocked. EXP05 prerequisites: new explicit user request; use verified EXP04 branch and review stacked dependency integration; retain synthetic request/offline contracts and LIVE_BLOCKED. EXP05 not started.
+
+Detailed command receipts and source equivalence: full121 dev ran on C25a262f; C2 changes only the two browser fixture SW guards/comments. Runtime/domain test files are identical; current237 check,31 focused dev,83 dist and actual5 pilot/2 offline were rerun, without counting31 twice. D build has identical app-shell hash. Context registry now separately validates EXP03 historical evidence and current EXP04 source/evidence hashes.

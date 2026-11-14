@@ -3,12 +3,12 @@
   "project": "Qoldau.Zhol",
   "executionBranch": "codex/exp-04-profile-trust-comparison",
   "baseSha": "7340dffa1b15e8452bf693f090f6c4085d46b158",
-  "runtimeSha": "424c36db3caa423d304ca403d01e7a6bff372011",
-  "lastLocalCommit": "25a262fa3461fd2c5bbc8313eb2419833af64dee",
-  "lastPushedCommit": "25a262fa3461fd2c5bbc8313eb2419833af64dee",
-  "gitObservationScope": "Last confirmed pre-D commit is C. The containing closure SHA cannot be embedded in its own content; resolve HEAD and ls-remote after push and on resume. Final receipt is outside Git.",
+  "runtimeSha": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
+  "lastLocalCommit": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
+  "lastPushedCommit": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
+  "gitObservationScope": "Containing D SHA cannot be embedded in its own commit. Current source/checkpoint C2 above is remote verified; D receipt must compare HEAD with ls-remote and is written after push outside Git.",
   "currentStage": "EXP-04",
-  "phaseStatus": "IN_PROGRESS",
+  "phaseStatus": "VERIFIED_DONE",
   "featureIdsTouched": [
     "F061",
     "F062",
@@ -26,32 +26,31 @@
     "F074",
     "F075"
   ],
-  "sourceCoverage": "F000\u2013F230: 231/231 source anchors; source statuses unchanged",
+  "sourceCoverage": "F000–F230: 231/231 source anchors; source statuses unchanged",
   "tests": {
-    "baseline_unit_integration": 196,
     "unit_integration": 237,
-    "focused_profile": 13,
     "dev": 121,
-    "failed_final": 0,
-    "skipped_final": 0,
     "dist": 83,
     "pilot": 5,
     "offline": 2,
-    "focused_refresh": 31
+    "total_final_executions": 448,
+    "failed_final": 0,
+    "skipped_final": 0,
+    "new_domain_cases": 41,
+    "new_browser_cases": 18
   },
   "blockers": [
-    "human_parent_comprehension",
+    "HUMAN_QA_PENDING: actual parent comprehension",
     "native_KK_editorial",
-    "real_screen_reader_physical_device_browser_zoom",
-    "original_research_DOCX",
-    "production_identity_consent_operator_provider_ops",
-    "remote_CI"
+    "real_AT_physical_device_browser_zoom",
+    "original_research_DOCX_SOURCE_UNAVAILABLE",
+    "production_identity_consent_operator_provider_ops"
   ],
-  "nextSafeStep": "D final per-feature/AC documentation closure; all actual gates now pass",
+  "nextSafeStep": "STOP. EXP-05 requires a new explicit user instruction; preserve LIVE_BLOCKED.",
   "liveBlocked": true,
   "featureMatrix": "docs/AI_CONTEXT/FEATURE_REGISTRY.json",
   "handoff": "docs/AI_CONTEXT/SESSION_HANDOFF.md",
   "evidence": "docs/expansion/evidence/EXP-04.json",
-  "observed_at_utc": "2026-11-13T19:25:02.090490+00:00",
+  "observed_at_utc": "2026-11-14T04:13:06.588222+00:00",
   "verification_scope": "AUTOMATED_SYNTHETIC_DEMO"
 }

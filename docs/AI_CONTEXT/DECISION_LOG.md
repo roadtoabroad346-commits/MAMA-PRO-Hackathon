@@ -54,3 +54,5 @@ Reuse OfferFacts, EvidenceFact/OfferEvidence and canonical verificationStatus, n
 ## ADR-EXP04-03 — deterministic public dates and honest test synchronization
 
 All profile/compare public dates use Asia/Almaty and catalog.demoClock. RU keeps Intl medium; KK uses Intl numeric parts in dd.mm.yyyy order because actual Chromium rendered month M11. KK price groups are NBSP, avoiding English comma fallback; no currency/value/unit change. Native KK editorial acceptance remains pending. Existing profile fixture interception now targets fetch-only dev/dist asset URLs. Existing EXP03 reload assertion must wait for the expected card count before reading exact IDs; no assertion is removed or eligibility relaxed. Initial red/domain and browser harness failures are retained.
+
+ADR-EXP04-04: all15 feature and4 phase technical AC accepted only as AUTOMATED_SYNTHETIC_DEMO on source 2711bee46cb37aac64f98dafa14103e2dbe545b4. Preserve implementation statuses with human limits, mark separate execution_state VERIFIED_DONE. Current source/evidence hashes and actual test counts checked by context validator. No live or human acceptance inferred; stop before EXP05.
