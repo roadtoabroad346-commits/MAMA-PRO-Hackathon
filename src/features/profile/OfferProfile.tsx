@@ -1,8 +1,8 @@
+import { factDateText } from '../../i18n/date';
 import { Link, useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { useApp } from '../../app/AppState';
 import { emptySearchInput } from '../../domain/contracts';
 import { resolveProfile } from '../../domain/profile';
-import { isFresh } from '../../domain/SearchService';
 import { categoryKeys } from '../../i18n/messages';
 import { DemoNotice, PageTitle } from '../../ui/controls';
 import { CompareButton, Explanations, OfferFacts } from '../search/OfferCard';
@@ -16,13 +16,13 @@ export function OfferProfile() {
   const { catalog, input, service, locale, comparison, comparisonNotice, t } = useApp();
   const location = useLocation();
   const navigate = useNavigate();
-  const profile = resolveProfile(catalog, specialistId, params.get('offer'));
+  const profile = resolveProfile(catalog, specialistId, params.getAll('offer').length > 1 ? '' : params.get('offer'));
   if (profile.kind !== 'found') return <><PageTitle>{t(profile.kind === 'specialist-not-found' ? 'profileNotFound' : 'offerNotFound')}</PageTitle><Link className="button primary" to="/specialists">{t('backToResults')}</Link></>;
   const { specialist, offers, offer } = profile;
   const hasContext = !!location.state?.fromCatalog || !!location.state?.fromComparison;
   const neutral = service.inspectOffer(emptySearchInput(), offer.id);
   const item = hasContext ? service.inspectOffer(input, offer.id) : neutral;
-  const date = (value: string) => new Intl.DateTimeFormat(locale, { dateStyle: 'medium', timeZone: 'Asia/Almaty' }).format(new Date(value));
+  const date = (value: string) => factDateText(value, locale);
   return <div className="profile-page">
     <button className="button secondary" type="button" onClick={() => hasContext ? navigate(-1) : navigate('/specialists')}>{t(location.state?.fromComparison ? 'backToComparison' : 'backToResults')}</button>
     <header className="profile-header">
@@ -51,10 +51,7 @@ export function OfferProfile() {
       <article className="profile-panel selected-offer" data-testid="selected-offer" data-offer-id={offer.id}>
         <div aria-live="polite" aria-atomic="true" className="help">{t('offerSelected', { id: offer.id })}</div>
         <h2>{offer.title[locale]}</h2><p>{t(categoryKeys[offer.categoryId])} · {t('offerId', { id: offer.id })}</p>
-        <OfferFacts offer={offer} />
-        <p>{t('availabilityLabel')}: {t(offer.acceptingEnquiries === null ? 'unknown' : offer.acceptingEnquiries ? 'accepting' : 'notAccepting')}</p>
-        <p className="help">{t('availabilityLimit')}</p>
-        {!isFresh(offer.availabilityConfirmedAt, new Date(catalog.demoClock), 7) && <p className="warning-text">{t('staleAvailability')}</p>}
+        <OfferFacts offer={offer} detailed />
         <p className="help">{t('offerUpdated', { date: date(offer.updatedAt) })}</p>
         <Explanations item={item} fallbackUnknowns={neutral?.unknowns} />
         <RequestAction key={offer.id} offer={offer} incompatible={item === null} hasContext={hasContext} />

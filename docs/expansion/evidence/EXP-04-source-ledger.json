@@ -1,0 +1,170 @@
+{
+  "baseSha": "7340dffa1b15e8452bf693f090f6c4085d46b158",
+  "scope": "Relevant current sections, contracts and exact EXP04 registry/source rows inspected; large generated registries indexed, not claimed independent full audit of every phase.",
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "sha256_observed": "8ca8f9736fddf05ce601d7019b0bee42b8fb9cf47776c57b80bc61bc26228a4f",
+      "availability": "AVAILABLE"
+    },
+    {
+      "path": "docs/AI_CONTEXT/PROJECT_MASTER_CONTEXT.md",
+      "sha256_observed": "f73941bc27592e65c9a7ed333014f55fa5b9da6c5993fe9ae32f12c2a2d35f0d",
+      "availability": "AVAILABLE"
+    },
+    {
+      "path": "docs/AI_CONTEXT/FEATURE_STATUS.md",
+      "sha256_observed": "78d8de3fc9dccd96298b9456e74e38aa2f9ba3d67b5058d76c8274df6bd818d7",
+      "availability": "AVAILABLE"
+    },
+    {
+      "path": "docs/AI_CONTEXT/PHASE_PROGRESS.md",
+      "sha256_observed": "c64a2f44eea6f9bb96ff203f4e965f35ca91c798b323ce23bcfa9ebe1e7e8546",
+      "availability": "AVAILABLE"
+    },
+    {
+      "path": "docs/AI_CONTEXT/ARCHITECTURE_MEMORY.md",
+      "sha256_observed": "30c687e5f9f9d6a1140da77b51fb059f4cb0615fd50b0c3d73a1cde2203de4f9",
+      "availability": "AVAILABLE"
+    },
+    {
+      "path": "docs/AI_CONTEXT/DECISION_LOG.md",
+      "sha256_observed": "48d3e352c0a3dc0a27715b2f350cf3b9aabf3f0b1c0dc786594d47694afbd9bd",
+      "availability": "AVAILABLE"
+    },
+    {
+      "path": "docs/AI_CONTEXT/SESSION_HANDOFF.md",
+      "sha256_observed": "fb61bf0f29cc875c165f1e833e04e9c221f88ef8aab3661ec80d9e6958d3a353",
+      "availability": "AVAILABLE"
+    },
+    {
+      "path": "docs/AI_CONTEXT/RESEARCH_TRACEABILITY.md",
+      "sha256_observed": "b70ae29c7cacd9bb0ce9bd7c26451cb7fcceb51a19a7c4da41956cebf83b3f2e",
+      "availability": "AVAILABLE"
+    },
+    {
+      "path": "docs/expansion/stages/EXP-03.md",
+      "sha256_observed": "5723ea0b971f3675241b31b04b04f0b00290ce7ad8920ab5715a37ac911c0f6b",
+      "availability": "AVAILABLE"
+    },
+    {
+      "path": "docs/expansion/evidence/EXP-03.json",
+      "sha256_observed": "94c2f68fecfab9b5fd85d50749ebb8523e73bea56e563937cf6b99322dcf31bd",
+      "availability": "AVAILABLE"
+    },
+    {
+      "path": "docs/expansion/STATE.json",
+      "sha256_observed": "57b402c4a6bcc44a5263acb4dbaf202a637d1705b670e2aca4fe69488a1b0d47",
+      "availability": "AVAILABLE"
+    },
+    {
+      "path": "docs/PHASE_8.md",
+      "sha256_observed": "96fc4efff889942d7eb51086322bf11cc6a6736f4a7f2859c951908a9944e626",
+      "availability": "AVAILABLE"
+    },
+    {
+      "path": "docs/DOMAIN_CONTRACTS.md",
+      "sha256_observed": "ffd596315d7de45554850735f4d1a64c5dc7e19a4456b237db4ccb4ed89929bc",
+      "availability": "AVAILABLE"
+    },
+    {
+      "path": "docs/PROJECT_STATE.md",
+      "sha256_observed": "97a5d8112f1dd2b4639e4af728b56e062c750faf5eca3e8aadfee1cd4a3f5349",
+      "availability": "AVAILABLE"
+    },
+    {
+      "path": "docs/LIVE_READINESS.md",
+      "sha256_observed": "43f9c648fed89ee154b09cc5eeed43fb99b910337f0394bfd8abd10b1533cf2b",
+      "availability": "AVAILABLE"
+    },
+    {
+      "path": "docs/DESIGN_DELIVERY_2026-11-13.md",
+      "sha256_observed": "fb1e0a864f5f7b8a9080cb35f6ddebfa7f6f56a0c3ea98c53dd0701947ef9a39",
+      "availability": "AVAILABLE"
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/00_REFERENCE_RESEARCH.md",
+      "sha256_observed": "4e542e1a51d2f41c22cf77496c4e95212e6d2376f4aa02bbb4c4fbe9eab74da2",
+      "availability": "AVAILABLE"
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/FEATURE_REGISTRY_000-230.csv",
+      "sha256_observed": "e088453ceae5280d50ae24f22bf9f40aa98ebd7101caea4d39983053cfba8392",
+      "availability": "AVAILABLE"
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
+      "sha256_observed": "62da3a173aa812dd78aec11fee0fe1aba96ed9c4d0ea8c4c9e4330d4206a4898",
+      "availability": "AVAILABLE"
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/02_CODEX_ENGINEERING_PLAYBOOK.md",
+      "sha256_observed": "3f3b12f5ef3ebba6adbd699b577500ccc884ee1c07500b3d5846360221cfecfa",
+      "availability": "AVAILABLE"
+    },
+    {
+      "path": "docs/AI_CONTEXT/sources/03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "sha256_observed": "bd6470f570a6d6c2bdb29d122784c53840bb1a3590d9c2f7e130d11b6aca95ff",
+      "availability": "AVAILABLE"
+    }
+  ],
+  "original_DOCX": "SOURCE_UNAVAILABLE",
+  "branches": {
+    "default": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "EXP03": "7340dffa1b15e8452bf693f090f6c4085d46b158",
+    "EXP01_sibling": "a93cc18d7b357a637c7114e9408ec11242156eba"
+  },
+  "open_prs": [
+    {
+      "number": 10,
+      "head": "feature/mamapro-exp01-20261113",
+      "draft": true
+    },
+    {
+      "number": 9,
+      "head": "feature/context-init-2026-11-13",
+      "draft": true
+    },
+    {
+      "number": 8,
+      "head": "codex/exp-03-offer-matching",
+      "draft": true
+    },
+    {
+      "number": 2,
+      "historical_head_already_ancestor": true
+    },
+    {
+      "number": 1,
+      "historical_head_already_ancestor": true
+    }
+  ],
+  "source_reconciliation": "Use integrated plan F061-F075; ignore generic master example that calls F136 EXP04. Original optional docx not reconstructed. No merges of sibling work.",
+  "attachment_comparison": [
+    {
+      "attachment": "02_CODEX_ENGINEERING_PLAYBOOK.md",
+      "sha256": "3f3b12f5ef3ebba6adbd699b577500ccc884ee1c07500b3d5846360221cfecfa",
+      "archived_identical": true
+    },
+    {
+      "attachment": "MamaPro_EXP-04_Codex_Principal_Engineering_Prompt.md",
+      "sha256": "2748469687344514fc65fc27d2961c6c59def0f63f6f864c08f9e64e4b5c3dcf",
+      "archived_identical": null
+    },
+    {
+      "attachment": "03_INTEGRATED_PHASE_EXECUTION_PLAN.md",
+      "sha256": "bd6470f570a6d6c2bdb29d122784c53840bb1a3590d9c2f7e130d11b6aca95ff",
+      "archived_identical": true
+    },
+    {
+      "attachment": "01_MASTER_IMPLEMENTATION_PROMPT.md",
+      "sha256": "62da3a173aa812dd78aec11fee0fe1aba96ed9c4d0ea8c4c9e4330d4206a4898",
+      "archived_identical": true
+    }
+  ],
+  "principal_prompt_archive": {
+    "path": "docs/expansion/sources/MamaPro_EXP-04_Codex_Principal_Engineering_Prompt.md",
+    "normalization": "Only trailing Markdown whitespace removed for git diff --check. Original attachment and its recorded SHA256 remain untouched; requirement text unchanged.",
+    "archived_sha256": "b7426dcbced67a3a977ea4777b1df36f9be768abd7f3f195c87daa253399a07c"
+  }
+}

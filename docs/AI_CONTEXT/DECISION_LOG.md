@@ -42,3 +42,17 @@ Initial C run6pass/8fail was test-harness error: two nonexistent dictionary keys
 ## ADR-CTX-EXP03-D — technical completion and honest performance
 
 All24 technical feature AC and four phase AC proved on sourceac82ec7:360 final test executions PASS, build/context/audit PASS, actual20/100/1000 benchmark. Mark execution_state VERIFIED_DONE with explicit AUTOMATED_SYNTHETIC_DEMO scope; keep implementation statuses IMPLEMENTED_WITH_LIMITATIONS and human/live gates separate. Text lookup improves; some other scenario timings regress, so no universal speedup or statistical/field claim. Source hash checks bind current files and per-feature last_verified_sha to an actual Git tree; historical baseline hashes remain checked separately. Final containing D SHA is reported only after push/ls-remote; documents carry the preceding confirmed C SHA and resume commands. EXP-04 technically unblocked, not authorized or started.
+
+14.11.2026 EXP-04 A: user authorized exact F061–F075; audited base7340dff; baseline196 PASS. Keep same-provider explicit replacement/tab-memory comparison. Address unavailable, show honest unknown. No merge/deploy; LIVE_BLOCKED. See EXP-04 stage.
+
+EXP-04 B:235 unit/integration +13 profile browser PASS;8 reproduced defects fixed. Same schema and demo clock; public roles/hidden-offer evidence stripped at ingestion. A remote c43fedc00fbfa4f85ef9a432c9fdb32470f22d2e. Next C. LIVE_BLOCKED; HUMAN_QA_PENDING.
+
+## ADR-EXP04-02 — shared facts and responsive comparison
+
+Reuse OfferFacts, EvidenceFact/OfferEvidence and canonical verificationStatus, not a parallel trust model. Show price/unit/duration, address unknown/N/A and availability/date/limits consistently; exact offer evidence is available through native details in compare. At1280 exactly2/3 equal columns with nested subgrid aligns7 semantic fields; at390/320 cards stack. Remove hover translation only in comparison. Unavailable pins show a generic safe removable placeholder without provider/offer details or actions; removals happen before publication checks, while adds/replacements still validate ownership/publication. Dynamic-update integration harness is development-only, not a product entry point. Schema, session, max3, provider replacement, matching weights and freshness policy retained.
+
+## ADR-EXP04-03 — deterministic public dates and honest test synchronization
+
+All profile/compare public dates use Asia/Almaty and catalog.demoClock. RU keeps Intl medium; KK uses Intl numeric parts in dd.mm.yyyy order because actual Chromium rendered month M11. KK price groups are NBSP, avoiding English comma fallback; no currency/value/unit change. Native KK editorial acceptance remains pending. Existing profile fixture interception now targets fetch-only dev/dist asset URLs. Existing EXP03 reload assertion must wait for the expected card count before reading exact IDs; no assertion is removed or eligibility relaxed. Initial red/domain and browser harness failures are retained.
+
+ADR-EXP04-04: all15 feature and4 phase technical AC accepted only as AUTOMATED_SYNTHETIC_DEMO on source 2711bee46cb37aac64f98dafa14103e2dbe545b4. Preserve implementation statuses with human limits, mark separate execution_state VERIFIED_DONE. Current source/evidence hashes and actual test counts checked by context validator. No live or human acceptance inferred; stop before EXP05.

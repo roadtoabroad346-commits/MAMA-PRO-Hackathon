@@ -6454,11 +6454,7 @@
         "line": 1
       },
       {
-        "path": "src/features/profile/TrustPassport.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/features/search/SelectionViews.tsx",
+        "path": "src/domain/profile.ts",
         "line": 1
       }
     ],
@@ -6470,12 +6466,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 20,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 42,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -6515,7 +6511,7 @@
         "id": "EXP-04-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "HUMAN_QA_PENDING: parent comprehension, native KK, real assistive technology/device/browser zoom; LIVE_BLOCKED. Postal address unavailable in CORE schema; explicitly unknown, no invented venue.",
     "required_tests": {
       "phase_ref": "EXP-04",
       "field": "required_tests"
@@ -6526,14 +6522,34 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/evidence/EXP-04.json",
+    "last_verified_sha": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 303
     },
     "research_line": 412,
-    "registry_line": 63
+    "registry_line": 63,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts",
+        "tests/exp04.test.ts",
+        "tests/profile.test.ts"
+      ],
+      "cases": [
+        "P04-T01",
+        "P04-T03",
+        "P04-T04",
+        "P04-T05",
+        "P04-T06",
+        "P04-T10"
+      ],
+      "evidence": "docs/expansion/evidence/EXP-04.json"
+    }
   },
   {
     "id": "F062",
@@ -6556,14 +6572,6 @@
       {
         "path": "src/features/profile/OfferProfile.tsx",
         "line": 1
-      },
-      {
-        "path": "src/features/profile/TrustPassport.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/features/search/SelectionViews.tsx",
-        "line": 1
       }
     ],
     "existing_tests": [
@@ -6574,12 +6582,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 20,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 42,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -6619,7 +6627,7 @@
         "id": "EXP-04-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "HUMAN_QA_PENDING: parent comprehension, native KK, real assistive technology/device/browser zoom; LIVE_BLOCKED. Postal address unavailable in CORE schema; explicitly unknown, no invented venue.",
     "required_tests": {
       "phase_ref": "EXP-04",
       "field": "required_tests"
@@ -6630,14 +6638,30 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/evidence/EXP-04.json",
+    "last_verified_sha": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 304
     },
     "research_line": 413,
-    "registry_line": 64
+    "registry_line": 64,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts"
+      ],
+      "cases": [
+        "P04-T02",
+        "P04-T08",
+        "P04-T32",
+        "P04-T44"
+      ],
+      "evidence": "docs/expansion/evidence/EXP-04.json"
+    }
   },
   {
     "id": "F063",
@@ -6658,15 +6682,7 @@
     "route": "/specialists/:specialistId; /compare",
     "code_refs": [
       {
-        "path": "src/features/profile/OfferProfile.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/features/profile/TrustPassport.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/features/search/SelectionViews.tsx",
+        "path": "src/features/search/OfferCard.tsx",
         "line": 1
       }
     ],
@@ -6678,12 +6694,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 20,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 42,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -6723,7 +6739,7 @@
         "id": "EXP-04-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "HUMAN_QA_PENDING: parent comprehension, native KK, real assistive technology/device/browser zoom; LIVE_BLOCKED. Postal address unavailable in CORE schema; explicitly unknown, no invented venue.",
     "required_tests": {
       "phase_ref": "EXP-04",
       "field": "required_tests"
@@ -6734,14 +6750,31 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/evidence/EXP-04.json",
+    "last_verified_sha": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 305
     },
     "research_line": 414,
-    "registry_line": 65
+    "registry_line": 65,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts",
+        "tests/exp04.test.ts"
+      ],
+      "cases": [
+        "P04-T02",
+        "P04-T14",
+        "P04-T15",
+        "P04-T16"
+      ],
+      "evidence": "docs/expansion/evidence/EXP-04.json"
+    }
   },
   {
     "id": "F064",
@@ -6762,15 +6795,11 @@
     "route": "/specialists/:specialistId; /compare",
     "code_refs": [
       {
-        "path": "src/features/profile/OfferProfile.tsx",
+        "path": "src/features/search/OfferCard.tsx",
         "line": 1
       },
       {
-        "path": "src/features/profile/TrustPassport.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/features/search/SelectionViews.tsx",
+        "path": "src/i18n/price.ts",
         "line": 1
       }
     ],
@@ -6782,12 +6811,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 20,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 42,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -6827,7 +6856,7 @@
         "id": "EXP-04-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "HUMAN_QA_PENDING: parent comprehension, native KK, real assistive technology/device/browser zoom; LIVE_BLOCKED. Postal address unavailable in CORE schema; explicitly unknown, no invented venue.",
     "required_tests": {
       "phase_ref": "EXP-04",
       "field": "required_tests"
@@ -6838,14 +6867,30 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/evidence/EXP-04.json",
+    "last_verified_sha": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 306
     },
     "research_line": 415,
-    "registry_line": 66
+    "registry_line": 66,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/exp04.test.ts"
+      ],
+      "cases": [
+        "P04-T11",
+        "P04-T12",
+        "P04-T13",
+        "P04-T16"
+      ],
+      "evidence": "docs/expansion/evidence/EXP-04.json"
+    }
   },
   {
     "id": "F065",
@@ -6867,31 +6912,23 @@
     "code_refs": [
       {
         "path": "src/features/search/OfferCard.tsx",
-        "line": 7
-      },
-      {
-        "path": "src/features/profile/OfferProfile.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/features/profile/TrustPassport.tsx",
         "line": 1
       }
     ],
     "existing_tests": [
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 20,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 103,
+        "line": 107,
         "text": "test('unknown and mismatched IDs show clear not found; hidden offers and profiles cannot be opened', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 139,
+        "line": 143,
         "text": "test('partial profile and missing verification remain unknown; unknown and stale prices are explicit', async ({ page }) => {"
       }
     ],
@@ -6931,7 +6968,7 @@
         "id": "EXP-04-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены. Полный адрес/venue модель в CORE отсутствуют: в schema только districtId; pilot address отдельный.",
+    "remaining_work": "HUMAN_QA_PENDING: parent comprehension, native KK, real assistive technology/device/browser zoom; LIVE_BLOCKED. Postal address unavailable in CORE schema; explicitly unknown, no invented venue.",
     "required_tests": {
       "phase_ref": "EXP-04",
       "field": "required_tests"
@@ -6942,14 +6979,28 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/evidence/EXP-04.json",
+    "last_verified_sha": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 307
     },
     "research_line": 416,
-    "registry_line": 67
+    "registry_line": 67,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts"
+      ],
+      "cases": [
+        "P04-T14",
+        "P04-T36"
+      ],
+      "evidence": "docs/expansion/evidence/EXP-04.json"
+    }
   },
   {
     "id": "F066",
@@ -6971,14 +7022,6 @@
     "code_refs": [
       {
         "path": "src/features/profile/TrustPassport.tsx",
-        "line": 36
-      },
-      {
-        "path": "src/features/profile/OfferProfile.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/features/search/SelectionViews.tsx",
         "line": 1
       }
     ],
@@ -6990,12 +7033,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 20,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 42,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -7035,7 +7078,7 @@
         "id": "EXP-04-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "HUMAN_QA_PENDING: parent comprehension, native KK, real assistive technology/device/browser zoom; LIVE_BLOCKED. Postal address unavailable in CORE schema; explicitly unknown, no invented venue.",
     "required_tests": {
       "phase_ref": "EXP-04",
       "field": "required_tests"
@@ -7046,14 +7089,31 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/evidence/EXP-04.json",
+    "last_verified_sha": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 308
     },
     "research_line": 417,
-    "registry_line": 68
+    "registry_line": 68,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts",
+        "tests/exp04.test.ts"
+      ],
+      "cases": [
+        "P04-T18",
+        "P04-T19",
+        "P04-T25",
+        "P04-T26"
+      ],
+      "evidence": "docs/expansion/evidence/EXP-04.json"
+    }
   },
   {
     "id": "F067",
@@ -7075,14 +7135,6 @@
     "code_refs": [
       {
         "path": "src/domain/profile.ts",
-        "line": 16
-      },
-      {
-        "path": "src/features/profile/OfferProfile.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/features/profile/TrustPassport.tsx",
         "line": 1
       }
     ],
@@ -7094,12 +7146,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 20,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 42,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -7139,7 +7191,7 @@
         "id": "EXP-04-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "HUMAN_QA_PENDING: parent comprehension, native KK, real assistive technology/device/browser zoom; LIVE_BLOCKED. Postal address unavailable in CORE schema; explicitly unknown, no invented venue.",
     "required_tests": {
       "phase_ref": "EXP-04",
       "field": "required_tests"
@@ -7150,14 +7202,33 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/evidence/EXP-04.json",
+    "last_verified_sha": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 309
     },
     "research_line": 418,
-    "registry_line": 69
+    "registry_line": 69,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts",
+        "tests/exp04.test.ts"
+      ],
+      "cases": [
+        "P04-T19",
+        "P04-T20",
+        "P04-T21",
+        "P04-T22",
+        "P04-T23",
+        "P04-T24"
+      ],
+      "evidence": "docs/expansion/evidence/EXP-04.json"
+    }
   },
   {
     "id": "F068",
@@ -7179,14 +7250,10 @@
     "code_refs": [
       {
         "path": "src/features/profile/TrustPassport.tsx",
-        "line": 17
-      },
-      {
-        "path": "src/features/profile/OfferProfile.tsx",
         "line": 1
       },
       {
-        "path": "src/features/search/SelectionViews.tsx",
+        "path": "src/domain/SearchService.ts",
         "line": 1
       }
     ],
@@ -7198,12 +7265,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 20,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 42,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -7243,7 +7310,7 @@
         "id": "EXP-04-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "HUMAN_QA_PENDING: parent comprehension, native KK, real assistive technology/device/browser zoom; LIVE_BLOCKED. Postal address unavailable in CORE schema; explicitly unknown, no invented venue.",
     "required_tests": {
       "phase_ref": "EXP-04",
       "field": "required_tests"
@@ -7254,14 +7321,31 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/evidence/EXP-04.json",
+    "last_verified_sha": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 310
     },
     "research_line": 419,
-    "registry_line": 70
+    "registry_line": 70,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts",
+        "tests/exp04.test.ts"
+      ],
+      "cases": [
+        "P04-T18",
+        "P04-T24",
+        "P04-T26",
+        "P04-T43"
+      ],
+      "evidence": "docs/expansion/evidence/EXP-04.json"
+    }
   },
   {
     "id": "F069",
@@ -7282,15 +7366,15 @@
     "route": "/specialists/:specialistId; /compare",
     "code_refs": [
       {
-        "path": "src/features/profile/TrustPassport.tsx",
-        "line": 18
-      },
-      {
-        "path": "src/features/profile/OfferProfile.tsx",
+        "path": "src/domain/profile.ts",
         "line": 1
       },
       {
-        "path": "src/features/search/SelectionViews.tsx",
+        "path": "src/domain/freshness.ts",
+        "line": 1
+      },
+      {
+        "path": "src/i18n/date.ts",
         "line": 1
       }
     ],
@@ -7302,12 +7386,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 20,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 42,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -7347,7 +7431,7 @@
         "id": "EXP-04-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "HUMAN_QA_PENDING: parent comprehension, native KK, real assistive technology/device/browser zoom; LIVE_BLOCKED. Postal address unavailable in CORE schema; explicitly unknown, no invented venue.",
     "required_tests": {
       "phase_ref": "EXP-04",
       "field": "required_tests"
@@ -7358,14 +7442,30 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/evidence/EXP-04.json",
+    "last_verified_sha": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 311
     },
     "research_line": 420,
-    "registry_line": 71
+    "registry_line": 71,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts",
+        "tests/exp04.test.ts"
+      ],
+      "cases": [
+        "P04-T17",
+        "P04-T21",
+        "P04-T22"
+      ],
+      "evidence": "docs/expansion/evidence/EXP-04.json"
+    }
   },
   {
     "id": "F070",
@@ -7386,15 +7486,11 @@
     "route": "/specialists/:specialistId; /compare",
     "code_refs": [
       {
-        "path": "src/features/profile/TrustPassport.tsx",
-        "line": 54
-      },
-      {
-        "path": "src/features/profile/OfferProfile.tsx",
+        "path": "src/features/search/OfferCard.tsx",
         "line": 1
       },
       {
-        "path": "src/features/search/SelectionViews.tsx",
+        "path": "src/features/profile/TrustPassport.tsx",
         "line": 1
       }
     ],
@@ -7406,12 +7502,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 20,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 42,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -7451,7 +7547,7 @@
         "id": "EXP-04-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "HUMAN_QA_PENDING: parent comprehension, native KK, real assistive technology/device/browser zoom; LIVE_BLOCKED. Postal address unavailable in CORE schema; explicitly unknown, no invented venue.",
     "required_tests": {
       "phase_ref": "EXP-04",
       "field": "required_tests"
@@ -7462,14 +7558,31 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/evidence/EXP-04.json",
+    "last_verified_sha": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 312
     },
     "research_line": 421,
-    "registry_line": 72
+    "registry_line": 72,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts",
+        "tests/exp04.test.ts"
+      ],
+      "cases": [
+        "P04-T10",
+        "P04-T12",
+        "P04-T15",
+        "P04-T24"
+      ],
+      "evidence": "docs/expansion/evidence/EXP-04.json"
+    }
   },
   {
     "id": "F071",
@@ -7490,14 +7603,6 @@
     "route": "/specialists/:specialistId; /compare",
     "code_refs": [
       {
-        "path": "src/features/profile/OfferProfile.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/features/profile/TrustPassport.tsx",
-        "line": 1
-      },
-      {
         "path": "src/features/search/SelectionViews.tsx",
         "line": 1
       }
@@ -7510,12 +7615,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 20,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 42,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -7555,7 +7660,7 @@
         "id": "EXP-04-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "HUMAN_QA_PENDING: parent comprehension, native KK, real assistive technology/device/browser zoom; LIVE_BLOCKED. Postal address unavailable in CORE schema; explicitly unknown, no invented venue.",
     "required_tests": {
       "phase_ref": "EXP-04",
       "field": "required_tests"
@@ -7566,14 +7671,30 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/evidence/EXP-04.json",
+    "last_verified_sha": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 313
     },
     "research_line": 422,
-    "registry_line": 73
+    "registry_line": 73,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04-state.spec.ts",
+        "tests/e2e/exp04.spec.ts"
+      ],
+      "cases": [
+        "P04-T28",
+        "P04-T32",
+        "P04-T33",
+        "P04-T34"
+      ],
+      "evidence": "docs/expansion/evidence/EXP-04.json"
+    }
   },
   {
     "id": "F072",
@@ -7594,15 +7715,11 @@
     "route": "/specialists/:specialistId; /compare",
     "code_refs": [
       {
-        "path": "src/features/profile/OfferProfile.tsx",
+        "path": "src/app/AppState.tsx",
         "line": 1
       },
       {
-        "path": "src/features/profile/TrustPassport.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/features/search/SelectionViews.tsx",
+        "path": "src/features/search/CompareTray.tsx",
         "line": 1
       }
     ],
@@ -7614,12 +7731,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 20,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 42,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -7659,7 +7776,7 @@
         "id": "EXP-04-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "HUMAN_QA_PENDING: parent comprehension, native KK, real assistive technology/device/browser zoom; LIVE_BLOCKED. Postal address unavailable in CORE schema; explicitly unknown, no invented venue.",
     "required_tests": {
       "phase_ref": "EXP-04",
       "field": "required_tests"
@@ -7670,14 +7787,31 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/evidence/EXP-04.json",
+    "last_verified_sha": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 314
     },
     "research_line": 423,
-    "registry_line": 74
+    "registry_line": 74,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04-state.spec.ts",
+        "tests/e2e/exp04.spec.ts"
+      ],
+      "cases": [
+        "P04-T28",
+        "P04-T29",
+        "P04-T30",
+        "P04-T32",
+        "P04-T33"
+      ],
+      "evidence": "docs/expansion/evidence/EXP-04.json"
+    }
   },
   {
     "id": "F073",
@@ -7698,11 +7832,7 @@
     "route": "/specialists/:specialistId; /compare",
     "code_refs": [
       {
-        "path": "src/features/profile/OfferProfile.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/features/profile/TrustPassport.tsx",
+        "path": "src/app/AppState.tsx",
         "line": 1
       },
       {
@@ -7718,12 +7848,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 20,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 42,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -7763,7 +7893,7 @@
         "id": "EXP-04-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "HUMAN_QA_PENDING: parent comprehension, native KK, real assistive technology/device/browser zoom; LIVE_BLOCKED. Postal address unavailable in CORE schema; explicitly unknown, no invented venue.",
     "required_tests": {
       "phase_ref": "EXP-04",
       "field": "required_tests"
@@ -7774,14 +7904,30 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/evidence/EXP-04.json",
+    "last_verified_sha": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 315
     },
     "research_line": 424,
-    "registry_line": 75
+    "registry_line": 75,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04-state.spec.ts",
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts"
+      ],
+      "cases": [
+        "P04-T31",
+        "P04-T34",
+        "P04-T38"
+      ],
+      "evidence": "docs/expansion/evidence/EXP-04.json"
+    }
   },
   {
     "id": "F074",
@@ -7802,15 +7948,11 @@
     "route": "/specialists/:specialistId; /compare",
     "code_refs": [
       {
-        "path": "src/features/profile/OfferProfile.tsx",
-        "line": 1
-      },
-      {
-        "path": "src/features/profile/TrustPassport.tsx",
-        "line": 1
-      },
-      {
         "path": "src/features/search/SelectionViews.tsx",
+        "line": 1
+      },
+      {
+        "path": "src/features/search/OfferCard.tsx",
         "line": 1
       }
     ],
@@ -7822,12 +7964,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 20,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 42,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],
@@ -7867,7 +8009,7 @@
         "id": "EXP-04-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "HUMAN_QA_PENDING: parent comprehension, native KK, real assistive technology/device/browser zoom; LIVE_BLOCKED. Postal address unavailable in CORE schema; explicitly unknown, no invented venue.",
     "required_tests": {
       "phase_ref": "EXP-04",
       "field": "required_tests"
@@ -7878,14 +8020,33 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/evidence/EXP-04.json",
+    "last_verified_sha": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 316
     },
     "research_line": 425,
-    "registry_line": 76
+    "registry_line": 76,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts",
+        "tests/exp04.test.ts"
+      ],
+      "cases": [
+        "P04-T11",
+        "P04-T13",
+        "P04-T16",
+        "P04-T18",
+        "P04-T25",
+        "P04-T36"
+      ],
+      "evidence": "docs/expansion/evidence/EXP-04.json"
+    }
   },
   {
     "id": "F075",
@@ -7907,21 +8068,17 @@
     "code_refs": [
       {
         "path": "src/styles.css",
-        "line": 166
-      },
-      {
-        "path": "src/features/profile/OfferProfile.tsx",
         "line": 1
       },
       {
-        "path": "src/features/profile/TrustPassport.tsx",
+        "path": "src/features/search/SelectionViews.tsx",
         "line": 1
       }
     ],
     "existing_tests": [
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 207,
+        "line": 211,
         "text": "test('changing RU/KK inside a profile preserves offer, comparison and request target', async ({ page }) => {"
       },
       {
@@ -7971,7 +8128,7 @@
         "id": "EXP-04-AC-04"
       }
     ],
-    "remaining_work": "Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.",
+    "remaining_work": "HUMAN_QA_PENDING: parent comprehension, native KK, real assistive technology/device/browser zoom; LIVE_BLOCKED. Postal address unavailable in CORE schema; explicitly unknown, no invented venue.",
     "required_tests": {
       "phase_ref": "EXP-04",
       "field": "required_tests"
@@ -7982,14 +8139,31 @@
     },
     "release_permission": "SYNTHETIC_ONLY; LIVE_BLOCKED",
     "feature_flag": "DEMO_ONLY",
-    "evidence": "docs/AI_CONTEXT/VALIDATION.md",
-    "last_verified_sha": "7f8434a4cfd097b531fa584f5b97ebd1e772ad92",
+    "evidence": "docs/expansion/evidence/EXP-04.json",
+    "last_verified_sha": "2711bee46cb37aac64f98dafa14103e2dbe545b4",
     "source": {
       "path": "docs/AI_CONTEXT/sources/01_MASTER_IMPLEMENTATION_PROMPT.md",
       "line": 317
     },
     "research_line": 426,
-    "registry_line": 77
+    "registry_line": 77,
+    "execution_state": "VERIFIED_DONE",
+    "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+    "technical_verification": {
+      "status": "PASS",
+      "tests": [
+        "tests/e2e/exp04.spec.ts",
+        "tests/e2e/profile.spec.ts"
+      ],
+      "cases": [
+        "P04-T27",
+        "P04-T37",
+        "P04-T38",
+        "P04-T39",
+        "P04-T41"
+      ],
+      "evidence": "docs/expansion/evidence/EXP-04.json"
+    }
   },
   {
     "id": "F076",
@@ -15134,12 +15308,12 @@
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 16,
+        "line": 20,
         "text": "test('profile without offer selects a stable public service; changing it updates all facts and URL', async ({ page }) => {"
       },
       {
         "path": "tests/e2e/profile.spec.ts",
-        "line": 38,
+        "line": 42,
         "text": "test('switching to an incompatible offer removes old reasons and preserves the exact request/compare selection', async ({ page }) => {"
       }
     ],

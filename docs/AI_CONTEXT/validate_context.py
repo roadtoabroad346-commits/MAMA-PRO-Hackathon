@@ -18,6 +18,8 @@ def git(*args):return subprocess.check_output(['git',*args],cwd=R,text=True).str
 features=read('FEATURE_REGISTRY.json');phases=read('PHASE_REGISTRY.json');summary=read('GENERATION_SUMMARY.json');pm={p['id']:p for p in phases}
 exp03_path=R/'docs/expansion/evidence/EXP-03.json'
 exp03=json.loads(exp03_path.read_text()) if exp03_path.exists() else None
+exp04_path=R/'docs/expansion/evidence/EXP-04.json'
+exp04=json.loads(exp04_path.read_text()) if exp04_path.exists() else None
 expected=[f'F{i:03}' for i in range(231)];check([f['id'] for f in features]==expected,'Feature set/order must be exactly F000–F230')
 check([p['id'] for p in phases]==[f'EXP-{i:02}' for i in range(25)],'Phase set/order must be exactly EXP-00–24')
 canonical=[]
@@ -68,12 +70,13 @@ for feature_index,f in enumerate(features):
  check(f['status'] in allowed,f"{f['id']}: bad status")
  check(f['id'] in pm[f['phase']]['feature_ids'],f"{f['id']}: phase assignment mismatch")
  check(f['release_permission']=='SYNTHETIC_ONLY; LIVE_BLOCKED',f"{f['id']}: release boundary changed")
- allowed_shas=[None,summary['baseline_sha']]+([exp03['sourceSha']] if exp03 and f['phase']=='EXP-03' else [])
+ phase_evidence=exp03 if f['phase']=='EXP-03' else exp04 if f['phase']=='EXP-04' and exp04 and exp04.get('sourceSha') else None
+ allowed_shas=[None,summary['baseline_sha']]+([phase_evidence['sourceSha']] if phase_evidence else [])
  check(f['last_verified_sha'] in allowed_shas,f"{f['id']}: unknown evidence SHA")
  if f.get('execution_state')=='VERIFIED_DONE':
-  check(bool(exp03) and f['id'] in exp03['features'],f"{f['id']}: completion without EXP evidence")
+  check(bool(phase_evidence) and f['id'] in phase_evidence['features'],f"{f['id']}: completion without EXP evidence")
   check(f.get('verification_scope')=='AUTOMATED_SYNTHETIC_DEMO',f"{f['id']}: completion scope missing")
-  check(f['last_verified_sha']==exp03['sourceSha'],f"{f['id']}: completion SHA mismatch")
+  check(bool(phase_evidence) and f['last_verified_sha']==phase_evidence['sourceSha'],f"{f['id']}: completion SHA mismatch")
   for test in f['technical_verification']['tests']:check((R/test).is_file(),f"{f['id']}: missing technical proof file {test}")
  if f['status'] in {'VERIFIED_IMPLEMENTED','IMPLEMENTED_WITH_LIMITATIONS','PILOT_TEST_ONLY','PARTIALLY_IMPLEMENTED'}:check(bool(f['code_refs']),f"{f['id']}: implemented status without code/foundation evidence")
  if f['status']=='PLANNED':check(not f['code_refs'],f"{f['id']}: planned path mislabelled as code")
@@ -105,7 +108,11 @@ check(len(inventory)==335,'Expected 335 baseline records')
 check({x['path'] for x in inventory}==set(git('ls-tree','-r','--name-only',summary['baseline_sha']).splitlines()),'Inventory differs from baseline Git tree')
 change_path=R/'docs/expansion/evidence/EXP-03-verified-changes.json'
 change_manifest=json.loads(change_path.read_text()) if change_path.exists() else {}
-changes=change_manifest.get('changes',[])
+exp04_manifest_path=R/'docs/expansion/evidence/EXP-04-verified-changes.json'
+exp04_manifest=json.loads(exp04_manifest_path.read_text()) if exp04_manifest_path.exists() else {}
+changes_by_path={x['path']:x for x in change_manifest.get('changes',[])}
+changes_by_path.update({x['path']:x for x in exp04_manifest.get('changes',[])})
+changes=list(changes_by_path.values())
 changed={x['path']:x for x in changes}
 check(len(changed)==len(changes),'Duplicate reviewed change path')
 check(set(changed)<=set(x['path'] for x in inventory),'Reviewed changes must refer to baseline files')
@@ -124,7 +131,8 @@ if exp03:
  for path,expected_hash in change_manifest.get('verifiedSourceFiles',{}).items():
   original=subprocess.check_output(['git','show',source_sha+':'+path],cwd=R)
   check(hashlib.sha256(original).hexdigest()==expected_hash,'Verified Git source mismatch: '+path)
-  check(hashlib.sha256((R/path).read_bytes()).hexdigest()==expected_hash,'Current source differs from tested tree: '+path)
+  current_expected=exp04_manifest.get('successorFiles',{}).get(path,next((x['currentSha256'] for x in exp04_manifest.get('changes',[]) if x['path']==path),expected_hash))
+  check(hashlib.sha256((R/path).read_bytes()).hexdigest()==current_expected,'Current source has no reviewed tested successor: '+path)
  for path,record in exp03['evidenceFiles'].items():
   check(hashlib.sha256((R/path).read_bytes()).hexdigest()==record['sha256'],'EXP-03 evidence changed: '+path)
  check(set(exp03['features'])==set(f'F{i:03}' for i in range(37,61)),'EXP-03 must prove exactly F037–F060')
@@ -133,6 +141,25 @@ if exp03:
  for name,key in [('C-check','unit_integration'),('C-dev','dev'),('D-dist','dist'),('D-pilot','pilot'),('D-offline','offline')]:
   log=(R/f'docs/expansion/evidence/EXP-03-{name}.log').read_text()
   check(bool(re.search(r'\b'+str(exp03['tests'][key])+r' passed',log)),'EXP-03 executed log total mismatch: '+name)
+if exp04 and exp04.get('sourceSha'):
+ source_sha=exp04['sourceSha']
+ check(subprocess.run(['git','merge-base','--is-ancestor',source_sha,'HEAD'],cwd=R).returncode==0,'EXP04 source is not in ancestry')
+ check(exp04_manifest.get('verifiedSourceSha')==source_sha,'EXP04 source manifest SHA mismatch')
+ for path,expected_hash in exp04_manifest.get('successorFiles',{}).items():
+  original=subprocess.check_output(['git','show',source_sha+':'+path],cwd=R)
+  check(hashlib.sha256(original).hexdigest()==expected_hash,'EXP04 Git source mismatch: '+path)
+  check(hashlib.sha256((R/path).read_bytes()).hexdigest()==expected_hash,'EXP04 current source differs: '+path)
+ for path,record in exp04.get('evidenceFiles',{}).items():check(hashlib.sha256((R/path).read_bytes()).hexdigest()==record['sha256'],'EXP04 evidence hash mismatch: '+path)
+ check(set(exp04['features'])==set(f'F{i:03}' for i in range(61,76)),'EXP04 feature coverage must be exactly F061–F075')
+ check(exp04['live']=='LIVE_BLOCKED' and exp04['verification_scope']=='AUTOMATED_SYNTHETIC_DEMO','EXP04 release boundary changed')
+ if exp04['status']=='VERIFIED_DONE':
+  check(set(exp04['acceptance'])=={f'EXP-04-AC-{i:02}' for i in range(1,5)},'EXP04 must adjudicate all4 AC')
+  check(set(exp04['testCases'])=={f'P04-T{i:02}' for i in range(1,49)} and all(x['status']=='PASS' for x in exp04['testCases'].values()),'EXP04 must map all48 required case categories')
+  check(all(x['status']=='PASS' for x in exp04['acceptance'].values()),'EXP04 acceptance incomplete')
+  check(exp04['tests']['total_final_executions']==sum(exp04['tests'][k] for k in ['unit_integration','dev','dist','pilot','offline']),'EXP04 test total mismatch')
+  for name,key in [('C-check','unit_integration'),('C-dev','dev'),('D-dist','dist'),('D-pilot','pilot'),('D-offline','offline')]:
+   log=(R/f'docs/expansion/evidence/EXP-04-{name}.log').read_text()
+   check(bool(re.search(r'\b'+str(exp04['tests'][key])+r' passed',log)),'EXP04 executed total mismatch: '+name)
 for record in summary['source_snapshots']:
  check(hashlib.sha256((R/record['path']).read_bytes()).hexdigest()==record['sha256'],'Uploaded source snapshot changed: '+record['path'])
 # New narrative documents only: archived original prompts have historical/example links.

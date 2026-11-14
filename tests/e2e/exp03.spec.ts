@@ -130,6 +130,7 @@ for (const locale of ['ru', 'kk'] as const) {
     await expect(page.getByTestId('specialist-card')).toHaveCount(ids.length);
     await page.reload();
     expect(await applied(page)).toEqual(input);
+    await expect(page.getByTestId('specialist-card')).toHaveCount(ids.length);
     expect(await page.getByTestId('specialist-card').evaluateAll(nodes => nodes.map(n => n.getAttribute('data-offer-id')))).toEqual(ids);
   });
 

@@ -216,6 +216,8 @@ DEMO: offer-level matching и каталог — **VERIFIED_DONE (AUTOMATED_SYNT
 
 ## EXP-04
 
+Current execution: VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO) on `2711bee46cb37aac64f98dafa14103e2dbe545b4`. All4 AC PASS;237 unit/121 dev/83 dist/5 pilot/2 offline=448 executions. HUMAN_QA_PENDING; LIVE_BLOCKED. [Evidence](../expansion/stages/EXP-04.md). Older requirements below remain historical source text.
+
 DEMO: профиль, паспорт доверия, сравнение — **EXISTING_DEMO_WITH_LIMITATIONS**. Охват: F061, F062, F063, F064, F065, F066, F067, F068, F069, F070, F071, F072, F073, F074, F075.
 
 **Цель:** Родитель видит условия конкретной услуги, источники фактов и сравнивает до трёх вариантов.

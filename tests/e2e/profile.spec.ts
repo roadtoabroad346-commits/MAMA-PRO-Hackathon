@@ -2,6 +2,9 @@ import { expect, test, type Page } from '@playwright/test';
 import raw from '../../src/data/catalog.json' with { type: 'json' };
 import { emptySearchInput, type SearchInput } from '../../src/domain/contracts';
 
+// Playwright routing cannot intercept a response already served by the SW.
+test.use({ serviceWorkers: 'block' });
+
 async function seed(page: Page, input: SearchInput = emptySearchInput(), locale: 'ru' | 'kk' = 'ru') {
   await page.addInitScript(({ input, locale }) => {
     sessionStorage.setItem('qoldau.demo-search', JSON.stringify({ schemaVersion: 1, catalogVersion: 'catalog-v2', expiresAt: Date.now() + 7200000, input, step: 1 }));
@@ -9,7 +12,8 @@ async function seed(page: Page, input: SearchInput = emptySearchInput(), locale:
   }, { input, locale });
 }
 async function fixture(page: Page, data: unknown) {
-  await page.route('**/src/data/catalog.json', route => route.fulfill({ json: data }));
+  await page.route(/\/(?:src\/data\/catalog\.json|assets\/catalog-[^/]+\.json)(?:\?.*)?$/, route =>
+    route.request().resourceType() === 'fetch' ? route.fulfill({ json: data }) : route.continue());
 }
 const selected = (page: Page) => page.getByTestId('selected-offer');
 

@@ -1,0 +1,88 @@
+
+> qoldau-zhol@0.6.0 test:e2e
+> playwright test tests/e2e/exp04.spec.ts tests/e2e/profile.spec.ts --workers=2
+
+[WebServer] (node:2401) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 27 tests using 2 workers
+(node:2426) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:2427) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+······F(node:3070) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+··F(node:3303) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+···F(node:3588) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+·············
+
+  1) tests/e2e/exp04.spec.ts:202:3 › P04-T27/37/38/41 ru: three aligned desktop alternatives, mobile stack, long text200 and keyboard
+
+    Error: expect(received).toBeLessThan(expected)
+
+    Expected: < 2
+    Received:   2
+
+      210 |       fields: [...x.querySelectorAll('.offer-facts > div')].map(f => ({ label: f.querySelector('dt')!.textContent, y: f.getBoundingClientRect().y })) })));
+      211 |     expect(new Set(geometry.map(x => x.x)).size).toBe(3);
+    > 212 |     expect(Math.max(...geometry.map(x => x.y)) - Math.min(...geometry.map(x => x.y))).toBeLessThan(2);
+          |                                                                                       ^
+      213 |     for (let i = 0; i < 7; i++) {
+      214 |       expect(new Set(geometry.map(x => x.fields[i].label)).size).toBe(1);
+      215 |       expect(Math.max(...geometry.map(x => x.fields[i].y)) - Math.min(...geometry.map(x => x.fields[i].y))).toBeLessThan(2);
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/exp04.spec.ts:212:87
+
+    Error Context: test-results/exp04-P04-T27-37-38-41-ru--63e36-k-long-text200-and-keyboard/error-context.md
+
+  2) tests/e2e/exp04.spec.ts:37:3 › P04-T02/08/25/32/33/44 kk: contradictory sibling switches every fact and action, never pinned evidence
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: getByTestId('selected-offer').locator('.price')
+    Expected pattern: /9\s?500 ₸ · 60/u
+    Received string:  "9,500 ₸ · 60 мин"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveText" getByTestId('selected-offer').locator('.price') with timeout 5000ms
+      - waiting for getByTestId('selected-offer').locator('.price')
+        14 × locator resolved to <p class="price">9,500 ₸ · 60 мин</p>
+           - unexpected value "9,500 ₸ · 60 мин"
+
+
+      58 |     await expect(page.locator('input[value="O24"]')).toBeFocused();
+      59 |     await expect(selected(page)).toHaveAttribute('data-offer-id', 'O24');
+    > 60 |     await expect(selected(page).locator('.price')).toHaveText(/9\s?500 ₸ · 60/u);
+         |                                                    ^
+      61 |     await expect(selected(page)).toContainText(t.consultation);
+      62 |     await expect(selected(page)).not.toContainText(t.group_session);
+      63 |     await expect(selected(page)).toContainText(t.onlineAddressNA);
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/exp04.spec.ts:60:52
+
+    Error Context: test-results/exp04-P04-T02-08-25-32-33--2132c-ction-never-pinned-evidence/error-context.md
+
+  3) tests/e2e/exp04.spec.ts:202:3 › P04-T27/37/38/41 kk: three aligned desktop alternatives, mobile stack, long text200 and keyboard
+
+    Error: expect(received).toBeLessThan(expected)
+
+    Expected: < 2
+    Received:   2
+
+      210 |       fields: [...x.querySelectorAll('.offer-facts > div')].map(f => ({ label: f.querySelector('dt')!.textContent, y: f.getBoundingClientRect().y })) })));
+      211 |     expect(new Set(geometry.map(x => x.x)).size).toBe(3);
+    > 212 |     expect(Math.max(...geometry.map(x => x.y)) - Math.min(...geometry.map(x => x.y))).toBeLessThan(2);
+          |                                                                                       ^
+      213 |     for (let i = 0; i < 7; i++) {
+      214 |       expect(new Set(geometry.map(x => x.fields[i].label)).size).toBe(1);
+      215 |       expect(Math.max(...geometry.map(x => x.fields[i].y)) - Math.min(...geometry.map(x => x.fields[i].y))).toBeLessThan(2);
+        at /workspace/MAMA-PRO-Hackathon/tests/e2e/exp04.spec.ts:212:87
+
+    Error Context: test-results/exp04-P04-T27-37-38-41-kk--bd795-k-long-text200-and-keyboard/error-context.md
+
+  3 failed
+    tests/e2e/exp04.spec.ts:202:3 › P04-T27/37/38/41 ru: three aligned desktop alternatives, mobile stack, long text200 and keyboard
+    tests/e2e/exp04.spec.ts:37:3 › P04-T02/08/25/32/33/44 kk: contradictory sibling switches every fact and action, never pinned evidence
+    tests/e2e/exp04.spec.ts:202:3 › P04-T27/37/38/41 kk: three aligned desktop alternatives, mobile stack, long text200 and keyboard
+  24 passed (45.8s)

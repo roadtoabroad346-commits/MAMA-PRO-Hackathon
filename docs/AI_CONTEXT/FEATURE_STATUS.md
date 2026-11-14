@@ -1197,211 +1197,181 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 **Карточка специалиста** — IMPLEMENTED_WITH_LIMITATIONS.
 
-Требование / AC: Показать карточку специалиста с выбранным offer.
+Execution: VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO), source `2711bee46cb37aac64f98dafa14103e2dbe545b4`. ALREADY_VERIFIED.
 
-Код / foundations: [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/profile/TrustPassport.tsx:1](../../src/features/profile/TrustPassport.tsx#L1); [src/features/search/SelectionViews.tsx:1](../../src/features/search/SelectionViews.tsx#L1)
+Код: [src/features/profile/OfferProfile.tsx](../../src/features/profile/OfferProfile.tsx); [src/domain/profile.ts](../../src/domain/profile.ts)
 
-Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:16](../../tests/e2e/profile.spec.ts#L16); [tests/e2e/profile.spec.ts:38](../../tests/e2e/profile.spec.ts#L38)
+Тесты: [tests/e2e/exp04.spec.ts](../../tests/e2e/exp04.spec.ts); [tests/e2e/profile.spec.ts](../../tests/e2e/profile.spec.ts); [tests/exp04.test.ts](../../tests/exp04.test.ts); [tests/profile.test.ts](../../tests/profile.test.ts); P04-T01, P04-T03, P04-T04, P04-T05, P04-T06, P04-T10.
 
-Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
-
-Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-04](PHASE_PROGRESS.md#exp-04). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+[Per-feature evidence / AC / limits](../expansion/stages/EXP-04.md). HUMAN_QA_PENDING; LIVE_BLOCKED.
 
 ## F062
 
 **Несколько услуг одного специалиста** — IMPLEMENTED_WITH_LIMITATIONS.
 
-Требование / AC: Позволить переключение услуг только владельца профиля.
+Execution: VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO), source `2711bee46cb37aac64f98dafa14103e2dbe545b4`. FIXED_AND_VERIFIED.
 
-Код / foundations: [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/profile/TrustPassport.tsx:1](../../src/features/profile/TrustPassport.tsx#L1); [src/features/search/SelectionViews.tsx:1](../../src/features/search/SelectionViews.tsx#L1)
+Код: [src/features/profile/OfferProfile.tsx](../../src/features/profile/OfferProfile.tsx)
 
-Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:16](../../tests/e2e/profile.spec.ts#L16); [tests/e2e/profile.spec.ts:38](../../tests/e2e/profile.spec.ts#L38)
+Тесты: [tests/e2e/exp04.spec.ts](../../tests/e2e/exp04.spec.ts); [tests/e2e/profile.spec.ts](../../tests/e2e/profile.spec.ts); P04-T02, P04-T08, P04-T32, P04-T44.
 
-Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
-
-Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-04](PHASE_PROGRESS.md#exp-04). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+[Per-feature evidence / AC / limits](../expansion/stages/EXP-04.md). HUMAN_QA_PENDING; LIVE_BLOCKED.
 
 ## F063
 
 **Подробные условия услуги** — IMPLEMENTED_WITH_LIMITATIONS.
 
-Требование / AC: Показать подробные условия выбранной услуги.
+Execution: VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO), source `2711bee46cb37aac64f98dafa14103e2dbe545b4`. FIXED_AND_VERIFIED.
 
-Код / foundations: [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/profile/TrustPassport.tsx:1](../../src/features/profile/TrustPassport.tsx#L1); [src/features/search/SelectionViews.tsx:1](../../src/features/search/SelectionViews.tsx#L1)
+Код: [src/features/search/OfferCard.tsx](../../src/features/search/OfferCard.tsx)
 
-Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:16](../../tests/e2e/profile.spec.ts#L16); [tests/e2e/profile.spec.ts:38](../../tests/e2e/profile.spec.ts#L38)
+Тесты: [tests/e2e/exp04.spec.ts](../../tests/e2e/exp04.spec.ts); [tests/e2e/profile.spec.ts](../../tests/e2e/profile.spec.ts); [tests/exp04.test.ts](../../tests/exp04.test.ts); P04-T02, P04-T14, P04-T15, P04-T16.
 
-Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
-
-Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-04](PHASE_PROGRESS.md#exp-04). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+[Per-feature evidence / AC / limits](../expansion/stages/EXP-04.md). HUMAN_QA_PENDING; LIVE_BLOCKED.
 
 ## F064
 
 **Цена и продолжительность** — IMPLEMENTED_WITH_LIMITATIONS.
 
-Требование / AC: Показать price kind, единицу и длительность, unknown отдельно.
+Execution: VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO), source `2711bee46cb37aac64f98dafa14103e2dbe545b4`. FIXED_AND_VERIFIED.
 
-Код / foundations: [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/profile/TrustPassport.tsx:1](../../src/features/profile/TrustPassport.tsx#L1); [src/features/search/SelectionViews.tsx:1](../../src/features/search/SelectionViews.tsx#L1)
+Код: [src/features/search/OfferCard.tsx](../../src/features/search/OfferCard.tsx); [src/i18n/price.ts](../../src/i18n/price.ts)
 
-Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:16](../../tests/e2e/profile.spec.ts#L16); [tests/e2e/profile.spec.ts:38](../../tests/e2e/profile.spec.ts#L38)
+Тесты: [tests/e2e/exp04.spec.ts](../../tests/e2e/exp04.spec.ts); [tests/exp04.test.ts](../../tests/exp04.test.ts); P04-T11, P04-T12, P04-T13, P04-T16.
 
-Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
-
-Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-04](PHASE_PROGRESS.md#exp-04). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+[Per-feature evidence / AC / limits](../expansion/stages/EXP-04.md). HUMAN_QA_PENDING; LIVE_BLOCKED.
 
 ## F065
 
 **Адрес и формат** — IMPLEMENTED_WITH_LIMITATIONS.
 
-Требование / AC: Показать формат и имеющиеся сведения о месте/районе без выдуманного адреса.
+Execution: VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO), source `2711bee46cb37aac64f98dafa14103e2dbe545b4`. FIXED_AND_VERIFIED.
 
-Код / foundations: [src/features/search/OfferCard.tsx:7](../../src/features/search/OfferCard.tsx#L7); [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/profile/TrustPassport.tsx:1](../../src/features/profile/TrustPassport.tsx#L1)
+Код: [src/features/search/OfferCard.tsx](../../src/features/search/OfferCard.tsx)
 
-Именованные проверки: [tests/e2e/profile.spec.ts:16](../../tests/e2e/profile.spec.ts#L16); [tests/e2e/profile.spec.ts:103](../../tests/e2e/profile.spec.ts#L103); [tests/e2e/profile.spec.ts:139](../../tests/e2e/profile.spec.ts#L139)
+Тесты: [tests/e2e/exp04.spec.ts](../../tests/e2e/exp04.spec.ts); [tests/e2e/profile.spec.ts](../../tests/e2e/profile.spec.ts); P04-T14, P04-T36.
 
-Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены. Полный адрес/venue модель в CORE отсутствуют: в schema только districtId; pilot address отдельный.
-
-Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-04](PHASE_PROGRESS.md#exp-04). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+[Per-feature evidence / AC / limits](../expansion/stages/EXP-04.md). HUMAN_QA_PENDING; LIVE_BLOCKED.
 
 ## F066
 
 **Паспорт доверия** — IMPLEMENTED_WITH_LIMITATIONS.
 
-Требование / AC: Показать Trust Passport по областям проверки.
+Execution: VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO), source `2711bee46cb37aac64f98dafa14103e2dbe545b4`. FIXED_AND_VERIFIED.
 
-Код / foundations: [src/features/profile/TrustPassport.tsx:36](../../src/features/profile/TrustPassport.tsx#L36); [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/search/SelectionViews.tsx:1](../../src/features/search/SelectionViews.tsx#L1)
+Код: [src/features/profile/TrustPassport.tsx](../../src/features/profile/TrustPassport.tsx)
 
-Именованные проверки: [tests/profile.test.ts:31](../../tests/profile.test.ts#L31); [tests/e2e/profile.spec.ts:16](../../tests/e2e/profile.spec.ts#L16); [tests/e2e/profile.spec.ts:38](../../tests/e2e/profile.spec.ts#L38)
+Тесты: [tests/e2e/exp04.spec.ts](../../tests/e2e/exp04.spec.ts); [tests/e2e/profile.spec.ts](../../tests/e2e/profile.spec.ts); [tests/exp04.test.ts](../../tests/exp04.test.ts); P04-T18, P04-T19, P04-T25, P04-T26.
 
-Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
-
-Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-04](PHASE_PROGRESS.md#exp-04). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+[Per-feature evidence / AC / limits](../expansion/stages/EXP-04.md). HUMAN_QA_PENDING; LIVE_BLOCKED.
 
 ## F067
 
 **Статус проверки** — IMPLEMENTED_WITH_LIMITATIONS.
 
-Требование / AC: Не расширять DOCUMENT_SEEN до гарантии подлинности.
+Execution: VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO), source `2711bee46cb37aac64f98dafa14103e2dbe545b4`. FIXED_AND_VERIFIED.
 
-Код / foundations: [src/domain/profile.ts:16](../../src/domain/profile.ts#L16); [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/profile/TrustPassport.tsx:1](../../src/features/profile/TrustPassport.tsx#L1)
+Код: [src/domain/profile.ts](../../src/domain/profile.ts)
 
-Именованные проверки: [tests/profile.test.ts:31](../../tests/profile.test.ts#L31); [tests/e2e/profile.spec.ts:16](../../tests/e2e/profile.spec.ts#L16); [tests/e2e/profile.spec.ts:38](../../tests/e2e/profile.spec.ts#L38)
+Тесты: [tests/e2e/exp04.spec.ts](../../tests/e2e/exp04.spec.ts); [tests/e2e/profile.spec.ts](../../tests/e2e/profile.spec.ts); [tests/exp04.test.ts](../../tests/exp04.test.ts); P04-T19, P04-T20, P04-T21, P04-T22, P04-T23, P04-T24.
 
-Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
-
-Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-04](PHASE_PROGRESS.md#exp-04). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+[Per-feature evidence / AC / limits](../expansion/stages/EXP-04.md). HUMAN_QA_PENDING; LIVE_BLOCKED.
 
 ## F068
 
 **Источник информации** — IMPLEMENTED_WITH_LIMITATIONS.
 
-Требование / AC: Показать источник каждой имеющейся проверки.
+Execution: VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO), source `2711bee46cb37aac64f98dafa14103e2dbe545b4`. FIXED_AND_VERIFIED.
 
-Код / foundations: [src/features/profile/TrustPassport.tsx:17](../../src/features/profile/TrustPassport.tsx#L17); [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/search/SelectionViews.tsx:1](../../src/features/search/SelectionViews.tsx#L1)
+Код: [src/features/profile/TrustPassport.tsx](../../src/features/profile/TrustPassport.tsx); [src/domain/SearchService.ts](../../src/domain/SearchService.ts)
 
-Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:16](../../tests/e2e/profile.spec.ts#L16); [tests/e2e/profile.spec.ts:38](../../tests/e2e/profile.spec.ts#L38)
+Тесты: [tests/e2e/exp04.spec.ts](../../tests/e2e/exp04.spec.ts); [tests/e2e/profile.spec.ts](../../tests/e2e/profile.spec.ts); [tests/exp04.test.ts](../../tests/exp04.test.ts); P04-T18, P04-T24, P04-T26, P04-T43.
 
-Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
-
-Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-04](PHASE_PROGRESS.md#exp-04). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+[Per-feature evidence / AC / limits](../expansion/stages/EXP-04.md). HUMAN_QA_PENDING; LIVE_BLOCKED.
 
 ## F069
 
 **Дата проверки** — IMPLEMENTED_WITH_LIMITATIONS.
 
-Требование / AC: Показать checkedAt/reviewDueAt в активной локали.
+Execution: VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO), source `2711bee46cb37aac64f98dafa14103e2dbe545b4`. FIXED_AND_VERIFIED.
 
-Код / foundations: [src/features/profile/TrustPassport.tsx:18](../../src/features/profile/TrustPassport.tsx#L18); [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/search/SelectionViews.tsx:1](../../src/features/search/SelectionViews.tsx#L1)
+Код: [src/domain/profile.ts](../../src/domain/profile.ts); [src/domain/freshness.ts](../../src/domain/freshness.ts); [src/i18n/date.ts](../../src/i18n/date.ts)
 
-Именованные проверки: [tests/profile.test.ts:38](../../tests/profile.test.ts#L38); [tests/e2e/profile.spec.ts:16](../../tests/e2e/profile.spec.ts#L16); [tests/e2e/profile.spec.ts:38](../../tests/e2e/profile.spec.ts#L38)
+Тесты: [tests/e2e/exp04.spec.ts](../../tests/e2e/exp04.spec.ts); [tests/e2e/profile.spec.ts](../../tests/e2e/profile.spec.ts); [tests/exp04.test.ts](../../tests/exp04.test.ts); P04-T17, P04-T21, P04-T22.
 
-Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
-
-Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-04](PHASE_PROGRESS.md#exp-04). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+[Per-feature evidence / AC / limits](../expansion/stages/EXP-04.md). HUMAN_QA_PENDING; LIVE_BLOCKED.
 
 ## F070
 
 **Неизвестные сведения** — IMPLEMENTED_WITH_LIMITATIONS.
 
-Требование / AC: Оставить неизвестные факты неизвестными.
+Execution: VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO), source `2711bee46cb37aac64f98dafa14103e2dbe545b4`. FIXED_AND_VERIFIED.
 
-Код / foundations: [src/features/profile/TrustPassport.tsx:54](../../src/features/profile/TrustPassport.tsx#L54); [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/search/SelectionViews.tsx:1](../../src/features/search/SelectionViews.tsx#L1)
+Код: [src/features/search/OfferCard.tsx](../../src/features/search/OfferCard.tsx); [src/features/profile/TrustPassport.tsx](../../src/features/profile/TrustPassport.tsx)
 
-Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:16](../../tests/e2e/profile.spec.ts#L16); [tests/e2e/profile.spec.ts:38](../../tests/e2e/profile.spec.ts#L38)
+Тесты: [tests/e2e/exp04.spec.ts](../../tests/e2e/exp04.spec.ts); [tests/e2e/profile.spec.ts](../../tests/e2e/profile.spec.ts); [tests/exp04.test.ts](../../tests/exp04.test.ts); P04-T10, P04-T12, P04-T15, P04-T24.
 
-Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
-
-Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-04](PHASE_PROGRESS.md#exp-04). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+[Per-feature evidence / AC / limits](../expansion/stages/EXP-04.md). HUMAN_QA_PENDING; LIVE_BLOCKED.
 
 ## F071
 
 **Сравнение специалистов** — IMPLEMENTED_WITH_LIMITATIONS.
 
-Требование / AC: Сравнить до трёх offer-specific вариантов.
+Execution: VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO), source `2711bee46cb37aac64f98dafa14103e2dbe545b4`. FIXED_AND_VERIFIED.
 
-Код / foundations: [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/profile/TrustPassport.tsx:1](../../src/features/profile/TrustPassport.tsx#L1); [src/features/search/SelectionViews.tsx:1](../../src/features/search/SelectionViews.tsx#L1)
+Код: [src/features/search/SelectionViews.tsx](../../src/features/search/SelectionViews.tsx)
 
-Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:16](../../tests/e2e/profile.spec.ts#L16); [tests/e2e/profile.spec.ts:38](../../tests/e2e/profile.spec.ts#L38)
+Тесты: [tests/e2e/exp04-state.spec.ts](../../tests/e2e/exp04-state.spec.ts); [tests/e2e/exp04.spec.ts](../../tests/e2e/exp04.spec.ts); P04-T28, P04-T32, P04-T33, P04-T34.
 
-Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
-
-Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-04](PHASE_PROGRESS.md#exp-04). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+[Per-feature evidence / AC / limits](../expansion/stages/EXP-04.md). HUMAN_QA_PENDING; LIVE_BLOCKED.
 
 ## F072
 
 **Добавление в сравнение** — IMPLEMENTED_WITH_LIMITATIONS.
 
-Требование / AC: Добавить выбранный offer в comparison tray.
+Execution: VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO), source `2711bee46cb37aac64f98dafa14103e2dbe545b4`. ALREADY_VERIFIED.
 
-Код / foundations: [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/profile/TrustPassport.tsx:1](../../src/features/profile/TrustPassport.tsx#L1); [src/features/search/SelectionViews.tsx:1](../../src/features/search/SelectionViews.tsx#L1)
+Код: [src/app/AppState.tsx](../../src/app/AppState.tsx); [src/features/search/CompareTray.tsx](../../src/features/search/CompareTray.tsx)
 
-Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:16](../../tests/e2e/profile.spec.ts#L16); [tests/e2e/profile.spec.ts:38](../../tests/e2e/profile.spec.ts#L38)
+Тесты: [tests/e2e/exp04-state.spec.ts](../../tests/e2e/exp04-state.spec.ts); [tests/e2e/exp04.spec.ts](../../tests/e2e/exp04.spec.ts); P04-T28, P04-T29, P04-T30, P04-T32, P04-T33.
 
-Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
-
-Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-04](PHASE_PROGRESS.md#exp-04). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+[Per-feature evidence / AC / limits](../expansion/stages/EXP-04.md). HUMAN_QA_PENDING; LIVE_BLOCKED.
 
 ## F073
 
 **Удаление из сравнения** — IMPLEMENTED_WITH_LIMITATIONS.
 
-Требование / AC: Удалить вариант и сохранить остальные условия.
+Execution: VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO), source `2711bee46cb37aac64f98dafa14103e2dbe545b4`. FIXED_AND_VERIFIED.
 
-Код / foundations: [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/profile/TrustPassport.tsx:1](../../src/features/profile/TrustPassport.tsx#L1); [src/features/search/SelectionViews.tsx:1](../../src/features/search/SelectionViews.tsx#L1)
+Код: [src/app/AppState.tsx](../../src/app/AppState.tsx); [src/features/search/SelectionViews.tsx](../../src/features/search/SelectionViews.tsx)
 
-Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:16](../../tests/e2e/profile.spec.ts#L16); [tests/e2e/profile.spec.ts:38](../../tests/e2e/profile.spec.ts#L38)
+Тесты: [tests/e2e/exp04-state.spec.ts](../../tests/e2e/exp04-state.spec.ts); [tests/e2e/exp04.spec.ts](../../tests/e2e/exp04.spec.ts); [tests/e2e/profile.spec.ts](../../tests/e2e/profile.spec.ts); P04-T31, P04-T34, P04-T38.
 
-Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
-
-Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-04](PHASE_PROGRESS.md#exp-04). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+[Per-feature evidence / AC / limits](../expansion/stages/EXP-04.md). HUMAN_QA_PENDING; LIVE_BLOCKED.
 
 ## F074
 
 **Сравнение условий** — IMPLEMENTED_WITH_LIMITATIONS.
 
-Требование / AC: Сопоставить цену/формат/язык/доверие на тех же данных.
+Execution: VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO), source `2711bee46cb37aac64f98dafa14103e2dbe545b4`. FIXED_AND_VERIFIED.
 
-Код / foundations: [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/profile/TrustPassport.tsx:1](../../src/features/profile/TrustPassport.tsx#L1); [src/features/search/SelectionViews.tsx:1](../../src/features/search/SelectionViews.tsx#L1)
+Код: [src/features/search/SelectionViews.tsx](../../src/features/search/SelectionViews.tsx); [src/features/search/OfferCard.tsx](../../src/features/search/OfferCard.tsx)
 
-Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:16](../../tests/e2e/profile.spec.ts#L16); [tests/e2e/profile.spec.ts:38](../../tests/e2e/profile.spec.ts#L38)
+Тесты: [tests/e2e/exp04.spec.ts](../../tests/e2e/exp04.spec.ts); [tests/e2e/profile.spec.ts](../../tests/e2e/profile.spec.ts); [tests/exp04.test.ts](../../tests/exp04.test.ts); P04-T11, P04-T13, P04-T16, P04-T18, P04-T25, P04-T36.
 
-Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
-
-Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-04](PHASE_PROGRESS.md#exp-04). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+[Per-feature evidence / AC / limits](../expansion/stages/EXP-04.md). HUMAN_QA_PENDING; LIVE_BLOCKED.
 
 ## F075
 
 **Side-by-side сравнение на компьютере** — IMPLEMENTED_WITH_LIMITATIONS.
 
-Требование / AC: Выровнять блоки desktop compare через subgrid с fallback.
+Execution: VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO), source `2711bee46cb37aac64f98dafa14103e2dbe545b4`. FIXED_AND_VERIFIED.
 
-Код / foundations: [src/styles.css:166](../../src/styles.css#L166); [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/profile/TrustPassport.tsx:1](../../src/features/profile/TrustPassport.tsx#L1)
+Код: [src/styles.css](../../src/styles.css); [src/features/search/SelectionViews.tsx](../../src/features/search/SelectionViews.tsx)
 
-Именованные проверки: [tests/e2e/profile.spec.ts:207](../../tests/e2e/profile.spec.ts#L207); [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/profile.test.ts:15](../../tests/profile.test.ts#L15)
+Тесты: [tests/e2e/exp04.spec.ts](../../tests/e2e/exp04.spec.ts); [tests/e2e/profile.spec.ts](../../tests/e2e/profile.spec.ts); P04-T27, P04-T37, P04-T38, P04-T39, P04-T41.
 
-Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
-
-Проблема, зависимости, безопасность, UX, общий контракт и четыре phase AC: [EXP-04](PHASE_PROGRESS.md#exp-04). Индивидуальный AC и точные поля — [реестр](FEATURE_REGISTRY.json).
+[Per-feature evidence / AC / limits](../expansion/stages/EXP-04.md). HUMAN_QA_PENDING; LIVE_BLOCKED.
 
 ## F076
 
@@ -2433,7 +2403,7 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Код / foundations: [src/features/search/SelectionViews.tsx:8](../../src/features/search/SelectionViews.tsx#L8)
 
-Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:16](../../tests/e2e/profile.spec.ts#L16); [tests/e2e/profile.spec.ts:38](../../tests/e2e/profile.spec.ts#L38)
+Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:20](../../tests/e2e/profile.spec.ts#L20); [tests/e2e/profile.spec.ts:42](../../tests/e2e/profile.spec.ts#L42)
 
 Осталось: Есть сравнение условий; отсутствует assistant explanation of differences.
 
