@@ -1,3 +1,5 @@
+> Current authorization: EXP-04 F061–F075, user request14 November2026. Branch `codex/exp-04-profile-trust-comparison`, base `7340dffa1b15e8452bf693f090f6c4085d46b158`. Audit [stage](../expansion/stages/EXP-04.md). LIVE_BLOCKED; HUMAN_QA_PENDING. Historical EXP-03 stop instructions below are superseded only for EXP-04. Next: B domain/trust regression.
+
 # EXP-03 closure / STOP before EXP-04
 
 **LIVE_BLOCKED; AUTOMATED_SYNTHETIC_DEMO only. EXP-03 F037–F060 execution_state VERIFIED_DONE.** Human comprehension/native KK/real AT/device gates remain BLOCKED_EXTERNAL/NOT_VERIFIED. No live, external send, real data, merge, force-push or deploy.

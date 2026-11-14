@@ -1,0 +1,15 @@
+{
+  "stage": "EXP-04",
+  "status": "IN_PROGRESS",
+  "baseSha": "7340dffa1b15e8452bf693f090f6c4085d46b158",
+  "branch": "codex/exp-04-profile-trust-comparison",
+  "live": "LIVE_BLOCKED",
+  "verification_scope": "AUTOMATED_SYNTHETIC_DEMO",
+  "human": "HUMAN_QA_PENDING",
+  "baseline": {
+    "command": "npm ci && npm run check",
+    "status": "PASS",
+    "unit_integration": 196,
+    "log": "docs/expansion/evidence/EXP-04-A-check.log"
+  }
+}

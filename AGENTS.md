@@ -1,3 +1,5 @@
+> Current authorization: EXP-04 F061–F075, user request14 November2026. Branch `codex/exp-04-profile-trust-comparison`, base `7340dffa1b15e8452bf693f090f6c4085d46b158`. Audit [stage](docs/expansion/stages/EXP-04.md). LIVE_BLOCKED; HUMAN_QA_PENDING. Historical EXP-03 stop instructions below are superseded only for EXP-04. Next: B domain/trust regression.
+
 # MamaPro / Қолдау.Жол — восстановление контекста
 
 Перед работой прочитать по порядку:

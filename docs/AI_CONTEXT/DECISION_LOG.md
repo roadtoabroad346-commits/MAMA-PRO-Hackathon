@@ -42,3 +42,5 @@ Initial C run6pass/8fail was test-harness error: two nonexistent dictionary keys
 ## ADR-CTX-EXP03-D — technical completion and honest performance
 
 All24 technical feature AC and four phase AC proved on sourceac82ec7:360 final test executions PASS, build/context/audit PASS, actual20/100/1000 benchmark. Mark execution_state VERIFIED_DONE with explicit AUTOMATED_SYNTHETIC_DEMO scope; keep implementation statuses IMPLEMENTED_WITH_LIMITATIONS and human/live gates separate. Text lookup improves; some other scenario timings regress, so no universal speedup or statistical/field claim. Source hash checks bind current files and per-feature last_verified_sha to an actual Git tree; historical baseline hashes remain checked separately. Final containing D SHA is reported only after push/ls-remote; documents carry the preceding confirmed C SHA and resume commands. EXP-04 technically unblocked, not authorized or started.
+
+14.11.2026 EXP-04 A: user authorized exact F061–F075; audited base7340dff; baseline196 PASS. Keep same-provider explicit replacement/tab-memory comparison. Address unavailable, show honest unknown. No merge/deploy; LIVE_BLOCKED. See EXP-04 stage.

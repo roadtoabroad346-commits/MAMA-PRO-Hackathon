@@ -1,3 +1,5 @@
+> Current authorization: EXP-04 F061–F075, user request14 November2026. Branch `codex/exp-04-profile-trust-comparison`, base `7340dffa1b15e8452bf693f090f6c4085d46b158`. Audit [stage](../expansion/stages/EXP-04.md). LIVE_BLOCKED; HUMAN_QA_PENDING. Historical EXP-03 stop instructions below are superseded only for EXP-04. Next: B domain/trust regression.
+
 # MamaPro — консолидированный контекст
 
 Current checkpoint: **EXP-03 F037–F060 VERIFIED_DONE (AUTOMATED_SYNTHETIC_DEMO)** on sourceac82ec7. [Closure](../expansion/stages/EXP-03.md), [handoff](SESSION_HANDOFF.md). LIVE_BLOCKED and human/native KK/real AT/device limits preserved. EXP-04 not started; permission required. Earlier narrative below is historical context.
