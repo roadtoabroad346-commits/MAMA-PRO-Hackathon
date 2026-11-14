@@ -80,7 +80,7 @@
     {
       "path": "tests/e2e/profile.spec.ts",
       "baselineSha256": "f4d61f5bd9b74fe3476cecd0b293f5ede3f0a4e22041b9e2fb0a145724aa7a5b",
-      "currentSha256": "5787a5bcc467d2fe6505135495a2cd01da34f1c81616c530724fc182cdc02c88",
+      "currentSha256": "85794e3f168060bbafbab541fc4f51ede253748e0b0c5959228ee8edf51e7e3e",
       "reason": "EXP04 scoped public provenance, terms/date formatting, comparison and behavior-preserving browser synchronization",
       "verification": "EXP04 check/profile/compare tests; exact executed results in EXP-04.json"
     }
@@ -101,10 +101,10 @@
     "src/styles.css": "a5123bbc5640ae754a6fce5e00e5afe226ea2a39f2a42b875f0765c8308ba2aa",
     "tests/e2e/exp03.spec.ts": "b05b99b7d841ea72cf42750510e1a016f977f6e5ef38f571b01db725ae09492c",
     "tests/e2e/exp04-state.spec.ts": "fdb7941ea17fee2eda7d7b9e901d456bc22f20c48533c279cd788f193bc73eb7",
-    "tests/e2e/exp04.spec.ts": "ba5b317e23d7ebea8065316143a5a1dc188b3d910069a8709b1dac5874bd4601",
+    "tests/e2e/exp04.spec.ts": "2abda357c9d60edc8e599c544ece80b9a7411a7448307b0bf1b174303c7aba62",
     "tests/e2e/fixtures/exp04-state.html": "1bc8fe1d2fa29baaff8ba35f45edd31a92c2ae2f5b1832083cc942c42687f3d1",
     "tests/e2e/fixtures/exp04-state.tsx": "0cec13315eec8990424a38e1539751e772bb23a7d33b67e410b639d548870699",
-    "tests/e2e/profile.spec.ts": "5787a5bcc467d2fe6505135495a2cd01da34f1c81616c530724fc182cdc02c88",
+    "tests/e2e/profile.spec.ts": "85794e3f168060bbafbab541fc4f51ede253748e0b0c5959228ee8edf51e7e3e",
     "tests/exp04.test.ts": "e86cd765efd7ed6124497d06214b4257d3758c6585792f3864c5d0a0612310df"
   }
 }

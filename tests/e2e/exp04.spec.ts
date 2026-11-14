@@ -5,6 +5,10 @@ import { catalogSchema, type Catalog } from '../../src/domain/catalog';
 import { emptySearchInput, type Locale, type SearchInput } from '../../src/domain/contracts';
 import { messages } from '../../src/i18n/messages';
 
+// Route-injected catalogs must not be replaced by the production SW cache.
+// Actual SW behavior is covered by the separate offline/release suites.
+test.use({ serviceWorkers: 'block' });
+
 const base = emptySearchInput();
 const catalog = catalogSchema.parse(raw);
 const selected = (p: Page) => p.getByTestId('selected-offer');

@@ -4,8 +4,8 @@
   "executionBranch": "codex/exp-04-profile-trust-comparison",
   "baseSha": "7340dffa1b15e8452bf693f090f6c4085d46b158",
   "runtimeSha": "424c36db3caa423d304ca403d01e7a6bff372011",
-  "lastLocalCommit": "424c36db3caa423d304ca403d01e7a6bff372011",
-  "lastPushedCommit": "424c36db3caa423d304ca403d01e7a6bff372011",
+  "lastLocalCommit": "25a262fa3461fd2c5bbc8313eb2419833af64dee",
+  "lastPushedCommit": "25a262fa3461fd2c5bbc8313eb2419833af64dee",
   "gitObservationScope": "Last confirmed pre-D commit is C. The containing closure SHA cannot be embedded in its own content; resolve HEAD and ls-remote after push and on resume. Final receipt is outside Git.",
   "currentStage": "EXP-04",
   "phaseStatus": "IN_PROGRESS",
@@ -33,7 +33,11 @@
     "focused_profile": 13,
     "dev": 121,
     "failed_final": 0,
-    "skipped_final": 0
+    "skipped_final": 0,
+    "dist": 83,
+    "pilot": 5,
+    "offline": 2,
+    "focused_refresh": 31
   },
   "blockers": [
     "human_parent_comprehension",
@@ -43,7 +47,7 @@
     "production_identity_consent_operator_provider_ops",
     "remote_CI"
   ],
-  "nextSafeStep": "D: dist83/pilot/offline regressions, per-feature acceptance and handoff",
+  "nextSafeStep": "D final per-feature/AC documentation closure; all actual gates now pass",
   "liveBlocked": true,
   "featureMatrix": "docs/AI_CONTEXT/FEATURE_REGISTRY.json",
   "handoff": "docs/AI_CONTEXT/SESSION_HANDOFF.md",

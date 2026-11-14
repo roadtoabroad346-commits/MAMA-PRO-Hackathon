@@ -60,5 +60,15 @@
       "C-second:27 PASS/2 FAIL (invalid harness category aggregate + Node/Chromium ICU mismatch)",
       "C-dev-initial:120 PASS/1 FAIL (preexisting reload read race); corrected waiting for same expected ID count"
     ]
+  },
+  "fixtureIsolation": {
+    "runtimeUnchangedFrom": "25a262fa3461fd2c5bbc8313eb2419833af64dee",
+    "reason": "Production SW bypasses page route fixtures across document navigation. Only synthetic-fixture suites block SW; separate real release/offline suites do not.",
+    "check": 237,
+    "focused_dev": 31,
+    "dist": 83,
+    "pilot": 5,
+    "offline": 2,
+    "sourceEquivalence": "DEV never registers SW; full121 dev on C remains equivalent. Current31 focused dev and83 dist rerun; no assertions removed."
   }
 }

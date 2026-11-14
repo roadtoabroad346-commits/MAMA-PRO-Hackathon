@@ -1201,7 +1201,7 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Код / foundations: [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/profile/TrustPassport.tsx:1](../../src/features/profile/TrustPassport.tsx#L1); [src/features/search/SelectionViews.tsx:1](../../src/features/search/SelectionViews.tsx#L1)
 
-Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:17](../../tests/e2e/profile.spec.ts#L17); [tests/e2e/profile.spec.ts:39](../../tests/e2e/profile.spec.ts#L39)
+Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:20](../../tests/e2e/profile.spec.ts#L20); [tests/e2e/profile.spec.ts:42](../../tests/e2e/profile.spec.ts#L42)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
@@ -1215,7 +1215,7 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Код / foundations: [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/profile/TrustPassport.tsx:1](../../src/features/profile/TrustPassport.tsx#L1); [src/features/search/SelectionViews.tsx:1](../../src/features/search/SelectionViews.tsx#L1)
 
-Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:17](../../tests/e2e/profile.spec.ts#L17); [tests/e2e/profile.spec.ts:39](../../tests/e2e/profile.spec.ts#L39)
+Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:20](../../tests/e2e/profile.spec.ts#L20); [tests/e2e/profile.spec.ts:42](../../tests/e2e/profile.spec.ts#L42)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
@@ -1229,7 +1229,7 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Код / foundations: [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/profile/TrustPassport.tsx:1](../../src/features/profile/TrustPassport.tsx#L1); [src/features/search/SelectionViews.tsx:1](../../src/features/search/SelectionViews.tsx#L1)
 
-Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:17](../../tests/e2e/profile.spec.ts#L17); [tests/e2e/profile.spec.ts:39](../../tests/e2e/profile.spec.ts#L39)
+Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:20](../../tests/e2e/profile.spec.ts#L20); [tests/e2e/profile.spec.ts:42](../../tests/e2e/profile.spec.ts#L42)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
@@ -1243,7 +1243,7 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Код / foundations: [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/profile/TrustPassport.tsx:1](../../src/features/profile/TrustPassport.tsx#L1); [src/features/search/SelectionViews.tsx:1](../../src/features/search/SelectionViews.tsx#L1)
 
-Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:17](../../tests/e2e/profile.spec.ts#L17); [tests/e2e/profile.spec.ts:39](../../tests/e2e/profile.spec.ts#L39)
+Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:20](../../tests/e2e/profile.spec.ts#L20); [tests/e2e/profile.spec.ts:42](../../tests/e2e/profile.spec.ts#L42)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
@@ -1257,7 +1257,7 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Код / foundations: [src/features/search/OfferCard.tsx:7](../../src/features/search/OfferCard.tsx#L7); [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/profile/TrustPassport.tsx:1](../../src/features/profile/TrustPassport.tsx#L1)
 
-Именованные проверки: [tests/e2e/profile.spec.ts:17](../../tests/e2e/profile.spec.ts#L17); [tests/e2e/profile.spec.ts:104](../../tests/e2e/profile.spec.ts#L104); [tests/e2e/profile.spec.ts:140](../../tests/e2e/profile.spec.ts#L140)
+Именованные проверки: [tests/e2e/profile.spec.ts:20](../../tests/e2e/profile.spec.ts#L20); [tests/e2e/profile.spec.ts:107](../../tests/e2e/profile.spec.ts#L107); [tests/e2e/profile.spec.ts:143](../../tests/e2e/profile.spec.ts#L143)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены. Полный адрес/venue модель в CORE отсутствуют: в schema только districtId; pilot address отдельный.
 
@@ -1271,7 +1271,7 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Код / foundations: [src/features/profile/TrustPassport.tsx:36](../../src/features/profile/TrustPassport.tsx#L36); [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/search/SelectionViews.tsx:1](../../src/features/search/SelectionViews.tsx#L1)
 
-Именованные проверки: [tests/profile.test.ts:31](../../tests/profile.test.ts#L31); [tests/e2e/profile.spec.ts:17](../../tests/e2e/profile.spec.ts#L17); [tests/e2e/profile.spec.ts:39](../../tests/e2e/profile.spec.ts#L39)
+Именованные проверки: [tests/profile.test.ts:31](../../tests/profile.test.ts#L31); [tests/e2e/profile.spec.ts:20](../../tests/e2e/profile.spec.ts#L20); [tests/e2e/profile.spec.ts:42](../../tests/e2e/profile.spec.ts#L42)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
@@ -1285,7 +1285,7 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Код / foundations: [src/domain/profile.ts:16](../../src/domain/profile.ts#L16); [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/profile/TrustPassport.tsx:1](../../src/features/profile/TrustPassport.tsx#L1)
 
-Именованные проверки: [tests/profile.test.ts:31](../../tests/profile.test.ts#L31); [tests/e2e/profile.spec.ts:17](../../tests/e2e/profile.spec.ts#L17); [tests/e2e/profile.spec.ts:39](../../tests/e2e/profile.spec.ts#L39)
+Именованные проверки: [tests/profile.test.ts:31](../../tests/profile.test.ts#L31); [tests/e2e/profile.spec.ts:20](../../tests/e2e/profile.spec.ts#L20); [tests/e2e/profile.spec.ts:42](../../tests/e2e/profile.spec.ts#L42)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
@@ -1299,7 +1299,7 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Код / foundations: [src/features/profile/TrustPassport.tsx:17](../../src/features/profile/TrustPassport.tsx#L17); [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/search/SelectionViews.tsx:1](../../src/features/search/SelectionViews.tsx#L1)
 
-Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:17](../../tests/e2e/profile.spec.ts#L17); [tests/e2e/profile.spec.ts:39](../../tests/e2e/profile.spec.ts#L39)
+Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:20](../../tests/e2e/profile.spec.ts#L20); [tests/e2e/profile.spec.ts:42](../../tests/e2e/profile.spec.ts#L42)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
@@ -1313,7 +1313,7 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Код / foundations: [src/features/profile/TrustPassport.tsx:18](../../src/features/profile/TrustPassport.tsx#L18); [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/search/SelectionViews.tsx:1](../../src/features/search/SelectionViews.tsx#L1)
 
-Именованные проверки: [tests/profile.test.ts:38](../../tests/profile.test.ts#L38); [tests/e2e/profile.spec.ts:17](../../tests/e2e/profile.spec.ts#L17); [tests/e2e/profile.spec.ts:39](../../tests/e2e/profile.spec.ts#L39)
+Именованные проверки: [tests/profile.test.ts:38](../../tests/profile.test.ts#L38); [tests/e2e/profile.spec.ts:20](../../tests/e2e/profile.spec.ts#L20); [tests/e2e/profile.spec.ts:42](../../tests/e2e/profile.spec.ts#L42)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
@@ -1327,7 +1327,7 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Код / foundations: [src/features/profile/TrustPassport.tsx:54](../../src/features/profile/TrustPassport.tsx#L54); [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/search/SelectionViews.tsx:1](../../src/features/search/SelectionViews.tsx#L1)
 
-Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:17](../../tests/e2e/profile.spec.ts#L17); [tests/e2e/profile.spec.ts:39](../../tests/e2e/profile.spec.ts#L39)
+Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:20](../../tests/e2e/profile.spec.ts#L20); [tests/e2e/profile.spec.ts:42](../../tests/e2e/profile.spec.ts#L42)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
@@ -1341,7 +1341,7 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Код / foundations: [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/profile/TrustPassport.tsx:1](../../src/features/profile/TrustPassport.tsx#L1); [src/features/search/SelectionViews.tsx:1](../../src/features/search/SelectionViews.tsx#L1)
 
-Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:17](../../tests/e2e/profile.spec.ts#L17); [tests/e2e/profile.spec.ts:39](../../tests/e2e/profile.spec.ts#L39)
+Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:20](../../tests/e2e/profile.spec.ts#L20); [tests/e2e/profile.spec.ts:42](../../tests/e2e/profile.spec.ts#L42)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
@@ -1355,7 +1355,7 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Код / foundations: [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/profile/TrustPassport.tsx:1](../../src/features/profile/TrustPassport.tsx#L1); [src/features/search/SelectionViews.tsx:1](../../src/features/search/SelectionViews.tsx#L1)
 
-Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:17](../../tests/e2e/profile.spec.ts#L17); [tests/e2e/profile.spec.ts:39](../../tests/e2e/profile.spec.ts#L39)
+Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:20](../../tests/e2e/profile.spec.ts#L20); [tests/e2e/profile.spec.ts:42](../../tests/e2e/profile.spec.ts#L42)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
@@ -1369,7 +1369,7 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Код / foundations: [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/profile/TrustPassport.tsx:1](../../src/features/profile/TrustPassport.tsx#L1); [src/features/search/SelectionViews.tsx:1](../../src/features/search/SelectionViews.tsx#L1)
 
-Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:17](../../tests/e2e/profile.spec.ts#L17); [tests/e2e/profile.spec.ts:39](../../tests/e2e/profile.spec.ts#L39)
+Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:20](../../tests/e2e/profile.spec.ts#L20); [tests/e2e/profile.spec.ts:42](../../tests/e2e/profile.spec.ts#L42)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
@@ -1383,7 +1383,7 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Код / foundations: [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/profile/TrustPassport.tsx:1](../../src/features/profile/TrustPassport.tsx#L1); [src/features/search/SelectionViews.tsx:1](../../src/features/search/SelectionViews.tsx#L1)
 
-Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:17](../../tests/e2e/profile.spec.ts#L17); [tests/e2e/profile.spec.ts:39](../../tests/e2e/profile.spec.ts#L39)
+Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:20](../../tests/e2e/profile.spec.ts#L20); [tests/e2e/profile.spec.ts:42](../../tests/e2e/profile.spec.ts#L42)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
@@ -1397,7 +1397,7 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Код / foundations: [src/styles.css:166](../../src/styles.css#L166); [src/features/profile/OfferProfile.tsx:1](../../src/features/profile/OfferProfile.tsx#L1); [src/features/profile/TrustPassport.tsx:1](../../src/features/profile/TrustPassport.tsx#L1)
 
-Именованные проверки: [tests/e2e/profile.spec.ts:208](../../tests/e2e/profile.spec.ts#L208); [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/profile.test.ts:15](../../tests/profile.test.ts#L15)
+Именованные проверки: [tests/e2e/profile.spec.ts:211](../../tests/e2e/profile.spec.ts#L211); [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/profile.test.ts:15](../../tests/profile.test.ts#L15)
 
 Осталось: Граница DEMO: синтетический каталог; human comprehension/native KK/real-device приёмка не выполнены.
 
@@ -2433,7 +2433,7 @@ EXP-02: AUTOMATED_VERIFIED_SYNTHETIC; [AC/evidence](../expansion/stages/EXP-02.m
 
 Код / foundations: [src/features/search/SelectionViews.tsx:8](../../src/features/search/SelectionViews.tsx#L8)
 
-Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:17](../../tests/e2e/profile.spec.ts#L17); [tests/e2e/profile.spec.ts:39](../../tests/e2e/profile.spec.ts#L39)
+Именованные проверки: [tests/profile.test.ts:10](../../tests/profile.test.ts#L10); [tests/e2e/profile.spec.ts:20](../../tests/e2e/profile.spec.ts#L20); [tests/e2e/profile.spec.ts:42](../../tests/e2e/profile.spec.ts#L42)
 
 Осталось: Есть сравнение условий; отсутствует assistant explanation of differences.
 
