@@ -11,5 +11,21 @@
     "status": "PASS",
     "unit_integration": 196,
     "log": "docs/expansion/evidence/EXP-04-A-check.log"
+  },
+  "auditCheckpoint": "c43fedc00fbfa4f85ef9a432c9fdb32470f22d2e",
+  "domain": {
+    "red": {
+      "failed": 8,
+      "passed": 31,
+      "log": "docs/expansion/evidence/EXP-04-B-red.log"
+    },
+    "check": {
+      "passed": 235,
+      "log": "docs/expansion/evidence/EXP-04-B-check.log"
+    },
+    "profile": {
+      "passed": 13,
+      "log": "docs/expansion/evidence/EXP-04-B-profile.log"
+    }
   }
 }

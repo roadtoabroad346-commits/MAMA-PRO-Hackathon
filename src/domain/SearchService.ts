@@ -28,9 +28,14 @@ const compareId = (a: string, b: string): number => a < b ? -1 : a > b ? 1 : 0;
 // Validate and strip unrecognized fields before any public candidate evaluation.
 export function publicCatalog(raw: Catalog): Catalog {
   const catalog = catalogSchema.parse(raw);
-  const specialists = catalog.specialists.filter(s => s.publicationStatus === 'published');
-  const ids = new Set(specialists.map(s => s.id));
-  return { ...catalog, specialists, offers: catalog.offers.filter(o => o.publicationStatus === 'published' && ids.has(o.specialistId)) };
+  const ids = new Set(catalog.specialists.filter(s => s.publicationStatus === 'published').map(s => s.id));
+  const offers = catalog.offers.filter(o => o.publicationStatus === 'published' && ids.has(o.specialistId));
+  const offerIds = new Set(offers.map(o => o.id));
+  const specialists = catalog.specialists.filter(s => ids.has(s.id)).map(s => ({ ...s,
+    verificationFacts: s.verificationFacts.filter(f => f.scope !== 'offer_data' || offerIds.has(f.offerId!))
+      .map(f => ({ ...f, checkedByRole: null })),
+  }));
+  return { ...catalog, specialists, offers };
 }
 
 export class SearchService {

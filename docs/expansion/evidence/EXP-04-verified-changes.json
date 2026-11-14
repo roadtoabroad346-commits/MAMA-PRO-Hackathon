@@ -1,0 +1,32 @@
+{
+  "changes": [
+    {
+      "path": "src/domain/profile.ts",
+      "baselineSha256": "206160a46beef1524d6109af7f35e53afb2d89081608f6af4ef43e4b30d6abbe",
+      "currentSha256": "11de4be9316986ac16d7d94964ee9cedee8e7d0be397c5026ecdda169173251f",
+      "reason": "EXP04 explicit profile identity and public provenance guards",
+      "verification": "EXP-04-B-check.log:235 PASS; EXP-04-B-profile.log:13 PASS"
+    },
+    {
+      "path": "src/domain/SearchService.ts",
+      "baselineSha256": "886beaa16a3151b207c8ca6c4726f3f4511cc2f4773d5e48b4fb403dc7e36f91",
+      "currentSha256": "7fa2371d1c7f2ce752f3fccf06ab24d0d156b792678d640fd69caa98931cfe94",
+      "reason": "EXP04 explicit profile identity and public provenance guards",
+      "verification": "EXP-04-B-check.log:235 PASS; EXP-04-B-profile.log:13 PASS"
+    },
+    {
+      "path": "src/data/catalogRepository.ts",
+      "baselineSha256": "993d4ffca75e137b05e21e7e05c05b931a055b58e15edca6679bf90883bd75a5",
+      "currentSha256": "379572dc4fca74c54805b4fb0004b55dd50987071a1a14ac073811b3053f33a3",
+      "reason": "EXP04 explicit profile identity and public provenance guards",
+      "verification": "EXP-04-B-check.log:235 PASS; EXP-04-B-profile.log:13 PASS"
+    },
+    {
+      "path": "src/features/profile/OfferProfile.tsx",
+      "baselineSha256": "f8944ce995f517ce2f526c9c8389533a30e02a875068a020b722b1db7d2bbac4",
+      "currentSha256": "7e97cec1ea1469f76be74b5c375ca2c6e87d62d5dca1c412640768fdeb7c7b07",
+      "reason": "EXP04 explicit profile identity and public provenance guards",
+      "verification": "EXP-04-B-check.log:235 PASS; EXP-04-B-profile.log:13 PASS"
+    }
+  ]
+}

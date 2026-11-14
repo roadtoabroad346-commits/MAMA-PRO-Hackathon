@@ -1,0 +1,117 @@
+
+> qoldau-zhol@0.6.0 test
+> vitest run tests/exp04.test.ts
+
+
+ RUN  v4.1.12 /workspace/MAMA-PRO-Hackathon
+
+ ❯ tests/exp04.test.ts (39 tests | 8 failed) 75ms
+     × stable default uses opaque ordinal IDs independent of runtime locale 11ms
+     × malformed reviewDueAt invalid cannot support current trust 3ms
+     × malformed reviewDueAt 2026-02-30T00:00:00Z cannot support current trust 1ms
+     × malformed reviewDueAt 2026-11-14 cannot support current trust 1ms
+     × missing localized source {"ru":" ","kk":"\t"} cannot confirm 1ms
+     × missing localized source {"ru":"Source","kk":" "} cannot confirm 1ms
+     × public projection removes hidden offer facts and checking roles 3ms
+     × public projection removes withdrawn offer facts and checking roles 2ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 8 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/exp04.test.ts > EXP04 exact public identity (P04-T01..07,T42,T45) > stable default uses opaque ordinal IDs independent of runtime locale
+AssertionError: expected [ 'a', 'O15', 'Z' ] to deeply equal [ 'O15', 'Z', 'a' ]
+
+- Expected
++ Received
+
+  [
++   "a",
+    "O15",
+    "Z",
+-   "a",
+  ]
+
+ ❯ tests/exp04.test.ts:42:61
+     40|     const p = resolveProfile(c, 'S06', null);
+     41|     expect(p.kind).toBe('found');
+     42|     if (p.kind === 'found') expect(p.offers.map(o => o.id)).toEqual(['…
+       |                                                             ^
+     43|   });
+     44| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/8]⎯
+
+ FAIL  tests/exp04.test.ts > EXP04 trust validity and historical status (P04-T18..24) > malformed reviewDueAt invalid cannot support current trust
+AssertionError: expected 'SOURCE_CONFIRMED' to be 'UNVERIFIED' // Object.is equality
+
+Expected: "UNVERIFIED"
+Received: "SOURCE_CONFIRMED"
+
+ ❯ tests/exp04.test.ts:54:66
+     52|   });
+     53|   it.each(['invalid', '2026-02-30T00:00:00Z', '2026-11-14'])('malforme…
+     54|     expect(verificationStatus({ ...current, reviewDueAt }, now)).toBe(…
+       |                                                                  ^
+     55|   });
+     56|   it.each([null, { ru: ' ', kk: '\t' }, { ru: 'Source', kk: ' ' }])('m…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/8]⎯
+
+ FAIL  tests/exp04.test.ts > EXP04 trust validity and historical status (P04-T18..24) > malformed reviewDueAt 2026-02-30T00:00:00Z cannot support current trust
+ FAIL  tests/exp04.test.ts > EXP04 trust validity and historical status (P04-T18..24) > malformed reviewDueAt 2026-11-14 cannot support current trust
+AssertionError: expected 'STALE' to be 'UNVERIFIED' // Object.is equality
+
+Expected: "UNVERIFIED"
+Received: "STALE"
+
+ ❯ tests/exp04.test.ts:54:66
+     52|   });
+     53|   it.each(['invalid', '2026-02-30T00:00:00Z', '2026-11-14'])('malforme…
+     54|     expect(verificationStatus({ ...current, reviewDueAt }, now)).toBe(…
+       |                                                                  ^
+     55|   });
+     56|   it.each([null, { ru: ' ', kk: '\t' }, { ru: 'Source', kk: ' ' }])('m…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/8]⎯
+
+ FAIL  tests/exp04.test.ts > EXP04 trust validity and historical status (P04-T18..24) > missing localized source {"ru":" ","kk":"\t"} cannot confirm
+ FAIL  tests/exp04.test.ts > EXP04 trust validity and historical status (P04-T18..24) > missing localized source {"ru":"Source","kk":" "} cannot confirm
+AssertionError: expected 'SOURCE_CONFIRMED' to be 'UNVERIFIED' // Object.is equality
+
+Expected: "UNVERIFIED"
+Received: "SOURCE_CONFIRMED"
+
+ ❯ tests/exp04.test.ts:57:66
+     55|   });
+     56|   it.each([null, { ru: ' ', kk: '\t' }, { ru: 'Source', kk: ' ' }])('m…
+     57|     expect(verificationStatus({ ...current, sourceLabel }, now)).toBe(…
+       |                                                                  ^
+     58|   });
+     59|   it.each(['identity', 'contact'] as const)('TTL equality and one mill…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/8]⎯
+
+ FAIL  tests/exp04.test.ts > EXP04 public provenance isolation (P04-T25,T26,T34,T46..48) > public projection removes hidden offer facts and checking roles
+ FAIL  tests/exp04.test.ts > EXP04 public provenance isolation (P04-T25,T26,T34,T46..48) > public projection removes withdrawn offer facts and checking roles
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ tests/exp04.test.ts:85:71
+     83|     const published = publicCatalog(c);
+     84|     const provider = published.specialists.find(s => s.id === 'S06')!;
+     85|     expect(provider.verificationFacts.some(f => f.offerId === 'O15')).…
+       |                                                                       ^
+     86|     expect(JSON.stringify(published)).not.toMatch(/PRIVATE-/u);
+     87|     expect(c.specialists.find(s => s.id === 'S06')!.verificationFacts.…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/8]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  8 failed | 31 passed (39)
+   Start at  03:49:15
+   Duration  733ms (transform 265ms, setup 0ms, import 426ms, tests 75ms, environment 0ms)

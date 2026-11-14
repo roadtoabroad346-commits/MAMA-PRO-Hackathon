@@ -6,3 +6,5 @@
 LIVE_BLOCKED; human UAT/native KK и оригинальный DOCX остаются открытыми. Следующий кандидат — EXP-03 после нового поручения.
 
 14.11.2026 EXP-04 A: user authorized exact F061–F075; audited base7340dff; baseline196 PASS. Keep same-provider explicit replacement/tab-memory comparison. Address unavailable, show honest unknown. No merge/deploy; LIVE_BLOCKED. See EXP-04 stage.
+
+EXP-04 B:235 unit/integration +13 profile browser PASS;8 reproduced defects fixed. Same schema and demo clock; public roles/hidden-offer evidence stripped at ingestion. A remote c43fedc00fbfa4f85ef9a432c9fdb32470f22d2e. Next C. LIVE_BLOCKED; HUMAN_QA_PENDING.

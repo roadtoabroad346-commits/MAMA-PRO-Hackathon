@@ -1,4 +1,5 @@
-import { catalogSchema, type Catalog } from '../domain/catalog';
+import type { Catalog } from '../domain/catalog';
+import { publicCatalog } from '../domain/SearchService';
 import catalogUrl from './catalog.json?url';
 
 export async function loadCatalog(): Promise<Catalog> {
@@ -6,7 +7,7 @@ export async function loadCatalog(): Promise<Catalog> {
   // Unlike a rejected module import, a failed fetch can be retried successfully.
   const response = await fetch(catalogUrl);
   if (!response.ok) throw new Error('CATALOG_LOAD_FAILED');
-  return catalogSchema.parse(await response.json());
+  return publicCatalog(await response.json());
 }
 
 export interface CatalogRepository { load(): Promise<Catalog> }

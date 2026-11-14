@@ -16,7 +16,7 @@ export function OfferProfile() {
   const { catalog, input, service, locale, comparison, comparisonNotice, t } = useApp();
   const location = useLocation();
   const navigate = useNavigate();
-  const profile = resolveProfile(catalog, specialistId, params.get('offer'));
+  const profile = resolveProfile(catalog, specialistId, params.getAll('offer').length > 1 ? '' : params.get('offer'));
   if (profile.kind !== 'found') return <><PageTitle>{t(profile.kind === 'specialist-not-found' ? 'profileNotFound' : 'offerNotFound')}</PageTitle><Link className="button primary" to="/specialists">{t('backToResults')}</Link></>;
   const { specialist, offers, offer } = profile;
   const hasContext = !!location.state?.fromCatalog || !!location.state?.fromComparison;

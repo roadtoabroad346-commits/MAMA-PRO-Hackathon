@@ -105,7 +105,11 @@ check(len(inventory)==335,'Expected 335 baseline records')
 check({x['path'] for x in inventory}==set(git('ls-tree','-r','--name-only',summary['baseline_sha']).splitlines()),'Inventory differs from baseline Git tree')
 change_path=R/'docs/expansion/evidence/EXP-03-verified-changes.json'
 change_manifest=json.loads(change_path.read_text()) if change_path.exists() else {}
-changes=change_manifest.get('changes',[])
+exp04_manifest_path=R/'docs/expansion/evidence/EXP-04-verified-changes.json'
+exp04_manifest=json.loads(exp04_manifest_path.read_text()) if exp04_manifest_path.exists() else {}
+changes_by_path={x['path']:x for x in change_manifest.get('changes',[])}
+changes_by_path.update({x['path']:x for x in exp04_manifest.get('changes',[])})
+changes=list(changes_by_path.values())
 changed={x['path']:x for x in changes}
 check(len(changed)==len(changes),'Duplicate reviewed change path')
 check(set(changed)<=set(x['path'] for x in inventory),'Reviewed changes must refer to baseline files')
@@ -124,7 +128,8 @@ if exp03:
  for path,expected_hash in change_manifest.get('verifiedSourceFiles',{}).items():
   original=subprocess.check_output(['git','show',source_sha+':'+path],cwd=R)
   check(hashlib.sha256(original).hexdigest()==expected_hash,'Verified Git source mismatch: '+path)
-  check(hashlib.sha256((R/path).read_bytes()).hexdigest()==expected_hash,'Current source differs from tested tree: '+path)
+  current_expected=next((x['currentSha256'] for x in exp04_manifest.get('changes',[]) if x['path']==path),expected_hash)
+  check(hashlib.sha256((R/path).read_bytes()).hexdigest()==current_expected,'Current source has no reviewed tested successor: '+path)
  for path,record in exp03['evidenceFiles'].items():
   check(hashlib.sha256((R/path).read_bytes()).hexdigest()==record['sha256'],'EXP-03 evidence changed: '+path)
  check(set(exp03['features'])==set(f'F{i:03}' for i in range(37,61)),'EXP-03 must prove exactly F037–F060')

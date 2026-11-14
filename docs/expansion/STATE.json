@@ -3,9 +3,9 @@
   "project": "Qoldau.Zhol",
   "executionBranch": "codex/exp-04-profile-trust-comparison",
   "baseSha": "7340dffa1b15e8452bf693f090f6c4085d46b158",
-  "runtimeSha": "ac82ec7209de0ec5e0154947193cafcb7be856ba",
-  "lastLocalCommit": "7340dffa1b15e8452bf693f090f6c4085d46b158",
-  "lastPushedCommit": "7340dffa1b15e8452bf693f090f6c4085d46b158",
+  "runtimeSha": "c43fedc00fbfa4f85ef9a432c9fdb32470f22d2e",
+  "lastLocalCommit": "c43fedc00fbfa4f85ef9a432c9fdb32470f22d2e",
+  "lastPushedCommit": "c43fedc00fbfa4f85ef9a432c9fdb32470f22d2e",
   "gitObservationScope": "Last confirmed pre-D commit is C. The containing closure SHA cannot be embedded in its own content; resolve HEAD and ls-remote after push and on resume. Final receipt is outside Git.",
   "currentStage": "EXP-04",
   "phaseStatus": "IN_PROGRESS",
@@ -26,9 +26,11 @@
     "F074",
     "F075"
   ],
-  "sourceCoverage": "F000–F230: 231/231 source anchors; source statuses unchanged",
+  "sourceCoverage": "F000\u2013F230: 231/231 source anchors; source statuses unchanged",
   "tests": {
-    "baseline_unit_integration": 196
+    "baseline_unit_integration": 196,
+    "unit_integration": 235,
+    "focused_profile": 13
   },
   "blockers": [
     "human_parent_comprehension",
@@ -38,7 +40,7 @@
     "production_identity_consent_operator_provider_ops",
     "remote_CI"
   ],
-  "nextSafeStep": "Slice B: narrow profile/trust/public projection corrections and regression tests",
+  "nextSafeStep": "C: comparison provenance, terms, responsive and keyboard acceptance",
   "liveBlocked": true,
   "featureMatrix": "docs/AI_CONTEXT/FEATURE_REGISTRY.json",
   "handoff": "docs/AI_CONTEXT/SESSION_HANDOFF.md",

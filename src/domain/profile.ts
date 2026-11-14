@@ -6,7 +6,7 @@ export function resolveProfile(catalog: Catalog, specialistId: string | undefine
   const specialist = catalog.specialists.find(s => s.id === specialistId && s.publicationStatus === 'published');
   if (!specialist) return { kind: 'specialist-not-found' } as const;
   const offers = catalog.offers.filter(o => o.specialistId === specialist.id && o.publicationStatus === 'published')
-    .sort((a, b) => a.id.localeCompare(b.id));
+    .sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
   const offer = offerId === null ? offers[0] : offers.find(o => o.id === offerId);
   if (!offer) return { kind: 'offer-not-found' } as const;
   return { kind: 'found', specialist, offers, offer } as const;
@@ -16,7 +16,10 @@ export function resolveProfile(catalog: Catalog, specialistId: string | undefine
 export function verificationStatus(fact: VerificationFact, demoClock: string): VerificationFact['status'] {
   if (fact.status === 'REVOKED' || fact.status === 'UNVERIFIED') return fact.status;
   if (fact.status === 'STALE') return 'STALE';
-  if (!fact.sourceLabel) return 'UNVERIFIED';
+  if (!fact.sourceLabel?.ru.trim() || !fact.sourceLabel.kk.trim()) return 'UNVERIFIED';
+  // Review dates are guards, never an alternative source of confirmation.
+  // Validate ISO syntax even when called independently of catalog ingestion.
+  if (fact.reviewDueAt !== null && fieldFreshness(fact.reviewDueAt, fixedClock(fact.reviewDueAt)).status !== 'known_current') return 'UNVERIFIED';
   const freshness = fieldFreshness(fact.checkedAt, fixedClock(demoClock), fact.scope === 'contact' ? FRESHNESS_POLICY.days.contact : FRESHNESS_POLICY.days.verification);
   if (freshness.status === 'unknown') return 'UNVERIFIED';
   if (freshness.status === 'stale' || fact.reviewDueAt && Date.parse(fact.reviewDueAt) <= Date.parse(demoClock)) return 'STALE';

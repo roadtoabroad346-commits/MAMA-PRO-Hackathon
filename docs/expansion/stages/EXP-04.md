@@ -35,3 +35,9 @@ AC01 exact profile: profile unit + existing profile E2E + EXP04 contradictory si
 Baseline `npm ci` PASS; `npm run check` PASS:196 unit/integration, TypeScript strict, historical registry69 records. New full regressions will run after changes. Original Research DOCX SOURCE_UNAVAILABLE; available Research Markdown and canonical CSV are used. No real parent/native KK/AT/device validation claimed.
 
 Rollback: revert only EXP04 commits in reverse order; no data migration, no reset/clean. Stop before EXP05.
+
+## Slice B — profile/domain/public projection
+
+New39 unit cases: initial8 FAIL/31 PASS, then235 total PASS with strict TypeScript. Existing13 profile browser cases PASS on Chromium. Corrected malformed reviewDueAt and whitespace-only localized source status, ordinal default IDs, ambiguous duplicate offer query and public projection of private checking roles/nonpublic offer facts. Catalog ingestion now uses that same public boundary. No schema/storage/matching change. Context validator preserves historical EXP03 tree evidence and verifies explicitly reviewed successor hashes instead of falsely requiring unchanged runtime forever.
+
+Audit checkpoint remote verified `c43fedc00fbfa4f85ef9a432c9fdb32470f22d2e`; this B SHA is resolved after commit/push (self-reference constraint). Next C; LIVE_BLOCKED; HUMAN_QA_PENDING.

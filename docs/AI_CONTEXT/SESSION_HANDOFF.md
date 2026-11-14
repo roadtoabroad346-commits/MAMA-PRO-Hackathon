@@ -17,3 +17,5 @@ Reproduce: `npm ci`; `npm run check`; `npm run build`; `python3 docs/AI_CONTEXT/
 No remaining known technical EXP-03 defects after these gates. External limits: original Research DOCX unavailable (Markdown/CSV provided), authentic parent study PENDING, native KK editorial review, real AT/device/browser zoom, production identity/consent/operators/providers/ops. Automated text200% is not physical zoom/AT evidence. Historical39 phases TEAM_ATTESTED remain independent of this technical acceptance.
 
 **STOP. EXP-04 technically ready to audit next; do not start it without the user's explicit permission.** Rollback via reverting only EXP-03 commits in reverse order; no data migration and no reset/clean of shared history.
+
+EXP-04 B:235 unit/integration +13 profile browser PASS;8 reproduced defects fixed. Same schema and demo clock; public roles/hidden-offer evidence stripped at ingestion. A remote c43fedc00fbfa4f85ef9a432c9fdb32470f22d2e. Next C. LIVE_BLOCKED; HUMAN_QA_PENDING.
